@@ -1,7 +1,7 @@
 // src/services/geminiService.js
 import axios from "axios";
 
-const BASE_URL = 'http://localhost:9999'; // Thay thế bằng URL thực tế của bạn
+const BASE_URL = 'https://language-backend-onoo.onrender.com'; // Thay thế bằng URL thực tế của bạn
 const ENDPOINT = '/api/generate-quiz-fill';
 
 export const generateQuizFill = async (scriptType) => {
