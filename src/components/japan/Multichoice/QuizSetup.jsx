@@ -16,9 +16,7 @@ const QuizSetup = ({
   config,
   setConfig,
   onStartAPI,
-  onStartLocal,
-  isLoading,
-  historyCount
+  isLoading
 }) => {
   return (
     <Card
@@ -30,7 +28,7 @@ const QuizSetup = ({
     >
       <div style={{ textAlign: "left", padding: "0 20px" }}>
         <Row gutter={16} style={{ marginBottom: 24 }}>
-          <Col span={12}>
+          <Col span={24}>
             <Text strong>Trình độ:</Text>
             <Select
               value={config.level}
@@ -42,18 +40,7 @@ const QuizSetup = ({
               <Select.Option value="N3">N3</Select.Option>
             </Select>
           </Col>
-          <Col span={12}>
-            <Text strong>Chủ đề:</Text>
-            <Select
-              value={config.topic}
-              style={{ width: "100%", marginTop: 8 }}
-              onChange={(v) => setConfig({ ...config, topic: v })}
-            >
-              <Select.Option value="Vocabulary">Từ vựng</Select.Option>
-              <Select.Option value="Kanji">Hán tự</Select.Option>
-              <Select.Option value="Grammar">Ngữ pháp</Select.Option>
-            </Select>
-          </Col>
+          
         </Row>
 
         <div style={{ marginBottom: 30 }}>
@@ -76,21 +63,7 @@ const QuizSetup = ({
           icon={!isLoading && <ArrowRightOutlined />}
           style={{ height: 45 }}
         >
-          {isLoading ? "Đang tạo câu hỏi mới..." : "Tạo đề mới từ AI"}
-        </Button>
-
-        <Button
-          size="large"
-          onClick={onStartLocal}
-          disabled={historyCount === 0}
-          icon={<SyncOutlined />}
-          style={{
-            height: 45,
-            borderColor: "#1677ff",
-            color: "#1677ff",
-          }}
-        >
-          Ôn tập ngẫu nhiên từ Lịch sử ({historyCount} câu)
+          {isLoading ? "Đang tạo câu hỏi mới..." : "Bắt đầu làm bài"}
         </Button>
       </div>
     </Card>
