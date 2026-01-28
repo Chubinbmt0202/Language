@@ -1,9 +1,10 @@
-import React from "react";
-import { Button, Card, Typography } from "antd";
+import React, { useEffect } from "react"; // Thêm useEffect
+import { Button, Card, Typography, Tooltip } from "antd"; // Thêm Tooltip
 import {
   RedoOutlined,
   CheckCircleOutlined,
   BackwardFilled,
+  SoundOutlined, // <--- Import Icon Loa
 } from "@ant-design/icons";
 import { useHiraganaGame } from "../../../hook/useHiraganaGame";
 import SetupCard from "./SetupCard";
@@ -12,10 +13,8 @@ import CharacterBlock from "./CharacterBlock";
 const { Text } = Typography;
 
 const HiraganaPractice = () => {
-  const { value, setValue, gameState, inputRefs, actions } =
-    useHiraganaGame();
-    // console.log("❤️ ~ file: index.jsx:13 ~ HiraganaPractice ~ value:", value);
-  // console.log("❤️ ~ file: index.jsx:13 ~ HiraganaPractice ~ gameState:", gameState);
+  const { value, setValue, gameState, inputRefs, actions } = useHiraganaGame();
+  
   const {
     charData,
     meaning,
@@ -26,7 +25,33 @@ const HiraganaPractice = () => {
     isCompleted,
   } = gameState;
 
-  console.log("😘 ~ file: index.jsx:19 ~ HiraganaPractice ~ isStarted:", gameState);
+  // --- 1. HÀM XỬ LÝ ĐỌC GIỌNG NÓI ---
+  const handleSpeak = () => {
+    // Ghép các ký tự lại thành câu hoàn chỉnh
+    const sentence = charData.map((item) => item.char).join("");
+    
+    if (!sentence) return;
+
+    // Ngắt giọng cũ nếu đang đọc dở
+    window.speechSynthesis.cancel();
+
+    const utterance = new SpeechSynthesisUtterance(sentence);
+    utterance.lang = "ja-JP"; // Thiết lập giọng tiếng Nhật
+    utterance.rate = 1;     // Tốc độ đọc (0.8 là vừa phải, 1 là bình thường)
+    utterance.pitch = 1;      // Độ cao giọng
+
+    window.speechSynthesis.speak(utterance);
+  };
+
+  // (Tùy chọn) Tự động đọc khi hoàn thành bài
+  useEffect(() => {
+    if (isCompleted) {
+      setTimeout(() => {
+         handleSpeak();
+      }, 500); // Đợi 0.5s sau khi hoàn thành rồi mới đọc
+    }
+  }, [isCompleted]);
+
 
   // Nếu chưa bắt đầu -> Hiện SetupCard
   if (!isStarted && !isLoading) {
@@ -43,19 +68,11 @@ const HiraganaPractice = () => {
   return (
     <div style={{ maxWidth: 900, margin: "0 auto", padding: 20 }}>
       {/* HEADER */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          marginBottom: 20,
-        }}
-      >
-        {/* --- NÚT QUAY LẠI ĐÃ ĐƯỢC CHỈNH SỬA --- */}
+      <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 20 }}>
         <Button
           type="dashed"
           icon={<BackwardFilled style={{ color: "#080808" }} />}
-          onClick={actions.resetGame} // <--- Đổi thành resetGame để về Setup
-          // Đã xóa disabled={isCompleted} để bấm được mọi lúc
+          onClick={actions.resetGame}
         >
           Cấu hình
         </Button>
@@ -67,15 +84,7 @@ const HiraganaPractice = () => {
 
       <Card loading={isLoading} style={{ minHeight: 300 }}>
         {/* GAME AREA */}
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "8px 4px",
-            alignItems: "flex-end",
-            lineHeight: 1.5,
-          }}
-        >
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "8px 4px", alignItems: "flex-end", lineHeight: 1.5 }}>
           {charData.map((item, index) => (
             <CharacterBlock
               key={index}
@@ -91,7 +100,7 @@ const HiraganaPractice = () => {
           ))}
         </div>
 
-        {/* --- KHU VỰC HIỂN THỊ NGHĨA --- */}
+        {/* --- KHU VỰC HIỂN THỊ NGHĨA & NÚT ĐỌC --- */}
         {isCompleted && meaning && (
           <div
             style={{
@@ -104,26 +113,29 @@ const HiraganaPractice = () => {
               animation: "fadeIn 0.5s ease-in-out",
             }}
           >
-            <Text
-              type="secondary"
-              style={{
-                fontSize: 14,
-                textTransform: "uppercase",
-                letterSpacing: "1px",
-              }}
-            >
+            <Text type="secondary" style={{ fontSize: 14, textTransform: "uppercase", letterSpacing: "1px" }}>
               Dịch nghĩa
             </Text>
-            <div
-              style={{
-                fontSize: 20,
-                fontWeight: 600,
-                color: "#389e0d",
-                marginTop: 10,
-                fontFamily: '"Segoe UI", Roboto, "Helvetica Neue", Arial',
-              }}
-            >
+            
+            <div style={{ fontSize: 20, fontWeight: 600, color: "#389e0d", marginTop: 10, fontFamily: '"Segoe UI", Roboto, Arial' }}>
               "{meaning}"
+            </div>
+
+            {/* --- NÚT LOA Ở ĐÂY --- */}
+            <div style={{ marginTop: 15 }}>
+              <Tooltip title="Nghe phát âm">
+                <Button 
+                  shape="circle" 
+                  icon={<SoundOutlined />} 
+                  size="large" 
+                  onClick={handleSpeak} 
+                  style={{ 
+                    color: "#1890ff", 
+                    borderColor: "#1890ff",
+                    boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
+                  }}
+                />
+              </Tooltip>
             </div>
           </div>
         )}
@@ -147,7 +159,7 @@ const HiraganaPractice = () => {
             onClick={actions.checkAll}
             style={{ width: 200, height: 50 }}
           >
-            Dịch nghĩa
+            Kiểm tra
           </Button>
         )}
       </div>

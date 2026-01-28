@@ -1,10 +1,9 @@
 // src/hooks/useHiraganaGame.js
 import { useState, useRef } from "react";
 import { message } from "antd";
-import { generateQuizFill } from "../components/geminiService"; // Import service mới
+import { generateQuizFill } from "../components/geminiService";
 
 export const useHiraganaGame = () => {
-  // 1. QUAN TRỌNG: Gán giá trị mặc định là 'hiragana'
   const [value, setValue] = useState('hiragana'); 
 
   const [gameState, setGameState] = useState({
@@ -21,6 +20,7 @@ export const useHiraganaGame = () => {
   const inputRefs = useRef([]);
   const updateState = (updates) => setGameState((prev) => ({ ...prev, ...updates }));
 
+  // --- 1. ACTION: BẮT ĐẦU (Đổi câu) ---
   const startExercise = async () => {
     updateState({
       isLoading: true,
@@ -33,13 +33,16 @@ export const useHiraganaGame = () => {
     });
 
     try {
-      const data = await generateQuizFill(value); // Sử dụng 'value' làm tham số
-      console.log("🎶  startExercise ~ data:", data);
-      updateState({
-        charData: data.questions[0].chars,
-        meaning: data.questions[0].meaning,
-        isStarted: true,
-      });
+      const data = await generateQuizFill(value);
+      console.log("🎶 startExercise ~ data:", data);
+      
+      if (data.questions && data.questions.length > 0) {
+        updateState({
+          charData: data.questions[0].chars,
+          meaning: data.questions[0].meaning,
+          isStarted: true,
+        });
+      }
 
     } catch (error) {
       message.error("Lỗi khi tạo bài tập: " + error.message);
@@ -69,7 +72,6 @@ export const useHiraganaGame = () => {
     }
 
     const correctAnswer = charData[targetIndex].romaji;
-    
     setGameState(prev => ({
       ...prev,
       userInputs: { ...prev.userInputs, [targetIndex]: correctAnswer },
@@ -82,9 +84,31 @@ export const useHiraganaGame = () => {
     }
   };
 
+  // --- 2. ACTION: KIỂM TRA / DỊCH (Định nghĩa trước handleKeyDown) ---
+  const checkAll = () => {
+    const { charData, userInputs } = gameState;
+    const totalInputItems = charData.filter(i => i.type === 'input').length;
+    let correctCount = 0;
+    
+    charData.forEach((item, index) => {
+      if (item.type === 'input' && userInputs[index] === item.romaji) correctCount++;
+    });
+
+    if (correctCount === totalInputItems) {
+      updateState({ isCompleted: true });
+      message.success("Tuyệt vời! Hoàn thành xuất sắc.");
+    } else {
+      message.warning(`Bạn đúng ${correctCount}/${totalInputItems} ký tự.`);
+      // Nếu bạn muốn bấm Ctrl là hiện nghĩa luôn (kể cả làm sai) thì mở comment dòng dưới:
+      // updateState({ isCompleted: true }); 
+    }
+  };
+
+  // --- 3. XỬ LÝ PHÍM TẮT ---
   const handleKeyDown = (e, index) => {
     const { charData, userInputs } = gameState;
     
+    // TRƯỜNG HỢP 1: Nhấn Enter hoặc Space -> Nhảy ô tiếp theo
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       let nextIndex = index + 1;
@@ -92,13 +116,27 @@ export const useHiraganaGame = () => {
         nextIndex++;
       }
       inputRefs.current[nextIndex]?.focus();
-    } else if (e.key === 'Backspace' && !userInputs[index]) {
+    } 
+    // TRƯỜNG HỢP 2: Backspace -> Xóa lùi
+    else if (e.key === 'Backspace' && !userInputs[index]) {
       e.preventDefault();
       let prevIndex = index - 1;
       while (prevIndex >= 0 && charData[prevIndex].type === 'punctuation') {
         prevIndex--;
       }
       inputRefs.current[prevIndex]?.focus();
+    }
+    // TRƯỜNG HỢP 3: Ctrl (Control) -> DỊCH / CHECK
+    else if (e.key === 'Control' || e.key === 'Meta') {
+      console.log('Ctrl pressed -> Checking...');
+      e.preventDefault();
+      checkAll(); // <--- Gọi hàm checkAll thay vì startExercise
+      return;
+    }
+    // (Gợi ý) TRƯỜNG HỢP 4: Tab -> ĐỔI CÂU KHÁC (Để đỡ phải dùng chuột)
+    else if (e.key === 'Tab') {
+       e.preventDefault();
+       startExercise();
     }
   };
 
@@ -114,26 +152,9 @@ export const useHiraganaGame = () => {
     });
   }
 
-  const checkAll = () => {
-    const { charData, userInputs } = gameState;
-    const totalInputItems = charData.filter(i => i.type === 'input').length;
-    let correctCount = 0;
-    
-    charData.forEach((item, index) => {
-      if (item.type === 'input' && userInputs[index] === item.romaji) correctCount++;
-    });
-
-    if (correctCount === totalInputItems) {
-      updateState({ isCompleted: true });
-      message.success("Tuyệt vời! Hoàn thành xuất sắc.");
-    } else {
-      message.warning(`Bạn đúng ${correctCount}/${totalInputItems} ký tự.`);
-    }
-  };
-
   return {
-    value,      // Export value ra để truyền vào SetupCard
-    setValue,   // Export setValue ra để SetupCard thay đổi
+    value,
+    setValue,
     gameState,
     updateState,
     inputRefs,
