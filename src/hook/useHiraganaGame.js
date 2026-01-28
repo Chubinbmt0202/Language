@@ -34,7 +34,6 @@ export const useHiraganaGame = () => {
 
     try {
       const data = await generateQuizFill(value);
-      console.log("🎶 startExercise ~ data:", data);
       
       if (data.questions && data.questions.length > 0) {
         updateState({

@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
-import { LaptopOutlined, NotificationOutlined, UserOutlined, DashboardOutlined } from '@ant-design/icons';
-import { Breadcrumb, Layout, Menu, theme, Typography } from 'antd';
-import Multipage from '../components/english/multi.jsx';
-import Fill from '../components/english/fill.jsx';
-import Listen from '../components/english/listenAndFill.jsx';
+import { LaptopOutlined, NotificationOutlined, UserOutlined } from '@ant-design/icons';
+import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import HiraganaPractice from '../components/japan/FillInBlank/index.jsx';
-import JapaneseQuiz from '../components/japan/Multichoice/index.jsx';
+import VocabularyJapan from '../components/japan/Vocabulary/index.jsx';
 
 const { Header, Content, Sider } = Layout;
-const { Title } = Typography;
 
 const sidebarItems = [
   {
@@ -57,14 +53,8 @@ const Home = () => {
     switch (key) {
       case 'dashboard':
         return <div>Chào mừng đến với trang tổng quan!</div>;
-      case 'multiple-choice-english':
-        return <Multipage />;
-      case 'fill-in-the-blank':
-        return <Fill />;
-      case 'listen-and-fill':
-        return <Listen />;
-      case 'multiple-choice-japanese':
-        return <JapaneseQuiz />;
+      case 'vocabulary-japanese':
+        return <VocabularyJapan />;
       case 'fill-passage':
         return <HiraganaPractice />;
       default:

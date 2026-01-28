@@ -1,0 +1,179 @@
+/* ... Các style cũ giữ nguyên ... */
+.vocabulary-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  font-family: Arial, sans-serif;
+}
+
+.vocabulary-card {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 32px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.vocabulary-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ANSWER AREA */
+.answer-area {
+  margin-bottom: 30px;
+  height: 50px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.answer-slots-wrapper {
+  display: flex;
+  gap: 15px;
+}
+
+.slot-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 50px;
+  height: 40px;
+  transition: all 0.3s ease;
+}
+
+/* Hiệu ứng khi trả lời đúng: Chữ chuyển màu xanh */
+.slot-success .filled-text {
+  color: #10b981; /* Màu xanh lá */
+}
+
+.filled-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #374151;
+  border-bottom: 2px solid transparent;
+  animation: popIn 0.2s ease;
+}
+
+.placeholder-underscore {
+  font-size: 24px;
+  font-weight: bold;
+  color: #d1d5db;
+  letter-spacing: -2px;
+}
+
+/* --- PHẦN MỚI: RESULT CONTAINER (HIỂN THỊ KHI ĐÚNG) --- */
+.result-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0fdf4; /* Nền xanh rất nhạt */
+  border: 1px solid #bbf7d0; /* Viền xanh nhạt */
+  padding: 15px 25px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 350px;
+  margin-bottom: 30px;
+  animation: slideUp 0.4s ease-out;
+}
+
+.result-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.result-word {
+  font-size: 20px;
+  font-weight: bold;
+  color: #15803d; /* Màu xanh lá đậm */
+}
+
+.result-meaning {
+  font-size: 16px;
+  color: #6b7280; /* Màu xám */
+}
+
+.audio-button {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #10b981;
+  transition: all 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.audio-button:hover {
+  transform: scale(1.1);
+  background-color: #10b981;
+  color: white;
+  border-color: #10b981;
+}
+
+/* Hiệu ứng trượt lên */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Các style cũ của options */
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  max-width: 350px;
+}
+
+.option-button {
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #4b5563;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.option-button:hover {
+  background-color: #f3f4f6;
+}
+
+.check-button {
+  margin-top: 40px;
+  width: 150px;
+  height: 45px;
+  border-radius: 22px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.continue-button {
+  width: 150px;
+  height: 45px;
+  border-radius: 22px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #10b981; /* Nút tiếp tục màu xanh */
+}
+.continue-button:hover {
+    background-color: #059669 !important;
+}

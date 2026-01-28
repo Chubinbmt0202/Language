@@ -17,6 +17,5 @@ export const generateQuizFill = async (scriptType) => {
     throw new Error(`API request failed with status ${response.status}`);
   }
   const data = response.data;
-  console.log('📨 API response:', data);
   return data;
 };
