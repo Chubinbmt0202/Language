@@ -79,7 +79,6 @@ const Home = () => {
           <Menu
             mode="inline"
             defaultSelectedKeys={['dashboard']}
-            defaultOpenKeys={['English']} 
             style={{ height: '100%', borderInlineEnd: 0 }}
             items={sidebarItems}
             onClick={(e) => setSelectedKey(e.key)}

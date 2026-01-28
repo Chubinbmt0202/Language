@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Button, Card, Typography, Select, message, Tooltip, Badge } from 'antd';
 import { RedoOutlined, CheckCircleOutlined, BulbOutlined, QuestionCircleOutlined } from '@ant-design/icons';
-import { generateQuestions } from '../geminiService';
+import { generateQuizFill } from '../geminiService';
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -31,7 +31,7 @@ const HiraganaPractice = () => {
     setCharData([]);
     
     try {
-      const data = await generateQuestions(config);
+      const data = await generateQuizFill();
       setCharData(data);
     } catch (error) {
       message.error({

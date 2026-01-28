@@ -1,69 +1,48 @@
-import { useState, useRef } from 'react';
-import { message } from 'antd';
-import { generateQuestions } from '../components/geminiService'; // Đảm bảo import đúng service
+// src/hooks/useHiraganaGame.js
+import { useState, useRef } from "react";
+import { message } from "antd";
+import { generateQuizFill } from "../components/geminiService"; // Import service mới
 
 export const useHiraganaGame = () => {
-  const [config, setConfig] = useState({ 
-    type: 'hiragana-text', count: 1, level: 'N5', topic: 'General' 
-  });
-  
+  // 1. QUAN TRỌNG: Gán giá trị mặc định là 'hiragana'
+  const [value, setValue] = useState('hiragana'); 
+
   const [gameState, setGameState] = useState({
     isLoading: false,
     isStarted: false,
     isCompleted: false,
     charData: [],
-    meaning: "", // <--- STATE MỚI ĐỂ LƯU NGHĨA TIẾNG VIỆT
+    meaning: "",
     userInputs: {},
     hintUsedIndices: {},
     focusedIndex: null,
   });
 
   const inputRefs = useRef([]);
-
-  // Hàm update state tiện lợi
-  const updateState = (updates) => setGameState(prev => ({ ...prev, ...updates }));
+  const updateState = (updates) => setGameState((prev) => ({ ...prev, ...updates }));
 
   const startExercise = async () => {
-    // Reset toàn bộ state khi bắt đầu bài mới
-    updateState({ 
-      isLoading: true, 
-      isCompleted: false, 
-      userInputs: {}, 
-      hintUsedIndices: {}, 
-      charData: [], 
-      meaning: "", 
-      isStarted: false 
+    updateState({
+      isLoading: true,
+      isCompleted: false,
+      userInputs: {},
+      hintUsedIndices: {},
+      charData: [],
+      meaning: "",
+      isStarted: false,
     });
-    
-    try {
-      // Gọi API
-      const data = await generateQuestions(config);
-      
-      // 🔥 LOG DỮ LIỆU FRONTEND NHẬN ĐƯỢC (để bạn debug)
-      console.log("🔥 Dữ liệu từ API:", data);
 
-      // Kiểm tra cấu trúc dữ liệu trả về
-      if (data.chars && Array.isArray(data.chars)) {
-        // Trường hợp chuẩn: Có mảng chars và meaning
-        updateState({ 
-          charData: data.chars, 
-          meaning: data.meaning || "Không có dịch nghĩa.", // Fallback nếu rỗng
-          isStarted: true 
-        });
-      } else if (Array.isArray(data)) {
-        // Trường hợp cũ (fallback): API trả về mảng trực tiếp
-        updateState({ 
-          charData: data, 
-          meaning: "", 
-          isStarted: true 
-        });
-      } else {
-        throw new Error("Dữ liệu API không đúng định dạng mong đợi");
-      }
+    try {
+      const data = await generateQuizFill(value); // Sử dụng 'value' làm tham số
+      console.log("🎶  startExercise ~ data:", data);
+      updateState({
+        charData: data.questions[0].chars,
+        meaning: data.questions[0].meaning,
+        isStarted: true,
+      });
 
     } catch (error) {
-      console.error("Lỗi:", error);
-      message.error('Lỗi khi tạo bài tập: ' + error.message);
+      message.error("Lỗi khi tạo bài tập: " + error.message);
     } finally {
       updateState({ isLoading: false });
     }
@@ -123,6 +102,18 @@ export const useHiraganaGame = () => {
     }
   };
 
+  const resetGame = () => {
+    updateState({
+      isStarted: false,
+      isCompleted: false,
+      charData: [],
+      meaning: "",
+      userInputs: {},
+      hintUsedIndices: {},
+      focusedIndex: null,
+    });
+  }
+
   const checkAll = () => {
     const { charData, userInputs } = gameState;
     const totalInputItems = charData.filter(i => i.type === 'input').length;
@@ -141,14 +132,17 @@ export const useHiraganaGame = () => {
   };
 
   return {
-    config, setConfig,
-    gameState, updateState,
+    value,      // Export value ra để truyền vào SetupCard
+    setValue,   // Export setValue ra để SetupCard thay đổi
+    gameState,
+    updateState,
     inputRefs,
     actions: {
       startExercise,
       handleInputChange,
       handleHint,
       handleKeyDown,
+      resetGame,
       checkAll,
       setFocusedIndex: (idx) => updateState({ focusedIndex: idx })
     }

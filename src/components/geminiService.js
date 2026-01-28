@@ -1,33 +1,22 @@
-// geminiService.js (Frontend)
+// src/services/geminiService.js
+import axios from "axios";
 
-// URL của backend (có thể đưa vào biến môi trường VITE_API_URL)
-const API_URL = "https://language-backend-onoo.onrender.com/api/generate-quiz";
+const BASE_URL = 'http://localhost:9999'; // Thay thế bằng URL thực tế của bạn
+const ENDPOINT = '/api/generate-quiz-fill';
 
-export const generateQuestions = async ({ type = 'multiple-choice', count = 5, level = 'N5', topic = 'General' }) => {
-  try {
-    const response = await fetch(API_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ type, count, level, topic }),
-    });
-
-    if (!response.ok) {
-      throw new Error(`Server error: ${response.status}`);
-    }
-
-    const result = await response.json();
-
-    if (result.success) {
-      console.log(`Generated [${type}] Questions from Backend:`, result.data);
-      return result.data;
-    } else {
-      throw new Error(result.message || "Unknown error from backend");
-    }
-
-  } catch (error) {
-    console.error("Error calling quiz API:", error);
-    throw error;
+export const generateQuizFill = async (scriptType) => {
+  let apiType = scriptType;
+  if (scriptType !== 'mixed-text' && !scriptType.includes('-text')) {
+    apiType = `${scriptType}-text`;
   }
+  // console.log(`📡 Calling API generateQuizFill with type: ${apiType}`);
+  const response = await axios.post(`${BASE_URL}${ENDPOINT}`, { type: apiType });
+  // console.log('📨 API raw response:', response);
+  
+  if (response.status !== 200) {
+    throw new Error(`API request failed with status ${response.status}`);
+  }
+  const data = response.data;
+  console.log('📨 API response:', data);
+  return data;
 };

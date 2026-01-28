@@ -8,7 +8,7 @@ import QuizHistory from "./QuizHistory";
 import QuizGame from "./QuizGame";
 
 // Import logic phụ trợ
-import { generateQuestions } from "../../geminiService";
+import { generateQuizFill } from "../../geminiService";
 import { saveQuizToHistory, getHistory } from "../../../util/historyStorage";
 
 const { TabPane } = Tabs;
@@ -40,7 +40,7 @@ const JapaneseQuiz = () => {
   const handleStartAPI = async () => {
     setIsLoading(true);
     try {
-      const questions = await generateQuestions(config);
+      const questions = await generateQuizFill();
       
       // Lưu vào lịch sử
       saveQuizToHistory(questions, config);
