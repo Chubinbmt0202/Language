@@ -1,7 +1,7 @@
 // src/hooks/useHiraganaGame.js
 import { useState, useRef } from "react";
 import { message } from "antd";
-import { generateQuizFill } from "../components/geminiService";
+import { generateQuizFill } from "../components/japan/API/geminiService.js";
 
 export const useHiraganaGame = () => {
   const [value, setValue] = useState('hiragana'); 

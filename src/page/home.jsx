@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { LaptopOutlined, NotificationOutlined, UserOutlined } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import HiraganaPractice from '../components/japan/FillInBlank/index.jsx';
-import VocabularyJapan from '../components/japan/Vocabulary/index.jsx';
+import VocabularyJapan from '../components/japan/Vocabulary/VocabularyApp.jsx';
 import ListenAndFillJapanese from '../components/japan/ListenAndFill/index.jsx';
 import JapaneseQuiz from '../components/japan/Multichoice/index.jsx';
 
