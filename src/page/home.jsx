@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   useNavigate,
   useLocation,
@@ -14,7 +14,7 @@ import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
 } from "@ant-design/icons";
-import { Breadcrumb, Layout, Menu, theme, Button } from "antd";
+import { Breadcrumb, Layout, Menu, theme, Button, Drawer } from "antd";
 
 const { Content, Sider, Header } = Layout;
 const sidebarItems = [
@@ -60,6 +60,9 @@ const breadcrumbNameMap = {
 
 const Home = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [drawerVisible, setDrawerVisible] = useState(false);
+
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
@@ -67,93 +70,132 @@ const Home = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Kiểm tra kích thước màn hình để xác định chế độ mobile
+  useEffect(() => {
+    const handleResize = () => {
+      const mobile = window.innerWidth <= 768;
+      setIsMobile(mobile);
+      if (mobile) setCollapsed(true); // Tự động đóng sidebar nếu là mobile
+    };
+
+    handleResize(); // Chạy lần đầu khi load
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const toggleSidebar = () => {
+    if (isMobile) {
+      setDrawerVisible(!drawerVisible);
+    } else {
+      setCollapsed(!collapsed);
+    }
+  };
+
+  const handleMenuClick = (key) => {
+    navigate(`/${key}`);
+    if (isMobile) setDrawerVisible(false); // Đóng drawer sau khi chọn menu trên mobile
+  };
+
+  // Logic Breadcrumb (giữ nguyên)
   const pathSnippets = location.pathname.split("/").filter((i) => i);
   const breadcrumbItems = [
-  { title: <Link to="/">Home</Link> },
-  ...pathSnippets.map((_, index) => {
-    const url = `/${pathSnippets.slice(0, index + 1).join("/")}`;
-    const snippet = pathSnippets[index];
-    
-    // Nếu có trong map thì dùng tiếng Việt, không thì format text mặc định
-    const label = breadcrumbNameMap[snippet] || 
-                  snippet.charAt(0).toUpperCase() + snippet.slice(1).replace(/-/g, ' ');
+    { title: <Link to="/">Home</Link> },
+    ...pathSnippets.map((_, index) => {
+      const url = `/${pathSnippets.slice(0, index + 1).join("/")}`;
+      const snippet = pathSnippets[index];
+      const label = breadcrumbNameMap[snippet] || snippet.charAt(0).toUpperCase() + snippet.slice(1).replace(/-/g, ' ');
+      return { title: <Link to={url}>{label}</Link> };
+    }),
+  ];
 
-    return { title: <Link to={url}>{label}</Link> };
-  }),
-];
-
-return (
+  return (
     <Layout style={{ minHeight: "100vh" }}>
-      {/* SIDEBAR CỐ ĐỊNH */}
-      <Sider
-        trigger={null}
-        collapsible
-        collapsed={collapsed}
+      {/* SIDEBAR CHO DESKTOP */}
+      {!isMobile && (
+        <Sider
+          trigger={null}
+          collapsible
+          collapsed={collapsed}
+          width={250}
+          style={{
+            overflow: "auto",
+            height: "100vh",
+            position: "fixed",
+            left: 0,
+            top: 0,
+            zIndex: 1002,
+            background: colorBgContainer,
+            borderRight: "1px solid #f0f0f0",
+          }}
+        >
+          <div style={{ height: 32, margin: 16, background: "rgba(0, 0, 0, 0.05)", borderRadius: 6 }} />
+          <Menu
+            mode="inline"
+            selectedKeys={[location.pathname.substring(1)]}
+            defaultOpenKeys={["english", "japanese"]}
+            items={sidebarItems}
+            onClick={({ key }) => handleMenuClick(key)}
+          />
+        </Sider>
+      )}
+
+      {/* DRAWER CHO MOBILE */}
+      <Drawer
+        title="Menu"
+        placement="left"
+        onClose={() => setDrawerVisible(false)}
+        open={drawerVisible}
+        bodyStyle={{ padding: 0 }}
         width={250}
-        style={{
-          overflow: "auto",
-          height: "100vh",
-          position: "fixed",
-          left: 0,
-          top: 0,
-          bottom: 0,
-          zIndex: 1002, // Cao hơn Header
-          background: colorBgContainer,
-          borderRight: "1px solid #f0f0f0",
-        }}
       >
-        <div style={{ height: 32, margin: 16, background: "rgba(0, 0, 0, 0.05)", borderRadius: 6 }} />
         <Menu
           mode="inline"
           selectedKeys={[location.pathname.substring(1)]}
-          defaultOpenKeys={["english", "japanese"]}
           items={sidebarItems}
-          onClick={({ key }) => navigate(`/${key}`)}
+          onClick={({ key }) => handleMenuClick(key)}
         />
-      </Sider>
+      </Drawer>
 
-      {/* LAYOUT CHÍNH */}
       <Layout 
         style={{ 
-          marginLeft: collapsed ? 80 : 250, // Cập nhật lại cho khớp chuẩn AntD
-          transition: "margin-left 0.2s",
+          // Nếu mobile thì không cần marginLeft, nếu desktop thì lùi theo trạng thái collapsed
+          marginLeft: isMobile ? 0 : (collapsed ? 80 : 250), 
+          transition: "all 0.2s",
           minHeight: "100vh",
         }}
       >
-        {/* HEADER CỐ ĐỊNH */}
         <Header
           style={{
             padding: 0,
             background: colorBgContainer,
             display: "flex",
             alignItems: "center",
-            position: "fixed", // Chuyển sang fixed để tuyệt đối đứng yên
+            position: "fixed",
             top: 0,
             right: 0,
             zIndex: 1001,
-            // Header phải co giãn theo Sidebar
-            width: `calc(100% - ${collapsed ? 80 : 250}px)`, 
-            transition: "width 0.2s",
+            // Header rộng 100% trên mobile, trừ khoảng trống sidebar trên desktop
+            width: isMobile ? "100%" : `calc(100% - ${collapsed ? 80 : 250}px)`, 
+            transition: "all 0.2s",
             borderBottom: "1px solid #f0f0f0",
           }}
         >
           <Button
             type="text"
-            icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-            onClick={() => setCollapsed(!collapsed)}
-            style={{ fontSize: "16px", width: 64, height: 64, background: "transparent" }}
+            icon={collapsed && !isMobile ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+            onClick={toggleSidebar}
+            style={{ fontSize: "16px", width: 64, height: 64 }}
           />
-          <Breadcrumb items={breadcrumbItems} style={{ margin: "0 16px" }} />
+          <Breadcrumb items={breadcrumbItems} style={{ margin: "0 16px", overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis" }} />
         </Header>
 
-        {/* CONTENT */}
         <Content
           style={{
-            margin: "80px 16px 16px", // 64px (header) + 24px (khoảng cách top)
-            padding: 24,
+            margin: "80px 16px 16px",
+            padding: isMobile ? 12 : 24, // Giảm padding trên mobile để tăng diện tích hiển thị
             background: colorBgContainer,
             borderRadius: borderRadiusLG,
-            minHeight: "calc(100vh - 112px)", // Đảm bảo luôn lấp đầy màn hình
+            minHeight: "calc(100vh - 112px)",
           }}
         >
           <Outlet />

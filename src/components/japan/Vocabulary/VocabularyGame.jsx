@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Flex, Progress } from "antd";
+import { Button, Progress, Space } from "antd";
 import { CloseOutlined } from "@ant-design/icons";
 
 const VocabularyGame = ({ data, onExit }) => {
@@ -48,85 +48,129 @@ const VocabularyGame = ({ data, onExit }) => {
   // Tính phần trăm tiến độ
   const percent = Math.round((currentIndex / data.length) * 100);
 
-  return (
-    <div className="vocabulary-container">
-      <div style={{ height: "100px"}}>
-        <Button style={{marginRight: "10px"}} type="text" icon={<CloseOutlined />} onClick={onExit}>
+return (
+    <div className="vocabulary-container" style={{ padding: "10px", maxWidth: "800px", margin: "0 auto" }}>
+      {/* HEADER: Phần này đã được sửa để responsive */}
+      <div style={{ 
+        display: "flex", 
+        alignItems: "center", 
+        gap: "10px", 
+        marginBottom: "20px",
+        flexWrap: "wrap" // Cho phép xuống dòng nếu màn hình quá nhỏ
+      }}>
+        <Button 
+          type="text" 
+          icon={<CloseOutlined />} 
+          onClick={onExit}
+          style={{ padding: "4px 8px" }}
+        >
           Thoát
         </Button>
 
-        <Progress percent={percent} style={{width: "100vh", marginRight: "10px"}} showInfo={false} strokeColor="#45cf41" />
-        <span >Câu hỏi {currentIndex + 1} / {data.length}</span>
+        <div style={{ flex: 1, minWidth: "150px" }}>
+          <Progress 
+            percent={percent} 
+            showInfo={false} 
+            strokeColor="#45cf41" 
+            status="active"
+            strokeWidth={12} // Tăng độ dày một chút cho dễ nhìn trên mobile
+          />
+        </div>
+
+        <span style={{ fontSize: "14px", fontWeight: "bold", whiteSpace: "nowrap" }}>
+          {currentIndex + 1} / {data.length}
+        </span>
       </div>
 
-      {/* Phần hiển thị ảnh và ô chữ (Giữ nguyên code UI cũ) */}
-      <div className="vocabulary-card">
+      {/* PHẦN NỘI DUNG CHÍNH (Giữ nguyên logic cũ của bạn) */}
+      <div className="vocabulary-card" style={{ textAlign: "center", marginBottom: "20px" }}>
         <img
           src={currentQuestion.imageUrl}
           alt="Vocabulary"
-          className="vocabulary-image"
+          style={{ 
+            maxWidth: "100%", 
+            height: "auto", 
+            maxHeight: "300px", 
+            borderRadius: "12px",
+            objectFit: "cover" 
+          }}
         />
       </div>
 
-      <span>{currentQuestion.meaning}</span>
+      <div style={{ textAlign: "center", fontSize: "18px", marginBottom: "20px", fontWeight: "500" }}>
+        {currentQuestion.meaning}
+      </div>
 
-      <div className="answer-area">
-        <div className="answer-slots-wrapper">
+      <div className="answer-area" style={{ marginBottom: "30px" }}>
+        <div className="answer-slots-wrapper" style={{ display: "flex", justifyContent: "center", gap: "8px", flexWrap: "wrap" }}>
           {currentQuestion.parts.map((_, index) => (
             <div
               key={index}
               className={`slot-container ${isCorrect ? "slot-success" : ""}`}
               onClick={() => handleRemoveWord(index)}
+              style={{
+                width: "45px",
+                height: "50px",
+                borderBottom: "3px solid #ccc",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "20px",
+                cursor: "pointer"
+              }}
             >
               {selectedWords[index] ? (
-                <span className="filled-text">{selectedWords[index]}</span>
+                <span className="filled-text" style={{ color: isCorrect ? "#45cf41" : "#333" }}>
+                  {selectedWords[index]}
+                </span>
               ) : (
-                <span className="placeholder-underscore">__</span>
+                <span className="placeholder-underscore" style={{ color: "#eee" }}>_</span>
               )}
             </div>
           ))}
         </div>
       </div>
 
-      {isCorrect && (
-        <div className="result-container">
-          <span className="result-word">{currentQuestion.fullWord}</span>
-          <span className="result-meaning">{currentQuestion.meaning}</span>
-        </div>
-      )}
-
-      {!isCorrect && (
-        <div className="options-container">
+      {/* OPTIONS & BUTTONS */}
+      {!isCorrect ? (
+        <div className="options-container" style={{ display: "flex", flexWrap: "wrap", gap: "10px", justifyContent: "center" }}>
           {currentQuestion.options.map((word, index) => (
-            <button
+            <Button
               key={index}
-              className="option-button"
+              size="large"
               onClick={() => handleSelectWord(word)}
               disabled={selectedWords.length >= currentQuestion.parts.length}
+              style={{ borderRadius: "8px", minWidth: "60px" }}
             >
               {word}
-            </button>
+            </Button>
           ))}
+        </div>
+      ) : (
+        <div style={{ textAlign: "center" }}>
+           <h2 style={{ color: "#45cf41" }}>Chính xác!</h2>
         </div>
       )}
 
-      <div style={{ marginTop: 20 }}>
+      <div style={{ marginTop: 30, textAlign: "center" }}>
         {!isCorrect ? (
           <Button
             onClick={handleCheck}
             type="primary"
-            className="check-button"
+            size="large"
             disabled={selectedWords.length !== currentQuestion.parts.length}
+            style={{ padding: "0 40px", height: "50px", borderRadius: "25px" }}
           >
             Kiểm tra
           </Button>
         ) : (
           <Button
             type="primary"
-            className="continue-button"
+            size="large"
             onClick={handleNext}
+            style={{ padding: "0 40px", height: "50px", borderRadius: "25px", background: "#45cf41" }}
           >
-            Tiếp (Next)
+            Tiếp tục (Next)
           </Button>
         )}
       </div>
