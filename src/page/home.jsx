@@ -1,109 +1,165 @@
-import React, { useState } from 'react';
-import { LaptopOutlined, NotificationOutlined, UserOutlined } from '@ant-design/icons';
-import { Breadcrumb, Layout, Menu, theme } from 'antd';
-import HiraganaPractice from '../components/japan/FillInBlank/index.jsx';
-import VocabularyJapan from '../components/japan/Vocabulary/VocabularyApp.jsx';
-import ListenAndFillJapanese from '../components/japan/ListenAndFill/index.jsx';
-import JapaneseQuiz from '../components/japan/Multichoice/index.jsx';
-//////
-import Grammar from '../components/english/Grammar/index.jsx';
+import React, { useState } from "react";
+import {
+  useNavigate,
+  useLocation,
+  Routes,
+  Route,
+  Link,
+  Outlet,
+} from "react-router-dom";
+import {
+  LaptopOutlined,
+  NotificationOutlined,
+  UserOutlined,
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
+} from "@ant-design/icons";
+import { Breadcrumb, Layout, Menu, theme, Button } from "antd";
 
-const { Header, Content, Sider } = Layout;
-
+const { Content, Sider, Header } = Layout;
 const sidebarItems = [
   {
-    key: 'dashboard',
+    key: "dashboard",
     icon: <UserOutlined />,
-    label: 'Tổng quan',
+    label: "Tổng quan",
   },
   {
-    key: 'English',
+    key: "english",
     icon: <LaptopOutlined />,
-    label: 'Tiếng Anh',
+    label: "Tiếng Anh",
     children: [
-      { key: 'grammar-english', label: 'Ngữ pháp', title: 'Ngữ pháp Tiếng Anh' },
-      { key: 'fill-in-the-blank', label: 'Điền vào chỗ trống' },
-      { key: 'listen-and-fill', label: 'Nghe và điền' },
+      { key: "english/grammar", label: "Ngữ pháp" },
+      { key: "english/fill-in-the-blank", label: "Điền vào chỗ trống" },
+      { key: "english/listen-and-fill", label: "Nghe và điền" },
     ],
   },
   {
-    key: 'Japanese',
+    key: "japanese",
     icon: <NotificationOutlined />,
-    label: 'Tiếng Nhật',
+    label: "Tiếng Nhật",
     children: [
-      { key: 'multiple-choice-japanese', label: 'Trắc nghiệm', title: 'Trắc nghiệm Tiếng Nhật' },
-      { key: 'vocabulary-japanese', label: 'Bài tập từ vựng', title: 'Bài tập từ vựng Tiếng Nhật' },
-      { key: 'fill-passage', label: 'Điền vào đoạn văn', title: 'Điền vào đoạn văn Tiếng Nhật' },
-      { key: 'listen-and-fill-japanese', label: 'Nghe và điền' },
-    ],
-  },
-  {
-    key: 'Chinese',
-    icon: <NotificationOutlined />,
-    label: 'Tiếng Trung',
-    children: [
-      { key: 'profile', label: 'Hồ sơ cá nhân' },
-      { key: 'security', label: 'Bảo mật' },
+      { key: "japanese/multiple-choice", label: "Trắc nghiệm" },
+      { key: "japanese/vocabulary", label: "Bài tập từ vựng" },
+      { key: "japanese/fill-passage", label: "Điền vào đoạn văn" },
+      { key: "japanese/listen-and-fill", label: "Nghe và điền" },
     ],
   },
 ];
 
+const breadcrumbNameMap = {
+  'dashboard': 'Tổng quan',
+  'english': 'Tiếng Anh',
+  'grammar': 'Ngữ pháp',
+  'word-form': 'Từ loại',
+  'fill-in-the-blank': 'Điền từ',
+  'suffix-exercise': 'Hậu tố',
+  'find-errors': 'Tìm lỗi sai',
+  'japanese': 'Tiếng Nhật',
+  // Thêm các key khác...
+};
+
 const Home = () => {
+  const [collapsed, setCollapsed] = useState(false);
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
-  const [selectedKey, setSelectedKey] = useState('dashboard');
-  const renderContent = (key) => {
-    switch (key) {
-      case 'dashboard':
-        return <div>Chào mừng đến với trang tổng quan!</div>;
-      case 'multiple-choice-japanese':
-        return <JapaneseQuiz />;
-      case 'vocabulary-japanese':
-        return <VocabularyJapan />;
-      case 'fill-passage':
-        return <HiraganaPractice />;
-      case 'listen-and-fill-japanese':
-        return <ListenAndFillJapanese />;
-      case 'grammar-english':
-        return <Grammar />;
-      default:
-        return <div>Nội dung đang được cập nhật cho mục: {key}</div>;
-    }
-  };
 
-  return (
-    <Layout style={{ minHeight: '100vh' }}>
-      <Layout>
-        <Sider width={250} style={{ background: colorBgContainer }}>
-          <Menu
-            mode="inline"
-            defaultSelectedKeys={['dashboard']}
-            style={{ height: '100%', borderInlineEnd: 0 }}
-            items={sidebarItems}
-            onClick={(e) => setSelectedKey(e.key)}
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const pathSnippets = location.pathname.split("/").filter((i) => i);
+  const breadcrumbItems = [
+  { title: <Link to="/">Home</Link> },
+  ...pathSnippets.map((_, index) => {
+    const url = `/${pathSnippets.slice(0, index + 1).join("/")}`;
+    const snippet = pathSnippets[index];
+    
+    // Nếu có trong map thì dùng tiếng Việt, không thì format text mặc định
+    const label = breadcrumbNameMap[snippet] || 
+                  snippet.charAt(0).toUpperCase() + snippet.slice(1).replace(/-/g, ' ');
+
+    return { title: <Link to={url}>{label}</Link> };
+  }),
+];
+
+return (
+    <Layout style={{ minHeight: "100vh" }}>
+      {/* SIDEBAR CỐ ĐỊNH */}
+      <Sider
+        trigger={null}
+        collapsible
+        collapsed={collapsed}
+        width={250}
+        style={{
+          overflow: "auto",
+          height: "100vh",
+          position: "fixed",
+          left: 0,
+          top: 0,
+          bottom: 0,
+          zIndex: 1002, // Cao hơn Header
+          background: colorBgContainer,
+          borderRight: "1px solid #f0f0f0",
+        }}
+      >
+        <div style={{ height: 32, margin: 16, background: "rgba(0, 0, 0, 0.05)", borderRadius: 6 }} />
+        <Menu
+          mode="inline"
+          selectedKeys={[location.pathname.substring(1)]}
+          defaultOpenKeys={["english", "japanese"]}
+          items={sidebarItems}
+          onClick={({ key }) => navigate(`/${key}`)}
+        />
+      </Sider>
+
+      {/* LAYOUT CHÍNH */}
+      <Layout 
+        style={{ 
+          marginLeft: collapsed ? 80 : 250, // Cập nhật lại cho khớp chuẩn AntD
+          transition: "margin-left 0.2s",
+          minHeight: "100vh",
+        }}
+      >
+        {/* HEADER CỐ ĐỊNH */}
+        <Header
+          style={{
+            padding: 0,
+            background: colorBgContainer,
+            display: "flex",
+            alignItems: "center",
+            position: "fixed", // Chuyển sang fixed để tuyệt đối đứng yên
+            top: 0,
+            right: 0,
+            zIndex: 1001,
+            // Header phải co giãn theo Sidebar
+            width: `calc(100% - ${collapsed ? 80 : 250}px)`, 
+            transition: "width 0.2s",
+            borderBottom: "1px solid #f0f0f0",
+          }}
+        >
+          <Button
+            type="text"
+            icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+            onClick={() => setCollapsed(!collapsed)}
+            style={{ fontSize: "16px", width: 64, height: 64, background: "transparent" }}
           />
-        </Sider>
-        <Layout style={{ padding: '0 24px 24px' }}>
-          <Breadcrumb
-            items={[{ title: 'Home' }, { title: 'App' }, { title: selectedKey }]}
-            style={{ margin: '16px 0' }}
-          />
-          <Content
-            style={{
-              padding: 24,
-              margin: 0,
-              minHeight: 280,
-              background: colorBgContainer,
-              borderRadius: borderRadiusLG,
-            }}
-          >
-            {renderContent(selectedKey)}
-          </Content>
-        </Layout>
+          <Breadcrumb items={breadcrumbItems} style={{ margin: "0 16px" }} />
+        </Header>
+
+        {/* CONTENT */}
+        <Content
+          style={{
+            margin: "80px 16px 16px", // 64px (header) + 24px (khoảng cách top)
+            padding: 24,
+            background: colorBgContainer,
+            borderRadius: borderRadiusLG,
+            minHeight: "calc(100vh - 112px)", // Đảm bảo luôn lấp đầy màn hình
+          }}
+        >
+          <Outlet />
+        </Content>
       </Layout>
     </Layout>
   );
 };
-
 export default Home;

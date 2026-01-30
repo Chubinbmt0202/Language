@@ -22,7 +22,7 @@ import {
 import { generateQuizWordForm } from "../../../API/GenerateQuiz";
 
 
-const FillInBlank = ({ onBack }) => {
+const FillInBlank = () => {
   // States cấu hình
   const [isStarted, setIsStarted] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
@@ -111,13 +111,6 @@ const FillInBlank = ({ onBack }) => {
   if (!isStarted) {
     return (
       <div style={{ maxWidth: 500, margin: "50px auto" }}>
-        <Button
-          icon={<ArrowLeftOutlined />}
-          onClick={onBack}
-          style={{ marginBottom: 16 }}
-        >
-          Quay lại
-        </Button>
         <Card
           title={
             <span>

@@ -1,68 +1,44 @@
-import React, { useState } from "react"; // 1. Thêm useState
-import { Card, Col, Row, Button } from "antd";
-import { ArrowLeftOutlined } from "@ant-design/icons"; // Để làm nút quay lại
-import WordForm from "./WordForm"; // Import component bài tập
+import React from "react";
+import { useNavigate, Outlet } from "react-router-dom";
+import { Card, Col, Row } from "antd";
 
-const Grammar = () => {
-  // 2. Tạo state để quản lý xem đang ở menu chính hay đang làm bài tập
-  // activeTab = null nghĩa là đang ở menu chính
-  const [activeTab, setActiveTab] = useState(null);
-
-  const handleCardClick = (key) => {
-    setActiveTab(key); // Cập nhật state khi click
-  };
+// 1. Component chứa danh sách các Card bài tập
+export const GrammarMenu = () => {
+  const navigate = useNavigate();
 
   const content = [
-    { title: "Bài tập từ loại (Word Form)", key: "part-of-speech" },
-    { title: "Ngữ pháp (Grammar)", key: "grammar" },
-    { title: "Đại từ & Tính từ sở hữu (Pronouns)", key: "verb-tenses" },
-    { title: "Giới từ & Liên từ (Prepositions & Conjunctions)", key: "prepositions" },
-    { title: "Câu điều kiện (Conditionals)", key: "conditionals" },
-    { title: "Câu bị động (Passive Voice)", key: "passive-voice" },
-    { title: "Từ vựng (Vocabulary/Meaning)", key: "vocabulary" },
+    { title: "Bài tập từ loại (Word Form)", path: "word-form" }, // path tương ứng với route trong App.js
+    { title: "Ngữ pháp (Grammar)", path: "structure" },
+    { title: "Đại từ & Tính từ sở hữu (Pronouns)", path: "pronouns" },
+    { title: "Giới từ & Liên từ (Prepositions)", path: "prepositions" },
+    { title: "Câu điều kiện (Conditionals)", path: "conditionals" },
+    { title: "Câu bị động (Passive Voice)", path: "passive-voice" },
+    { title: "Từ vựng (Vocabulary/Meaning)", path: "vocabulary" },
   ];
 
-  // 3. Logic hiển thị nội dung dựa trên state
-  const renderContent = () => {
-    if (activeTab === "part-of-speech") {
-      return (
-        <div>
-          <WordForm onBack={() => setActiveTab(null)}/>
-        </div>
-      );
-    }
+  return (
+    <Row gutter={16}>
+      {content.map((item) => (
+        <Col xs={24} sm={12} md={8} lg={8} key={item.path} style={{ marginBottom: 16 }}>
+          <Card
+            hoverable
+            onClick={() => navigate(item.path)} // Điều hướng bằng navigate
+            style={{ borderRadius: '8px', textAlign: 'center' }}
+          >
+            <Card.Meta title={item.title} />
+          </Card>
+        </Col>
+      ))}
+    </Row>
+  );
+};
 
-    // Nếu các bài tập khác chưa làm, hiện thông báo tạm thời
-    if (activeTab !== null) {
-      return (
-        <div style={{ textAlign: 'center', padding: '50px' }}>
-          <h2>Chức năng {activeTab} đang được phát triển</h2>
-          <Button onClick={() => setActiveTab(null)}>Quay lại</Button>
-        </div>
-      );
-    }
-
-    // Mặc định hiển thị danh sách các Card
-    return (
-      <Row gutter={16}>
-        {content.map((item) => (
-          <Col xs={24} sm={12} md={8} lg={8} key={item.key} style={{ marginBottom: 16 }}>
-            <Card
-              hoverable
-              onClick={() => handleCardClick(item.key)}
-              style={{ borderRadius: '8px', textAlign: 'center' }}
-            >
-              <Card.Meta title={item.title} />
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    );
-  };
-
+// 2. Component chính Grammar đóng vai trò Layout cho phần English Grammar
+const Grammar = () => {
   return (
     <div style={{ padding: '20px' }}>
-      {renderContent()}
+      {/* Outlet này sẽ hiển thị GrammarMenu HOẶC WordForm tùy theo URL */}
+      <Outlet />
     </div>
   );
 };
