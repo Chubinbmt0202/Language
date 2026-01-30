@@ -5,6 +5,8 @@ import HiraganaPractice from '../components/japan/FillInBlank/index.jsx';
 import VocabularyJapan from '../components/japan/Vocabulary/VocabularyApp.jsx';
 import ListenAndFillJapanese from '../components/japan/ListenAndFill/index.jsx';
 import JapaneseQuiz from '../components/japan/Multichoice/index.jsx';
+//////
+import Grammar from '../components/english/Grammar/index.jsx';
 
 const { Header, Content, Sider } = Layout;
 
@@ -19,7 +21,7 @@ const sidebarItems = [
     icon: <LaptopOutlined />,
     label: 'Tiếng Anh',
     children: [
-      { key: 'multiple-choice-english', label: 'Trắc nghiệm', title: 'Trắc nghiệm Tiếng Anh' },
+      { key: 'grammar-english', label: 'Ngữ pháp', title: 'Ngữ pháp Tiếng Anh' },
       { key: 'fill-in-the-blank', label: 'Điền vào chỗ trống' },
       { key: 'listen-and-fill', label: 'Nghe và điền' },
     ],
@@ -63,6 +65,8 @@ const Home = () => {
         return <HiraganaPractice />;
       case 'listen-and-fill-japanese':
         return <ListenAndFillJapanese />;
+      case 'grammar-english':
+        return <Grammar />;
       default:
         return <div>Nội dung đang được cập nhật cho mục: {key}</div>;
     }
