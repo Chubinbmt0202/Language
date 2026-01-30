@@ -10,7 +10,7 @@ const generateQuizFill = async (scriptType) => {
   if (scriptType !== 'mixed-text' && !scriptType.includes('-text')) {
     apiType = `${scriptType}-text`;
   }
-  const response = await axios.post(`${BASE_URL_LOCAL}${ENDPOINT}`, { type: apiType });
+  const response = await axios.post(`${BASE_URL}${ENDPOINT}`, { type: apiType });
   if (response.status !== 200) {
     throw new Error(`API request failed with status ${response.status}`);
   }
