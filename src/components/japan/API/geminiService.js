@@ -20,7 +20,7 @@ const generateQuizFill = async (scriptType) => {
 
 const generateVocab = async (config) => {
   console.log("Gọi API generateVocab với cấu hình:", config);
-  const response = await axios.post(`${BASE_URL_LOCAL}/api/generate-quiz-vocab`, config);
+  const response = await axios.post(`${BASE_URL}/api/generate-quiz-vocab`, config);
   if (response.status !== 200) {
     throw new Error(`API request failed with status ${response.status}`);
   }
