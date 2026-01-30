@@ -2,6 +2,8 @@ import { Card, Col, Row, Button } from "antd";
 import React, { useState } from "react";
 import { ArrowLeftOutlined } from "@ant-design/icons";
 import FillInBlank from "./FillInBlank/index";
+import SuffixExercise from "./Suffixes/index";
+import ErrorCorrectionQuiz from "./FindError/index";
 const content = [
   { title: "Điền từ vào chỗ trống", key: "fill-in-the-blank" },
   { title: "Bài tập hậu tố", key: "suffix-exercise" },
@@ -16,6 +18,22 @@ const WordForm = ({ onBack }) => {
       return (
         <div>
           <FillInBlank onBack={() => setActiveTab(null)} />
+        </div>
+      );
+    }
+
+    if (activeTab === "suffix-exercise") {
+      return (
+        <div>
+          <SuffixExercise onBack={() => setActiveTab(null)} />
+        </div>
+      )
+    }
+
+    if (activeTab === "find-errors") {
+      return (
+        <div>
+          <ErrorCorrectionQuiz onBack={() => setActiveTab(null)} />
         </div>
       );
     }
