@@ -68,6 +68,8 @@ const VocabularyGame = ({ data, onExit }) => {
         />
       </div>
 
+      <span>{currentQuestion.meaning}</span>
+
       <div className="answer-area">
         <div className="answer-slots-wrapper">
           {currentQuestion.parts.map((_, index) => (

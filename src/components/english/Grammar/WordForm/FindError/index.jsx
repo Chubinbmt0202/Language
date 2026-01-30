@@ -23,11 +23,6 @@ import {
 } from "@ant-design/icons";
 
 const { Text } = Typography;
-
-// Dữ liệu mẫu: Tìm lỗi sai
-// segments: chia câu thành các phần. 
-// type='option' là phần có thể click (A, B, C, D). 
-// key: định danh đáp án.
 const errorCorrectionData = [
   {
     id: 1,
@@ -121,7 +116,7 @@ const errorCorrectionData = [
   },
 ];
 
-const ErrorCorrectionQuiz = ({ onBack }) => {
+const ErrorCorrectionQuiz = () => {
   // States cấu hình
   const [isStarted, setIsStarted] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
@@ -267,9 +262,6 @@ const ErrorCorrectionQuiz = ({ onBack }) => {
   if (!isStarted) {
     return (
       <div style={{ maxWidth: 500, margin: "50px auto" }}>
-        <Button icon={<ArrowLeftOutlined />} onClick={onBack} style={{ marginBottom: 16 }}>
-          Quay lại menu
-        </Button>
         <Card
           title={<span><RocketOutlined /> Tìm Lỗi Sai (Error Identification)</span>}
           style={{ textAlign: "center" }}

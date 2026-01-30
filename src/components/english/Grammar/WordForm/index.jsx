@@ -1,71 +1,42 @@
-import { Card, Col, Row, Button } from "antd";
-import React, { useState } from "react";
-import { ArrowLeftOutlined } from "@ant-design/icons";
-import FillInBlank from "./FillInBlank/index";
-import SuffixExercise from "./Suffixes/index";
-import ErrorCorrectionQuiz from "./FindError/index";
-const content = [
-  { title: "Điền từ vào chỗ trống", key: "fill-in-the-blank" },
-  { title: "Bài tập hậu tố", key: "suffix-exercise" },
-  { title: "Tìm lỗi sai", key: "find-errors" },
-];
+import React from "react";
+import { useNavigate, Outlet } from "react-router-dom";
+import { Card, Col, Row } from "antd";
 
-const WordForm = ({ onBack }) => {
-  const [activeTab, setActiveTab] = useState(null);
+// Component chứa các Card bài tập con
+export const WordFormMenu = () => {
+  const navigate = useNavigate();
+  
+  const content = [
+    { title: "Điền từ vào chỗ trống", path: "fill-in-the-blank" },
+    { title: "Bài tập hậu tố", path: "suffix-exercise" },
+    { title: "Tìm lỗi sai", path: "find-errors" },
+  ];
 
-  const renderContent = () => {
-    if (activeTab === "fill-in-the-blank") {
-      return (
-        <div>
-          <FillInBlank onBack={() => setActiveTab(null)} />
-        </div>
-      );
-    }
+  return (
+    <Row gutter={16}>
+      {content.map((item) => (
+        <Col key={item.path} xs={24} sm={12} md={8}>
+          <Card
+            hoverable
+            onClick={() => navigate(item.path)} // Điều hướng bằng URL
+            style={{ textAlign: "center", borderRadius: "8px" }}
+          >
+            <Card.Meta title={item.title} />
+          </Card>
+        </Col>
+      ))}
+    </Row>
+  );
+};
 
-    if (activeTab === "suffix-exercise") {
-      return (
-        <div>
-          <SuffixExercise onBack={() => setActiveTab(null)} />
-        </div>
-      )
-    }
-
-    if (activeTab === "find-errors") {
-      return (
-        <div>
-          <ErrorCorrectionQuiz onBack={() => setActiveTab(null)} />
-        </div>
-      );
-    }
-
-    return (
-      <>
-        <Button
-          icon={<ArrowLeftOutlined />}
-          onClick={onBack}
-          style={{ marginBottom: 16 }}
-        >
-          Quay lại trang menu ngữ pháp
-        </Button>
-
-        <Row gutter={16}>
-          {content.map((item) => (
-            <Col key={item.key} xs={24} sm={12} md={8}>
-              <Card
-                hoverable
-                onClick={() => setActiveTab(item.key)}
-                style={{ textAlign: "center" }}
-              >
-                <Card.Meta title={item.title} />
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </>
-    );
-  };
-
-  return <div>{renderContent()}</div>;
+// Component chính WordForm đóng vai trò Layout
+const WordForm = () => {
+  return (
+    <div>
+      {/* Hiển thị WordFormMenu hoặc các bài tập FillInBlank, SuffixExercise... */}
+      <Outlet />
+    </div>
+  );
 };
 
 export default WordForm;
