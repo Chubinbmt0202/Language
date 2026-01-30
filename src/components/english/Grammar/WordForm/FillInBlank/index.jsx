@@ -19,64 +19,15 @@ import {
   CheckOutlined,
   ArrowRightOutlined,
 } from "@ant-design/icons";
+import { generateQuizWordForm } from "../../../API/GenerateQuiz";
 
-// Dữ liệu mẫu
-const fullQuizData = [
-  {
-    id: 1,
-    sentence: "The manager was very _______ with the results.",
-    baseWord: "satisfy",
-    answer: "satisfied",
-    hint: "Cần tính từ miêu tả cảm xúc.",
-    translate: "Người quản lý rất hài lòng với kết quả.",
-  },
-  {
-    id: 2,
-    sentence: "She completed the report _______.",
-    baseWord: "success",
-    answer: "successfully",
-    hint: "Trạng từ bổ nghĩa cho động từ.",
-    translate: "Cô ấy hoàn thành báo cáo một cách thành công.",
-  },
-  {
-    id: 3,
-    sentence: "The _______ of the project depends on teamwork.",
-    baseWord: "succeed",
-    answer: "success",
-    hint: "Cần một danh từ làm chủ ngữ.",
-    translate: "Sự thành công của dự án phụ thuộc vào làm việc nhóm.",
-  },
-  {
-    id: 4,
-    sentence: "They are _______ looking for a new house.",
-    baseWord: "active",
-    answer: "actively",
-    hint: "Trạng từ đứng trước động từ V-ing.",
-    translate: "Họ đang tích cực tìm kiếm một ngôi nhà mới.",
-  },
-  {
-    id: 5,
-    sentence: "Education is very _______ for future careers.",
-    baseWord: "importance",
-    answer: "important",
-    hint: "Sau tobe là tính từ.",
-    translate: "Giáo dục rất quan trọng cho sự nghiệp tương lai.",
-  },
-  {
-    id: 6,
-    sentence: "He is a very _______ driver.",
-    baseWord: "care",
-    answer: "careful",
-    hint: "Tính từ bổ nghĩa cho danh từ driver.",
-    translate: "Anh ấy là một tài xế rất cẩn thận.",
-  },
-];
 
 const FillInBlank = ({ onBack }) => {
   // States cấu hình
   const [isStarted, setIsStarted] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
   const [isReviewMode, setIsReviewMode] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const [targetCount, setTargetCount] = useState(3);
   const [activeQuizSet, setActiveQuizSet] = useState([]);
@@ -97,19 +48,33 @@ const FillInBlank = ({ onBack }) => {
     }
   }, [currentIndex, isStarted, isFinished]);
 
-  const handleStartQuiz = () => {
-    // Logic lấy ngẫu nhiên (Shuffle) thay vì chỉ cắt 3 câu đầu
-    const shuffled = [...fullQuizData].sort(() => 0.5 - Math.random());
-    const selectedQuestions = shuffled.slice(0, targetCount);
+  const handleStartQuiz = async () => {
+    setIsLoading(true);
+    try {
+      const response = await generateQuizWordForm({
+        type: "wordForm",
+        numQuestions: targetCount,
+      });
 
-    setActiveQuizSet(selectedQuestions);
-    setIsStarted(true);
-    setCurrentIndex(0);
-    setStatus("idle");
-    setUserInput("");
-    setResults([]);
-    setIsReviewMode(false);
-    setIsFinished(false);
+      const questionsFromApi = response;
+
+      if (questionsFromApi && questionsFromApi.length > 0) {
+        setActiveQuizSet(questionsFromApi);
+        setIsStarted(true);
+        setCurrentIndex(0);
+        setStatus("idle");
+        setUserInput("");
+        setResults([]);
+        setIsReviewMode(false);
+        setIsFinished(false);
+      } else {
+        alert("Không tìm thấy câu hỏi phù hợp từ hệ thống.");
+      }
+    } catch (error) {
+      console.error("Error starting quiz:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleCheck = () => {
@@ -151,7 +116,7 @@ const FillInBlank = ({ onBack }) => {
           onClick={onBack}
           style={{ marginBottom: 16 }}
         >
-          Quay lại 
+          Quay lại
         </Button>
         <Card
           title={
@@ -164,12 +129,12 @@ const FillInBlank = ({ onBack }) => {
           <p>Chọn số lượng câu hỏi:</p>
           <Slider
             min={1}
-            max={fullQuizData.length}
+            max={100}
             value={targetCount}
             onChange={setTargetCount}
             marks={{
               1: "1",
-              [fullQuizData.length]: `${fullQuizData.length}`,
+              100: "100",
             }}
           />
           <Divider />
@@ -180,7 +145,7 @@ const FillInBlank = ({ onBack }) => {
             icon={<PlayCircleOutlined />}
             onClick={handleStartQuiz}
           >
-            Bắt đầu làm bài
+            {isLoading ? "Đang tải câu hỏi..." : "Bắt đầu làm bài"}
           </Button>
         </Card>
       </div>
@@ -374,7 +339,7 @@ const FillInBlank = ({ onBack }) => {
             style={{ marginTop: 24 }}
             type="success"
             showIcon
-            message="Chính xác!"
+            title="Chính xác!"
             description={
               <div>
                 <p>{currentQuiz.hint}</p>
@@ -391,7 +356,7 @@ const FillInBlank = ({ onBack }) => {
             style={{ marginTop: 24 }}
             type="error"
             showIcon
-            message="Chưa chính xác"
+            title="Chưa chính xác"
             description={
               <div>
                 <p>
