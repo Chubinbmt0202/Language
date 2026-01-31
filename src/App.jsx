@@ -11,6 +11,8 @@ import { WordFormMenu } from "./components/english/Grammar/WordForm/index.jsx";
 import FillInBlank from "./components/english/Grammar/WordForm/FillInBlank/index.jsx";
 import SuffixExercise from "./components/english/Grammar/WordForm/Suffixes/index.jsx";
 import ErrorCorrectionQuiz from "./components/english/Grammar/WordForm/FindError";
+import Dashboard from "./page/Dashboard.jsx";
+import AddVocabulary from "./components/japan/VocabSave/index.jsx";
 
 function App() {
   return (
@@ -22,7 +24,7 @@ function App() {
           <Route index element={<Navigate to="/dashboard" replace />} />
           <Route
             path="dashboard"
-            element={<div>Chào mừng đến với trang tổng quan!</div>}
+            element={<Dashboard />}
           />
           <Route path="english/grammar" element={<Grammar />}>
             <Route index element={<GrammarMenu />} />
@@ -36,6 +38,7 @@ function App() {
           <Route path="japanese/multiple-choice" element={<JapaneseQuiz />} />
           <Route path="japanese/vocabulary" element={<VocabularyJapan />} />
           <Route path="japanese/fill-passage" element={<HiraganaPractice />} />
+          <Route path="japanese/vocab" element={<AddVocabulary />} />
           <Route
             path="japanese/listen-and-fill"
             element={<ListenAndFillJapanese />}
