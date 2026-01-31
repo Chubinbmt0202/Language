@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/static-components */
 import React, { useState, useEffect } from 'react';
-import { Layout, Menu, Input, Button, Table, Card, Space, Typography, Modal, Progress, Tag, Popconfirm, message, Form, Empty, Drawer } from 'antd';
+import { Layout, Menu, Input, Button, Table, Card, Space, Typography, Modal, Progress, Tag, Popconfirm, message, Form, Empty, Drawer, Row, Col } from 'antd';
 import { 
   PlusOutlined, BookOutlined, FolderAddOutlined, 
   FireOutlined, SoundOutlined, EditOutlined, 
@@ -8,14 +8,16 @@ import {
 } from '@ant-design/icons';
 import * as wanakana from 'wanakana';
 
-const { Header, Content, Sider } = Layout;
+// Lưu ý: Không destructure Sider từ Layout ở đây để tránh lỗi context nếu lồng nhau quá sâu
+// Chúng ta sẽ dùng Layout.Sider trực tiếp bên dưới
+const { Header, Content } = Layout;
 const { Title, Text } = Typography;
 
 const JapaneseApp = () => {
   // --- 1. DATA MANAGEMENT ---
   const [topics, setTopics] = useState(() => {
     const savedData = localStorage.getItem('japanese_app_data');
-    return savedData ? JSON.parse(savedData) : [{ id: 'default_1', name: 'Gia đình (Ví dụ)', words: [] }];
+    return savedData ? JSON.parse(savedData) : [{ id: 'default_1', name: 'Động vật', words: [] }];
   });
 
   const [activeTopicId, setActiveTopicId] = useState(topics[0]?.id || '');
@@ -25,13 +27,13 @@ const JapaneseApp = () => {
     localStorage.setItem('japanese_app_data', JSON.stringify(topics));
   }, [topics]);
 
-  // --- 2. UI STATES ---
+  // --- 2. STATES ---
   const [isTopicModalOpen, setIsTopicModalOpen] = useState(false);
   const [newTopicName, setNewTopicName] = useState('');
   const [newWord, setNewWord] = useState({ meaning: '', romaji: '', hiragana: '', katakana: '' });
   
   // Responsive States
-  const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false); // Quản lý Menu trên Mobile
+  const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 
   // Edit/Practice States
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
@@ -67,7 +69,7 @@ const JapaneseApp = () => {
       setNewTopicName('');
       setIsTopicModalOpen(false);
       setActiveTopicId(newId);
-      setMobileDrawerOpen(false); // Đóng menu mobile sau khi tạo
+      setMobileDrawerOpen(false);
       message.success('Đã tạo chủ đề mới');
     }
   };
@@ -124,15 +126,14 @@ const JapaneseApp = () => {
     message.success('Đã cập nhật');
   };
 
-  // --- 4. COLUMN DEFINITIONS ---
+  // --- 4. CONFIG TABLES ---
   const columns = [
     {
       title: 'Loa',
       width: 60,
       align: 'center',
-      fixed: 'left', // Cố định cột này trên mobile
       render: (_, record) => (
-        <Button shape="circle" size="small" icon={<SoundOutlined />} onClick={() => speak(record.hiragana)} />
+        <Button shape="circle" size="small" type="text" icon={<SoundOutlined />} onClick={() => speak(record.hiragana)} />
       )
     },
     { 
@@ -140,7 +141,7 @@ const JapaneseApp = () => {
       key: 'kana',
       width: 120,
       render: (_, record) => (
-        <Space direction="vertical" size={0}>
+        <Space orientation="vertical" size={0}>
           <Text strong style={{ fontSize: 16, color: '#1890ff' }}>{record.hiragana}</Text>
           <Text type="secondary" style={{ fontSize: 12 }}>{record.katakana}</Text>
         </Space>
@@ -152,9 +153,9 @@ const JapaneseApp = () => {
       title: 'Thao tác',
       key: 'action',
       width: 100,
-      fixed: 'right', // Cố định cột này bên phải
+      align: 'right',
       render: (_, record) => (
-        <Space direction="vertical" size="small">
+        <Space size="small">
           <Button icon={<EditOutlined />} size="small" onClick={() => { setEditingWord(record); setIsEditModalOpen(true); }} />
           <Popconfirm title="Xóa?" onConfirm={() => deleteWord(record.key)}>
             <Button danger icon={<DeleteOutlined />} size="small" />
@@ -164,12 +165,11 @@ const JapaneseApp = () => {
     },
   ];
 
-  // Component Menu dùng chung cho cả Sidebar và Mobile Drawer
   const MenuContent = () => (
     <>
-      <div style={{ padding: '16px', background: '#fafafa', borderBottom: '1px solid #f0f0f0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div style={{ padding: '16px', borderBottom: '1px solid #f0f0f0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Text strong><BookOutlined /> CHỦ ĐỀ</Text>
-        <Button type="primary" size="small" icon={<PlusOutlined />} onClick={() => setIsTopicModalOpen(true)} />
+        <Button type="primary" ghost size="small" icon={<PlusOutlined />} onClick={() => setIsTopicModalOpen(true)} />
       </div>
       <Menu
         mode="inline"
@@ -179,7 +179,7 @@ const JapaneseApp = () => {
           key: t.id,
           label: (
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '140px' }}>{t.name}</span>
+              <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '130px' }}>{t.name}</span>
               {topics.length > 1 && (
                 <Popconfirm title="Xóa chủ đề?" onConfirm={(e) => deleteTopic(e, t.id)} placement="right">
                    <Button type="text" size="small" icon={<CloseOutlined style={{ fontSize: 10, color: '#999' }} />} onClick={(e) => e.stopPropagation()}/>
@@ -194,92 +194,90 @@ const JapaneseApp = () => {
   );
 
   return (
-    <Layout style={{ minHeight: '100vh' }}>
-      {/* SIDEBAR CHO PC (Ẩn trên màn hình nhỏ xs) */}
-      <Sider 
+    // QUAN TRỌNG: Layout bao ngoài dùng style height 100% để nằm gọn trong div cha của Admin template
+    // hasSider giúp Antd hiểu đây là layout ngang
+    <Layout style={{ background: '#fff', borderRadius: '8px', overflow: 'hidden', border: '1px solid #f0f0f0', minHeight: '600px' }} hasSider>
+      
+      {/* SIDEBAR PC: Không dùng position fixed nữa */}
+      <Layout.Sider 
         theme="light" 
-        width={260} 
-        style={{ borderRight: '1px solid #f0f0f0', height: '100vh', position: 'fixed', left: 0, top: 0, zIndex: 10 }}
-        breakpoint="lg" // Tự động ẩn khi màn hình < 992px
-        collapsedWidth="0" // Ẩn hoàn toàn khi collapse
-        trigger={null} // Tắt nút trigger mặc định
+        width={250} 
+        breakpoint="lg" 
+        collapsedWidth="0"
+        trigger={null}
+        style={{ borderRight: '1px solid #f0f0f0' }}
       >
         <MenuContent />
-      </Sider>
+      </Layout.Sider>
 
-      {/* DRAWER CHO MOBILE (Hiện khi click menu icon) */}
+      {/* DRAWER MOBILE */}
       <Drawer
         title="Danh sách chủ đề"
         placement="left"
         onClose={() => setMobileDrawerOpen(false)}
         open={mobileDrawerOpen}
-        bodyStyle={{ padding: 0 }}
-        width={280}
+        styles={{body: { padding: 0 }}}
+        size={260}
       >
         <MenuContent />
       </Drawer>
 
-      <Layout style={{ marginLeft: 0 }} className="site-layout-responsive">
-        {/* CSS để đẩy content sang phải trên màn hình lớn */}
-        <style>{`
-          @media (min-width: 992px) { .site-layout-responsive { margin-left: 260px !important; } }
-          .input-grid { display: grid; gap: 10px; }
-          @media (min-width: 768px) { .input-grid { grid-template-columns: 1.5fr 1fr 1fr 1fr auto; } }
-        `}</style>
-
-        <Header style={{ background: '#fff', padding: '0 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid #f0f0f0', position: 'sticky', top: 0, zIndex: 9, width: '100%' }}>
-          {/* Nút Hamburger cho Mobile */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+      <Layout style={{ background: '#fff' }}>
+        <Header style={{ background: '#fff', padding: '0 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid #f0f0f0', height: 64 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+            {/* Nút Hamburger chỉ hiện trên Mobile khi Sider bị ẩn */}
             <Button 
-              className="lg:hidden" // Class này cần Tailwind hoặc custom CSS để ẩn trên màn lớn. Ở đây mình dùng logic JS của Sider breakpoint.
+              type="text"
               icon={<MenuOutlined />} 
               onClick={() => setMobileDrawerOpen(true)} 
-              style={{ display: window.innerWidth >= 992 ? 'none' : 'inline-flex' }} // Fallback style
+              className="lg:hidden" // Bạn cần CSS global hoặc style logic để ẩn hiện nút này
+              style={{ display: 'none' }} // Mặc định ẩn, bạn có thể dùng Media Query để hiện nó khi màn hình nhỏ
             />
-            <Title level={5} style={{ margin: 0, maxWidth: 150, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-              {activeTopic ? activeTopic.name : 'Chọn chủ đề'}
-            </Title>
+            <Title level={4} style={{ margin: 0 }}>{activeTopic?.name}</Title>
+            <Tag color="blue">{activeTopic?.words.length}</Tag>
           </div>
           
-          <Space>
-             <Tag color="blue">{activeTopic?.words.length || 0}</Tag>
-             {activeTopic?.words.length > 0 && (
-                <Button type="primary" danger shape="circle" icon={<FireOutlined />} onClick={() => { setCurrentCardIndex(0); setIsFlipped(false); setIsPracticeMode(true); }} />
-             )}
-          </Space>
+          {activeTopic?.words.length > 0 && (
+             <Button type="primary" danger shape="circle" icon={<FireOutlined />} onClick={() => { setCurrentCardIndex(0); setIsFlipped(false); setIsPracticeMode(true); }} />
+          )}
         </Header>
         
-        <Content style={{ padding: '16px', margin: '0 auto', width: '100%', maxWidth: '1000px' }}>
-          
-          {/* FORM THÊM TỪ (Responsive Grid) */}
-          <Card size="small" title="Thêm từ mới" style={{ marginBottom: 20 }}>
-            <div className="input-grid">
-              <Input placeholder="Nghĩa (Con mèo)" value={newWord.meaning} onChange={e => setNewWord({...newWord, meaning: e.target.value})} onPressEnter={addWord}/>
-              <Input placeholder="Romaji (neko)" value={newWord.romaji} onChange={handleNewWordChange} onPressEnter={addWord}/>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
-                <Input placeholder="Hiragana" value={newWord.hiragana} readOnly style={{ background: '#f5f5f5' }}/>
-                <Input placeholder="Katakana" value={newWord.katakana} readOnly style={{ background: '#f5f5f5' }}/>
-              </div>
-              <Button type="primary" block icon={<PlusOutlined />} onClick={addWord}>Lưu</Button>
+        <Content style={{ padding: '24px' }}>
+          {/* Form thêm từ */}
+          <Card size="small" title="Thêm từ mới" style={{ marginBottom: 24, borderRadius: 8 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+               <Row gutter={[12, 12]}>
+                  <Col xs={24} md={8}>
+                    <Input placeholder="Nghĩa (Con mèo)" value={newWord.meaning} onChange={e => setNewWord({...newWord, meaning: e.target.value})} onPressEnter={addWord}/>
+                  </Col>
+                  <Col xs={24} md={8}>
+                    <Input placeholder="Romaji (neko)" value={newWord.romaji} onChange={handleNewWordChange} onPressEnter={addWord}/>
+                  </Col>
+                  <Col xs={12} md={4}>
+                    <Input placeholder="Hiragana" value={newWord.hiragana} readOnly className="bg-gray-50" />
+                  </Col>
+                  <Col xs={12} md={4}>
+                    <Input placeholder="Katakana" value={newWord.katakana} readOnly className="bg-gray-50" />
+                  </Col>
+               </Row>
+               <Button type="primary" block icon={<PlusOutlined />} onClick={addWord}>Lưu từ vựng</Button>
             </div>
           </Card>
 
-          {/* BẢNG TỪ VỰNG (Scrollable on Mobile) */}
+          {/* Bảng dữ liệu */}
           <Table 
             dataSource={activeTopic?.words} 
             columns={columns} 
             rowKey="key"
-            pagination={{ pageSize: 6 }}
-            scroll={{ x: 600 }} // Kích hoạt thanh cuộn ngang nếu màn hình nhỏ hơn 600px
-            size="small" // Bảng nhỏ gọn hơn trên mobile
-            locale={{ emptyText: <Empty description="Trống" image={Empty.PRESENTED_IMAGE_SIMPLE} /> }}
+            pagination={{ pageSize: 5 }}
+            scroll={{ x: 600 }}
+            locale={{ emptyText: <Empty description="Chưa có từ vựng nào" image={Empty.PRESENTED_IMAGE_SIMPLE} /> }}
           />
         </Content>
       </Layout>
 
-      {/* CÁC MODAL (Giữ nguyên nhưng thêm width responsive nếu cần) */}
-      <Modal open={isPracticeMode} onCancel={() => setIsPracticeMode(false)} footer={null} centered width={350} title="Luyện tập">
-        {/* Nội dung Modal Luyện Tập (đã có sẵn) */}
+      {/* CÁC MODAL GIỮ NGUYÊN */}
+      <Modal open={isPracticeMode} onCancel={() => setIsPracticeMode(false)} footer={null} centered width={400} title="Luyện tập Flashcard">
         {activeTopic?.words.length > 0 && (
           <div style={{ textAlign: 'center' }}>
             <Progress percent={Math.round(((currentCardIndex + 1) / activeTopic.words.length) * 100)} size="small" status="active" />
@@ -295,7 +293,7 @@ const JapaneseApp = () => {
                 <>
                   <Title level={2} style={{ color: '#1890ff', marginBottom: 10 }}>{activeTopic.words[currentCardIndex].hiragana}</Title>
                   <Button size="large" shape="circle" icon={<SoundOutlined />} onClick={(e) => {e.stopPropagation(); speak(activeTopic.words[currentCardIndex].hiragana)}} />
-                  <Text type="secondary" style={{ marginTop: 10 }}>Chạm để lật</Text>
+                  <Text type="secondary" style={{ marginTop: 10 }}>Chạm để xem nghĩa</Text>
                 </>
               ) : (
                 <>
@@ -312,18 +310,18 @@ const JapaneseApp = () => {
         )}
       </Modal>
 
-      <Modal title="Chủ đề mới" open={isTopicModalOpen} onOk={addTopic} onCancel={() => setIsTopicModalOpen(false)}>
-        <Input autoFocus placeholder="Tên chủ đề..." value={newTopicName} onChange={e => setNewTopicName(e.target.value)} onPressEnter={addTopic} />
+      <Modal title="Tạo chủ đề mới" open={isTopicModalOpen} onOk={addTopic} onCancel={() => setIsTopicModalOpen(false)}>
+        <Input autoFocus prefix={<FolderAddOutlined />} placeholder="Nhập tên chủ đề..." value={newTopicName} onChange={e => setNewTopicName(e.target.value)} onPressEnter={addTopic} />
       </Modal>
 
-      <Modal title="Sửa từ" open={isEditModalOpen} onOk={saveEditedWord} onCancel={() => setIsEditModalOpen(false)}>
+      <Modal title="Sửa từ vựng" open={isEditModalOpen} onOk={saveEditedWord} onCancel={() => setIsEditModalOpen(false)}>
         {editingWord && (
           <Form layout="vertical">
             <Form.Item label="Nghĩa"><Input value={editingWord.meaning} onChange={e => setEditingWord({...editingWord, meaning: e.target.value})} /></Form.Item>
             <Form.Item label="Romaji"><Input value={editingWord.romaji} onChange={e => setEditingWord({...editingWord, ...convertRomaji(e.target.value)})} /></Form.Item>
             <Space>
-               <Form.Item label="Hiragana"><Input value={editingWord.hiragana} readOnly className="bg-gray-100"/></Form.Item>
-               <Form.Item label="Katakana"><Input value={editingWord.katakana} readOnly className="bg-gray-100"/></Form.Item>
+               <Form.Item label="Hiragana"><Input value={editingWord.hiragana} readOnly className="bg-gray-50"/></Form.Item>
+               <Form.Item label="Katakana"><Input value={editingWord.katakana} readOnly className="bg-gray-50"/></Form.Item>
             </Space>
           </Form>
         )}
