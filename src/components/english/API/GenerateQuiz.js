@@ -12,7 +12,7 @@ const generateQuizWordForm = async (config) => {
     console.error("Loại không hợp lệ cho generateQuizWordForm:", apiType);
     throw new Error(`Loại không hợp lệ cho generateQuizWordForm: ${apiType}`);
   }
-  const response = await axios.post(`${BASE_URL_LOCAL}${ENDPOINT_WORD_FORM}`, {
+  const response = await axios.post(`${BASE_URL}${ENDPOINT_WORD_FORM}`, {
     type: apiType,
     numQuestions: config.numQuestions,
   });
@@ -31,7 +31,7 @@ const generateQuizSuffixes = async (config) => {
     console.error("Loại không hợp lệ cho generateQuizSuffixes:", apiType);
     throw new Error(`Loại không hợp lệ cho generateQuizSuffixes: ${apiType}`);
   }
-  const response = await axios.post(`${BASE_URL_LOCAL}${ENDPOINT_SUFFIXES}`, {
+  const response = await axios.post(`${BASE_URL}${ENDPOINT_SUFFIXES}`, {
     type: apiType,
     numQuestions: config.numQuestions,
   });
@@ -50,7 +50,7 @@ const generateQuizErrorGame = async (config) => {
     console.error("Loại không hợp lệ cho generateQuizErrorGame:", apiType);
     throw new Error(`Loại không hợp lệ cho generateQuizErrorGame: ${apiType}`);
   }
-  const response = await axios.post(`${BASE_URL_LOCAL}${ENDPOINT_ERROR_GAME}`, {
+  const response = await axios.post(`${BASE_URL}${ENDPOINT_ERROR_GAME}`, {
     type: apiType,
     numQuestions: config.numQuestions,
   });
