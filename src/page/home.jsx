@@ -145,8 +145,8 @@ const Home = () => {
         placement="left"
         onClose={() => setDrawerVisible(false)}
         open={drawerVisible}
-        bodyStyle={{ padding: 0 }}
-        width={250}
+        styles={{ body: { padding: 0 } }}
+        size={250}
       >
         <Menu
           mode="inline"

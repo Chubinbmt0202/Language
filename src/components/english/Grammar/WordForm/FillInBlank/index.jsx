@@ -9,6 +9,7 @@ import {
   Space,
   Divider,
   Tag,
+  Popover, // Thêm Popover để làm tính năng Hover
 } from "antd";
 import {
   ArrowLeftOutlined,
@@ -18,9 +19,40 @@ import {
   EyeOutlined,
   CheckOutlined,
   ArrowRightOutlined,
+  InfoCircleOutlined,
 } from "@ant-design/icons";
 import { generateQuizWordForm } from "../../../API/GenerateQuiz";
 
+// Component con để hiển thị từng từ khi hover
+const TokenWord = ({ token, isTarget }) => {
+  const content = (
+    <div style={{ maxWidth: 250 }}>
+      <p><b>Từ loại:</b> <Tag color="blue">{token.pos}</Tag></p>
+      <p><b>Vai trò:</b> {token.role}</p>
+      {token.target && <p><b>Bổ nghĩa cho:</b> <Tag color="orange">{token.target}</Tag></p>}
+      <Divider style={{ margin: "8px 0" }} />
+      <p style={{ fontSize: "12px", color: "#666" }}>{token.note}</p>
+    </div>
+  );
+
+  return (
+    <Popover content={content} title="Phân tích ngữ pháp" trigger="hover">
+      <span
+        style={{
+          cursor: "help",
+          padding: "2px 4px",
+          borderRadius: "4px",
+          backgroundColor: isTarget ? "#e6f7ff" : "transparent",
+          borderBottom: isTarget ? "2px dashed #1890ff" : "1px dotted #ccc",
+          marginRight: "4px",
+          transition: "all 0.3s"
+        }}
+      >
+        {token.text}
+      </span>
+    </Popover>
+  );
+};
 
 const FillInBlank = () => {
   // States cấu hình
@@ -185,64 +217,26 @@ const FillInBlank = () => {
       </div>
     );
   }
-
-  // 3. REVIEW MODE
+  // 3. REVIEW SCREEN
   if (isReviewMode) {
     return (
       <div style={{ maxWidth: 800, margin: "auto", paddingBottom: 40 }}>
-        <Card
-          title="Review Bài Làm"
-          extra={
-            <Button
-              onClick={() => setIsReviewMode(false)}
-              icon={<ArrowLeftOutlined />}
-            >
-              Quay lại kết quả
-            </Button>
-          }
-        >
+        <Card title="Review Bài Làm" extra={<Button onClick={() => setIsReviewMode(false)} icon={<ArrowLeftOutlined />}>Quay lại</Button>}>
           {results.map((q, idx) => (
-            <Card
-              type="inner"
-              key={idx}
-              style={{ marginBottom: 16 }}
-              bodyStyle={{ backgroundColor: q.correct ? "#f6ffed" : "#fff1f0" }}
-            >
-              <p style={{ fontSize: 16, fontWeight: 500 }}>
-                Câu {idx + 1}: {q.sentence}{" "}
-                <span style={{ color: "#1677ff" }}>({q.baseWord})</span>
-              </p>
-
-              <div style={{ marginTop: 10 }}>
-                <Space direction="vertical" style={{ width: "100%" }}>
-                  <Space>
-                    <span>Bạn trả lời:</span>
-                    <Tag color={q.correct ? "success" : "error"}>
-                      {q.userAnswer}
-                    </Tag>
-                  </Space>
-                  {!q.correct && (
-                    <Space>
-                      <span>Đáp án đúng:</span>
-                      <Tag color="blue">{q.answer}</Tag>
-                    </Space>
-                  )}
-                </Space>
+            <Card type="inner" key={idx} style={{ marginBottom: 16 }} styles={{ body: { backgroundColor: q.correct ? "#f6ffed" : "#fff1f0" } }}>
+              <div style={{ fontSize: 16, marginBottom: 12 }}>
+                {q.tokens ? q.tokens.map((t, i) => (
+                   <TokenWord key={i} token={t} isTarget={t.text.includes("_______")} />
+                )) : q.sentence}
+                <Tag color="blue" style={{ marginLeft: 8 }}>{q.baseWord}</Tag>
               </div>
+              <Space orientation="vertical">
+                <Space>Bạn trả lời: <Tag color={q.correct ? "success" : "error"}>{q.userAnswer}</Tag></Space>
+                {!q.correct && <Space>Đáp án đúng: <Tag color="blue">{q.answer}</Tag></Space>}
+              </Space>
               <Divider style={{ margin: "12px 0" }} />
-              <p
-                style={{
-                  color: "#888",
-                  fontStyle: "italic",
-                  fontWeight: "bold",
-                }}
-              >
-                <span style={{ color: "red" }}>Giải thích</span>: {q.hint}
-              </p>
-              <Divider style={{ margin: "12px 0" }} />
-              <p style={{ color: "#888", fontStyle: "italic" }}>
-                Translate: {q.translate}
-              </p>
+              <p><b>Dịch:</b> {q.translate}</p>
+              <p><b>Giải thích:</b> {q.hint}</p>
             </Card>
           ))}
         </Card>
@@ -250,36 +244,35 @@ const FillInBlank = () => {
     );
   }
 
-  // 4. QUIZ SCREEN
+// 4. QUIZ SCREEN
   const currentQuiz = activeQuizSet[currentIndex];
   const isLast = currentIndex === activeQuizSet.length - 1;
 
   return (
     <div style={{ maxWidth: 700, margin: "20px auto", padding: "0 20px" }}>
-      <Button
-        icon={<ArrowLeftOutlined />}
-        onClick={() => setIsStarted(false)}
-        style={{ marginBottom: 16 }}
+      <Progress percent={Math.round((currentIndex / activeQuizSet.length) * 100)} showInfo={false} size="small" style={{ marginBottom: 12 }} />
+      
+      <Card 
+        title={`Câu ${currentIndex + 1} / ${activeQuizSet.length}`}
+        extra={<Tag icon={<InfoCircleOutlined />} color="processing">Rê chuột vào từ để xem gợi ý</Tag>}
       >
-        Thoát
-      </Button>
-
-      <Progress
-        percent={Math.round((currentIndex / activeQuizSet.length) * 100)}
-        showInfo={false}
-        size="small"
-        style={{ marginBottom: 12 }}
-      />
-
-      <Card title={`Câu ${currentIndex + 1} / ${activeQuizSet.length}`}>
-        <div style={{ fontSize: 20, marginBottom: 24, lineHeight: 1.6 }}>
-          {/* Hiển thị câu hỏi, thay thế chỗ trống bằng input nếu cần, hoặc để nguyên */}
-          {currentQuiz?.sentence}{" "}
-          {
-            <span style={{ color: "blue", fontWeight: "bold" }}>
-              ({currentQuiz?.baseWord})
-            </span>
-          }
+        <div style={{ fontSize: 20, marginBottom: 24, lineHeight: 1.8 }}>
+          {/* RENDER TOKENS Ở ĐÂY */}
+          {currentQuiz?.tokens ? (
+            currentQuiz.tokens.map((token, index) => (
+              <TokenWord 
+                key={index} 
+                token={token} 
+                isTarget={token.text.includes("_______")} 
+              />
+            ))
+          ) : (
+            <span>{currentQuiz?.sentence}</span>
+          )}
+          
+          <span style={{ color: "#1890ff", fontWeight: "bold", marginLeft: 10 }}>
+            ({currentQuiz?.baseWord})
+          </span>
         </div>
 
         <Input
@@ -287,77 +280,36 @@ const FillInBlank = () => {
           size="large"
           placeholder="Nhập từ còn thiếu..."
           value={userInput}
-          disabled={status !== "idle"} // Khoá input khi đã check
+          disabled={status !== "idle"}
           onChange={(e) => setUserInput(e.target.value)}
           onPressEnter={status === "idle" ? handleCheck : handleNext}
-          status={
-            status === "correct" ? "success" : status === "wrong" ? "error" : ""
-          }
+          status={status === "correct" ? "success" : status === "wrong" ? "error" : ""}
           style={{ marginBottom: 16 }}
-          suffix={
-            status === "correct" ? (
-              <CheckOutlined style={{ color: "green" }} />
-            ) : null
-          }
         />
 
-        {/* Khu vực nút bấm điều hướng */}
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
           {status === "idle" ? (
-            <Button
-              type="primary"
-              size="large"
-              icon={<CheckOutlined />}
-              onClick={handleCheck}
-              disabled={!userInput.trim()}
-            >
+            <Button type="primary" size="large" icon={<CheckOutlined />} onClick={handleCheck} disabled={!userInput.trim()}>
               Kiểm tra
             </Button>
           ) : (
-            <Button
-              type="primary"
-              size="large"
-              onClick={handleNext}
-              icon={<ArrowRightOutlined />}
-              style={{ backgroundColor: isLast ? "#52c41a" : undefined }} // Đổi màu nếu là nút Hoàn thành
-            >
+            <Button type="primary" size="large" onClick={handleNext} icon={<ArrowRightOutlined />}>
               {isLast ? "Xem kết quả" : "Câu tiếp theo"}
             </Button>
           )}
         </div>
 
-        {/* Khu vực hiển thị thông báo kết quả */}
-        {status === "correct" && (
+        {status !== "idle" && (
           <Alert
             style={{ marginTop: 24 }}
-            type="success"
+            type={status === "correct" ? "success" : "error"}
             showIcon
-            title="Chính xác!"
+            title={status === "correct" ? "Chính xác!" : "Chưa chính xác"}
             description={
               <div>
+                {status === "wrong" && <p>Đáp án đúng: <b>{currentQuiz.answer}</b></p>}
                 <p>{currentQuiz.hint}</p>
-                <p>
-                  <i>{currentQuiz.translate}</i>
-                </p>
-              </div>
-            }
-          />
-        )}
-
-        {status === "wrong" && (
-          <Alert
-            style={{ marginTop: 24 }}
-            type="error"
-            showIcon
-            title="Chưa chính xác"
-            description={
-              <div>
-                <p>
-                  Đáp án đúng là: <b>{currentQuiz.answer}</b>
-                </p>
-                <p>
-                  <i>{currentQuiz.translate}</i>
-                </p>
+                <p><i>{currentQuiz.translate}</i></p>
               </div>
             }
           />
