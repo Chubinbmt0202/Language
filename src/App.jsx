@@ -16,62 +16,74 @@ import Vocabulary from "./page/Vocabulary.jsx";
 import PracticeTranslate from "./page/English/PracticeTranslate/index.jsx";
 import Tense from "./components/english/Grammar/Tense/index.jsx";
 import { TenseMenu } from "./components/english/Grammar/Tense/index.jsx";
+import VerbConjugation from "./components/english/Grammar/Tense/VerbConjugation/index.jsx";
 import Pronouns from "./components/english/Grammar/Pronouns/index.jsx";
 import { PronounsMenu } from "./components/english/Grammar/Pronouns/index.jsx";
 import Prepositions from "./components/english/Grammar/Prepositions/index.jsx";
 import { PrepositionsMenu } from "./components/english/Grammar/Prepositions/index.jsx";
 import Conditionals from "./components/english/Grammar/Conditionals/index.jsx";
 import { ConditionalsMenu } from "./components/english/Grammar/Conditionals/index.jsx";
-import PassiveVoice, { PassiveVoiceMenu } from "./components/english/Grammar/PassiveVoice/index.jsx";
-
+import PassiveVoice, {
+  PassiveVoiceMenu,
+} from "./components/english/Grammar/PassiveVoice/index.jsx";
+import { LanguageProvider } from "./util/LanguageContext.jsx";
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        {/* Route cha là Home - chứa Sidebar và Breadcrumb */}
-        <Route path="/" element={<Home />}>
-          {/* Các Route con sẽ được render tại vị trí <Outlet /> trong Home */}
-          <Route index element={<Navigate to="/dashboard" replace />} />
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="vocabulary" element={<Vocabulary />} />
-          <Route path="english/grammar" element={<Grammar />}>
-            <Route index element={<GrammarMenu />} />
-            <Route path="word-form" element={<WordForm />}>
-              <Route index element={<WordFormMenu />} />{" "}
-              <Route path="fill-in-the-blank" element={<FillInBlank />} />
-              <Route path="suffix-exercise" element={<SuffixExercise />} />
-              <Route path="find-errors" element={<ErrorCorrectionQuiz />} />
+      <LanguageProvider>
+        <Routes>
+          {/* Route cha là Home - chứa Sidebar và Breadcrumb */}
+          <Route path="/" element={<Home />}>
+            {/* Các Route con sẽ được render tại vị trí <Outlet /> trong Home */}
+            <Route index element={<Navigate to="/dashboard" replace />} />
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="vocabulary" element={<Vocabulary />} />
+            <Route path="english/grammar" element={<Grammar />}>
+              <Route index element={<GrammarMenu />} />
+              <Route path="word-form" element={<WordForm />}>
+                <Route index element={<WordFormMenu />} />{" "}
+                <Route path="fill-in-the-blank" element={<FillInBlank />} />
+                <Route path="suffix-exercise" element={<SuffixExercise />} />
+                <Route path="find-errors" element={<ErrorCorrectionQuiz />} />
+              </Route>
+              <Route path="tense" element={<Tense />}>
+                <Route index element={<TenseMenu />} />
+              <Route path="verb-conjugation" element={<VerbConjugation />} />
+              </Route>
+              <Route path="pronouns" element={<Pronouns />}>
+                <Route index element={<PronounsMenu />} />
+              </Route>
+              <Route path="prepositions" element={<Prepositions />}>
+                <Route index element={<PrepositionsMenu />} />
+              </Route>
+              <Route path="conditionals" element={<Conditionals />}>
+                <Route index element={<ConditionalsMenu />} />
+              </Route>
+              <Route path="passive-voice" element={<PassiveVoice />}>
+                <Route index element={<PassiveVoiceMenu />} />
+              </Route>
             </Route>
-            <Route path="tense" element={<Tense />}>
-              <Route index element={<TenseMenu />} />
-            </Route>
-            <Route path="pronouns" element={<Pronouns />}>
-              <Route index element={<PronounsMenu />} />
-            </Route>
-            <Route path="prepositions" element={<Prepositions />}>
-              <Route index element={<PrepositionsMenu />} />
-            </Route>
-            <Route path="conditionals" element={<Conditionals />}>
-              <Route index element={<ConditionalsMenu />} />
-            </Route>
-            <Route path="passive-voice" element={<PassiveVoice />}>
-              <Route index element={<PassiveVoiceMenu />} />
-            </Route>
+            <Route
+              path="english/translation-practice"
+              element={<PracticeTranslate />}
+            />
+            <Route path="japanese/multiple-choice" element={<JapaneseQuiz />} />
+            <Route path="japanese/vocabulary" element={<VocabularyJapan />} />
+            <Route
+              path="japanese/fill-passage"
+              element={<HiraganaPractice />}
+            />
+            <Route
+              path="japanese/listen-and-fill"
+              element={<ListenAndFillJapanese />}
+            />
+            <Route
+              path="*"
+              element={<div>Nội dung đang được cập nhật...</div>}
+            />
           </Route>
-          <Route
-            path="english/translation-practice"
-            element={<PracticeTranslate />}
-          />
-          <Route path="japanese/multiple-choice" element={<JapaneseQuiz />} />
-          <Route path="japanese/vocabulary" element={<VocabularyJapan />} />
-          <Route path="japanese/fill-passage" element={<HiraganaPractice />} />
-          <Route
-            path="japanese/listen-and-fill"
-            element={<ListenAndFillJapanese />}
-          />
-          <Route path="*" element={<div>Nội dung đang được cập nhật...</div>} />
-        </Route>
-      </Routes>
+        </Routes>
+      </LanguageProvider>
     </BrowserRouter>
   );
 }
