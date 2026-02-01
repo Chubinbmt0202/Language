@@ -15,6 +15,7 @@ import {
   MenuUnfoldOutlined,
 } from "@ant-design/icons";
 import { Breadcrumb, Layout, Menu, theme, Button, Drawer } from "antd";
+import GlobalVocabManager from "../components/common/GlobalVocabManager.jsx";
 
 const { Content, Sider, Header } = Layout;
 const sidebarItems = [
@@ -29,7 +30,7 @@ const sidebarItems = [
     label: "Tiếng Anh",
     children: [
       { key: "english/grammar", label: "Ngữ pháp" },
-      { key: "english/fill-in-the-blank", label: "Điền vào chỗ trống" },
+      { key: "english/translation-practice", label: "Luyện dịch câu" },
       { key: "english/listen-and-fill", label: "Nghe và điền" },
     ],
   },
@@ -125,7 +126,7 @@ const Home = () => {
             position: "fixed",
             left: 0,
             top: 0,
-            zIndex: 1002,
+            zIndex: 99,
             background: colorBgContainer,
             borderRight: "1px solid #f0f0f0",
           }}
@@ -175,7 +176,7 @@ const Home = () => {
             position: "fixed",
             top: 0,
             right: 0,
-            zIndex: 1001,
+            zIndex: 99,
             // Header rộng 100% trên mobile, trừ khoảng trống sidebar trên desktop
             width: isMobile ? "100%" : `calc(100% - ${collapsed ? 80 : 250}px)`, 
             transition: "all 0.2s",
@@ -203,6 +204,7 @@ const Home = () => {
           <Outlet />
         </Content>
       </Layout>
+      <GlobalVocabManager />
     </Layout>
   );
 };
