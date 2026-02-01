@@ -8,12 +8,11 @@ export const GrammarMenu = () => {
 
   const content = [
     { title: "Bài tập từ loại (Word Form)", path: "word-form" }, // path tương ứng với route trong App.js
-    { title: "Ngữ pháp (Grammar)", path: "structure" },
+    { title: "Thì (Tense)", path: "tense" },
     { title: "Đại từ & Tính từ sở hữu (Pronouns)", path: "pronouns" },
     { title: "Giới từ & Liên từ (Prepositions)", path: "prepositions" },
     { title: "Câu điều kiện (Conditionals)", path: "conditionals" },
     { title: "Câu bị động (Passive Voice)", path: "passive-voice" },
-    { title: "Từ vựng (Vocabulary/Meaning)", path: "vocabulary" },
   ];
 
   return (
