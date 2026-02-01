@@ -15,7 +15,7 @@ import {
   MenuUnfoldOutlined,
 } from "@ant-design/icons";
 import { Breadcrumb, Layout, Menu, theme, Button, Drawer } from "antd";
-import GlobalVocabManager from "../components/common/GlobalVocabManager.jsx";
+import GlobalVocabManager from "../components/GlobalVocabManager/index.jsx";
 
 const { Content, Sider, Header } = Layout;
 const sidebarItems = [
