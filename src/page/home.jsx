@@ -43,8 +43,12 @@ const sidebarItems = [
       { key: "japanese/vocabulary", label: "Bài tập từ vựng" },
       { key: "japanese/fill-passage", label: "Điền vào đoạn văn" },
       { key: "japanese/listen-and-fill", label: "Nghe và điền" },
-      { key: "japanese/vocab", label: "Thêm từ vựng" },
     ],
+  },
+    {
+    key: "vocabulary",
+    icon: <UserOutlined />,
+    label: "Từ vựng của bạn",
   },
 ];
 
@@ -57,7 +61,7 @@ const breadcrumbNameMap = {
   'suffix-exercise': 'Hậu tố',
   'find-errors': 'Tìm lỗi sai',
   'japanese': 'Tiếng Nhật',
-  'vocab': 'Thêm từ vựng',
+  'vocabulary': 'Bài tập từ vựng',
   // Thêm các key khác...
 };
 
