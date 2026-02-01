@@ -52,12 +52,70 @@ const presentSimpleHard = {
   notes: ["Ngôi thứ 3 số ít thêm s/es.", "Động từ 'to be' có dạng đặc biệt.", "Trạng từ tần suất thường đứng trước động từ chính."]
 };
 
+
+// 2: Thì quá khứ đơn (Present Simple) - Tương tự như trên, bạn có thể định nghĩa các mức độ khó khác nhau
+
+const pastSimple =  {
+  id: "past_simple_hard",
+  title: "Thì Quá Khứ Đơn – Past Simple (Hard Level)",
+  forms: [
+    {
+      type: "+",
+      label: "Khẳng định",
+      formula: "S + V2 / V-ed",
+      example: "The students who joined the course finished the test yesterday."
+    },
+    {
+      type: "-",
+      label: "Phủ định",
+      formula: "S + did not + V_inf",
+      example: "The manager did not attend the meeting last week."
+    },
+    {
+      type: "?",
+      label: "Nghi vấn",
+      formula: "Did + S + V_inf ?",
+      example: "Did the teacher who taught you last year retire?"
+    }
+  ],
+  usage: [
+    "Diễn tả hành động đã xảy ra và kết thúc hoàn toàn trong quá khứ.",
+    "Dùng để kể lại sự kiện, câu chuyện, trải nghiệm trong quá khứ.",
+    "Dùng với mốc thời gian xác định trong quá khứ."
+  ],
+  signs: [
+    "yesterday",
+    "last night / last week / last year",
+    "… ago",
+    "in + year (in 2020)",
+    "when + mệnh đề quá khứ",
+    "during + thời gian trong quá khứ"
+  ],
+  notes: [
+    "Dù chủ ngữ rất dài hay có mệnh đề phụ, động từ chính vẫn chia theo thì.",
+    "Trong câu phủ định và nghi vấn, động từ chính luôn ở dạng nguyên mẫu.",
+    "Không bao giờ dùng V2/V-ed sau did hoặc did not.",
+    "Trạng từ hiện tại (usually, often, always) chỉ là bẫy – không quyết định thì.",
+    "Cần xác định đúng mốc thời gian để tránh nhầm với Present Perfect."
+  ],
+  commonMistakes: [
+    "❌ Did the students finished the test?",
+    "❌ The manager did not attended the meeting.",
+    "❌ Did the boy broke the window?"
+  ],
+  tips: [
+    "Bước 1: Tìm mốc thời gian → xác định chắc chắn quá khứ.",
+    "Bước 2: Xác định loại câu (khẳng định / phủ định / nghi vấn).",
+    "Bước 3: Nếu có did / did not → dùng V nguyên mẫu.",
+    "Bước 4: Bỏ qua phần chủ ngữ dài, chỉ tập trung vào động từ chính."
+  ]
+};
+
 // 2. TẠO KHO LƯU TRỮ (LOOKUP TABLE)
 // Key ở đây ("present_simple_easy") phải TRÙNG KHỚP với "$ref" từ API
 export const THEORY_LIBRARY = {
   "present_simple_easy": presentSimpleEasy,
   "present_simple_medium": presentSimpleMedium,
   "present_simple_hard": presentSimpleHard,
-  // Thêm các thì khác vào đây nếu có
-  // "present_continuous_easy": ...
+  "past_simple": pastSimple
 };

@@ -3,6 +3,7 @@ import axios from "axios";
 const BASE_URL_LOCAL = "http://localhost:9999";
 const BASE_URL = "https://language-backend-onoo.onrender.com";
 const ENDPOINT_TENSE = "/api/generate-quiz-conjugation";
+// const ENDPOINT_TENSE_MULTI = "/api/get-tense-theory";
 
 export const generateQuizTense = async (config) => {
   let apiType = config.type;
