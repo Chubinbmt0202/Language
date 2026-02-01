@@ -13,6 +13,7 @@ import SuffixExercise from "./components/english/Grammar/WordForm/Suffixes/index
 import ErrorCorrectionQuiz from "./components/english/Grammar/WordForm/FindError";
 import Dashboard from "./page/Dashboard.jsx";
 import AddVocabulary from "./components/japan/VocabSave/index.jsx";
+import PracticeTranslate from "./page/English/PracticeTranslate/index.jsx";
 
 function App() {
   return (
@@ -22,10 +23,7 @@ function App() {
         <Route path="/" element={<Home />}>
           {/* Các Route con sẽ được render tại vị trí <Outlet /> trong Home */}
           <Route index element={<Navigate to="/dashboard" replace />} />
-          <Route
-            path="dashboard"
-            element={<Dashboard />}
-          />
+          <Route path="dashboard" element={<Dashboard />} />
           <Route path="english/grammar" element={<Grammar />}>
             <Route index element={<GrammarMenu />} />
             <Route path="word-form" element={<WordForm />}>
@@ -35,6 +33,10 @@ function App() {
               <Route path="find-errors" element={<ErrorCorrectionQuiz />} />
             </Route>
           </Route>
+          <Route
+            path="english/translation-practice"
+            element={<PracticeTranslate />}
+          />
           <Route path="japanese/multiple-choice" element={<JapaneseQuiz />} />
           <Route path="japanese/vocabulary" element={<VocabularyJapan />} />
           <Route path="japanese/fill-passage" element={<HiraganaPractice />} />
