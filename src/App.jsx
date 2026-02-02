@@ -22,6 +22,7 @@ import ErrorTense from "./components/english/Grammar/Tense/Error/index.jsx";
 import Pronouns from "./components/english/Grammar/Pronouns/index.jsx";
 import { PronounsMenu } from "./components/english/Grammar/Pronouns/index.jsx";
 import ChooseCorrectPronouns from "./components/english/Grammar/Pronouns/ChooseCorrect/index.jsx";
+import PronounsMutil from "./components/english/Grammar/Pronouns/Mutil/index.jsx";
 import Prepositions from "./components/english/Grammar/Prepositions/index.jsx";
 import { PrepositionsMenu } from "./components/english/Grammar/Prepositions/index.jsx";
 import Conditionals from "./components/english/Grammar/Conditionals/index.jsx";
@@ -58,6 +59,7 @@ function App() {
               <Route path="pronouns" element={<Pronouns />}>
                 <Route index element={<PronounsMenu />} />
                 <Route path="choose-pronouns" element={<ChooseCorrectPronouns />} />
+                <Route path="multiple-choice" element={<PronounsMutil />} />
               </Route>
               <Route path="prepositions" element={<Prepositions />}>
                 <Route index element={<PrepositionsMenu />} />

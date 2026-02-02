@@ -93,8 +93,6 @@ const levelColor = {
 };
 
 const ChooseCorrectPronouns = () => {
-
-
   const [step, setStep] = useState("setup");
   const [totalQuestions, setTotalQuestions] = useState(3);
   const [questions, setQuestions] = useState([]);
@@ -211,7 +209,7 @@ const ChooseCorrectPronouns = () => {
               }
               disabled={checked}
             >
-              <Space direction="vertical">
+              <Space orientation="vertical">
                 {q.options.map((opt) => (
                   <Radio key={opt} value={opt}>
                     {opt}
