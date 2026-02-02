@@ -9,12 +9,13 @@ import {
 import { useHiraganaGame } from "../../../hook/useHiraganaGame";
 import SetupCard from "./SetupCard";
 import CharacterBlock from "./CharacterBlock";
+import { useLang } from "../../../util/LanguageContext";
 
 const { Text } = Typography;
 
 const HiraganaPractice = () => {
   const { value, setValue, gameState, inputRefs, actions } = useHiraganaGame();
-  
+  const lang = useLang();
   const {
     charData,
     meaning,
@@ -26,6 +27,8 @@ const HiraganaPractice = () => {
   } = gameState;
 
   // --- 1. HÀM XỬ LÝ ĐỌC GIỌNG NÓI ---
+
+  console.log("HiraganaPractice render, lang:", lang);
   const handleSpeak = () => {
     // Ghép các ký tự lại thành câu hoàn chỉnh
     const sentence = charData.map((item) => item.char).join("");

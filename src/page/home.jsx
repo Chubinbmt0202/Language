@@ -31,7 +31,6 @@ const sidebarItems = [
     children: [
       { key: "english/grammar", label: "Ngữ pháp" },
       { key: "english/translation-practice", label: "Luyện dịch câu" },
-      { key: "english/listen-and-fill", label: "Nghe và điền" },
     ],
   },
   {

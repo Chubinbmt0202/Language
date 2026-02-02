@@ -9,7 +9,6 @@ export const TenseMenu = () => {
   const content = [
     { title: "Chia động từ trong ngoặc", path: "verb-conjugation" },
     { title: "Trắc nghiệm chọn đáp án", path: "multiple-choice" },
-    { title: "Viết lại câu", path: "sentence-rewrite" },
     { title: "Tìm và sửa lỗi sai", path: "find-errors" },
   ];
 

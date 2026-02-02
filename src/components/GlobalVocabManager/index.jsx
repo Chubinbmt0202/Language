@@ -1,5 +1,6 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import { FloatButton, Modal, Tabs, Layout, Button, Drawer } from "antd";
 import {
   PlusOutlined,
@@ -11,47 +12,96 @@ import TopicSidebar from "./TopicSidebar.jsx";
 import AddVocabForm from "./AddVocabForm.jsx";
 import VocabTable from "./VocabTable";
 import FlashcardModal from "./FlashcardModal";
+import AutoQuizModal from "./AutoQuizModal.jsx";
+import { useLang } from "../../util/LanguageContext.jsx";
 
 const GlobalVocabManager = () => {
+  const quizLockRef = useRef(false);
+  const lang = useLang();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeLang, setActiveLang] = useState("en");
   const [isPracticeMode, setIsPracticeMode] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Quản lý drawer trên mobile
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isQuizOpen, setIsQuizOpen] = useState(false);
 
+  console.log("GlobalVocabManager render, activeLang:", lang);
+
+  // Load dữ liệu
   const [allData, setAllData] = useState(() => {
     const saved = localStorage.getItem("global_vocab_app_data");
-    return saved ? JSON.parse(saved) : {
-      en: [{ id: "en_default", name: "English TOEIC", words: [] }],
-      jp: [{ id: "jp_default", name: "Từ vựng N3", words: [] }]
-    };
+    return saved
+      ? JSON.parse(saved)
+      : {
+          en: [{ id: "en_default", name: "English TOEIC", words: [] }],
+          jp: [{ id: "jp_default", name: "Từ vựng N3", words: [] }],
+        };
   });
 
   const [activeTopicIds, setActiveTopicIds] = useState({
     en: "en_default",
-    jp: "jp_default"
+    jp: "jp_default",
   });
+
+  // Lấy danh sách từ vựng hiện tại để kiểm tra
+  const allCurrentWords = useMemo(() => {
+    const topics = allData[lang] || [];
+    return topics.flatMap((t) => t.words);
+  }, [allData, lang]);
 
   useEffect(() => {
     localStorage.setItem("global_vocab_app_data", JSON.stringify(allData));
   }, [allData]);
 
+  // --- LOGIC KIỂM TRA THỜI GIAN (Đã sửa lỗi 10s) ---
+  useEffect(() => {
+    const INTERVAL = 60 * 1000 * 5; // 15 phút
+    const STORAGE_KEY = `vocab_last_quiz_time_${lang}`;
+
+    const checkQuizTrigger = () => {
+      if (quizLockRef.current) return; // 🔒 đang mở
+      if (isQuizOpen) return;
+      if (allCurrentWords.length === 0) return;
+
+      const now = Date.now();
+      const lastTime = Number(localStorage.getItem(STORAGE_KEY) || 0);
+
+      if (now - lastTime >= INTERVAL) {
+        console.log("🧠 Mở quiz | lang:", lang);
+
+        quizLockRef.current = true; // 🔒 khoá
+        setIsQuizOpen(true);
+        localStorage.setItem(STORAGE_KEY, now.toString());
+      }
+    };
+
+    const timer = setInterval(checkQuizTrigger, INTERVAL);
+    console.log("⏱️ Bắt đầu timer kiểm tra quiz | lang:", timer, lang);
+
+    return () => clearInterval(timer);
+  }, [lang, allCurrentWords.length, isQuizOpen]);
+  // --- HẾT LOGIC KIỂM TRA THỜI GIAN ---
+
   const currentTopics = allData[activeLang] || [];
   const currentActiveId = activeTopicIds[activeLang];
-  const activeTopic = currentTopics.find((t) => t.id === currentActiveId) || currentTopics[0];
+  const activeTopic =
+    currentTopics.find((t) => t.id === currentActiveId) || currentTopics[0];
 
   const updateTopicsForCurrentLang = (newTopics) => {
-    setAllData(prev => ({ ...prev, [activeLang]: newTopics }));
+    setAllData((prev) => ({ ...prev, [activeLang]: newTopics }));
   };
 
   const updateActiveIdForCurrentLang = (id) => {
-    setActiveTopicIds(prev => ({ ...prev, [activeLang]: id }));
-    setIsMobileMenuOpen(false); // Đóng menu sau khi chọn chủ đề trên mobile
+    setActiveTopicIds((prev) => ({ ...prev, [activeLang]: id }));
+    setIsMobileMenuOpen(false);
   };
 
   return (
     <>
       <FloatButton.Group trigger="click" type="primary" icon={<PlusOutlined />}>
-        <FloatButton icon={<ReadOutlined />} onClick={() => setIsModalOpen(true)} />
+        <FloatButton
+          icon={<ReadOutlined />}
+          onClick={() => setIsModalOpen(true)}
+        />
       </FloatButton.Group>
 
       <Modal
@@ -77,27 +127,28 @@ const GlobalVocabManager = () => {
             ),
             children: (
               <Layout style={{ background: "#fff", height: "100%" }}>
-                {/* 1. Nút mở Sidebar cho Mobile */}
-                <div className="mobile-only" style={{ marginBottom: 10, display: 'none' }}>
-                   <Button 
-                    icon={<MenuUnfoldOutlined />} 
+                {/* Mobile Menu Button */}
+                <div
+                  className="mobile-only"
+                  style={{ marginBottom: 10, display: "none" }}
+                >
+                  <Button
+                    icon={<MenuUnfoldOutlined />}
                     onClick={() => setIsMobileMenuOpen(true)}
-                   >
-                     Chủ đề
-                   </Button>
+                  >
+                    Chủ đề
+                  </Button>
                 </div>
-                
-                <style>
-                  {`
-                    @media (max-width: 768px) {
-                      .desktop-sidebar { display: none !important; }
-                      .mobile-only { display: block !important; }
-                      .content-area { padding: 0 !important; }
-                    }
-                  `}
-                </style>
 
-                {/* 2. Sidebar Desktop */}
+                <style>{`
+                  @media (max-width: 768px) {
+                    .desktop-sidebar { display: none !important; }
+                    .mobile-only { display: block !important; }
+                    .content-area { padding: 0 !important; }
+                  }
+                `}</style>
+
+                {/* Desktop Sidebar */}
                 <div className="desktop-sidebar">
                   <TopicSidebar
                     topics={currentTopics}
@@ -107,13 +158,13 @@ const GlobalVocabManager = () => {
                   />
                 </div>
 
-                {/* 3. Drawer cho Mobile */}
+                {/* Mobile Drawer */}
                 <Drawer
                   title="Danh sách chủ đề"
                   placement="left"
                   onClose={() => setIsMobileMenuOpen(false)}
                   open={isMobileMenuOpen}
-                  size={280}
+                  width={280}
                   styles={{ body: { padding: 0 } }}
                 >
                   <TopicSidebar
@@ -124,7 +175,10 @@ const GlobalVocabManager = () => {
                   />
                 </Drawer>
 
-                <Layout.Content className="content-area" style={{ padding: "0 24px", overflowY: "auto" }}>
+                <Layout.Content
+                  className="content-area"
+                  style={{ padding: "0 24px", overflowY: "auto" }}
+                >
                   <AddVocabForm
                     activeTopicId={currentActiveId}
                     topics={currentTopics}
@@ -149,6 +203,17 @@ const GlobalVocabManager = () => {
         isOpen={isPracticeMode}
         onClose={() => setIsPracticeMode(false)}
         words={activeTopic?.words || []}
+      />
+
+      <AutoQuizModal
+        key={lang}
+        isOpen={isQuizOpen}
+        onClose={() => {
+          quizLockRef.current = false; // 🔓 mở khoá
+          setIsQuizOpen(false);
+        }}
+        allWords={allCurrentWords}
+        lang={lang}
       />
     </>
   );
