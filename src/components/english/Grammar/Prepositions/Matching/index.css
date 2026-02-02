@@ -1,0 +1,219 @@
+/* Container chính */
+.quiz-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Phần Setup (Màn hình chọn số câu) */
+.setup-box {
+  text-align: center;
+  padding: 40px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.setup-title {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.select-input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+/* Thẻ Card chứa câu hỏi */
+.quiz-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+}
+
+/* Metadata Tags (Level, Type) */
+.tag-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tag {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.tag.type {
+  color: #004085;
+  background-color: #cce5ff;
+}
+
+.tag.level {
+  color: #856404;
+  background-color: #fff3cd;
+}
+
+/* Nội dung câu hỏi */
+.progress-text {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.question-text {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* Các nút đáp án */
+.option-btn {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  color: #333;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 15px;
+}
+
+.option-btn:hover:not(:disabled) {
+  background-color: #e2e6ea;
+}
+
+/* Trạng thái nút đáp án */
+.option-btn.selected {
+  background-color: #e3f2fd;
+  border-color: #2196F3;
+  font-weight: bold;
+}
+
+.option-btn.correct {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+  cursor: default;
+}
+
+.option-btn.wrong {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+  cursor: default;
+}
+
+/* Hộp giải thích */
+.explanation-box {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fff3cd;
+  border-left: 5px solid #ffc107;
+  border-radius: 4px;
+  color: #856404;
+}
+
+/* Nút hành động (Kiểm tra / Tiếp theo) */
+.action-btn {
+  width: 100%;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.action-btn.primary {
+  background-color: #2196F3;
+}
+
+.action-btn.check {
+  background-color: #28a745; /* Green */
+}
+
+.action-btn.check:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.action-btn.next {
+  background-color: #007bff; /* Blue */
+}
+
+.action-btn.restart {
+  background-color: #6c757d; /* Grey */
+}
+
+/* Màn hình kết quả */
+.result-box {
+  text-align: center;
+  background-color: #e8f5e9;
+  border-color: #c8e6c9;
+}
+
+.score-display {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.review-list {
+  padding: 0;
+  overflow: hidden;
+}
+
+.review-item {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.review-item.is-correct {
+  background-color: #fafffa;
+}
+
+.review-item.is-wrong {
+  background-color: #fff5f5;
+}
+
+.review-status {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.review-status.correct { color: #155724; }
+.review-status.wrong { color: #721c24; }
+
+.review-correct-ans {
+  font-size: 14px;
+  color: #555;
+}
+
+.review-user-ans {
+  font-size: 14px;
+  color: #d9534f;
+}
+
+.review-explanation {
+  font-size: 13px;
+  font-style: italic;
+  margin-top: 5px;
+  color: #666;
+}
