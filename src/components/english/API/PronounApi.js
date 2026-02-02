@@ -10,7 +10,7 @@ const generateQuizPronouns = async (config) => {
     console.error("Loại không hợp lệ cho generateQuizPronouns:", apiType);
     throw new Error(`Loại không hợp lệ cho generateQuizPronouns: ${apiType}`);
   }
-  const response = await axios.post(`${BASE_URL_LOCAL}${ENDPOINT_TENSE}`, {
+  const response = await axios.post(`${BASE_URL}${ENDPOINT_TENSE}`, {
     type: apiType,
     numQuestions: config.numQuestions,
   });
@@ -29,7 +29,7 @@ const generateQuizPronounsMulti = async (config) => {
     console.error("Loại không hợp lệ cho generateQuizPronounsMulti:", apiType);
     throw new Error(`Loại không hợp lệ cho generateQuizPronounsMulti: ${apiType}`);
   }
-  const response = await axios.post(`${BASE_URL_LOCAL}${ENDPOINT_TENSE}`, {
+  const response = await axios.post(`${BASE_URL}${ENDPOINT_TENSE}`, {
     type: apiType,
     numQuestions: config.numQuestions,
   });
@@ -48,7 +48,7 @@ const generateQuizPronounsFindError = async (config) => {
     console.error("Loại không hợp lệ cho generateQuizPronounsFindError:", apiType);
     throw new Error(`Loại không hợp lệ cho generateQuizPronounsFindError: ${apiType}`);
   }
-  const response = await axios.post(`${BASE_URL_LOCAL}${ENDPOINT_TENSE}`, {
+  const response = await axios.post(`${BASE_URL}${ENDPOINT_TENSE}`, {
     type: apiType,
     numQuestions: config.numQuestions,
   });

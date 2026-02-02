@@ -10,7 +10,7 @@ const generrateQuizPrepositionsMatching = async (config) => {
     console.error("Loại không hợp lệ cho generateQuizPronouns:", apiType);
     throw new Error(`Loại không hợp lệ cho generateQuizPronouns: ${apiType}`);
   }
-  const response = await axios.post(`${BASE_URL_LOCAL}${ENDPOINT_TENSE}`, {
+  const response = await axios.post(`${BASE_URL}${ENDPOINT_TENSE}`, {
     type: apiType,
     numQuestions: config.numQuestions,
   });

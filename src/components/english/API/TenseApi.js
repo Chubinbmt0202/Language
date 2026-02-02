@@ -12,7 +12,7 @@ const generateQuizTense = async (config) => {
     console.error("Loại không hợp lệ cho generateQuizTense:", apiType);
     throw new Error(`Loại không hợp lệ cho generateQuizTense: ${apiType}`);
   }
-  const response = await axios.post(`${BASE_URL_LOCAL}${ENDPOINT_TENSE}`, {
+  const response = await axios.post(`${BASE_URL}${ENDPOINT_TENSE}`, {
     type: apiType,
     numQuestions: config.numQuestions,
   });
@@ -31,7 +31,7 @@ const generateQuizTenseMulti = async (config) => {
     console.error("Loại không hợp lệ cho generateQuizTenseMulti:", apiType);
     throw new Error(`Loại không hợp lệ cho generateQuizTenseMulti: ${apiType}`);
   }
-  const response = await axios.post(`${BASE_URL_LOCAL}${ENDPOINT_TENSE}`, {
+  const response = await axios.post(`${BASE_URL}${ENDPOINT_TENSE}`, {
     type: apiType,
     numQuestions: config.numQuestions,
   });
@@ -51,7 +51,7 @@ const generateQuizTenseError = async (config) => {
     console.error("Loại không hợp lệ cho generateQuizTenseError:", apiType);
     throw new Error(`Loại không hợp lệ cho generateQuizTenseError: ${apiType}`);
   }
-  const response = await axios.post(`${BASE_URL_LOCAL}${ENDPOINT_TENSE}`, {
+  const response = await axios.post(`${BASE_URL}${ENDPOINT_TENSE}`, {
     type: apiType,
     numQuestions: config.numQuestions,
   });
