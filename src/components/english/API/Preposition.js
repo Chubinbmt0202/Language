@@ -4,7 +4,7 @@ const BASE_URL_LOCAL = "http://localhost:9999";
 const BASE_URL = "https://language-backend-onoo.onrender.com";
 const ENDPOINT_TENSE = "/api/generate-quiz-pronouns-choose";
 
-const generateQuizPronouns = async (config) => {
+const generrateQuizPrepositionsMatching = async (config) => {
   let apiType = config.type;
   if (apiType !== "Prepositions") {
     console.error("Loại không hợp lệ cho generateQuizPronouns:", apiType);
@@ -24,4 +24,4 @@ const generateQuizPronouns = async (config) => {
 };
 
 
-export { generateQuizPronouns };
+export { generrateQuizPrepositionsMatching };
