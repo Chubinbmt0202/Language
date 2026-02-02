@@ -17,6 +17,8 @@ import PracticeTranslate from "./page/English/PracticeTranslate/index.jsx";
 import Tense from "./components/english/Grammar/Tense/index.jsx";
 import { TenseMenu } from "./components/english/Grammar/Tense/index.jsx";
 import VerbConjugation from "./components/english/Grammar/Tense/VerbConjugation/index.jsx";
+import MultipleChoice from "./components/english/Grammar/Tense/MultipleChoice/index.jsx";
+import ErrorTense from "./components/english/Grammar/Tense/Error/index.jsx";
 import Pronouns from "./components/english/Grammar/Pronouns/index.jsx";
 import { PronounsMenu } from "./components/english/Grammar/Pronouns/index.jsx";
 import Prepositions from "./components/english/Grammar/Prepositions/index.jsx";
@@ -48,7 +50,9 @@ function App() {
               </Route>
               <Route path="tense" element={<Tense />}>
                 <Route index element={<TenseMenu />} />
-              <Route path="verb-conjugation" element={<VerbConjugation />} />
+                <Route path="verb-conjugation" element={<VerbConjugation />} />
+                <Route path="multiple-choice" element={<MultipleChoice />} />
+                <Route path="find-errors" element={<ErrorTense />} />
               </Route>
               <Route path="pronouns" element={<Pronouns />}>
                 <Route index element={<PronounsMenu />} />
