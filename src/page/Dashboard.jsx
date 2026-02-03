@@ -1,107 +1,247 @@
-import React from 'react';
-import { Layout, Row, Col, Card, Progress, Tabs, Timeline, Tag, Typography, Statistic, Badge } from 'antd';
-import { FireTwoTone, BookOutlined, RiseOutlined, TranslationOutlined } from '@ant-design/icons';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
+/* eslint-disable no-unused-vars */
+import React, { useState, useRef } from "react";
+import {
+  Layout,
+  Row,
+  Col,
+  Card,
+  Button,
+  Typography,
+  Tag,
+  Progress,
+  Drawer,
+  Space,
+} from "antd";
+import {
+  ThunderboltFilled,
+  ClockCircleOutlined,
+  PlayCircleFilled,
+  FireFilled,
+} from "@ant-design/icons";
+import { useNavigate } from "react-router-dom";
+import {
+  ComposedChart,
+  Line,
+  Area,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
+import { detailedRoadmap, chartData } from "../page/Dashboard/RoadmapData";
+import DaySection from "./Dashboard/DaySection";
 
 const { Content } = Layout;
 const { Title, Text } = Typography;
 
-// Dữ liệu giả lập kỹ năng cho biểu đồ Radar
-const skillData = [
-  { subject: 'Ngữ pháp', A: 80, B: 40, fullMark: 150 },
-  { subject: 'Từ vựng', A: 70, B: 60, fullMark: 150 },
-  { subject: 'Nghe', A: 90, B: 30, fullMark: 150 },
-  { subject: 'Đọc', A: 65, B: 50, fullMark: 150 },
-  { subject: 'Kanji/Writing', A: 20, B: 70, fullMark: 150 },
-];
-
 const LanguageDashboard = () => {
+  const navigate = useNavigate();
+  const weekRefs = useRef([]);
+  const [openDrawer, setOpenDrawer] = useState(false);
+  const [selectedDay, setSelectedDay] = useState(null);
+  const [checkedTasks, setCheckedTasks] = useState({});
+
+  const handleChartClick = (state) => {
+    if (state && state.activeLabel) {
+      const index = detailedRoadmap.findIndex(
+        (w) => `Tuần ${w.week}` === state.activeLabel,
+      );
+      if (index !== -1 && weekRefs.current[index]) {
+        weekRefs.current[index].scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
+  };
+
+  const handleToggleTask = (dayId, taskIndex) => {
+    const key = `${dayId}-${taskIndex}`;
+    setCheckedTasks((prev) => ({
+      ...prev,
+      [key]: !prev[key],
+    }));
+  };
+
+
   return (
-    <Layout style={{ padding: '24px', background: '#f0f2f5' }}>
+    <Layout
+      style={{
+        minHeight: "100vh",
+      }}
+    >
       <Content>
-        <div style={{ marginBottom: 24 }}>
-          <Title level={2}>Bảng điều khiển học tập</Title>
-          <Text type="secondary">Chào Trung Anh, hôm nay bạn muốn chinh phục mục tiêu nào?</Text>
-        </div>
-
-        {/* Row 1: Thống kê tổng quát */}
-        <Row gutter={[16, 16]}>
-          <Col xs={24} md={8}>
-            <Card hoverable>
-              <Statistic 
-                title="Chuỗi học tập (Streak)" 
-                value={12} 
-                prefix={<FireTwoTone twoToneColor="#eb2f96" />} 
-                suffix="Ngày" 
-              />
-              <Progress percent={80} showInfo={false} strokeColor="#eb2f96" />
-              <Text size="small">Tuyệt vời! Đừng để ngọn lửa vụt tắt.</Text>
-            </Card>
-          </Col>
-          <Col xs={24} md={16}>
-            <Card title="Tiến độ lộ trình">
-              <Row>
-                <Col span={12}>
-                  <Text strong><TranslationOutlined /> Tiếng Anh (TOEIC)</Text>
-                  <Progress percent={65} status="active" />
-                </Col>
-                <Col span={12} style={{ paddingLeft: 20 }}>
-                  <Text strong><BookOutlined /> Tiếng Nhật (JLPT N3)</Text>
-                  <Progress percent={35} strokeColor="#52c41a" />
-                </Col>
-              </Row>
-            </Card>
-          </Col>
-        </Row>
-
-        {/* Row 2: Phân tích sâu kỹ năng */}
-        <Row gutter={[16, 16]} style={{ marginTop: 24 }}>
-          <Col xs={24} lg={12}>
-            <Card title="So sánh năng lực (Radar)">
-              <div style={{ width: '100%', height: 300 }}>
+        <Row gutter={[24, 24]}>
+          <Col xs={24} lg={16}>
+            <Card bordered={false} style={{ borderRadius: 12 }}>
+              <Title level={4}>
+                <ThunderboltFilled style={{ color: "#faad14" }} /> Lộ trình
+              </Title>
+              <div style={{ width: "100%", height: 300 }}>
                 <ResponsiveContainer>
-                  <RadarChart data={skillData}>
-                    <PolarGrid />
-                    <PolarAngleAxis dataKey="subject" />
-                    <Radar name="Tiếng Anh" dataKey="A" stroke="#1890ff" fill="#1890ff" fillOpacity={0.5} />
-                    <Radar name="Tiếng Nhật" dataKey="B" stroke="#52c41a" fill="#52c41a" fillOpacity={0.5} />
-                  </RadarChart>
+                  <ComposedChart
+                    data={chartData}
+                    onClick={handleChartClick}
+                    style={{ cursor: "pointer" }}
+                  >
+                    <XAxis dataKey="name" axisLine={false} tickLine={false} />
+                    <YAxis
+                      domain={[200, 900]}
+                      axisLine={false}
+                      tickLine={false}
+                    />
+                    <Tooltip />
+                    <Legend verticalAlign="top" height={36} />
+                    <Line
+                      type="monotone"
+                      dataKey="target"
+                      name="Lộ trình"
+                      stroke="#8884d8"
+                      strokeDasharray="5 5"
+                    />
+                    <Area
+                      type="monotone"
+                      dataKey="current"
+                      name="Tiến độ"
+                      stroke="#00C49F"
+                      fill="#00C49F"
+                      fillOpacity={0.1}
+                    />
+                  </ComposedChart>
                 </ResponsiveContainer>
               </div>
-              <div style={{ textAlign: 'center' }}>
-                <Badge color="#1890ff" text="Tiếng Anh" /> <Badge color="#52c41a" text="Tiếng Nhật" style={{ marginLeft: 10 }} />
-              </div>
             </Card>
+
+            {detailedRoadmap.map((week, wIdx) => (
+              <div
+                key={week.week}
+                ref={(el) => (weekRefs.current[wIdx] = el)}
+                style={{
+                  marginTop: 32,
+                  backgroundColor: "#fff",
+                  borderRadius: 12,
+                  padding: 24,
+                }}
+              >
+                {/* TÊN TUẦN */}
+                <Title level={3}>{week.name}</Title>
+                <Text type="secondary">{week.description}</Text>
+
+                {/* DANH SÁCH NGÀY */}
+                {week.days.map((day) => (
+                  <DaySection
+                    key={day.id}
+                    day={day}
+                    checkedTasks={checkedTasks}
+                    onToggleTask={handleToggleTask}
+                  />
+                ))}
+              </div>
+            ))}
           </Col>
 
-          <Col xs={24} lg={12}>
-            <Card title="Lịch sử làm bài & Gợi ý">
-              <Tabs defaultActiveKey="1">
-                <Tabs.TabPane tab="Gần đây" key="1">
-                  <Timeline mode="left">
-                    <Timeline.Item label="10:30" color="green">Hoàn thành Part 5 TOEIC (9/10 câu)</Timeline.Item>
-                    <Timeline.Item label="Hôm qua" color="blue">Học 20 từ vựng Kanji N3</Timeline.Item>
-                    <Timeline.Item label="2 ngày trước" color="red">Làm sai nhiều ở phần Trợ từ (Tiếng Nhật)</Timeline.Item>
-                  </Timeline>
-                </Tabs.TabPane>
-                <Tabs.TabPane tab="Việc cần làm" key="2">
-                  <div style={{ padding: '10px' }}>
-                    <Card size="small" style={{ marginBottom: 10 }}>
-                      <Tag color="orange">Gợi ý AI</Tag>
-                      <Text>Bạn hay sai phần **Phó từ** trong tiếng Anh. Ôn ngay?</Text>
-                    </Card>
-                    <Card size="small">
-                      <Tag color="red">N3 Task</Tag>
-                      <Text>Luyện nghe hiểu hội thoại ngắn (Choukai).</Text>
-                    </Card>
+          {/* cột phải */}
+          <Col xs={24} lg={8}>
+            <Card title="Thống kê nhanh" style={{ borderRadius: 12, background: "linear-gradient(135deg, #f0f5ff, #ffffff)" }} >
+              <Space direction="vertical" size={16} style={{ width: "100%" }}>
+                {/* SCORE */}
+                <div style={{ textAlign: "center" }}>
+                  <Progress
+                    type="dashboard"
+                    percent={70}
+                    strokeColor="#1677ff"
+                    format={() => (
+                      <div>
+                        <Text strong style={{ fontSize: 22 }}>
+                          350
+                        </Text>
+                        <br />
+                        <Text type="secondary" style={{ fontSize: 12 }}>
+                          điểm
+                        </Text>
+                      </div>
+                    )}
+                  />
+                </div>
+
+                {/* STREAK */}
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <Space>
+                    <FireFilled style={{ color: "#fa541c" }} />
+                    <Text strong>Chuỗi học</Text>
+                  </Space>
+
+                  <Tag color="volcano" style={{ fontSize: 14 }}>
+                    🔥 5 ngày
+                  </Tag>
+                </div>
+              </Space>
+            </Card>
+            <Card
+              bordered={false}
+              style={{
+                borderRadius: 12,
+                marginTop: 24,
+                marginBottom: 24,
+                background: "linear-gradient(135deg, #f0f5ff, #ffffff)",
+              }}
+            >
+              <Space direction="vertical" size={12} style={{ width: "100%" }}>
+                {/* HEADER */}
+                <div>
+                  <Title level={4} style={{ marginBottom: 4 }}>
+                    🎯 Hôm nay học gì?
+                  </Title>
+                  <Text type="secondary">Tiếp tục từ nơi bạn đang dở</Text>
+                </div>
+
+                {/* CONTENT */}
+                <div>
+                  <Text strong style={{ fontSize: 16 }}>
+                    Ngày 2 – Từ vựng cơ bản
+                  </Text>
+                  <div style={{ marginTop: 4 }}>
+                    <Tag color="blue">2 / 4 tasks</Tag>
+                    <Tag icon={<ClockCircleOutlined />} color="default">
+                      ~15 phút
+                    </Tag>
                   </div>
-                </Tabs.TabPane>
-              </Tabs>
+                </div>
+
+                {/* PROGRESS */}
+                <Progress percent={50} strokeColor="#1677ff" />
+
+                {/* CTA */}
+                <Button
+                  type="primary"
+                  icon={<PlayCircleFilled />}
+                  size="large"
+                  block
+                >
+                  Tiếp tục học
+                </Button>
+              </Space>
             </Card>
           </Col>
         </Row>
       </Content>
 
+      <Drawer
+        title={selectedDay?.title}
+        open={openDrawer}
+        onClose={() => setOpenDrawer(false)}
+        width={400}
+      >
+        {/* Render Task List here (Giống như code cũ của bạn) */}
+      </Drawer>
     </Layout>
   );
 };
