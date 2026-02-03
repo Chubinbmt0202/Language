@@ -8,10 +8,11 @@ const { Text } = Typography;
 
 const MAX_LEVEL = 10;
 
-const TaskCard = ({ task, progress = 0 }) => {
+const TaskCard = ({ task, progress = 0, tier = 0 }) => {
   const safeProgress = Math.min(progress, MAX_LEVEL);
   const percent = (safeProgress / MAX_LEVEL) * 100;
   const isDone = safeProgress >= MAX_LEVEL;
+  const isPrestige = tier > 0;
   const navigate = useNavigate();
 
   return (
@@ -21,8 +22,8 @@ const TaskCard = ({ task, progress = 0 }) => {
         ...styles.cardItem,
         width: 260,
         flexShrink: 0,
-        backgroundColor: isDone ? "#fff7e6" : "#e6f4ff",
-        border: `1px solid ${isDone ? "#faad14" : "#85b8ff"}`,
+        backgroundColor: isDone || isPrestige ? "#fff7e6" : "#e6f4ff",
+        border: `1px solid ${isDone || isPrestige ? "#faad14" : "#85b8ff"}`,
         transition: "all 0.3s ease",
       }}
       className="roadmap-card-hover"
@@ -30,7 +31,7 @@ const TaskCard = ({ task, progress = 0 }) => {
       {/* ICON */}
       <div style={styles.iconBox}>
         <CheckSquareTwoTone
-          twoToneColor={isDone ? "#faad14" : "#85b8ff"}
+          twoToneColor={isDone || isPrestige ? "#faad14" : "#85b8ff"}
         />
       </div>
 
@@ -58,7 +59,7 @@ const TaskCard = ({ task, progress = 0 }) => {
           percent={percent}
           showInfo={false}
           size="small"
-          strokeColor={isDone ? "#faad14" : "#85b8ff"}
+          strokeColor={isDone || isPrestige ? "#faad14" : "#85b8ff"}
           trailColor="#f0f0f0"
           style={{ marginTop: 6 }}
         />

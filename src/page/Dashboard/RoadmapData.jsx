@@ -17,12 +17,12 @@ export const detailedRoadmap = [
             id: "w1-d1-t1",
           },
           {
-            text: "Làm 20 câu Part 5 chuyên đề 'Verb Tenses'",
+            text: "Làm Part 5 chuyên đề 'Verb Tenses'",
             completed: false,
             id: "w1-d1-t2",
           },
           {
-            text: "Review lỗi sai: Tại sao chọn thì này mà không phải thì kia?",
+            text: "Học thuộc 25 từ vựng ",
             completed: false,
             id: "w1-d1-t3",
           },

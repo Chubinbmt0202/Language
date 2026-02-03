@@ -17,7 +17,7 @@ import { detailedRoadmap } from "./Dashboard/RoadmapData";
 
 // 👇 IMPORT HÀM TĂNG PROGRESS TỪ FILE STORAGE CỦA BẠN
 // Hãy chắc chắn đường dẫn này đúng với nơi bạn lưu đoạn code thứ 3
-import { incrementTaskProgress } from "../util/taskProgress"; 
+import { incrementTaskProgress, getTaskState } from "../util/taskProgress"; 
 
 const { Title, Text } = Typography;
 const { confirm } = Modal;
@@ -108,6 +108,89 @@ const QUESTIONS = [
   },
 ];
 
+const HARD_QUESTIONS = [
+  {
+    id: 1,
+    sentence: "The report, along with the attachments, ____ due by noon.",
+    options: ["are", "is", "were", "have been"],
+    answer: "is",
+    explanation:
+      "Subject-verb agreement: 'The report' is the main subject; the phrase in between does not affect the verb.",
+  },
+  {
+    id: 2,
+    sentence: "Neither the manager nor the assistants ____ aware of the change.",
+    options: ["is", "are", "was", "has been"],
+    answer: "are",
+    explanation:
+      "With 'neither...nor', the verb agrees with the nearest subject (assistants - plural).",
+  },
+  {
+    id: 3,
+    sentence: "Had he ____ earlier, he would have caught the train.",
+    options: ["leave", "left", "leaving", "to leave"],
+    answer: "left",
+    explanation:
+      "Inverted third conditional uses past perfect: Had + subject + V3.",
+  },
+  {
+    id: 4,
+    sentence: "The contract requires that each employee ____ the policy.",
+    options: ["signs", "sign", "signed", "to sign"],
+    answer: "sign",
+    explanation:
+      "Subjunctive form: base verb after verbs like 'require'.",
+  },
+  {
+    id: 5,
+    sentence: "The committee decided that the proposal ____ revised immediately.",
+    options: ["be", "is", "was", "being"],
+    answer: "be",
+    explanation:
+      "Subjunctive after 'decided that': base verb.",
+  },
+  {
+    id: 6,
+    sentence: "By the time we arrived, the presentation ____ for ten minutes.",
+    options: ["has started", "had started", "had been going", "was starting"],
+    answer: "had been going",
+    explanation:
+      "Past perfect continuous shows an action that began earlier and continued up to a past time.",
+  },
+  {
+    id: 7,
+    sentence: "The data ____ to the cloud every night at midnight.",
+    options: ["are backed up", "is backed up", "was backing up", "backing up"],
+    answer: "is backed up",
+    explanation:
+      "'Data' is treated as singular in business contexts; passive voice present simple.",
+  },
+  {
+    id: 8,
+    sentence: "No sooner ____ the meeting started than the power went out.",
+    options: ["had", "has", "did", "was"],
+    answer: "had",
+    explanation:
+      "Inversion with 'No sooner' uses past perfect: No sooner had + subject + V3.",
+  },
+  {
+    id: 9,
+    sentence: "The new regulations are intended to prevent employees ____ confidential data.",
+    options: ["share", "to share", "from sharing", "sharing to"],
+    answer: "from sharing",
+    explanation:
+      "Verb pattern: prevent someone from doing something.",
+  },
+  {
+    id: 10,
+    sentence: "The CEO, as well as her advisors, ____ attending the conference.",
+    options: ["are", "is", "were", "have been"],
+    answer: "is",
+    explanation:
+      "'As well as' is not a conjunction; the verb agrees with the subject 'CEO'.",
+  },
+];
+
 // --- Helper Functions ---
 const loadPersistentScore = () => {
   if (typeof window === "undefined") return 0;
@@ -160,9 +243,12 @@ const Exercise = () => {
     });
   };
 
+  const { tier } = useMemo(() => getTaskState(taskId), [taskId]);
+  const questionSet = tier > 0 ? HARD_QUESTIONS : QUESTIONS;
+
   const handleCheckAnswer = () => {
     if (!selectedOption) return;
-    const correct = selectedOption === QUESTIONS[currentIndex].answer;
+    const correct = selectedOption === questionSet[currentIndex].answer;
     setIsChecked(true);
     setIsCorrect(correct);
 
@@ -180,7 +266,7 @@ const Exercise = () => {
   };
 
   const handleFinish = () => {
-    const totalQuestions = QUESTIONS.length;
+    const totalQuestions = questionSet.length;
     // Tính % điểm (Lưu ý: sessionScore lúc này đã bao gồm câu cuối nếu đúng)
     const percentage = Math.round((sessionScore / totalQuestions) * 100);
     const PASS_THRESHOLD = 70; // Ngưỡng 70%
@@ -227,7 +313,7 @@ const Exercise = () => {
   };
 
   const handleNextQuestion = () => {
-    if (currentIndex < QUESTIONS.length - 1) {
+    if (currentIndex < questionSet.length - 1) {
       setCurrentIndex(prev => prev + 1);
       setSelectedOption("");
       setIsChecked(false);
@@ -241,8 +327,8 @@ const Exercise = () => {
   if (!taskInfo) return <Text>Không tìm thấy bài tập</Text>;
 
   const { task, day, week } = taskInfo;
-  const currentQuestion = QUESTIONS[currentIndex];
-  const progressPercent = Math.round(((currentIndex) / QUESTIONS.length) * 100);
+  const currentQuestion = questionSet[currentIndex];
+  const progressPercent = Math.round(((currentIndex) / questionSet.length) * 100);
 
   return (
     <div style={{ maxWidth: 700, margin: "40px auto", padding: "0 15px" }}>
@@ -274,7 +360,7 @@ const Exercise = () => {
             <Progress percent={progressPercent} status="active" strokeColor="#1890ff" />
           </div>
 
-          <Divider plain><Text type="secondary">Câu hỏi {currentIndex + 1} / {QUESTIONS.length}</Text></Divider>
+          <Divider plain><Text type="secondary">Câu hỏi {currentIndex + 1} / {questionSet.length}</Text></Divider>
 
           <div style={{ minHeight: 120 }}>
             <Title level={5}>{currentQuestion.sentence}</Title>
@@ -323,10 +409,10 @@ const Exercise = () => {
                 onClick={handleNextQuestion}
                 shape="round"
                 // Đổi icon và text ở câu cuối cùng
-                icon={currentIndex === QUESTIONS.length - 1 ? <CheckCircleOutlined /> : <RightOutlined />}
+                icon={currentIndex === questionSet.length - 1 ? <CheckCircleOutlined /> : <RightOutlined />}
                 style={{ width: 160, backgroundColor: isCorrect ? '#52c41a' : '#1890ff' }}
               >
-                {currentIndex === QUESTIONS.length - 1 ? "Hoàn thành" : "Tiếp theo"}
+                {currentIndex === questionSet.length - 1 ? "Hoàn thành" : "Tiếp theo"}
               </Button>
             )}
           </div>
