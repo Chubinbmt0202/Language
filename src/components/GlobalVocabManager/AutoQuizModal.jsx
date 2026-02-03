@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/set-state-in-effect */
 import React, { useState, useEffect, useRef } from "react";
-import { Modal, Input, Button, Progress, Typography, Result } from "antd";
+import { Modal, Input, Button, Progress, Typography, Result, Alert } from "antd";
 import { CheckCircleOutlined, CloseCircleOutlined, TrophyOutlined, SoundOutlined } from "@ant-design/icons";
 
 const { Title, Text } = Typography;
@@ -11,6 +11,8 @@ const AutoQuizModal = ({ isOpen, onClose, allWords, lang }) => {
   const [userAnswer, setUserAnswer] = useState("");
   const [results, setResults] = useState([]);
   const [isFinished, setIsFinished] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
+  const [feedback, setFeedback] = useState(null);
   const inputRef = useRef(null);
 
   useEffect(() => {
@@ -22,22 +24,55 @@ const AutoQuizModal = ({ isOpen, onClose, allWords, lang }) => {
       setResults([]);
       setUserAnswer("");
       setIsFinished(false);
+      setIsChecked(false);
+      setFeedback(null);
       
       setTimeout(() => inputRef.current?.focus(), 100);
     }
   }, [isOpen, allWords]); // key={activeLang} ở cha sẽ force render lại component này nên useEffect sẽ chạy chuẩn
 
+  const normalize = (value) =>
+    String(value || "")
+      .toLowerCase()
+      .replace(/[()]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+
+  const splitMeanings = (value) =>
+    normalize(value)
+      .split(",")
+      .map((part) => part.trim())
+      .filter(Boolean);
+
+  const isMeaningCorrect = (input, target) => {
+    const inputNormalized = normalize(input);
+    if (!inputNormalized) return false;
+    const targets = splitMeanings(target);
+    if (targets.length === 0) return false;
+    return targets.some((t) => t === inputNormalized);
+  };
+
   const handleSubmit = () => {
     if (!userAnswer.trim()) return;
 
     const currentWord = quizList[currentIndex];
-    const isCorrect = userAnswer.trim().toLowerCase() === currentWord.meaning.trim().toLowerCase();
+    const isCorrect = isMeaningCorrect(userAnswer, currentWord.meaning);
 
-    setResults([...results, { word: currentWord, userAnswer, isCorrect }]);
+    setResults((prev) => [...prev, { word: currentWord, userAnswer, isCorrect }]);
+    setFeedback({
+      ok: isCorrect,
+      word: currentWord,
+      userAnswer,
+    });
+    setIsChecked(true);
+  };
 
+  const handleNext = () => {
     if (currentIndex < quizList.length - 1) {
       setCurrentIndex(currentIndex + 1);
       setUserAnswer("");
+      setIsChecked(false);
+      setFeedback(null);
       inputRef.current?.focus();
     } else {
       setIsFinished(true);
@@ -45,7 +80,9 @@ const AutoQuizModal = ({ isOpen, onClose, allWords, lang }) => {
   };
 
   const handleKeyPress = (e) => {
-    if (e.key === "Enter") handleSubmit();
+    if (e.key !== "Enter") return;
+    if (isChecked) handleNext();
+    else handleSubmit();
   };
 
   const speak = (text) => {
@@ -98,8 +135,24 @@ const AutoQuizModal = ({ isOpen, onClose, allWords, lang }) => {
             onKeyDown={handleKeyPress}
             style={{ marginBottom: 20 }}
             autoFocus
+            disabled={isChecked}
           />
-          <Button type="primary" size="large" block onClick={handleSubmit}>Tiếp tục</Button>
+          {!isChecked ? (
+            <Button type="primary" size="large" block onClick={handleSubmit}>Kiểm tra</Button>
+          ) : (
+            <Button type="primary" size="large" block onClick={handleNext}>
+              {currentIndex === quizList.length - 1 ? "Hoàn tất" : "Tiếp theo"}
+            </Button>
+          )}
+          {feedback && (
+            <Alert
+              showIcon
+              type={feedback.ok ? "success" : "error"}
+              message={feedback.ok ? "Đúng rồi!" : "Chưa đúng"}
+              description={`Bạn nhập: "${feedback.userAnswer}"`}
+              style={{ marginTop: 12 }}
+            />
+          )}
         </div>
       ) : (
         <div style={{ textAlign: "center" }}>
@@ -116,6 +169,9 @@ const AutoQuizModal = ({ isOpen, onClose, allWords, lang }) => {
                    {lang === "en" ? item.word.word : item.word.hiragana}
                 </span>
                 <span> = {item.word.meaning}</span>
+                <div style={{ fontSize: 12, color: "#666", marginLeft: 24 }}>
+                  Bạn nhập: "{item.userAnswer}"
+                </div>
               </div>
             ))}
           </div>

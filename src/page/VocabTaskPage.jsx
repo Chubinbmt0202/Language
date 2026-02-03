@@ -26,7 +26,25 @@ const findTaskById = (taskId) => {
 };
 
 const normalize = (value) =>
-  String(value || "").toLowerCase().replace(/\s+/g, " ").trim();
+  String(value || "")
+    .toLowerCase()
+    .replace(/[()]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const splitMeanings = (value) =>
+  normalize(value)
+    .split(",")
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+const isMeaningCorrect = (input, target) => {
+  const inputNormalized = normalize(input);
+  if (!inputNormalized) return false;
+  const targets = splitMeanings(target);
+  if (targets.length === 0) return false;
+  return targets.some((t) => t === inputNormalized);
+};
 
 const VocabTaskPage = () => {
   const navigate = useNavigate();
@@ -44,6 +62,9 @@ const VocabTaskPage = () => {
   const [testIndex, setTestIndex] = useState(0);
   const [testInput, setTestInput] = useState("");
   const [testWrong, setTestWrong] = useState(new Set());
+  const [testChecked, setTestChecked] = useState(false);
+  const [testFeedback, setTestFeedback] = useState(null);
+  const [testAnswers, setTestAnswers] = useState({});
   const [reviewIndex, setReviewIndex] = useState(0);
   const [reviewInput, setReviewInput] = useState("");
   const [reviewCorrect, setReviewCorrect] = useState(0);
@@ -57,6 +78,17 @@ const VocabTaskPage = () => {
     setLearnIndex(0);
     setTestIndex(0);
     setReviewIndex(0);
+    setTestInput("");
+    setReviewInput("");
+    setTestWrong(new Set());
+    setTestChecked(false);
+    setTestFeedback(null);
+    setTestAnswers({});
+    const initialStatus = {};
+    levelWords.forEach((w) => {
+      initialStatus[w.word] = false;
+    });
+    setWordStatus(initialStatus);
   }, [taskId, taskState.progress]);
 
   if (!taskInfo) return <div style={{ textAlign: 'center', marginTop: 50 }}><Text>Không tìm thấy bài học.</Text></div>;
@@ -102,7 +134,7 @@ const VocabTaskPage = () => {
   // --- PHẦN ĐÃ ĐIỀU CHỈNH ---
   const handleTestSubmit = () => {
     const word = levelWords[testIndex];
-    const isCorrect = normalize(testInput) === normalize(word.meaning);
+    const isCorrect = isMeaningCorrect(testInput, word.meaning);
     
     const nextWrong = new Set(testWrong);
     if (!isCorrect) {
@@ -110,24 +142,51 @@ const VocabTaskPage = () => {
       setTestWrong(nextWrong);
       setWordStatus((prev) => ({ ...prev, [word.word]: false }));
     }
+    setTestAnswers((prev) => ({ ...prev, [word.word]: testInput }));
+    setTestFeedback({
+      ok: isCorrect,
+      word: word.word,
+      input: testInput,
+      meaning: word.meaning,
+    });
+    setTestChecked(true);
+  };
 
+  const handleTestNext = () => {
     const nextIndex = testIndex + 1;
     if (nextIndex < levelWords.length) {
       setTestIndex(nextIndex);
       setTestInput("");
+      setTestChecked(false);
+      setTestFeedback(null);
       return;
     }
 
     // Nếu có câu sai
-    if (nextWrong.size > 0 || !isCorrect) {
+    if (testWrong.size > 0) {
+      const wrongList = levelWords
+        .filter((w) => testWrong.has(w.word))
+        .map((w) => (
+          <li key={w.word}>
+            <Text strong>{w.word}</Text>: bạn nhập "{testAnswers[w.word] || ""}"
+          </li>
+        ));
        Modal.error({
         title: "Chưa hoàn hảo!",
-        content: "Bạn cần đúng tuyệt đối 5 từ. Hãy thử lại nhé!",
+        content: (
+          <div>
+            <div>Bạn cần đúng tuyệt đối 5 từ. Hãy thử lại nhé!</div>
+            <ul style={{ marginTop: 8, paddingLeft: 20 }}>{wrongList}</ul>
+          </div>
+        ),
         okText: "Làm lại ngay",
         onOk: () => {
             setTestIndex(0);
             setTestInput("");
             setTestWrong(new Set());
+            setTestChecked(false);
+            setTestFeedback(null);
+            setTestAnswers({});
         }
       });
       return;
@@ -150,7 +209,7 @@ const VocabTaskPage = () => {
 
   const handleReviewSubmit = () => {
     const word = prevLevelWords[reviewIndex];
-    const isCorrect = normalize(reviewInput) === normalize(word.meaning);
+    const isCorrect = isMeaningCorrect(reviewInput, word.meaning);
     const nextCorrect = reviewCorrect + (isCorrect ? 1 : 0);
 
     const nextIndex = reviewIndex + 1;
@@ -266,7 +325,7 @@ const VocabTaskPage = () => {
                 THỬ THÁCH TRÍ NHỚ
             </Tag>
             
-            <div style={{ margin: '20px 0' }}>
+            <div style={{ margin: '20px 0', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
                 <Space align="center" size={10} style={{ justifyContent: 'center' }}>
                   <Title level={2} style={{ fontSize: '2.5rem', margin: 0 }}>{word.word}</Title>
                   <Tooltip title="Nghe phat am">
@@ -296,24 +355,48 @@ const VocabTaskPage = () => {
                   background: '#f0f5ff'
               }}
               autoFocus
+              disabled={testChecked}
             />
             
-            <Button 
-              type="primary" 
-              size="large" 
-              shape="round" 
-              block 
-              onClick={handleTestSubmit}
-              disabled={!testInput}
-              style={{ height: 55, fontSize: 18, marginTop: 10 }}
-            >
-              Xác nhận
-            </Button>
+            {!testChecked ? (
+              <Button 
+                type="primary" 
+                size="large" 
+                shape="round" 
+                block 
+                onClick={handleTestSubmit}
+                disabled={!testInput}
+                style={{ height: 55, fontSize: 18, marginTop: 10 }}
+              >
+                Xác nhận
+              </Button>
+            ) : (
+              <Button
+                type="primary"
+                size="large"
+                shape="round"
+                block
+                onClick={handleTestNext}
+                style={{ height: 55, fontSize: 18, marginTop: 10 }}
+              >
+                {testIndex === WORDS_PER_LEVEL - 1 ? "Hoàn tất" : "Tiếp theo"}
+              </Button>
+            )}
+
+            {testFeedback && (
+              <Alert
+                showIcon
+                type={testFeedback.ok ? "success" : "error"}
+                message={testFeedback.ok ? "Đúng rồi!" : "Chưa đúng"}
+                description={`Bạn nhập: "${testFeedback.input}"`}
+                style={{ marginTop: 8 }}
+              />
+            )}
             
             <Progress 
                 percent={Math.round(((testIndex) / WORDS_PER_LEVEL) * 100)} 
                 steps={5} 
-                strokeColor="#fadb14" 
+                strokeColor="#00e239" 
                 trailColor="#f0f0f0"
                 showInfo={false} 
                 style={{ marginTop: 10 }}
@@ -361,6 +444,24 @@ const VocabTaskPage = () => {
     );
   };
 
+  const handleResetLesson = () => {
+    setStage("learn");
+    setLearnIndex(0);
+    setTestIndex(0);
+    setReviewIndex(0);
+    setTestInput("");
+    setReviewInput("");
+    setTestWrong(new Set());
+    setTestChecked(false);
+    setTestFeedback(null);
+    setTestAnswers({});
+    const initialStatus = {};
+    levelWords.forEach((w) => {
+      initialStatus[w.word] = false;
+    });
+    setWordStatus(initialStatus);
+  };
+
   return (
     <div style={{ maxWidth: 600, margin: "20px auto", padding: "0 20px", fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial' }}>
       
@@ -371,7 +472,7 @@ const VocabTaskPage = () => {
         <Space>
           <Tag color="cyan" style={{ borderRadius: 10, padding: '0 10px' }}>{week?.name}</Tag>
           <Tooltip title="Reset bài học">
-            <Button icon={<ReloadOutlined />} onClick={() => setStateKey(k => k + 1)} shape="circle" />
+            <Button icon={<ReloadOutlined />} onClick={handleResetLesson} shape="circle" />
           </Tooltip>
         </Space>
       </div>
