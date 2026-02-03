@@ -25,6 +25,8 @@ export const detailedRoadmap = [
             text: "Học thuộc 25 từ vựng ",
             completed: false,
             id: "w1-d1-t3",
+            type: "vocab",
+            maxProgress: 5,
           },
         ],
       },

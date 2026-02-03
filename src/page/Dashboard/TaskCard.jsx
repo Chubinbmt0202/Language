@@ -6,18 +6,21 @@ import { useNavigate } from "react-router-dom";
 
 const { Text } = Typography;
 
-const MAX_LEVEL = 10;
+const DEFAULT_MAX_LEVEL = 10;
 
 const TaskCard = ({ task, progress = 0, tier = 0 }) => {
-  const safeProgress = Math.min(progress, MAX_LEVEL);
-  const percent = (safeProgress / MAX_LEVEL) * 100;
-  const isDone = safeProgress >= MAX_LEVEL;
+  const maxLevel = task.maxProgress ?? DEFAULT_MAX_LEVEL;
+  const safeProgress = Math.min(progress, maxLevel);
+  const percent = (safeProgress / maxLevel) * 100;
+  const isDone = safeProgress >= maxLevel;
   const isPrestige = tier > 0;
   const navigate = useNavigate();
 
   return (
     <div
-      onClick={() => navigate(`/exercise/${task.id}`)}
+      onClick={() =>
+        navigate(task.type === "vocab" ? `/vocab/${task.id}` : `/exercise/${task.id}`)
+      }
       style={{
         ...styles.cardItem,
         width: 260,
@@ -51,7 +54,7 @@ const TaskCard = ({ task, progress = 0, tier = 0 }) => {
 
         {/* LEVEL TEXT */}
         <Text type="secondary" style={{ fontSize: 12 }}>
-          Level {safeProgress}/{MAX_LEVEL}
+          Level {safeProgress}/{maxLevel}
         </Text>
 
         {/* PROGRESS BAR */}
