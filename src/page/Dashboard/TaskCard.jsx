@@ -8,9 +8,10 @@ const { Text } = Typography;
 
 const MAX_LEVEL = 10;
 
-const TaskCard = ({ task }) => {
-  const percent = (task.progress / MAX_LEVEL) * 100;
-  const isDone = task.progress === MAX_LEVEL;
+const TaskCard = ({ task, progress = 0 }) => {
+  const safeProgress = Math.min(progress, MAX_LEVEL);
+  const percent = (safeProgress / MAX_LEVEL) * 100;
+  const isDone = safeProgress >= MAX_LEVEL;
   const navigate = useNavigate();
 
   return (
@@ -49,7 +50,7 @@ const TaskCard = ({ task }) => {
 
         {/* LEVEL TEXT */}
         <Text type="secondary" style={{ fontSize: 12 }}>
-          Level {task.progress}/{MAX_LEVEL}
+          Level {safeProgress}/{MAX_LEVEL}
         </Text>
 
         {/* PROGRESS BAR */}

@@ -15,7 +15,7 @@ const chunkTasks = (tasks, size) => {
   return result;
 };
 
-const DaySection = ({ day, checkedTasks }) => {
+const DaySection = ({ day, checkedTasks, taskProgress  }) => {
   const scrollRef = useRef(null);
 
   // drag state
@@ -112,8 +112,9 @@ const DaySection = ({ day, checkedTasks }) => {
                 <React.Fragment key={task.id}>
                   <TaskCard
                     task={task}
+                    progress={taskProgress?.[task.id] ?? 0}
                     checked={
-                      checkedTasks[
+                      checkedTasks?.[
                         `${day.id}-${rowIdx * TASKS_PER_ROW + idx}`
                       ]
                     }

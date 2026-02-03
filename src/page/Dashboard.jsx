@@ -1,5 +1,6 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 /* eslint-disable no-unused-vars */
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   Layout,
   Row,
@@ -18,7 +19,7 @@ import {
   PlayCircleFilled,
   FireFilled,
 } from "@ant-design/icons";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation  } from "react-router-dom";
 import {
   ComposedChart,
   Line,
@@ -32,6 +33,7 @@ import {
 } from "recharts";
 import { detailedRoadmap, chartData } from "../page/Dashboard/RoadmapData";
 import DaySection from "./Dashboard/DaySection";
+import { loadTaskProgress } from "../util/taskProgress";
 
 const { Content } = Layout;
 const { Title, Text } = Typography;
@@ -42,6 +44,8 @@ const LanguageDashboard = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
   const [selectedDay, setSelectedDay] = useState(null);
   const [checkedTasks, setCheckedTasks] = useState({});
+    const [taskProgress, setTaskProgress] = useState(() => loadTaskProgress());
+  const location = useLocation();
 
   const handleChartClick = (state) => {
     if (state && state.activeLabel) {
@@ -64,6 +68,11 @@ const LanguageDashboard = () => {
       [key]: !prev[key],
     }));
   };
+
+    useEffect(() => {
+    setTaskProgress(loadTaskProgress());
+  }, [location.pathname]);
+
 
 
   return (
@@ -134,7 +143,7 @@ const LanguageDashboard = () => {
                   <DaySection
                     key={day.id}
                     day={day}
-                    checkedTasks={checkedTasks}
+                    taskProgress={taskProgress}
                     onToggleTask={handleToggleTask}
                   />
                 ))}

@@ -33,6 +33,7 @@ import PassiveVoice, {
   PassiveVoiceMenu,
 } from "./components/english/Grammar/PassiveVoice/index.jsx";
 import { LanguageProvider } from "./util/LanguageContext.jsx";
+import Exercise from "./page/ExercisePage.jsx";
 import Road from "./page/Road/index.jsx";
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
             <Route index element={<Navigate to="/dashboard" replace />} />
             <Route path="road" element={<Road />} />
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="exercise/:taskId" element={<Exercise />} />
             <Route path="vocabulary" element={<Vocabulary />} />
             <Route path="english/grammar" element={<Grammar />}>
               <Route index element={<GrammarMenu />} />
