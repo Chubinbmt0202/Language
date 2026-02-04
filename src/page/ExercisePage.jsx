@@ -14,6 +14,11 @@ import {
   ReloadOutlined
 } from "@ant-design/icons";
 import { detailedRoadmap } from "./Dashboard/RoadmapData";
+import {
+  DEFAULT_HARD_QUESTIONS,
+  DEFAULT_QUESTIONS,
+  EXERCISE_QUESTION_SETS,
+} from "./ExerciseQuestionData";
 
 // 👇 IMPORT HÀM TĂNG PROGRESS TỪ FILE STORAGE CỦA BẠN
 // Hãy chắc chắn đường dẫn này đúng với nơi bạn lưu đoạn code thứ 3
@@ -23,173 +28,6 @@ const { Title, Text } = Typography;
 const { confirm } = Modal;
 
 const SCORE_STORAGE_KEY = "exerciseScore";
-
-// --- Dữ liệu câu hỏi (Giữ nguyên) ---
-const QUESTIONS = [
-  {
-    id: 1,
-    sentence: "She ____ to work by bus every day.",
-    options: ["go", "goes", "is going", "has gone"],
-    answer: "goes",
-    explanation:
-      "Hiện tại đơn diễn tả thói quen hằng ngày. Chủ ngữ số ít (She) dùng động từ thêm -s/-es.",
-  },
-  {
-    id: 2,
-    sentence: "They ____ dinner right now.",
-    options: ["cook", "are cooking", "have cooked", "cooked"],
-    answer: "are cooking",
-    explanation:
-      "Hiện tại tiếp diễn dùng để nói hành động đang diễn ra tại thời điểm nói (right now).",
-  },
-  {
-    id: 3,
-    sentence: "I ____ this book before.",
-    options: ["read", "am reading", "have read", "reads"],
-    answer: "have read",
-    explanation:
-      "Hiện tại hoàn thành diễn tả kinh nghiệm đã xảy ra trong quá khứ, không nêu thời gian cụ thể.",
-  },
-  {
-    id: 4,
-    sentence: "The sun ____ in the east.",
-    options: ["rise", "rises", "is rising", "has risen"],
-    answer: "rises",
-    explanation:
-      "Hiện tại đơn diễn tả sự thật hiển nhiên. Chủ ngữ số ít (The sun) dùng rises.",
-  },
-  {
-    id: 5,
-    sentence: "We ____ for the train at the moment.",
-    options: ["wait", "are waiting", "have waited", "waited"],
-    answer: "are waiting",
-    explanation:
-      "At the moment là dấu hiệu của hiện tại tiếp diễn.",
-  },
-  {
-    id: 6,
-    sentence: "He ____ in this city since 2020.",
-    options: ["lives", "is living", "has lived", "lived"],
-    answer: "has lived",
-    explanation:
-      "Since + mốc thời gian dùng với hiện tại hoàn thành để nói hành động kéo dài đến hiện tại.",
-  },
-  {
-    id: 7,
-    sentence: "My brother usually ____ coffee in the morning.",
-    options: ["drink", "drinks", "is drinking", "has drunk"],
-    answer: "drinks",
-    explanation:
-      "Usually là trạng từ chỉ tần suất -> hiện tại đơn. Chủ ngữ số ít dùng drinks.",
-  },
-  {
-    id: 8,
-    sentence: "Look! The kids ____ in the yard.",
-    options: ["play", "are playing", "have played", "played"],
-    answer: "are playing",
-    explanation:
-      "Look! là dấu hiệu cho hành động đang diễn ra -> hiện tại tiếp diễn.",
-  },
-  {
-    id: 9,
-    sentence: "She ____ already ____ her homework.",
-    options: ["has / finished", "is / finishing", "finishes", "finished"],
-    answer: "has / finished",
-    explanation:
-      "Already thường đi với hiện tại hoàn thành để nói hành động vừa/đã hoàn tất.",
-  },
-  {
-    id: 10,
-    sentence: "I ____ English every weekend.",
-    options: ["study", "studies", "am studying", "have studied"],
-    answer: "study",
-    explanation:
-      "Every weekend là dấu hiệu của hiện tại đơn. Chủ ngữ I dùng study.",
-  },
-];
-
-const HARD_QUESTIONS = [
-  {
-    id: 1,
-    sentence: "The report, along with the attachments, ____ due by noon.",
-    options: ["are", "is", "were", "have been"],
-    answer: "is",
-    explanation:
-      "Subject-verb agreement: 'The report' is the main subject; the phrase in between does not affect the verb.",
-  },
-  {
-    id: 2,
-    sentence: "Neither the manager nor the assistants ____ aware of the change.",
-    options: ["is", "are", "was", "has been"],
-    answer: "are",
-    explanation:
-      "With 'neither...nor', the verb agrees with the nearest subject (assistants - plural).",
-  },
-  {
-    id: 3,
-    sentence: "Had he ____ earlier, he would have caught the train.",
-    options: ["leave", "left", "leaving", "to leave"],
-    answer: "left",
-    explanation:
-      "Inverted third conditional uses past perfect: Had + subject + V3.",
-  },
-  {
-    id: 4,
-    sentence: "The contract requires that each employee ____ the policy.",
-    options: ["signs", "sign", "signed", "to sign"],
-    answer: "sign",
-    explanation:
-      "Subjunctive form: base verb after verbs like 'require'.",
-  },
-  {
-    id: 5,
-    sentence: "The committee decided that the proposal ____ revised immediately.",
-    options: ["be", "is", "was", "being"],
-    answer: "be",
-    explanation:
-      "Subjunctive after 'decided that': base verb.",
-  },
-  {
-    id: 6,
-    sentence: "By the time we arrived, the presentation ____ for ten minutes.",
-    options: ["has started", "had started", "had been going", "was starting"],
-    answer: "had been going",
-    explanation:
-      "Past perfect continuous shows an action that began earlier and continued up to a past time.",
-  },
-  {
-    id: 7,
-    sentence: "The data ____ to the cloud every night at midnight.",
-    options: ["are backed up", "is backed up", "was backing up", "backing up"],
-    answer: "is backed up",
-    explanation:
-      "'Data' is treated as singular in business contexts; passive voice present simple.",
-  },
-  {
-    id: 8,
-    sentence: "No sooner ____ the meeting started than the power went out.",
-    options: ["had", "has", "did", "was"],
-    answer: "had",
-    explanation:
-      "Inversion with 'No sooner' uses past perfect: No sooner had + subject + V3.",
-  },
-  {
-    id: 9,
-    sentence: "The new regulations are intended to prevent employees ____ confidential data.",
-    options: ["share", "to share", "from sharing", "sharing to"],
-    answer: "from sharing",
-    explanation:
-      "Verb pattern: prevent someone from doing something.",
-  },
-  {
-    id: 10,
-    sentence: "The CEO, as well as her advisors, ____ attending the conference.",
-    options: ["are", "is", "were", "have been"],
-    answer: "is",
-    explanation:
-      "'As well as' is not a conjunction; the verb agrees with the subject 'CEO'.",
-  },
-];
 
 // --- Helper Functions ---
 const loadPersistentScore = () => {
@@ -244,7 +82,12 @@ const Exercise = () => {
   };
 
   const { tier } = useMemo(() => getTaskState(taskId), [taskId]);
-  const questionSet = tier > 0 ? HARD_QUESTIONS : QUESTIONS;
+  const taskQuestionSet =
+    EXERCISE_QUESTION_SETS[taskId] ?? {
+      easy: DEFAULT_QUESTIONS,
+      hard: DEFAULT_HARD_QUESTIONS,
+    };
+  const questionSet = tier > 0 ? taskQuestionSet.hard : taskQuestionSet.easy;
 
   const handleCheckAnswer = () => {
     if (!selectedOption) return;

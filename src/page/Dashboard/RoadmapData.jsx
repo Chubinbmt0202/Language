@@ -1,4 +1,4 @@
-export const detailedRoadmap = [
+const rawRoadmap = [
 {
   week: 1,
   "name": "Tuần 1: Ngữ pháp cốt lõi & Xây dựng sức bền Reading",
@@ -367,6 +367,21 @@ export const detailedRoadmap = [
 
   // ... Thêm các tuần khác
 ];
+const normalizeTasks = (weeks) =>
+  weeks.map((week) => ({
+    ...week,
+    days: week.days.map((day) => ({
+      ...day,
+      tasks: day.tasks.map((task) => {
+        const type = task.type ?? "quiz";
+        const tag = task.tag ?? (type === "vocab" ? "Từ vựng" : "Trắc nghiệm");
+        return { ...task, type, tag };
+      }),
+    })),
+  }));
+
+export const detailedRoadmap = normalizeTasks(rawRoadmap);
+
 
 export const chartData = [
   { name: "Start", target: 300, current: 300, label: "Mất gốc" },

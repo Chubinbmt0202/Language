@@ -1,8 +1,6 @@
-/* eslint-disable react-hooks/refs */
-import React, { useRef } from "react";
+import React from "react";
 import { Typography } from "antd";
 import TaskCard from "./TaskCard";
-import { dashboardStyles as styles } from "./DashboardStyles";
 
 const { Title, Text } = Typography;
 const TASKS_PER_ROW = 2;
@@ -16,50 +14,11 @@ const chunkTasks = (tasks, size) => {
 };
 
 const DaySection = ({ day, checkedTasks, taskProgress }) => {
-  const scrollRef = useRef(null);
-
-  // drag state
-  const isDown = useRef(false);
-  const startX = useRef(0);
-  const scrollLeft = useRef(0);
-
   const rows = chunkTasks(day.tasks, TASKS_PER_ROW);
-
-  /* ===== WHEEL SCROLL ===== */
-  const handleWheel = (e) => {
-    if (!scrollRef.current) return;
-    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-      scrollRef.current.scrollLeft += e.deltaY;
-      e.preventDefault();
-    }
-  };
-
-  /* ===== DRAG SCROLL ===== */
-  const handleMouseDown = (e) => {
-    isDown.current = true;
-    startX.current = e.pageX - scrollRef.current.offsetLeft;
-    scrollLeft.current = scrollRef.current.scrollLeft;
-  };
-
-  const handleMouseLeave = () => {
-    isDown.current = false;
-  };
-
-  const handleMouseUp = () => {
-    isDown.current = false;
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDown.current) return;
-    e.preventDefault();
-    const x = e.pageX - scrollRef.current.offsetLeft;
-    const walk = (x - startX.current) * 1.2; // tốc độ kéo
-    scrollRef.current.scrollLeft = scrollLeft.current - walk;
-  };
 
   return (
     <div style={{ marginTop: 24 }}>
-      {/* HEADER NGÀY */}
+      {/* HEADER NGAY */}
       <Title level={5} style={{ marginBottom: 0 }}>
         {day.title}
       </Title>
@@ -67,34 +26,14 @@ const DaySection = ({ day, checkedTasks, taskProgress }) => {
 
       {/* TASK ROADMAP */}
       <div
-        ref={scrollRef}
-        onWheel={handleWheel}
-        onMouseDown={handleMouseDown}
-        onMouseLeave={handleMouseLeave}
-        onMouseUp={handleMouseUp}
-        onMouseMove={handleMouseMove}
         style={{
           marginTop: 16,
           display: "flex",
+          flexWrap: "wrap",
           gap: 40,
-          overflowX: "auto",
           paddingBottom: 8,
-          cursor: isDown.current ? "grabbing" : "grab",
-          userSelect: "none",
-          scrollBehavior: "smooth",
-
-          /* hide scrollbar */
-          scrollbarWidth: "none",
         }}
       >
-        <style>
-          {`
-            div::-webkit-scrollbar {
-              display: none;
-            }
-          `}
-        </style>
-
         {rows.map((row, rowIdx) => {
           const isReverse = rowIdx % 2 === 1;
           const displayRow = isReverse ? [...row].reverse() : row;
@@ -104,8 +43,8 @@ const DaySection = ({ day, checkedTasks, taskProgress }) => {
               key={rowIdx}
               style={{
                 display: "flex",
-                alignItems: "center",
-                minWidth: "fit-content",
+                flexWrap: "wrap",
+                gap: 40,
               }}
             >
               {displayRow.map((task, idx) => (
@@ -120,9 +59,6 @@ const DaySection = ({ day, checkedTasks, taskProgress }) => {
                       ]
                     }
                   />
-                  {idx < displayRow.length - 1 && (
-                    <div style={styles.taskConnector} />
-                  )}
                 </React.Fragment>
               ))}
             </div>
