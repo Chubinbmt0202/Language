@@ -1,0 +1,63 @@
+export const dashboardStyles = {
+  container: {
+    display: "flex",
+    alignItems: "center",
+    overflowX: "auto",
+    padding: "10px 0 20px 0",
+    whiteSpace: "nowrap",
+  },
+  cardItem: {
+    flex: "0 0 auto",
+    width: "300px",
+    height: "100px",
+    backgroundColor: "#fff",
+    borderRadius: "16px",
+    border: "1px solid #f0f0f0",
+    boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+    padding: "16px",
+    display: "flex",
+    alignItems: "center",
+    cursor: "pointer",
+    transition: "all 0.3s",
+    position: "relative",
+  },
+  connector: {
+    flex: "0 0 auto",
+    width: "40px",
+    height: "2px",
+    borderBottom: "3px dashed #d9d9d9",
+    margin: "0 4px",
+  },
+  iconBox: {
+    width: "48px",
+    height: "48px",
+    borderRadius: "12px",
+    backgroundColor: "#e6f7ff",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    marginRight: "16px",
+    fontSize: "24px",
+  },
+  taskConnector: {
+    width: 24,
+    height: 2,
+    backgroundColor: "#d9d9d9",
+    margin: "0 8px",
+    borderRadius: 1,
+  },
+
+  horizontalConnector: {
+    height: 2,
+    backgroundColor: "#d9d9d9",
+    width: "100%",
+    borderRadius: 1,
+  },
+
+  verticalConnector: {
+    width: 2,
+    height: 24,
+    backgroundColor: "#d9d9d9",
+    borderRadius: 1,
+  },
+};

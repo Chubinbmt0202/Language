@@ -33,6 +33,9 @@ import PassiveVoice, {
   PassiveVoiceMenu,
 } from "./components/english/Grammar/PassiveVoice/index.jsx";
 import { LanguageProvider } from "./util/LanguageContext.jsx";
+import Exercise from "./page/ExercisePage.jsx";
+import Road from "./page/Road/index.jsx";
+import VocabTaskPage from "./page/VocabTaskPage.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -42,7 +45,10 @@ function App() {
           <Route path="/" element={<Home />}>
             {/* Các Route con sẽ được render tại vị trí <Outlet /> trong Home */}
             <Route index element={<Navigate to="/dashboard" replace />} />
+            <Route path="road" element={<Road />} />
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="exercise/:taskId" element={<Exercise />} />
+            <Route path="vocab/:taskId" element={<VocabTaskPage />} />
             <Route path="vocabulary" element={<Vocabulary />} />
             <Route path="english/grammar" element={<Grammar />}>
               <Route index element={<GrammarMenu />} />
