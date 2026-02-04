@@ -17,7 +17,7 @@ import { detailedRoadmap } from "./Dashboard/RoadmapData";
 import {
   DEFAULT_HARD_QUESTIONS,
   DEFAULT_QUESTIONS,
-  EXERCISE_QUESTION_SETS,
+  EXERCISE_DATA,
 } from "./ExerciseQuestionData";
 
 // 👇 IMPORT HÀM TĂNG PROGRESS TỪ FILE STORAGE CỦA BẠN
@@ -82,12 +82,6 @@ const Exercise = () => {
   };
 
   const { tier } = useMemo(() => getTaskState(taskId), [taskId]);
-  const taskQuestionSet =
-    EXERCISE_QUESTION_SETS[taskId] ?? {
-      easy: DEFAULT_QUESTIONS,
-      hard: DEFAULT_HARD_QUESTIONS,
-    };
-  const questionSet = tier > 0 ? taskQuestionSet.hard : taskQuestionSet.easy;
 
   const handleCheckAnswer = () => {
     if (!selectedOption) return;
@@ -170,6 +164,24 @@ const Exercise = () => {
   if (!taskInfo) return <Text>Không tìm thấy bài tập</Text>;
 
   const { task, day, week } = taskInfo;
+  const dayExercise = EXERCISE_DATA?.[day.id];
+  const taskIndexMatch = taskId.match(/-t(\d+)$/);
+  const taskIndex = taskIndexMatch ? Number(taskIndexMatch[1]) : null;
+  const taskKeyFromOrder =
+    dayExercise?.taskOrder && taskIndex
+      ? dayExercise.taskOrder[taskIndex - 1]
+      : null;
+  const taskKey =
+    taskKeyFromOrder ||
+    (dayExercise?.tasks ? Object.keys(dayExercise.tasks)[0] : null);
+  const taskExercise = taskKey ? dayExercise?.tasks?.[taskKey] : null;
+  const easyQuestions = taskExercise?.questions?.easy ?? DEFAULT_QUESTIONS;
+  const hardQuestions = taskExercise?.questions?.hard ?? DEFAULT_HARD_QUESTIONS;
+  const totalQuestions = taskExercise?.total ?? easyQuestions.length;
+  const questionSet = (tier > 0 ? hardQuestions : easyQuestions).slice(
+    0,
+    totalQuestions
+  );
   const currentQuestion = questionSet[currentIndex];
   const progressPercent = Math.round(((currentIndex) / questionSet.length) * 100);
 

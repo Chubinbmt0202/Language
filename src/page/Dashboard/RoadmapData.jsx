@@ -1,369 +1,90 @@
 const rawRoadmap = [
 {
   week: 1,
-  "name": "Tuần 1: Ngữ pháp cốt lõi & Xây dựng sức bền Reading",
-  "description": "Tập trung Part 5 (30 câu đầu), làm quen Part 6 và đọc hiểu cơ bản Part 7.",
+  "name": "Tuần 1: Ngữ pháp cốt lõi & Câu trúc câu",
+  "description": "Nắm chắc ngữ pháp cơ bản, giải quyết Part 5 trong tối đa 20 giây/câu.",
   "days": [
     {
       "id": "w1-d1",
-      "title": "Ngày 1: Các thì cơ bản (Tenses)",
-      "focus": "Hiện tại đơn, Tiếp diễn, Hoàn thành & Ứng dụng vào bài đọc ngắn.",
+      "title": "Ngày 1: Danh từ (Nouns) & Đại từ (Pronouns)",
+      "focus": "Nhận diện vị trí và chức năng của Danh từ.",
       "tasks": [
-        { "text": "Ôn tập công thức & dấu hiệu nhận biết 3 thì cơ bản", "completed": false, "id": "w1-d1-t1" },
-        { "text": "Làm Part 5 chuyên đề 'Verb Tenses' (20 câu)", "completed": false, "id": "w1-d1-t2" },
+        { "text": "Lý thuyết Danh từ và Đại từ", "type": "theory", "completed": false, "id": "w1-d1-t1" },
         { "text": "Học thuộc 25 từ vựng (chú ý động từ bất quy tắc)", "completed": false, "id": "w1-d1-t3", "type": "vocab", "maxProgress": 5 },
-        { "text": "[Mới] Đọc 1 bài Part 7 (Email ngắn) và gạch chân toàn bộ động từ chia thì", "completed": false, "id": "w1-d1-t4" },
-        { "text": "[Mới] Làm 1 đoạn Part 6 (4 câu) để hiểu cách thì thay đổi theo ngữ cảnh", "completed": false, "id": "w1-d1-t5" }
+        { "text": "Thực chiến Part 5 (Danh từ & Đại từ)", "completed": false, "id": "w1-d1-t4" },
+        { "text": "Nhận diện Danh từ và Đại từ trong câu", "completed": false, "id": "w1-d1-t2" },
       ]
     },
     {
       "id": "w1-d2",
-      "title": "Ngày 2: Loại từ (Word Forms)",
-      "focus": "Xác định vị trí từ loại và Cấu trúc câu đơn giản.",
+      "title": "Ngày 2: Tính từ (Adjectives)",
+      "focus": "Hiểu rõ Tính từ bổ nghĩa cho cái gì.",
       "tasks": [
-        { "text": "Học quy tắc đuôi từ (Suffixes): -tion, -ment, -ive, -ly...", "completed": false, "id": "w1-d2-t1" },
-        { "text": "Làm 20 câu Part 5 chuyên đề 'Word Forms' (nhìn đuôi đoán từ)", "completed": false, "id": "w1-d2-t2" },
-        { "text": "Ghi chép các ngoại lệ (ví dụ: hard vừa là tính vừa là trạng)", "completed": false, "id": "w1-d2-t3" },
-        { "text": "[Mới] Tìm 5 gốc từ (Word family) của các từ mới học (VD: Success -> Succeed -> Successful)", "completed": false, "id": "w1-d2-t4" },
-        { "text": "[Mới] Luyện Skimming: Đọc lướt 2 bài Part 7 trong 1 phút để nắm ý chính (không tra từ)", "completed": false, "id": "w1-d2-t5" }
+        { "text": "Lý thuyết Tính từ", "type": "theory", "completed": false, "id": "w1-d2-t1" },
+        { "text": "Nạp dữ liệu từ vựng chủ đề (Office Procedures)","type": "vocab",  "completed": false, "id": "w1-d2-t2" },
+        { "text": "Vị trí 'Kiếm tiền' của tính từ", "completed": false, "id": "w1-d2-t3" },
+        { "text": "Hậu tố Tính từ", "completed": false, "id": "w1-d2-t5" },
+        { "text": "Thực chiến Part 5 (Tính từ)", "completed": false, "id": "w1-d2-t4" },
       ]
     },
     {
       "id": "w1-d3",
-      "title": "Ngày 3: Sự hòa hợp Chủ ngữ - Động từ",
-      "focus": "S-V Agreement & Phân tích cấu trúc câu dài.",
+      "title": "Ngày 3: Trạng từ (Adverbs)",
+      "focus": "Hiểu rõ Trạng từ bổ nghĩa cho động từ, tính từ hay trạng từ khác.",
       "tasks": [
-        { "text": "Ôn quy tắc hòa hợp (Số ít/Số nhiều, Các từ định lượng: Each, Every, All...)", "completed": false, "id": "w1-d3-t1" },
-        { "text": "Làm 20 câu trắc nghiệm chuyên đề S-V Agreement", "completed": false, "id": "w1-d3-t2" },
-        { "text": "[Mới] Tập dịch hiểu (Syntax Analysis): Phân tích S-V-O của 5 câu dài trong Part 7", "completed": false, "id": "w1-d3-t3" },
-        { "text": "[Mới] Làm 2 đoạn Part 6 (chú ý chia động từ dựa trên chủ ngữ phía trước)", "completed": false, "id": "w1-d3-t4" }
+        { "text": "Lý thuyết Trạng từ ", "type": "theory", "completed": false, "id": "w1-d3-t1" },
+        { "text": "Nạp dữ liệu từ vựng chủ đề (Personnel & Recruitment)","type": "vocab",  "completed": false, "id": "w1-d3-t2" },
+        { "text": "Nhận diện Trạng từ trong câu", "completed": false, "id": "w1-d3-t3" },
+        { "text": "Thực chiến Part 5 (Trạng từ)", "completed": false, "id": "w1-d3-t4" }
       ]
     },
     {
       "id": "w1-d4",
-      "title": "Ngày 4: Câu bị động (Passive Voice)",
-      "focus": "Câu bị động và Mở rộng vốn từ đồng nghĩa.",
+      "title": "Ngày 4: Động từ (Verbs) & Cấu trúc câu (S + V + O)",
+      "focus": "Nắm vững cách sử dụng Động từ và nhận diện cấu trúc câu cơ bản.",
       "tasks": [
-        { "text": "Ôn công thức Bị động (Be + V3/ed) & Bị động đặc biệt", "completed": false, "id": "w1-d4-t1" },
-        { "text": "Mẹo nhanh: Sau chỗ trống có giới từ 'by' hoặc không có tân ngữ -> chọn bị động", "completed": false, "id": "w1-d4-t2" },
-        { "text": "Thực hành 15 câu Part 5 dạng Bị động", "completed": false, "id": "w1-d4-t3" },
-        { "text": "[Mới] Đọc 1 bài báo/Thông báo (Announcement) Part 7 và tìm các cấu trúc bị động", "completed": false, "id": "w1-d4-t4" },
-        { "text": "[Mới] Học 10 cặp từ đồng nghĩa (Synonyms) thường gặp trong Reading (VD: buy = purchase)", "completed": false, "id": "w1-d4-t5" }
+        { "text": "Lý thuyết Động từ và Cấu trúc câu","type": "theory", "completed": false, "id": "w1-d4-t1" },
+        { "text": "Nạp dữ liệu từ vựng chủ đề (Salaries & Benefits)","type": "vocab",  "completed": false, "id": "w1-d4-t2" },
+        { "text": "Xác định Động từ trong câu", "completed": false, "id": "w1-d4-t3" },
+        { "text": "Phân tích câu", "completed": false, "id": "w1-d4-t4" },
+        { "text": "Thực chiến Part 5 (Động từ) và cấu trúc câu", "completed": false, "id": "w1-d4-t5" }
       ]
     },
     {
       "id": "w1-d5",
-      "title": "Ngày 5: Tổng ôn tuần 1 & Tăng tốc",
-      "focus": "Luyện tập hỗn hợp Part 5 dưới áp lực thời gian.",
+      "title": "Sự hòa hợp Chủ ngữ - Động từ (Subject-Verb Agreement).",
+      "focus": "Quy tắc làm cho Chủ ngữ và Động từ ăn khớp với nhau.",
       "tasks": [
-        { "text": "Làm 1 Mini-test Part 5 (30 câu) bấm giờ KHẮC NGHIỆT (10 phút)", "completed": false, "id": "w1-d5-t1" },
-        { "text": "Chữa chi tiết từng câu sai (Giải thích tại sao sai)", "completed": false, "id": "w1-d5-t2" },
-        { "text": "[Mới] Làm 2 bài đọc Part 7 (Dạng thư từ/email) - Bấm giờ 1 phút/câu", "completed": false, "id": "w1-d5-t3" },
-        { "text": "[Mới] Review lại toàn bộ từ vựng tuần qua (Check list 100 từ)", "completed": false, "id": "w1-d5-t4" }
+        { "text": "Lý thuyết Sự hòa hợp Chủ ngữ - Động từ","type": "theory", "completed": false, "id": "w1-d5-t1" },
+        { "text": "Nạp dữ liệu từ vựng chủ đề (Marketing)","type": "vocab", "completed": false, "id": "w1-d5-t2" },
+        { "text": "Nhận diện Sự hòa hợp Chủ ngữ - Động từ trong câu", "completed": false, "id": "w1-d5-t3" },
+        { "text": "Thực chiến Part 5 (Sự hòa hợp Chủ ngữ - Động từ)", "completed": false, "id": "w1-d5-t4" }
       ]
     },
     {
       "id": "w1-d6",
-      "title": "Ngày 6: Review sâu & Lấp lỗ hổng",
-      "focus": "Phân tích lỗi sai và Củng cố từ vựng.",
+      "title": "Ngày 6: Scanning & Skimming (Làm quen Part 7).",
+      "focus": " Luyện kỹ năng đọc nhanh để tìm thông tin chính xác trong bài đọc.",
       "tasks": [
-        { "text": "Xem lại danh sách từ vựng đã lưu (Flashcards) - Kiểm tra nghĩa và chính tả", "completed": false, "id": "w1-d6-t1" },
-        { "text": "Làm lại các câu sai trong tuần một lần nữa (đảm bảo hiểu bản chất)", "completed": false, "id": "w1-d6-t2" },
-        { "text": "Tổng hợp ngữ pháp: Vẽ mindmap nhỏ về các thì, loại từ, bị động", "completed": false, "id": "w1-d6-t3" },
-        { "text": "[Mới] Đọc to (Read Aloud) 1 bài Part 7 bất kỳ để luyện cảm giác ngắt nghỉ câu", "completed": false, "id": "w1-d6-t4" }
+        ///////// Giao review từ vựng tuần qua
+        { "text": "Hiểu rõ sự khác biệt giữa Skimming và Scanning.", "type": "theory", "completed": false, "id": "w1-d6-t1" },
+        { "text": "Nạp dữ liệu từ vựng chủ đề (Shopping)", "type": "vocab", "completed": false, "id": "w1-d6-t2" },
+        ////// Giao diện thực chiến part 7
+        { "text": "Thực chiến Part 7 - Dạng Advertisements & Announcements", "completed": false, "id": "w1-d6-t3" },
       ]
     },
     {
       "id": "w1-d7",
-      "title": "Ngày 7: Thử thách Reading Full (Mini-Test)",
-      "focus": "Mô phỏng áp lực thi thật (Chỉ Reading).",
+      "title": "Ngày 7: Review & Mini-Test (Kiểm tra & Chữa lỗi)",
+      "focus": "  Ôn tập kiến thức đã học trong tuần và làm đề thi thử rút gọn.",
       "tasks": [
-        { "text": "Làm đề Reading rút gọn: Part 5 (15 câu) + Part 6 (8 câu) + Part 7 (10 câu)", "completed": false, "id": "w1-d7-t1" },
-        { "text": "Bấm giờ tổng 35 phút cho đề trên (Rèn quản lý thời gian)", "completed": false, "id": "w1-d7-t2" },
-        { "text": "Check đáp án, ghi lại số câu đúng/sai", "completed": false, "id": "w1-d7-t3" },
-        { "text": "[Mới] Dịch chi tiết 1 bài đọc Part 7 khó nhất trong đề vừa làm sang tiếng Việt", "completed": false, "id": "w1-d7-t4" }
+        { "text": "Part 5", "completed": false, "id": "w1-d7-t1" },
+        { "text": "Part 7 (đoạn văn ngắn", "completed": false, "id": "w1-d7-t2" },
+        { "text": "Kiểm tra từ vựng tuần qua  ", "completed": false, "id": "w1-d7-t3" },
       ]
     }
   ]
 },
-  {
-    week: 2,
-    name: "Tuần 2: Ngữ pháp nâng cao & Giới từ (Part 5)",
-    description: "Xử lý các câu khó hơn về Mệnh đề quan hệ và từ nối.",
-    days: [
-      {
-        id: "w2-d1",
-        title: "Ngày 1: Đại từ & Mệnh đề quan hệ",
-        focus: "Who, Whom, Which, That, Whose và Rút gọn mệnh đề.",
-        tasks: [
-          {
-            text: "Học cách dùng Đại từ quan hệ",
-            completed: false,
-            id: "w2-d1-t1",
-          },
-          {
-            text: "Học kỹ thuật Rút gọn mệnh đề quan hệ (V-ing vs V-ed)",
-            completed: false,
-            id: "w2-d1-t2",
-          },
-          {
-            text: "Làm 20 câu Part 5 chuyên đề Relative Clauses",
-            completed: false,
-            id: "w2-d1-t3",
-          },
-        ],
-      },
-      {
-        id: "w2-d2",
-        title: "Ngày 2: Liên từ & Giới từ (Conjunctions & Prepositions)",
-        focus: "Phân biệt Because/Because of, Although/Despite...",
-        tasks: [
-          {
-            text: "Lập bảng so sánh Liên từ (đi với Mệnh đề) vs Giới từ (đi với N/Ving)",
-            completed: false,
-            id: "w2-d2-t1",
-          },
-          {
-            text: "Học 20 cụm giới từ cố định thường gặp (interested in, capable of...)",
-            completed: false,
-            id: "w2-d2-t2",
-          },
-          {
-            text: "Làm 20 câu bài tập phân biệt",
-            completed: false,
-            id: "w2-d2-t3",
-          },
-        ],
-      },
-      {
-        id: "w2-d3",
-        title: "Ngày 3: Câu điều kiện & Giả định",
-        focus: "If loại 1, 2, 3 và Đảo ngữ.",
-        tasks: [
-          { text: "Ôn 3 loại câu điều kiện", completed: false, id: "w2-d3-t1" },
-          {
-            text: "Làm quen với Đảo ngữ câu điều kiện (Should/Had/Were đứng đầu)",
-            completed: false,
-            id: "w2-d3-t2",
-          },
-        ],
-      },
-      {
-        id: "w2-d4",
-        title: "Ngày 4: Luyện đề Part 5 (Full)",
-        focus: "Tăng tốc độ làm bài.",
-        tasks: [
-          {
-            text: "Làm Full Test Part 5 (30 câu) - Giới hạn 10 phút",
-            completed: false,
-            id: "w2-d4-t1",
-          },
-          {
-            text: "Ghi lại các từ vựng mới gặp trong đề",
-            completed: false,
-            id: "w2-d4-t2",
-          },
-        ],
-      },
-      {
-        id: "w2-d5",
-        title: "Ngày 5: Review & Vocab",
-        focus: "Củng cố từ vựng doanh nghiệp.",
-        tasks: [
-          {
-            text: "Học 30 từ vựng chủ đề: Contracts & Marketing",
-            completed: false,
-            id: "w2-d5-t1",
-          },
-          { text: "Quiz từ vựng nhanh", completed: false, id: "w2-d5-t2" },
-        ],
-      },
-    ],
-  },
-  {
-    week: 3,
-    name: "Tuần 3: Chiến thuật Part 6 & Từ vựng theo ngữ cảnh",
-    description: "Làm quen với đoạn văn điền từ (Text Completion).",
-    days: [
-      {
-        id: "w3-d1",
-        title: "Ngày 1: Tổng quan Part 6",
-        focus: "Cấu trúc Part 6 và cách phân bố thời gian.",
-        tasks: [
-          {
-            text: "Tìm hiểu dạng bài: Điền từ và Điền câu vào chỗ trống",
-            completed: false,
-            id: "w3-d1-t1",
-          },
-          {
-            text: "Làm 2 đoạn văn mẫu (8 câu hỏi)",
-            completed: false,
-            id: "w3-d1-t2",
-          },
-        ],
-      },
-      {
-        id: "w3-d2",
-        title: "Ngày 2: Dạng bài điền câu (Sentence Insertion)",
-        focus: "Kỹ năng logic và liên kết câu.",
-        tasks: [
-          {
-            text: "Học cách đọc câu trước và sau chỗ trống để tìm manh mối",
-            completed: false,
-            id: "w3-d2-t1",
-          },
-          {
-            text: "Thực hành 5 bài tập dạng điền câu",
-            completed: false,
-            id: "w3-d2-t2",
-          },
-        ],
-      },
-      {
-        id: "w3-d3",
-        title: "Ngày 3: Từ vựng theo Collocations",
-        focus: "Các cụm từ hay đi cùng nhau.",
-        tasks: [
-          {
-            text: "Học 20 Collocations phổ biến (highly recommend, conduct a survey...)",
-            completed: false,
-            id: "w3-d3-t1",
-          },
-          {
-            text: "Làm bài tập điền từ dựa vào Collocation",
-            completed: false,
-            id: "w3-d3-t2",
-          },
-        ],
-      },
-      {
-        id: "w3-d4",
-        title: "Ngày 4: Thực hành Part 6 (Chủ đề Email/Memo)",
-        focus: "Các văn bản nội bộ công ty.",
-        tasks: [
-          {
-            text: "Làm 3 bài đọc Part 6 chủ đề Memo/Email",
-            completed: false,
-            id: "w3-d4-t1",
-          },
-          {
-            text: "Học từ vựng: Office supplies, Meeting, Policy",
-            completed: false,
-            id: "w3-d4-t2",
-          },
-        ],
-      },
-      {
-        id: "w3-d5",
-        title: "Ngày 5: Test kết hợp Part 5 & 6",
-        focus: "Quản lý thời gian 2 phần.",
-        tasks: [
-          {
-            text: "Làm trọn vẹn Part 5 + Part 6 (46 câu) trong 20 phút",
-            completed: false,
-            id: "w3-d5-t1",
-          },
-          {
-            text: "Chấm điểm và phân tích lỗi sai",
-            completed: false,
-            id: "w3-d5-t2",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    week: 4,
-    name: "Tuần 4: Nhập môn Part 7 (Đoạn đơn - Single Passages)",
-    description: "Kỹ năng Skimming & Scanning để xử lý bài đọc hiểu.",
-    days: [
-      {
-        id: "w4-d1",
-        title: "Ngày 1: Kỹ năng Skim & Scan",
-        focus: "Tìm thông tin mà không cần đọc hết bài.",
-        tasks: [
-          {
-            text: "Luyện tập kỹ thuật Skimming (đọc lướt tiêu đề, câu đầu/cuối)",
-            completed: false,
-            id: "w4-d1-t1",
-          },
-          {
-            text: "Luyện tập Scanning (tìm keywords: tên riêng, số, ngày tháng)",
-            completed: false,
-            id: "w4-d1-t2",
-          },
-        ],
-      },
-      {
-        id: "w4-d2",
-        title: "Ngày 2: Dạng bài Chủ đề & Mục đích (Main Idea)",
-        focus: "Câu hỏi 'What is the purpose of the email?'.",
-        tasks: [
-          {
-            text: "Mẹo: Đọc 2 câu đầu và 2 câu cuối đoạn văn",
-            completed: false,
-            id: "w4-d2-t1",
-          },
-          {
-            text: "Làm 5 bài đọc ngắn dạng hỏi mục đích",
-            completed: false,
-            id: "w4-d2-t2",
-          },
-        ],
-      },
-      {
-        id: "w4-d3",
-        title: "Ngày 3: Dạng bài Chi tiết & Câu hỏi NOT",
-        focus: "Tìm thông tin chi tiết và loại trừ.",
-        tasks: [
-          {
-            text: "Thực hành phương pháp loại trừ cho câu hỏi 'NOT mentioned'",
-            completed: false,
-            id: "w4-d3-t1",
-          },
-          {
-            text: "Làm 3 bài đọc dạng Quảng cáo (Advertisement)",
-            completed: false,
-            id: "w4-d3-t2",
-          },
-        ],
-      },
-      {
-        id: "w4-d4",
-        title: "Ngày 4: Chuỗi tin nhắn & Chat online",
-        focus: "Dạng bài mới thường xuất hiện.",
-        tasks: [
-          {
-            text: "Làm quen với format Text Message Chain",
-            completed: false,
-            id: "w4-d4-t1",
-          },
-          {
-            text: "Học cách hiểu hàm ý câu nói (Implied meaning)",
-            completed: false,
-            id: "w4-d4-t2",
-          },
-        ],
-      },
-      {
-        id: "w4-d5",
-        title: "Ngày 5: Review giữa kỳ (Half-term Test)",
-        focus: "Đánh giá tiến độ sau 1 tháng.",
-        tasks: [
-          {
-            text: "Làm đề thi thử Part 5-6 và 10 đoạn đơn Part 7",
-            completed: false,
-            id: "w4-d5-t1",
-          },
-          {
-            text: "Tổng hợp từ vựng đã học trong 4 tuần",
-            completed: false,
-            id: "w4-d5-t2",
-          },
-        ],
-      },
-    ],
-  },
 
   // ... Thêm các tuần khác
 ];
