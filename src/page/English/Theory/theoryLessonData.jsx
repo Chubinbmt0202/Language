@@ -34,7 +34,7 @@ export const COMMENTS = [
   },
 ];
 
-export const VideoPlayer = () => (
+export const VideoPlayer = ({ src = "https://www.youtube.com/embed/I1M7pF-gwd0" }) => (
   <div
     style={{
       position: "relative",
@@ -57,7 +57,7 @@ export const VideoPlayer = () => (
         height: "100%",
         border: "none",
       }}
-      src="https://www.youtube.com/embed/I1M7pF-gwd0"
+      src={src}
       title="Video Bài Giảng"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen

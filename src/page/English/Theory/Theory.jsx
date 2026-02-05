@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import {
   Row,
   Col,
@@ -15,6 +15,7 @@ import {
   Divider,
   Segmented, // <--- MỚI: Import thêm component này
 } from "antd";
+import { useParams } from "react-router-dom";
 import {
   LeftOutlined,
   ExperimentOutlined,
@@ -30,6 +31,7 @@ import {
 import QuizSection from "./QuizSection"; // <--- MỚI: Import Component QuizSection
 import LearningTasks from "./LearningTasks";
 import QuickNotes from "./QuickNotes"; // <--- MỚI: Import Component QuickNotes
+import { getTheoryLesson } from "./TheoryTaskData";
 import {
   COMMENTS,
   VideoPlayer,
@@ -46,6 +48,8 @@ const { Title, Text, Paragraph } = Typography;
 
 // --- COMPONENT CHÍNH ---
 const Theory = () => {
+  const { taskId } = useParams();
+  const lesson = useMemo(() => getTheoryLesson(taskId), [taskId]);
   const [viewMode, setViewMode] = useState("Noun"); // State chuyển đổi giữa Danh từ & Đại từ
 
   // A. NỘI DUNG TAB DANH TỪ (Đã được rút gọn bằng Tabs con)
@@ -305,14 +309,14 @@ const Theory = () => {
       {/* --- HEADER (GIỮ NGUYÊN) --- */}
       <div style={{ marginBottom: 20 }}>
         <Title level={1} style={{ margin: "0 0 8px 0", fontSize: 32 }}>
-          Lý thuyết: Danh từ & Đại từ
+          {lesson.title}
         </Title>
       </div>
 
       <Row gutter={60}>
         {/* --- LEFT COLUMN: MAIN CONTENT --- */}
         <Col span={16}>
-          <VideoPlayer /> {/* Giữ nguyên Video */}
+          <VideoPlayer src={lesson.videoSrc} /> {/* Giữ nguyên Video */}
           <Tabs
             defaultActiveKey="1"
             size="large"
@@ -322,46 +326,76 @@ const Theory = () => {
                 key: "1",
                 children: (
                   <div>
-                    {/* 1. THANH CHUYỂN ĐỔI (SEGMENTED) - GIÚP RÚT GỌN TRANG */}
-                    <div style={{ textAlign: "center", marginBottom: 20 }}>
-                      <Segmented
-                        size="large"
-                        block
-                        options={[
-                          {
-                            label: "Phần 1: Danh từ (Nouns)",
-                            value: "Noun",
-                            icon: <BulbOutlined />,
-                          },
-                          {
-                            label: "Phần 2: Đại từ (Pronouns)",
-                            value: "Pronoun",
-                            icon: <UserOutlined />,
-                          },
-                        ]}
-                        value={viewMode}
-                        onChange={setViewMode}
-                      />
-                    </div>
+                    {lesson.layout === "noun_pronoun" ? (
+                      <>
+                        {/* 1. THANH CHUYỂN ĐỔI (SEGMENTED) - GIÚP RÚT GỌN TRANG */}
+                        <div style={{ textAlign: "center", marginBottom: 20 }}>
+                          <Segmented
+                            size="large"
+                            block
+                            options={[
+                              {
+                                label: "Phần 1: Danh từ (Nouns)",
+                                value: "Noun",
+                                icon: <BulbOutlined />,
+                              },
+                              {
+                                label: "Phần 2: Đại từ (Pronouns)",
+                                value: "Pronoun",
+                                icon: <UserOutlined />,
+                              },
+                            ]}
+                            value={viewMode}
+                            onChange={setViewMode}
+                          />
+                        </div>
 
-                    {/* 2. HIỂN THỊ NỘI DUNG TƯƠNG ỨNG */}
-                    <Card
-                      title={
-                        viewMode === "Noun"
-                          ? "Kiến thức: Danh từ"
-                          : "Kiến thức: Đại từ"
-                      }
-                      style={{
-                        minHeight: 400,
-                        boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
-                      }}
-                    >
-                      <Tabs
-                        defaultActiveKey={viewMode === "Noun" ? "n1" : "p1"}
-                        items={viewMode === "Noun" ? nounItems : pronounItems}
-                        type="card"
-                      />
-                    </Card>
+                        {/* 2. HIỂN THỊ NỘI DUNG TƯƠNG ỨNG */}
+                        <Card
+                          title={
+                            viewMode === "Noun"
+                              ? "Kiến thức: Danh từ"
+                              : "Kiến thức: Đại từ"
+                          }
+                          style={{
+                            minHeight: 400,
+                            boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+                          }}
+                        >
+                          <Tabs
+                            defaultActiveKey={viewMode === "Noun" ? "n1" : "p1"}
+                            items={viewMode === "Noun" ? nounItems : pronounItems}
+                            type="card"
+                          />
+                        </Card>
+                      </>
+                    ) : (
+                      <Card
+                        title={lesson.title}
+                        style={{
+                          minHeight: 400,
+                          boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+                        }}
+                      >
+                        <Tabs
+                          type="card"
+                          items={(lesson.sections ?? []).map((section, idx) => ({
+                            key: String(idx + 1),
+                            label: section.heading,
+                            children: (
+                              <div style={{ paddingTop: 8 }}>
+                                <Title level={5} style={{ marginTop: 0 }}>
+                                  {section.heading}
+                                </Title>
+                                <Paragraph style={{ marginBottom: 0 }}>
+                                  {section.content}
+                                </Paragraph>
+                              </div>
+                            ),
+                          }))}
+                        />
+                      </Card>
+                    )}
 
                     <Paragraph
                       style={{
@@ -388,7 +422,16 @@ const Theory = () => {
                     }}
                   >
                     {/* Gọi Component QuizSection ở đây */}
-                    <QuizSection />
+                    {lesson.showQuiz ? (
+                      <QuizSection />
+                    ) : (
+                      <Alert
+                        message="Quiz đang cập nhật"
+                        description="Bài quiz cho nội dung lý thuyết này chưa được thêm."
+                        type="info"
+                        showIcon
+                      />
+                    )}
                   </div>
                 ),
               },
@@ -399,9 +442,9 @@ const Theory = () => {
 
         {/* --- RIGHT COLUMN: SIDEBAR (GIỮ NGUYÊN) --- */}
         <Col span={8}>
-          <LearningTasks />
+          <LearningTasks taskId={taskId} lesson={lesson} />
           <Divider />
-          <QuickNotes />
+          <QuickNotes taskId={taskId} seedNotes={lesson.seedNotes} />
         </Col>
       </Row>
     </div>
