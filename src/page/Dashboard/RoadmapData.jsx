@@ -85,6 +85,24 @@ const rawRoadmap = [
     }
   ]
 },
+{
+  week: 2,
+  "name": "Tuần 2: test tuần 2",
+  "description": "Nắm chắc ngữ pháp cơ bản, giải quyết Part 5 trong tối đa 20 giây/câu.",
+  "days": [
+    {
+      "id": "w2-d1",
+      "title": "Ngày 1: Danh từ (Nouns) & Đại từ (Pronouns)",
+      "focus": "Nhận diện vị trí và chức năng của Danh từ.",
+      "tasks": [
+        { "text": "Lý thuyết Danh từ và Đại từ", "type": "theory", "completed": false, "id": "w1-d1-t1" },
+        { "text": "Học thuộc 25 từ vựng (chú ý động từ bất quy tắc)", "completed": false, "id": "w1-d1-t3", "type": "vocab", "maxProgress": 5 },
+        { "text": "Thực chiến Part 5 (Danh từ & Đại từ)", "completed": false, "id": "w1-d1-t4" },
+        { "text": "Nhận diện Danh từ và Đại từ trong câu", "completed": false, "id": "w1-d1-t2" },
+      ]
+    },
+  ]
+},
 
   // ... Thêm các tuần khác
 ];
