@@ -9,47 +9,22 @@ import { detailedRoadmap } from "./Dashboard/RoadmapData";
 import { VOCAB_TASKS } from "./VocabTaskData";
 import { addWordsToGlobalVocab } from "../util/globalVocabStore";
 import { getTaskState, incrementTaskProgress } from "../util/taskProgress";
+import {
+  WORDS_PER_LEVEL,
+  MAX_LEVEL,
+  findTaskById,
+  isMeaningCorrect,
+} from "./vocabTaskPageUtils";
 
 const { Title, Text, Paragraph } = Typography;
-
-const WORDS_PER_LEVEL = 5;
-const MAX_LEVEL = 5;
-
-const findTaskById = (taskId) => {
-  for (const week of detailedRoadmap) {
-    for (const day of week.days) {
-      const task = day.tasks.find((item) => item.id === taskId);
-      if (task) return { task, day, week };
-    }
-  }
-  return null;
-};
-
-const normalize = (value) =>
-  String(value || "")
-    .toLowerCase()
-    .replace(/[()]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-
-const splitMeanings = (value) =>
-  normalize(value)
-    .split(",")
-    .map((part) => part.trim())
-    .filter(Boolean);
-
-const isMeaningCorrect = (input, target) => {
-  const inputNormalized = normalize(input);
-  if (!inputNormalized) return false;
-  const targets = splitMeanings(target);
-  if (targets.length === 0) return false;
-  return targets.some((t) => t === inputNormalized);
-};
 
 const VocabTaskPage = () => {
   const navigate = useNavigate();
   const { taskId } = useParams();
-  const taskInfo = useMemo(() => findTaskById(taskId), [taskId]);
+  const taskInfo = useMemo(
+    () => findTaskById(detailedRoadmap, taskId),
+    [taskId],
+  );
   const vocabWords = VOCAB_TASKS[taskId] || [];
 
   const [stateKey, setStateKey] = useState(0);
