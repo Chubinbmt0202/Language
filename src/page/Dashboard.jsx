@@ -1,127 +1,93 @@
 /* eslint-disable react-hooks/set-state-in-effect */
 /* eslint-disable no-unused-vars */
-import React, { useState, useRef, useEffect } from "react";
-import {
-  Layout,
-  Row,
-  Col,
-  Card,
-  Button,
-  Typography,
-  Tag,
-  Progress,
-  Drawer,
-  Space,
-} from "antd";
-import {
-  ThunderboltFilled,
-  ClockCircleOutlined,
-  PlayCircleFilled,
-  FireFilled,
-} from "@ant-design/icons";
-import { useNavigate, useLocation  } from "react-router-dom";
-import {
-  ComposedChart,
-  Line,
-  Area,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
-import { detailedRoadmap, chartData } from "../page/Dashboard/RoadmapData";
+import React, { useEffect, useRef, useState } from "react";
+import { Layout, Row, Col, Typography, Drawer } from "antd";
+import { useLocation } from "react-router-dom";
+import { detailedRoadmap, chartData } from "./Dashboard/RoadmapData";
 import DaySection from "./Dashboard/DaySection";
 import { loadTaskProgress } from "../util/taskProgress";
+import ProgressChartCard from "./Dashboard/components/ProgressChartCard";
+import QuickStatsCard from "./Dashboard/components/QuickStatsCard";
+import TodaysLearningCard from "./Dashboard/components/TodaysLearningCard";
+import { calculateDailyChartData } from "./Dashboard/utils/calculateDailyChartData";
+import UnlockTestModal from "./Dashboard/components/UnlockTestModal";
 
 const { Content } = Layout;
 const { Title, Text } = Typography;
 
 const LanguageDashboard = () => {
-  const navigate = useNavigate();
   const weekRefs = useRef([]);
   const [openDrawer, setOpenDrawer] = useState(false);
   const [selectedDay, setSelectedDay] = useState(null);
   const [checkedTasks, setCheckedTasks] = useState({});
-    const [taskProgress, setTaskProgress] = useState(() => loadTaskProgress());
+  const [taskProgress, setTaskProgress] = useState(() => loadTaskProgress());
   const location = useLocation();
+  const [roadmapVersion, setRoadmapVersion] = useState(0);
+  const [unlockTestState, setUnlockTestState] = useState({
+    open: false,
+    scope: "day",
+    weekIndex: 0,
+    dayIndex: 0,
+  });
 
-  const handleChartClick = (state) => {
-    if (state && state.activeLabel) {
-      const index = detailedRoadmap.findIndex(
-        (w) => `Tuần ${w.week}` === state.activeLabel,
-      );
-      if (index !== -1 && weekRefs.current[index]) {
-        weekRefs.current[index].scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
+  const [displayData, setDisplayData] = useState(chartData);
+  const [filterType, setFilterType] = useState("all");
+
+  useEffect(() => {
+    setTaskProgress(loadTaskProgress());
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const onRoadmapUpdated = () => setRoadmapVersion((k) => k + 1);
+    window.addEventListener("roadmap:updated", onRoadmapUpdated);
+    return () => window.removeEventListener("roadmap:updated", onRoadmapUpdated);
+  }, []);
+
+  useEffect(() => {
+    if (filterType === "all") {
+      setDisplayData(chartData);
+      return;
     }
+
+    const dailyData = calculateDailyChartData(
+      filterType,
+      detailedRoadmap,
+      taskProgress,
+      chartData,
+    );
+    setDisplayData(dailyData);
+  }, [filterType, taskProgress]);
+
+  const handleFilterChange = (value) => {
+    setFilterType(value);
   };
 
   const handleToggleTask = (dayId, taskIndex) => {
     const key = `${dayId}-${taskIndex}`;
-    setCheckedTasks((prev) => ({
-      ...prev,
-      [key]: !prev[key],
-    }));
+    setCheckedTasks((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
-    useEffect(() => {
-    setTaskProgress(loadTaskProgress());
-  }, [location.pathname]);
-
-
+  const handleRequestUnlockTest = ({ scope, weekIndex, dayIndex }) => {
+    setUnlockTestState({ open: true, scope, weekIndex, dayIndex });
+  };
 
   return (
     <Layout
       style={{
         minHeight: "100vh",
+        backgroundColor: "transparent",
       }}
     >
       <Content>
         <Row gutter={[24, 24]}>
           <Col xs={24} lg={16}>
-            <Card bordered={false} style={{ borderRadius: 12 }}>
-              <Title level={4}>
-                <ThunderboltFilled style={{ color: "#faad14" }} /> Lộ trình
-              </Title>
-              <div style={{ width: "100%", height: 300 }}>
-                <ResponsiveContainer>
-                  <ComposedChart
-                    data={chartData}
-                    onClick={handleChartClick}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <XAxis dataKey="name" axisLine={false} tickLine={false} />
-                    <YAxis
-                      domain={[200, 900]}
-                      axisLine={false}
-                      tickLine={false}
-                    />
-                    <Tooltip />
-                    <Legend verticalAlign="top" height={36} />
-                    <Line
-                      type="monotone"
-                      dataKey="target"
-                      name="Lộ trình"
-                      stroke="#8884d8"
-                      strokeDasharray="5 5"
-                    />
-                    <Area
-                      type="monotone"
-                      dataKey="current"
-                      name="Tiến độ"
-                      stroke="#00C49F"
-                      fill="#00C49F"
-                      fillOpacity={0.1}
-                    />
-                  </ComposedChart>
-                </ResponsiveContainer>
-              </div>
-            </Card>
+            <ProgressChartCard
+              filterType={filterType}
+              onFilterChange={handleFilterChange}
+              displayData={displayData}
+              roadmapWeeks={detailedRoadmap}
+            />
 
             {detailedRoadmap.map((week, wIdx) => (
               <div
@@ -134,111 +100,30 @@ const LanguageDashboard = () => {
                   padding: 24,
                 }}
               >
-                {/* TÊN TUẦN */}
                 <Title level={3}>{week.name}</Title>
                 <Text type="secondary">{week.description}</Text>
 
-                {/* DANH SÁCH NGÀY */}
-                {week.days.map((day) => (
+                {week.days.map((day, dayIdx) => (
                   <DaySection
                     key={day.id}
                     day={day}
+                    dayIndex={dayIdx}
+                    week={week}
+                    weekIndex={wIdx}
+                    roadmapWeeks={detailedRoadmap}
+                    checkedTasks={checkedTasks}
                     taskProgress={taskProgress}
                     onToggleTask={handleToggleTask}
+                    onRequestUnlockTest={handleRequestUnlockTest}
                   />
                 ))}
               </div>
             ))}
           </Col>
 
-          {/* cột phải */}
           <Col xs={24} lg={8}>
-            <Card title="Thống kê nhanh" style={{ borderRadius: 12, background: "linear-gradient(135deg, #f0f5ff, #ffffff)" }} >
-              <Space direction="vertical" size={16} style={{ width: "100%" }}>
-                {/* SCORE */}
-                <div style={{ textAlign: "center" }}>
-                  <Progress
-                    type="dashboard"
-                    percent={70}
-                    strokeColor="#1677ff"
-                    format={() => (
-                      <div>
-                        <Text strong style={{ fontSize: 22 }}>
-                          350
-                        </Text>
-                        <br />
-                        <Text type="secondary" style={{ fontSize: 12 }}>
-                          điểm
-                        </Text>
-                      </div>
-                    )}
-                  />
-                </div>
-
-                {/* STREAK */}
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
-                >
-                  <Space>
-                    <FireFilled style={{ color: "#fa541c" }} />
-                    <Text strong>Chuỗi học</Text>
-                  </Space>
-
-                  <Tag color="volcano" style={{ fontSize: 14 }}>
-                    🔥 5 ngày
-                  </Tag>
-                </div>
-              </Space>
-            </Card>
-            <Card
-              bordered={false}
-              style={{
-                borderRadius: 12,
-                marginTop: 24,
-                marginBottom: 24,
-                background: "linear-gradient(135deg, #f0f5ff, #ffffff)",
-              }}
-            >
-              <Space direction="vertical" size={12} style={{ width: "100%" }}>
-                {/* HEADER */}
-                <div>
-                  <Title level={4} style={{ marginBottom: 4 }}>
-                    🎯 Hôm nay học gì?
-                  </Title>
-                  <Text type="secondary">Tiếp tục từ nơi bạn đang dở</Text>
-                </div>
-
-                {/* CONTENT */}
-                <div>
-                  <Text strong style={{ fontSize: 16 }}>
-                    Ngày 2 – Từ vựng cơ bản
-                  </Text>
-                  <div style={{ marginTop: 4 }}>
-                    <Tag color="blue">2 / 4 tasks</Tag>
-                    <Tag icon={<ClockCircleOutlined />} color="default">
-                      ~15 phút
-                    </Tag>
-                  </div>
-                </div>
-
-                {/* PROGRESS */}
-                <Progress percent={50} strokeColor="#1677ff" />
-
-                {/* CTA */}
-                <Button
-                  type="primary"
-                  icon={<PlayCircleFilled />}
-                  size="large"
-                  block
-                >
-                  Tiếp tục học
-                </Button>
-              </Space>
-            </Card>
+            <QuickStatsCard />
+            <TodaysLearningCard />
           </Col>
         </Row>
       </Content>
@@ -249,8 +134,17 @@ const LanguageDashboard = () => {
         onClose={() => setOpenDrawer(false)}
         width={400}
       >
-        {/* Render Task List here (Giống như code cũ của bạn) */}
+        {/* Render Task List here (giống như code cũ của bạn) */}
       </Drawer>
+
+      <UnlockTestModal
+        open={unlockTestState.open}
+        onClose={() => setUnlockTestState((s) => ({ ...s, open: false }))}
+        roadmapWeeks={detailedRoadmap}
+        weekIndex={unlockTestState.weekIndex}
+        dayIndex={unlockTestState.dayIndex}
+        scope={unlockTestState.scope}
+      />
     </Layout>
   );
 };
