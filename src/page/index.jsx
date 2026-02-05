@@ -8,10 +8,13 @@ import {
   Outlet,
 } from "react-router-dom";
 import {
-  LaptopOutlined,
   NotificationOutlined,
   UserOutlined,
   MenuFoldOutlined,
+  KeyOutlined,
+  HomeOutlined,
+  AuditOutlined,
+  BookOutlined,
   MenuUnfoldOutlined,
 } from "@ant-design/icons";
 import { Breadcrumb, Layout, Menu, theme, Button, Drawer } from "antd";
@@ -20,18 +23,28 @@ import GlobalVocabManager from "../components/GlobalVocabManager/index.jsx";
 const { Content, Sider, Header } = Layout;
 const sidebarItems = [
   {
-    key: "dashboard",
-    icon: <UserOutlined />,
-    label: "Tổng quan",
+    key: "Home",
+    icon: <HomeOutlined />,
+    label: "Trang chủ",
   },
   {
-    key: "english",
-    icon: <LaptopOutlined />,
-    label: "Tiếng Anh",
+    key: "Distance",
+    icon: <KeyOutlined />,
+    label: "Lộ trình học tập",
+  },
+  {
+    key: "ExercisesLibrary",
+    icon: <BookOutlined />,
+    label: "Kho bài tập",
     children: [
       { key: "english/grammar", label: "Ngữ pháp" },
       { key: "english/translation-practice", label: "Luyện dịch câu" },
     ],
+  },
+  {
+    key: "vocabulary",
+    icon: <AuditOutlined />,
+    label: "Kho từ vựng",
   },
   {
     key: "japanese",
@@ -45,26 +58,14 @@ const sidebarItems = [
     ],
   },
     {
-    key: "vocabulary",
+    key: "Setting",
     icon: <UserOutlined />,
-    label: "Từ vựng của bạn",
+    label: "Cài đặt",
   },
 ];
 
-const breadcrumbNameMap = {
-  'dashboard': 'Tổng quan',
-  'english': 'Tiếng Anh',
-  'grammar': 'Ngữ pháp',
-  'word-form': 'Từ loại',
-  'fill-in-the-blank': 'Điền từ',
-  'suffix-exercise': 'Hậu tố',
-  'find-errors': 'Tìm lỗi sai',
-  'japanese': 'Tiếng Nhật',
-  'vocabulary': 'Bài tập từ vựng',
-  // Thêm các key khác...
-};
 
-const Home = () => {
+const HomeLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [drawerVisible, setDrawerVisible] = useState(false);
@@ -102,18 +103,6 @@ const Home = () => {
     if (isMobile) setDrawerVisible(false); // Đóng drawer sau khi chọn menu trên mobile
   };
 
-  // Logic Breadcrumb (giữ nguyên)
-  const pathSnippets = location.pathname.split("/").filter((i) => i);
-  const breadcrumbItems = [
-    { title: <Link to="/">Home</Link> },
-    ...pathSnippets.map((_, index) => {
-      const url = `/${pathSnippets.slice(0, index + 1).join("/")}`;
-      const snippet = pathSnippets[index];
-      const label = breadcrumbNameMap[snippet] || snippet.charAt(0).toUpperCase() + snippet.slice(1).replace(/-/g, ' ');
-      return { title: <Link to={url}>{label}</Link> };
-    }),
-  ];
-
   return (
     <Layout style={{ minHeight: "100vh" }}>
       {/* SIDEBAR CHO DESKTOP */}
@@ -134,7 +123,14 @@ const Home = () => {
             borderRight: "1px solid #f0f0f0",
           }}
         >
-          <div style={{ height: 32, margin: 16, background: "rgba(0, 0, 0, 0.05)", borderRadius: 6 }} />
+          <div
+            style={{
+              height: 32,
+              margin: 16,
+              background: "rgba(0, 0, 0, 0.05)",
+              borderRadius: 6,
+            }}
+          />
           <Menu
             mode="inline"
             selectedKeys={[location.pathname.substring(1)]}
@@ -162,10 +158,10 @@ const Home = () => {
         />
       </Drawer>
 
-      <Layout 
-        style={{ 
+      <Layout
+        style={{
           // Nếu mobile thì không cần marginLeft, nếu desktop thì lùi theo trạng thái collapsed
-          marginLeft: isMobile ? 0 : (collapsed ? 80 : 250), 
+          marginLeft: isMobile ? 0 : collapsed ? 80 : 250,
           transition: "all 0.2s",
           minHeight: "100vh",
         }}
@@ -181,18 +177,23 @@ const Home = () => {
             right: 0,
             zIndex: 99,
             // Header rộng 100% trên mobile, trừ khoảng trống sidebar trên desktop
-            width: isMobile ? "100%" : `calc(100% - ${collapsed ? 80 : 250}px)`, 
+            width: isMobile ? "100%" : `calc(100% - ${collapsed ? 80 : 250}px)`,
             transition: "all 0.2s",
             borderBottom: "1px solid #f0f0f0",
           }}
         >
           <Button
             type="text"
-            icon={collapsed && !isMobile ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+            icon={
+              collapsed && !isMobile ? (
+                <MenuUnfoldOutlined />
+              ) : (
+                <MenuFoldOutlined />
+              )
+            }
             onClick={toggleSidebar}
             style={{ fontSize: "16px", width: 64, height: 64 }}
           />
-          <Breadcrumb items={breadcrumbItems} style={{ margin: "0 16px", overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis" }} />
         </Header>
 
         <Content
@@ -211,4 +212,4 @@ const Home = () => {
     </Layout>
   );
 };
-export default Home;
+export default HomeLayout;

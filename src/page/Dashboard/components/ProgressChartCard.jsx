@@ -25,7 +25,6 @@ const ProgressChartCard = ({
 }) => {
   return (
     <Card
-      bordered={false}
       style={{
         borderRadius: 16,
         boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.05)",
@@ -55,7 +54,7 @@ const ProgressChartCard = ({
       extra={
         <Select
           defaultValue="all"
-          style={{ width: 220 }}
+          style={{ width: 170 }}
           onChange={onFilterChange}
           value={filterType}
           bordered={false}

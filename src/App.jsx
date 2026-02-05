@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-import Home from "./page/home.jsx";
+import HomeLayout from "./page/index.jsx";
 import Grammar from "./components/english/Grammar/index.jsx";
 import JapaneseQuiz from "./components/japan/Multichoice/index.jsx";
 import VocabularyJapan from "./components/japan/Vocabulary/VocabularyApp.jsx";
@@ -36,16 +36,18 @@ import { LanguageProvider } from "./util/LanguageContext.jsx";
 import Exercise from "./page/ExercisePage.jsx";
 import VocabTaskPage from "./page/VocabTaskPage.jsx";
 import Theory from "./page/English/Theory/Theory.jsx";
+import Home from "./page/Home/home.jsx";
 function App() {
   return (
     <BrowserRouter>
       <LanguageProvider>
         <Routes>
           {/* Route cha là Home - chứa Sidebar và Breadcrumb */}
-          <Route path="/" element={<Home />}>
+          <Route path="/" element={<HomeLayout />}>
             {/* Các Route con sẽ được render tại vị trí <Outlet /> trong Home */}
-            <Route index element={<Navigate to="/dashboard" replace />} />
-            <Route path="dashboard" element={<Dashboard />} />
+            <Route index element={<Navigate to="/Home" replace />} />
+            <Route path="Home" element={<Home />} />
+            <Route path="Distance" element={<Dashboard />} />
             <Route path="exercise/:taskId" element={<Exercise />} />
             <Route path="vocab/:taskId" element={<VocabTaskPage />} />
             <Route path="theory/:taskId" element={<Theory />} />
