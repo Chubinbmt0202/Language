@@ -10,6 +10,7 @@ import ProgressChartCard from "./Dashboard/components/ProgressChartCard";
 import QuickStatsCard from "./Dashboard/components/QuickStatsCard";
 import TodaysLearningCard from "./Dashboard/components/TodaysLearningCard";
 import { calculateDailyChartData } from "./Dashboard/utils/calculateDailyChartData";
+import UnlockTestModal from "./Dashboard/components/UnlockTestModal";
 
 const { Content } = Layout;
 const { Title, Text } = Typography;
@@ -21,6 +22,13 @@ const LanguageDashboard = () => {
   const [checkedTasks, setCheckedTasks] = useState({});
   const [taskProgress, setTaskProgress] = useState(() => loadTaskProgress());
   const location = useLocation();
+  const [roadmapVersion, setRoadmapVersion] = useState(0);
+  const [unlockTestState, setUnlockTestState] = useState({
+    open: false,
+    scope: "day",
+    weekIndex: 0,
+    dayIndex: 0,
+  });
 
   const [displayData, setDisplayData] = useState(chartData);
   const [filterType, setFilterType] = useState("all");
@@ -28,6 +36,13 @@ const LanguageDashboard = () => {
   useEffect(() => {
     setTaskProgress(loadTaskProgress());
   }, [location.pathname]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const onRoadmapUpdated = () => setRoadmapVersion((k) => k + 1);
+    window.addEventListener("roadmap:updated", onRoadmapUpdated);
+    return () => window.removeEventListener("roadmap:updated", onRoadmapUpdated);
+  }, []);
 
   useEffect(() => {
     if (filterType === "all") {
@@ -51,6 +66,10 @@ const LanguageDashboard = () => {
   const handleToggleTask = (dayId, taskIndex) => {
     const key = `${dayId}-${taskIndex}`;
     setCheckedTasks((prev) => ({ ...prev, [key]: !prev[key] }));
+  };
+
+  const handleRequestUnlockTest = ({ scope, weekIndex, dayIndex }) => {
+    setUnlockTestState({ open: true, scope, weekIndex, dayIndex });
   };
 
   return (
@@ -84,13 +103,18 @@ const LanguageDashboard = () => {
                 <Title level={3}>{week.name}</Title>
                 <Text type="secondary">{week.description}</Text>
 
-                {week.days.map((day) => (
+                {week.days.map((day, dayIdx) => (
                   <DaySection
                     key={day.id}
                     day={day}
+                    dayIndex={dayIdx}
+                    week={week}
+                    weekIndex={wIdx}
+                    roadmapWeeks={detailedRoadmap}
                     checkedTasks={checkedTasks}
                     taskProgress={taskProgress}
                     onToggleTask={handleToggleTask}
+                    onRequestUnlockTest={handleRequestUnlockTest}
                   />
                 ))}
               </div>
@@ -112,9 +136,17 @@ const LanguageDashboard = () => {
       >
         {/* Render Task List here (giống như code cũ của bạn) */}
       </Drawer>
+
+      <UnlockTestModal
+        open={unlockTestState.open}
+        onClose={() => setUnlockTestState((s) => ({ ...s, open: false }))}
+        roadmapWeeks={detailedRoadmap}
+        weekIndex={unlockTestState.weekIndex}
+        dayIndex={unlockTestState.dayIndex}
+        scope={unlockTestState.scope}
+      />
     </Layout>
   );
 };
 
 export default LanguageDashboard;
-

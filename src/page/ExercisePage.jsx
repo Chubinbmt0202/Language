@@ -14,6 +14,8 @@ import {
   ReloadOutlined
 } from "@ant-design/icons";
 import { detailedRoadmap } from "./Dashboard/RoadmapData";
+import { addPoints, addRoadmapPoints } from "../util/points";
+import { findRoadmapLocationByTaskId, getDayGate } from "../util/roadmapAccess";
 import {
   DEFAULT_HARD_QUESTIONS,
   DEFAULT_QUESTIONS,
@@ -26,20 +28,6 @@ import { incrementTaskProgress, getTaskState } from "../util/taskProgress";
 
 const { Title, Text } = Typography;
 const { confirm } = Modal;
-
-const SCORE_STORAGE_KEY = "exerciseScore";
-
-// --- Helper Functions ---
-const loadPersistentScore = () => {
-  if (typeof window === "undefined") return 0;
-  const stored = window.localStorage.getItem(SCORE_STORAGE_KEY);
-  return stored ? Number(stored) : 0;
-};
-
-const savePersistentScore = (newScore) => {
-  const currentTotal = loadPersistentScore();
-  window.localStorage.setItem(SCORE_STORAGE_KEY, String(currentTotal + newScore));
-};
 
 const findTaskById = (taskId) => {
   for (const week of detailedRoadmap) {
@@ -57,6 +45,18 @@ const Exercise = () => {
   const navigate = useNavigate();
   const { taskId } = useParams();
   const taskInfo = useMemo(() => findTaskById(taskId), [taskId]);
+  const roadmapLocation = useMemo(
+    () => findRoadmapLocationByTaskId(detailedRoadmap, taskId),
+    [taskId],
+  );
+  const dayGate = useMemo(() => {
+    if (!roadmapLocation) return { unlocked: true };
+    return getDayGate(
+      detailedRoadmap,
+      roadmapLocation.weekIndex,
+      roadmapLocation.dayIndex,
+    );
+  }, [roadmapLocation]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState("");
@@ -115,7 +115,8 @@ const Exercise = () => {
       incrementTaskProgress(taskId);
       
       // 2. Cộng điểm tích lũy (Gamification)
-      savePersistentScore(sessionScore);
+      addPoints(sessionScore);
+      addRoadmapPoints({ weekNumber: week.week, dayId: day.id, points: sessionScore });
 
       // 3. Hiển thị thông báo thành công
       Modal.success({
@@ -162,6 +163,24 @@ const Exercise = () => {
   };
 
   if (!taskInfo) return <Text>Không tìm thấy bài tập</Text>;
+
+  if (!dayGate.unlocked) {
+    return (
+      <div style={{ maxWidth: 700, margin: "40px auto", padding: "0 15px" }}>
+        <Alert
+          type="warning"
+          showIcon
+          message="Bài học đang bị khóa"
+          description="Bạn cần đủ điểm của ngày/tuần trước hoặc làm bài test mở khóa trong Dashboard."
+          action={
+            <Button type="primary" onClick={() => navigate("/dashboard")}>
+              Về Dashboard
+            </Button>
+          }
+        />
+      </div>
+    );
+  }
 
   const { task, day, week } = taskInfo;
   const dayExercise = EXERCISE_DATA?.[day.id];

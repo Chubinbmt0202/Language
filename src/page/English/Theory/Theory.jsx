@@ -15,7 +15,7 @@ import {
   Divider,
   Segmented, // <--- MỚI: Import thêm component này
 } from "antd";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import {
   LeftOutlined,
   ExperimentOutlined,
@@ -32,6 +32,8 @@ import QuizSection from "./QuizSection"; // <--- MỚI: Import Component QuizSec
 import LearningTasks from "./LearningTasks";
 import QuickNotes from "./QuickNotes"; // <--- MỚI: Import Component QuickNotes
 import { getTheoryLesson } from "./TheoryTaskData";
+import { detailedRoadmap } from "../../Dashboard/RoadmapData";
+import { findRoadmapLocationByTaskId, getDayGate } from "../../../util/roadmapAccess";
 import {
   COMMENTS,
   VideoPlayer,
@@ -48,8 +50,39 @@ const { Title, Text, Paragraph } = Typography;
 
 // --- COMPONENT CHÍNH ---
 const Theory = () => {
+  const navigate = useNavigate();
   const { taskId } = useParams();
   const lesson = useMemo(() => getTheoryLesson(taskId), [taskId]);
+  const roadmapLocation = useMemo(
+    () => findRoadmapLocationByTaskId(detailedRoadmap, taskId),
+    [taskId],
+  );
+  const dayGate = useMemo(() => {
+    if (!roadmapLocation) return { unlocked: true };
+    return getDayGate(
+      detailedRoadmap,
+      roadmapLocation.weekIndex,
+      roadmapLocation.dayIndex,
+    );
+  }, [roadmapLocation]);
+
+  if (!dayGate.unlocked) {
+    return (
+      <div style={{ maxWidth: 900, margin: "40px auto", padding: "0 15px" }}>
+        <Alert
+          type="warning"
+          showIcon
+          message="Bài học đang bị khóa"
+          description="Bạn cần đủ điểm của ngày/tuần trước hoặc làm bài test mở khóa trong Dashboard."
+          action={
+            <Button type="primary" onClick={() => navigate("/dashboard")}>
+              Về Dashboard
+            </Button>
+          }
+        />
+      </div>
+    );
+  }
   const [viewMode, setViewMode] = useState("Noun"); // State chuyển đổi giữa Danh từ & Đại từ
 
   // A. NỘI DUNG TAB DANH TỪ (Đã được rút gọn bằng Tabs con)

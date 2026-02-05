@@ -9,6 +9,7 @@ import { detailedRoadmap } from "./Dashboard/RoadmapData";
 import { VOCAB_TASKS } from "./VocabTaskData";
 import { addWordsToGlobalVocab } from "../util/globalVocabStore";
 import { getTaskState, incrementTaskProgress } from "../util/taskProgress";
+import { findRoadmapLocationByTaskId, getDayGate } from "../util/roadmapAccess";
 import {
   WORDS_PER_LEVEL,
   MAX_LEVEL,
@@ -25,6 +26,18 @@ const VocabTaskPage = () => {
     () => findTaskById(detailedRoadmap, taskId),
     [taskId],
   );
+  const roadmapLocation = useMemo(
+    () => findRoadmapLocationByTaskId(detailedRoadmap, taskId),
+    [taskId],
+  );
+  const dayGate = useMemo(() => {
+    if (!roadmapLocation) return { unlocked: true };
+    return getDayGate(
+      detailedRoadmap,
+      roadmapLocation.weekIndex,
+      roadmapLocation.dayIndex,
+    );
+  }, [roadmapLocation]);
   const vocabWords = VOCAB_TASKS[taskId] || [];
 
   const [stateKey, setStateKey] = useState(0);
@@ -67,6 +80,24 @@ const VocabTaskPage = () => {
   }, [taskId, taskState.progress]);
 
   if (!taskInfo) return <div style={{ textAlign: 'center', marginTop: 50 }}><Text>Không tìm thấy bài học.</Text></div>;
+
+  if (!dayGate.unlocked) {
+    return (
+      <div style={{ maxWidth: 700, margin: "40px auto", padding: "0 15px" }}>
+        <Alert
+          type="warning"
+          showIcon
+          message="Bài học đang bị khóa"
+          description="Bạn cần đủ điểm của ngày/tuần trước hoặc làm bài test mở khóa trong Dashboard."
+          action={
+            <Button type="primary" onClick={() => navigate("/dashboard")}>
+              Về Dashboard
+            </Button>
+          }
+        />
+      </div>
+    );
+  }
 
   const { task, week } = taskInfo;
   const progressPercent = Math.round((taskState.progress / MAX_LEVEL) * 100);
