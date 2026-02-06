@@ -1,26 +1,17 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Avatar, Button, Card, List, Progress, Tag, Typography } from "antd";
+import { Avatar, Card, List, Progress, Tag, Typography } from "antd";
 import {
   CheckCircleFilled,
   EditOutlined,
   FormOutlined,
   PlayCircleOutlined,
   ReadOutlined,
-  RightOutlined,
 } from "@ant-design/icons";
+import { getLessonMissionsDoneMap } from "../../../util/lessonMissions";
 
 const { Text } = Typography;
 
 const STORAGE_PREFIX = "theory_lesson_missions:";
-
-const safeParseJson = (value, fallback) => {
-  if (!value) return fallback;
-  try {
-    return JSON.parse(value);
-  } catch {
-    return fallback;
-  }
-};
 
 const buildDefaultMissions = ({ showQuiz, hasVideo }) => {
   const missions = [];
@@ -29,7 +20,7 @@ const buildDefaultMissions = ({ showQuiz, hasVideo }) => {
     missions.push({
       key: "video",
       title: "Xem video bài giảng",
-      desc: "Mục tiêu: xem hết video (hoặc tối thiểu 5 phút).",
+      desc: "Mục tiêu: xem video (tối thiểu 5 phút).",
       icon: <PlayCircleOutlined />,
       points: "+10 điểm",
     });
@@ -38,7 +29,7 @@ const buildDefaultMissions = ({ showQuiz, hasVideo }) => {
   missions.push({
     key: "read",
     title: "Đọc nội dung lý thuyết",
-    desc: "Tóm tắt 3 ý chính vào ghi chú.",
+    desc: "Dành thời gian xem nội dung bài học.",
     icon: <ReadOutlined />,
     points: "+20 điểm",
   });
@@ -47,7 +38,7 @@ const buildDefaultMissions = ({ showQuiz, hasVideo }) => {
     missions.push({
       key: "quiz",
       title: "Hoàn thành Quiz",
-      desc: "Làm quiz và xem lại giải thích.",
+      desc: "Nộp bài quiz và xem lại giải thích.",
       icon: <FormOutlined />,
       points: "+50 điểm",
     });
@@ -56,7 +47,7 @@ const buildDefaultMissions = ({ showQuiz, hasVideo }) => {
   missions.push({
     key: "notes",
     title: "Ghi chú & ví dụ",
-    desc: "Tự đặt 2 câu ví dụ và ghi lại lỗi hay gặp.",
+    desc: "Lưu ít nhất 1 ghi chú cho bài học.",
     icon: <EditOutlined />,
     points: "+5 điểm",
   });
@@ -75,30 +66,37 @@ const LearningTasks = ({ taskId, lesson }) => {
     return buildDefaultMissions({ showQuiz, hasVideo });
   }, [lesson?.missions, showQuiz, hasVideo]);
 
-  const storageKey = taskId ? `${STORAGE_PREFIX}${taskId}` : null;
   const [doneMap, setDoneMap] = useState({});
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (!storageKey) return;
-    const stored = safeParseJson(window.localStorage.getItem(storageKey), {});
-    setDoneMap(stored);
-  }, [storageKey]);
+    if (!taskId) return;
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    if (!storageKey) return;
-    window.localStorage.setItem(storageKey, JSON.stringify(doneMap));
-  }, [doneMap, storageKey]);
+    const refresh = () => setDoneMap(getLessonMissionsDoneMap(taskId));
+    refresh();
+
+    const onUpdated = (event) => {
+      if (event?.detail?.taskId !== taskId) return;
+      refresh();
+    };
+
+    const onStorage = (event) => {
+      const key = `${STORAGE_PREFIX}${taskId}`;
+      if (event.key === key) refresh();
+    };
+
+    window.addEventListener("lessonMissions:updated", onUpdated);
+    window.addEventListener("storage", onStorage);
+    return () => {
+      window.removeEventListener("lessonMissions:updated", onUpdated);
+      window.removeEventListener("storage", onStorage);
+    };
+  }, [taskId]);
 
   const doneCount = missions.filter((m) => Boolean(doneMap[m.key])).length;
   const total = missions.length || 1;
   const percent = Math.round((doneCount / total) * 100);
   const firstUndoneKey = missions.find((m) => !doneMap[m.key])?.key ?? null;
-
-  const toggleDone = (key) => {
-    setDoneMap((prev) => ({ ...prev, [key]: !prev[key] }));
-  };
 
   return (
     <Card
@@ -157,10 +155,7 @@ const LearningTasks = ({ taskId, lesson }) => {
                 }
                 title={
                   <div style={{ display: "flex", justifyContent: "space-between" }}>
-                    <Text
-                      strong
-                      style={{ color: !isDone && !isActive ? "#bfbfbf" : "inherit" }}
-                    >
+                    <Text strong style={{ color: !isDone && !isActive ? "#bfbfbf" : "inherit" }}>
                       {item.title}
                     </Text>
                   </div>
@@ -172,24 +167,12 @@ const LearningTasks = ({ taskId, lesson }) => {
                     </div>
 
                     {isDone ? (
-                      <>
-                        <Tag color="success" icon={<CheckCircleFilled />}>
-                          Hoàn thành
-                        </Tag>
-                        <Button size="small" type="text" onClick={() => toggleDone(item.key)}>
-                          Hoàn tác
-                        </Button>
-                      </>
+                      <Tag color="success" icon={<CheckCircleFilled />}>
+                        Hoàn thành
+                      </Tag>
                     ) : (
                       <>
-                        <Button
-                          type={isActive ? "primary" : "default"}
-                          size="small"
-                          shape="round"
-                          onClick={() => toggleDone(item.key)}
-                        >
-                          Đánh dấu xong <RightOutlined />
-                        </Button>
+                        <Tag color={isActive ? "processing" : "default"}>Tự động cập nhật</Tag>
                         <Tag style={{ marginLeft: 8 }}>{item.points}</Tag>
                       </>
                     )}

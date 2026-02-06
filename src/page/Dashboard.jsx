@@ -82,12 +82,6 @@ const LanguageDashboard = () => {
       <Content>
         <Row gutter={[24, 24]}>
           <Col xs={24} lg={16}>
-            <ProgressChartCard
-              filterType={filterType}
-              onFilterChange={handleFilterChange}
-              displayData={displayData}
-              roadmapWeeks={detailedRoadmap}
-            />
 
             {detailedRoadmap.map((week, wIdx) => (
               <div
@@ -122,8 +116,11 @@ const LanguageDashboard = () => {
           </Col>
 
           <Col xs={24} lg={8}>
-            <QuickStatsCard />
-            <TodaysLearningCard />
+            {/* Thêm thẻ div bao bọc với style sticky */}
+            <div style={{ position: "sticky", top: 105 }}>
+              <QuickStatsCard />
+              <TodaysLearningCard />
+            </div>
           </Col>
         </Row>
       </Content>

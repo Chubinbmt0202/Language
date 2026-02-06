@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import {
   Row,
   Col,
@@ -34,6 +34,7 @@ import QuickNotes from "./QuickNotes"; // <--- MỚI: Import Component QuickNote
 import { getTheoryLesson } from "./TheoryTaskData";
 import { detailedRoadmap } from "../../Dashboard/RoadmapData";
 import { findRoadmapLocationByTaskId, getDayGate } from "../../../util/roadmapAccess";
+import { getLessonMissionsDoneMap, markLessonMissionDone } from "../../../util/lessonMissions";
 import {
   COMMENTS,
   VideoPlayer,
@@ -84,6 +85,34 @@ const Theory = () => {
     );
   }
   const [viewMode, setViewMode] = useState("Noun"); // State chuyển đổi giữa Danh từ & Đại từ
+  const [activeLessonTab, setActiveLessonTab] = useState("1");
+
+  useEffect(() => {
+    if (typeof window === "undefined") return undefined;
+    if (!taskId) return undefined;
+    if (activeLessonTab !== "1") return undefined;
+
+    const doneMap = getLessonMissionsDoneMap(taskId);
+    const timers = [];
+
+    if (!doneMap.read) {
+      timers.push(
+        window.setTimeout(() => {
+          markLessonMissionDone(taskId, "read");
+        }, 15000),
+      );
+    }
+
+    if (lesson?.videoSrc && !doneMap.video) {
+      timers.push(
+        window.setTimeout(() => {
+          markLessonMissionDone(taskId, "video");
+        }, 5 * 60 * 1000),
+      );
+    }
+
+    return () => timers.forEach((t) => window.clearTimeout(t));
+  }, [taskId, activeLessonTab, lesson?.videoSrc]);
 
   // A. NỘI DUNG TAB DANH TỪ (Đã được rút gọn bằng Tabs con)
   const nounItems = [
@@ -349,10 +378,11 @@ const Theory = () => {
       <Row gutter={60}>
         {/* --- LEFT COLUMN: MAIN CONTENT --- */}
         <Col span={16}>
-          <VideoPlayer src={lesson.videoSrc} /> {/* Giữ nguyên Video */}
+          {lesson?.videoSrc ? <VideoPlayer src={lesson.videoSrc} /> : null}
           <Tabs
             defaultActiveKey="1"
             size="large"
+            onChange={setActiveLessonTab}
             items={[
               {
                 label: "Bài học",
@@ -456,7 +486,7 @@ const Theory = () => {
                   >
                     {/* Gọi Component QuizSection ở đây */}
                     {lesson.showQuiz ? (
-                      <QuizSection />
+                      <QuizSection taskId={taskId} />
                     ) : (
                       <Alert
                         message="Quiz đang cập nhật"

@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Button, Card, Empty, Input, List, Tooltip, Typography, message } from "antd";
 import { DeleteOutlined, FormOutlined, SaveOutlined } from "@ant-design/icons";
+import { markLessonMissionDone } from "../../../util/lessonMissions";
 
 const { Text } = Typography;
 const { TextArea } = Input;
@@ -76,6 +77,7 @@ const QuickNotes = ({ taskId, seedNotes }) => {
     setNotes((prev) => [newNote, ...prev]);
     setInputValue("");
     message.success("Đã lưu ghi chú!");
+    markLessonMissionDone(taskId, "notes");
   };
 
   const handleDelete = (id) => {
@@ -163,4 +165,3 @@ const QuickNotes = ({ taskId, seedNotes }) => {
 };
 
 export default QuickNotes;
-

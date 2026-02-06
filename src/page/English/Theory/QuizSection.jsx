@@ -1,7 +1,8 @@
 
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Card, Radio, Button, Typography, Space, Alert, Result, Divider, Tag } from "antd";
 import { CheckCircleOutlined, CloseCircleOutlined, ReloadOutlined, SmileOutlined } from "@ant-design/icons";
+import { markLessonMissionDone } from "../../../util/lessonMissions";
 const { Title, Text, Paragraph } = Typography;
 
 // --- DỮ LIỆU CÂU HỎI (5 DANH TỪ + 5 ĐẠI TỪ) ---
@@ -141,7 +142,7 @@ const QUIZ_DATA = [
   },
 ];
 
-const QuizSection = () => {
+const QuizSection = ({ taskId }) => {
   // State lưu đáp án người dùng đã chọn: { 1: "A", 2: "B", ... }
   const [userAnswers, setUserAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
@@ -168,6 +169,10 @@ const QuizSection = () => {
   };
 
   const score = calculateScore();
+  const canSubmit = useMemo(
+    () => Object.keys(userAnswers).length >= QUIZ_DATA.length,
+    [userAnswers],
+  );
 
   if (submitted) {
     return (
@@ -246,8 +251,11 @@ const QuizSection = () => {
             type="primary" 
             size="large" 
             block 
-            onClick={() => setSubmitted(true)}
-            disabled={Object.keys(userAnswers).length < QUIZ_DATA.length}
+            onClick={() => {
+              setSubmitted(true);
+              markLessonMissionDone(taskId, "quiz");
+            }}
+            disabled={!canSubmit}
         >
           Nộp bài ({Object.keys(userAnswers).length}/{QUIZ_DATA.length})
         </Button>

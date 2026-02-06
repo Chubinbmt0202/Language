@@ -129,7 +129,7 @@ const Exercise = () => {
           </div>
         ),
         okText: 'Về Dashboard',
-        onOk: () => navigate("/dashboard")
+        onOk: () => navigate("/Distance"),
       });
     } else {
       // --- TRƯỜNG HỢP KHÔNG ĐẠT ---
