@@ -18,6 +18,7 @@ import {
   BookOutlined,
   MenuUnfoldOutlined,
 } from "@ant-design/icons";
+
 import {
   Breadcrumb,
   Layout,
@@ -31,6 +32,8 @@ import {
   Badge,
 } from "antd";
 import GlobalVocabManager from "../components/GlobalVocabManager/index.jsx";
+import { useAuth } from "../util/AuthContext.jsx";
+
 
 const { Content, Sider, Header } = Layout;
 const sidebarItems = [
@@ -77,6 +80,8 @@ const sidebarItems = [
 ];
 
 const HomeLayout = () => {
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [drawerVisible, setDrawerVisible] = useState(false);
@@ -84,8 +89,6 @@ const HomeLayout = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
-
-  const navigate = useNavigate();
   const location = useLocation();
 
   // Kiểm tra kích thước màn hình để xác định chế độ mobile
@@ -114,40 +117,23 @@ const HomeLayout = () => {
     if (isMobile) setDrawerVisible(false); // Đóng drawer sau khi chọn menu trên mobile
   };
 
-  const userMenuItems = [
-    {
-      key: "profile",
-      label: "Thông tin cá nhân",
-    },
-    {
-      key: "change-password",
-      label: "Đổi mật khẩu",
-    },
-    {
-      type: "divider",
-    },
-    {
-      key: "logout",
-      label: "Đăng xuất",
-      danger: true,
-    },
-  ];
 
-  const handleUserMenuClick = ({ key }) => {
-    switch (key) {
-      case "profile":
-        navigate("/profile");
-        break;
-      case "change-password":
-        navigate("/change-password");
-        break;
-      case "logout":
-        console.log("Logout");
-        break;
-      default:
-        break;
+const userMenu = [
+    {
+      key: 'profile',
+      label: 'Hồ sơ cá nhân',
+      icon: <UserOutlined />,
+    },
+    {
+      key: 'logout',
+      label: 'Đăng xuất',
+      danger: true,
+      onClick: () => {
+        logout();
+        navigate('/login');
+      }
     }
-  };
+  ];
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
@@ -243,26 +229,22 @@ const HomeLayout = () => {
           />
 
           {/* RIGHT: Notification + Avatar */}
-          <Space size={20}>
-            {/* Notification */}
-            <Badge count={3}>
-              <BellOutlined style={{ fontSize: 20, cursor: "pointer" }} />
-            </Badge>
-
-            {/* Avatar + Dropdown */}
-            <Dropdown
-              menu={{
-                items: userMenuItems,
-                onClick: handleUserMenuClick,
-              }}
-              placement="bottomRight"
-            >
-              <Avatar
-                style={{ cursor: "pointer", backgroundColor: "#1677ff" }}
-                icon={<UserOutlined />}
-              />
-            </Dropdown>
-          </Space>
+          <div>
+            {user ? (
+              <Dropdown menu={{ items: userMenu }} placement="bottomRight">
+                <Space style={{ cursor: 'pointer' }}>
+                  <span style={{ marginRight: 8, fontWeight: 500, display: isMobile ? 'none' : 'block' }}>
+                    {user.displayName}
+                  </span>
+                  <Avatar src={user.photoURL} icon={<UserOutlined />} />
+                </Space>
+              </Dropdown>
+            ) : (
+              <Button type="primary" onClick={() => navigate('/login')}>
+                Đăng nhập
+              </Button>
+            )}
+          </div>
         </Header>
 
         <Content

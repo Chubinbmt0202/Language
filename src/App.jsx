@@ -39,12 +39,16 @@ import Theory from "./page/English/Theory/Theory.jsx";
 import Home from "./page/Home/Home.jsx";
 import Excercises from "./page/Excercises/index.jsx";
 import Upcoming from "./page/Result/Upcomming.jsx";
+import Login from "./page/Login.jsx";
+import { AuthProvider } from "./util/AuthContext.jsx";
 function App() {
   return (
     <BrowserRouter>
+    <AuthProvider>
       <LanguageProvider>
         <Routes>
           {/* Route cha là Home - chứa Sidebar và Breadcrumb */}
+          <Route path="/login" element={<Login />} />
           <Route path="/" element={<HomeLayout />}>
             {/* Các Route con sẽ được render tại vị trí <Outlet /> trong Home */}
             <Route index element={<Navigate to="/Home" replace />} />
@@ -107,6 +111,7 @@ function App() {
           </Route>
         </Routes>
       </LanguageProvider>
+      </AuthProvider>
     </BrowserRouter>
   );
 }
