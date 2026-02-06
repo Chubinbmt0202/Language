@@ -37,6 +37,8 @@ import Exercise from "./page/ExercisePage.jsx";
 import VocabTaskPage from "./page/VocabTaskPage.jsx";
 import Theory from "./page/English/Theory/Theory.jsx";
 import Home from "./page/Home/home.jsx";
+import Excercises from "./page/Excercises/index.jsx";
+import Upcoming from "./page/Result/Upcomming.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -48,6 +50,7 @@ function App() {
             <Route index element={<Navigate to="/Home" replace />} />
             <Route path="Home" element={<Home />} />
             <Route path="Distance" element={<Dashboard />} />
+            <Route path="ExercisesLibrary" element={<Excercises />} />
             <Route path="exercise/:taskId" element={<Exercise />} />
             <Route path="vocab/:taskId" element={<VocabTaskPage />} />
             <Route path="theory/:taskId" element={<Theory />} />
@@ -99,7 +102,7 @@ function App() {
             />
             <Route
               path="*"
-              element={<div>Nội dung đang được cập nhật...</div>}
+              element={<Upcoming />}
             />
           </Route>
         </Routes>

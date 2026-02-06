@@ -36,10 +36,10 @@ const sidebarItems = [
     key: "ExercisesLibrary",
     icon: <BookOutlined />,
     label: "Kho bài tập",
-    children: [
-      { key: "english/grammar", label: "Ngữ pháp" },
-      { key: "english/translation-practice", label: "Luyện dịch câu" },
-    ],
+    // children: [
+    //   { key: "english/grammar", label: "Ngữ pháp" },
+    //   { key: "english/translation-practice", label: "Luyện dịch câu" },
+    // ],
   },
   {
     key: "vocabulary",
