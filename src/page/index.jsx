@@ -12,12 +12,24 @@ import {
   UserOutlined,
   MenuFoldOutlined,
   KeyOutlined,
+  BellOutlined,
   HomeOutlined,
   AuditOutlined,
   BookOutlined,
   MenuUnfoldOutlined,
 } from "@ant-design/icons";
-import { Breadcrumb, Layout, Menu, theme, Button, Drawer } from "antd";
+import {
+  Breadcrumb,
+  Layout,
+  Menu,
+  theme,
+  Button,
+  Drawer,
+  Avatar,
+  Dropdown,
+  Space,
+  Badge,
+} from "antd";
 import GlobalVocabManager from "../components/GlobalVocabManager/index.jsx";
 
 const { Content, Sider, Header } = Layout;
@@ -57,13 +69,12 @@ const sidebarItems = [
       { key: "japanese/listen-and-fill", label: "Nghe và điền" },
     ],
   },
-    {
+  {
     key: "Setting",
     icon: <UserOutlined />,
     label: "Cài đặt",
   },
 ];
-
 
 const HomeLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -101,6 +112,41 @@ const HomeLayout = () => {
   const handleMenuClick = (key) => {
     navigate(`/${key}`);
     if (isMobile) setDrawerVisible(false); // Đóng drawer sau khi chọn menu trên mobile
+  };
+
+  const userMenuItems = [
+    {
+      key: "profile",
+      label: "Thông tin cá nhân",
+    },
+    {
+      key: "change-password",
+      label: "Đổi mật khẩu",
+    },
+    {
+      type: "divider",
+    },
+    {
+      key: "logout",
+      label: "Đăng xuất",
+      danger: true,
+    },
+  ];
+
+  const handleUserMenuClick = ({ key }) => {
+    switch (key) {
+      case "profile":
+        navigate("/profile");
+        break;
+      case "change-password":
+        navigate("/change-password");
+        break;
+      case "logout":
+        console.log("Logout");
+        break;
+      default:
+        break;
+    }
   };
 
   return (
@@ -168,20 +214,21 @@ const HomeLayout = () => {
       >
         <Header
           style={{
-            padding: 0,
+            padding: "0 16px",
             background: colorBgContainer,
             display: "flex",
             alignItems: "center",
+            justifyContent: "space-between",
             position: "fixed",
             top: 0,
             right: 0,
             zIndex: 99,
-            // Header rộng 100% trên mobile, trừ khoảng trống sidebar trên desktop
             width: isMobile ? "100%" : `calc(100% - ${collapsed ? 80 : 250}px)`,
             transition: "all 0.2s",
             borderBottom: "1px solid #f0f0f0",
           }}
         >
+          {/* LEFT: Toggle Sidebar */}
           <Button
             type="text"
             icon={
@@ -192,8 +239,30 @@ const HomeLayout = () => {
               )
             }
             onClick={toggleSidebar}
-            style={{ fontSize: "16px", width: 64, height: 64 }}
+            style={{ fontSize: "16px", width: 48, height: 48 }}
           />
+
+          {/* RIGHT: Notification + Avatar */}
+          <Space size={20}>
+            {/* Notification */}
+            <Badge count={3}>
+              <BellOutlined style={{ fontSize: 20, cursor: "pointer" }} />
+            </Badge>
+
+            {/* Avatar + Dropdown */}
+            <Dropdown
+              menu={{
+                items: userMenuItems,
+                onClick: handleUserMenuClick,
+              }}
+              placement="bottomRight"
+            >
+              <Avatar
+                style={{ cursor: "pointer", backgroundColor: "#1677ff" }}
+                icon={<UserOutlined />}
+              />
+            </Dropdown>
+          </Space>
         </Header>
 
         <Content
