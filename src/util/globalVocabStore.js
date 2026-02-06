@@ -1,13 +1,23 @@
-const STORAGE_KEY = "global_vocab_app_data";
+import { auth } from "../firebase/firebase";
+
+const BASE_STORAGE_KEY = "global_vocab_app_data";
 
 const defaultData = {
   en: [{ id: "en_default", name: "English TOEIC", words: [] }],
   jp: [{ id: "jp_default", name: "Tu vung N3", words: [] }],
 };
 
+const getUserKey = () => {
+  const user = auth.currentUser;
+  return user ? `${BASE_STORAGE_KEY}_${user.uid}` : null;
+};
+
 export const loadGlobalVocab = () => {
+  const key = getUserKey();
+  if (!key) return defaultData; // Trả về mặc định nếu chưa login
+
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = localStorage.getItem(key);
     return raw ? JSON.parse(raw) : defaultData;
   } catch {
     return defaultData;
@@ -15,7 +25,10 @@ export const loadGlobalVocab = () => {
 };
 
 export const saveGlobalVocab = (data) => {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  const key = getUserKey();
+  if (key) {
+    localStorage.setItem(key, JSON.stringify(data));
+  }
 };
 
 const toWordItem = (word, index, lang) => {
@@ -46,6 +59,8 @@ const toWordItem = (word, index, lang) => {
 };
 
 export const addWordsToGlobalVocab = (words, lang = "en") => {
+  if (!auth.currentUser) return loadGlobalVocab(); // Không cho thêm nếu chưa login
+
   const data = loadGlobalVocab();
   const topics = data[lang] || [];
   const activeTopic = topics[0] || { id: `${lang}_default`, name: "Default", words: [] };

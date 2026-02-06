@@ -41,11 +41,13 @@ import Excercises from "./page/Excercises/index.jsx";
 import Upcoming from "./page/Result/Upcomming.jsx";
 import Login from "./page/Login.jsx";
 import { AuthProvider } from "./util/AuthContext.jsx";
+import TimeTracker from "./components/TimeTracker.jsx";
 function App() {
   return (
     <BrowserRouter>
     <AuthProvider>
       <LanguageProvider>
+        <TimeTracker />
         <Routes>
           {/* Route cha là Home - chứa Sidebar và Breadcrumb */}
           <Route path="/login" element={<Login />} />
