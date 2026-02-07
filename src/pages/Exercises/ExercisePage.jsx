@@ -1,9 +1,11 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { 
   Button, Card, Typography, Space, Radio, 
-  Divider, Progress, Modal, Tag, Alert, Statistic 
+  Divider, Progress, Modal, Tag, Alert, Statistic, Empty 
 } from "antd";
 import { 
   ArrowLeftOutlined, 
@@ -11,8 +13,11 @@ import {
   RightOutlined,
   TrophyOutlined,
   ExclamationCircleOutlined,
-  ReloadOutlined
+  ReloadOutlined,
+  HistoryOutlined
 } from "@ant-design/icons";
+import { auth } from "../../firebase/firebase"; 
+import { onAuthStateChanged } from "firebase/auth";
 import { detailedRoadmap } from "../Dashboard/RoadmapData";
 import { addPoints, addRoadmapPoints } from "../../util/points";
 import { findRoadmapLocationByTaskId, getDayGate } from "../../util/roadmapAccess";
@@ -21,13 +26,13 @@ import {
   DEFAULT_QUESTIONS,
   EXERCISE_DATA,
 } from "./ExerciseQuestionData";
-
-// 👇 IMPORT HÀM TĂNG PROGRESS TỪ FILE STORAGE CỦA BẠN
-// Hãy chắc chắn đường dẫn này đúng với nơi bạn lưu đoạn code thứ 3
-import { incrementTaskProgress, getTaskState } from "../../util/taskProgress"; 
+import { incrementTaskProgress, getTaskState } from "../../util/taskProgress";
 
 const { Title, Text } = Typography;
 const { confirm } = Modal;
+
+// Key tiền tố để lưu lịch sử làm bài vào LocalStorage
+const STORAGE_PREFIX = "completed_questions:";
 
 const findTaskById = (taskId) => {
   for (const week of detailedRoadmap) {
@@ -41,10 +46,27 @@ const findTaskById = (taskId) => {
   return null;
 };
 
+const shuffleArray = (items) => {
+  const next = [...items];
+  for (let i = next.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [next[i], next[j]] = [next[j], next[i]];
+  }
+  return next;
+};
+
 const Exercise = () => {
   const navigate = useNavigate();
   const { taskId } = useParams();
+  
+  // State quản lý User ID và danh sách câu đã làm
+  const [uid, setUid] = useState(() => auth.currentUser?.uid || null);
+  const [completedIds, setCompletedIds] = useState([]);
+
+  // Lấy thông tin bài tập
   const taskInfo = useMemo(() => findTaskById(taskId), [taskId]);
+  
+  // Logic kiểm tra khóa bài học (Gate)
   const roadmapLocation = useMemo(
     () => findRoadmapLocationByTaskId(detailedRoadmap, taskId),
     [taskId],
@@ -58,15 +80,41 @@ const Exercise = () => {
     );
   }, [roadmapLocation]);
 
+  // State quản lý bài làm hiện tại
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState("");
   const [isChecked, setIsChecked] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
-  
-  // Điểm phiên hiện tại
   const [sessionScore, setSessionScore] = useState(0);
+  
+  // Mảng tạm chứa các ID câu làm đúng trong phiên này
+  const [sessionCorrectIds, setSessionCorrectIds] = useState([]);
 
-  // Modal thoát
+  // 1. Theo dõi Auth và load lịch sử từ Storage
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUid(user.uid);
+      } else {
+        setUid(null);
+      }
+    });
+    return unsubscribe;
+  }, []);
+
+  useEffect(() => {
+    if (!uid || !taskId) return;
+    const key = `${STORAGE_PREFIX}${uid}:${taskId}`;
+    const saved = localStorage.getItem(key);
+    if (saved) {
+      try {
+        setCompletedIds(JSON.parse(saved));
+      } catch (e) {
+        setCompletedIds([]);
+      }
+    }
+  }, [uid, taskId]);
+
   const handleBackWithConfirm = () => {
     confirm({
       title: 'Xác nhận thoát bài tập?',
@@ -83,14 +131,50 @@ const Exercise = () => {
 
   const { tier } = useMemo(() => getTaskState(taskId), [taskId]);
 
+  // 2. Tính toán bộ câu hỏi (Đã lọc câu cũ)
+  const shuffledQuestionSet = useMemo(() => {
+    if (!taskInfo) return [];
+    
+    const { day } = taskInfo;
+    const dayExercise = EXERCISE_DATA?.[day.id];
+    
+    // Tìm đúng key của task
+    const taskIndexMatch = taskId.match(/-t(\d+)$/);
+    const taskIndex = taskIndexMatch ? Number(taskIndexMatch[1]) : null;
+    const taskKeyFromOrder = dayExercise?.taskOrder && taskIndex
+      ? dayExercise.taskOrder[taskIndex - 1]
+      : null;
+    const taskKey = taskKeyFromOrder || (dayExercise?.tasks ? Object.keys(dayExercise.tasks)[0] : null);
+    const taskExercise = taskKey ? dayExercise?.tasks?.[taskKey] : null;
+
+    // Lấy pool câu hỏi dựa trên Tier
+    const easyQuestions = taskExercise?.questions?.easy ?? DEFAULT_QUESTIONS;
+    const hardQuestions = taskExercise?.questions?.hard ?? DEFAULT_HARD_QUESTIONS;
+    const pool = tier > 0 ? hardQuestions : easyQuestions;
+    const totalQuestionsNeeded = taskExercise?.total ?? easyQuestions.length;
+
+    // QUAN TRỌNG: Lọc bỏ các câu có ID nằm trong completedIds
+    const availableQuestions = pool.filter(q => !completedIds.includes(q.id));
+
+    // Nếu hết câu hỏi thì trả về rỗng (để render màn hình Empty)
+    if (availableQuestions.length === 0) return [];
+
+    // Shuffle và cắt đúng số lượng
+    return shuffleArray(availableQuestions).slice(0, totalQuestionsNeeded);
+  }, [taskId, tier, taskInfo, completedIds]);
+
   const handleCheckAnswer = () => {
     if (!selectedOption) return;
-    const correct = selectedOption === questionSet[currentIndex].answer;
+    const currentQ = shuffledQuestionSet[currentIndex];
+    const correct = selectedOption === currentQ.answer;
+    
     setIsChecked(true);
     setIsCorrect(correct);
 
     if (correct) {
       setSessionScore(prev => prev + 1);
+      // Lưu tạm ID câu đúng
+      setSessionCorrectIds(prev => [...prev, currentQ.id]);
     }
   };
 
@@ -100,46 +184,50 @@ const Exercise = () => {
     setIsChecked(false);
     setIsCorrect(false);
     setSessionScore(0);
+    setSessionCorrectIds([]);
   };
 
   const handleFinish = () => {
-    const totalQuestions = questionSet.length;
-    // Tính % điểm (Lưu ý: sessionScore lúc này đã bao gồm câu cuối nếu đúng)
+    const totalQuestions = shuffledQuestionSet.length;
     const percentage = Math.round((sessionScore / totalQuestions) * 100);
-    const PASS_THRESHOLD = 70; // Ngưỡng 70%
+    const PASS_THRESHOLD = 70;
 
     if (percentage > PASS_THRESHOLD) {
-      // --- TRƯỜNG HỢP ĐẠT YÊU CẦU ---
+      // --- ĐẠT YÊU CẦU ---
       
-      // 1. Tăng Task Progress lên 1 level
+      // 3. Cập nhật Storage: Merge câu cũ + câu mới làm đúng
+      if (uid) {
+        const newCompletedList = [...new Set([...completedIds, ...sessionCorrectIds])];
+        setCompletedIds(newCompletedList); // Cập nhật state để UI phản hồi ngay nếu cần
+        localStorage.setItem(`${STORAGE_PREFIX}${uid}:${taskId}`, JSON.stringify(newCompletedList));
+      }
+
       incrementTaskProgress(taskId);
-      
-      // 2. Cộng điểm tích lũy (Gamification)
       addPoints(sessionScore);
+      const { day, week } = taskInfo;
       addRoadmapPoints({ weekNumber: week.week, dayId: day.id, points: sessionScore });
 
-      // 3. Hiển thị thông báo thành công
       Modal.success({
         title: 'Chúc mừng! Bạn đã hoàn thành nhiệm vụ',
         icon: <TrophyOutlined style={{ color: '#faad14' }} />,
         content: (
           <div>
             <p>Bạn đạt <b>{percentage}%</b> ({sessionScore}/{totalQuestions} câu đúng).</p>
-            <p>Thanh tiến độ bài học đã được cập nhật!</p>
+            <p>Các câu trả lời đúng đã được lưu lại và sẽ không xuất hiện trong lần tới.</p>
           </div>
         ),
         okText: 'Về Dashboard',
         onOk: () => navigate("/Distance"),
       });
     } else {
-      // --- TRƯỜNG HỢP KHÔNG ĐẠT ---
+      // --- KHÔNG ĐẠT ---
       Modal.confirm({
         title: 'Chưa đạt yêu cầu',
         icon: <ExclamationCircleOutlined style={{ color: '#ff4d4f' }} />,
         content: (
           <div>
             <p>Bạn chỉ đạt <b>{percentage}%</b> ({sessionScore}/{totalQuestions} câu đúng).</p>
-            <p>Bạn cần đạt trên <b>{PASS_THRESHOLD}%</b> để hoàn thành nhiệm vụ này.</p>
+            <p>Hãy làm lại để nắm vững kiến thức nhé (Tiến trình chưa được lưu).</p>
           </div>
         ),
         okText: 'Làm lại ngay',
@@ -151,15 +239,30 @@ const Exercise = () => {
   };
 
   const handleNextQuestion = () => {
-    if (currentIndex < questionSet.length - 1) {
+    if (currentIndex < shuffledQuestionSet.length - 1) {
       setCurrentIndex(prev => prev + 1);
       setSelectedOption("");
       setIsChecked(false);
       setIsCorrect(false);
     } else {
-      // Nếu là câu cuối cùng thì xử lý kết quả
       handleFinish();
     }
+  };
+
+  // Hàm Reset lịch sử cho bài này
+  const handleResetHistory = () => {
+    confirm({
+      title: 'Học lại từ đầu?',
+      content: 'Lịch sử làm bài của nhiệm vụ này sẽ bị xóa. Bạn sẽ làm lại tất cả câu hỏi.',
+      okType: 'danger',
+      onOk() {
+        if (uid) {
+          localStorage.removeItem(`${STORAGE_PREFIX}${uid}:${taskId}`);
+          setCompletedIds([]); // Clear state để kích hoạt lại useMemo
+          handleRestart();
+        }
+      }
+    });
   };
 
   if (!taskInfo) return <Text>Không tìm thấy bài tập</Text>;
@@ -182,27 +285,38 @@ const Exercise = () => {
     );
   }
 
-  const { task, day, week } = taskInfo;
-  const dayExercise = EXERCISE_DATA?.[day.id];
-  const taskIndexMatch = taskId.match(/-t(\d+)$/);
-  const taskIndex = taskIndexMatch ? Number(taskIndexMatch[1]) : null;
-  const taskKeyFromOrder =
-    dayExercise?.taskOrder && taskIndex
-      ? dayExercise.taskOrder[taskIndex - 1]
-      : null;
-  const taskKey =
-    taskKeyFromOrder ||
-    (dayExercise?.tasks ? Object.keys(dayExercise.tasks)[0] : null);
-  const taskExercise = taskKey ? dayExercise?.tasks?.[taskKey] : null;
-  const easyQuestions = taskExercise?.questions?.easy ?? DEFAULT_QUESTIONS;
-  const hardQuestions = taskExercise?.questions?.hard ?? DEFAULT_HARD_QUESTIONS;
-  const totalQuestions = taskExercise?.total ?? easyQuestions.length;
-  const questionSet = (tier > 0 ? hardQuestions : easyQuestions).slice(
-    0,
-    totalQuestions
-  );
-  const currentQuestion = questionSet[currentIndex];
-  const progressPercent = Math.round(((currentIndex) / questionSet.length) * 100);
+  // 4. Màn hình khi đã làm hết câu hỏi
+  if (shuffledQuestionSet.length === 0) {
+    return (
+        <div style={{ maxWidth: 700, margin: "40px auto", padding: "0 15px", textAlign: "center" }}>
+            <Card bordered={false} style={{ borderRadius: 20, boxShadow: '0 10px 30px rgba(0,0,0,0.08)' }}>
+                <Empty
+                    image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
+                    imageStyle={{ height: 100 }}
+                    description={
+                        <span>
+                            <Title level={4} style={{color: "#52c41a"}}>Tuyệt vời!</Title>
+                            <Text>Bạn đã trả lời đúng hết tất cả câu hỏi trong ngân hàng đề của bài này.</Text>
+                        </span>
+                    }
+                >
+                    <Space direction="vertical" style={{ width: '100%', marginTop: 20 }}>
+                        <Button type="primary" size="large" onClick={() => navigate("/dashboard")}>
+                            Quay về Dashboard
+                        </Button>
+                        <Button icon={<ReloadOutlined />} onClick={handleResetHistory}>
+                            Xóa lịch sử & Làm lại từ đầu
+                        </Button>
+                    </Space>
+                </Empty>
+            </Card>
+        </div>
+    );
+  }
+
+  const { task, week } = taskInfo;
+  const currentQuestion = shuffledQuestionSet[currentIndex];
+  const progressPercent = Math.round(((currentIndex) / shuffledQuestionSet.length) * 100);
 
   return (
     <div style={{ maxWidth: 700, margin: "40px auto", padding: "0 15px" }}>
@@ -215,12 +329,15 @@ const Exercise = () => {
         >
           Thoát
         </Button>
-        <Statistic 
-          title="Điểm hiện tại" 
-          value={sessionScore} 
-          prefix={<TrophyOutlined />} 
-          valueStyle={{ color: '#cf1322', fontSize: '20px' }}
-        />
+        <Space>
+           {/* Hiển thị số câu đã ẩn đi */}
+           <Tag icon={<HistoryOutlined />}>Đã xong: {completedIds.length}</Tag>
+           <Statistic 
+            value={sessionScore} 
+            prefix={<TrophyOutlined />} 
+            valueStyle={{ color: '#cf1322', fontSize: '20px' }}
+           />
+        </Space>
       </div>
 
       <Card 
@@ -234,7 +351,11 @@ const Exercise = () => {
             <Progress percent={progressPercent} status="active" strokeColor="#1890ff" />
           </div>
 
-          <Divider plain><Text type="secondary">Câu hỏi {currentIndex + 1} / {questionSet.length}</Text></Divider>
+          <Divider plain>
+            <Text type="secondary">
+                Câu hỏi {currentIndex + 1} / {shuffledQuestionSet.length}
+            </Text>
+          </Divider>
 
           <div style={{ minHeight: 120 }}>
             <Title level={5}>{currentQuestion.sentence}</Title>
@@ -282,11 +403,10 @@ const Exercise = () => {
                 size="large"
                 onClick={handleNextQuestion}
                 shape="round"
-                // Đổi icon và text ở câu cuối cùng
-                icon={currentIndex === questionSet.length - 1 ? <CheckCircleOutlined /> : <RightOutlined />}
+                icon={currentIndex === shuffledQuestionSet.length - 1 ? <CheckCircleOutlined /> : <RightOutlined />}
                 style={{ width: 160, backgroundColor: isCorrect ? '#52c41a' : '#1890ff' }}
               >
-                {currentIndex === questionSet.length - 1 ? "Hoàn thành" : "Tiếp theo"}
+                {currentIndex === shuffledQuestionSet.length - 1 ? "Hoàn thành" : "Tiếp theo"}
               </Button>
             )}
           </div>

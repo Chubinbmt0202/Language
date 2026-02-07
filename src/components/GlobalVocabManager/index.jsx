@@ -14,6 +14,9 @@ import VocabTable from "./VocabTable";
 import FlashcardModal from "./FlashcardModal";
 import AutoQuizModal from "./AutoQuizModal.jsx";
 import { useLang } from "../../util/LanguageContext.jsx";
+import { auth } from "../../firebase/firebase";
+import { onAuthStateChanged } from "firebase/auth";
+import { loadGlobalVocab, saveGlobalVocab } from "../../util/globalVocabStore";
 
 const GlobalVocabManager = () => {
   const quizLockRef = useRef(false);
@@ -26,21 +29,17 @@ const GlobalVocabManager = () => {
 
   console.log("GlobalVocabManager render, activeLang:", lang);
 
-  // Load dữ liệu
-  const [allData, setAllData] = useState(() => {
-    const saved = localStorage.getItem("global_vocab_app_data");
-    return saved
-      ? JSON.parse(saved)
-      : {
-          en: [{ id: "en_default", name: "English TOEIC", words: [] }],
-          jp: [{ id: "jp_default", name: "Từ vựng N3", words: [] }],
-        };
+  const getDefaultActiveIds = (data) => ({
+    en: data?.en?.[0]?.id ?? "en_default",
+    jp: data?.jp?.[0]?.id ?? "jp_default",
   });
 
-  const [activeTopicIds, setActiveTopicIds] = useState({
-    en: "en_default",
-    jp: "jp_default",
-  });
+  // Load dữ liệu
+  const [allData, setAllData] = useState(() => loadGlobalVocab());
+
+  const [activeTopicIds, setActiveTopicIds] = useState(() =>
+    getDefaultActiveIds(loadGlobalVocab()),
+  );
 
   // Lấy danh sách từ vựng hiện tại để kiểm tra
   const allCurrentWords = useMemo(() => {
@@ -49,13 +48,23 @@ const GlobalVocabManager = () => {
   }, [allData, lang]);
 
   useEffect(() => {
-    localStorage.setItem("global_vocab_app_data", JSON.stringify(allData));
+    saveGlobalVocab(allData);
   }, [allData]);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, () => {
+      const data = loadGlobalVocab();
+      setAllData(data);
+      setActiveTopicIds(getDefaultActiveIds(data));
+    });
+    return unsubscribe;
+  }, []);
 
   // --- LOGIC KIỂM TRA THỜI GIAN (Đã sửa lỗi 10s) ---
   useEffect(() => {
     const INTERVAL = 60 * 1000 * 5; // 15 phút
-    const STORAGE_KEY = `vocab_last_quiz_time_${lang}`;
+    const uid = auth.currentUser?.uid ?? "guest";
+    const STORAGE_KEY = `vocab_last_quiz_time_${uid}_${lang}`;
 
     const checkQuizTrigger = () => {
       if (quizLockRef.current) return; // 🔒 đang mở

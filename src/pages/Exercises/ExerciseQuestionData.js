@@ -175,6 +175,55 @@ const NOUN_PRON_EASY = [
   { id: 108, sentence: "We need two ____ of paper.", options: ["piece", "pieces", "pieced", "piecings"], answer: "pieces", explanation: "Danh tu dem duoc so nhieu.", topic: "Nouns" },
   { id: 109, sentence: "The ____ is closed today.", options: ["office", "offices", "official", "office's"], answer: "office", explanation: "Danh tu so it phu hop chu ngu.", topic: "Nouns" },
   { id: 110, sentence: "The decision was made by ____.", options: ["they", "them", "their", "themselves"], answer: "them", explanation: "Dai tu tan ngu sau gioi tu.", topic: "Pronouns" },
+  { id: 201, sentence: "____ are planning the project now.", options: ["Them", "They", "Their", "Theirs"], answer: "They", explanation: "Subject pronoun làm chủ ngữ.", topic: "Pronouns" },
+
+  { id: 202, sentence: "Please send the email to ____.", options: ["we", "our", "us", "ours"], answer: "us", explanation: "Object pronoun sau giới từ.", topic: "Pronouns" },
+
+  { id: 203, sentence: "This report is ____ responsibility.", options: ["you", "your", "yours", "yourself"], answer: "your", explanation: "Possessive adjective đứng trước noun.", topic: "Pronouns" },
+
+  { id: 204, sentence: "That car is ____.", options: ["their", "theirs", "them", "they"], answer: "theirs", explanation: "Possessive pronoun đứng độc lập.", topic: "Pronouns" },
+
+  { id: 205, sentence: "She prepared the presentation by ____.", options: ["she", "her", "hers", "herself"], answer: "herself", explanation: "Reflexive pronoun.", topic: "Pronouns" },
+
+  { id: 206, sentence: "There isn't much ____ left.", options: ["chairs", "tables", "water", "documents"], answer: "water", explanation: "Water là danh từ không đếm được.", topic: "Nouns" },
+
+  { id: 207, sentence: "The company hired three new ____.", options: ["staff", "staffs", "staff members", "staffing"], answer: "staff members", explanation: "Staff thường không đếm được → dùng members.", topic: "Nouns" },
+
+  { id: 208, sentence: "I need a piece of ____.", options: ["advices", "advice", "advise", "advising"], answer: "advice", explanation: "Advice là danh từ không đếm được.", topic: "Nouns" },
+
+  { id: 209, sentence: "Each of the ____ has a locker.", options: ["employee", "employees", "employ", "employment"], answer: "employees", explanation: "Each of + plural noun.", topic: "Nouns" },
+
+  { id: 210, sentence: "Can you give this file to ____?", options: ["he", "him", "his", "himself"], answer: "him", explanation: "Object pronoun sau giới từ.", topic: "Pronouns" },
+
+  { id: 211, sentence: "The manager introduced ____ to the new team.", options: ["he", "him", "his", "himself"], answer: "himself", explanation: "Reflexive pronoun khi chủ ngữ tự làm.", topic: "Pronouns" },
+
+  { id: 212, sentence: "We bought some new ____ for the office.", options: ["equipments", "equipment", "equip", "equipping"], answer: "equipment", explanation: "Equipment là danh từ không đếm được.", topic: "Nouns" },
+
+  { id: 213, sentence: "Those documents are ____.", options: ["our", "ours", "us", "we"], answer: "ours", explanation: "Possessive pronoun.", topic: "Pronouns" },
+
+  { id: 214, sentence: "The ____ of this building is modern.", options: ["design", "designs", "designer", "designing"], answer: "design", explanation: "Danh từ phù hợp nghĩa câu.", topic: "Nouns" },
+
+  { id: 215, sentence: "My parents sent a gift to ____.", options: ["I", "me", "my", "mine"], answer: "me", explanation: "Object pronoun.", topic: "Pronouns" },
+
+  { id: 216, sentence: "There are several ____ in the waiting room.", options: ["person", "people", "peoples", "personnel"], answer: "people", explanation: "People là plural của person.", topic: "Nouns" },
+
+  { id: 217, sentence: "Is this notebook ____?", options: ["you", "your", "yours", "yourself"], answer: "yours", explanation: "Possessive pronoun.", topic: "Pronouns" },
+
+  { id: 218, sentence: "The company provides useful ____.", options: ["information", "informations", "inform", "informing"], answer: "information", explanation: "Danh từ không đếm được.", topic: "Nouns" },
+
+  { id: 219, sentence: "We enjoyed ____ at the party.", options: ["our", "ourselves", "us", "we"], answer: "ourselves", explanation: "Reflexive pronoun.", topic: "Pronouns" },
+
+  { id: 220, sentence: "The ____ of the product is excellent.", options: ["quality", "qualities", "qualify", "qualified"], answer: "quality", explanation: "Danh từ không đếm được trong nghĩa chung.", topic: "Nouns" },
+
+  { id: 221, sentence: "She asked ____ to join the meeting.", options: ["they", "them", "their", "theirs"], answer: "them", explanation: "Object pronoun.", topic: "Pronouns" },
+
+  { id: 222, sentence: "I bought two ____ of bread.", options: ["loaf", "loaves", "loafs", "loaving"], answer: "loaves", explanation: "Plural của loaf.", topic: "Nouns" },
+
+  { id: 223, sentence: "This is not ____ fault.", options: ["me", "mine", "my", "I"], answer: "my", explanation: "Possessive adjective.", topic: "Pronouns" },
+
+  { id: 224, sentence: "The ____ are working overtime.", options: ["team", "teams", "teamwork", "teaming"], answer: "teams", explanation: "Plural noun.", topic: "Nouns" },
+
+  { id: 225, sentence: "He blamed ____ for the mistake.", options: ["him", "himself", "his", "he"], answer: "himself", explanation: "Reflexive pronoun.", topic: "Pronouns" },
 ];
 
 const NOUN_PRON_HARD = [
@@ -268,6 +317,809 @@ const PASSIVE_HARD = [
   { id: 420, sentence: "The proposal ____ being discussed now.", options: ["is", "are", "was", "be"], answer: "is", explanation: "Passive continuous.", topic: "Passive" },
 ];
 
+const PART5_PRO_NOUNS = [
+  {
+    "id": 1,
+    "sentence": "Ms. Grier was surprised to learn that the CEO himself would be attending ____ presentation.",
+    "options": ["she", "her", "hers", "herself"],
+    "answer": "her",
+    "explanation": "Cần một tính từ sở hữu đứng trước danh từ 'presentation' để chỉ sự sở hữu.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 2,
+    "sentence": "The marketing team members are proud of the campaign that ____ designed for the new product.",
+    "options": ["they", "them", "their", "themselves"],
+    "answer": "they",
+    "explanation": "Cần một đại từ nhân xưng đóng vai trò chủ ngữ cho mệnh đề quan hệ rút gọn (they designed).",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 3,
+    "sentence": "Because the printer is broken, employees must fix it ____ or call a technician.",
+    "options": ["they", "them", "their", "themselves"],
+    "answer": "themselves",
+    "explanation": "Dùng đại từ phản thân 'themselves' để nhấn mạnh đối tượng tự thực hiện hành động (tự sửa).",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 4,
+    "sentence": "Any employee who has not yet submitted ____ travel expenses should do so by Friday.",
+    "options": ["he", "him", "his", "himself"],
+    "answer": "his",
+    "explanation": "Cần một tính từ sở hữu đứng trước cụm danh từ 'travel expenses'. 'His' hoặc 'Her' đều được, ở đây dùng 'His'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 5,
+    "sentence": "Mr. Tanabe and Ms. Jones have different management styles, but ____ both achieve excellent results.",
+    "options": ["we", "you", "they", "them"],
+    "answer": "they",
+    "explanation": "Dùng đại từ nhân xưng 'they' làm chủ ngữ thay thế cho hai người (Mr. Tanabe và Ms. Jones).",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 6,
+    "sentence": "Our company offers a better benefits package than ____ does.",
+    "options": ["they", "them", "their", "theirs"],
+    "answer": "theirs",
+    "explanation": "Dùng đại từ sở hữu 'theirs' để thay thế cho cụm 'their company', tránh lặp từ.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 7,
+    "sentence": "Please remind the candidates to bring copies of ____ resumes to the interview.",
+    "options": ["they", "them", "their", "theirs"],
+    "answer": "their",
+    "explanation": "Cần một tính từ sở hữu đứng trước danh từ số nhiều 'resumes'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 8,
+    "sentence": "The manager asked me to give the document to ____ as soon as I finish the report.",
+    "options": ["he", "him", "his", "himself"],
+    "answer": "him",
+    "explanation": "Cần một đại từ đóng vai trò tân ngữ (Object) sau giới từ 'to'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 9,
+    "sentence": "The software update will install ____ automatically once the download is complete.",
+    "options": ["it", "its", "itself", "they"],
+    "answer": "itself",
+    "explanation": "Dùng đại từ phản thân 'itself' để chỉ bản thân phần mềm tự cài đặt.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 10,
+    "sentence": "If your laptop is not working, you may borrow ____ for the afternoon.",
+    "options": ["I", "me", "my", "mine"],
+    "answer": "mine",
+    "explanation": "Dùng đại từ sở hữu 'mine' để thay thế cho cụm 'my laptop'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 11,
+    "sentence": "The security guard requested that all visitors identify _______ at the front desk.",
+    "options": ["them", "their", "theirs", "themselves"],
+    "answer": "themselves",
+    "explanation": "Dùng đại từ phản thân 'themselves' làm tân ngữ khi đối tượng thực hiện hành động (visitors) và đối tượng nhận hành động là một.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 12,
+    "sentence": "The quality of these handmade rugs is much higher than _______ produced in factories.",
+    "options": ["that", "those", "this", "these"],
+    "answer": "those",
+    "explanation": "Dùng đại từ chỉ định 'those' để thay thế cho danh từ số nhiều 'rugs' đã nhắc đến trước đó nhằm tránh lặp từ.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 13,
+    "sentence": "Mr. Harrison’s assistant will handle all correspondence while _______ is away on business.",
+    "options": ["he", "him", "his", "himself"],
+    "answer": "he",
+    "explanation": "Cần một đại từ nhân xưng làm chủ ngữ cho mệnh đề phụ 'while ____ is away'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 14,
+    "sentence": "Before selecting a health insurance plan, employees should compare several of _______.",
+    "options": ["they", "them", "their", "theirs"],
+    "answer": "them",
+    "explanation": "Dùng đại từ tân ngữ 'them' sau giới từ 'of' để thay thế cho 'health insurance plans'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 15,
+    "sentence": "The new software allows users to customize the interface to suit _______ preferences.",
+    "options": ["they", "them", "their", "theirs"],
+    "answer": "their",
+    "explanation": "Cần một tính từ sở hữu đứng trước danh từ 'preferences'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 16,
+    "sentence": "One of the interns has left _______ briefcase in the conference room.",
+    "options": ["him", "his", "he", "himself"],
+    "answer": "his",
+    "explanation": "Cần tính từ sở hữu để bổ nghĩa cho danh từ 'briefcase'. 'One of the interns' là số ít.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 17,
+    "sentence": "The CEO likes to visit the local branches and speak with the employees _______.",
+    "options": ["him", "his", "he", "himself"],
+    "answer": "himself",
+    "explanation": "Sử dụng đại từ phản thân 'himself' để nhấn mạnh rằng đích thân CEO thực hiện hành động.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 18,
+    "sentence": "Most of the clients expressed satisfaction with the services provided to _______.",
+    "options": ["they", "them", "their", "themselves"],
+    "answer": "them",
+    "explanation": "Cần đại từ làm tân ngữ đứng sau giới từ 'to'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 19,
+    "sentence": "Our marketing strategy is more aggressive than _______ of our competitors.",
+    "options": ["that", "those", "this", "these"],
+    "answer": "that",
+    "explanation": "Dùng 'that' để thay thế cho danh từ số ít 'strategy' nhằm tránh lặp lại.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 20,
+    "sentence": "We hope that the new policy will benefit _______ involved in the project.",
+    "options": ["everyone", "everywhere", "everything", "every"],
+    "answer": "everyone",
+    "explanation": "Cần một đại từ bất định chỉ người làm tân ngữ cho động từ 'benefit'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 21,
+    "sentence": "The technicians fixed the server issue by _______ before the office opened.",
+    "options": ["them", "their", "theirs", "themselves"],
+    "answer": "themselves",
+    "explanation": "Cấu trúc 'by + đại từ phản thân' (by themselves) có nghĩa là 'tự thân họ làm', không có sự trợ giúp.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 22,
+    "sentence": "We are looking for a candidate _______ communication skills are exceptional.",
+    "options": ["who", "whom", "whose", "which"],
+    "answer": "whose",
+    "explanation": "Dùng đại từ quan hệ 'whose' để chỉ sự sở hữu cho danh từ 'communication skills' (người mà có kỹ năng giao tiếp...).",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 23,
+    "sentence": "If the blue folder is not yours, then it must be _______.",
+    "options": ["she", "her", "hers", "herself"],
+    "answer": "hers",
+    "explanation": "Dùng đại từ sở hữu 'hers' để thay thế cho cụm 'her folder', đóng vai trò bổ ngữ sau động từ tobe.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 24,
+    "sentence": "The committee members should introduce _______ to the guest speaker.",
+    "options": ["them", "their", "theirs", "themselves"],
+    "answer": "themselves",
+    "explanation": "Chủ ngữ là 'members' và họ thực hiện hành động tự giới thiệu chính họ, nên dùng đại từ phản thân.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 25,
+    "sentence": "The sales figures for this quarter are much better than _______ of the previous one.",
+    "options": ["that", "those", "this", "these"],
+    "answer": "those",
+    "explanation": "Dùng 'those' để thay thế cho danh từ số nhiều 'sales figures' nhằm tránh lặp lại.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 26,
+    "sentence": "The manager is not sure _______ of the two candidates is better suited for the role.",
+    "options": ["who", "which", "whom", "whose"],
+    "answer": "which",
+    "explanation": "Khi có sự lựa chọn giữa một số lượng đối tượng giới hạn (ở đây là 2), ta dùng 'which' để hỏi/chỉ đối tượng cụ thể.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 27,
+    "sentence": "Any employee _______ wishes to join the workshop must register by noon.",
+    "options": ["who", "whom", "whose", "which"],
+    "answer": "who",
+    "explanation": "Đại từ quan hệ 'who' làm chủ ngữ thay thế cho người (Any employee) trong mệnh đề quan hệ.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 28,
+    "sentence": "The instructions on the box are so unclear that I cannot understand _______.",
+    "options": ["it", "its", "them", "theirs"],
+    "answer": "them",
+    "explanation": "Tân ngữ 'them' thay thế cho danh từ số nhiều 'instructions' đã nhắc tới phía trước.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 29,
+    "sentence": "Ms. Lawson handles most of the client accounts _______ because her assistant is on leave.",
+    "options": ["she", "her", "hers", "herself"],
+    "answer": "herself",
+    "explanation": "Dùng đại từ phản thân ở cuối mệnh đề để nhấn mạnh chính chủ thể (Ms. Lawson) là người thực hiện hành động.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 30,
+    "sentence": "While the project is difficult, _______ completion will bring great prestige to the firm.",
+    "options": ["it", "its", "it's", "itself"],
+    "answer": "its",
+    "explanation": "Cần tính từ sở hữu 'its' (của nó) đứng trước danh từ 'completion'. Lưu ý 'it's' là viết tắt của 'it is'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 31,
+    "sentence": "If this printer is currently in use, please try _______ one down the hall.",
+    "options": ["other", "another", "others", "the others"],
+    "answer": "another",
+    "explanation": "Dùng 'another' (một cái khác) trước danh từ số ít đếm được (one). 'Other' thường đi với danh từ số nhiều hoặc không đếm được.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 32,
+    "sentence": "The marketing and sales departments must cooperate with _______ to achieve the quarterly targets.",
+    "options": ["each other", "one", "another", "other"],
+    "answer": "each other",
+    "explanation": "Dùng 'each other' (nhau) để chỉ sự tương tác qua lại giữa hai đối tượng hoặc hai nhóm.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 33,
+    "sentence": "Some board members supported the merger, while _______ strongly opposed it.",
+    "options": ["other", "others", "another", "the other"],
+    "answer": "others",
+    "explanation": "Dùng 'others' (những người khác) làm chủ ngữ, thay thế cho 'other board members'. Không dùng 'other' vì thiếu danh từ phía sau.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 34,
+    "sentence": "Only _______ with a valid security badge are allowed to enter the server room.",
+    "options": ["that", "this", "those", "them"],
+    "answer": "those",
+    "explanation": "Dùng 'those' với nghĩa là 'những người' (those people) khi đi kèm với mệnh đề quan hệ rút gọn hoặc cụm giới từ.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 35,
+    "sentence": "Please review the attached contract and sign _______ at the bottom of the last page.",
+    "options": ["it", "its", "them", "they"],
+    "answer": "it",
+    "explanation": "Cần đại từ tân ngữ thay thế cho danh từ số ít 'contract'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 36,
+    "sentence": "Although the laptop is expensive, _______ features make it worth the price.",
+    "options": ["it", "its", "it's", "itself"],
+    "answer": "its",
+    "explanation": "Cần tính từ sở hữu 'its' (của nó) đứng trước danh từ 'features'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 37,
+    "sentence": "_______ is important to double-check all data before generating the final report.",
+    "options": ["It", "There", "That", "This"],
+    "answer": "It",
+    "explanation": "Cấu trúc chủ ngữ giả: 'It is + tính từ + to V' (Thật là... để làm gì đó).",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 38,
+    "sentence": "Ms. Johnson, _______ has been with the company for ten years, was promoted yesterday.",
+    "options": ["who", "whom", "whose", "which"],
+    "answer": "who",
+    "explanation": "Dùng đại từ quan hệ 'who' làm chủ ngữ thay thế cho người (Ms. Johnson) trong mệnh đề quan hệ không xác định.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 39,
+    "sentence": "Neither of the candidates was suitable, so we have to interview _______.",
+    "options": ["other", "others", "another", "each other"],
+    "answer": "others",
+    "explanation": "Cần một đại từ đóng vai trò tân ngữ. 'Others' ở đây thay thế cho 'other candidates'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 40,
+    "sentence": "My proposal was accepted, but _______ was rejected by the committee.",
+    "options": ["she", "her", "hers", "herself"],
+    "answer": "hers",
+    "explanation": "Dùng đại từ sở hữu 'hers' làm chủ ngữ, thay thế cho cụm 'her proposal'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 41,
+    "sentence": "The extensive report covers _______ was discussed during the quarterly board meeting.",
+    "options": ["that", "which", "what", "it"],
+    "answer": "what",
+    "explanation": "Cần một đại từ làm chủ ngữ cho mệnh đề danh ngữ '... was discussed'. 'What' = 'the thing that'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 42,
+    "sentence": "_______ of the employees who attended the training session found it beneficial.",
+    "options": ["Almost", "Most", "The most", "Mostly"],
+    "answer": "Most",
+    "explanation": "'Most' đóng vai trò đại từ (Most of + N). 'Almost' là trạng từ, không đi trực tiếp với danh từ/giới từ.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 43,
+    "sentence": "Mr. Lee is the architect _______ design won the competition for the new city library.",
+    "options": ["who", "whom", "whose", "which"],
+    "answer": "whose",
+    "explanation": "Dùng 'whose' để chỉ sự sở hữu cho danh từ 'design' (người kiến trúc sư mà thiết kế của ông ấy...).",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 44,
+    "sentence": "If you have any questions regarding the new policy, please direct _______ to the HR manager.",
+    "options": ["they", "them", "their", "themselves"],
+    "answer": "them",
+    "explanation": "Cần đại từ tân ngữ 'them' thay thế cho 'questions' (số nhiều) sau động từ 'direct'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 45,
+    "sentence": "_______ who wishes to participate in the seminar must register online by Friday.",
+    "options": ["Anyone", "Someone", "Everyone", "No one"],
+    "answer": "Anyone",
+    "explanation": "Dùng 'Anyone' (bất cứ ai) kết hợp với mệnh đề quan hệ 'who wishes...' để chỉ đối tượng không xác định cụ thể.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 46,
+    "sentence": "The two companies agreed to share resources and help _______ during the busy season.",
+    "options": ["one another", "each other", "the other", "others"],
+    "answer": "each other",
+    "explanation": "Dùng 'each other' (lẫn nhau) khi nói về sự tương tác giữa hai đối tượng/nhóm.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 47,
+    "sentence": "The final decision is not _______ to make, but rather the board of directors'.",
+    "options": ["my", "mine", "me", "I"],
+    "answer": "mine",
+    "explanation": "Dùng đại từ sở hữu 'mine' (của tôi) làm bổ ngữ, thay thế cho cụm 'my decision'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 48,
+    "sentence": "_______ appears that the negotiation will continue for another week.",
+    "options": ["This", "That", "It", "There"],
+    "answer": "It",
+    "explanation": "Chủ ngữ giả 'It' trong cấu trúc 'It appears that...' (Có vẻ như là...).",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 49,
+    "sentence": "Please provide the names of _______ responsible for organizing the event.",
+    "options": ["that", "this", "those", "these"],
+    "answer": "those",
+    "explanation": "Dùng 'those' (những người) đi kèm với tính từ 'responsible' (rút gọn của 'those who are responsible').",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 50,
+    "sentence": "Neither the manager nor the assistant could find _______ keys to the office.",
+    "options": ["he", "him", "his", "himself"],
+    "answer": "his",
+    "explanation": "Cần tính từ sở hữu 'his' trước danh từ 'keys'. (Lưu ý: Trong văn phạm truyền thống dùng 'his', hiện đại có thể dùng 'their').",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 51,
+    "sentence": "The manual makes _______ clear that safety gear must be worn at all times.",
+    "options": ["it", "that", "this", "them"],
+    "answer": "it",
+    "explanation": "Cấu trúc 'Make it + adj + that/to V' (Làm cho điều gì đó trở nên rõ ràng...). 'It' ở đây là tân ngữ giả thay thế cho mệnh đề phía sau.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 52,
+    "sentence": "_______ wants to join the planning committee should sign up by Friday.",
+    "options": ["Who", "Whoever", "Whomever", "Whose"],
+    "answer": "Whoever",
+    "explanation": "'Whoever' (bất cứ ai) làm chủ ngữ cho mệnh đề danh ngữ 'Whoever wants...'. Mệnh đề này đóng vai trò chủ ngữ chính của cả câu.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 53,
+    "sentence": "The two divisions have often collaborated with _______ on large-scale projects.",
+    "options": ["one another", "the other", "others", "another"],
+    "answer": "one another",
+    "explanation": "Tương tự 'each other', 'one another' dùng để chỉ sự tương tác qua lại giữa nhiều đối tượng (thường là 3 trở lên, nhưng trong TOEIC hiện đại có thể dùng thay thế cho each other).",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 54,
+    "sentence": "Customers should retain their receipts in case _______ wish to return a defective item.",
+    "options": ["they", "them", "their", "themselves"],
+    "answer": "they",
+    "explanation": "Cần đại từ chủ ngữ 'they' thay thế cho 'Customers' trong mệnh đề trạng ngữ 'in case...'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 55,
+    "sentence": "The library has many books, but the most valuable _______ are kept in a secure room.",
+    "options": ["one", "ones", "once", "on"],
+    "answer": "ones",
+    "explanation": "Dùng 'ones' để thay thế cho danh từ số nhiều 'books' đã nhắc trước đó.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 56,
+    "sentence": "Of all the designs submitted, _______ was selected for the final round.",
+    "options": ["none", "no", "not", "nothing"],
+    "answer": "none",
+    "explanation": "Dùng 'none' (không cái nào) làm đại từ chủ ngữ. 'No' là tính từ (phải đi kèm danh từ).",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 57,
+    "sentence": "We need to hire an assistant _______ main responsibility will be managing the schedule.",
+    "options": ["who", "whom", "whose", "which"],
+    "answer": "whose",
+    "explanation": "Dùng 'whose' để chỉ sở hữu (trợ lý mà trách nhiệm chính của người đó là...).",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 58,
+    "sentence": "_______ of the two options seems suitable for our current budget.",
+    "options": ["Neither", "Either", "Both", "All"],
+    "answer": "Neither",
+    "explanation": "Động từ 'seems' chia số ít -> Chọn 'Neither' (không cái nào trong 2 cái). 'Both' (cả hai) đi với động từ số nhiều.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 59,
+    "sentence": "The technician found the problem and fixed _______ within an hour.",
+    "options": ["it", "its", "them", "theirs"],
+    "answer": "it",
+    "explanation": "Cần tân ngữ số ít thay thế cho 'the problem'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 60,
+    "sentence": "The director decided to handle the negotiations _______ rather than hiring a consultant.",
+    "options": ["him", "his", "he", "himself"],
+    "answer": "himself",
+    "explanation": "Dùng đại từ phản thân để nhấn mạnh chủ thể tự làm (contrast với việc thuê người khác).",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 61,
+    "sentence": "Every _______ is expected to complete the compliance training by the end of the month.",
+    "options": ["employ", "employee", "employees", "employed"],
+    "answer": "employee",
+    "explanation": "Sau lượng từ 'Every' (mỗi) luôn là danh từ đếm được số ít.",
+    "topic": "Nouns/Pronouns"
+  },
+  {
+    "id": 62,
+    "sentence": "Ms. Sato insisted on finishing the proposal on _______ own without any assistance.",
+    "options": ["she", "her", "hers", "herself"],
+    "answer": "her",
+    "explanation": "Cấu trúc 'on + one's + own' = 'by oneself' (tự mình làm). Cần tính từ sở hữu 'her'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 63,
+    "sentence": "The client to _______ we sent the contract has not replied yet.",
+    "options": ["who", "whom", "which", "whose"],
+    "answer": "whom",
+    "explanation": "Khi đại từ quan hệ chỉ người đứng sau giới từ (to), bắt buộc dùng 'whom', không dùng 'who'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 64,
+    "sentence": "We have only _______ time left before the presentation starts.",
+    "options": ["a few", "a little", "many", "few"],
+    "answer": "a little",
+    "explanation": "Danh từ 'time' (thời gian) là không đếm được, nên dùng 'a little'. 'A few/Many' dùng cho danh từ đếm được.",
+    "topic": "Pronouns/Quantifiers"
+  },
+  {
+    "id": 65,
+    "sentence": "The population of the city is much larger than _______ of the surrounding towns.",
+    "options": ["this", "that", "these", "those"],
+    "answer": "that",
+    "explanation": "Dùng 'that' để thay thế cho danh từ số ít 'population' phía trước. Cấu trúc so sánh: 'that of'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 66,
+    "sentence": "_______ is more important to our company than customer satisfaction.",
+    "options": ["Nothing", "None", "No one", "Anything"],
+    "answer": "Nothing",
+    "explanation": "Dùng đại từ bất định 'Nothing' (Không có gì) làm chủ ngữ chỉ vật/sự việc.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 67,
+    "sentence": "A colleague of _______ recommended this software for project management.",
+    "options": ["me", "my", "mine", "I"],
+    "answer": "mine",
+    "explanation": "Cấu trúc sở hữu kép (Double Genitive): 'A + Noun + of + Đại từ sở hữu' (A friend of mine).",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 68,
+    "sentence": "The team members congratulated _______ on the successful launch of the product.",
+    "options": ["one another", "the other", "others", "another"],
+    "answer": "one another",
+    "explanation": "Dùng 'one another' (nhau) để chỉ hành động tương tác qua lại giữa nhiều người trong nhóm.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 69,
+    "sentence": "The company has two main branches, neither of _______ is profitable.",
+    "options": ["which", "whom", "them", "that"],
+    "answer": "which",
+    "explanation": "Trong mệnh đề quan hệ không xác định, sau giới từ (of) chỉ vật, dùng 'which'. Nếu dùng 'them' sẽ bị lỗi hai mệnh đề độc lập nối nhau bằng dấu phẩy (Comma Splice).",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 70,
+    "sentence": "The _______ of the new security system will take approximately three days.",
+    "options": ["install", "installation", "installed", "installer"],
+    "answer": "installation",
+    "explanation": "Sau mạo từ 'The' cần một danh từ. Dựa vào ngữ nghĩa (việc lắp đặt), chọn 'installation'.",
+    "topic": "Nouns"
+  },
+  {
+    "id": 71,
+    "sentence": "Please let _______ know if you need any further assistance with the installation.",
+    "options": ["we", "us", "our", "ours"],
+    "answer": "us",
+    "explanation": "Cấu trúc 'Let + Tân ngữ + V-bare'. Cần đại từ tân ngữ 'us'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 72,
+    "sentence": "_______ of the equipment needs to be replaced before the inspection next week.",
+    "options": ["Many", "Much", "Few", "Several"],
+    "answer": "Much",
+    "explanation": "'Equipment' là danh từ không đếm được, nên phải dùng 'Much'. 'Many/Few/Several' đi với danh từ đếm được số nhiều.",
+    "topic": "Pronouns/Quantifiers"
+  },
+  {
+    "id": 73,
+    "sentence": "The new laptop bag is not mine; perhaps it is _______.",
+    "options": ["your", "yours", "you", "yourself"],
+    "answer": "yours",
+    "explanation": "Dùng đại từ sở hữu 'yours' (của bạn) đứng một mình làm bổ ngữ, thay thế cho 'your bag'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 74,
+    "sentence": "Those _______ strictly follow the safety guidelines will be rewarded.",
+    "options": ["who", "which", "whom", "whose"],
+    "answer": "who",
+    "explanation": "Cấu trúc 'Those who...' (Những người mà...) là cấu trúc kinh điển trong TOEIC chỉ một nhóm người cụ thể.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 75,
+    "sentence": "The director expressed his _______ for the team's hard work during the crisis.",
+    "options": ["appreciate", "appreciation", "appreciative", "appreciated"],
+    "answer": "appreciation",
+    "explanation": "Sau tính từ sở hữu 'his' cần một danh từ. Đuôi -tion là dấu hiệu của danh từ.",
+    "topic": "Nouns"
+  },
+  {
+    "id": 76,
+    "sentence": "Unlike his colleagues, Mr. Evans prefers to work by _______.",
+    "options": ["he", "him", "his", "himself"],
+    "answer": "himself",
+    "explanation": "Cụm 'by himself' = 'alone' (một mình).",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 77,
+    "sentence": "The cost of living in this city is higher than _______ of my hometown.",
+    "options": ["that", "those", "this", "these"],
+    "answer": "that",
+    "explanation": "Dùng 'that' để thay thế cho danh từ số ít 'cost' phía trước (The cost of living... that of...).",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 78,
+    "sentence": "Employees must present _______ identification cards to enter the building.",
+    "options": ["they", "them", "their", "theirs"],
+    "answer": "their",
+    "explanation": "Cần tính từ sở hữu 'their' đứng trước cụm danh từ 'identification cards'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 79,
+    "sentence": "_______ of the applicants was qualified for the position, so we reopened the job posting.",
+    "options": ["None", "No", "Not", "Nothing"],
+    "answer": "None",
+    "explanation": "Dùng 'None' (of the...) làm chủ ngữ. 'No' phải đi kèm danh từ ngay sau nó.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 80,
+    "sentence": "To ensure fairness, the manager asked the two employees to evaluate _______ performance reviews.",
+    "options": ["each other", "one another's", "the other", "others"],
+    "answer": "one another's",
+    "explanation": "Cần sở hữu cách của đại từ tương hỗ: 'đánh giá bài nhận xét hiệu suất của nhau'. (one another's reviews).",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 81,
+    "sentence": "The board granted its _______ for the merger after reviewing the financial reports.",
+    "options": ["approve", "approves", "approval", "approvingly"],
+    "answer": "approval",
+    "explanation": "Cần một danh từ sau tính từ sở hữu 'its'. Lưu ý: 'Approval' (sự chấp thuận) có đuôi -al nhưng là danh từ, không phải tính từ.",
+    "topic": "Nouns"
+  },
+  {
+    "id": 82,
+    "sentence": "_______ of the participants in the survey indicated that they prefer online shopping.",
+    "options": ["A few", "Little", "Much", "Every"],
+    "answer": "A few",
+    "explanation": "'Participants' là danh từ đếm được số nhiều. 'A few' đi với danh từ đếm được. 'Little/Much' đi với không đếm được. 'Every' đi với số ít.",
+    "topic": "Pronouns/Quantifiers"
+  },
+  {
+    "id": 83,
+    "sentence": "The manager decided to handle the customer complaint _______.",
+    "options": ["he", "him", "his", "himself"],
+    "answer": "himself",
+    "explanation": "Dùng đại từ phản thân 'himself' ở cuối câu để nhấn mạnh chủ thể tự thực hiện hành động.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 84,
+    "sentence": "All employees are expected to clean up after _______ in the break room.",
+    "options": ["they", "them", "their", "themselves"],
+    "answer": "themselves",
+    "explanation": "Cụm 'clean up after oneself' (dọn dẹp sau khi bày bừa). Cần đại từ phản thân 'themselves'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 85,
+    "sentence": "The proposed budget cuts will affect every department except _______.",
+    "options": ["our", "ours", "us", "we"],
+    "answer": "ours",
+    "explanation": "Dùng đại từ sở hữu 'ours' (của chúng tôi) để thay thế cho cụm 'our department'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 86,
+    "sentence": "Anyone _______ has questions about the new policy should contact HR immediately.",
+    "options": ["who", "whom", "whose", "which"],
+    "answer": "who",
+    "explanation": "Dùng 'who' làm chủ ngữ cho mệnh đề quan hệ bổ nghĩa cho đại từ bất định 'Anyone'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 87,
+    "sentence": "The final decision regarding the project timeline is _______.",
+    "options": ["you", "your", "yours", "yourself"],
+    "answer": "yours",
+    "explanation": "Cần đại từ sở hữu 'yours' (của bạn/quyền của bạn) làm bổ ngữ sau động từ tobe 'is'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 88,
+    "sentence": "Despite the delay, the construction crew managed to complete the building by _______.",
+    "options": ["it", "its", "itself", "they"],
+    "answer": "itself",
+    "explanation": "Trong ngữ cảnh này, nếu 'building' là chủ thể thì 'complete by itself' (tự hoàn thành) không hợp lý. Tuy nhiên, xét đáp án: 'by itself' (tự nó/một mình nó). Câu này thường bẫy về cụm 'by themselves' (đội thợ tự làm), nhưng nếu chủ ngữ là 'crew' (số ít tập hợp) có thể dùng 'itself'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 89,
+    "sentence": "Please ensure that _______ sensitive documents are shredded before disposal.",
+    "options": ["all", "every", "each", "much"],
+    "answer": "all",
+    "explanation": "Dùng 'all' đi với danh từ số nhiều 'documents'. 'Every/Each' đi với danh từ số ít. 'Much' đi với không đếm được.",
+    "topic": "Pronouns/Quantifiers"
+  },
+  {
+    "id": 90,
+    "sentence": "The updated software is compatible with both Windows and Mac, unlike _______ predecessor.",
+    "options": ["it", "its", "it's", "they"],
+    "answer": "its",
+    "explanation": "Cần tính từ sở hữu 'its' (của nó) trước danh từ 'predecessor' (phiên bản tiền nhiệm).",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 91,
+    "sentence": "If you need a calculator for the exam, the proctor can lend you _______.",
+    "options": ["one", "it", "some", "any"],
+    "answer": "one",
+    "explanation": "Dùng 'one' (một cái) để thay thế cho danh từ đếm được số ít 'calculator' được nhắc đến chung chung (không xác định cụ thể cái nào). 'It' dùng cho vật xác định cụ thể.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 92,
+    "sentence": "The CEO _______ will present the Employee of the Year award at the gala.",
+    "options": ["he", "him", "his", "himself"],
+    "answer": "himself",
+    "explanation": "Đại từ phản thân 'himself' đứng ngay sau chủ ngữ (The CEO) để nhấn mạnh chính ông ấy sẽ làm việc đó.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 93,
+    "sentence": "Despite the fierce competition, the two companies have a lot of respect for _______.",
+    "options": ["each other", "the other", "others", "another"],
+    "answer": "each other",
+    "explanation": "Dùng 'each other' sau giới từ 'for' để chỉ sự tôn trọng lẫn nhau giữa hai đối tượng.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 94,
+    "sentence": "_______ of the new interns has been assigned a mentor yet.",
+    "options": ["None", "No", "Not", "Any"],
+    "answer": "None",
+    "explanation": "Dùng 'None' (of...) làm chủ ngữ. 'No' cần danh từ đi kèm. 'Not' là trạng từ phủ định.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 95,
+    "sentence": "For _______ is the package on the reception desk intended?",
+    "options": ["who", "whom", "whose", "which"],
+    "answer": "whom",
+    "explanation": "Giới từ 'For' đứng đầu câu hỏi -> Bắt buộc dùng 'whom' (đối với người). (For whom is... = The package is intended for whom?).",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 96,
+    "sentence": "Please hand your completed timesheets to Mr. Lee or _______ before leaving.",
+    "options": ["I", "me", "my", "mine"],
+    "answer": "me",
+    "explanation": "Cần đại từ tân ngữ (Object Pronoun) sau giới từ 'to'. Cấu trúc: 'to Mr. Lee or me'. (Rất nhiều người sai chọn 'I').",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 97,
+    "sentence": "The board of directors expressed _______ gratitude for the staff's dedication.",
+    "options": ["its", "their", "theirs", "it"],
+    "answer": "its",
+    "explanation": "'The board of directors' thường được xem là một thực thể thống nhất (tập hợp) nên dùng tính từ sở hữu số ít 'its'. (Tuy nhiên, nếu ngữ cảnh nhấn mạnh từng thành viên thì dùng 'their', nhưng trong TOEIC, tổ chức thường đi với 'its').",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 98,
+    "sentence": "_______ is essential that we meet the production deadline this month.",
+    "options": ["This", "That", "It", "There"],
+    "answer": "It",
+    "explanation": "Cấu trúc chủ ngữ giả 'It is + adj + that...'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 99,
+    "sentence": "We cannot afford to let _______ fall behind schedule on this critical project.",
+    "options": ["us", "our", "ours", "ourselves"],
+    "answer": "ourselves",
+    "explanation": "Chủ ngữ là 'We', tân ngữ cũng là chính chúng ta -> Dùng đại từ phản thân 'ourselves'.",
+    "topic": "Pronouns"
+  },
+  {
+    "id": 100,
+    "sentence": "_______ interested in the position should submit a resume and cover letter.",
+    "options": ["Anyone", "Whoever", "Those", "They"],
+    "answer": "Those",
+    "explanation": "Cấu trúc 'Those + V-ed/adj' (Những người mà...). Nếu dùng 'Anyone', câu đầy đủ phải là 'Anyone who is interested...'. Ở đây 'interested' là rút gọn mệnh đề quan hệ, 'Those' phù hợp nhất.",
+    "topic": "Pronouns"
+  }
+];
+
 const MIXED_EASY = DEFAULT_QUESTIONS;
 const MIXED_HARD = DEFAULT_HARD_QUESTIONS;
 
@@ -306,8 +1158,8 @@ export const EXERCISE_DATA = {
           { id: 20, word: "Expense", meaning: "Chi phi", type: "Noun" },
         ],
       },
-      "reading-grammar": { description: "Doc hieu + grammar", total: 10, questions: { easy: MIXED_EASY, hard: MIXED_HARD } },
-      "part6-grammar": { description: "Part 6 co ban", total: 10, questions: { easy: MIXED_EASY, hard: MIXED_HARD } },
+      "reading-grammar": { description: "Doc hieu + grammar", total: 10, questions: { easy: PART5_PRO_NOUNS, hard: MIXED_HARD } },
+      // "part6-grammar": { description: "Part 6 co ban", total: 10, questions: { easy: PART5_PRO_NOUNS, hard: MIXED_HARD } },
     },
   },
 

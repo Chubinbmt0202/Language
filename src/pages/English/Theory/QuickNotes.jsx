@@ -1,69 +1,61 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-hooks/set-state-in-effect */
+/* eslint-disable react-hooks/purity */
 import React, { useEffect, useMemo, useState } from "react";
 import { Button, Card, Empty, Input, List, Tooltip, Typography, message } from "antd";
 import { DeleteOutlined, FormOutlined, SaveOutlined } from "@ant-design/icons";
 import { markLessonMissionDone } from "../../../util/lessonMissions";
+import { auth } from "../../../firebase/firebase";
+import { onAuthStateChanged } from "firebase/auth";
 
 const { Text } = Typography;
 const { TextArea } = Input;
 
 const STORAGE_PREFIX = "theory_lesson_notes:";
 
-const safeParseJson = (value, fallback) => {
-  if (!value) return fallback;
-  try {
-    return JSON.parse(value);
-  } catch {
-    return fallback;
-  }
-};
-
-const formatNoteTime = (createdAt) => {
-  try {
-    const date = new Date(createdAt);
-    return date.toLocaleString([], {
-      hour: "2-digit",
-      minute: "2-digit",
-      day: "2-digit",
-      month: "2-digit",
-    });
-  } catch {
-    return "";
-  }
-};
-
 const QuickNotes = ({ taskId, seedNotes }) => {
-  const storageKey = taskId ? `${STORAGE_PREFIX}${taskId}` : null;
-  const initialSeed = useMemo(() => {
-    if (!Array.isArray(seedNotes)) return [];
-    return seedNotes
-      .filter((n) => typeof n === "string" && n.trim())
-      .map((content) => ({
-        id: `${Date.now()}-${Math.random()}`,
-        content,
-        createdAt: new Date().toISOString(),
-      }));
-  }, [seedNotes]);
-
+  const [uid, setUid] = useState(() => auth.currentUser?.uid ?? null);
   const [notes, setNotes] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
+  // 1. Tạo key duy nhất cho mỗi user và mỗi bài học
+  const storageKey = useMemo(() => {
+    return uid && taskId ? `${STORAGE_PREFIX}${uid}:${taskId}` : null;
+  }, [uid, taskId]);
+
+  // 2. Theo dõi trạng thái đăng nhập
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    if (!storageKey) return;
-    const stored = safeParseJson(window.localStorage.getItem(storageKey), null);
-    if (Array.isArray(stored)) {
-      setNotes(stored);
-      return;
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setUid(user?.uid ?? null);
+    });
+    return unsubscribe;
+  }, []);
+
+  // 3. Đọc dữ liệu từ Storage khi storageKey thay đổi
+  useEffect(() => {
+    if (typeof window === "undefined" || !storageKey) return;
+
+    const savedNotes = localStorage.getItem(storageKey);
+    if (savedNotes) {
+      try {
+        setNotes(JSON.parse(savedNotes));
+      } catch (e) {
+        setNotes([]);
+      }
+    } else {
+      // Nếu không có trong storage thì mới dùng seedNotes (nếu có)
+      const initialSeed = Array.isArray(seedNotes) 
+        ? seedNotes.map(n => ({
+            id: `${Date.now()}-${Math.random()}`,
+            content: n,
+            createdAt: new Date().toISOString(),
+          }))
+        : [];
+      setNotes(initialSeed);
     }
-    setNotes(initialSeed);
-  }, [storageKey, initialSeed]);
+  }, [storageKey, seedNotes]);
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    if (!storageKey) return;
-    window.localStorage.setItem(storageKey, JSON.stringify(notes));
-  }, [notes, storageKey]);
-
+  // 4. Hàm Lưu ghi chú mới
   const handleAddNote = () => {
     const content = inputValue.trim();
     if (!content) return;
@@ -74,18 +66,34 @@ const QuickNotes = ({ taskId, seedNotes }) => {
       createdAt: new Date().toISOString(),
     };
 
-    setNotes((prev) => [newNote, ...prev]);
+    const updatedNotes = [newNote, ...notes];
+    
+    // Cập nhật state và lưu vào localStorage ngay lập tức
+    setNotes(updatedNotes);
+    if (storageKey) {
+      localStorage.setItem(storageKey, JSON.stringify(updatedNotes));
+    }
+
     setInputValue("");
     message.success("Đã lưu ghi chú!");
     markLessonMissionDone(taskId, "notes");
   };
 
+  // 5. Hàm Xóa từng ghi chú
   const handleDelete = (id) => {
-    setNotes((prev) => prev.filter((n) => n.id !== id));
+    const updatedNotes = notes.filter((n) => n.id !== id);
+    setNotes(updatedNotes);
+    if (storageKey) {
+      localStorage.setItem(storageKey, JSON.stringify(updatedNotes));
+    }
   };
 
+  // 6. Hàm Xóa tất cả
   const handleClearAll = () => {
     setNotes([]);
+    if (storageKey) {
+      localStorage.removeItem(storageKey);
+    }
     message.success("Đã xóa toàn bộ ghi chú.");
   };
 
@@ -129,8 +137,10 @@ const QuickNotes = ({ taskId, seedNotes }) => {
       {notes.length > 0 ? (
         <List
           dataSource={notes}
+          style={{ maxHeight: 320, overflowY: "auto" }}
           renderItem={(item) => (
             <div
+              key={item.id}
               style={{
                 background: "#fffbe6",
                 padding: "10px 12px",
@@ -141,7 +151,7 @@ const QuickNotes = ({ taskId, seedNotes }) => {
             >
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
                 <Text type="secondary" style={{ fontSize: 11 }}>
-                  {formatNoteTime(item.createdAt)}
+                  {new Date(item.createdAt).toLocaleString()}
                 </Text>
                 <Tooltip title="Xóa">
                   <DeleteOutlined
@@ -155,7 +165,6 @@ const QuickNotes = ({ taskId, seedNotes }) => {
               </Text>
             </div>
           )}
-          style={{ maxHeight: 320, overflowY: "auto" }}
         />
       ) : (
         <Empty description="Chưa có ghi chú nào" image={Empty.PRESENTED_IMAGE_SIMPLE} />
