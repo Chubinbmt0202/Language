@@ -1,5 +1,12 @@
 /* eslint-disable no-unused-vars */
+import { auth } from "../firebase/firebase";
+
 export const TASK_PROGRESS_STORAGE_KEY = "taskProgress";
+
+const getUserKey = () => {
+  const user = auth.currentUser;
+  return user ? `${TASK_PROGRESS_STORAGE_KEY}_${user.uid}` : null;
+};
 
 const normalizeEntry = (entry) => {
   if (entry && typeof entry === "object") {
@@ -15,9 +22,12 @@ export const loadTaskProgress = () => {
   if (typeof window === "undefined") {
     return {};
   }
+  
+  const key = getUserKey();
+  if (!key) return {}; // Reset về 0/rỗng nếu chưa login
 
   try {
-    const stored = window.localStorage.getItem(TASK_PROGRESS_STORAGE_KEY);
+    const stored = window.localStorage.getItem(key);
     const parsed = stored ? JSON.parse(stored) : {};
     const normalized = {};
     Object.entries(parsed || {}).forEach(([taskId, value]) => {
@@ -30,18 +40,22 @@ export const loadTaskProgress = () => {
 };
 
 export const saveTaskProgress = (progressMap) => {
-  if (typeof window === "undefined") {
-    return;
-  }
+  if (typeof window === "undefined") return;
+
+  const key = getUserKey();
+  if (!key) return; // Không lưu nếu chưa login
 
   window.localStorage.setItem(
-    TASK_PROGRESS_STORAGE_KEY,
+    key,
     JSON.stringify(progressMap),
   );
 };
 
 export const incrementTaskProgress = (taskId, maxLevel = 10) => {
+  // Logic giữ nguyên, chỉ thay đổi load/save đã xử lý key ở trên
   const progressMap = loadTaskProgress();
+  // Nếu chưa login, progressMap là {}, nên bắt đầu từ 0
+  
   const currentState = normalizeEntry(progressMap[taskId]);
   const nextProgress = currentState.progress + 1;
 

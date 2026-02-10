@@ -1,26 +1,34 @@
-// utils/historyStorage.js
+import { auth } from "../firebase/firebase";
 
-const STORAGE_KEY = 'quiz_history';
+const BASE_KEY = 'quiz_history';
+
+const getUserKey = () => {
+  const user = auth.currentUser;
+  return user ? `${BASE_KEY}_${user.uid}` : null;
+};
 
 export const saveQuizToHistory = (questions, config) => {
   try {
+    const key = getUserKey();
+    if (!key) return false; // Không lưu nếu chưa login
+
     // 1. Lấy dữ liệu cũ
-    const existingHistory = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+    const existingHistory = JSON.parse(localStorage.getItem(key) || '[]');
 
     // 2. Tạo bản ghi mới
     const newRecord = {
-      id: Date.now(), // Dùng timestamp làm ID duy nhất
+      id: Date.now(), 
       date: new Date().toLocaleString('vi-VN'),
-      config: config, // Lưu lại cấu hình (Level N5, Topic...)
-      questions: questions, // Lưu bộ câu hỏi
-      score: null // Chưa làm nên chưa có điểm
+      config: config, 
+      questions: questions, 
+      score: null 
     };
 
-    // 3. Thêm vào đầu danh sách (Mới nhất lên trên)
+    // 3. Thêm vào đầu danh sách
     const updatedHistory = [newRecord, ...existingHistory];
 
-    // 4. Lưu lại (Giới hạn lưu 50 đề gần nhất để tránh đầy bộ nhớ)
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedHistory.slice(0, 50)));
+    // 4. Lưu lại
+    localStorage.setItem(key, JSON.stringify(updatedHistory.slice(0, 50)));
     
     return true;
   } catch (error) {
@@ -30,9 +38,12 @@ export const saveQuizToHistory = (questions, config) => {
 };
 
 export const getHistory = () => {
-  return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+  const key = getUserKey();
+  if (!key) return []; // Reset 0
+  return JSON.parse(localStorage.getItem(key) || '[]');
 };
 
 export const clearHistory = () => {
-  localStorage.removeItem(STORAGE_KEY);
+  const key = getUserKey();
+  if (key) localStorage.removeItem(key);
 };

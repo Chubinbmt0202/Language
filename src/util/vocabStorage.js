@@ -1,8 +1,20 @@
-const STORAGE_KEY = "vocabData";
+import { auth } from "../firebase/firebase";
+
+const BASE_KEY = "vocabData";
+
+const getUserKey = () => {
+  const user = auth.currentUser;
+  return user ? `${BASE_KEY}_${user.uid}` : null;
+};
 
 export const getVocabData = () => {
   try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {
+    const key = getUserKey();
+    if (!key) {
+       return { en: { topics: {} }, jp: { topics: {} } };
+    }
+
+    return JSON.parse(localStorage.getItem(key)) || {
       en: { topics: {} },
       jp: { topics: {} }
     };
@@ -12,5 +24,8 @@ export const getVocabData = () => {
 };
 
 export const saveVocabData = (data) => {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  const key = getUserKey();
+  if (key) {
+    localStorage.setItem(key, JSON.stringify(data));
+  }
 };

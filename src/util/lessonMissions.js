@@ -1,3 +1,5 @@
+import { auth } from "../firebase/firebase";
+
 const STORAGE_PREFIX = "theory_lesson_missions:";
 
 const safeParseJson = (value, fallback) => {
@@ -9,7 +11,16 @@ const safeParseJson = (value, fallback) => {
   }
 };
 
-const buildStorageKey = (taskId) => (taskId ? `${STORAGE_PREFIX}${taskId}` : null);
+const getUserKey = () => {
+  const user = auth.currentUser;
+  return user ? user.uid : null;
+};
+
+const buildStorageKey = (taskId) => {
+  const uid = getUserKey();
+  if (!uid || !taskId) return null;
+  return `${STORAGE_PREFIX}${uid}:${taskId}`;
+};
 
 export const getLessonMissionsDoneMap = (taskId) => {
   if (typeof window === "undefined") return {};

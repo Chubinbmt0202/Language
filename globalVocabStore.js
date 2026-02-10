@@ -1,4 +1,4 @@
-import { auth } from "../firebase/firebase";
+import { auth } from "./src/firebase/firebase";
 
 const BASE_STORAGE_KEY = "global_vocab_app_data";
 
