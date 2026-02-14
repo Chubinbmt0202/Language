@@ -12,7 +12,7 @@ const rawRoadmap = [
         { "text": "Lý thuyết Danh từ và Đại từ", "type": "theory", "completed": false, "id": "w1-d1-t1" },
         { "text": "Học thuộc 25 từ vựng (chú ý động từ bất quy tắc)", "completed": false, "id": "w1-d1-t3", "type": "vocab", "maxProgress": 5 },
         { "text": "Thực chiến Part 5 (Danh từ & Đại từ)", "completed": false, "id": "w1-d1-t4", exerciseKey: "part5_nous" },
-        { "text": "Nhận diện Danh từ và Đại từ trong câu", "completed": false, "id": "w1-d1-t2" },
+        { "text": "Nhận diện Danh từ và Đại từ trong câu", "completed": false, "id": "w1-d1-t2", exerciseKey: "grammar-recognition" },
       ]
     },
     {
@@ -22,9 +22,9 @@ const rawRoadmap = [
       "tasks": [
         { "text": "Lý thuyết Tính từ", "type": "theory", "completed": false, "id": "w1-d2-t1" },
         { "text": "Nạp dữ liệu từ vựng chủ đề (Office Procedures)","type": "vocab",  "completed": false, "id": "w1-d2-t2" },
-        { "text": "Vị trí 'Kiếm tiền' của tính từ", "completed": false, "id": "w1-d2-t3" },
-        { "text": "Hậu tố Tính từ", "completed": false, "id": "w1-d2-t5" },
-        { "text": "Thực chiến Part 5 (Tính từ)", "completed": false, "id": "w1-d2-t4" },
+        { "text": "Vị trí 'Kiếm tiền' của tính từ", "completed": false, "id": "w1-d2-t3", exerciseKey: "adj-position" },
+        { "text": "Hậu tố Tính từ", "completed": false, "id": "w1-d2-t5", exerciseKey: "adj-suffixes" },
+        { "text": "Thực chiến Part 5 (Tính từ)", "completed": false, "id": "w1-d2-t4", exerciseKey: "part5-adj" },
       ]
     },
     {
@@ -34,8 +34,8 @@ const rawRoadmap = [
       "tasks": [
         { "text": "Lý thuyết Trạng từ ", "type": "theory", "completed": false, "id": "w1-d3-t1" },
         { "text": "Nạp dữ liệu từ vựng chủ đề (Personnel & Recruitment)","type": "vocab",  "completed": false, "id": "w1-d3-t2" },
-        { "text": "Nhận diện Trạng từ trong câu", "completed": false, "id": "w1-d3-t3" },
-        { "text": "Thực chiến Part 5 (Trạng từ)", "completed": false, "id": "w1-d3-t4" }
+        { "text": "Nhận diện Trạng từ trong câu", "completed": false, "id": "w1-d3-t3", exerciseKey: "adv-recognition" },
+        { "text": "Thực chiến Part 5 (Trạng từ)", "completed": false, "id": "w1-d3-t4", exerciseKey: "part5-adv" }
       ]
     },
     {
@@ -45,9 +45,9 @@ const rawRoadmap = [
       "tasks": [
         { "text": "Lý thuyết Động từ và Cấu trúc câu","type": "theory", "completed": false, "id": "w1-d4-t1" },
         { "text": "Nạp dữ liệu từ vựng chủ đề (Salaries & Benefits)","type": "vocab",  "completed": false, "id": "w1-d4-t2" },
-        { "text": "Xác định Động từ trong câu", "completed": false, "id": "w1-d4-t3" },
-        { "text": "Phân tích câu", "completed": false, "id": "w1-d4-t4" },
-        { "text": "Thực chiến Part 5 (Động từ) và cấu trúc câu", "completed": false, "id": "w1-d4-t5" }
+        { "text": "Xác định Động từ trong câu", "completed": false, "id": "w1-d4-t3", exerciseKey: "verb-recognition" },
+        { "text": "Phân tích câu", "completed": false, "id": "w1-d4-t4", exerciseKey: "sentence-structure" },
+        { "text": "Thực chiến Part 5 (Động từ) và cấu trúc câu", "completed": false, "id": "w1-d4-t5", exerciseKey: "part5-verb" }
       ]
     },
     {
@@ -57,8 +57,8 @@ const rawRoadmap = [
       "tasks": [
         { "text": "Lý thuyết Sự hòa hợp Chủ ngữ - Động từ","type": "theory", "completed": false, "id": "w1-d5-t1" },
         { "text": "Nạp dữ liệu từ vựng chủ đề (Marketing)","type": "vocab", "completed": false, "id": "w1-d5-t2" },
-        { "text": "Nhận diện Sự hòa hợp Chủ ngữ - Động từ trong câu", "completed": false, "id": "w1-d5-t3" },
-        { "text": "Thực chiến Part 5 (Sự hòa hợp Chủ ngữ - Động từ)", "completed": false, "id": "w1-d5-t4" }
+        { "text": "Nhận diện Sự hòa hợp Chủ ngữ - Động từ trong câu", "completed": false, "id": "w1-d5-t3", exerciseKey: "sva-recognition" },
+        { "text": "Thực chiến Part 5 (Sự hòa hợp Chủ ngữ - Động từ)", "completed": false, "id": "w1-d5-t4", exerciseKey: "part5-sva" }
       ]
     },
     {
@@ -70,7 +70,7 @@ const rawRoadmap = [
         { "text": "Hiểu rõ sự khác biệt giữa Skimming và Scanning.", "type": "theory", "completed": false, "id": "w1-d6-t1" },
         { "text": "Nạp dữ liệu từ vựng chủ đề (Shopping)", "type": "vocab", "completed": false, "id": "w1-d6-t2" },
         ////// Giao diện thực chiến part 7
-        { "text": "Thực chiến Part 7 - Dạng Advertisements & Announcements", "completed": false, "id": "w1-d6-t3" },
+        { "text": "Thực chiến Part 7 - Dạng Advertisements & Announcements", "completed": false, "id": "w1-d6-t3", exerciseKey: "part7-ads" },
       ]
     },
     {
@@ -78,9 +78,9 @@ const rawRoadmap = [
       "title": "Ngày 7: Review & Mini-Test (Kiểm tra & Chữa lỗi)",
       "focus": "  Ôn tập kiến thức đã học trong tuần và làm đề thi thử rút gọn.",
       "tasks": [
-        { "text": "Part 5", "completed": false, "id": "w1-d7-t1" },
-        { "text": "Part 7 (đoạn văn ngắn", "completed": false, "id": "w1-d7-t2" },
-        { "text": "Kiểm tra từ vựng tuần qua  ", "completed": false, "id": "w1-d7-t3" },
+        { "text": "Part 5", "completed": false, "id": "w1-d7-t1", exerciseKey: "review-part5" },
+        { "text": "Part 7 (đoạn văn ngắn)", "completed": false, "id": "w1-d7-t2", exerciseKey: "review-part7" },
+        { "text": "Kiểm tra từ vựng tuần qua", "completed": false, "id": "w1-d7-t3", exerciseKey: "review-vocab" },
       ]
     }
   ]
