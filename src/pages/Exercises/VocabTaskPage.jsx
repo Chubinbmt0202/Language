@@ -208,7 +208,7 @@ const VocabTaskPage = () => {
       icon: <RocketOutlined style={{ color: '#52c41a' }} />,
       okText: "Hoàn thành",
       onOk: () => {
-        navigate("/dashboard"); // <--- Điều hướng về Dashboard tại đây
+        navigate("/Home"); // <--- Điều hướng về Trang Chủ tại đây
       }
     });
   };
@@ -472,7 +472,7 @@ const VocabTaskPage = () => {
     <div style={{ maxWidth: 600, margin: "20px auto", padding: "0 20px", fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial' }}>
       
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 20 }}>
-        <Button icon={<ArrowLeftOutlined />} onClick={() => navigate("/dashboard")} type="text" style={{ color: '#8c8c8c' }}>
+        <Button icon={<ArrowLeftOutlined />} onClick={() => navigate("/Home")} type="text" style={{ color: '#8c8c8c' }}>
           Thoát
         </Button>
         <Space>

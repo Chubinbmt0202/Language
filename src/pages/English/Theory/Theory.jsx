@@ -76,7 +76,7 @@ const Theory = () => {
           message="Bài học đang bị khóa"
           description="Bạn cần đủ điểm của ngày/tuần trước hoặc làm bài test mở khóa trong Dashboard."
           action={
-            <Button type="primary" onClick={() => navigate("/dashboard")}>
+            <Button type="primary" onClick={() => navigate("/Home")}>
               Về Dashboard
             </Button>
           }
