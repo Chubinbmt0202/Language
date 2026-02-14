@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Steps, Button, Typography, message } from "antd";
@@ -15,11 +16,11 @@ import SummaryStep from "./steps/SummaryStep.jsx";
 const { Title } = Typography;
 
 const stepsMeta = [
-  { title: "Ng\u00f4n ng\u1eef" },
-  { title: "Tr\u00ecnh \u0111\u1ed9" },
-  { title: "M\u1ee5c ti\u00eau" },
-  { title: "Th\u1eddi gian" },
-  { title: "X\u00e1c nh\u1eadn" },
+  { title: "Ngôn ngữ" },
+  { title: "Trình độ" },
+  { title: "Mục tiêu" },
+  { title: "Thời gian" },
+  { title: "Xác nhận" },
 ];
 
 const SetupWizard = ({ onComplete }) => {
@@ -57,7 +58,7 @@ const SetupWizard = ({ onComplete }) => {
 
   const handleNext = () => {
     if (!canGoNext()) {
-      message.warning("Vui l\u00f2ng ch\u1ecdn m\u1ed9t t\u00f9y ch\u1ecdn tr\u01b0\u1edbc khi ti\u1ebfp t\u1ee5c");
+      message.warning("Vui lòng chọn một tùy chọn trước khi tiếp tục");
       return;
     }
     if (currentStep === 0) {
@@ -85,7 +86,7 @@ const SetupWizard = ({ onComplete }) => {
       localStorage.setItem(targetKey, String(formData.dailyStudyMinutes * 60));
     }
 
-    message.success("Thi\u1ebft l\u1eadp th\u00e0nh c\u00f4ng! B\u1eaft \u0111\u1ea7u h\u1ecdc th\u00f4i!");
+    message.success("Thiết lập thành công! Bắt đầu học thôi!");
 
     if (onComplete) {
       onComplete(data);
@@ -154,23 +155,26 @@ const SetupWizard = ({ onComplete }) => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        padding: "24px 0",
+        // padding: "24px 0", // Bỏ padding top/bottom ở container chính để tránh thanh cuộn kép
+        paddingTop: 24,
+        overflow: "hidden" // Ẩn thanh cuộn của body
       }}
     >
-      {/* Header */}
-      <div style={{ textAlign: "center", marginBottom: 32 }}>
+      {/* Header (Cố định) */}
+      <div style={{ textAlign: "center", marginBottom: 32, flexShrink: 0 }}>
         <Title level={3} style={{ color: "#1890ff", margin: 0 }}>
-          Thi\u1ebft l\u1eadp l\u1ed9 tr\u00ecnh h\u1ecdc t\u1eadp
+          Thiết lập lộ trình học tập
         </Title>
       </div>
 
-      {/* Steps indicator */}
+      {/* Steps indicator (Cố định) */}
       <div
         style={{
           width: "100%",
           maxWidth: 700,
           marginBottom: 40,
           padding: "0 16px",
+          flexShrink: 0, // Không cho phép co lại
         }}
       >
         <Steps
@@ -181,14 +185,18 @@ const SetupWizard = ({ onComplete }) => {
         />
       </div>
 
-      {/* Step content */}
+      {/* Step content (SẼ SCROLL Ở ĐÂY) */}
       <div
         style={{
           width: "100%",
           maxWidth: 700,
-          minHeight: 400,
+          // THAY ĐỔI 2: Flex grow để chiếm khoảng trống còn lại và cho phép scroll
+          flex: 1, 
+          overflowY: "auto", // Cho phép scroll dọc
+          overflowX: "hidden", // Ẩn scroll ngang
+          padding: "0 16px", // Padding cho nội dung bên trong
           position: "relative",
-          overflow: "hidden",
+          // Bỏ minHeight cứng, để flex tự xử lý
         }}
       >
         <AnimatePresence mode="wait" custom={direction}>
@@ -200,21 +208,27 @@ const SetupWizard = ({ onComplete }) => {
             animate="center"
             exit="exit"
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            // Thêm style này để đảm bảo motion div không phá layout
+            style={{ width: "100%" }} 
           >
             {renderStep()}
           </motion.div>
         </AnimatePresence>
       </div>
 
-      {/* Navigation buttons */}
+      {/* Navigation buttons (Cố định ở đáy) */}
       <div
         style={{
           display: "flex",
           justifyContent: "space-between",
           width: "100%",
           maxWidth: 700,
-          marginTop: 40,
-          padding: "0 16px",
+          // THAY ĐỔI 3: Style cho footer cố định
+          padding: "24px 16px", // Thêm padding để tách khỏi mép dưới
+          background: "#fff", // Thêm màu nền nếu nội dung scroll xuống dưới
+          flexShrink: 0, // Đảm bảo nút không bị bóp méo
+          zIndex: 10, // Đảm bảo nổi lên trên nếu cần
+          borderTop: "1px solid #f0f0f0" // (Tùy chọn) Thêm đường kẻ mờ ngăn cách
         }}
       >
         <Button
@@ -224,7 +238,7 @@ const SetupWizard = ({ onComplete }) => {
           disabled={currentStep === 0}
           style={{ borderRadius: 8 }}
         >
-          Quay l\u1ea1i
+          Quay lại
         </Button>
 
         {currentStep < stepsMeta.length - 1 ? (
@@ -235,7 +249,7 @@ const SetupWizard = ({ onComplete }) => {
             disabled={!canGoNext()}
             style={{ borderRadius: 8 }}
           >
-            Ti\u1ebfp t\u1ee5c <ArrowRightOutlined />
+            Tiếp tục <ArrowRightOutlined />
           </Button>
         ) : (
           <Button
@@ -249,7 +263,7 @@ const SetupWizard = ({ onComplete }) => {
               borderColor: "#52c41a",
             }}
           >
-            B\u1eaft \u0111\u1ea7u h\u1ecdc!
+            Bắt đầu học!
           </Button>
         )}
       </div>

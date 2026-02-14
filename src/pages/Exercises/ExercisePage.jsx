@@ -132,36 +132,34 @@ const Exercise = () => {
   const { tier } = useMemo(() => getTaskState(taskId), [taskId]);
 
   // 2. Tính toán bộ câu hỏi (Đã lọc câu cũ)
-  const shuffledQuestionSet = useMemo(() => {
-    if (!taskInfo) return [];
-    
-    const { day } = taskInfo;
-    const dayExercise = EXERCISE_DATA?.[day.id];
-    
-    // Tìm đúng key của task
-    const taskIndexMatch = taskId.match(/-t(\d+)$/);
-    const taskIndex = taskIndexMatch ? Number(taskIndexMatch[1]) : null;
-    const taskKeyFromOrder = dayExercise?.taskOrder && taskIndex
-      ? dayExercise.taskOrder[taskIndex - 1]
-      : null;
-    const taskKey = taskKeyFromOrder || (dayExercise?.tasks ? Object.keys(dayExercise.tasks)[0] : null);
-    const taskExercise = taskKey ? dayExercise?.tasks?.[taskKey] : null;
+const shuffledQuestionSet = useMemo(() => {
+  if (!taskInfo) return [];
+  
+  const { day, task } = taskInfo; // task này lấy từ Roadmap
+  const dayData = EXERCISE_DATA?.[day.id];
+  
+  if (!dayData) return [];
 
-    // Lấy pool câu hỏi dựa trên Tier
-    const easyQuestions = taskExercise?.questions?.easy ?? DEFAULT_QUESTIONS;
-    const hardQuestions = taskExercise?.questions?.hard ?? DEFAULT_HARD_QUESTIONS;
-    const pool = tier > 0 ? hardQuestions : easyQuestions;
-    const totalQuestionsNeeded = taskExercise?.total ?? easyQuestions.length;
+  // LẤY KEY TỪ ROADMAP:
+  const taskKey = task.exerciseKey; 
+  const taskExercise = dayData.tasks?.[taskKey];
 
-    // QUAN TRỌNG: Lọc bỏ các câu có ID nằm trong completedIds
-    const availableQuestions = pool.filter(q => !completedIds.includes(q.id));
+  if (!taskExercise) {
+    console.error("Không tìm thấy dữ liệu cho taskKey:", taskKey);
+    return [];
+  }
 
-    // Nếu hết câu hỏi thì trả về rỗng (để render màn hình Empty)
-    if (availableQuestions.length === 0) return [];
+  // Lấy pool câu hỏi dựa trên Tier (Easy/Hard)
+  const pool = tier > 0 ? taskExercise.questions.hard : taskExercise.questions.easy;
+  const totalNeeded = taskExercise.total || 10;
 
-    // Shuffle và cắt đúng số lượng
-    return shuffleArray(availableQuestions).slice(0, totalQuestionsNeeded);
-  }, [taskId, tier, taskInfo, completedIds]);
+  // Lọc câu đã làm (completedIds)
+  const available = pool.filter(q => !completedIds.includes(q.id));
+
+  if (available.length === 0) return [];
+
+  return shuffleArray(available).slice(0, totalNeeded);
+}, [taskId, tier, taskInfo, completedIds]);
 
   const handleCheckAnswer = () => {
     if (!selectedOption) return;
@@ -331,7 +329,7 @@ const Exercise = () => {
         </Button>
         <Space>
            {/* Hiển thị số câu đã ẩn đi */}
-           <Tag icon={<HistoryOutlined />}>Đã xong: {completedIds.length}</Tag>
+           {/* <Tag icon={<HistoryOutlined />}>Đã xong: {completedIds.length}</Tag> */}
            <Statistic 
             value={sessionScore} 
             prefix={<TrophyOutlined />} 

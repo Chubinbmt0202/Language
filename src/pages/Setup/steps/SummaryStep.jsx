@@ -11,7 +11,6 @@ const { Title, Text } = Typography;
 
 const languageLabels = {
   english: "Ti\u1ebfng Anh",
-  japanese: "Ti\u1ebfng Nh\u1eadt",
 };
 
 const levelLabels = {
@@ -36,18 +35,11 @@ const goalLabels = {
 const SummaryStep = ({ formData }) => {
   return (
     <div>
-      <div style={{ textAlign: "center", marginBottom: 40 }}>
-        <Title level={2} style={{ marginBottom: 8 }}>
-          Xem l\u1ea1i l\u1ef1a ch\u1ecdn c\u1ee7a b\u1ea1n
-        </Title>
-        <Text type="secondary" style={{ fontSize: 16 }}>
-          Ki\u1ec3m tra l\u1ea1i th\u00f4ng tin v\u00e0 b\u1eaft \u0111\u1ea7u h\u1ecdc ngay!
-        </Text>
-      </div>
 
       <Card
         style={{
           borderRadius: 16,
+          marginBottom: 12,
           maxWidth: 600,
           margin: "0 auto",
           boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
@@ -63,7 +55,7 @@ const SummaryStep = ({ formData }) => {
             label={
               <span>
                 <GlobalOutlined style={{ marginRight: 8, color: "#1890ff" }} />
-                Ng\u00f4n ng\u1eef
+                Ngôn ngữ
               </span>
             }
           >
@@ -76,7 +68,7 @@ const SummaryStep = ({ formData }) => {
             label={
               <span>
                 <BarChartOutlined style={{ marginRight: 8, color: "#52c41a" }} />
-                Tr\u00ecnh \u0111\u1ed9
+                Trình độ
               </span>
             }
           >
@@ -89,7 +81,7 @@ const SummaryStep = ({ formData }) => {
             label={
               <span>
                 <TrophyOutlined style={{ marginRight: 8, color: "#faad14" }} />
-                M\u1ee5c ti\u00eau
+                Mục tiêu
               </span>
             }
           >
@@ -104,12 +96,12 @@ const SummaryStep = ({ formData }) => {
                 <ClockCircleOutlined
                   style={{ marginRight: 8, color: "#722ed1" }}
                 />
-                Th\u1eddi gian h\u1ecdc
+                Thời gian học
               </span>
             }
           >
             <Tag color="purple" style={{ fontSize: 14, padding: "4px 16px" }}>
-              {formData.dailyStudyMinutes} ph\u00fat/ng\u00e0y
+              {formData.dailyStudyMinutes} phút/ngày
             </Tag>
           </Descriptions.Item>
         </Descriptions>

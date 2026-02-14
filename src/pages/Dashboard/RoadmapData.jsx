@@ -11,7 +11,7 @@ const rawRoadmap = [
       "tasks": [
         { "text": "Lý thuyết Danh từ và Đại từ", "type": "theory", "completed": false, "id": "w1-d1-t1" },
         { "text": "Học thuộc 25 từ vựng (chú ý động từ bất quy tắc)", "completed": false, "id": "w1-d1-t3", "type": "vocab", "maxProgress": 5 },
-        { "text": "Thực chiến Part 5 (Danh từ & Đại từ)", "completed": false, "id": "w1-d1-t4" },
+        { "text": "Thực chiến Part 5 (Danh từ & Đại từ)", "completed": false, "id": "w1-d1-t4", exerciseKey: "part5_nous" },
         { "text": "Nhận diện Danh từ và Đại từ trong câu", "completed": false, "id": "w1-d1-t2" },
       ]
     },
