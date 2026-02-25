@@ -122,7 +122,7 @@ const DaySection = ({
                     disabledReason={disabledReason}
                     checked={
                       checkedTasks?.[
-                        `${day.id}-${rowIdx * TASKS_PER_ROW + idx}`
+                      `${day.id}-${rowIdx * TASKS_PER_ROW + idx}`
                       ]
                     }
                   />

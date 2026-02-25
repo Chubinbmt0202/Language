@@ -66,45 +66,45 @@ const TaskCard = ({ task, progress = 0, tier = 0, disabled = false, disabledReas
         className="roadmap-card-hover"
         aria-disabled={disabled}
       >
-      {/* ICON */}
-      <div style={styles.iconBox}>
-        {disabled ? (
-          <LockOutlined style={{ color: "#9ca3af" }} />
-        ) : (
-          <CheckSquareTwoTone twoToneColor={cardTheme.icon} />
-        )}
-      </div>
+        {/* ICON */}
+        <div style={styles.iconBox}>
+          {disabled ? (
+            <LockOutlined style={{ color: "#9ca3af" }} />
+          ) : (
+            <CheckSquareTwoTone twoToneColor={cardTheme.icon} />
+          )}
+        </div>
 
-      {/* CONTENT */}
-      <div style={{ flex: 1, overflow: "hidden" }}>
-        <Paragraph
-          strong
-          style={{
-            marginBottom: 2,
-            wordBreak: "break-word",
-            textDecoration: isDone ? "line-through" : "none",
-            opacity: isDone ? 0.7 : 1,
-          }}
-          ellipsis={{ rows: 2, tooltip: task.text }}
-        >
-          {task.text}
-        </Paragraph>
+        {/* CONTENT */}
+        <div style={{ flex: 1, overflow: "hidden" }}>
+          <Paragraph
+            strong
+            style={{
+              marginBottom: 2,
+              wordBreak: "break-word",
+              textDecoration: isDone ? "line-through" : "none",
+              opacity: isDone ? 0.7 : 1,
+            }}
+            ellipsis={{ rows: 2, tooltip: task.text }}
+          >
+            {task.text}
+          </Paragraph>
 
-        {/* LEVEL TEXT */}
-        <Text type="secondary" style={{ fontSize: 12 }}>
-          Level {safeProgress}/{maxLevel}
-        </Text>
+          {/* LEVEL TEXT */}
+          <Text type="secondary" style={{ fontSize: 12 }}>
+            Level {safeProgress}/{maxLevel}
+          </Text>
 
-        {/* PROGRESS BAR */}
-        <Progress
-          percent={percent}
-          showInfo={false}
-          size="small"
-          strokeColor={cardTheme.icon}
-          trailColor="#e0e0e0"
-          style={{ marginTop: 2 }}
-        />
-      </div>
+          {/* PROGRESS BAR */}
+          <Progress
+            percent={percent}
+            showInfo={false}
+            size="small"
+            strokeColor={cardTheme.icon}
+            trailColor="#e0e0e0"
+            style={{ marginTop: 2 }}
+          />
+        </div>
       </div>
     </Tooltip>
   );

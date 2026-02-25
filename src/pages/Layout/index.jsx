@@ -8,15 +8,16 @@ import {
   Outlet,
 } from "react-router-dom";
 import {
-  NotificationOutlined,
   UserOutlined,
   MenuFoldOutlined,
-  KeyOutlined,
-  BellOutlined,
-  HomeOutlined,
-  AuditOutlined,
-  BookOutlined,
   MenuUnfoldOutlined,
+  HomeFilled,
+  ShareAltOutlined,
+  ContainerOutlined,
+  BookOutlined,
+  TranslationOutlined,
+  SettingFilled,
+  ReadOutlined,
 } from "@ant-design/icons";
 
 import {
@@ -34,48 +35,48 @@ import {
 import GlobalVocabManager from "../../components/GlobalVocabManager/index.jsx";
 import { useAuth } from "../../util/AuthContext.jsx";
 
-
 const { Content, Sider, Header } = Layout;
 const sidebarItems = [
   {
     key: "Home",
-    icon: <HomeOutlined />,
+    icon: <HomeFilled />,
     label: "Trang chủ",
   },
   {
     key: "Distance",
-    icon: <KeyOutlined />,
+    icon: <ShareAltOutlined />,
     label: "Lộ trình học tập",
   },
   {
     key: "ExercisesLibrary",
-    icon: <BookOutlined />,
+    icon: <ContainerOutlined />,
     label: "Kho bài tập",
-    // children: [
-    //   { key: "english/grammar", label: "Ngữ pháp" },
-    //   { key: "english/translation-practice", label: "Luyện dịch câu" },
-    // ],
   },
   {
     key: "vocabulary",
-    icon: <AuditOutlined />,
+    icon: <BookOutlined />,
     label: "Kho từ vựng",
   },
   {
-    key: "japanese",
-    icon: <NotificationOutlined />,
-    label: "Tiếng Nhật",
-    children: [
-      { key: "japanese/multiple-choice", label: "Trắc nghiệm" },
-      { key: "japanese/vocabulary", label: "Bài tập từ vựng" },
-      { key: "japanese/fill-passage", label: "Điền vào đoạn văn" },
-      { key: "japanese/listen-and-fill", label: "Nghe và điền" },
-    ],
+    type: "divider",
   },
   {
-    key: "Setting",
-    icon: <UserOutlined />,
-    label: "Cài đặt",
+    key: "other_courses",
+    type: "group",
+    label: "KHÓA HỌC KHÁC",
+    children: [
+      {
+        key: "japanese",
+        icon: <TranslationOutlined />,
+        label: "Tiếng Nhật",
+        children: [
+          { key: "japanese/multiple-choice", label: "Trắc nghiệm" },
+          { key: "japanese/vocabulary", label: "Bài tập từ vựng" },
+          { key: "japanese/fill-passage", label: "Điền vào đoạn văn" },
+          { key: "japanese/listen-and-fill", label: "Nghe và điền" },
+        ],
+      },
+    ],
   },
 ];
 
@@ -117,8 +118,7 @@ const HomeLayout = () => {
     if (isMobile) setDrawerVisible(false); // Đóng drawer sau khi chọn menu trên mobile
   };
 
-
-const userMenu = [
+  const userMenu = [
     {
       key: 'profile',
       label: 'Hồ sơ cá nhân',
@@ -136,7 +136,7 @@ const userMenu = [
   ];
 
   return (
-    <Layout style={{ minHeight: "100vh" }}>
+    <Layout style={{ minHeight: "100vh", background: "#f8fafc" }}>
       {/* SIDEBAR CHO DESKTOP */}
       {!isMobile && (
         <Sider
@@ -145,37 +145,167 @@ const userMenu = [
           collapsed={collapsed}
           width={250}
           style={{
-            overflow: "auto",
+            overflow: "hidden",
             height: "100vh",
             position: "fixed",
             left: 0,
             top: 0,
             zIndex: 99,
-            background: colorBgContainer,
-            borderRight: "1px solid #f0f0f0",
+            background: "#ffffff",
+            borderRight: "1px solid #f1f5f9",
+            display: "flex",
+            flexDirection: "column",
           }}
         >
+          {/* Logo */}
           <div
             style={{
-              height: 32,
-              margin: 16,
-              background: "rgba(0, 0, 0, 0.05)",
-              borderRadius: 6,
+              padding: "24px 20px",
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
             }}
-          />
-          <Menu
-            mode="inline"
-            selectedKeys={[location.pathname.substring(1)]}
-            defaultOpenKeys={["english", "japanese"]}
-            items={sidebarItems}
-            onClick={({ key }) => handleMenuClick(key)}
-          />
+          >
+            <div
+              style={{
+                background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
+                boxShadow: "0 4px 12px rgba(37, 99, 235, 0.3)",
+                color: "white",
+                borderRadius: "10px",
+                width: "36px",
+                height: "36px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                fontSize: "20px",
+                flexShrink: 0,
+              }}
+            >
+              <ReadOutlined />
+            </div>
+            {!collapsed && (
+              <span
+                style={{
+                  fontSize: "20px",
+                  fontWeight: "800",
+                  color: "#0f172a",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                PrepMaster
+              </span>
+            )}
+          </div>
+
+          {/* Menu */}
+          <div style={{ flex: 1, overflowY: "auto", overflowX: "hidden" }}>
+            <Menu
+              className="custom-sidebar-menu"
+              mode="inline"
+              selectedKeys={[location.pathname.substring(1)]}
+              defaultOpenKeys={["english", "japanese"]}
+              items={sidebarItems}
+              onClick={({ key }) => handleMenuClick(key)}
+            />
+          </div>
+
+          {/* Bottom Area: Settings & User Profile */}
+          {!collapsed && (
+            <div style={{ marginTop: "auto", width: "100%" }}>
+              <div style={{ padding: "0 16px 16px 16px" }}>
+                <div
+                  onClick={() => handleMenuClick("Setting")}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "12px",
+                    padding: "10px 12px",
+                    borderRadius: "8px",
+                    cursor: "pointer",
+                    color: location.pathname === "/Setting" ? "#3b82f6" : "#64748b",
+                    fontWeight: location.pathname === "/Setting" ? "700" : "500",
+                    background: location.pathname === "/Setting" ? "#e0e7ff" : "transparent",
+                    transition: "all 0.2s",
+                    marginBottom: "12px"
+                  }}
+                  onMouseEnter={(e) => {
+                    if (location.pathname !== "/Setting") {
+                      e.currentTarget.style.background = "#f1f5f9";
+                      e.currentTarget.style.color = "#1e293b";
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (location.pathname !== "/Setting") {
+                      e.currentTarget.style.background = "transparent";
+                      e.currentTarget.style.color = "#64748b";
+                    }
+                  }}
+                >
+                  <SettingFilled style={{ fontSize: "18px" }} />
+                  <span>Cài đặt</span>
+                </div>
+
+                {user ? (
+                  <Dropdown menu={{ items: userMenu }} placement="topLeft">
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "12px",
+                        background: "#f8fafc",
+                        padding: "10px 12px",
+                        borderRadius: "12px",
+                        cursor: "pointer",
+                        transition: "background 0.2s",
+                      }}
+                      onMouseEnter={(e) => (e.currentTarget.style.background = "#f1f5f9")}
+                      onMouseLeave={(e) => (e.currentTarget.style.background = "#f8fafc")}
+                    >
+                      <Avatar src={user.photoURL} icon={<UserOutlined />} size={40} />
+                      <div style={{ overflow: "hidden" }}>
+                        <div
+                          style={{
+                            fontWeight: "700",
+                            color: "#0f172a",
+                            whiteSpace: "nowrap",
+                            textOverflow: "ellipsis",
+                            overflow: "hidden",
+                            fontSize: "14px",
+                          }}
+                        >
+                          {user.displayName || "Người dùng"}
+                        </div>
+                        <div
+                          style={{
+                            fontSize: "12px",
+                            color: "#3b82f6",
+                            fontWeight: "500",
+                          }}
+                        >
+                          Premium Member
+                        </div>
+                      </div>
+                    </div>
+                  </Dropdown>
+                ) : (
+                  <Button type="primary" block onClick={() => navigate("/login")}>
+                    Đăng nhập
+                  </Button>
+                )}
+              </div>
+            </div>
+          )}
         </Sider>
       )}
 
       {/* DRAWER CHO MOBILE */}
       <Drawer
-        title="Menu"
+        title={
+          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <div style={{ background: "#2563eb", color: "white", borderRadius: "6px", width: "28px", height: "28px", display: "flex", justifyContent: "center", alignItems: "center", fontSize: "16px" }}><BookOutlined /></div>
+            <span style={{ fontWeight: "800" }}>PrepMaster</span>
+          </div>
+        }
         placement="left"
         onClose={() => setDrawerVisible(false)}
         open={drawerVisible}
@@ -183,11 +313,18 @@ const userMenu = [
         size={250}
       >
         <Menu
+          className="custom-sidebar-menu"
           mode="inline"
           selectedKeys={[location.pathname.substring(1)]}
           items={sidebarItems}
           onClick={({ key }) => handleMenuClick(key)}
+          style={{ marginTop: 16 }}
         />
+        {user && (
+          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: 16, borderTop: "1px solid #f0f0f0" }}>
+            <Button danger block onClick={() => { logout(); navigate("/login"); setDrawerVisible(false); }}>Đăng xuất</Button>
+          </div>
+        )}
       </Drawer>
 
       <Layout
@@ -196,13 +333,15 @@ const userMenu = [
           marginLeft: isMobile ? 0 : collapsed ? 80 : 250,
           transition: "all 0.2s",
           minHeight: "100vh",
+          background: "transparent",
         }}
       >
         <Header
+          className={!isMobile ? "desktop-header" : ""}
           style={{
             padding: "0 16px",
             background: colorBgContainer,
-            display: "flex",
+            display: isMobile ? "flex" : "none", // Ẩn hoàn toàn trên desktop UI
             alignItems: "center",
             justifyContent: "space-between",
             position: "fixed",
@@ -249,9 +388,9 @@ const userMenu = [
 
         <Content
           style={{
-            margin: "80px 16px 16px",
-            padding: isMobile ? 12 : 24, // Giảm padding trên mobile để tăng diện tích hiển thị
-            background: colorBgContainer,
+            margin: isMobile ? "80px 16px 16px" : "32px 32px 24px",
+            padding: 0,
+            background: "transparent",
             borderRadius: borderRadiusLG,
             minHeight: "calc(100vh - 112px)",
           }}

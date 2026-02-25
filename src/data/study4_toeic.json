@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "part": 1,
+        "type": "image",
+        "image_url": "https://s4-media1.study4.com/media/e24/images_fixed2/image279.png",
+        "audio_url": "https://s4-media1.study4.com/media/e24/audio/questions/Test_1/Test_1-2.mp3",
+        "transcript": "(A) She’s eating in a picnic area. (B) She’s waiting in line at a food truck. (C) She’s wiping off a bench. (D) She’s throwing away a plate.",
+        "choices": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "correct_answer": "A"
+    },
+    {
+        "id": 2,
+        "part": 1,
+        "type": "image",
+        "image_url": "https://s4-media1.study4.com/media/e24/images_fixed2/image174.png",
+        "audio_url": "https://s4-media1.study4.com/media/e24/audio/questions/Test_1/Test_1-2.mp3",
+        "transcript": "(A) The man is brushing snow off the roof of a car. (B) The man is standing in the snow beside a car. (C) The man is shoveling snow from a walkway. (D) The man is running through the snow.",
+        "choices": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "correct_answer": "B"
+    },
+    {
+        "id": 3,
+        "part": 1,
+        "type": "image",
+        "image_url": "https://s4-media1.study4.com/media/e24/images_fixed2/image316.png",
+        "audio_url": "https://s4-media1.study4.com/media/e24/audio/questions/Test_1/Test_1-2.mp3",
+        "transcript": "(A) Some luggage is being loaded onto a plane. (B) Some people are walking through an airport. (C) A pilot is standing at a ticket counter. (D) A traveler is checking a flight schedule.",
+        "choices": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "correct_answer": "B"
+    },
+    {
+        "id": 7,
+        "part": 2,
+        "type": "question-response",
+        "audio_url": "https://s4-media1.study4.com/media/e24/audio/questions/Test_1/Test_1-9.mp3",
+        "question_text": "How old is this building?",
+        "transcript": "(A) To ship some materials. (B) About ten years old. (C) Company offices, I think.",
+        "choices": [
+            "A",
+            "B",
+            "C"
+        ],
+        "correct_answer": "B"
+    },
+    {
+        "id": 8,
+        "part": 2,
+        "type": "question-response",
+        "audio_url": "https://s4-media1.study4.com/media/e24/audio/questions/Test_1/Test_1-9.mp3",
+        "question_text": "Can you come to my jazz performance tonight?",
+        "transcript": "(A) I’m sorry I was late for the meeting. (B) Mostly just local musicians. (C) Sure, I'll be there!",
+        "choices": [
+            "A",
+            "B",
+            "C"
+        ],
+        "correct_answer": "C"
+    }
+]

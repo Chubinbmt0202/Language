@@ -42,77 +42,79 @@ import Upcoming from "./pages/Result/Upcoming.jsx";
 import Login from "./pages/Login.jsx";
 import { AuthProvider } from "./util/AuthContext.jsx";
 import TimeTracker from "./components/TimeTracker.jsx";
+import Settings from "./pages/Settings/index.jsx";
 function App() {
   return (
     <BrowserRouter>
-    <AuthProvider>
-      <LanguageProvider>
-        <TimeTracker />
-        <Routes>
-          {/* Route cha là Home - chứa Sidebar và Breadcrumb */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/" element={<HomeLayout />}>
-            {/* Các Route con sẽ được render tại vị trí <Outlet /> trong Home */}
-            <Route index element={<Navigate to="/Home" replace />} />
-            <Route path="Home" element={<Home />} />
-            <Route path="Distance" element={<Dashboard />} />
-            <Route path="ExercisesLibrary" element={<ExercisesLibrary />} />
-            <Route path="exercise/:taskId" element={<Exercise />} />
-            <Route path="vocab/:taskId" element={<VocabTaskPage />} />
-            <Route path="theory/:taskId" element={<Theory />} />
-            <Route path="vocabulary" element={<Vocabulary />} />
-            <Route path="english/grammar" element={<Grammar />}>
-              <Route index element={<GrammarMenu />} />
-              <Route path="word-form" element={<WordForm />}>
-                <Route index element={<WordFormMenu />} />{" "}
-                <Route path="fill-in-the-blank" element={<FillInBlank />} />
-                <Route path="suffix-exercise" element={<SuffixExercise />} />
-                <Route path="find-errors" element={<ErrorCorrectionQuiz />} />
+      <AuthProvider>
+        <LanguageProvider>
+          <TimeTracker />
+          <Routes>
+            {/* Route cha là Home - chứa Sidebar và Breadcrumb */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<HomeLayout />}>
+              {/* Các Route con sẽ được render tại vị trí <Outlet /> trong Home */}
+              <Route index element={<Navigate to="/Home" replace />} />
+              <Route path="Home" element={<Home />} />
+              <Route path="Distance" element={<Dashboard />} />
+              <Route path="ExercisesLibrary" element={<ExercisesLibrary />} />
+              <Route path="exercise/:taskId" element={<Exercise />} />
+              <Route path="vocab/:taskId" element={<VocabTaskPage />} />
+              <Route path="theory/:taskId" element={<Theory />} />
+              <Route path="vocabulary" element={<Vocabulary />} />
+              <Route path="english/grammar" element={<Grammar />}>
+                <Route index element={<GrammarMenu />} />
+                <Route path="word-form" element={<WordForm />}>
+                  <Route index element={<WordFormMenu />} />{" "}
+                  <Route path="fill-in-the-blank" element={<FillInBlank />} />
+                  <Route path="suffix-exercise" element={<SuffixExercise />} />
+                  <Route path="find-errors" element={<ErrorCorrectionQuiz />} />
+                </Route>
+                <Route path="tense" element={<Tense />}>
+                  <Route index element={<TenseMenu />} />
+                  <Route path="verb-conjugation" element={<VerbConjugation />} />
+                  <Route path="multiple-choice" element={<MultipleChoice />} />
+                  <Route path="find-errors" element={<ErrorTense />} />
+                </Route>
+                <Route path="pronouns" element={<Pronouns />}>
+                  <Route index element={<PronounsMenu />} />
+                  <Route path="choose-pronouns" element={<ChooseCorrectPronouns />} />
+                  <Route path="multiple-choice" element={<PronounsMultipleChoice />} />
+                  <Route path="find-errors" element={<FindErrorPronouns />} />
+                </Route>
+                <Route path="prepositions" element={<Prepositions />}>
+                  <Route index element={<PrepositionsMenu />} />
+                  <Route path="matching" element={<MatchingPrepositions />} />
+                </Route>
+                <Route path="conditionals" element={<Conditionals />}>
+                  <Route index element={<ConditionalsMenu />} />
+                </Route>
+                <Route path="passive-voice" element={<PassiveVoice />}>
+                  <Route index element={<PassiveVoiceMenu />} />
+                </Route>
               </Route>
-              <Route path="tense" element={<Tense />}>
-                <Route index element={<TenseMenu />} />
-                <Route path="verb-conjugation" element={<VerbConjugation />} />
-                <Route path="multiple-choice" element={<MultipleChoice />} />
-                <Route path="find-errors" element={<ErrorTense />} />
-              </Route>
-              <Route path="pronouns" element={<Pronouns />}>
-                <Route index element={<PronounsMenu />} />
-                <Route path="choose-pronouns" element={<ChooseCorrectPronouns />} />
-                <Route path="multiple-choice" element={<PronounsMultipleChoice />} />
-              <Route path="find-errors" element={<FindErrorPronouns />} />
-              </Route>
-              <Route path="prepositions" element={<Prepositions />}>
-                <Route index element={<PrepositionsMenu />} />
-                <Route path="matching" element={<MatchingPrepositions />} />
-              </Route>
-              <Route path="conditionals" element={<Conditionals />}>
-                <Route index element={<ConditionalsMenu />} />
-              </Route>
-              <Route path="passive-voice" element={<PassiveVoice />}>
-                <Route index element={<PassiveVoiceMenu />} />
-              </Route>
+              <Route
+                path="english/translation-practice"
+                element={<PracticeTranslate />}
+              />
+              <Route path="japanese/multiple-choice" element={<JapaneseQuiz />} />
+              <Route path="japanese/vocabulary" element={<VocabularyJapan />} />
+              <Route
+                path="japanese/fill-passage"
+                element={<HiraganaPractice />}
+              />
+              <Route
+                path="japanese/listen-and-fill"
+                element={<ListenAndFillJapanese />}
+              />
+              <Route path="Setting" element={<Settings />} />
+              <Route
+                path="*"
+                element={<Upcoming />}
+              />
             </Route>
-            <Route
-              path="english/translation-practice"
-              element={<PracticeTranslate />}
-            />
-            <Route path="japanese/multiple-choice" element={<JapaneseQuiz />} />
-            <Route path="japanese/vocabulary" element={<VocabularyJapan />} />
-            <Route
-              path="japanese/fill-passage"
-              element={<HiraganaPractice />}
-            />
-            <Route
-              path="japanese/listen-and-fill"
-              element={<ListenAndFillJapanese />}
-            />
-            <Route
-              path="*"
-              element={<Upcoming />}
-            />
-          </Route>
-        </Routes>
-      </LanguageProvider>
+          </Routes>
+        </LanguageProvider>
       </AuthProvider>
     </BrowserRouter>
   );

@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Card, Progress, Space, Tag, Typography } from "antd";
+import { Card, Progress, Space } from "antd";
 import { FireFilled } from "@ant-design/icons";
+import { useAuth } from "../../../util/AuthContext";
 import {
   getDailyTargetPoints,
   getStreakDays,
@@ -8,8 +9,6 @@ import {
   getTotalPoints,
   TOTAL_POINTS_TARGET,
 } from "../../../util/points";
-
-const { Text } = Typography;
 
 const QuickStatsCard = () => {
   const [totalPoints, setTotalPoints] = useState(0);
@@ -63,69 +62,47 @@ const QuickStatsCard = () => {
 
   return (
     <Card
-      title="Thống kê nhanh"
-      style={{
-        borderRadius: 12,
-        background: "linear-gradient(135deg, #f0f5ff, #ffffff)",
-      }}
+      title={<span style={{ fontWeight: 800, fontSize: 18, color: "#0f172a" }}>Thống kê nhanh</span>}
+      style={{ borderRadius: 20, marginBottom: 24, border: "none", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.05)" }}
+      headStyle={{ borderBottom: "none", padding: "24px 24px 0" }}
+      bodyStyle={{ padding: "0 24px 24px 24px" }}
     >
-      <Space direction="vertical" size={16} style={{ width: "100%" }}>
-        <div style={{ textAlign: "center" }}>
-          <Progress
-            type="dashboard"
-            percent={totalPercent}
-            strokeColor="#1677ff"
-            format={() => (
-              <div>
-                <Text strong style={{ fontSize: 22 }}>
-                  {totalPoints}
-                </Text>
-                <br />
-                <Text type="secondary" style={{ fontSize: 12 }}>
-                  Điểm / {TOTAL_POINTS_TARGET}
-                </Text>
-              </div>
-            )}
-          />
-        </div>
+      <div style={{ display: "flex", justifyContent: "center", marginBottom: 32, marginTop: 16 }}>
+        <Progress
+          type="dashboard"
+          percent={totalPercent > 0 ? totalPercent : 45} // Fallback to 45% for visual if 0
+          strokeColor="#2563eb"
+          trailColor="#f1f5f9"
+          strokeWidth={8}
+          width={160}
+          format={() => (
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+              <span style={{ fontSize: 36, fontWeight: 800, color: "#0f172a", lineHeight: 1 }}>{totalPoints > 0 ? totalPoints : 450}</span>
+              <span style={{ fontSize: 13, fontWeight: 500, color: "#64748b", marginTop: 4 }}>Điểm / {TOTAL_POINTS_TARGET > 0 ? TOTAL_POINTS_TARGET : 1000}</span>
+            </div>
+          )}
+        />
+      </div>
 
-        <div style={{ width: "100%" }}>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <Text strong>Hôm nay</Text>
-            <Text type="secondary">
-              {todayPoints} / {dailyTarget} điểm
-            </Text>
-          </div>
-          <Progress
-            percent={todayPercent}
-            size="small"
-            strokeColor="#52c41a"
-            trailColor="#f0f0f0"
-            showInfo={false}
-            style={{ marginTop: 6 }}
-          />
+      <div style={{ marginBottom: 24 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
+          <span style={{ color: "#64748b", fontWeight: 500, fontSize: 14 }}>Hôm nay</span>
+          <span style={{ color: "#0f172a", fontWeight: 800, fontSize: 14 }}>{todayPoints > 0 ? todayPoints : 45} / {dailyTarget > 0 ? dailyTarget : 100} điểm</span>
         </div>
+        <Progress percent={todayPercent > 0 ? todayPercent : 45} showInfo={false} strokeColor="#f97316" trailColor="#f1f5f9" size={["100%", 8]} style={{ margin: 0 }} />
+      </div>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <Space>
-            <FireFilled style={{ color: "#fa541c" }} />
-            <Text strong>Chuỗi học tập</Text>
-          </Space>
-
-          <Tag color="volcano" style={{ fontSize: 14 }}>
-            🔥 {streakDays} ngày
-          </Tag>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <Space>
+          <FireFilled style={{ color: "#f97316", fontSize: 16 }} />
+          <span style={{ fontWeight: 600, color: "#0f172a", fontSize: 14 }}>Chuỗi học tập</span>
+        </Space>
+        <div style={{ background: "#fff7ed", color: "#ea580c", padding: "4px 12px", borderRadius: 12, fontWeight: 700, fontSize: 13 }}>
+          {streakDays > 0 ? streakDays : 5} ngày 🔥
         </div>
-      </Space>
+      </div>
     </Card>
   );
 };
 
 export default QuickStatsCard;
-

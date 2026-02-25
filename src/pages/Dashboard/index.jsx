@@ -8,7 +8,7 @@ import DaySection from "./DaySection";
 import { loadTaskProgress } from "../../util/taskProgress";
 import ProgressChartCard from "./components/ProgressChartCard";
 import QuickStatsCard from "./components/QuickStatsCard";
-import TodaysLearningCard from "./components/TodaysLearningCard";
+import LeaderboardCard from "./components/LeaderboardCard";
 import { calculateDailyChartData } from "./utils/calculateDailyChartData";
 import UnlockTestModal from "./components/UnlockTestModal";
 import { hasCompletedOnboarding } from "../../util/onboardingStorage";
@@ -130,9 +130,9 @@ const LanguageDashboard = () => {
 
           <Col xs={24} lg={8}>
             {/* Thêm thẻ div bao bọc với style sticky */}
-            <div style={{ position: "sticky", top: 105 }}>
+            <div>
               <QuickStatsCard />
-              <TodaysLearningCard />
+              <LeaderboardCard />
             </div>
           </Col>
         </Row>

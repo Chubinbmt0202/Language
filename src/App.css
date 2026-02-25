@@ -1,3 +1,76 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Tự định nghĩa style cho Sidebar Menu để giống thiết kế */
+.custom-sidebar-menu.ant-menu {
+  background: transparent !important;
+  border-right: none !important;
+}
+
+.custom-sidebar-menu .ant-menu-item {
+  margin: 4px 12px !important;
+  width: calc(100% - 24px) !important;
+  border-radius: 8px !important;
+  color: #64748b !important;
+  font-weight: 500 !important;
+  transition: all 0.2s;
+}
+
+.custom-sidebar-menu .ant-menu-item:hover {
+  background-color: #f1f5f9 !important;
+  color: #1e293b !important;
+}
+
+.custom-sidebar-menu .ant-menu-item-selected {
+  background-color: #e0e7ff !important;
+  color: #3b82f6 !important;
+  font-weight: 700 !important;
+}
+
+.custom-sidebar-menu .ant-menu-submenu-title {
+  margin: 4px 12px !important;
+  width: calc(100% - 24px) !important;
+  border-radius: 8px !important;
+  color: #64748b !important;
+  font-weight: 500 !important;
+}
+
+.custom-sidebar-menu .ant-menu-submenu-title:hover {
+  background-color: #f1f5f9 !important;
+  color: #1e293b !important;
+}
+
+.custom-sidebar-menu .ant-menu-item .anticon,
+.custom-sidebar-menu .ant-menu-submenu-title .anticon {
+  font-size: 18px !important;
+}
+
+/* Ẩn Header AntD mặc định cho desktop do banner nằm sát trên cùng */
+.desktop-header {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .desktop-header {
+    display: flex !important;
+  }
+}
+
+/* Styling cho group title KHÓA HỌC KHÁC */
+.custom-sidebar-menu .ant-menu-item-group-title {
+  color: #94a3b8 !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+  padding-left: 16px !important;
+  margin-top: 16px !important;
+  margin-bottom: 8px !important;
+  text-transform: uppercase !important;
+}
+
+.custom-sidebar-menu .ant-menu-item-selected {
+  background-color: #eff6ff !important;
+  color: #3b82f6 !important;
+  font-weight: 700 !important;
+}
