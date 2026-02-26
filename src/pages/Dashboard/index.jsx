@@ -101,7 +101,6 @@ const LanguageDashboard = () => {
                 key={week.week}
                 ref={(el) => (weekRefs.current[wIdx] = el)}
                 style={{
-                  marginTop: 32,
                   backgroundColor: "#fff",
                   borderRadius: 12,
                   padding: 24,

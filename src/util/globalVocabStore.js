@@ -9,12 +9,12 @@ const defaultData = {
 
 const getUserKey = () => {
   const user = auth.currentUser;
-  return user ? `${BASE_STORAGE_KEY}_${user.uid}` : null;
+  return user ? `${BASE_STORAGE_KEY}_${user.uid}` : `${BASE_STORAGE_KEY}_guest`;
 };
 
 export const loadGlobalVocab = () => {
   const key = getUserKey();
-  if (!key) return defaultData; // Trả về mặc định nếu chưa login
+  if (!key) return defaultData;
 
   try {
     const raw = localStorage.getItem(key);
@@ -59,8 +59,6 @@ const toWordItem = (word, index, lang) => {
 };
 
 export const addWordsToGlobalVocab = (words, lang = "en") => {
-  if (!auth.currentUser) return loadGlobalVocab(); // Không cho thêm nếu chưa login
-
   const data = loadGlobalVocab();
   const topics = data[lang] || [];
   const activeTopic = topics[0] || { id: `${lang}_default`, name: "Default", words: [] };

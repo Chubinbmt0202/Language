@@ -6369,3 +6369,1906 @@ export const EXERCISE_DATA = {
     },
   },
 };
+
+// MAPPING THE NEW ROADMAP IDS DIRECTLY TO EXERCISES
+export const QUIZ_TASKS = {
+  "w1-d1-t3": {
+    description: "Giải Part 5 Mẫu",
+    total: 10,
+    questions: {
+      easy: [
+        {
+          "id": "q_noun_pronoun_001",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Easy",
+          "question_text": "The new _____ of the marketing department will start next Monday.",
+          "options": [
+            {
+              "key": "A",
+              "text": "director"
+            },
+            {
+              "key": "B",
+              "text": "directs"
+            },
+            {
+              "key": "C",
+              "text": "directed"
+            },
+            {
+              "key": "D",
+              "text": "directing"
+            }
+          ],
+          "correct_answer": "A",
+          "hint": "Cần một từ chỉ người lãnh đạo phòng marketing để thực hiện hành động 'will start'.",
+          "explanation": "Chính xác. Danh từ chỉ người (giám đốc) có thể đứng sau tính từ 'new' để đóng vai trò làm chủ ngữ chính trong câu.",
+          "translation": "Giám đốc mới của bộ phận tiếp thị sẽ bắt đầu làm việc vào thứ Hai tới."
+        },
+        {
+          "id": "q_noun_pronoun_002",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Medium",
+          "question_text": "Mr. Smith completed the quarterly financial report by _____.",
+          "options": [
+            {
+              "key": "A",
+              "text": "he"
+            },
+            {
+              "key": "B",
+              "text": "him"
+            },
+            {
+              "key": "C",
+              "text": "his"
+            },
+            {
+              "key": "D",
+              "text": "himself"
+            }
+          ],
+          "correct_answer": "D",
+          "hint": "Cấu trúc 'by + [đại từ phản thân]' được dùng để nhấn mạnh chủ thể tự thực hiện hành động mà không cần ai giúp đỡ.",
+          "explanation": "Chính xác. Đại từ phản thân 'himself' kết hợp với 'by' tạo thành cụm 'by himself' mang ý nghĩa tự mình làm việc gì đó.",
+          "translation": "Ông Smith đã tự mình hoàn thành báo cáo tài chính hàng quý."
+        },
+        {
+          "id": "q_noun_pronoun_003",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "_____ regarding the updated company policy should be directed to the HR department.",
+          "options": [
+            {
+              "key": "A",
+              "text": "Inquire"
+            },
+            {
+              "key": "B",
+              "text": "Inquiries"
+            },
+            {
+              "key": "C",
+              "text": "Inquiring"
+            },
+            {
+              "key": "D",
+              "text": "Inquired"
+            }
+          ],
+          "correct_answer": "B",
+          "hint": "Chỗ trống đóng vai trò làm chủ ngữ, cần một từ mang nghĩa 'những câu hỏi' hoặc 'những thắc mắc'.",
+          "explanation": "Chính xác. Danh từ số nhiều 'Inquiries' mang nghĩa 'những thắc mắc', đóng vai trò chủ ngữ hợp lý cho động từ 'should be directed'.",
+          "translation": "Những thắc mắc liên quan đến chính sách công ty mới cập nhật nên được gửi đến bộ phận nhân sự."
+        },
+        {
+          "id": "q_noun_pronoun_004",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Easy",
+          "question_text": "All employees must wear _____ identification badges at all times inside the building.",
+          "options": [
+            {
+              "key": "A",
+              "text": "they"
+            },
+            {
+              "key": "B",
+              "text": "them"
+            },
+            {
+              "key": "C",
+              "text": "their"
+            },
+            {
+              "key": "D",
+              "text": "theirs"
+            }
+          ],
+          "correct_answer": "C",
+          "hint": "Từ cần điền phải thể hiện sự sở hữu đối với cụm danh từ 'identification badges' của các nhân viên.",
+          "explanation": "Chính xác. Tính từ sở hữu 'their' dùng để chỉ sự sở hữu của chủ ngữ số nhiều 'All employees' đối với thẻ tên của họ.",
+          "translation": "Tất cả nhân viên phải đeo thẻ tên của họ mọi lúc khi ở trong tòa nhà."
+        },
+        {
+          "id": "q_noun_pronoun_005",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "The manager expressed her appreciation for the team's _____ to the project.",
+          "options": [
+            {
+              "key": "A",
+              "text": "dedicate"
+            },
+            {
+              "key": "B",
+              "text": "dedicated"
+            },
+            {
+              "key": "C",
+              "text": "dedication"
+            },
+            {
+              "key": "D",
+              "text": "dedicating"
+            }
+          ],
+          "correct_answer": "C",
+          "hint": "Sở hữu cách ('s) luôn yêu cầu một danh từ hoặc cụm danh từ theo ngay sau nó.",
+          "explanation": "Chính xác. Danh từ 'dedication' mang nghĩa 'sự cống hiến' đứng sau sở hữu cách 'team's' để hoàn thành cụm danh từ.",
+          "translation": "Người quản lý bày tỏ sự cảm kích đối với sự cống hiến của nhóm cho dự án."
+        },
+        {
+          "id": "q_noun_pronoun_006",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Hard",
+          "question_text": "The CEO has requested that _____ who plans to attend the conference register by Friday.",
+          "options": [
+            {
+              "key": "A",
+              "text": "anyone"
+            },
+            {
+              "key": "B",
+              "text": "those"
+            },
+            {
+              "key": "C",
+              "text": "who"
+            },
+            {
+              "key": "D",
+              "text": "some"
+            }
+          ],
+          "correct_answer": "A",
+          "hint": "Hãy để ý kỹ đuôi 's' của động từ 'plans' ngay phía sau chỗ trống để xác định đại từ cần điền là số ít hay số nhiều.",
+          "explanation": "Chính xác. Đại từ bất định số ít 'anyone' phù hợp với mệnh đề quan hệ 'who plans' (động từ plan được chia số ít).",
+          "translation": "Giám đốc điều hành đã yêu cầu bất kỳ ai có dự định tham dự hội nghị phải đăng ký trước thứ Sáu."
+        },
+        {
+          "id": "q_noun_pronoun_007",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Hard",
+          "question_text": "Please ensure that the customer service _____ is available 24/7 to handle complaints.",
+          "options": [
+            {
+              "key": "A",
+              "text": "represent"
+            },
+            {
+              "key": "B",
+              "text": "representative"
+            },
+            {
+              "key": "C",
+              "text": "representation"
+            },
+            {
+              "key": "D",
+              "text": "representatives"
+            }
+          ],
+          "correct_answer": "B",
+          "hint": "Cần một danh từ chỉ người trực dịch vụ khách hàng và phải tương thích với động từ to be 'is' (số ít).",
+          "explanation": "Chính xác. Danh từ chỉ người 'representative' kết hợp tạo thành cụm chủ ngữ số ít đi hợp với động từ to be 'is' phía sau.",
+          "translation": "Vui lòng đảm bảo rằng người đại diện dịch vụ khách hàng có mặt 24/7 để xử lý các khiếu nại."
+        },
+        {
+          "id": "q_noun_pronoun_008",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Easy",
+          "question_text": "Although Ms. Garcia was busy, _____ took the time to review the contract thoroughly.",
+          "options": [
+            {
+              "key": "A",
+              "text": "she"
+            },
+            {
+              "key": "B",
+              "text": "her"
+            },
+            {
+              "key": "C",
+              "text": "hers"
+            },
+            {
+              "key": "D",
+              "text": "herself"
+            }
+          ],
+          "correct_answer": "A",
+          "hint": "Mệnh đề thứ hai đang thiếu một chủ ngữ để thực hiện hành động 'took'.",
+          "explanation": "Chính xác. Đại từ nhân xưng chủ ngữ 'she' thay thế cho 'Ms. Garcia' để thực hiện hành động 'took'.",
+          "translation": "Mặc dù cô Garcia rất bận, cô ấy vẫn dành thời gian để xem xét kỹ lưỡng bản hợp đồng."
+        },
+        {
+          "id": "q_noun_pronoun_009",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "The company experienced a significant increase in _____ during the holiday season.",
+          "options": [
+            {
+              "key": "A",
+              "text": "sale"
+            },
+            {
+              "key": "B",
+              "text": "sales"
+            },
+            {
+              "key": "C",
+              "text": "sells"
+            },
+            {
+              "key": "D",
+              "text": "selling"
+            }
+          ],
+          "correct_answer": "B",
+          "hint": "Khi nói về doanh thu hay số lượng hàng bán ra trong kinh doanh, từ này luôn được dùng ở dạng số nhiều.",
+          "explanation": "Chính xác. Danh từ số nhiều 'sales' mang nghĩa 'doanh số', tạo thành cụm từ cố định 'increase in sales' (tăng trưởng doanh số).",
+          "translation": "Công ty đã trải qua một sự gia tăng đáng kể về doanh số bán hàng trong suốt mùa lễ hội."
+        },
+        {
+          "id": "q_noun_pronoun_010",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Hard",
+          "question_text": "The proposed budget is not mine; it is _____.",
+          "options": [
+            {
+              "key": "A",
+              "text": "her"
+            },
+            {
+              "key": "B",
+              "text": "hers"
+            },
+            {
+              "key": "C",
+              "text": "she"
+            },
+            {
+              "key": "D",
+              "text": "herself"
+            }
+          ],
+          "correct_answer": "B",
+          "hint": "Cần một từ có thể thay thế cho cả cụm 'tính từ sở hữu + danh từ' (ví dụ: her budget) để tránh lặp từ.",
+          "explanation": "Chính xác. Đại từ sở hữu 'hers' dùng để thay thế cho cụm 'her budget', giúp tránh lặp lại từ 'budget' đã xuất hiện ở vế trước.",
+          "translation": "Ngân sách được đề xuất không phải của tôi; nó là của cô ấy."
+        },
+        {
+          "id": "q_noun_pronoun_011",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "The lead developer emphasized that regular system updates are essential for the educational software's _____.",
+          "options": [
+            {
+              "key": "A",
+              "text": "reliable"
+            },
+            {
+              "key": "B",
+              "text": "reliably"
+            },
+            {
+              "key": "C",
+              "text": "reliability"
+            },
+            {
+              "key": "D",
+              "text": "relies"
+            }
+          ],
+          "correct_answer": "C",
+          "hint": "Phía sau sở hữu cách ('s) của cụm danh từ 'educational software' luôn cần một danh từ để hoàn thiện ý nghĩa.",
+          "explanation": "Chính xác. Từ cần điền là một danh từ đứng sau sở hữu cách. 'Reliability' (sự đáng tin cậy/độ tin cậy) là danh từ phù hợp nhất về mặt ngữ pháp và ngữ nghĩa.",
+          "translation": "Lập trình viên chính nhấn mạnh rằng việc cập nhật hệ thống thường xuyên là rất cần thiết cho độ tin cậy của phần mềm giáo dục."
+        },
+        {
+          "id": "q_noun_pronoun_012",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Easy",
+          "question_text": "Employees must log into the mobile timekeeping application using _____ unique credentials before starting their shifts.",
+          "options": [
+            {
+              "key": "A",
+              "text": "they"
+            },
+            {
+              "key": "B",
+              "text": "them"
+            },
+            {
+              "key": "C",
+              "text": "their"
+            },
+            {
+              "key": "D",
+              "text": "theirs"
+            }
+          ],
+          "correct_answer": "C",
+          "hint": "Chỗ trống cần một từ để thể hiện sự sở hữu đối với cụm danh từ 'unique credentials' (thông tin đăng nhập duy nhất).",
+          "explanation": "Chính xác. Tính từ sở hữu 'their' đứng trước cụm danh từ 'unique credentials' để chỉ thông tin đăng nhập thuộc về các nhân viên (employees).",
+          "translation": "Nhân viên phải đăng nhập vào ứng dụng chấm công trên thiết bị di động bằng thông tin đăng nhập duy nhất của họ trước khi bắt đầu ca làm việc."
+        },
+        {
+          "id": "q_noun_pronoun_013",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Hard",
+          "question_text": "The marketing team noted a sudden surge in _____ after the promotional video for the new gift box campaign went viral.",
+          "options": [
+            {
+              "key": "A",
+              "text": "order"
+            },
+            {
+              "key": "B",
+              "text": "ordered"
+            },
+            {
+              "key": "C",
+              "text": "ordering"
+            },
+            {
+              "key": "D",
+              "text": "orders"
+            }
+          ],
+          "correct_answer": "D",
+          "hint": "Sau giới từ 'in', chúng ta cần một danh từ. Khi nói về số lượng đơn hàng trong kinh doanh, ta thường dùng danh từ đếm được ở dạng số nhiều.",
+          "explanation": "Chính xác. Danh từ số nhiều 'orders' (các đơn hàng) là lựa chọn chính xác nhất để đi cùng với cụm 'a sudden surge in' (một sự tăng vọt đột ngột về...).",
+          "translation": "Nhóm tiếp thị ghi nhận sự tăng vọt đột ngột về các đơn đặt hàng sau khi video quảng cáo cho chiến dịch hộp quà tặng mới lan truyền rộng rãi."
+        },
+        {
+          "id": "q_noun_pronoun_014",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Medium",
+          "question_text": "Ms. Tanaka writes the scripts and edits the daily English practice videos entirely by _____.",
+          "options": [
+            {
+              "key": "A",
+              "text": "her"
+            },
+            {
+              "key": "B",
+              "text": "she"
+            },
+            {
+              "key": "C",
+              "text": "hers"
+            },
+            {
+              "key": "D",
+              "text": "herself"
+            }
+          ],
+          "correct_answer": "D",
+          "hint": "Cấu trúc 'by + đại từ phản thân' mang nghĩa tự mình làm việc gì đó, nhấn mạnh sự tự lập của chủ thể.",
+          "explanation": "Chính xác. Đại từ phản thân 'herself' đi cùng giới từ 'by' chỉ việc cô Tanaka tự mình thực hiện các công việc mà không có sự trợ giúp.",
+          "translation": "Cô Tanaka hoàn toàn tự mình viết kịch bản và chỉnh sửa các video luyện tập tiếng Anh hàng ngày."
+        },
+        {
+          "id": "q_noun_pronoun_015",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "To improve workflow, the HR department has implemented a new _____ for processing employee leave requests.",
+          "options": [
+            {
+              "key": "A",
+              "text": "procedure"
+            },
+            {
+              "key": "B",
+              "text": "procedural"
+            },
+            {
+              "key": "C",
+              "text": "proceed"
+            },
+            {
+              "key": "D",
+              "text": "proceeds"
+            }
+          ],
+          "correct_answer": "A",
+          "hint": "Cần một danh từ số ít đứng sau mạo từ 'a' và tính từ 'new' để làm tân ngữ cho động từ 'implemented'.",
+          "explanation": "Chính xác. Danh từ 'procedure' (quy trình/thủ tục) điền vào chỗ trống tạo thành cụm 'a new procedure' hợp lý về cả ngữ pháp lẫn ngữ nghĩa.",
+          "translation": "Để cải thiện quy trình làm việc, bộ phận nhân sự đã áp dụng một quy trình mới để xử lý các yêu cầu nghỉ phép của nhân viên."
+        },
+        {
+          "id": "q_noun_pronoun_016",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Medium",
+          "question_text": "The new gift boxes are highly anticipated; many corporate clients have already pre-ordered _____ for the upcoming holiday.",
+          "options": [
+            {
+              "key": "A",
+              "text": "it"
+            },
+            {
+              "key": "B",
+              "text": "them"
+            },
+            {
+              "key": "C",
+              "text": "their"
+            },
+            {
+              "key": "D",
+              "text": "themselves"
+            }
+          ],
+          "correct_answer": "B",
+          "hint": "Đại từ cần điền đóng vai trò tân ngữ thay thế cho cụm danh từ số nhiều 'the new gift boxes' ở mệnh đề phía trước.",
+          "explanation": "Chính xác. Đại từ tân ngữ 'them' được dùng để thay thế cho danh từ số nhiều 'gift boxes' để tránh lặp từ, đồng thời làm tân ngữ cho động từ 'pre-ordered'.",
+          "translation": "Những hộp quà tặng mới rất được mong đợi; nhiều khách hàng doanh nghiệp đã đặt trước chúng cho kỳ nghỉ sắp tới."
+        },
+        {
+          "id": "q_noun_pronoun_017",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Easy",
+          "question_text": "Consistent daily _____ is the most effective method for mastering a foreign language in a short amount of time.",
+          "options": [
+            {
+              "key": "A",
+              "text": "practice"
+            },
+            {
+              "key": "B",
+              "text": "practices"
+            },
+            {
+              "key": "C",
+              "text": "practiced"
+            },
+            {
+              "key": "D",
+              "text": "practicing"
+            }
+          ],
+          "correct_answer": "A",
+          "hint": "Cần một danh từ không đếm được đóng vai trò chủ ngữ đi với động từ to be 'is'.",
+          "explanation": "Chính xác. Danh từ 'practice' (sự thực hành/luyện tập) đứng sau tính từ 'daily' tạo thành cụm chủ ngữ số ít phù hợp với động từ 'is'.",
+          "translation": "Việc thực hành đều đặn hàng ngày là phương pháp hiệu quả nhất để làm chủ một ngoại ngữ trong một khoảng thời gian ngắn."
+        },
+        {
+          "id": "q_noun_pronoun_018",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Medium",
+          "question_text": "The software engineers are proud of the new timekeeping feature because they designed it _____.",
+          "options": [
+            {
+              "key": "A",
+              "text": "they"
+            },
+            {
+              "key": "B",
+              "text": "their"
+            },
+            {
+              "key": "C",
+              "text": "themselves"
+            },
+            {
+              "key": "D",
+              "text": "them"
+            }
+          ],
+          "correct_answer": "C",
+          "hint": "Để nhấn mạnh việc chính chủ ngữ thực hiện hành động (không nhờ ai khác), ta đặt đại từ phản thân ở cuối mệnh đề.",
+          "explanation": "Chính xác. Đại từ phản thân 'themselves' dùng để nhấn mạnh rằng chính các kỹ sư phần mềm ('they') đã tự tay thiết kế tính năng này.",
+          "translation": "Các kỹ sư phần mềm rất tự hào về tính năng chấm công mới bởi vì chính họ đã tự thiết kế nó."
+        },
+        {
+          "id": "q_noun_pronoun_019",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "A clear _____ of the target audience is crucial when launching a specialized product on the website.",
+          "options": [
+            {
+              "key": "A",
+              "text": "understand"
+            },
+            {
+              "key": "B",
+              "text": "understandable"
+            },
+            {
+              "key": "C",
+              "text": "understanding"
+            },
+            {
+              "key": "D",
+              "text": "understands"
+            }
+          ],
+          "correct_answer": "C",
+          "hint": "Mạo từ 'A' và tính từ 'clear' đòi hỏi một danh từ theo sau để hoàn thành cụm danh từ làm chủ ngữ.",
+          "explanation": "Chính xác. Danh động từ/Danh từ 'understanding' (sự thấu hiểu) đi kèm giới từ 'of' tạo thành cụm danh từ mang nghĩa 'sự hiểu biết rõ ràng về...'.",
+          "translation": "Sự thấu hiểu rõ ràng về đối tượng khách hàng mục tiêu là rất quan trọng khi ra mắt một sản phẩm chuyên biệt trên trang web."
+        },
+        {
+          "id": "q_noun_pronoun_020",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Hard",
+          "question_text": "The project director awarded the top developer a bonus because of _____ outstanding performance this quarter.",
+          "options": [
+            {
+              "key": "A",
+              "text": "he"
+            },
+            {
+              "key": "B",
+              "text": "him"
+            },
+            {
+              "key": "C",
+              "text": "his"
+            },
+            {
+              "key": "D",
+              "text": "himself"
+            }
+          ],
+          "correct_answer": "C",
+          "hint": "Cần một từ thể hiện sự sở hữu đứng trước cụm danh từ 'outstanding performance' (hiệu suất xuất sắc).",
+          "explanation": "Chính xác. Tính từ sở hữu 'his' đứng trước danh từ để bổ nghĩa, chỉ hiệu suất xuất sắc thuộc về lập trình viên xuất sắc nhất ('the top developer').",
+          "translation": "Giám đốc dự án đã thưởng cho lập trình viên xuất sắc nhất một khoản tiền thưởng vì hiệu suất xuất sắc của anh ấy trong quý này."
+        },
+        {
+          "id": "q_noun_pronoun_021",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "The building manager announced that routine _____ of the air conditioning system will begin next week.",
+          "options": [
+            {
+              "key": "A",
+              "text": "maintain"
+            },
+            {
+              "key": "B",
+              "text": "maintaining"
+            },
+            {
+              "key": "C",
+              "text": "maintenance"
+            },
+            {
+              "key": "D",
+              "text": "maintained"
+            }
+          ],
+          "correct_answer": "C",
+          "hint": "Tính từ 'routine' (định kỳ, thường xuyên) cần một danh từ theo sau để tạo thành cụm danh từ đóng vai trò chủ ngữ cho mệnh đề 'that...'.",
+          "explanation": "Chính xác. Từ cần điền là danh từ 'maintenance' (sự bảo trì). Cụm 'routine maintenance' mang nghĩa là 'sự bảo trì định kỳ'.",
+          "translation": "Quản lý tòa nhà thông báo rằng việc bảo trì định kỳ hệ thống điều hòa không khí sẽ bắt đầu vào tuần tới."
+        },
+        {
+          "id": "q_noun_pronoun_022",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Easy",
+          "question_text": "The instructions were so complicated that the new employees could not figure them out by _____.",
+          "options": [
+            {
+              "key": "A",
+              "text": "they"
+            },
+            {
+              "key": "B",
+              "text": "their"
+            },
+            {
+              "key": "C",
+              "text": "them"
+            },
+            {
+              "key": "D",
+              "text": "themselves"
+            }
+          ],
+          "correct_answer": "D",
+          "hint": "Giới từ 'by' đi kèm với một đại từ phản thân mang ý nghĩa tự mình làm gì đó mà không cần sự trợ giúp.",
+          "explanation": "Chính xác. Đại từ phản thân 'themselves' tương ứng với chủ ngữ số nhiều 'the new employees', tạo thành cụm 'by themselves' (tự họ).",
+          "translation": "Các hướng dẫn quá phức tạp đến nỗi những nhân viên mới không thể tự mình hiểu được chúng."
+        },
+        {
+          "id": "q_noun_pronoun_023",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "All applicants must submit their letters of _____ to the human resources department before the deadline.",
+          "options": [
+            {
+              "key": "A",
+              "text": "recommend"
+            },
+            {
+              "key": "B",
+              "text": "recommending"
+            },
+            {
+              "key": "C",
+              "text": "recommendation"
+            },
+            {
+              "key": "D",
+              "text": "recommended"
+            }
+          ],
+          "correct_answer": "C",
+          "hint": "Giới từ 'of' luôn yêu cầu một danh từ hoặc danh động từ (V-ing) theo sau. Trong trường hợp này, ta có một cụm danh từ ghép cố định.",
+          "explanation": "Chính xác. Danh từ 'recommendation' kết hợp với 'letters of' tạo thành cụm từ cố định 'letters of recommendation' mang nghĩa là thư giới thiệu.",
+          "translation": "Tất cả các ứng viên phải nộp thư giới thiệu của họ cho bộ phận nhân sự trước hạn chót."
+        },
+        {
+          "id": "q_noun_pronoun_024",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Hard",
+          "question_text": "The supervisor needs to know _____ left the confidential documents on the conference table.",
+          "options": [
+            {
+              "key": "A",
+              "text": "who"
+            },
+            {
+              "key": "B",
+              "text": "whom"
+            },
+            {
+              "key": "C",
+              "text": "whose"
+            },
+            {
+              "key": "D",
+              "text": "whichever"
+            }
+          ],
+          "correct_answer": "A",
+          "hint": "Chỗ trống cần một đại từ nghi vấn đóng vai trò làm chủ ngữ cho động từ 'left' ở mệnh đề phía sau.",
+          "explanation": "Chính xác. Đại từ 'who' đóng vai trò chủ ngữ cho động từ 'left'. 'Whom' chỉ làm tân ngữ, còn 'whose' chỉ sự sở hữu.",
+          "translation": "Người giám sát cần biết ai đã để lại các tài liệu mật trên bàn hội nghị."
+        },
+        {
+          "id": "q_noun_pronoun_025",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "Due to the severe weather conditions, the airline offered financial _____ to all affected passengers.",
+          "options": [
+            {
+              "key": "A",
+              "text": "compensate"
+            },
+            {
+              "key": "B",
+              "text": "compensated"
+            },
+            {
+              "key": "C",
+              "text": "compensation"
+            },
+            {
+              "key": "D",
+              "text": "compensating"
+            }
+          ],
+          "correct_answer": "C",
+          "hint": "Tính từ 'financial' (thuộc về tài chính) cần một danh từ đi liền phía sau để bổ nghĩa.",
+          "explanation": "Chính xác. Danh từ 'compensation' (sự bồi thường) kết hợp với 'financial' tạo thành cụm 'financial compensation' (khoản bồi thường tài chính).",
+          "translation": "Do điều kiện thời tiết khắc nghiệt, hãng hàng không đã đề nghị một khoản bồi thường tài chính cho tất cả các hành khách bị ảnh hưởng."
+        },
+        {
+          "id": "q_noun_pronoun_026",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Hard",
+          "question_text": "Our marketing strategy focuses on digital advertising, whereas _____ relies heavily on print media.",
+          "options": [
+            {
+              "key": "A",
+              "text": "they"
+            },
+            {
+              "key": "B",
+              "text": "their"
+            },
+            {
+              "key": "C",
+              "text": "them"
+            },
+            {
+              "key": "D",
+              "text": "theirs"
+            }
+          ],
+          "correct_answer": "D",
+          "hint": "Cần một đại từ để thay thế cho cụm 'their marketing strategy' nhằm tránh lặp lại từ 'strategy' đã dùng ở vế trước.",
+          "explanation": "Chính xác. Đại từ sở hữu 'theirs' đóng vai trò làm chủ ngữ cho vế sau, mang ý nghĩa thay thế cho 'their strategy' (chiến lược của họ).",
+          "translation": "Chiến lược tiếp thị của chúng tôi tập trung vào quảng cáo kỹ thuật số, trong khi chiến lược của họ phụ thuộc nhiều vào phương tiện truyền thông in ấn."
+        },
+        {
+          "id": "q_noun_pronoun_027",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "_____ at the annual tech convention is strictly limited to registered members and invited guests.",
+          "options": [
+            {
+              "key": "A",
+              "text": "Attend"
+            },
+            {
+              "key": "B",
+              "text": "Attendant"
+            },
+            {
+              "key": "C",
+              "text": "Attendance"
+            },
+            {
+              "key": "D",
+              "text": "Attended"
+            }
+          ],
+          "correct_answer": "C",
+          "hint": "Chỗ trống nằm ở đầu câu, đóng vai trò làm chủ ngữ cho động từ 'is'. Ta cần một danh từ trừu tượng chỉ việc tham dự.",
+          "explanation": "Chính xác. Danh từ 'Attendance' (sự tham dự) làm chủ ngữ cho câu. 'Attendant' là danh từ chỉ người (người phục vụ/người tham dự) nhưng nếu dùng đếm được thì phải có mạo từ hoặc dạng số nhiều.",
+          "translation": "Sự tham dự tại hội nghị công nghệ thường niên bị giới hạn nghiêm ngặt cho các thành viên đã đăng ký và khách mời."
+        },
+        {
+          "id": "q_noun_pronoun_028",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Easy",
+          "question_text": "The board of directors invited the lead investor to join _____ for a celebratory dinner after the meeting.",
+          "options": [
+            {
+              "key": "A",
+              "text": "they"
+            },
+            {
+              "key": "B",
+              "text": "their"
+            },
+            {
+              "key": "C",
+              "text": "them"
+            },
+            {
+              "key": "D",
+              "text": "themselves"
+            }
+          ],
+          "correct_answer": "C",
+          "hint": "Động từ 'join' (tham gia cùng) cần một tân ngữ đứng phía sau. Ở đây chỉ hội đồng quản trị (số nhiều).",
+          "explanation": "Chính xác. Đại từ tân ngữ 'them' thay thế cho cụm danh từ 'The board of directors' ở phía trước.",
+          "translation": "Hội đồng quản trị đã mời nhà đầu tư chính tham gia cùng họ trong bữa tối kỷ niệm sau cuộc họp."
+        },
+        {
+          "id": "q_noun_pronoun_029",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "Before signing the lease agreement, please read the terms and conditions with extreme _____.",
+          "options": [
+            {
+              "key": "A",
+              "text": "caution"
+            },
+            {
+              "key": "B",
+              "text": "cautious"
+            },
+            {
+              "key": "C",
+              "text": "cautiously"
+            },
+            {
+              "key": "D",
+              "text": "cautioned"
+            }
+          ],
+          "correct_answer": "A",
+          "hint": "Sau giới từ 'with' và tính từ 'extreme', chúng ta bắt buộc phải sử dụng một danh từ.",
+          "explanation": "Chính xác. Danh từ 'caution' (sự cẩn trọng) đi cùng tính từ 'extreme' tạo thành cụm 'with extreme caution' (với sự cẩn trọng tột độ).",
+          "translation": "Trước khi ký thỏa thuận thuê mướn, vui lòng đọc các điều khoản và điều kiện với sự cẩn trọng tột độ."
+        },
+        {
+          "id": "q_noun_pronoun_030",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Hard",
+          "question_text": "The new software update fixed several bugs, specifically _____ that caused the system to crash unexpectedly.",
+          "options": [
+            {
+              "key": "A",
+              "text": "this"
+            },
+            {
+              "key": "B",
+              "text": "that"
+            },
+            {
+              "key": "C",
+              "text": "these"
+            },
+            {
+              "key": "D",
+              "text": "those"
+            }
+          ],
+          "correct_answer": "D",
+          "hint": "Cần một đại từ chỉ định số nhiều để thay thế cho danh từ 'bugs' (lỗi phần mềm) vừa được nhắc đến trước đó.",
+          "explanation": "Chính xác. Đại từ 'those' thay thế cho 'bugs' (số nhiều). Cấu trúc 'those that/who...' thường được dùng để thay thế cho danh từ số nhiều đã nhắc đến, nhằm chuẩn bị cho một mệnh đề quan hệ theo sau.",
+          "translation": "Bản cập nhật phần mềm mới đã sửa một số lỗi, cụ thể là những lỗi đã khiến hệ thống bị sập bất ngờ."
+        },
+        {
+          "id": "q_noun_pronoun_031",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "The seamless _____ of the mobile timekeeping app with the HR portal will save the company hours of administrative work.",
+          "options": [
+            { "key": "A", "text": "integrate" },
+            { "key": "B", "text": "integrating" },
+            { "key": "C", "text": "integration" },
+            { "key": "D", "text": "integrators" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cần một danh từ trừu tượng đứng sau tính từ 'seamless' (liền mạch) để làm chủ ngữ cho câu.",
+          "explanation": "Chính xác. Danh từ 'integration' (sự tích hợp) là lựa chọn phù hợp nhất để đi cùng giới từ 'of' và 'with', mang nghĩa 'sự tích hợp liền mạch của ứng dụng... với cổng thông tin...'.",
+          "translation": "Sự tích hợp liền mạch của ứng dụng chấm công di động với cổng thông tin nhân sự sẽ giúp công ty tiết kiệm hàng giờ làm công việc hành chính."
+        },
+        {
+          "id": "q_noun_pronoun_032",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Easy",
+          "question_text": "The Happy Box company guarantees that all of _____ gift boxes are packed with eco-friendly materials.",
+          "options": [
+            { "key": "A", "text": "it" },
+            { "key": "B", "text": "its" },
+            { "key": "C", "text": "their" },
+            { "key": "D", "text": "theirs" }
+          ],
+          "correct_answer": "B",
+          "hint": "Chú ý chủ ngữ 'The Happy Box company' là một danh từ số ít, chỉ một tổ chức/công ty.",
+          "explanation": "Chính xác. Tính từ sở hữu 'its' (của nó) đứng trước cụm danh từ 'gift boxes' để chỉ sự sở hữu của công ty (danh từ số ít).",
+          "translation": "Công ty Happy Box đảm bảo rằng tất cả các hộp quà tặng của họ đều được đóng gói bằng vật liệu thân thiện với môi trường."
+        },
+        {
+          "id": "q_noun_pronoun_033",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "Establishing a daily _____ of speaking English on camera will significantly improve your fluency over time.",
+          "options": [
+            { "key": "A", "text": "routine" },
+            { "key": "B", "text": "routinely" },
+            { "key": "C", "text": "routines" },
+            { "key": "D", "text": "routinize" }
+          ],
+          "correct_answer": "A",
+          "hint": "Mạo từ 'a' và tính từ 'daily' yêu cầu một danh từ đếm được ở dạng số ít theo sau.",
+          "explanation": "Chính xác. Danh từ số ít 'routine' (thói quen, nề nếp) đứng sau 'a daily' tạo thành cụm từ 'một thói quen hàng ngày'.",
+          "translation": "Việc thiết lập một thói quen nói tiếng Anh trước ống kính hàng ngày sẽ cải thiện đáng kể sự trôi chảy của bạn theo thời gian."
+        },
+        {
+          "id": "q_noun_pronoun_034",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Hard",
+          "question_text": "Students learning two foreign languages simultaneously should not compare _____ to those learning only one.",
+          "options": [
+            { "key": "A", "text": "them" },
+            { "key": "B", "text": "their" },
+            { "key": "C", "text": "themselves" },
+            { "key": "D", "text": "they" }
+          ],
+          "correct_answer": "C",
+          "hint": "Khi chủ ngữ (Students) và tân ngữ của hành động (compare) cùng chỉ một đối tượng, ta phải dùng loại đại từ nào?",
+          "explanation": "Chính xác. Đại từ phản thân 'themselves' được dùng vì những học sinh này đang tự so sánh chính bản thân họ với những người khác.",
+          "translation": "Những học sinh học hai ngoại ngữ cùng lúc không nên tự so sánh bản thân họ với những người chỉ học một ngôn ngữ."
+        },
+        {
+          "id": "q_noun_pronoun_035",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Easy",
+          "question_text": "The launch of the new educational _____ was temporarily delayed due to some unexpected technical bugs.",
+          "options": [
+            { "key": "A", "text": "software" },
+            { "key": "B", "text": "soft" },
+            { "key": "C", "text": "soften" },
+            { "key": "D", "text": "softly" }
+          ],
+          "correct_answer": "A",
+          "hint": "Chỗ trống cần một danh từ để kết hợp với tính từ 'educational' tạo thành cụm danh từ đóng vai trò bổ ngữ cho 'The launch of'.",
+          "explanation": "Chính xác. Danh từ 'software' (phần mềm) đi với 'educational' tạo thành cụm 'educational software' (phần mềm giáo dục).",
+          "translation": "Việc ra mắt phần mềm giáo dục mới đã bị trì hoãn tạm thời do một số lỗi kỹ thuật không mong muốn."
+        },
+        {
+          "id": "q_noun_pronoun_036",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Easy",
+          "question_text": "Several employees forgot to log their work hours, so the HR manager had to remind _____ via email.",
+          "options": [
+            { "key": "A", "text": "they" },
+            { "key": "B", "text": "their" },
+            { "key": "C", "text": "them" },
+            { "key": "D", "text": "themselves" }
+          ],
+          "correct_answer": "C",
+          "hint": "Động từ 'remind' (nhắc nhở) cần một tân ngữ theo sau để chỉ đối tượng nhận hành động.",
+          "explanation": "Chính xác. Đại từ tân ngữ 'them' thay thế cho 'Several employees' để làm tân ngữ nhận hành động nhắc nhở từ quản lý nhân sự.",
+          "translation": "Vài nhân viên đã quên ghi lại giờ làm việc của họ, vì vậy người quản lý nhân sự đã phải nhắc nhở họ qua email."
+        },
+        {
+          "id": "q_noun_pronoun_037",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "The sudden increase in sales _____ for the custom gift boxes surprised the entire marketing team.",
+          "options": [
+            { "key": "A", "text": "volume" },
+            { "key": "B", "text": "volumes" },
+            { "key": "C", "text": "voluminous" },
+            { "key": "D", "text": "voluminously" }
+          ],
+          "correct_answer": "A",
+          "hint": "Cụm danh từ ghép 'sales volume' mang nghĩa là doanh số/khối lượng bán hàng. Đây là một thuật ngữ kinh doanh rất phổ biến.",
+          "explanation": "Chính xác. Danh từ 'volume' ghép với 'sales' tạo thành cụm 'sales volume' (khối lượng bán ra/sản lượng tiêu thụ). Cụm này thường được dùng ở dạng số ít để chỉ tổng lượng.",
+          "translation": "Sự gia tăng đột ngột về khối lượng bán hàng của các hộp quà tặng tùy chỉnh đã làm ngạc nhiên toàn bộ đội ngũ tiếp thị."
+        },
+        {
+          "id": "q_noun_pronoun_038",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Medium",
+          "question_text": "The lead developer, Mr. Chen, designed the complex database architecture all by _____.",
+          "options": [
+            { "key": "A", "text": "him" },
+            { "key": "B", "text": "his" },
+            { "key": "C", "text": "he" },
+            { "key": "D", "text": "himself" }
+          ],
+          "correct_answer": "D",
+          "hint": "Cụm 'all by + [đại từ phản thân]' được dùng để nhấn mạnh ai đó tự mình làm toàn bộ một việc mà không ai giúp sức.",
+          "explanation": "Chính xác. Đại từ phản thân 'himself' được dùng với cụm 'all by' để chỉ việc ông Chen đã tự tay thiết kế kiến trúc cơ sở dữ liệu.",
+          "translation": "Lập trình viên chính, ông Chen, đã hoàn toàn tự mình thiết kế kiến trúc cơ sở dữ liệu phức tạp này."
+        },
+        {
+          "id": "q_noun_pronoun_039",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "Achieving a high _____ on international language exams requires a well-structured and disciplined study plan.",
+          "options": [
+            { "key": "A", "text": "score" },
+            { "key": "B", "text": "scores" },
+            { "key": "C", "text": "scored" },
+            { "key": "D", "text": "scoring" }
+          ],
+          "correct_answer": "A",
+          "hint": "Mạo từ 'a' và tính từ 'high' yêu cầu một danh từ số ít theo sau.",
+          "explanation": "Chính xác. Danh từ số ít 'score' (điểm số) đứng sau cụm 'a high' tạo thành tân ngữ cho danh động từ 'Achieving'.",
+          "translation": "Việc đạt được điểm số cao trong các kỳ thi ngôn ngữ quốc tế đòi hỏi một kế hoạch học tập có cấu trúc tốt và kỷ luật."
+        },
+        {
+          "id": "q_noun_pronoun_040",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Medium",
+          "question_text": "Please notify the director immediately if you have any questions regarding _____ upcoming business trip to Tokyo.",
+          "options": [
+            { "key": "A", "text": "her" },
+            { "key": "B", "text": "hers" },
+            { "key": "C", "text": "she" },
+            { "key": "D", "text": "herself" }
+          ],
+          "correct_answer": "A",
+          "hint": "Chỗ trống đứng trước cụm danh từ 'upcoming business trip', cần một từ đóng vai trò như một tính từ để thể hiện sự sở hữu.",
+          "explanation": "Chính xác. Tính từ sở hữu 'her' đứng trước cụm danh từ để bổ nghĩa, chỉ chuyến công tác sắp tới của giám đốc (nữ).",
+          "translation": "Vui lòng thông báo cho giám đốc ngay lập tức nếu bạn có bất kỳ câu hỏi nào liên quan đến chuyến công tác sắp tới của cô ấy tới Tokyo."
+        },
+        {
+          "id": "q_noun_pronoun_041",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "The board members finally reached an _____ after discussing the proposed annual budget for over three hours.",
+          "options": [
+            { "key": "A", "text": "agree" },
+            { "key": "B", "text": "agreed" },
+            { "key": "C", "text": "agreement" },
+            { "key": "D", "text": "agreeable" }
+          ],
+          "correct_answer": "C",
+          "hint": "Sau mạo từ 'an', chúng ta cần một danh từ số ít bắt đầu bằng một nguyên âm.",
+          "explanation": "Chính xác. Danh từ 'agreement' (sự thỏa thuận/sự đồng tình). Cụm 'reach an agreement' là một cụm từ cố định mang nghĩa 'đạt được thỏa thuận'.",
+          "translation": "Các thành viên hội đồng quản trị cuối cùng đã đạt được thỏa thuận sau khi thảo luận về ngân sách hàng năm được đề xuất trong hơn ba giờ."
+        },
+        {
+          "id": "q_noun_pronoun_042",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Hard",
+          "question_text": "_____ who wish to participate in the 30-day English speaking challenge must sign up online by midnight.",
+          "options": [
+            { "key": "A", "text": "They" },
+            { "key": "B", "text": "Them" },
+            { "key": "C", "text": "Those" },
+            { "key": "D", "text": "These" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cấu trúc '[Đại từ] + who' dùng để thay thế cho cụm 'The people who' (Những người mà...). Động từ 'wish' số nhiều nên cần đại từ chỉ định số nhiều.",
+          "explanation": "Chính xác. Đại từ chỉ định 'Those' kết hợp với mệnh đề quan hệ 'who' tạo thành cấu trúc 'Those who' (Những người mà). 'They' không đi trực tiếp với mệnh đề quan hệ 'who'.",
+          "translation": "Những người muốn tham gia thử thách nói tiếng Anh trong 30 ngày phải đăng ký trực tuyến trước nửa đêm."
+        },
+        {
+          "id": "q_noun_pronoun_043",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Easy",
+          "question_text": "All candidates applying for the senior role must have at least five years of _____ in human resources management.",
+          "options": [
+            { "key": "A", "text": "experience" },
+            { "key": "B", "text": "experiences" },
+            { "key": "C", "text": "experienced" },
+            { "key": "D", "text": "experiencing" }
+          ],
+          "correct_answer": "A",
+          "hint": "Khi mang nghĩa 'kinh nghiệm làm việc', từ này là một danh từ không đếm được.",
+          "explanation": "Chính xác. Danh từ 'experience' (kinh nghiệm) ở dạng không đếm được đi sau giới từ 'of'. Nếu dùng 'experiences' (đếm được), nó mang nghĩa là 'những trải nghiệm' chứ không phải kinh nghiệm làm việc.",
+          "translation": "Tất cả ứng viên ứng tuyển vào vai trò quản lý cấp cao phải có ít nhất năm năm kinh nghiệm trong lĩnh vực quản lý nhân sự."
+        },
+        {
+          "id": "q_noun_pronoun_044",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Medium",
+          "question_text": "The marketing team has submitted their progress report, but the finance department has not finished _____ yet.",
+          "options": [
+            { "key": "A", "text": "they" },
+            { "key": "B", "text": "their" },
+            { "key": "C", "text": "theirs" },
+            { "key": "D", "text": "them" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cần một đại từ sở hữu đứng độc lập để thay thế cho cụm 'their progress report' nhằm tránh sự lặp từ trong câu.",
+          "explanation": "Chính xác. Đại từ sở hữu 'theirs' thay thế cho cụm 'their report' (báo cáo của họ). Không dùng 'their' vì theo sau không có danh từ.",
+          "translation": "Nhóm tiếp thị đã nộp báo cáo tiến độ của họ, nhưng bộ phận tài chính thì vẫn chưa hoàn thành bản báo cáo của họ."
+        },
+        {
+          "id": "q_noun_pronoun_045",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "At Happy Box, ensuring absolute customer _____ is our top priority above everything else.",
+          "options": [
+            { "key": "A", "text": "satisfy" },
+            { "key": "B", "text": "satisfying" },
+            { "key": "C", "text": "satisfaction" },
+            { "key": "D", "text": "satisfied" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cần một danh từ đứng sau 'customer' tạo thành cụm danh từ làm tân ngữ cho danh động từ 'ensuring'.",
+          "explanation": "Chính xác. Danh từ 'satisfaction' kết hợp tạo thành cụm từ vô cùng phổ biến trong kinh doanh: 'customer satisfaction' (sự hài lòng của khách hàng).",
+          "translation": "Tại Happy Box, việc đảm bảo sự hài lòng tuyệt đối của khách hàng là ưu tiên hàng đầu của chúng tôi trên hết mọi thứ."
+        },
+        {
+          "id": "q_noun_pronoun_046",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Medium",
+          "question_text": "The new ergonomic office chairs are much more comfortable than the previous _____ we used to have.",
+          "options": [
+            { "key": "A", "text": "one" },
+            { "key": "B", "text": "ones" },
+            { "key": "C", "text": "them" },
+            { "key": "D", "text": "their" }
+          ],
+          "correct_answer": "B",
+          "hint": "Cần một đại từ thay thế cho danh từ số nhiều 'chairs' ở vế trước để tránh lặp từ.",
+          "explanation": "Chính xác. Đại từ thay thế 'ones' được dùng ở số nhiều để thay cho từ 'chairs'. Cụm 'the previous ones' nghĩa là 'những chiếc ghế trước đó'.",
+          "translation": "Những chiếc ghế văn phòng công thái học mới thì thoải mái hơn nhiều so với những chiếc trước đây mà chúng ta từng có."
+        },
+        {
+          "id": "q_noun_pronoun_047",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Hard",
+          "question_text": "The CEO's sudden _____ from the software company caused the stock prices to drop significantly.",
+          "options": [
+            { "key": "A", "text": "depart" },
+            { "key": "B", "text": "departs" },
+            { "key": "C", "text": "departure" },
+            { "key": "D", "text": "departed" }
+          ],
+          "correct_answer": "C",
+          "hint": "Đứng sau sở hữu cách ('s) và tính từ (sudden), chúng ta bắt buộc phải điền một danh từ.",
+          "explanation": "Chính xác. Danh từ 'departure' (sự rời đi / sự khởi hành) đóng vai trò là danh từ chính của cụm chủ ngữ 'The CEO's sudden departure'.",
+          "translation": "Sự rời đi đột ngột của Giám đốc điều hành khỏi công ty phần mềm đã khiến giá cổ phiếu sụt giảm đáng kể."
+        },
+        {
+          "id": "q_noun_pronoun_048",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Easy",
+          "question_text": "If the application crashes again during testing, users should report the issue so the tech team can fix _____ promptly.",
+          "options": [
+            { "key": "A", "text": "its" },
+            { "key": "B", "text": "it" },
+            { "key": "C", "text": "them" },
+            { "key": "D", "text": "themselves" }
+          ],
+          "correct_answer": "B",
+          "hint": "Động từ 'fix' cần một tân ngữ theo sau. Tân ngữ này thay thế cho 'the issue' (số ít) được nhắc đến ở vế trước.",
+          "explanation": "Chính xác. Đại từ tân ngữ 'it' được dùng để thay thế cho danh từ số ít 'the issue' (vấn đề) nhằm tránh lặp từ.",
+          "translation": "Nếu ứng dụng lại bị sập trong quá trình thử nghiệm, người dùng nên báo cáo sự cố để nhóm kỹ thuật có thể khắc phục nó ngay lập tức."
+        },
+        {
+          "id": "q_noun_pronoun_049",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "In order to secure funding, the startup team must present a compelling _____ to the investors by Friday.",
+          "options": [
+            { "key": "A", "text": "propose" },
+            { "key": "B", "text": "proposed" },
+            { "key": "C", "text": "proposal" },
+            { "key": "D", "text": "proposing" }
+          ],
+          "correct_answer": "C",
+          "hint": "Tính từ 'compelling' (hấp dẫn, thuyết phục) cần một danh từ theo sau làm tân ngữ cho động từ 'present'.",
+          "explanation": "Chính xác. Danh từ 'proposal' (bản đề xuất/kế hoạch đề xuất) đứng sau 'a compelling' tạo thành cụm 'một bản đề xuất đầy sức thuyết phục'.",
+          "translation": "Để đảm bảo được nguồn vốn, nhóm khởi nghiệp phải trình bày một bản đề xuất đầy sức thuyết phục cho các nhà đầu tư trước thứ Sáu."
+        },
+        {
+          "id": "q_noun_pronoun_050",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Hard",
+          "question_text": "Although the project idea was excellent, the investment committee ultimately decided not to fund _____.",
+          "options": [
+            { "key": "A", "text": "itself" },
+            { "key": "B", "text": "its" },
+            { "key": "C", "text": "it" },
+            { "key": "D", "text": "them" }
+          ],
+          "correct_answer": "C",
+          "hint": "Động từ 'fund' (tài trợ) đang thiếu một tân ngữ. Tân ngữ này phải thay thế cho 'the project idea' (ý tưởng dự án - số ít).",
+          "explanation": "Chính xác. Đại từ 'it' làm tân ngữ thay thế cho cụm danh từ số ít 'the project idea'.",
+          "translation": "Mặc dù ý tưởng dự án rất xuất sắc, ủy ban đầu tư cuối cùng đã quyết định không tài trợ cho nó."
+        },
+        {
+          "id": "q_noun_pronoun_061",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "The HR department requires a formal _____ of absence from any employee taking more than three consecutive sick days.",
+          "options": [
+            { "key": "A", "text": "notice" },
+            { "key": "B", "text": "noticed" },
+            { "key": "C", "text": "notices" },
+            { "key": "D", "text": "noticing" }
+          ],
+          "correct_answer": "A",
+          "hint": "Cần một danh từ số ít đứng sau mạo từ 'a' và tính từ 'formal' để tạo thành cụm danh từ làm tân ngữ cho động từ 'requires'.",
+          "explanation": "Chính xác. Danh từ 'notice' (thông báo) đứng sau tính từ 'formal' tạo thành cụm 'a formal notice' (một thông báo chính thức). Dạng số nhiều 'notices' bị loại vì có mạo từ 'a' phía trước.",
+          "translation": "Bộ phận nhân sự yêu cầu một thông báo nghỉ phép chính thức từ bất kỳ nhân viên nào nghỉ ốm quá 3 ngày liên tiếp."
+        },
+        {
+          "id": "q_noun_pronoun_062",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Easy",
+          "question_text": "Ms. Lin creates engaging TikTok videos to help students improve _____ English speaking skills.",
+          "options": [
+            { "key": "A", "text": "they" },
+            { "key": "B", "text": "them" },
+            { "key": "C", "text": "their" },
+            { "key": "D", "text": "theirs" }
+          ],
+          "correct_answer": "C",
+          "hint": "Chỗ trống cần một từ thể hiện sự sở hữu đối với cụm danh từ 'English speaking skills' của những học sinh (students).",
+          "explanation": "Chính xác. Tính từ sở hữu 'their' bổ nghĩa cho cụm danh từ phía sau, chỉ 'các kỹ năng nói tiếng Anh của họ (của học sinh)'.",
+          "translation": "Cô Lin tạo ra các video TikTok hấp dẫn để giúp học sinh cải thiện kỹ năng nói tiếng Anh của họ."
+        },
+        {
+          "id": "q_noun_pronoun_063",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Hard",
+          "question_text": "User _____ is a critical factor when designing the interface for the new EduKit learning platform.",
+          "options": [
+            { "key": "A", "text": "engage" },
+            { "key": "B", "text": "engagement" },
+            { "key": "C", "text": "engaged" },
+            { "key": "D", "text": "engagingly" }
+          ],
+          "correct_answer": "B",
+          "hint": "Từ 'User' ở đây đóng vai trò bổ nghĩa cho một danh từ đứng ngay sau nó để tạo thành cụm danh từ ghép làm chủ ngữ.",
+          "explanation": "Chính xác. Danh từ 'engagement' kết hợp với 'User' tạo thành cụm danh từ phổ biến trong công nghệ: 'User engagement' (sự tương tác/sự gắn kết của người dùng).",
+          "translation": "Sự tương tác của người dùng là một yếu tố then chốt khi thiết kế giao diện cho nền tảng học tập EduKit mới."
+        },
+        {
+          "id": "q_noun_pronoun_064",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Hard",
+          "question_text": "The Happy Box team takes pride in curating unique gift boxes that speak for _____.",
+          "options": [
+            { "key": "A", "text": "them" },
+            { "key": "B", "text": "they" },
+            { "key": "C", "text": "their" },
+            { "key": "D", "text": "themselves" }
+          ],
+          "correct_answer": "D",
+          "hint": "Cụm thành ngữ 'speak for + [đại từ phản thân]' có nghĩa là 'tự nói lên tất cả / tự chứng minh giá trị của mình'. Nó đang bổ nghĩa cho danh từ số nhiều 'gift boxes'.",
+          "explanation": "Chính xác. Đại từ phản thân 'themselves' đóng vai trò tân ngữ của giới từ 'for', ý nói những hộp quà này tự chứng minh được sự độc đáo và giá trị của chính chúng.",
+          "translation": "Đội ngũ Happy Box tự hào trong việc tuyển chọn những hộp quà độc đáo tự nói lên giá trị của chính chúng."
+        },
+        {
+          "id": "q_noun_pronoun_065",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "We need to increase our advertising budget to boost the overall _____ of the new product line.",
+          "options": [
+            { "key": "A", "text": "visible" },
+            { "key": "B", "text": "visually" },
+            { "key": "C", "text": "visibility" },
+            { "key": "D", "text": "vision" }
+          ],
+          "correct_answer": "C",
+          "hint": "Sau mạo từ 'the' và tính từ 'overall' (toàn diện/tổng thể), chúng ta cần một danh từ.",
+          "explanation": "Chính xác. Danh từ 'visibility' (sự hiển thị / mức độ nhận diện) là từ phù hợp nhất về mặt ngữ nghĩa trong lĩnh vực marketing (brand visibility).",
+          "translation": "Chúng ta cần tăng ngân sách quảng cáo để thúc đẩy mức độ nhận diện tổng thể của dòng sản phẩm mới."
+        },
+        {
+          "id": "q_noun_pronoun_066",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Medium",
+          "question_text": "Students studying for the JLPT N3 exam should familiarize _____ with the test format and time limits.",
+          "options": [
+            { "key": "A", "text": "them" },
+            { "key": "B", "text": "they" },
+            { "key": "C", "text": "their" },
+            { "key": "D", "text": "themselves" }
+          ],
+          "correct_answer": "D",
+          "hint": "Cấu trúc 'familiarize oneself with something' nghĩa là tự làm cho bản thân mình quen với điều gì đó.",
+          "explanation": "Chính xác. Đại từ phản thân 'themselves' tương ứng với chủ ngữ số nhiều 'Students' ở đầu câu.",
+          "translation": "Học sinh đang ôn tập cho kỳ thi JLPT N3 nên tự làm quen với định dạng bài thi và giới hạn thời gian."
+        },
+        {
+          "id": "q_noun_pronoun_067",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "Please accept our sincere _____ for the temporary interruption of the mobile timekeeping service yesterday.",
+          "options": [
+            { "key": "A", "text": "apologize" },
+            { "key": "B", "text": "apologized" },
+            { "key": "C", "text": "apologetic" },
+            { "key": "D", "text": "apologies" }
+          ],
+          "correct_answer": "D",
+          "hint": "Tính từ sở hữu 'our' và tính từ 'sincere' (chân thành) đòi hỏi một danh từ theo sau làm tân ngữ cho động từ 'accept'.",
+          "explanation": "Chính xác. Danh từ 'apologies' (những lời xin lỗi) tạo thành cụm từ lịch sự rất phổ biến trong email công việc: 'accept our sincere apologies'.",
+          "translation": "Vui lòng chấp nhận lời xin lỗi chân thành của chúng tôi vì sự gián đoạn tạm thời của dịch vụ chấm công trên di động vào ngày hôm qua."
+        },
+        {
+          "id": "q_noun_pronoun_068",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Easy",
+          "question_text": "The development team fixed the bugs in the application, making _____ much faster and more reliable.",
+          "options": [
+            { "key": "A", "text": "it" },
+            { "key": "B", "text": "its" },
+            { "key": "C", "text": "them" },
+            { "key": "D", "text": "they" }
+          ],
+          "correct_answer": "A",
+          "hint": "Cấu trúc 'make + tân ngữ + tính từ' (làm cho cái gì đó trở nên...). Tân ngữ này cần thay thế cho danh từ số ít 'the application'.",
+          "explanation": "Chính xác. Đại từ tân ngữ 'it' thay thế cho danh từ số ít 'the application' (ứng dụng). Nếu chọn 'them' thì nó sẽ thay thế cho 'bugs', sai về mặt logic (lỗi không thể nhanh và đáng tin cậy hơn).",
+          "translation": "Nhóm phát triển đã sửa các lỗi trong ứng dụng, làm cho nó nhanh hơn và đáng tin cậy hơn nhiều."
+        },
+        {
+          "id": "q_noun_pronoun_069",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Easy",
+          "question_text": "Achieving native-like _____ in a foreign language requires years of dedicated practice and cultural immersion.",
+          "options": [
+            { "key": "A", "text": "fluent" },
+            { "key": "B", "text": "fluently" },
+            { "key": "C", "text": "fluency" },
+            { "key": "D", "text": "fluencies" }
+          ],
+          "correct_answer": "C",
+          "hint": "Tính từ ghép 'native-like' (giống như người bản xứ) cần một danh từ không đếm được bổ nghĩa cho nó.",
+          "explanation": "Chính xác. Danh từ 'fluency' (sự trôi chảy/lưu loát) điền vào chỗ trống tạo thành cụm danh từ làm tân ngữ cho động từ 'Achieving'.",
+          "translation": "Việc đạt được sự trôi chảy như người bản xứ trong một ngoại ngữ đòi hỏi nhiều năm luyện tập tận tâm và hòa mình vào văn hóa."
+        },
+        {
+          "id": "q_noun_pronoun_070",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Medium",
+          "question_text": "The director requested that all department heads submit _____ quarterly reports by the end of the week.",
+          "options": [
+            { "key": "A", "text": "they" },
+            { "key": "B", "text": "them" },
+            { "key": "C", "text": "their" },
+            { "key": "D", "text": "theirs" }
+          ],
+          "correct_answer": "C",
+          "hint": "Chỗ trống đứng trước cụm danh từ 'quarterly reports' (các báo cáo hàng quý), cần một từ chỉ sự sở hữu.",
+          "explanation": "Chính xác. Tính từ sở hữu 'their' thay thế cho cụm danh từ số nhiều 'all department heads' (tất cả các trưởng phòng) để chỉ báo cáo của họ.",
+          "translation": "Giám đốc yêu cầu tất cả trưởng phòng nộp báo cáo hàng quý của họ trước cuối tuần."
+        },
+        {
+          "id": "q_noun_pronoun_071",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "The new mobile timekeeping app has a built-in feature that automatically tracks employee _____.",
+          "options": [
+            { "key": "A", "text": "attend" },
+            { "key": "B", "text": "attends" },
+            { "key": "C", "text": "attendance" },
+            { "key": "D", "text": "attending" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cần một danh từ đứng sau 'employee' để tạo thành cụm danh từ ghép đóng vai trò tân ngữ cho động từ 'tracks'.",
+          "explanation": "Chính xác. Danh từ 'attendance' kết hợp với 'employee' tạo thành cụm từ phổ biến trong nhân sự: 'employee attendance' (sự chuyên cần/điểm danh của nhân viên).",
+          "translation": "Ứng dụng chấm công trên thiết bị di động mới có một tính năng tích hợp tự động theo dõi sự chuyên cần của nhân viên."
+        },
+        {
+          "id": "q_noun_pronoun_072",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Easy",
+          "question_text": "Viewers of the daily English practice TikTok series frequently leave _____ constructive feedback in the comments section.",
+          "options": [
+            { "key": "A", "text": "they" },
+            { "key": "B", "text": "their" },
+            { "key": "C", "text": "them" },
+            { "key": "D", "text": "theirs" }
+          ],
+          "correct_answer": "B",
+          "hint": "Chỗ trống đứng trước cụm danh từ 'constructive feedback', cần một từ đóng vai trò tính từ sở hữu.",
+          "explanation": "Chính xác. Tính từ sở hữu 'their' chỉ sự sở hữu của 'Viewers' (những người xem) đối với những phản hồi mang tính xây dựng mà họ để lại.",
+          "translation": "Những người xem loạt video TikTok luyện tập tiếng Anh hàng ngày thường xuyên để lại những phản hồi mang tính xây dựng của họ trong phần bình luận."
+        },
+        {
+          "id": "q_noun_pronoun_073",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Hard",
+          "question_text": "The management team evaluated the _____ of the new gift box campaign by comparing this month's sales to last month's.",
+          "options": [
+            { "key": "A", "text": "effective" },
+            { "key": "B", "text": "effectively" },
+            { "key": "C", "text": "effectiveness" },
+            { "key": "D", "text": "effect" }
+          ],
+          "correct_answer": "C",
+          "hint": "Mạo từ 'the' đòi hỏi một danh từ theo sau làm tân ngữ cho động từ 'evaluated'.",
+          "explanation": "Chính xác. Danh từ 'effectiveness' (tính hiệu quả) là từ vựng quen thuộc trong các báo cáo kinh doanh, chỉ mức độ thành công của một chiến dịch.",
+          "translation": "Đội ngũ quản lý đã đánh giá tính hiệu quả của chiến dịch hộp quà tặng mới bằng cách so sánh doanh số tháng này với tháng trước."
+        },
+        {
+          "id": "q_noun_pronoun_074",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Medium",
+          "question_text": "The developers stress-tested the EduKit platform thoroughly to ensure that _____ could handle thousands of concurrent users.",
+          "options": [
+            { "key": "A", "text": "its" },
+            { "key": "B", "text": "itself" },
+            { "key": "C", "text": "they" },
+            { "key": "D", "text": "it" }
+          ],
+          "correct_answer": "D",
+          "hint": "Mệnh đề sau 'that' cần một chủ ngữ số ít để thay thế cho nền tảng 'the EduKit platform'.",
+          "explanation": "Chính xác. Đại từ nhân xưng 'it' đóng vai trò chủ ngữ thay thế cho danh từ số ít chỉ vật ở vế trước nhằm tránh lặp từ.",
+          "translation": "Các lập trình viên đã kiểm tra khả năng chịu tải của nền tảng EduKit một cách kỹ lưỡng để đảm bảo rằng nó có thể xử lý hàng nghìn người dùng truy cập cùng lúc."
+        },
+        {
+          "id": "q_noun_pronoun_075",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "Successful _____ for both the TOEIC and JLPT N3 exams simultaneously requires a strict study schedule.",
+          "options": [
+            { "key": "A", "text": "prepare" },
+            { "key": "B", "text": "prepares" },
+            { "key": "C", "text": "preparation" },
+            { "key": "D", "text": "preparatory" }
+          ],
+          "correct_answer": "C",
+          "hint": "Tính từ 'Successful' đứng đầu câu cần một danh từ theo sau để tạo thành cụm chủ ngữ hoàn chỉnh.",
+          "explanation": "Chính xác. Danh từ 'preparation' (sự chuẩn bị) đi với giới từ 'for' tạo thành cụm ý nghĩa 'sự chuẩn bị cho kỳ thi...'.",
+          "translation": "Sự chuẩn bị thành công cho cả hai kỳ thi TOEIC và JLPT N3 cùng lúc đòi hỏi một lịch trình học tập nghiêm ngặt."
+        },
+        {
+          "id": "q_noun_pronoun_076",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Hard",
+          "question_text": "The project manager reminded the developers that the responsibility for fixing the critical bugs before launch was entirely _____.",
+          "options": [
+            { "key": "A", "text": "their" },
+            { "key": "B", "text": "them" },
+            { "key": "C", "text": "theirs" },
+            { "key": "D", "text": "they" }
+          ],
+          "correct_answer": "C",
+          "hint": "Chỗ trống đứng cuối câu và đóng vai trò làm bổ ngữ cho động từ to be 'was'. Ta cần một đại từ sở hữu đứng độc lập.",
+          "explanation": "Chính xác. Đại từ sở hữu 'theirs' thay thế cho cụm 'their responsibility' (trách nhiệm của họ) để nhấn mạnh rằng trách nhiệm đó thuộc về các lập trình viên.",
+          "translation": "Quản lý dự án đã nhắc nhở các lập trình viên rằng trách nhiệm sửa các lỗi nghiêm trọng trước khi ra mắt hoàn toàn là của họ."
+        },
+        {
+          "id": "q_noun_pronoun_077",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "The successful _____ of the new HR portal has significantly reduced the administrative burden on the staff.",
+          "options": [
+            { "key": "A", "text": "implement" },
+            { "key": "B", "text": "implemented" },
+            { "key": "C", "text": "implementing" },
+            { "key": "D", "text": "implementation" }
+          ],
+          "correct_answer": "D",
+          "hint": "Cần một danh từ đứng sau mạo từ 'The' và tính từ 'successful' làm chủ ngữ chính của câu.",
+          "explanation": "Chính xác. Danh từ 'implementation' (sự triển khai/sự áp dụng) tạo thành cụm chủ ngữ 'Sự triển khai thành công cổng thông tin nhân sự mới...'.",
+          "translation": "Sự triển khai thành công cổng thông tin nhân sự mới đã làm giảm đáng kể gánh nặng hành chính cho nhân viên."
+        },
+        {
+          "id": "q_noun_pronoun_078",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Easy",
+          "question_text": "If corporate clients wish to customize the Happy Box orders, we encourage _____ to contact our sales team directly.",
+          "options": [
+            { "key": "A", "text": "them" },
+            { "key": "B", "text": "their" },
+            { "key": "C", "text": "they" },
+            { "key": "D", "text": "themselves" }
+          ],
+          "correct_answer": "A",
+          "hint": "Động từ 'encourage' (khuyến khích) cần một tân ngữ chỉ người nhận hành động này.",
+          "explanation": "Chính xác. Đại từ tân ngữ 'them' được dùng để thay thế cho cụm 'corporate clients' (khách hàng doanh nghiệp), theo cấu trúc encourage somebody to do something.",
+          "translation": "Nếu các khách hàng doanh nghiệp muốn tùy chỉnh các đơn hàng Happy Box, chúng tôi khuyến khích họ liên hệ trực tiếp với đội ngũ bán hàng của chúng tôi."
+        },
+        {
+          "id": "q_noun_pronoun_079",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "Before the software release, the QA team will conduct a final _____ to ensure all timekeeping functions work perfectly.",
+          "options": [
+            { "key": "A", "text": "inspect" },
+            { "key": "B", "text": "inspection" },
+            { "key": "C", "text": "inspecting" },
+            { "key": "D", "text": "inspected" }
+          ],
+          "correct_answer": "B",
+          "hint": "Tính từ 'final' đòi hỏi một danh từ theo sau làm tân ngữ cho động từ 'conduct'.",
+          "explanation": "Chính xác. Danh từ 'inspection' (sự kiểm tra/thanh tra) đi với 'conduct a final' mang ý nghĩa 'thực hiện một đợt kiểm tra cuối cùng'.",
+          "translation": "Trước khi phát hành phần mềm, nhóm đảm bảo chất lượng (QA) sẽ tiến hành một đợt kiểm tra cuối cùng để đảm bảo tất cả các chức năng chấm công hoạt động hoàn hảo."
+        },
+        {
+          "id": "q_noun_pronoun_080",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Easy",
+          "question_text": "The founder of the startup usually reviews all major financial documents by _____ before approving them.",
+          "options": [
+            { "key": "A", "text": "him" },
+            { "key": "B", "text": "his" },
+            { "key": "C", "text": "he" },
+            { "key": "D", "text": "himself" }
+          ],
+          "correct_answer": "D",
+          "hint": "Giới từ 'by' kết hợp với một đại từ phản thân để diễn tả việc ai đó tự mình làm một việc gì.",
+          "explanation": "Chính xác. Đại từ phản thân 'himself' đi sau 'by' tạo thành cụm 'by himself', chỉ việc nhà sáng lập tự tay xem xét lại các tài liệu mà không giao cho người khác.",
+          "translation": "Nhà sáng lập của công ty khởi nghiệp thường tự mình xem xét lại tất cả các tài liệu tài chính quan trọng trước khi phê duyệt chúng."
+        },
+        {
+          "id": "q_noun_pronoun_081",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "The HR director noted that the new mobile timekeeping app has improved overall employee _____.",
+          "options": [
+            { "key": "A", "text": "product" },
+            { "key": "B", "text": "productive" },
+            { "key": "C", "text": "productivity" },
+            { "key": "D", "text": "productively" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cần một danh từ đứng sau 'employee' để tạo thành cụm danh từ mang nghĩa 'năng suất của nhân viên'.",
+          "explanation": "Chính xác. Danh từ 'productivity' (năng suất) kết hợp với 'employee' tạo thành cụm 'employee productivity'. 'Product' (sản phẩm) không phù hợp về mặt ngữ nghĩa trong ngữ cảnh này.",
+          "translation": "Giám đốc nhân sự lưu ý rằng ứng dụng chấm công di động mới đã cải thiện năng suất tổng thể của nhân viên."
+        },
+        {
+          "id": "q_noun_pronoun_082",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Easy",
+          "question_text": "Viewers love the new TikTok series because _____ provides practical tips for daily English conversations.",
+          "options": [
+            { "key": "A", "text": "it" },
+            { "key": "B", "text": "they" },
+            { "key": "C", "text": "its" },
+            { "key": "D", "text": "them" }
+          ],
+          "correct_answer": "A",
+          "hint": "Mệnh đề sau 'because' đang thiếu một chủ ngữ số ít thay thế cho 'the new TikTok series'.",
+          "explanation": "Chính xác. Đại từ nhân xưng 'it' làm chủ ngữ, thay thế cho danh từ số ít chỉ vật 'the new TikTok series' ở vế trước.",
+          "translation": "Người xem yêu thích loạt video TikTok mới vì nó cung cấp các mẹo thực tế cho các cuộc hội thoại tiếng Anh hàng ngày."
+        },
+        {
+          "id": "q_noun_pronoun_083",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Hard",
+          "question_text": "The development team for EduKit is seeking a software engineer with a strong _____ in mobile application design.",
+          "options": [
+            { "key": "A", "text": "back" },
+            { "key": "B", "text": "backing" },
+            { "key": "C", "text": "background" },
+            { "key": "D", "text": "backwards" }
+          ],
+          "correct_answer": "C",
+          "hint": "Mạo từ 'a' và tính từ 'strong' yêu cầu một danh từ chỉ nền tảng, kinh nghiệm hoặc kiến thức chuyên môn.",
+          "explanation": "Chính xác. Danh từ 'background' (nền tảng kiến thức/kinh nghiệm) thường đi với 'strong' tạo thành cụm từ quen thuộc trong tuyển dụng: 'a strong background in...' (có nền tảng vững chắc về...).",
+          "translation": "Đội ngũ phát triển EduKit đang tìm kiếm một kỹ sư phần mềm có nền tảng vững chắc trong thiết kế ứng dụng di động."
+        },
+        {
+          "id": "q_noun_pronoun_084",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Medium",
+          "question_text": "Our premium Happy Box sets are highly rated because each of _____ is carefully packed by hand.",
+          "options": [
+            { "key": "A", "text": "they" },
+            { "key": "B", "text": "their" },
+            { "key": "C", "text": "them" },
+            { "key": "D", "text": "theirs" }
+          ],
+          "correct_answer": "C",
+          "hint": "Sau giới từ 'of', bạn luôn cần một đại từ đóng vai trò làm tân ngữ.",
+          "explanation": "Chính xác. Đại từ tân ngữ 'them' đứng sau giới từ 'of' thay thế cho 'premium Happy Box sets' (số nhiều). Cấu trúc: Each of + đại từ tân ngữ/danh từ số nhiều.",
+          "translation": "Các bộ Happy Box cao cấp của chúng tôi được đánh giá cao vì mỗi hộp trong số chúng đều được đóng gói thủ công cẩn thận."
+        },
+        {
+          "id": "q_noun_pronoun_085",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "Registration for the upcoming JLPT N3 exam requires a valid form of _____, such as a passport or an ID card.",
+          "options": [
+            { "key": "A", "text": "identify" },
+            { "key": "B", "text": "identifying" },
+            { "key": "C", "text": "identification" },
+            { "key": "D", "text": "identifiable" }
+          ],
+          "correct_answer": "C",
+          "hint": "Giới từ 'of' đòi hỏi một danh từ theo sau. Cụm từ mang ý nghĩa 'giấy tờ tùy thân'.",
+          "explanation": "Chính xác. Danh từ 'identification' kết hợp với 'a valid form of' tạo thành cụm từ hành chính cố định: 'a form of identification' (giấy tờ tùy thân).",
+          "translation": "Việc đăng ký kỳ thi JLPT N3 sắp tới yêu cầu một loại giấy tờ tùy thân hợp lệ, chẳng hạn như hộ chiếu hoặc thẻ căn cước."
+        },
+        {
+          "id": "q_noun_pronoun_086",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Hard",
+          "question_text": "The manager asked the team members to send _____ weekly reports to the central server before 5 PM on Friday.",
+          "options": [
+            { "key": "A", "text": "they" },
+            { "key": "B", "text": "them" },
+            { "key": "C", "text": "their" },
+            { "key": "D", "text": "theirs" }
+          ],
+          "correct_answer": "C",
+          "hint": "Từ cần điền đứng trước cụm danh từ 'weekly reports' và chỉ sự sở hữu thuộc về 'the team members'.",
+          "explanation": "Chính xác. Tính từ sở hữu 'their' dùng để chỉ các báo cáo hàng tuần là của các thành viên trong nhóm.",
+          "translation": "Người quản lý yêu cầu các thành viên trong nhóm gửi báo cáo hàng tuần của họ đến máy chủ trung tâm trước 5 giờ chiều Thứ Sáu."
+        },
+        {
+          "id": "q_noun_pronoun_087",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "The marketing department is conducting a survey to measure customer _____ with the new gift box packaging.",
+          "options": [
+            { "key": "A", "text": "satisfy" },
+            { "key": "B", "text": "satisfactory" },
+            { "key": "C", "text": "satisfying" },
+            { "key": "D", "text": "satisfaction" }
+          ],
+          "correct_answer": "D",
+          "hint": "Cần một danh từ đứng sau 'customer' tạo thành cụm danh từ ghép làm tân ngữ cho động từ 'measure'.",
+          "explanation": "Chính xác. Danh từ 'satisfaction' (sự hài lòng) đi kèm với 'customer' tạo thành cụm cố định 'customer satisfaction' (sự hài lòng của khách hàng).",
+          "translation": "Bộ phận tiếp thị đang tiến hành một cuộc khảo sát để đo lường sự hài lòng của khách hàng với bao bì hộp quà tặng mới."
+        },
+        {
+          "id": "q_noun_pronoun_088",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Easy",
+          "question_text": "If users encounter any technical issues with the EduKit platform, they can contact the support team to get _____ resolved quickly.",
+          "options": [
+            { "key": "A", "text": "it" },
+            { "key": "B", "text": "them" },
+            { "key": "C", "text": "they" },
+            { "key": "D", "text": "their" }
+          ],
+          "correct_answer": "B",
+          "hint": "Cấu trúc 'get something done' (nhờ/để ai đó làm gì). Tân ngữ này cần thay thế cho danh từ số nhiều 'technical issues'.",
+          "explanation": "Chính xác. Đại từ tân ngữ 'them' được sử dụng để thay thế cho danh từ số nhiều 'technical issues' (các sự cố kỹ thuật) ở vế trước.",
+          "translation": "Nếu người dùng gặp bất kỳ sự cố kỹ thuật nào với nền tảng EduKit, họ có thể liên hệ với nhóm hỗ trợ để chúng được giải quyết nhanh chóng."
+        },
+        {
+          "id": "q_noun_pronoun_089",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Hard",
+          "question_text": "Strict _____ with the company's new attendance policy is expected from all staff members using the mobile app.",
+          "options": [
+            { "key": "A", "text": "comply" },
+            { "key": "B", "text": "compliance" },
+            { "key": "C", "text": "compliant" },
+            { "key": "D", "text": "compliantly" }
+          ],
+          "correct_answer": "B",
+          "hint": "Tính từ 'Strict' (nghiêm ngặt) đứng ở đầu câu, yêu cầu một danh từ theo sau để làm chủ ngữ cho động từ 'is expected'.",
+          "explanation": "Chính xác. Danh từ 'compliance' (sự tuân thủ) thường đi với giới từ 'with' tạo thành cấu trúc 'compliance with' (tuân thủ điều gì đó).",
+          "translation": "Sự tuân thủ nghiêm ngặt chính sách điểm danh mới của công ty được mong đợi từ tất cả các nhân viên sử dụng ứng dụng di động."
+        },
+        {
+          "id": "q_noun_pronoun_090",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Medium",
+          "question_text": "To ensure authenticity, the creator records and edits all the English practice videos _____ using just a smartphone.",
+          "options": [
+            { "key": "A", "text": "her" },
+            { "key": "B", "text": "she" },
+            { "key": "C", "text": "herself" },
+            { "key": "D", "text": "hers" }
+          ],
+          "correct_answer": "C",
+          "hint": "Đại từ phản thân có thể đứng ở cuối mệnh đề để nhấn mạnh rằng chủ thể đã tự mình thực hiện hành động đó.",
+          "explanation": "Chính xác. Đại từ phản thân 'herself' bổ nghĩa cho chủ ngữ 'the creator' (nhà sáng tạo nữ) để nhấn mạnh việc cô ấy tự mình quay và dựng video.",
+          "translation": "Để đảm bảo tính chân thực, nhà sáng tạo tự mình quay và chỉnh sửa tất cả các video thực hành tiếng Anh chỉ bằng một chiếc điện thoại thông minh."
+        },
+        {
+          "id": "q_noun_pronoun_091",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "The lead programmer announced that the final _____ of the human resources website will be launched next Monday.",
+          "options": [
+            { "key": "A", "text": "version" },
+            { "key": "B", "text": "verse" },
+            { "key": "C", "text": "versatile" },
+            { "key": "D", "text": "versions" }
+          ],
+          "correct_answer": "A",
+          "hint": "Tính từ 'final' và mạo từ 'the' yêu cầu một danh từ. Ngữ cảnh phát triển phần mềm cần một từ mang nghĩa 'phiên bản'.",
+          "explanation": "Chính xác. Danh từ số ít 'version' (phiên bản) phù hợp nhất với ngữ cảnh ra mắt một trang web. Dạng số nhiều 'versions' không hợp lý vì chỉ ra mắt 1 bản chính thức 'final'.",
+          "translation": "Lập trình viên chính thông báo rằng phiên bản cuối cùng của trang web nhân sự sẽ được ra mắt vào thứ Hai tới."
+        },
+        {
+          "id": "q_noun_pronoun_092",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Hard",
+          "question_text": "The CEO praised the marketing team for _____ innovative approach to promoting the new gift box collection.",
+          "options": [
+            { "key": "A", "text": "they" },
+            { "key": "B", "text": "them" },
+            { "key": "C", "text": "their" },
+            { "key": "D", "text": "theirs" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cần một từ thể hiện tính sở hữu đứng trước cụm danh từ 'innovative approach' (phương pháp tiếp cận đổi mới).",
+          "explanation": "Chính xác. Tính từ sở hữu 'their' dùng để chỉ phương pháp đổi mới đó thuộc về 'the marketing team' (tập thể nhóm - số nhiều).",
+          "translation": "Giám đốc điều hành đã khen ngợi nhóm tiếp thị vì phương pháp tiếp cận đổi mới của họ trong việc quảng bá bộ sưu tập hộp quà tặng mới."
+        },
+        {
+          "id": "q_noun_pronoun_093",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Easy",
+          "question_text": "Consistent daily listening practice is a great way to improve your _____ of spoken English.",
+          "options": [
+            { "key": "A", "text": "comprehend" },
+            { "key": "B", "text": "comprehension" },
+            { "key": "C", "text": "comprehensive" },
+            { "key": "D", "text": "comprehensively" }
+          ],
+          "correct_answer": "B",
+          "hint": "Tính từ sở hữu 'your' đòi hỏi một danh từ theo sau làm tân ngữ cho động từ 'improve'.",
+          "explanation": "Chính xác. Danh từ 'comprehension' (sự hiểu biết/kỹ năng đọc hiểu, nghe hiểu) là từ vựng quen thuộc trong việc học ngoại ngữ (Listening comprehension).",
+          "translation": "Thực hành nghe đều đặn hàng ngày là một cách tuyệt vời để cải thiện khả năng nghe hiểu tiếng Anh nói của bạn."
+        },
+        {
+          "id": "q_noun_pronoun_094",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Medium",
+          "question_text": "Employees who forget their passwords must request a reset link to regain access to _____ accounts.",
+          "options": [
+            { "key": "A", "text": "them" },
+            { "key": "B", "text": "their" },
+            { "key": "C", "text": "they" },
+            { "key": "D", "text": "theirs" }
+          ],
+          "correct_answer": "B",
+          "hint": "Cần một tính từ sở hữu đứng trước danh từ 'accounts' (tài khoản) để chỉ các tài khoản đó là của nhân viên.",
+          "explanation": "Chính xác. Tính từ sở hữu 'their' chỉ sự sở hữu của 'Employees' đối với tài khoản cá nhân của họ.",
+          "translation": "Những nhân viên quên mật khẩu phải yêu cầu liên kết đặt lại mật khẩu để lấy lại quyền truy cập vào tài khoản của họ."
+        },
+        {
+          "id": "q_noun_pronoun_095",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "The startup founders are actively looking for financial _____ to expand the EduKit platform to international markets.",
+          "options": [
+            { "key": "A", "text": "back" },
+            { "key": "B", "text": "backers" },
+            { "key": "C", "text": "backing" },
+            { "key": "D", "text": "backed" }
+          ],
+          "correct_answer": "C",
+          "hint": "Tính từ 'financial' cần một danh từ không đếm được theo sau mang ý nghĩa 'sự hỗ trợ/nguồn vốn tài trợ'.",
+          "explanation": "Chính xác. Danh từ 'backing' (sự hỗ trợ tài chính / nguồn vốn) đi cùng 'financial' tạo thành cụm 'financial backing'. Nếu dùng 'backers' (nhà tài trợ) thì câu sẽ mang nghĩa tìm người tài trợ, nhưng 'financial' bổ nghĩa cho 'backing' phổ biến hơn.",
+          "translation": "Các nhà sáng lập công ty khởi nghiệp đang tích cực tìm kiếm sự hỗ trợ tài chính để mở rộng nền tảng EduKit ra thị trường quốc tế."
+        },
+        {
+          "id": "q_noun_pronoun_096",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Hard",
+          "question_text": "The content creator bought a new high-end microphone, but _____ turned out to be incompatible with her camera.",
+          "options": [
+            { "key": "A", "text": "it" },
+            { "key": "B", "text": "its" },
+            { "key": "C", "text": "itself" },
+            { "key": "D", "text": "they" }
+          ],
+          "correct_answer": "A",
+          "hint": "Mệnh đề sau từ 'but' thiếu một chủ ngữ chỉ vật số ít, thay thế cho 'a new high-end microphone'.",
+          "explanation": "Chính xác. Đại từ nhân xưng 'it' làm chủ ngữ thay thế cho chiếc micro mới được nhắc đến ở vế trước.",
+          "translation": "Nhà sáng tạo nội dung đã mua một chiếc micro cao cấp mới, nhưng hóa ra nó lại không tương thích với máy ảnh của cô ấy."
+        },
+        {
+          "id": "q_noun_pronoun_097",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Medium",
+          "question_text": "To handle the high volume of holiday orders, the Happy Box warehouse manager requested additional _____ immediately.",
+          "options": [
+            { "key": "A", "text": "person" },
+            { "key": "B", "text": "personally" },
+            { "key": "C", "text": "personality" },
+            { "key": "D", "text": "personnel" }
+          ],
+          "correct_answer": "D",
+          "hint": "Cần một danh từ mang nghĩa 'nhân sự / nhân viên' đóng vai trò tân ngữ cho động từ 'requested'.",
+          "explanation": "Chính xác. Danh từ 'personnel' (nhân sự/nhân viên) là một danh từ tập hợp, kết hợp với tính từ 'additional' tạo thành cụm 'thêm nhân sự'.",
+          "translation": "Để xử lý khối lượng lớn các đơn đặt hàng trong dịp lễ, quản lý kho của Happy Box đã yêu cầu thêm nhân sự ngay lập tức."
+        },
+        {
+          "id": "q_noun_pronoun_098",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Easy",
+          "question_text": "Students preparing for both the TOEIC and JLPT N3 exams simultaneously must organize _____ study schedules carefully.",
+          "options": [
+            { "key": "A", "text": "they" },
+            { "key": "B", "text": "them" },
+            { "key": "C", "text": "their" },
+            { "key": "D", "text": "theirs" }
+          ],
+          "correct_answer": "C",
+          "hint": "Chỗ trống cần một tính từ sở hữu đứng trước cụm danh từ 'study schedules' (lịch học).",
+          "explanation": "Chính xác. Tính từ sở hữu 'their' chỉ sự sở hữu của 'Students' (Học sinh) đối với lịch học của chính họ.",
+          "translation": "Những học sinh chuẩn bị cho cả hai kỳ thi TOEIC và JLPT N3 cùng một lúc phải sắp xếp lịch học của họ một cách cẩn thận."
+        },
+        {
+          "id": "q_noun_pronoun_099",
+          "part": 5,
+          "grammar_topic": "Noun",
+          "difficulty_level": "Hard",
+          "question_text": "The seamless integration of the timekeeping app with the HR website ensures the complete _____ of sensitive employee data.",
+          "options": [
+            { "key": "A", "text": "secure" },
+            { "key": "B", "text": "securely" },
+            { "key": "C", "text": "security" },
+            { "key": "D", "text": "secures" }
+          ],
+          "correct_answer": "C",
+          "hint": "Mạo từ 'the' và tính từ 'complete' đòi hỏi một danh từ làm tân ngữ chính cho động từ 'ensures'.",
+          "explanation": "Chính xác. Danh từ 'security' (sự bảo mật) ghép với 'data' tạo thành khái niệm 'data security' (bảo mật dữ liệu) rất quen thuộc trong ngành IT.",
+          "translation": "Việc tích hợp liền mạch ứng dụng chấm công với trang web nhân sự đảm bảo sự bảo mật tuyệt đối dữ liệu nhạy cảm của nhân viên."
+        },
+        {
+          "id": "q_noun_pronoun_100",
+          "part": 5,
+          "grammar_topic": "Pronoun",
+          "difficulty_level": "Hard",
+          "question_text": "The competitors tried to copy our gift box designs, but _____ lacked the premium quality of our original products.",
+          "options": [
+            { "key": "A", "text": "they" },
+            { "key": "B", "text": "them" },
+            { "key": "C", "text": "their" },
+            { "key": "D", "text": "theirs" }
+          ],
+          "correct_answer": "D",
+          "hint": "Cần một đại từ sở hữu đứng độc lập để thay thế cho cụm từ 'their designs' (những thiết kế của họ) làm chủ ngữ cho vế sau.",
+          "explanation": "Chính xác. Đại từ sở hữu 'theirs' đóng vai trò chủ ngữ của mệnh đề thứ hai, thay thế cho 'their designs' để đối chiếu với 'our gift box designs'.",
+          "translation": "Các đối thủ cạnh tranh đã cố gắng sao chép các thiết kế hộp quà tặng của chúng tôi, nhưng các thiết kế của họ thiếu đi chất lượng cao cấp như các sản phẩm gốc của chúng tôi."
+        }
+      ],
+      hard: []
+    }
+  }
+};

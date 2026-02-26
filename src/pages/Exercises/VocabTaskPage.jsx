@@ -38,7 +38,10 @@ const VocabTaskPage = () => {
       roadmapLocation.dayIndex,
     );
   }, [roadmapLocation]);
-  const vocabWords = VOCAB_TASKS[taskId] || [];
+
+  // Use specific task data if available, otherwise fallback to the first available data
+  const vocabData = VOCAB_TASKS[taskId] || Object.values(VOCAB_TASKS)[0] || [];
+  const vocabWords = vocabData;
 
   const [stateKey, setStateKey] = useState(0);
   const taskState = useMemo(() => getTaskState(taskId), [taskId, stateKey]);
@@ -77,9 +80,10 @@ const VocabTaskPage = () => {
       initialStatus[w.word] = false;
     });
     setWordStatus(initialStatus);
-  }, [taskId, taskState.progress]);
+  }, [taskId, taskState.progress, levelWords.length]);
 
   if (!taskInfo) return <div style={{ textAlign: 'center', marginTop: 50 }}><Text>Không tìm thấy bài học.</Text></div>;
+  if (!vocabWords || vocabWords.length === 0) return <div style={{ textAlign: 'center', marginTop: 50 }}><Text>Chưa có dữ liệu từ vựng cho bài này.</Text></div>;
 
   if (!dayGate.unlocked) {
     return (
@@ -127,7 +131,12 @@ const VocabTaskPage = () => {
     const word = levelWords[learnIndex];
     const nextStatus = { ...wordStatus, [word.word]: known };
     setWordStatus(nextStatus);
-    
+
+    // Save word immediately if known
+    if (known) {
+      addWordsToGlobalVocab([word], "en");
+    }
+
     if (learnIndex + 1 < levelWords.length) {
       setLearnIndex(learnIndex + 1);
     } else {
@@ -141,7 +150,7 @@ const VocabTaskPage = () => {
   const handleTestSubmit = () => {
     const word = levelWords[testIndex];
     const isCorrect = isMeaningCorrect(testInput, word.meaning);
-    
+
     const nextWrong = new Set(testWrong);
     if (!isCorrect) {
       nextWrong.add(word.word);
@@ -177,7 +186,7 @@ const VocabTaskPage = () => {
             <Text strong>{w.word}</Text>: bạn nhập "{testAnswers[w.word] || ""}"
           </li>
         ));
-       Modal.error({
+      Modal.error({
         title: "Chưa hoàn hảo!",
         content: (
           <div>
@@ -187,12 +196,12 @@ const VocabTaskPage = () => {
         ),
         okText: "Làm lại ngay",
         onOk: () => {
-            setTestIndex(0);
-            setTestInput("");
-            setTestWrong(new Set());
-            setTestChecked(false);
-            setTestFeedback(null);
-            setTestAnswers({});
+          setTestIndex(0);
+          setTestInput("");
+          setTestWrong(new Set());
+          setTestChecked(false);
+          setTestFeedback(null);
+          setTestAnswers({});
         }
       });
       return;
@@ -201,7 +210,7 @@ const VocabTaskPage = () => {
     // --- THÀNH CÔNG: LƯU VÀ CHUYỂN HƯỚNG VỀ DASHBOARD ---
     addWordsToGlobalVocab(levelWords, "en");
     incrementTaskProgress(taskId, MAX_LEVEL);
-    
+
     Modal.success({
       title: "Xuất sắc!",
       content: "Bạn đã hoàn thành bài học này. Đang quay về Dashboard...",
@@ -232,16 +241,16 @@ const VocabTaskPage = () => {
       setReviewInput("");
       setReviewCorrect(0);
     } else {
-        Modal.error({
-            title: "Cần ôn lại!",
-            content: `Bạn chỉ đúng ${nextCorrect}/${prevLevelWords.length}. Cần đúng ít nhất 4 câu.`,
-            okText: "Ôn lại ngay",
-            onOk: () => {
-              setReviewIndex(0);
-              setReviewInput("");
-              setReviewCorrect(0);
-            },
-        });
+      Modal.error({
+        title: "Cần ôn lại!",
+        content: `Bạn chỉ đúng ${nextCorrect}/${prevLevelWords.length}. Cần đúng ít nhất 4 câu.`,
+        okText: "Ôn lại ngay",
+        onOk: () => {
+          setReviewIndex(0);
+          setReviewInput("");
+          setReviewCorrect(0);
+        },
+      });
     }
   };
 
@@ -249,33 +258,33 @@ const VocabTaskPage = () => {
     const word = levelWords[learnIndex];
     return (
       <FadeWrapper keyStr={`learn-${learnIndex}-${word.word}`}>
-        <Card 
+        <Card
           className="vocab-card"
-          bordered={false} 
+          bordered={false}
           style={{ borderRadius: 24, boxShadow: '0 10px 30px rgba(0,0,0,0.08)', overflow: 'hidden' }}
         >
           <div style={{ display: 'flex', flexDirection: 'column', background: 'linear-gradient(135deg, #36CFC9 0%, #1890ff 100%)', padding: '30px 20px', margin: '-24px -24px 24px -24px', textAlign: 'center' }}>
-             <Tag color="rgba(0,0,0,0.2)" style={{ border: 'none', color: '#fff', marginBottom: 10, background: "transparent" }}>
-                Level {currentLevel} • Từ {learnIndex + 1}/{WORDS_PER_LEVEL}
-             </Tag>
-             <div style={{ display: 'inline-flex',  alignItems: 'center', gap: 10 }}>
-                <Title level={1} style={{ color: '#fff', margin: '0', fontSize: '3rem', fontWeight: 800 }}>
-                  {word.word}
-                </Title>
-                <Text style={{ color: 'rgba(255,255,255,0.9)', fontStyle: 'italic', fontSize: '1.2rem' }}>
+            <Tag color="rgba(0,0,0,0.2)" style={{ border: 'none', color: '#fff', marginBottom: 10, background: "transparent" }}>
+              Level {currentLevel} • Từ {learnIndex + 1}/{WORDS_PER_LEVEL}
+            </Tag>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10 }}>
+              <Title level={1} style={{ color: '#fff', margin: '0', fontSize: '3rem', fontWeight: 800 }}>
+                {word.word}
+              </Title>
+              <Text style={{ color: 'rgba(255,255,255,0.9)', fontStyle: 'italic', fontSize: '1.2rem' }}>
                 [{word.type}]
-             </Text>
-                <Tooltip title="Nghe phát âm">
-                  <Button
-                    size="small"
-                    shape="circle"
-                    icon={<SoundOutlined />}
-                    onClick={() => speakWord(word.word)}
-                    style={{ border: 'none', background: 'rgba(255,255,255,0.2)', color: '#fff' }}
-                  />
-                </Tooltip>
-             </div>
-             
+              </Text>
+              <Tooltip title="Nghe phát âm">
+                <Button
+                  size="small"
+                  shape="circle"
+                  icon={<SoundOutlined />}
+                  onClick={() => speakWord(word.word)}
+                  style={{ border: 'none', background: 'rgba(255,255,255,0.2)', color: '#fff' }}
+                />
+              </Tooltip>
+            </div>
+
           </div>
 
           <Space direction="vertical" size={20} style={{ width: "100%" }}>
@@ -288,25 +297,25 @@ const VocabTaskPage = () => {
 
             <div style={{ padding: '0 10px', textAlign: 'center' }}>
               <Text strong style={{ color: '#8c8c8c', textTransform: 'uppercase', fontSize: '12px', letterSpacing: '1px' }}>Ví dụ</Text>
-               <Paragraph italic style={{ fontSize: '18px', color: '#595959', marginTop: 8 }}>
+              <Paragraph italic style={{ fontSize: '18px', color: '#595959', marginTop: 8 }}>
                 "{word.example}"
-               </Paragraph>
+              </Paragraph>
             </div>
 
             <div style={{ display: 'flex', gap: '16px', marginTop: 10 }}>
-              <Button 
-                block 
-                size="large" 
+              <Button
+                block
+                size="large"
                 shape="round"
                 onClick={() => handleLearnAnswer(false)}
                 style={{ height: 55, fontSize: 16 }}
               >
                 Chưa thuộc
               </Button>
-              <Button 
-                block 
-                type="primary" 
-                size="large" 
+              <Button
+                block
+                type="primary"
+                size="large"
                 shape="round"
                 icon={<CheckCircleOutlined />}
                 onClick={() => handleLearnAnswer(true)}
@@ -328,22 +337,22 @@ const VocabTaskPage = () => {
         <Card bordered={false} style={{ borderRadius: 24, boxShadow: '0 10px 30px rgba(0,0,0,0.08)' }}>
           <Space direction="vertical" size={24} style={{ width: "100%", textAlign: 'center' }}>
             <Tag color="gold" icon={<FireOutlined />} style={{ padding: '4px 10px', fontSize: '14px' }}>
-                THỬ THÁCH TRÍ NHỚ
+              THỬ THÁCH TRÍ NHỚ
             </Tag>
-            
+
             <div style={{ margin: '20px 0', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
-                <Space align="center" size={10} style={{ justifyContent: 'center' }}>
-                  <Title level={2} style={{ fontSize: '2.5rem', margin: 0 }}>{word.word}</Title>
-                  <Tooltip title="Nghe phat am">
-                    <Button
-                      size="small"
-                      shape="circle"
-                      icon={<SoundOutlined />}
-                      onClick={() => speakWord(word.word)}
-                    />
-                  </Tooltip>
-                </Space>
-                <Text type="secondary">Nhập nghĩa tiếng Việt của từ trên</Text>
+              <Space align="center" size={10} style={{ justifyContent: 'center' }}>
+                <Title level={2} style={{ fontSize: '2.5rem', margin: 0 }}>{word.word}</Title>
+                <Tooltip title="Nghe phat am">
+                  <Button
+                    size="small"
+                    shape="circle"
+                    icon={<SoundOutlined />}
+                    onClick={() => speakWord(word.word)}
+                  />
+                </Tooltip>
+              </Space>
+              <Text type="secondary">Nhập nghĩa tiếng Việt của từ trên</Text>
             </div>
 
             <Input
@@ -352,24 +361,24 @@ const VocabTaskPage = () => {
               value={testInput}
               onChange={(e) => setTestInput(e.target.value)}
               onPressEnter={handleTestSubmit}
-              style={{ 
-                  borderRadius: '12px', 
-                  height: 60, 
-                  textAlign: 'center', 
-                  fontSize: '20px', 
-                  border: '2px solid #e6f7ff',
-                  background: '#f0f5ff'
+              style={{
+                borderRadius: '12px',
+                height: 60,
+                textAlign: 'center',
+                fontSize: '20px',
+                border: '2px solid #e6f7ff',
+                background: '#f0f5ff'
               }}
               autoFocus
               disabled={testChecked}
             />
-            
+
             {!testChecked ? (
-              <Button 
-                type="primary" 
-                size="large" 
-                shape="round" 
-                block 
+              <Button
+                type="primary"
+                size="large"
+                shape="round"
+                block
                 onClick={handleTestSubmit}
                 disabled={!testInput}
                 style={{ height: 55, fontSize: 18, marginTop: 10 }}
@@ -398,14 +407,14 @@ const VocabTaskPage = () => {
                 style={{ marginTop: 8 }}
               />
             )}
-            
-            <Progress 
-                percent={Math.round(((testIndex) / WORDS_PER_LEVEL) * 100)} 
-                steps={5} 
-                strokeColor="#00e239" 
-                trailColor="#f0f0f0"
-                showInfo={false} 
-                style={{ marginTop: 10 }}
+
+            <Progress
+              percent={Math.round(((testIndex) / WORDS_PER_LEVEL) * 100)}
+              steps={5}
+              strokeColor="#00e239"
+              trailColor="#f0f0f0"
+              showInfo={false}
+              style={{ marginTop: 10 }}
             />
           </Space>
         </Card>
@@ -417,35 +426,35 @@ const VocabTaskPage = () => {
     const word = prevLevelWords[reviewIndex];
     return (
       <FadeWrapper keyStr={`review-${reviewIndex}`}>
-         <Card bordered={false} style={{ borderRadius: 24, boxShadow: '0 10px 30px rgba(0,0,0,0.08)', borderTop: '4px solid #ff4d4f' }}>
-            <Space direction="vertical" size={24} style={{ width: "100%", textAlign: 'center' }}>
-                <Tag color="volcano" style={{ padding: '4px 10px' }}>ÔN TẬP LEVEL {currentLevel - 1}</Tag>
-                <Space align="center" size={10} style={{ justifyContent: 'center' }}>
-                  <Title level={3} style={{ margin: 0 }}>"{word.word}" nghia la gi?</Title>
-                  <Tooltip title="Nghe phat am">
-                    <Button
-                      size="small"
-                      shape="circle"
-                      icon={<SoundOutlined />}
-                      onClick={() => speakWord(word.word)}
-                    />
-                  </Tooltip>
-                </Space>
-                <Input
-                    size="large"
-                    placeholder="Nhập nghĩa..."
-                    value={reviewInput}
-                    onChange={(e) => setReviewInput(e.target.value)}
-                    onPressEnter={handleReviewSubmit}
-                    style={{ borderRadius: '12px', height: 50, textAlign: 'center' }}
-                    autoFocus
+        <Card bordered={false} style={{ borderRadius: 24, boxShadow: '0 10px 30px rgba(0,0,0,0.08)', borderTop: '4px solid #ff4d4f' }}>
+          <Space direction="vertical" size={24} style={{ width: "100%", textAlign: 'center' }}>
+            <Tag color="volcano" style={{ padding: '4px 10px' }}>ÔN TẬP LEVEL {currentLevel - 1}</Tag>
+            <Space align="center" size={10} style={{ justifyContent: 'center' }}>
+              <Title level={3} style={{ margin: 0 }}>"{word.word}" nghia la gi?</Title>
+              <Tooltip title="Nghe phat am">
+                <Button
+                  size="small"
+                  shape="circle"
+                  icon={<SoundOutlined />}
+                  onClick={() => speakWord(word.word)}
                 />
-                <Button type="primary" danger size="large" shape="round" block onClick={handleReviewSubmit} disabled={!reviewInput}>
-                    Kiểm tra
-                </Button>
-                <Text type="secondary">Câu {reviewIndex + 1} / {prevLevelWords.length}</Text>
+              </Tooltip>
             </Space>
-         </Card>
+            <Input
+              size="large"
+              placeholder="Nhập nghĩa..."
+              value={reviewInput}
+              onChange={(e) => setReviewInput(e.target.value)}
+              onPressEnter={handleReviewSubmit}
+              style={{ borderRadius: '12px', height: 50, textAlign: 'center' }}
+              autoFocus
+            />
+            <Button type="primary" danger size="large" shape="round" block onClick={handleReviewSubmit} disabled={!reviewInput}>
+              Kiểm tra
+            </Button>
+            <Text type="secondary">Câu {reviewIndex + 1} / {prevLevelWords.length}</Text>
+          </Space>
+        </Card>
       </FadeWrapper>
     );
   };
@@ -470,7 +479,7 @@ const VocabTaskPage = () => {
 
   return (
     <div style={{ maxWidth: 600, margin: "20px auto", padding: "0 20px", fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial' }}>
-      
+
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 20 }}>
         <Button icon={<ArrowLeftOutlined />} onClick={() => navigate("/Home")} type="text" style={{ color: '#8c8c8c' }}>
           Thoát
@@ -485,16 +494,16 @@ const VocabTaskPage = () => {
 
       <div style={{ marginBottom: 32 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 8 }}>
-            <Title level={4} style={{ margin: 0, color: '#262626' }}>{task.text}</Title>
-            <Text strong style={{ color: '#1890ff' }}>{progressPercent}% Hoàn thành</Text>
+          <Title level={4} style={{ margin: 0, color: '#262626' }}>{task.text}</Title>
+          <Text strong style={{ color: '#1890ff' }}>{progressPercent}% Hoàn thành</Text>
         </div>
-        <Progress 
-            percent={progressPercent} 
-            strokeColor={{ '0%': '#108ee9', '100%': '#87d068' }} 
-            trailColor="#e6f7ff"
-            strokeWidth={12}
-            showInfo={false} 
-            style={{ borderRadius: 10 }}
+        <Progress
+          percent={progressPercent}
+          strokeColor={{ '0%': '#108ee9', '100%': '#87d068' }}
+          trailColor="#e6f7ff"
+          strokeWidth={12}
+          showInfo={false}
+          style={{ borderRadius: 10 }}
         />
       </div>
 

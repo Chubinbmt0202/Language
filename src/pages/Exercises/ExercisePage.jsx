@@ -25,6 +25,7 @@ import {
   ExclamationCircleOutlined,
   ReloadOutlined,
   HistoryOutlined,
+  BulbOutlined,
 } from "@ant-design/icons";
 import { auth } from "../../firebase/firebase";
 import { onAuthStateChanged } from "firebase/auth";
@@ -38,8 +39,10 @@ import {
   DEFAULT_HARD_QUESTIONS,
   DEFAULT_QUESTIONS,
   EXERCISE_DATA,
+  QUIZ_TASKS,
 } from "./ExerciseQuestionData";
 import { incrementTaskProgress, getTaskState } from "../../util/taskProgress";
+import { Collapse } from "antd";
 
 const { Title, Text } = Typography;
 const { confirm } = Modal;
@@ -102,6 +105,7 @@ const Exercise = () => {
 
   // Mảng tạm chứa các ID câu làm đúng trong phiên này
   const [sessionCorrectIds, setSessionCorrectIds] = useState([]);
+  const [showHint, setShowHint] = useState(false);
 
   // 1. Theo dõi Auth và load lịch sử từ Storage
   useEffect(() => {
@@ -138,7 +142,7 @@ const Exercise = () => {
       okType: "danger",
       cancelText: "Làm tiếp",
       onOk() {
-        navigate("/Home");
+        navigate("/Distance");
       },
     });
   };
@@ -154,13 +158,20 @@ const Exercise = () => {
 
     if (!dayData) return [];
 
-    // LẤY KEY TỪ ROADMAP:
-    const taskKey = task.exerciseKey;
-    const taskExercise = dayData.tasks?.[taskKey];
+    // LẤY DỮ LIỆU BÀI TẬP:
+    // Hỗ trợ lookup mới theo taskId (QUIZ_TASKS) trước, nếu không có thì fallback về cũ, nếu không có nữa thì fallback về default
+    let taskExercise = QUIZ_TASKS?.[taskId];
 
     if (!taskExercise) {
-      console.error("Không tìm thấy dữ liệu cho taskKey:", taskKey);
-      return [];
+      const taskKey = task.exerciseKey;
+      taskExercise = dayData?.tasks?.[taskKey] || (dayData?.tasks ? Object.values(dayData.tasks)[0] : null);
+    }
+
+    if (!taskExercise) {
+      taskExercise = {
+        total: 10,
+        questions: { easy: DEFAULT_QUESTIONS, hard: DEFAULT_HARD_QUESTIONS }
+      };
     }
 
     // Lấy pool câu hỏi dựa trên Tier (Easy/Hard)
@@ -179,10 +190,18 @@ const Exercise = () => {
   const handleCheckAnswer = () => {
     if (!selectedOption) return;
     const currentQ = shuffledQuestionSet[currentIndex];
-    const correct = selectedOption === currentQ.answer;
+
+    let isCorrectAnswer = false;
+    if (currentQ.correct_answer) {
+      // Định dạng mới (JSON object có correct_answer)
+      isCorrectAnswer = selectedOption === currentQ.correct_answer;
+    } else {
+      // Định dạng cũ (string answer)
+      isCorrectAnswer = selectedOption === currentQ.answer;
+    }
 
     setIsChecked(true);
-    setIsCorrect(correct);
+    setIsCorrect(isCorrectAnswer);
 
     if (correct) {
       setSessionScore((prev) => prev + 1);
@@ -196,6 +215,7 @@ const Exercise = () => {
     setSelectedOption("");
     setIsChecked(false);
     setIsCorrect(false);
+    setShowHint(false);
     setSessionScore(0);
     setSessionCorrectIds([]);
   };
@@ -277,6 +297,7 @@ const Exercise = () => {
       setSelectedOption("");
       setIsChecked(false);
       setIsCorrect(false);
+      setShowHint(false);
     } else {
       handleFinish();
     }
@@ -460,7 +481,7 @@ const Exercise = () => {
         }}
       >
         {/* Phần 1: Tiêu đề & Progress - Fixed */}
-        <div style={{ flexShrink: 0}}>
+        <div style={{ flexShrink: 0 }}>
           <Tag color="cyan">{week.name}</Tag>
           <Title level={4} style={{ marginTop: 8, marginBottom: 12 }}>
             {task.text}
@@ -486,8 +507,8 @@ const Exercise = () => {
             flexDirection: "column",
           }}
         >
-          <Title level={5} style={{ marginBottom: 16 }}>
-            {currentQuestion.sentence}
+          <Title level={5} style={{ marginBottom: 16, lineHeight: 1.5 }}>
+            {currentQuestion.sentence || currentQuestion.question_text}
           </Title>
 
           <Radio.Group
@@ -496,32 +517,69 @@ const Exercise = () => {
             disabled={isChecked}
             style={{ width: "100%" }}
           >
-            {/* THAY ĐỔI Ở ĐÂY: Dùng CSS Grid thay vì Space */}
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "1fr 1fr", // Chia làm 2 cột bằng nhau
-                gap: "12px", // Khoảng cách giữa các ô
+                gridTemplateColumns: "1fr 1fr",
+                gap: "12px",
                 width: "100%",
               }}
             >
-              {currentQuestion.options.map((option) => (
-                <Radio
-                  key={option}
-                  value={option}
-                  className="custom-radio-option"
-                >
-                  {option}
-                </Radio>
-              ))}
+              {(currentQuestion.options || []).map((option, idx) => {
+                const isAdvanced = typeof option === "object";
+                const optValue = isAdvanced ? option.key : option;
+                const optText = isAdvanced ? `${option.key}. ${option.text}` : option;
+
+                return (
+                  <Radio
+                    key={idx}
+                    value={optValue}
+                    className="custom-radio-option"
+                  >
+                    {optText}
+                  </Radio>
+                );
+              })}
             </div>
           </Radio.Group>
+
+          {currentQuestion.hint && !isChecked && (
+            <div style={{ marginTop: 16 }}>
+              <Button
+                type="dashed"
+                icon={<BulbOutlined />}
+                onClick={() => setShowHint(!showHint)}
+                style={{ borderRadius: 8, color: '#faad14', borderColor: '#ffe58f' }}
+              >
+                {showHint ? "Ẩn gợi ý" : "Xem gợi ý"}
+              </Button>
+              {showHint && (
+                <Alert
+                  message="Gợi ý"
+                  description={currentQuestion.hint}
+                  type="info"
+                  showIcon
+                  style={{ marginTop: 12, borderRadius: 12 }}
+                />
+              )}
+            </div>
+          )}
 
           {isChecked && (
             <div style={{ marginTop: 16, marginBottom: 16 }}>
               <Alert
                 message={isCorrect ? "Chính xác!" : "Rất tiếc!"}
-                description={currentQuestion.explanation}
+                description={
+                  <div>
+                    <p style={{ margin: 0, marginBottom: 8 }}>{currentQuestion.explanation}</p>
+                    {currentQuestion.translation && (
+                      <div style={{ background: 'rgba(0,0,0,0.02)', padding: '8px 12px', borderRadius: 8, marginTop: 12, borderLeft: '3px solid #1890ff' }}>
+                        <Text strong style={{ color: '#1890ff' }}>Dịch: </Text>
+                        <Text>{currentQuestion.translation}</Text>
+                      </div>
+                    )}
+                  </div>
+                }
                 type={isCorrect ? "success" : "error"}
                 showIcon
                 style={{ borderRadius: 12 }}
@@ -531,7 +589,7 @@ const Exercise = () => {
         </div>
 
         {/* Phần 3: Nút Action - Fixed Bottom */}
-        <div style={{ textAlign: "right",  flexShrink: 0 }}>
+        <div style={{ textAlign: "right", flexShrink: 0 }}>
           {!isChecked ? (
             <Button
               type="primary"

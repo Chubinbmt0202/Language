@@ -12,11 +12,9 @@ export const TOTAL_POINTS_TARGET = 10000;
 export const DEFAULT_DAILY_POINTS_TARGET = 100;
 export const UNLOCK_TEST_PASS_PERCENT = 3;
 
-// Hàm helper để lấy Key theo User ID
 const getUserKey = (baseKey) => {
   const user = auth.currentUser;
-  if (!user) return null; // Không có user thì không có key
-  return `${baseKey}_${user.uid}`;
+  return user ? `${baseKey}_${user.uid}` : `${baseKey}_guest`;
 };
 
 const clampNonNegativeInt = (value) => {
@@ -37,7 +35,6 @@ const safeParseJson = (value, fallback) => {
 const loadRecord = (baseKey) => {
   if (typeof window === "undefined") return {};
   const key = getUserKey(baseKey);
-  if (!key) return {}; // Trả về rỗng nếu chưa đăng nhập
 
   const stored = window.localStorage.getItem(key);
   const parsed = safeParseJson(stored, {});
@@ -48,7 +45,6 @@ const loadRecord = (baseKey) => {
 const saveRecord = (baseKey, value) => {
   if (typeof window === "undefined") return;
   const key = getUserKey(baseKey);
-  if (!key) return; // Không lưu nếu chưa đăng nhập
 
   window.localStorage.setItem(key, JSON.stringify(value));
 };
@@ -71,7 +67,6 @@ const saveDailyScores = (scores) => {
 export const getTotalPoints = () => {
   if (typeof window === "undefined") return 0;
   const key = getUserKey(TOTAL_SCORE_STORAGE_KEY);
-  if (!key) return 0; // Trả về 0 nếu chưa đăng nhập
 
   const stored = window.localStorage.getItem(key);
   return clampNonNegativeInt(stored);
@@ -80,9 +75,7 @@ export const getTotalPoints = () => {
 export const getDailyTargetPoints = () => {
   if (typeof window === "undefined") return DEFAULT_DAILY_POINTS_TARGET;
   const key = getUserKey(DAILY_TARGET_STORAGE_KEY);
-  // Nếu chưa đăng nhập hoặc chưa set, dùng mặc định
-  if (!key) return DEFAULT_DAILY_POINTS_TARGET; 
-  
+
   const stored = window.localStorage.getItem(key);
   const parsed = clampNonNegativeInt(stored);
   return parsed > 0 ? parsed : DEFAULT_DAILY_POINTS_TARGET;
@@ -111,9 +104,7 @@ export const addPoints = (points, date = new Date()) => {
     return { totalPoints: 0, todayPoints: 0 };
   }
 
-  // Kiểm tra đăng nhập ngay đầu hàm
   const totalKey = getUserKey(TOTAL_SCORE_STORAGE_KEY);
-  if (!totalKey) return { totalPoints: 0, todayPoints: 0 };
 
   const pointsToAdd = clampNonNegativeInt(points);
   if (pointsToAdd <= 0) {
@@ -170,9 +161,6 @@ export const addRoadmapPoints = ({ weekNumber, dayId, points }) => {
   if (typeof window === "undefined") {
     return { weekPoints: 0, dayPoints: 0 };
   }
-
-  // Kiểm tra user
-  if (!auth.currentUser) return { weekPoints: 0, dayPoints: 0 };
 
   const pointsToAdd = clampNonNegativeInt(points);
   if (pointsToAdd <= 0) {

@@ -70,15 +70,15 @@ const QuickStatsCard = () => {
       <div style={{ display: "flex", justifyContent: "center", marginBottom: 32, marginTop: 16 }}>
         <Progress
           type="dashboard"
-          percent={totalPercent > 0 ? totalPercent : 45} // Fallback to 45% for visual if 0
+          percent={totalPercent > 0 ? totalPercent : 0}
           strokeColor="#2563eb"
           trailColor="#f1f5f9"
           strokeWidth={8}
           width={160}
           format={() => (
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-              <span style={{ fontSize: 36, fontWeight: 800, color: "#0f172a", lineHeight: 1 }}>{totalPoints > 0 ? totalPoints : 450}</span>
-              <span style={{ fontSize: 13, fontWeight: 500, color: "#64748b", marginTop: 4 }}>Điểm / {TOTAL_POINTS_TARGET > 0 ? TOTAL_POINTS_TARGET : 1000}</span>
+              <span style={{ fontSize: 36, fontWeight: 800, color: "#0f172a", lineHeight: 1 }}>{totalPoints}</span>
+              <span style={{ fontSize: 13, fontWeight: 500, color: "#64748b", marginTop: 4 }}>Điểm / {TOTAL_POINTS_TARGET}</span>
             </div>
           )}
         />
@@ -87,9 +87,9 @@ const QuickStatsCard = () => {
       <div style={{ marginBottom: 24 }}>
         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
           <span style={{ color: "#64748b", fontWeight: 500, fontSize: 14 }}>Hôm nay</span>
-          <span style={{ color: "#0f172a", fontWeight: 800, fontSize: 14 }}>{todayPoints > 0 ? todayPoints : 45} / {dailyTarget > 0 ? dailyTarget : 100} điểm</span>
+          <span style={{ color: "#0f172a", fontWeight: 800, fontSize: 14 }}>{todayPoints} / {dailyTarget} điểm</span>
         </div>
-        <Progress percent={todayPercent > 0 ? todayPercent : 45} showInfo={false} strokeColor="#f97316" trailColor="#f1f5f9" size={["100%", 8]} style={{ margin: 0 }} />
+        <Progress percent={todayPercent > 0 ? todayPercent : 0} showInfo={false} strokeColor="#f97316" trailColor="#f1f5f9" size={["100%", 8]} style={{ margin: 0 }} />
       </div>
 
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -98,7 +98,7 @@ const QuickStatsCard = () => {
           <span style={{ fontWeight: 600, color: "#0f172a", fontSize: 14 }}>Chuỗi học tập</span>
         </Space>
         <div style={{ background: "#fff7ed", color: "#ea580c", padding: "4px 12px", borderRadius: 12, fontWeight: 700, fontSize: 13 }}>
-          {streakDays > 0 ? streakDays : 5} ngày 🔥
+          {streakDays} ngày 🔥
         </div>
       </div>
     </Card>
