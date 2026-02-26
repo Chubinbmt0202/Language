@@ -18,6 +18,8 @@ import {
   TranslationOutlined,
   SettingFilled,
   ReadOutlined,
+  LeftOutlined,
+  RightOutlined,
 } from "@ant-design/icons";
 
 import {
@@ -145,7 +147,7 @@ const HomeLayout = () => {
           collapsed={collapsed}
           width={250}
           style={{
-            overflow: "hidden",
+            overflow: "visible",
             height: "100vh",
             position: "fixed",
             left: 0,
@@ -164,36 +166,71 @@ const HomeLayout = () => {
               display: "flex",
               alignItems: "center",
               gap: "12px",
+              position: "relative",
             }}
           >
-            <div
-              style={{
-                background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
-                boxShadow: "0 4px 12px rgba(37, 99, 235, 0.3)",
-                color: "white",
-                borderRadius: "10px",
-                width: "36px",
-                height: "36px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                fontSize: "20px",
-                flexShrink: 0,
-              }}
-            >
-              <ReadOutlined />
-            </div>
-            {!collapsed && (
-              <span
+            <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+              <div
                 style={{
+                  background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
+                  boxShadow: "0 4px 12px rgba(37, 99, 235, 0.3)",
+                  color: "white",
+                  borderRadius: "10px",
+                  width: "36px",
+                  height: "36px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
                   fontSize: "20px",
-                  fontWeight: "800",
-                  color: "#0f172a",
-                  whiteSpace: "nowrap",
+                  flexShrink: 0,
                 }}
               >
-                PrepMaster
-              </span>
+                <ReadOutlined />
+              </div>
+              {!collapsed && (
+                <span
+                  style={{
+                    fontSize: "20px",
+                    fontWeight: "800",
+                    color: "#0f172a",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  PrepMaster
+                </span>
+              )}
+            </div>
+            {/* Desktop Toggle Button */}
+            {!isMobile && (
+              <div
+                onClick={toggleSidebar}
+                style={{
+                  position: "absolute",
+                  right: "-14px",
+                  top: "28px",
+                  width: "28px",
+                  height: "28px",
+                  background: "#d2d2d2ff",
+                  color: "white",
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                  boxShadow: "0 2px 8px rgba(99, 102, 241, 0.4)",
+                  zIndex: 100,
+                  fontSize: "10px",
+                  transition: "all 0.3s",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "scale(1.1)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "scale(1)";
+                }}
+              >
+                {collapsed ? <RightOutlined /> : <LeftOutlined />}
+              </div>
             )}
           </div>
 

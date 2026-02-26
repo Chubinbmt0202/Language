@@ -31,7 +31,7 @@ import {
 import QuizSection from "./QuizSection"; // <--- MỚI: Import Component QuizSection
 import LearningTasks from "./LearningTasks";
 import QuickNotes from "./QuickNotes"; // <--- MỚI: Import Component QuickNotes
-import { getTheoryLesson } from "./TheoryTaskData";
+import { getTheoryLesson } from "./TheoryTaskData.jsx";
 import { detailedRoadmap } from "../../Dashboard/RoadmapData";
 import { findRoadmapLocationByTaskId, getDayGate } from "../../../util/roadmapAccess";
 import { getLessonMissionsDoneMap, markLessonMissionDone } from "../../../util/lessonMissions";
@@ -46,7 +46,7 @@ import {
   suffixesPerson,
   pronounColumns,
   pronounData,
-} from "./theoryLessonData";
+} from "./theoryLessonData.jsx";
 const { Title, Text, Paragraph } = Typography;
 
 // --- COMPONENT CHÍNH ---

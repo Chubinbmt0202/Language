@@ -67,6 +67,17 @@
   margin-top: 16px !important;
   margin-bottom: 8px !important;
   text-transform: uppercase !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  transition: all 0.2s;
+}
+
+.ant-layout-sider-collapsed .custom-sidebar-menu .ant-menu-item-group-title {
+  opacity: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
 }
 
 .custom-sidebar-menu .ant-menu-item-selected {

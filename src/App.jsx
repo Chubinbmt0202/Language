@@ -35,7 +35,7 @@ import PassiveVoice, {
 import { LanguageProvider } from "./util/LanguageContext.jsx";
 import Exercise from "./pages/Exercises/ExercisePage.jsx";
 import VocabTaskPage from "./pages/Exercises/VocabTaskPage.jsx";
-import Theory from "./pages/English/Theory/Theory.jsx";
+// import Theory from "./pages/English/Theory/Theory.jsx"; // Removed old Theory component
 import Home from "./pages/Home/Home.jsx";
 import ExercisesLibrary from "./pages/Exercises/Library/index.jsx";
 import Upcoming from "./pages/Result/Upcoming.jsx";
@@ -43,6 +43,7 @@ import Login from "./pages/Login.jsx";
 import { AuthProvider } from "./util/AuthContext.jsx";
 import TimeTracker from "./components/TimeTracker.jsx";
 import Settings from "./pages/Settings/index.jsx";
+import TheoryLesson from "./pages/TheoryLesson/index.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -60,7 +61,7 @@ function App() {
               <Route path="ExercisesLibrary" element={<ExercisesLibrary />} />
               <Route path="exercise/:taskId" element={<Exercise />} />
               <Route path="vocab/:taskId" element={<VocabTaskPage />} />
-              <Route path="theory/:taskId" element={<Theory />} />
+              <Route path="theory/:taskId" element={<TheoryLesson />} />
               <Route path="vocabulary" element={<Vocabulary />} />
               <Route path="english/grammar" element={<Grammar />}>
                 <Route index element={<GrammarMenu />} />
@@ -108,6 +109,7 @@ function App() {
                 element={<ListenAndFillJapanese />}
               />
               <Route path="Setting" element={<Settings />} />
+              {/* <Route path="theory-lesson" element={<TheoryLesson />} /> - Removed temporary route */}
               <Route
                 path="*"
                 element={<Upcoming />}

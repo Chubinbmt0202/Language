@@ -8270,5 +8270,184 @@ export const QUIZ_TASKS = {
       ],
       hard: []
     }
+  },
+  "w1-d2-t3": {
+    description: "Giải 20-30 câu Part 5 & 6",
+    total: 10,
+    questions: {
+      easy: [
+        {
+          "id": "q_verb_tense_021",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Past Continuous)",
+          "difficulty_level": "Medium",
+          "question_text": "While the QA team _____ the new timekeeping app, they discovered a critical security flaw.",
+          "options": [
+            { "key": "A", "text": "tests" },
+            { "key": "B", "text": "is testing" },
+            { "key": "C", "text": "was testing" },
+            { "key": "D", "text": "tested" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cấu trúc 'While' (trong khi) diễn tả một hành động đang diễn ra trong quá khứ thì có một hành động khác (discovered) xen vào.",
+          "explanation": "Chính xác. Thì quá khứ tiếp diễn 'was testing' được sử dụng để chỉ hành động đang kéo dài trong quá khứ (đang kiểm thử) thì hành động khác cắt ngang (phát hiện ra lỗi).",
+          "translation": "Trong khi nhóm QA đang kiểm thử ứng dụng chấm công mới, họ đã phát hiện ra một lỗ hổng bảo mật nghiêm trọng."
+        },
+        {
+          "id": "q_verb_tense_022",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Past Perfect)",
+          "difficulty_level": "Hard",
+          "question_text": "By the time the manager arrived at the office, the IT department _____ the server issue.",
+          "options": [
+            { "key": "A", "text": "has resolved" },
+            { "key": "B", "text": "had resolved" },
+            { "key": "C", "text": "resolves" },
+            { "key": "D", "text": "will resolve" }
+          ],
+          "correct_answer": "B",
+          "hint": "Cấu trúc 'By the time + S + V (quá khứ đơn)' yêu cầu mệnh đề chính phải lùi về một thì xảy ra trước cả quá khứ.",
+          "explanation": "Chính xác. Thì quá khứ hoàn thành 'had resolved' diễn tả một hành động đã hoàn tất trước một thời điểm hoặc một hành động khác trong quá khứ (trước lúc người quản lý đến).",
+          "translation": "Vào lúc người quản lý đến văn phòng, bộ phận CNTT đã giải quyết xong sự cố máy chủ."
+        },
+        {
+          "id": "q_verb_tense_023",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Perfect Continuous)",
+          "difficulty_level": "Hard",
+          "question_text": "The marketing team _____ on the new Happy Box promotional campaign for three straight weeks.",
+          "options": [
+            { "key": "A", "text": "is working" },
+            { "key": "B", "text": "works" },
+            { "key": "C", "text": "has been working" },
+            { "key": "D", "text": "worked" }
+          ],
+          "correct_answer": "C",
+          "hint": "Giới từ 'for' + khoảng thời gian (three straight weeks) nhấn mạnh tính liên tục không ngừng nghỉ của hành động từ quá khứ đến hiện tại.",
+          "explanation": "Chính xác. Thì hiện tại hoàn thành tiếp diễn 'has been working' được dùng để nhấn mạnh quá trình làm việc liên tục, không ngắt quãng trong suốt 3 tuần qua.",
+          "translation": "Nhóm tiếp thị đã và đang làm việc liên tục cho chiến dịch quảng cáo Happy Box mới trong suốt ba tuần liền."
+        },
+        {
+          "id": "q_verb_tense_024",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Future Continuous)",
+          "difficulty_level": "Medium",
+          "question_text": "At this time tomorrow, the CEO _____ the quarterly financial results to the board of directors.",
+          "options": [
+            { "key": "A", "text": "will present" },
+            { "key": "B", "text": "is presenting" },
+            { "key": "C", "text": "will be presenting" },
+            { "key": "D", "text": "presents" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cụm 'At this time tomorrow' (vào giờ này ngày mai) xác định một thời điểm cực kỳ cụ thể đang diễn ra trong tương lai.",
+          "explanation": "Chính xác. Thì tương lai tiếp diễn 'will be presenting' dùng để diễn tả một hành động sẽ đang diễn ra tại một thời điểm xác định trong tương lai.",
+          "translation": "Vào giờ này ngày mai, Giám đốc điều hành sẽ đang trình bày kết quả tài chính hàng quý cho hội đồng quản trị."
+        },
+        {
+          "id": "q_verb_tense_025",
+          "part": 5,
+          "grammar_topic": "Passive Voice (Present Simple)",
+          "difficulty_level": "Medium",
+          "question_text": "In our company, employee attendance _____ automatically by the new mobile application every day.",
+          "options": [
+            { "key": "A", "text": "tracks" },
+            { "key": "B", "text": "is tracking" },
+            { "key": "C", "text": "is tracked" },
+            { "key": "D", "text": "tracked" }
+          ],
+          "correct_answer": "C",
+          "hint": "Chủ ngữ là 'employee attendance' (sự điểm danh) là vật/sự việc, không thể tự thực hiện hành động 'track' (theo dõi) mà phải bị tác động bởi ứng dụng.",
+          "explanation": "Chính xác. Câu cần chia ở thể bị động của thì hiện tại đơn (is + V3/ed) vì hành động này lặp đi lặp lại hàng ngày (every day) và chủ ngữ là vật bị tác động.",
+          "translation": "Trong công ty chúng tôi, việc điểm danh của nhân viên được theo dõi tự động bởi ứng dụng di động mới mỗi ngày."
+        },
+        {
+          "id": "q_verb_tense_026",
+          "part": 5,
+          "grammar_topic": "Passive Voice (Future Simple)",
+          "difficulty_level": "Medium",
+          "question_text": "The new series of English pronunciation videos _____ on TikTok next Monday.",
+          "options": [
+            { "key": "A", "text": "will release" },
+            { "key": "B", "text": "will be released" },
+            { "key": "C", "text": "releases" },
+            { "key": "D", "text": "are releasing" }
+          ],
+          "correct_answer": "B",
+          "hint": "Chủ ngữ là 'The new series of videos' (vật). Các video không thể tự phát hành mà phải 'được phát hành' vào tuần tới.",
+          "explanation": "Chính xác. Thể bị động của thì tương lai đơn có cấu trúc 'will be + V3/ed'. Câu mang nghĩa bị động vì video là đối tượng được phát hành.",
+          "translation": "Loạt video phát âm tiếng Anh mới sẽ được phát hành trên TikTok vào thứ Hai tuần tới."
+        },
+        {
+          "id": "q_verb_tense_027",
+          "part": 5,
+          "grammar_topic": "Passive Voice (Present Perfect)",
+          "difficulty_level": "Hard",
+          "question_text": "Several interactive features _____ to the EduKit platform since the beta version was launched.",
+          "options": [
+            { "key": "A", "text": "have added" },
+            { "key": "B", "text": "have been added" },
+            { "key": "C", "text": "were adding" },
+            { "key": "D", "text": "added" }
+          ],
+          "correct_answer": "B",
+          "hint": "Dấu hiệu 'since' yêu cầu thì hiện tại hoàn thành. Chủ ngữ 'features' (các tính năng) là vật, nên động từ phải ở thể bị động.",
+          "explanation": "Chính xác. Thể bị động của thì hiện tại hoàn thành có cấu trúc 'have/has + been + V3/ed'. Các tính năng 'đã được thêm vào' nền tảng.",
+          "translation": "Một vài tính năng tương tác đã được thêm vào nền tảng EduKit kể từ khi phiên bản thử nghiệm được ra mắt."
+        },
+        {
+          "id": "q_verb_tense_028",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Past Continuous vs Past Simple)",
+          "difficulty_level": "Easy",
+          "question_text": "The power went out while Ms. Lin _____ her daily English speaking video.",
+          "options": [
+            { "key": "A", "text": "records" },
+            { "key": "B", "text": "has recorded" },
+            { "key": "C", "text": "was recording" },
+            { "key": "D", "text": "is recording" }
+          ],
+          "correct_answer": "C",
+          "hint": "Sự việc mất điện (went out) xảy ra cắt ngang một hành động khác đang diễn ra. Hành động đang diễn ra đó phải dùng thì quá khứ tiếp diễn.",
+          "explanation": "Chính xác. Thì quá khứ tiếp diễn 'was recording' chỉ một hành động đang được thực hiện (đang quay video) thì một hành động ngắn khác xen vào trong quá khứ.",
+          "translation": "Mất điện trong khi cô Lin đang quay video nói tiếng Anh hàng ngày của mình."
+        },
+        {
+          "id": "q_verb_tense_029",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Future Perfect)",
+          "difficulty_level": "Hard",
+          "question_text": "By the end of this year, the Happy Box company _____ its operations to five new countries.",
+          "options": [
+            { "key": "A", "text": "will expand" },
+            { "key": "B", "text": "expands" },
+            { "key": "C", "text": "will have expanded" },
+            { "key": "D", "text": "is expanding" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cụm 'By + mốc thời gian trong tương lai' (Trước thời điểm... trong tương lai) là dấu hiệu kinh điển của thì Tương lai hoàn thành.",
+          "explanation": "Chính xác. Thì tương lai hoàn thành 'will have expanded' diễn đạt một hành động sẽ hoàn tất tính đến một thời điểm xác định trong tương lai.",
+          "translation": "Tính đến cuối năm nay, công ty Happy Box sẽ mở rộng (hoàn tất việc mở rộng) hoạt động sang năm quốc gia mới."
+        },
+        {
+          "id": "q_verb_tense_030",
+          "part": 5,
+          "grammar_topic": "Passive Voice (Past Simple)",
+          "difficulty_level": "Medium",
+          "question_text": "The erroneous data in the HR system _____ by the database administrator last night.",
+          "options": [
+            { "key": "A", "text": "corrected" },
+            { "key": "B", "text": "corrects" },
+            { "key": "C", "text": "was corrected" },
+            { "key": "D", "text": "is corrected" }
+          ],
+          "correct_answer": "C",
+          "hint": "Thời gian 'last night' (tối qua) yêu cầu thì quá khứ đơn. Chủ ngữ 'data' (dữ liệu) bị tác động bởi cụm 'by the administrator', nên phải dùng thể bị động.",
+          "explanation": "Chính xác. Thể bị động của thì quá khứ đơn là 'was/were + V3/ed'. Dữ liệu bị lỗi 'đã được sửa' bởi người quản trị.",
+          "translation": "Dữ liệu bị lỗi trong hệ thống nhân sự đã được người quản trị cơ sở dữ liệu sửa vào tối qua."
+        }
+      ],
+      hard: []
+    }
   }
 };
