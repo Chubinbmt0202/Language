@@ -28,9 +28,16 @@ import {
   TeamOutlined,
   RetweetOutlined,
 } from "@ant-design/icons";
-import QuizSection from "./QuizSection"; // <--- MỚI: Import Component QuizSection
+import QuizSection from "./QuizSection";
 import LearningTasks from "./LearningTasks";
-import QuickNotes from "./QuickNotes"; // <--- MỚI: Import Component QuickNotes
+import QuickNotes from "./QuickNotes";
+import NounPronounTheory from "./NounPronounTheory"; // <--- Import component layout mới
+import PronounTheory from "./PronounTheory";
+import VerbTheory from "./VerbTheory";
+import TensesTheory from "./TensesTheory";
+import AdjectiveTheory from "./AdjectiveTheory";
+import AdverbTheory from "./AdverbTheory";
+import SubjectVerbAgreementTheory from "./SubjectVerbAgreementTheory";
 import { getTheoryLesson } from "./TheoryTaskData.jsx";
 import { detailedRoadmap } from "../../Dashboard/RoadmapData";
 import { findRoadmapLocationByTaskId, getDayGate } from "@/shared/utils/storage/roadmapAccess";
@@ -84,6 +91,70 @@ const Theory = () => {
       </div>
     );
   }
+
+  // Nếu là layout mới noun thì render NounPronounTheory (chỉ Noun)
+  if (lesson.layout === "noun" || lesson.layout === "noun_pronoun") {
+    return (
+      <div style={{ background: "#f8f9fa", minHeight: "100vh", padding: "40px 60px" }}>
+        <NounPronounTheory />
+      </div>
+    );
+  }
+
+  // Nếu là layout mới pronoun thì render PronounTheory (Đại từ)
+  if (lesson.layout === "pronoun") {
+    return (
+      <div style={{ background: "#f8f9fa", minHeight: "100vh", padding: "40px 60px" }}>
+        <PronounTheory />
+      </div>
+    );
+  }
+
+  // Layout mới VerbTheory (Động từ)
+  if (lesson.layout === "verb") {
+    return (
+      <div style={{ background: "#f8f9fa", minHeight: "100vh", padding: "40px 60px" }}>
+        <VerbTheory />
+      </div>
+    );
+  }
+
+  // Layout mới TensesTheory (Các thì cơ bản)
+  if (lesson.layout === "tenses") {
+    return (
+      <div style={{ background: "#f8f9fa", minHeight: "100vh", padding: "40px 60px" }}>
+        <TensesTheory />
+      </div>
+    );
+  }
+
+  // Layout mới AdjectiveTheory (Tính từ)
+  if (lesson.layout === "adjective") {
+    return (
+      <div style={{ background: "#f8f9fa", minHeight: "100vh", padding: "40px 60px" }}>
+        <AdjectiveTheory />
+      </div>
+    );
+  }
+
+  // Layout mới AdverbTheory (Trạng từ)
+  if (lesson.layout === "adverb") {
+    return (
+      <div style={{ background: "#f8f9fa", minHeight: "100vh", padding: "40px 60px" }}>
+        <AdverbTheory />
+      </div>
+    );
+  }
+
+  // Layout mới S-V Agreement (Sự hòa hợp Chủ-Vị)
+  if (lesson.layout === "sv_agreement") {
+    return (
+      <div style={{ background: "#f8f9fa", minHeight: "100vh", padding: "40px 60px" }}>
+        <SubjectVerbAgreementTheory />
+      </div>
+    );
+  }
+
   const [viewMode, setViewMode] = useState("Noun"); // State chuyển đổi giữa Danh từ & Đại từ
   const [activeLessonTab, setActiveLessonTab] = useState("1");
 

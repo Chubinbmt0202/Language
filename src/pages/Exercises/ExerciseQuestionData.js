@@ -8445,6 +8445,1196 @@ export const QUIZ_TASKS = {
           "hint": "Thời gian 'last night' (tối qua) yêu cầu thì quá khứ đơn. Chủ ngữ 'data' (dữ liệu) bị tác động bởi cụm 'by the administrator', nên phải dùng thể bị động.",
           "explanation": "Chính xác. Thể bị động của thì quá khứ đơn là 'was/were + V3/ed'. Dữ liệu bị lỗi 'đã được sửa' bởi người quản trị.",
           "translation": "Dữ liệu bị lỗi trong hệ thống nhân sự đã được người quản trị cơ sở dữ liệu sửa vào tối qua."
+        },
+        {
+          "id": "q_verb_tense_031",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Perfect)",
+          "difficulty_level": "Medium",
+          "question_text": "Since its founding, the Happy Box company _____ its product line to include customized corporate gifts.",
+          "options": [
+            { "key": "A", "text": "expand" },
+            { "key": "B", "text": "expanded" },
+            { "key": "C", "text": "has expanded" },
+            { "key": "D", "text": "is expanding" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cụm 'Since its founding' (Kể từ khi thành lập) là dấu hiệu kinh điển cho thấy một quá trình bắt đầu từ quá khứ và kéo dài đến hiện tại.",
+          "explanation": "Chính xác. Thì hiện tại hoàn thành 'has expanded' được dùng để diễn tả sự mở rộng kinh doanh diễn ra từ lúc thành lập cho đến tận bây giờ.",
+          "translation": "Kể từ khi thành lập, công ty Happy Box đã mở rộng dòng sản phẩm của mình để bao gồm cả các món quà tặng doanh nghiệp tùy chỉnh."
+        },
+        {
+          "id": "q_verb_tense_032",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Past Simple)",
+          "difficulty_level": "Easy",
+          "question_text": "The lead developer _____ the new timekeeping module to the main server late last night.",
+          "options": [
+            { "key": "A", "text": "uploads" },
+            { "key": "B", "text": "uploaded" },
+            { "key": "C", "text": "has uploaded" },
+            { "key": "D", "text": "will upload" }
+          ],
+          "correct_answer": "B",
+          "hint": "Cụm 'late last night' (tối muộn hôm qua) chỉ một thời điểm đã kết thúc hoàn toàn trong quá khứ.",
+          "explanation": "Chính xác. Động từ 'uploaded' chia ở thì quá khứ đơn phù hợp với hành động đã xảy ra và kết thúc vào đêm qua.",
+          "translation": "Lập trình viên chính đã tải lên mô-đun chấm công mới lên máy chủ chính vào đêm muộn hôm qua."
+        },
+        {
+          "id": "q_verb_tense_033",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Future Continuous)",
+          "difficulty_level": "Medium",
+          "question_text": "At 8 PM tonight, the creator _____ a live session to practice daily English speaking on TikTok.",
+          "options": [
+            { "key": "A", "text": "hosts" },
+            { "key": "B", "text": "hosted" },
+            { "key": "C", "text": "has hosted" },
+            { "key": "D", "text": "will be hosting" }
+          ],
+          "correct_answer": "D",
+          "hint": "Mốc thời gian 'At 8 PM tonight' chỉ một thời điểm rất cụ thể sẽ diễn ra trong tương lai.",
+          "explanation": "Chính xác. Thì tương lai tiếp diễn 'will be hosting' dùng để diễn tả một hành động sẽ đang diễn ra tại một thời điểm xác định trong tương lai.",
+          "translation": "Vào lúc 8 giờ tối nay, nhà sáng tạo nội dung sẽ đang tổ chức một buổi phát trực tiếp để luyện nói tiếng Anh hàng ngày trên TikTok."
+        },
+        {
+          "id": "q_verb_tense_034",
+          "part": 5,
+          "grammar_topic": "Passive Voice (Present Simple)",
+          "difficulty_level": "Medium",
+          "question_text": "All employee attendance records _____ securely in the cloud server to prevent data loss.",
+          "options": [
+            { "key": "A", "text": "store" },
+            { "key": "B", "text": "are storing" },
+            { "key": "C", "text": "are stored" },
+            { "key": "D", "text": "stored" }
+          ],
+          "correct_answer": "C",
+          "hint": "Chủ ngữ 'records' (bản ghi) là vật, không thể tự thực hiện hành động cất giữ (store). Việc lưu trữ diễn ra thường xuyên như một quy trình.",
+          "explanation": "Chính xác. Thể bị động của hiện tại đơn 'are stored' được sử dụng vì các bản ghi điểm danh 'được lưu trữ' một cách tự động và thường xuyên.",
+          "translation": "Tất cả các bản ghi điểm danh của nhân viên được lưu trữ an toàn trong máy chủ đám mây để ngăn ngừa mất dữ liệu."
+        },
+        {
+          "id": "q_verb_tense_035",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Continuous)",
+          "difficulty_level": "Easy",
+          "question_text": "Currently, our engineering team _____ PrepMaster, an educational application designed for TOEIC and JLPT preparation.",
+          "options": [
+            { "key": "A", "text": "builds" },
+            { "key": "B", "text": "built" },
+            { "key": "C", "text": "is building" },
+            { "key": "D", "text": "has built" }
+          ],
+          "correct_answer": "C",
+          "hint": "Trạng từ 'Currently' (hiện tại) nhấn mạnh vào một dự án đang được tiến hành ở thời điểm nói.",
+          "explanation": "Chính xác. Thì hiện tại tiếp diễn 'is building' dùng để diễn tả một hành động, dự án đang diễn ra lúc này.",
+          "translation": "Hiện tại, nhóm kỹ thuật của chúng tôi đang xây dựng PrepMaster, một ứng dụng giáo dục được thiết kế để luyện thi TOEIC và JLPT."
+        },
+        {
+          "id": "q_verb_tense_036",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Past Perfect)",
+          "difficulty_level": "Hard",
+          "question_text": "By the time the marketing team arrived at the office, the first batch of holiday gift boxes _____ completely.",
+          "options": [
+            { "key": "A", "text": "sells out" },
+            { "key": "B", "text": "sold out" },
+            { "key": "C", "text": "had sold out" },
+            { "key": "D", "text": "has sold out" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cấu trúc 'By the time + mệnh đề quá khứ (arrived)' chỉ ra rằng hành động ở mệnh đề chính phải xảy ra và hoàn tất trước hành động quá khứ đó.",
+          "explanation": "Chính xác. Thì quá khứ hoàn thành 'had sold out' diễn tả hành động bán hết đã hoàn tất trước khi nhóm tiếp thị đến văn phòng.",
+          "translation": "Vào lúc nhóm tiếp thị đến văn phòng, lô hộp quà tặng dịp lễ đầu tiên đã được bán hết sạch."
+        },
+        {
+          "id": "q_verb_tense_037",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Simple)",
+          "difficulty_level": "Easy",
+          "question_text": "The mobile application automatically _____ notifications to employees if they forget to log their work hours.",
+          "options": [
+            { "key": "A", "text": "send" },
+            { "key": "B", "text": "sends" },
+            { "key": "C", "text": "is sending" },
+            { "key": "D", "text": "sent" }
+          ],
+          "correct_answer": "B",
+          "hint": "Trạng từ 'automatically' (tự động) và liên từ 'if' (điều kiện loại 0) chỉ một tính năng hoạt động theo quy luật hiển nhiên.",
+          "explanation": "Chính xác. Thì hiện tại đơn được sử dụng cho sự thật hiển nhiên. Động từ 'sends' thêm 's' vì chủ ngữ 'The mobile application' là số ít.",
+          "translation": "Ứng dụng di động tự động gửi thông báo cho nhân viên nếu họ quên ghi lại giờ làm việc của mình."
+        },
+        {
+          "id": "q_verb_tense_038",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Future Perfect)",
+          "difficulty_level": "Hard",
+          "question_text": "By the end of this month, the students _____ all the grammar topics required for the JLPT N3 exam.",
+          "options": [
+            { "key": "A", "text": "master" },
+            { "key": "B", "text": "will master" },
+            { "key": "C", "text": "mastered" },
+            { "key": "D", "text": "will have mastered" }
+          ],
+          "correct_answer": "D",
+          "hint": "Dấu hiệu 'By the end of this month' (Tính đến cuối tháng này) yêu cầu một thì chỉ sự hoàn tất trong tương lai.",
+          "explanation": "Chính xác. Thì tương lai hoàn thành 'will have mastered' dùng để chỉ một hành động sẽ được hoàn tất tính đến một thời điểm trong tương lai.",
+          "translation": "Tính đến cuối tháng này, các học sinh sẽ nắm vững toàn bộ các chủ điểm ngữ pháp bắt buộc cho kỳ thi JLPT N3."
+        },
+        {
+          "id": "q_verb_tense_039",
+          "part": 5,
+          "grammar_topic": "Passive Voice (Past Simple)",
+          "difficulty_level": "Medium",
+          "question_text": "The final version of the personnel management software _____ by the quality assurance team before it went live.",
+          "options": [
+            { "key": "A", "text": "approved" },
+            { "key": "B", "text": "was approved" },
+            { "key": "C", "text": "approves" },
+            { "key": "D", "text": "is approved" }
+          ],
+          "correct_answer": "B",
+          "hint": "Câu có cụm 'went live' (đã ra mắt) ở quá khứ. Phần mềm là vật nên phải 'được phê duyệt' bởi nhóm QA.",
+          "explanation": "Chính xác. Thể bị động quá khứ đơn 'was approved' diễn tả hành động phần mềm được phê duyệt, xảy ra trước khi nó được đưa vào sử dụng.",
+          "translation": "Phiên bản cuối cùng của phần mềm quản lý nhân sự đã được phê duyệt bởi nhóm đảm bảo chất lượng trước khi nó chính thức ra mắt."
+        },
+        {
+          "id": "q_verb_tense_040",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Past Continuous)",
+          "difficulty_level": "Medium",
+          "question_text": "While the high school students _____ online together, the app updated the leaderboard of total study hours.",
+          "options": [
+            { "key": "A", "text": "study" },
+            { "key": "B", "text": "studied" },
+            { "key": "C", "text": "are studying" },
+            { "key": "D", "text": "were studying" }
+          ],
+          "correct_answer": "D",
+          "hint": "Cấu trúc 'While' diễn tả một hành động đang kéo dài trong quá khứ thì một hành động ngắn khác (updated) xen vào.",
+          "explanation": "Chính xác. Thì quá khứ tiếp diễn 'were studying' chỉ quá trình đang học kéo dài của các học sinh trong quá khứ.",
+          "translation": "Trong khi các học sinh trung học đang học trực tuyến cùng nhau, ứng dụng đã cập nhật bảng xếp hạng tổng số giờ học."
+        },
+        {
+          "id": "q_verb_tense_041",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Perfect Continuous)",
+          "difficulty_level": "Hard",
+          "question_text": "The HR department _____ new candidates for the senior developer position all morning.",
+          "options": [
+            { "key": "A", "text": "interviews" },
+            { "key": "B", "text": "is interviewing" },
+            { "key": "C", "text": "has been interviewing" },
+            { "key": "D", "text": "interviewed" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cụm 'all morning' (cả buổi sáng) nhấn mạnh tính liên tục của một hành động bắt đầu từ sáng và vẫn đang tiếp diễn ở hiện tại.",
+          "explanation": "Chính xác. Thì hiện tại hoàn thành tiếp diễn 'has been interviewing' nhấn mạnh quá trình phỏng vấn diễn ra liên tục, không ngừng nghỉ.",
+          "translation": "Bộ phận nhân sự đã và đang phỏng vấn các ứng viên mới cho vị trí lập trình viên cấp cao suốt cả buổi sáng."
+        },
+        {
+          "id": "q_verb_tense_042",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Future Simple in Conditionals)",
+          "difficulty_level": "Easy",
+          "question_text": "If the current server capacity is exceeded, the timekeeping system _____ automatically to prevent a crash.",
+          "options": [
+            { "key": "A", "text": "restarts" },
+            { "key": "B", "text": "restarted" },
+            { "key": "C", "text": "will restart" },
+            { "key": "D", "text": "has restarted" }
+          ],
+          "correct_answer": "C",
+          "hint": "Câu điều kiện loại 1 diễn tả một khả năng ở tương lai: If + Hiện tại đơn, Tương lai đơn.",
+          "explanation": "Chính xác. Ở mệnh đề chính của câu điều kiện loại 1, chúng ta sử dụng thì tương lai đơn 'will restart'.",
+          "translation": "Nếu vượt quá dung lượng máy chủ hiện tại, hệ thống chấm công sẽ tự động khởi động lại để tránh bị sập."
+        },
+        {
+          "id": "q_verb_tense_043",
+          "part": 5,
+          "grammar_topic": "Passive Voice (Present Perfect)",
+          "difficulty_level": "Hard",
+          "question_text": "A series of new interactive TOEIC reading lessons _____ to the PrepMaster application just recently.",
+          "options": [
+            { "key": "A", "text": "have added" },
+            { "key": "B", "text": "has been added" },
+            { "key": "C", "text": "has added" },
+            { "key": "D", "text": "were added" }
+          ],
+          "correct_answer": "B",
+          "hint": "Trạng từ 'recently' yêu cầu thì Hiện tại hoàn thành. Chủ ngữ 'A series' (Một chuỗi/loạt) là số ít và mang nghĩa bị động (được thêm vào).",
+          "explanation": "Chính xác. Cấu trúc bị động của hiện tại hoàn thành là 'has been + V3/ed'. 'A series' được chia ở số ít nên dùng 'has'.",
+          "translation": "Một loạt các bài học đọc hiểu TOEIC tương tác mới vừa được thêm vào ứng dụng PrepMaster gần đây."
+        },
+        {
+          "id": "q_verb_tense_044",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Simple)",
+          "difficulty_level": "Medium",
+          "question_text": "High school students often _____ less isolated when they can see their peers studying online together on the app.",
+          "options": [
+            { "key": "A", "text": "feel" },
+            { "key": "B", "text": "feels" },
+            { "key": "C", "text": "are feeling" },
+            { "key": "D", "text": "felt" }
+          ],
+          "correct_answer": "A",
+          "hint": "Trạng từ 'often' (thường xuyên) chỉ một thói quen hoặc một trạng thái cảm xúc chung.",
+          "explanation": "Chính xác. Thì hiện tại đơn được dùng. Chủ ngữ 'students' là số nhiều nên động từ 'feel' giữ nguyên ở dạng nguyên mẫu.",
+          "translation": "Học sinh trung học thường cảm thấy bớt cô đơn hơn khi họ có thể thấy bạn bè đồng trang lứa cùng học trực tuyến trên ứng dụng."
+        },
+        {
+          "id": "q_verb_tense_045",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Past Simple)",
+          "difficulty_level": "Easy",
+          "question_text": "Last year, the founders _____ to create an educational app featuring a competitive leaderboard for schools.",
+          "options": [
+            { "key": "A", "text": "decide" },
+            { "key": "B", "text": "decides" },
+            { "key": "C", "text": "are deciding" },
+            { "key": "D", "text": "decided" }
+          ],
+          "correct_answer": "D",
+          "hint": "Cụm 'Last year' (năm ngoái) là dấu hiệu rõ ràng của một hành động đã xảy ra và chấm dứt trong quá khứ.",
+          "explanation": "Chính xác. Động từ 'decided' (quyết định) chia ở thì quá khứ đơn.",
+          "translation": "Năm ngoái, các nhà sáng lập đã quyết định tạo ra một ứng dụng giáo dục có tính năng bảng xếp hạng cạnh tranh giữa các trường học."
+        },
+        {
+          "id": "q_verb_tense_046",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Future Continuous)",
+          "difficulty_level": "Hard",
+          "question_text": "This time next year, the logistics team _____ its 100,000th custom Happy Box to a loyal customer.",
+          "options": [
+            { "key": "A", "text": "delivers" },
+            { "key": "B", "text": "delivered" },
+            { "key": "C", "text": "will be delivering" },
+            { "key": "D", "text": "has delivered" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cụm 'This time next year' (Giờ này năm sau) xác định một thời điểm cực kỳ cụ thể đang diễn ra ở tương lai.",
+          "explanation": "Chính xác. Thì tương lai tiếp diễn 'will be delivering' mô tả một hành động đang xảy ra tại một thời điểm chính xác trong tương lai.",
+          "translation": "Vào thời điểm này năm sau, đội ngũ hậu cần sẽ đang giao chiếc Happy Box tùy chỉnh thứ 100.000 cho một khách hàng trung thành."
+        },
+        {
+          "id": "q_verb_tense_047",
+          "part": 5,
+          "grammar_topic": "Passive Voice (Future Simple)",
+          "difficulty_level": "Medium",
+          "question_text": "Detailed analytics regarding collective study times _____ on the platform's dashboard next week.",
+          "options": [
+            { "key": "A", "text": "will display" },
+            { "key": "B", "text": "will be displayed" },
+            { "key": "C", "text": "display" },
+            { "key": "D", "text": "are displaying" }
+          ],
+          "correct_answer": "B",
+          "hint": "Chủ ngữ là 'Detailed analytics' (Các số liệu phân tích) là vật, nên phải 'được hiển thị'. Dấu hiệu 'next week' yêu cầu thì tương lai.",
+          "explanation": "Chính xác. Thể bị động của thì tương lai đơn 'will be displayed' diễn tả việc các số liệu sẽ được hệ thống cho hiển thị vào tuần sau.",
+          "translation": "Các phân tích chi tiết liên quan đến tổng thời gian học tập sẽ được hiển thị trên bảng điều khiển của nền tảng vào tuần tới."
+        },
+        {
+          "id": "q_verb_tense_048",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Past Perfect)",
+          "difficulty_level": "Medium",
+          "question_text": "Before the investor meeting started, the project manager _____ a comprehensive business plan for the new app.",
+          "options": [
+            { "key": "A", "text": "prepares" },
+            { "key": "B", "text": "is preparing" },
+            { "key": "C", "text": "had prepared" },
+            { "key": "D", "text": "will prepare" }
+          ],
+          "correct_answer": "C",
+          "hint": "Hành động chuẩn bị diễn ra và hoàn thành TRƯỚC một hành động khác trong quá khứ (cuộc họp bắt đầu - started).",
+          "explanation": "Chính xác. Thì quá khứ hoàn thành 'had prepared' được sử dụng để nhấn mạnh tính hoàn tất của hành động trước một cột mốc quá khứ.",
+          "translation": "Trước khi cuộc họp nhà đầu tư bắt đầu, quản lý dự án đã chuẩn bị xong một kế hoạch kinh doanh toàn diện cho ứng dụng mới."
+        },
+        {
+          "id": "q_verb_tense_049",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Continuous)",
+          "difficulty_level": "Easy",
+          "question_text": "Due to the unexpected surge in website traffic, the IT team _____ the server infrastructure right now.",
+          "options": [
+            { "key": "A", "text": "upgrades" },
+            { "key": "B", "text": "upgraded" },
+            { "key": "C", "text": "is upgrading" },
+            { "key": "D", "text": "has upgraded" }
+          ],
+          "correct_answer": "C",
+          "hint": "Trạng từ 'right now' (ngay lúc này) bắt buộc phải sử dụng thì hiện tại tiếp diễn.",
+          "explanation": "Chính xác. Thì hiện tại tiếp diễn 'is upgrading' diễn tả một hành động khẩn cấp đang diễn ra ngay tại thời điểm nói.",
+          "translation": "Do sự gia tăng đột biến về lưu lượng truy cập trang web, đội ngũ CNTT đang nâng cấp cơ sở hạ tầng máy chủ ngay lúc này."
+        },
+        {
+          "id": "q_verb_tense_050",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Perfect)",
+          "difficulty_level": "Medium",
+          "question_text": "Many users _____ that the daily English speaking videos on TikTok help them maintain their learning habit.",
+          "options": [
+            { "key": "A", "text": "report" },
+            { "key": "B", "text": "are reporting" },
+            { "key": "C", "text": "have reported" },
+            { "key": "D", "text": "will report" }
+          ],
+          "correct_answer": "C",
+          "hint": "Mặc dù không có trạng từ thời gian rõ ràng, nhưng việc báo cáo phản hồi là một hành động bắt đầu trong quá khứ và những báo cáo đó vẫn còn giá trị đến hiện tại.",
+          "explanation": "Chính xác. Thì hiện tại hoàn thành 'have reported' nhấn mạnh vào kết quả, thành tựu hoặc trải nghiệm thu thập được cho tới thời điểm hiện tại.",
+          "translation": "Nhiều người dùng đã báo cáo rằng các video nói tiếng Anh hàng ngày trên TikTok giúp họ duy trì thói quen học tập."
+        },
+        {
+          "id": "q_verb_tense_051",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Future Perfect)",
+          "difficulty_level": "Hard",
+          "question_text": "By the time the national exam begins, high school students using EduKit _____ over 500 hours of collective study time.",
+          "options": [
+            { "key": "A", "text": "log" },
+            { "key": "B", "text": "logged" },
+            { "key": "C", "text": "will have logged" },
+            { "key": "D", "text": "are logging" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cấu trúc 'By the time + hiện tại đơn' (Tính đến lúc...) yêu cầu mệnh đề chính dùng thì tương lai hoàn thành.",
+          "explanation": "Chính xác. Thì tương lai hoàn thành 'will have logged' diễn tả việc tích lũy đủ 500 giờ học sẽ hoàn tất tính đến thời điểm kỳ thi bắt đầu trong tương lai.",
+          "translation": "Tính đến lúc kỳ thi quốc gia bắt đầu, các học sinh trung học sử dụng EduKit sẽ ghi nhận được hơn 500 giờ học tập tập thể."
+        },
+        {
+          "id": "q_verb_tense_052",
+          "part": 5,
+          "grammar_topic": "Passive Voice (Present Simple)",
+          "difficulty_level": "Medium",
+          "question_text": "Currently, all premium Happy Box orders _____ within 24 hours of payment confirmation.",
+          "options": [
+            { "key": "A", "text": "process" },
+            { "key": "B", "text": "are processing" },
+            { "key": "C", "text": "are processed" },
+            { "key": "D", "text": "processed" }
+          ],
+          "correct_answer": "C",
+          "hint": "Chủ ngữ 'orders' (đơn hàng) là vật, không thể tự xử lý. Việc xử lý là một quy trình thường xuyên.",
+          "explanation": "Chính xác. Thể bị động của thì hiện tại đơn 'are processed' được dùng để chỉ quy trình xử lý đơn hàng diễn ra thường xuyên như một quy định của công ty.",
+          "translation": "Hiện tại, tất cả các đơn hàng Happy Box cao cấp được xử lý trong vòng 24 giờ sau khi xác nhận thanh toán."
+        },
+        {
+          "id": "q_verb_tense_053",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Past Continuous)",
+          "difficulty_level": "Easy",
+          "question_text": "The creator _____ her daily English speaking video when her phone ran out of battery.",
+          "options": [
+            { "key": "A", "text": "records" },
+            { "key": "B", "text": "was recording" },
+            { "key": "C", "text": "has recorded" },
+            { "key": "D", "text": "is recording" }
+          ],
+          "correct_answer": "B",
+          "hint": "Hành động đang diễn ra trong quá khứ (đang quay) thì bị một hành động khác cắt ngang (hết pin - ran out).",
+          "explanation": "Chính xác. Thì quá khứ tiếp diễn 'was recording' diễn tả một hành động đang dang dở tại một thời điểm trong quá khứ.",
+          "translation": "Nhà sáng tạo đang quay video nói tiếng Anh hàng ngày thì điện thoại của cô ấy hết pin."
+        },
+        {
+          "id": "q_verb_tense_054",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Perfect)",
+          "difficulty_level": "Medium",
+          "question_text": "Since January, the development team _____ three major updates to the mobile timekeeping application.",
+          "options": [
+            { "key": "A", "text": "releases" },
+            { "key": "B", "text": "released" },
+            { "key": "C", "text": "will release" },
+            { "key": "D", "text": "has released" }
+          ],
+          "correct_answer": "D",
+          "hint": "Giới từ 'Since' + mốc thời gian trong quá khứ là dấu hiệu của một hành động đã diễn ra và có thể tiếp tục lặp lại đến hiện tại.",
+          "explanation": "Chính xác. Thì hiện tại hoàn thành 'has released' (đã phát hành) nhấn mạnh vào số lượng thành tựu (ba bản cập nhật) đạt được tính đến hiện tại.",
+          "translation": "Kể từ tháng Một, nhóm phát triển đã phát hành ba bản cập nhật lớn cho ứng dụng chấm công di động."
+        },
+        {
+          "id": "q_verb_tense_055",
+          "part": 5,
+          "grammar_topic": "Passive Voice (Past Simple)",
+          "difficulty_level": "Medium",
+          "question_text": "The school leaderboard on the EduKit app _____ unexpectedly last night due to a server maintenance issue.",
+          "options": [
+            { "key": "A", "text": "reset" },
+            { "key": "B", "text": "was reset" },
+            { "key": "C", "text": "has reset" },
+            { "key": "D", "text": "resets" }
+          ],
+          "correct_answer": "B",
+          "hint": "Chủ ngữ 'leaderboard' (bảng xếp hạng) bị tác động bởi sự cố máy chủ. Thời gian là 'last night'. Chú ý động từ bất quy tắc: reset - reset - reset.",
+          "explanation": "Chính xác. Thể bị động của thì quá khứ đơn 'was reset' được dùng vì bảng xếp hạng bị làm cho khởi động lại vào tối hôm qua.",
+          "translation": "Bảng xếp hạng trường học trên ứng dụng EduKit đã bị thiết lập lại một cách bất ngờ vào tối qua do sự cố bảo trì máy chủ."
+        },
+        {
+          "id": "q_verb_tense_056",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Future Continuous)",
+          "difficulty_level": "Medium",
+          "question_text": "This time next week, the warehouse staff _____ hundreds of customized gift boxes for the upcoming corporate event.",
+          "options": [
+            { "key": "A", "text": "will be packing" },
+            { "key": "B", "text": "pack" },
+            { "key": "C", "text": "packed" },
+            { "key": "D", "text": "have packed" }
+          ],
+          "correct_answer": "A",
+          "hint": "Cụm 'This time next week' (giờ này tuần sau) chỉ ra một hành động đang tiếp diễn tại một thời điểm chính xác trong tương lai.",
+          "explanation": "Chính xác. Thì tương lai tiếp diễn 'will be packing' được sử dụng để diễn tả việc đang đóng gói hàng hóa sẽ xảy ra vào thời điểm đó.",
+          "translation": "Giờ này tuần sau, nhân viên kho sẽ đang đóng gói hàng trăm hộp quà tặng tùy chỉnh cho sự kiện doanh nghiệp sắp tới."
+        },
+        {
+          "id": "q_verb_tense_057",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Continuous)",
+          "difficulty_level": "Easy",
+          "question_text": "The company _____ its market reach by offering the PrepMaster app to language schools across the country.",
+          "options": [
+            { "key": "A", "text": "expand" },
+            { "key": "B", "text": "is expanding" },
+            { "key": "C", "text": "expanded" },
+            { "key": "D", "text": "have expanded" }
+          ],
+          "correct_answer": "B",
+          "hint": "Khi diễn tả một quá trình thay đổi hoặc một dự án đang triển khai ở giai đoạn hiện tại, ta dùng hiện tại tiếp diễn.",
+          "explanation": "Chính xác. Thì hiện tại tiếp diễn 'is expanding' diễn tả một chiến lược mở rộng đang được công ty thực hiện ở thời điểm hiện tại.",
+          "translation": "Công ty đang mở rộng phạm vi tiếp cận thị trường bằng cách cung cấp ứng dụng PrepMaster cho các trường ngoại ngữ trên toàn quốc."
+        },
+        {
+          "id": "q_verb_tense_058",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Past Perfect)",
+          "difficulty_level": "Hard",
+          "question_text": "Before taking the official TOEIC test, the candidate _____ all the practice exams available on the PrepMaster platform.",
+          "options": [
+            { "key": "A", "text": "completes" },
+            { "key": "B", "text": "has completed" },
+            { "key": "C", "text": "had completed" },
+            { "key": "D", "text": "is completing" }
+          ],
+          "correct_answer": "C",
+          "hint": "Liên từ 'Before' chỉ ra hành động học/hoàn thành diễn ra trước một hành động quá khứ khác (việc đi thi - taking).",
+          "explanation": "Chính xác. Thì quá khứ hoàn thành 'had completed' diễn tả hành động đã hoàn tất trọn vẹn trước một sự kiện trong quá khứ.",
+          "translation": "Trước khi làm bài thi TOEIC chính thức, ứng viên đã hoàn thành tất cả các bài thi thử có sẵn trên nền tảng PrepMaster."
+        },
+        {
+          "id": "q_verb_tense_059",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Simple)",
+          "difficulty_level": "Easy",
+          "question_text": "The personnel management website _____ HR managers to generate comprehensive attendance reports with just one click.",
+          "options": [
+            { "key": "A", "text": "allow" },
+            { "key": "B", "text": "allowing" },
+            { "key": "C", "text": "allows" },
+            { "key": "D", "text": "allowed" }
+          ],
+          "correct_answer": "C",
+          "hint": "Nói về chức năng cốt lõi của một trang web hoặc ứng dụng, ta dùng thì hiện tại đơn.",
+          "explanation": "Chính xác. Chủ ngữ 'website' là số ít nên động từ thêm 's' thành 'allows' (cho phép).",
+          "translation": "Trang web quản lý nhân sự cho phép các nhà quản lý nhân sự tạo các báo cáo điểm danh toàn diện chỉ bằng một cú nhấp chuột."
+        },
+        {
+          "id": "q_verb_tense_060",
+          "part": 5,
+          "grammar_topic": "Passive Voice (Future Simple)",
+          "difficulty_level": "Medium",
+          "question_text": "The final results of the daily English speaking challenge _____ on the official TikTok page next Friday.",
+          "options": [
+            { "key": "A", "text": "will announce" },
+            { "key": "B", "text": "announced" },
+            { "key": "C", "text": "will be announced" },
+            { "key": "D", "text": "have announced" }
+          ],
+          "correct_answer": "C",
+          "hint": "Chủ ngữ 'results' (kết quả) không tự công bố được. Dấu hiệu 'next Friday' yêu cầu thì tương lai.",
+          "explanation": "Chính xác. Thể bị động của thì tương lai đơn 'will be announced' chỉ việc kết quả 'sẽ được công bố' vào thời gian tới.",
+          "translation": "Kết quả cuối cùng của thử thách nói tiếng Anh hàng ngày sẽ được công bố trên trang TikTok chính thức vào thứ Sáu tới."
+        },
+        {
+          "id": "q_verb_tense_061",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Perfect Continuous)",
+          "difficulty_level": "Hard",
+          "question_text": "The design team _____ on the new user interface for the Happy Box website since early morning.",
+          "options": [
+            { "key": "A", "text": "is working" },
+            { "key": "B", "text": "works" },
+            { "key": "C", "text": "worked" },
+            { "key": "D", "text": "has been working" }
+          ],
+          "correct_answer": "D",
+          "hint": "Giới từ 'since' + mốc thời gian, kết hợp với một hành động đòi hỏi quá trình liên tục (làm việc) thường dùng thì hiện tại hoàn thành tiếp diễn.",
+          "explanation": "Chính xác. 'Has been working' nhấn mạnh quá trình làm việc liên tục không ngừng nghỉ của nhóm thiết kế từ sáng sớm đến tận bây giờ.",
+          "translation": "Nhóm thiết kế đã và đang làm việc liên tục trên giao diện người dùng mới cho trang web Happy Box kể từ sáng sớm."
+        },
+        {
+          "id": "q_verb_tense_062",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Past Simple)",
+          "difficulty_level": "Medium",
+          "question_text": "When the JLPT N3 examination started, the invigilator _____ all candidates to turn off their mobile phones.",
+          "options": [
+            { "key": "A", "text": "instructs" },
+            { "key": "B", "text": "instructed" },
+            { "key": "C", "text": "is instructing" },
+            { "key": "D", "text": "will instruct" }
+          ],
+          "correct_answer": "B",
+          "hint": "Sự việc xảy ra trong quá khứ (khi kỳ thi bắt đầu - started). Các chuỗi hành động xảy ra liên tiếp trong quá khứ đều dùng thì quá khứ đơn.",
+          "explanation": "Chính xác. Động từ 'instructed' (đã hướng dẫn/yêu cầu) hòa hợp với thì quá khứ đơn của động từ 'started' ở mệnh đề trạng ngữ.",
+          "translation": "Khi kỳ thi JLPT N3 bắt đầu, giám thị đã yêu cầu tất cả các thí sinh tắt điện thoại di động của họ."
+        },
+        {
+          "id": "q_verb_tense_063",
+          "part": 5,
+          "grammar_topic": "Passive Voice (Present Continuous)",
+          "difficulty_level": "Hard",
+          "question_text": "A new feature that ranks schools by total study hours _____ by the EduKit engineering team right now.",
+          "options": [
+            { "key": "A", "text": "is developing" },
+            { "key": "B", "text": "is being developed" },
+            { "key": "C", "text": "develops" },
+            { "key": "D", "text": "has developed" }
+          ],
+          "correct_answer": "B",
+          "hint": "Chủ ngữ là 'A new feature' (tính năng mới) bị tác động bởi nhóm kỹ thuật. Trạng từ 'right now' yêu cầu thì tiếp diễn.",
+          "explanation": "Chính xác. Thể bị động của thì hiện tại tiếp diễn là 'is/are + being + V3/ed'. Tính năng này 'đang được phát triển' ngay lúc này.",
+          "translation": "Một tính năng mới xếp hạng các trường học theo tổng số giờ học đang được nhóm kỹ thuật EduKit phát triển ngay lúc này."
+        },
+        {
+          "id": "q_verb_tense_064",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Simple vs Present Continuous)",
+          "difficulty_level": "Medium",
+          "question_text": "Usually, the timekeeping app logs data instantly, but today it _____ a bit slower due to server upgrades.",
+          "options": [
+            { "key": "A", "text": "run" },
+            { "key": "B", "text": "runs" },
+            { "key": "C", "text": "ran" },
+            { "key": "D", "text": "is running" }
+          ],
+          "correct_answer": "D",
+          "hint": "Mặc dù có thói quen ở hiện tại đơn (Usually), nhưng sự việc 'today' mang tính tạm thời khác với bình thường nên dùng hiện tại tiếp diễn.",
+          "explanation": "Chính xác. Thì hiện tại tiếp diễn 'is running' diễn tả một tình trạng tạm thời (chạy chậm hơn) chỉ xảy ra trong ngày hôm nay.",
+          "translation": "Thông thường, ứng dụng chấm công ghi nhận dữ liệu ngay lập tức, nhưng hôm nay nó đang chạy chậm hơn một chút do việc nâng cấp máy chủ."
+        },
+        {
+          "id": "q_verb_tense_065",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Future Simple)",
+          "difficulty_level": "Easy",
+          "question_text": "If you consistently practice English speaking every day, you _____ a significant improvement in your fluency.",
+          "options": [
+            { "key": "A", "text": "see" },
+            { "key": "B", "text": "saw" },
+            { "key": "C", "text": "have seen" },
+            { "key": "D", "text": "will see" }
+          ],
+          "correct_answer": "D",
+          "hint": "Câu điều kiện loại 1 (If + Hiện tại đơn) diễn tả sự việc có thật/khả năng xảy ra trong tương lai.",
+          "explanation": "Chính xác. Mệnh đề chính của câu điều kiện loại 1 dùng thì tương lai đơn 'will see'.",
+          "translation": "Nếu bạn kiên trì thực hành nói tiếng Anh mỗi ngày, bạn sẽ thấy sự cải thiện đáng kể về sự trôi chảy của mình."
+        },
+        {
+          "id": "q_verb_tense_066",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Perfect)",
+          "difficulty_level": "Medium",
+          "question_text": "So far, over 10,000 corporate clients _____ our personnel management system to streamline their operations.",
+          "options": [
+            { "key": "A", "text": "adopted" },
+            { "key": "B", "text": "have adopted" },
+            { "key": "C", "text": "are adopting" },
+            { "key": "D", "text": "will adopt" }
+          ],
+          "correct_answer": "B",
+          "hint": "Cụm từ 'So far' (Cho đến nay) là dấu hiệu nhận biết cực kỳ phổ biến của thì hiện tại hoàn thành.",
+          "explanation": "Chính xác. Thì hiện tại hoàn thành 'have adopted' chỉ kết quả tính từ quá khứ kéo dài đến hiện tại (cho đến nay đã có hơn 10.000 khách hàng).",
+          "translation": "Cho đến nay, hơn 10.000 khách hàng doanh nghiệp đã áp dụng hệ thống quản lý nhân sự của chúng tôi để hợp lý hóa hoạt động của họ."
+        },
+        {
+          "id": "q_verb_tense_067",
+          "part": 5,
+          "grammar_topic": "Passive Voice (Past Perfect)",
+          "difficulty_level": "Hard",
+          "question_text": "By the time the new feature was announced, all the underlying software bugs _____ by the developers.",
+          "options": [
+            { "key": "A", "text": "had fixed" },
+            { "key": "B", "text": "were fixing" },
+            { "key": "C", "text": "have been fixed" },
+            { "key": "D", "text": "had been fixed" }
+          ],
+          "correct_answer": "D",
+          "hint": "Việc sửa lỗi (fix bugs) diễn ra và hoàn thành TRƯỚC khi tính năng được công bố (was announced). 'Bugs' không tự sửa nên phải dùng bị động.",
+          "explanation": "Chính xác. Thể bị động của thì quá khứ hoàn thành 'had been fixed' (đã được sửa xong) mô tả hành động bị động hoàn tất trước một mốc quá khứ khác.",
+          "translation": "Vào lúc tính năng mới được công bố, tất cả các lỗi phần mềm tiềm ẩn đã được các lập trình viên sửa xong."
+        },
+        {
+          "id": "q_verb_tense_068",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Past Simple)",
+          "difficulty_level": "Easy",
+          "question_text": "Last Friday, the Happy Box team _____ a specialized workshop on eco-friendly packaging materials.",
+          "options": [
+            { "key": "A", "text": "attended" },
+            { "key": "B", "text": "attends" },
+            { "key": "C", "text": "has attended" },
+            { "key": "D", "text": "is attending" }
+          ],
+          "correct_answer": "A",
+          "hint": "Mốc thời gian 'Last Friday' đòi hỏi thì quá khứ đơn.",
+          "explanation": "Chính xác. Động từ 'attended' (đã tham dự) được chia ở quá khứ đơn phù hợp với thời gian đã kết thúc.",
+          "translation": "Thứ Sáu tuần trước, đội ngũ Happy Box đã tham dự một hội thảo chuyên đề về vật liệu đóng gói thân thiện với môi trường."
+        },
+        {
+          "id": "q_verb_tense_069",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Future Perfect)",
+          "difficulty_level": "Hard",
+          "question_text": "By the time you finish the two-month TOEIC sprint, you _____ a solid foundation in essential grammar and vocabulary.",
+          "options": [
+            { "key": "A", "text": "build" },
+            { "key": "B", "text": "built" },
+            { "key": "C", "text": "will have built" },
+            { "key": "D", "text": "are building" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cấu trúc 'By the time + S + V(hiện tại)' ở mệnh đề phụ đòi hỏi mệnh đề chính sử dụng thì tương lai hoàn thành.",
+          "explanation": "Chính xác. Thì tương lai hoàn thành 'will have built' diễn tả việc bạn sẽ hoàn tất quá trình xây dựng nền tảng ngữ pháp/từ vựng tính đến lúc đợt chạy nước rút 2 tháng kết thúc.",
+          "translation": "Tính đến lúc bạn hoàn thành đợt chạy nước rút TOEIC 2 tháng, bạn sẽ (đã) xây dựng được một nền tảng vững chắc về ngữ pháp và từ vựng thiết yếu."
+        },
+        {
+          "id": "q_verb_tense_070",
+          "part": 5,
+          "grammar_topic": "Passive Voice (Present Perfect)",
+          "difficulty_level": "Medium",
+          "question_text": "Several new short video segments about daily conversation _____ to the TikTok series recently.",
+          "options": [
+            { "key": "A", "text": "have added" },
+            { "key": "B", "text": "have been added" },
+            { "key": "C", "text": "added" },
+            { "key": "D", "text": "was added" }
+          ],
+          "correct_answer": "B",
+          "hint": "Trạng từ 'recently' yêu cầu hiện tại hoàn thành. Chủ ngữ 'segments' (các phân đoạn) là vật, chịu tác động của hành động thêm vào.",
+          "explanation": "Chính xác. Thể bị động của thì hiện tại hoàn thành 'have been added' phù hợp với chủ ngữ số nhiều (segments).",
+          "translation": "Gần đây, một số đoạn video ngắn mới về hội thoại hàng ngày đã được thêm vào loạt video trên TikTok."
+        },
+        {
+          "id": "q_verb_tense_071",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Simple)",
+          "difficulty_level": "Easy",
+          "question_text": "Every morning, the automated system _____ a daily attendance report to all department heads.",
+          "options": [
+            { "key": "A", "text": "generate" },
+            { "key": "B", "text": "generated" },
+            { "key": "C", "text": "is generating" },
+            { "key": "D", "text": "generates" }
+          ],
+          "correct_answer": "D",
+          "hint": "Cụm 'Every morning' (mỗi sáng) chỉ một hành động diễn ra lặp đi lặp lại như một quy luật.",
+          "explanation": "Chính xác. Thì hiện tại đơn được dùng. Chủ ngữ 'the automated system' là ngôi thứ ba số ít, nên động từ thêm 's' thành 'generates'.",
+          "translation": "Mỗi buổi sáng, hệ thống tự động tạo một báo cáo điểm danh hàng ngày gửi cho tất cả các trưởng phòng."
+        },
+        {
+          "id": "q_verb_tense_072",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Past Continuous)",
+          "difficulty_level": "Medium",
+          "question_text": "The marketing team _____ the promotional plan for the gift boxes when the CEO unexpectedly walked in.",
+          "options": [
+            { "key": "A", "text": "discusses" },
+            { "key": "B", "text": "discussed" },
+            { "key": "C", "text": "were discussing" },
+            { "key": "D", "text": "have discussed" }
+          ],
+          "correct_answer": "C",
+          "hint": "Một hành động đang diễn ra trong quá khứ (were discussing) bị một hành động khác cắt ngang (walked in). Lớp nghĩa từ 'team' trong Anh-Mỹ có thể đi với động từ số nhiều hoặc số ít tùy ngữ cảnh.",
+          "explanation": "Chính xác. Thì quá khứ tiếp diễn được dùng để mô tả cảnh tượng đang họp bàn khi giám đốc bước vào. Tập thể nhóm (team) ở đây hoạt động như các thành viên nên dùng 'were discussing'.",
+          "translation": "Nhóm tiếp thị đang thảo luận về kế hoạch khuyến mãi cho các hộp quà tặng thì giám đốc điều hành bất ngờ bước vào."
+        },
+        {
+          "id": "q_verb_tense_073",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Future Continuous)",
+          "difficulty_level": "Hard",
+          "question_text": "Please do not call the developer at 9 AM tomorrow; he _____ an important code review meeting.",
+          "options": [
+            { "key": "A", "text": "will attend" },
+            { "key": "B", "text": "will be attending" },
+            { "key": "C", "text": "attends" },
+            { "key": "D", "text": "has attended" }
+          ],
+          "correct_answer": "B",
+          "hint": "Thời điểm '9 AM tomorrow' là một lúc xác định trong tương lai, báo hiệu một hành động sẽ đang dở dang tại lúc đó.",
+          "explanation": "Chính xác. Thì tương lai tiếp diễn 'will be attending' diễn tả việc người lập trình viên sẽ đang bận tham gia cuộc họp vào đúng 9 giờ sáng mai.",
+          "translation": "Vui lòng không gọi cho lập trình viên vào lúc 9 giờ sáng ngày mai; anh ấy sẽ đang tham dự một cuộc họp đánh giá mã nguồn quan trọng."
+        },
+        {
+          "id": "q_verb_tense_074",
+          "part": 5,
+          "grammar_topic": "Passive Voice (Present Continuous)",
+          "difficulty_level": "Medium",
+          "question_text": "The bugs reported in the PrepMaster application _____ by our technical support team as we speak.",
+          "options": [
+            { "key": "A", "text": "investigate" },
+            { "key": "B", "text": "are investigating" },
+            { "key": "C", "text": "are being investigated" },
+            { "key": "D", "text": "investigated" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cụm 'as we speak' mang nghĩa là 'ngay lúc chúng ta đang nói' = 'right now'. Các lỗi (bugs) phải 'được điều tra'.",
+          "explanation": "Chính xác. Thể bị động hiện tại tiếp diễn 'are being investigated' được dùng để chỉ quá trình điều tra đang diễn ra ngay lúc này bởi bộ phận kỹ thuật.",
+          "translation": "Các lỗi được báo cáo trong ứng dụng PrepMaster đang được nhóm hỗ trợ kỹ thuật của chúng tôi điều tra ngay lúc này."
+        },
+        {
+          "id": "q_verb_tense_075",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Past Perfect vs Past Simple)",
+          "difficulty_level": "Hard",
+          "question_text": "She _____ for the TOEIC exam for three months before she finally achieved her target score of 800.",
+          "options": [
+            { "key": "A", "text": "studies" },
+            { "key": "B", "text": "is studying" },
+            { "key": "C", "text": "has studied" },
+            { "key": "D", "text": "had studied" }
+          ],
+          "correct_answer": "D",
+          "hint": "Quá trình ôn tập (study) kéo dài 3 tháng và ĐÃ KẾT THÚC trước khi cô ấy đạt được điểm số ở quá khứ (achieved).",
+          "explanation": "Chính xác. Thì quá khứ hoàn thành 'had studied' nhấn mạnh quá trình 3 tháng học tập đã hoàn tất trọn vẹn trước khi có kết quả điểm số trong quá khứ.",
+          "translation": "Cô ấy đã ôn thi TOEIC được ba tháng trước khi cuối cùng đạt được số điểm mục tiêu là 800."
+        },
+        {
+          "id": "q_verb_tense_076",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Continuous)",
+          "difficulty_level": "Medium",
+          "question_text": "Every day she posts a short video, but today the creator _____ a special one-hour live session on TikTok.",
+          "options": [
+            { "key": "A", "text": "host" },
+            { "key": "B", "text": "hosted" },
+            { "key": "C", "text": "is hosting" },
+            { "key": "D", "text": "hosts" }
+          ],
+          "correct_answer": "C",
+          "hint": "Mẹo thời gian: Cấu trúc đối lập 'Every day... but today...' báo hiệu sự thay đổi từ thói quen (hiện tại đơn) sang một hành động mang tính tạm thời ngay lúc này (hiện tại tiếp diễn).",
+          "explanation": "Chính xác. Thì hiện tại tiếp diễn 'is hosting' mô tả một hành động tạm thời, khác biệt với thói quen hàng ngày.",
+          "translation": "Mỗi ngày cô ấy đăng một video ngắn, nhưng hôm nay nhà sáng tạo đang tổ chức một phiên phát trực tiếp đặc biệt dài một giờ trên TikTok."
+        },
+        {
+          "id": "q_verb_tense_077",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Past Simple)",
+          "difficulty_level": "Easy",
+          "question_text": "Last year, the Happy Box company _____ a new line of premium corporate gifts.",
+          "options": [
+            { "key": "A", "text": "launches" },
+            { "key": "B", "text": "launched" },
+            { "key": "C", "text": "has launched" },
+            { "key": "D", "text": "is launching" }
+          ],
+          "correct_answer": "B",
+          "hint": "Mẹo thời gian: 'Last year' (Năm ngoái) là dấu hiệu chốt hạ của thì Quá khứ đơn. Không dùng thì Hoàn thành với thời điểm xác định trong quá khứ.",
+          "explanation": "Chính xác. Động từ 'launched' (đã ra mắt) được chia ở quá khứ đơn phù hợp với thời điểm đã kết thúc 'last year'.",
+          "translation": "Năm ngoái, công ty Happy Box đã ra mắt một dòng quà tặng doanh nghiệp cao cấp mới."
+        },
+        {
+          "id": "q_verb_tense_078",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Future Perfect)",
+          "difficulty_level": "Hard",
+          "question_text": "By the time the test date arrives, users of the PrepMaster app _____ all the mock exams.",
+          "options": [
+            { "key": "A", "text": "complete" },
+            { "key": "B", "text": "completed" },
+            { "key": "C", "text": "will have completed" },
+            { "key": "D", "text": "have completed" }
+          ],
+          "correct_answer": "C",
+          "hint": "Mẹo thời gian: 'By the time + hiện tại đơn' luôn đi kèm với thì Tương lai hoàn thành ở mệnh đề chính.",
+          "explanation": "Chính xác. 'Will have completed' diễn tả việc hoàn thành tất cả bài thi thử sẽ xong xuôi trước khi ngày thi chính thức đến.",
+          "translation": "Tính đến lúc ngày thi đến, người dùng ứng dụng PrepMaster sẽ hoàn thành tất cả các bài thi thử."
+        },
+        {
+          "id": "q_verb_tense_079",
+          "part": 5,
+          "grammar_topic": "Passive Voice (Future Simple)",
+          "difficulty_level": "Medium",
+          "question_text": "The updated timekeeping policies _____ to all departments starting next Monday.",
+          "options": [
+            { "key": "A", "text": "will implement" },
+            { "key": "B", "text": "are implementing" },
+            { "key": "C", "text": "implemented" },
+            { "key": "D", "text": "will be implemented" }
+          ],
+          "correct_answer": "D",
+          "hint": "Mẹo nhận diện: 'policies' (chính sách) là vật -> bị động. 'Next Monday' -> tương lai. Chọn Bị động Tương lai đơn.",
+          "explanation": "Chính xác. Thể bị động của tương lai đơn 'will be implemented' mang nghĩa 'sẽ được triển khai/áp dụng'.",
+          "translation": "Các chính sách chấm công cập nhật sẽ được triển khai cho tất cả các phòng ban bắt đầu từ thứ Hai tuần tới."
+        },
+        {
+          "id": "q_verb_tense_080",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Perfect Continuous)",
+          "difficulty_level": "Hard",
+          "question_text": "The technical team _____ bugs in the EduKit system all morning to ensure a smooth user experience.",
+          "options": [
+            { "key": "A", "text": "fixes" },
+            { "key": "B", "text": "is fixing" },
+            { "key": "C", "text": "has been fixing" },
+            { "key": "D", "text": "fixed" }
+          ],
+          "correct_answer": "C",
+          "hint": "Mẹo thời gian: Cụm 'all morning' / 'all day' nhấn mạnh sự miệt mài, liên tục từ quá khứ đến hiện tại -> Dùng Hiện tại hoàn thành tiếp diễn.",
+          "explanation": "Chính xác. 'Has been fixing' nhấn mạnh quá trình sửa lỗi diễn ra liên tục cả buổi sáng và vẫn đang tiếp diễn.",
+          "translation": "Nhóm kỹ thuật đã và đang sửa lỗi trong hệ thống EduKit cả buổi sáng để đảm bảo trải nghiệm người dùng mượt mà."
+        },
+        {
+          "id": "q_verb_tense_081",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Past Continuous)",
+          "difficulty_level": "Medium",
+          "question_text": "The marketing team _____ the promotional campaign when the internet connection suddenly dropped.",
+          "options": [
+            { "key": "A", "text": "discusses" },
+            { "key": "B", "text": "has discussed" },
+            { "key": "C", "text": "was discussing" },
+            { "key": "D", "text": "discussed" }
+          ],
+          "correct_answer": "C",
+          "hint": "Mẹo thời gian: Cấu trúc 'when + Quá khứ đơn (dropped)' cắt ngang một hành động đang dang dở. Hành động đang dang dở dùng Quá khứ tiếp diễn.",
+          "explanation": "Chính xác. 'Was discussing' chỉ hành động đang diễn ra (đang thảo luận) thì bị sự cố mất mạng cắt ngang.",
+          "translation": "Nhóm tiếp thị đang thảo luận về chiến dịch khuyến mãi thì kết nối internet đột nhiên bị ngắt."
+        },
+        {
+          "id": "q_verb_tense_082",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Future Continuous)",
+          "difficulty_level": "Medium",
+          "question_text": "At this time tomorrow, the high school students _____ the national mock exam on the EduKit platform.",
+          "options": [
+            { "key": "A", "text": "will be taking" },
+            { "key": "B", "text": "will take" },
+            { "key": "C", "text": "take" },
+            { "key": "D", "text": "are taking" }
+          ],
+          "correct_answer": "A",
+          "hint": "Mẹo thời gian: 'At this time tomorrow' (Giờ này ngày mai) khoanh vùng một mốc chính xác ở tương lai -> Tương lai tiếp diễn.",
+          "explanation": "Chính xác. Thì tương lai tiếp diễn 'will be taking' mô tả trạng thái đang làm bài thi tại một thời điểm xác định ở ngày mai.",
+          "translation": "Vào giờ này ngày mai, các học sinh trung học sẽ đang làm bài thi thử quốc gia trên nền tảng EduKit."
+        },
+        {
+          "id": "q_verb_tense_083",
+          "part": 5,
+          "grammar_topic": "Passive Voice (Present Perfect)",
+          "difficulty_level": "Hard",
+          "question_text": "Several new features, including a study leaderboard, _____ to the application recently.",
+          "options": [
+            { "key": "A", "text": "have added" },
+            { "key": "B", "text": "are adding" },
+            { "key": "C", "text": "added" },
+            { "key": "D", "text": "have been added" }
+          ],
+          "correct_answer": "D",
+          "hint": "Mẹo nhận diện: 'recently' (gần đây) = Hiện tại hoàn thành. 'Features' là vật = Bị động -> Bị động Hiện tại hoàn thành.",
+          "explanation": "Chính xác. Thể bị động của hiện tại hoàn thành 'have been added' (đã được thêm vào) hoàn toàn phù hợp với chủ ngữ số nhiều.",
+          "translation": "Gần đây, một số tính năng mới, bao gồm bảng xếp hạng học tập, đã được thêm vào ứng dụng."
+        },
+        {
+          "id": "q_verb_tense_084",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Simple)",
+          "difficulty_level": "Easy",
+          "question_text": "The weekly English speaking live stream _____ exactly at 8 PM on Fridays.",
+          "options": [
+            { "key": "A", "text": "start" },
+            { "key": "B", "text": "starts" },
+            { "key": "C", "text": "is starting" },
+            { "key": "D", "text": "started" }
+          ],
+          "correct_answer": "B",
+          "hint": "Mẹo thời gian: Các từ như 'weekly' (hàng tuần) và 'on Fridays' (vào các ngày thứ Sáu) chỉ một lịch trình cố định như lịch tàu xe -> Hiện tại đơn.",
+          "explanation": "Chính xác. Chủ ngữ số ít 'live stream' đi kèm động từ hiện tại đơn thêm 's' thành 'starts'.",
+          "translation": "Chương trình phát trực tiếp nói tiếng Anh hàng tuần bắt đầu chính xác vào lúc 8 giờ tối các ngày thứ Sáu."
+        },
+        {
+          "id": "q_verb_tense_085",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Past Perfect)",
+          "difficulty_level": "Medium",
+          "question_text": "The timekeeping system _____ before the IT team could intervene to save the data.",
+          "options": [
+            { "key": "A", "text": "has crashed" },
+            { "key": "B", "text": "crashes" },
+            { "key": "C", "text": "had crashed" },
+            { "key": "D", "text": "was crashing" }
+          ],
+          "correct_answer": "C",
+          "hint": "Mẹo thời gian: 'before + Quá khứ đơn (could intervene)' chỉ ra rằng sự việc sập hệ thống xảy ra TRƯỚC một hành động quá khứ -> Quá khứ hoàn thành.",
+          "explanation": "Chính xác. Quá khứ hoàn thành 'had crashed' mô tả hành động sập hệ thống đã hoàn tất trước khi đội IT kịp can thiệp.",
+          "translation": "Hệ thống chấm công đã bị sập trước khi đội IT có thể can thiệp để lưu lại dữ liệu."
+        },
+        {
+          "id": "q_verb_tense_086",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Perfect)",
+          "difficulty_level": "Medium",
+          "question_text": "Many students _____ their kanji reading skills significantly since they started using PrepMaster.",
+          "options": [
+            { "key": "A", "text": "improve" },
+            { "key": "B", "text": "improved" },
+            { "key": "C", "text": "have improved" },
+            { "key": "D", "text": "will improve" }
+          ],
+          "correct_answer": "C",
+          "hint": "Mẹo thời gian: 'since + mệnh đề quá khứ' là công thức vàng của thì Hiện tại hoàn thành ở mệnh đề chính.",
+          "explanation": "Chính xác. Thì hiện tại hoàn thành 'have improved' miêu tả quá trình tiến bộ diễn ra từ lúc bắt đầu dùng app cho đến nay.",
+          "translation": "Nhiều học sinh đã cải thiện kỹ năng đọc chữ Hán của họ một cách đáng kể kể từ khi họ bắt đầu sử dụng PrepMaster."
+        },
+        {
+          "id": "q_verb_tense_087",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Future Simple)",
+          "difficulty_level": "Easy",
+          "question_text": "If the demand for the new gift boxes increases, we _____ our packaging facility next quarter.",
+          "options": [
+            { "key": "A", "text": "expand" },
+            { "key": "B", "text": "expanded" },
+            { "key": "C", "text": "have expanded" },
+            { "key": "D", "text": "will expand" }
+          ],
+          "correct_answer": "D",
+          "hint": "Mẹo nhận diện: Câu điều kiện loại 1 'If + Hiện tại đơn (increases)'. Mệnh đề chính phải dùng Tương lai đơn.",
+          "explanation": "Chính xác. 'Will expand' (sẽ mở rộng) hoàn thiện cấu trúc câu điều kiện diễn tả khả năng ở tương lai.",
+          "translation": "Nếu nhu cầu về các hộp quà tặng mới tăng lên, chúng tôi sẽ mở rộng cơ sở đóng gói của mình vào quý tới."
+        },
+        {
+          "id": "q_verb_tense_088",
+          "part": 5,
+          "grammar_topic": "Passive Voice (Past Simple)",
+          "difficulty_level": "Medium",
+          "question_text": "The new feature allowing students to study together online _____ last night.",
+          "options": [
+            { "key": "A", "text": "was launched" },
+            { "key": "B", "text": "launched" },
+            { "key": "C", "text": "has launched" },
+            { "key": "D", "text": "is launched" }
+          ],
+          "correct_answer": "A",
+          "hint": "Mẹo nhận diện: 'last night' -> Quá khứ đơn. 'feature' (tính năng) không tự ra mắt mà phải 'được ra mắt' -> Bị động Quá khứ đơn.",
+          "explanation": "Chính xác. Thể bị động 'was launched' là cấu trúc duy nhất vừa mang nghĩa bị động vừa đúng thì quá khứ.",
+          "translation": "Tính năng mới cho phép học sinh học trực tuyến cùng nhau đã được ra mắt vào tối qua."
+        },
+        {
+          "id": "q_verb_tense_089",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Continuous)",
+          "difficulty_level": "Easy",
+          "question_text": "The HR manager is currently busy; she _____ the monthly attendance records of all employees.",
+          "options": [
+            { "key": "A", "text": "review" },
+            { "key": "B", "text": "reviewed" },
+            { "key": "C", "text": "is reviewing" },
+            { "key": "D", "text": "has reviewed" }
+          ],
+          "correct_answer": "C",
+          "hint": "Mẹo thời gian: Từ 'currently' (hiện tại) và bối cảnh 'đang bận' (is busy) bắt buộc hành động theo sau phải dùng Hiện tại tiếp diễn.",
+          "explanation": "Chính xác. 'Is reviewing' diễn tả hành động đang xảy ra ngay lúc nói, giải thích lý do tại sao người quản lý đang bận.",
+          "translation": "Người quản lý nhân sự hiện đang bận; cô ấy đang xem xét các hồ sơ điểm danh hàng tháng của tất cả nhân viên."
+        },
+        {
+          "id": "q_verb_tense_090",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Future Perfect)",
+          "difficulty_level": "Hard",
+          "question_text": "By the end of this month, the creator _____ 30 daily speaking videos to her TikTok channel.",
+          "options": [
+            { "key": "A", "text": "will upload" },
+            { "key": "B", "text": "uploads" },
+            { "key": "C", "text": "will have uploaded" },
+            { "key": "D", "text": "uploaded" }
+          ],
+          "correct_answer": "C",
+          "hint": "Mẹo thời gian: Cấu trúc 'By the end of...' (Tính đến cuối...) luôn là dấu hiệu 'mời gọi' thì Tương lai hoàn thành.",
+          "explanation": "Chính xác. Thì tương lai hoàn thành 'will have uploaded' diễn đạt việc hoàn tất chỉ tiêu 30 video khi đến mốc cuối tháng.",
+          "translation": "Tính đến cuối tháng này, nhà sáng tạo sẽ hoàn tất việc tải lên 30 video luyện nói hàng ngày lên kênh TikTok của cô ấy."
+        },
+        {
+          "id": "q_verb_tense_091",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Past Simple)",
+          "difficulty_level": "Easy",
+          "question_text": "Yesterday, the automated system _____ an exam reminder to all candidates registered for the JLPT N3.",
+          "options": [
+            { "key": "A", "text": "send" },
+            { "key": "B", "text": "sending" },
+            { "key": "C", "text": "has sent" },
+            { "key": "D", "text": "sent" }
+          ],
+          "correct_answer": "D",
+          "hint": "Mẹo thời gian: Từ 'Yesterday' (Hôm qua) nằm chễm chệ đầu câu, bạn chỉ việc chọn động từ dạng V2/ed.",
+          "explanation": "Chính xác. 'Sent' là dạng quá khứ bất quy tắc của động từ 'send'.",
+          "translation": "Hôm qua, hệ thống tự động đã gửi một lời nhắc nhở kỳ thi đến tất cả các thí sinh đăng ký thi JLPT N3."
+        },
+        {
+          "id": "q_verb_tense_092",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Perfect Continuous)",
+          "difficulty_level": "Medium",
+          "question_text": "We _____ eco-friendly materials for our Happy Box packaging lately to reduce our carbon footprint.",
+          "options": [
+            { "key": "A", "text": "have been sourcing" },
+            { "key": "B", "text": "are sourcing" },
+            { "key": "C", "text": "source" },
+            { "key": "D", "text": "sourced" }
+          ],
+          "correct_answer": "A",
+          "hint": "Mẹo thời gian: Trạng từ 'lately' (dạo gần đây) khi đi với một hành động mang tính quá trình (tìm nguồn cung) thường dùng Hiện tại hoàn thành tiếp diễn.",
+          "explanation": "Chính xác. 'Have been sourcing' mô tả một nỗ lực tìm kiếm đang diễn ra liên tục dạo gần đây.",
+          "translation": "Dạo gần đây, chúng tôi đã và đang tìm kiếm các vật liệu thân thiện với môi trường cho bao bì Happy Box để giảm lượng khí thải carbon."
+        },
+        {
+          "id": "q_verb_tense_093",
+          "part": 5,
+          "grammar_topic": "Passive Voice (Present Continuous)",
+          "difficulty_level": "Hard",
+          "question_text": "The TOEIC reading module in the PrepMaster app _____ by the content team right now.",
+          "options": [
+            { "key": "A", "text": "is updating" },
+            { "key": "B", "text": "updates" },
+            { "key": "C", "text": "is being updated" },
+            { "key": "D", "text": "has updated" }
+          ],
+          "correct_answer": "C",
+          "hint": "Mẹo nhận diện: 'right now' -> Hiện tại tiếp diễn. 'module' là vật -> Bị động. Chọn công thức Bị động Hiện tại tiếp diễn (is/are + being + V3).",
+          "explanation": "Chính xác. Thể bị động 'is being updated' chỉ hành động 'đang được cập nhật' ngay tại thời điểm nói.",
+          "translation": "Mô-đun đọc hiểu TOEIC trong ứng dụng PrepMaster đang được đội ngũ nội dung cập nhật ngay lúc này."
+        },
+        {
+          "id": "q_verb_tense_094",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Future Continuous)",
+          "difficulty_level": "Medium",
+          "question_text": "Next week, the developers _____ the new geolocation feature for the timekeeping app.",
+          "options": [
+            { "key": "A", "text": "tested" },
+            { "key": "B", "text": "have tested" },
+            { "key": "C", "text": "will be testing" },
+            { "key": "D", "text": "test" }
+          ],
+          "correct_answer": "C",
+          "hint": "Mẹo thời gian: 'Next week' (tuần tới) có thể dùng Tương lai đơn (will test), nhưng trong các lựa chọn chỉ có Tương lai tiếp diễn là hợp lý về thì (tense).",
+          "explanation": "Chính xác. 'Will be testing' dự báo một sự việc sẽ đang diễn ra, nằm trong lịch trình công việc của tuần tới.",
+          "translation": "Tuần tới, các lập trình viên sẽ tiến hành kiểm thử tính năng định vị vị trí mới cho ứng dụng chấm công."
+        },
+        {
+          "id": "q_verb_tense_095",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Past Perfect)",
+          "difficulty_level": "Medium",
+          "question_text": "The EduKit server _____ its capacity long before we finally upgraded the hardware.",
+          "options": [
+            { "key": "A", "text": "reaches" },
+            { "key": "B", "text": "had reached" },
+            { "key": "C", "text": "has reached" },
+            { "key": "D", "text": "will reach" }
+          ],
+          "correct_answer": "B",
+          "hint": "Mẹo thời gian: 'before + Quá khứ đơn (upgraded)'. Hành động xảy ra trước quá khứ đơn luôn là Quá khứ hoàn thành.",
+          "explanation": "Chính xác. 'Had reached' mô tả việc chạm ngưỡng dung lượng đã xảy ra từ rất lâu trước khi hành động nâng cấp diễn ra.",
+          "translation": "Máy chủ EduKit đã đạt đến giới hạn dung lượng từ rất lâu trước khi chúng tôi chính thức nâng cấp phần cứng."
+        },
+        {
+          "id": "q_verb_tense_096",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Simple)",
+          "difficulty_level": "Easy",
+          "question_text": "The app notification consistently _____ users to practice their English pronunciation every day.",
+          "options": [
+            { "key": "A", "text": "remind" },
+            { "key": "B", "text": "reminding" },
+            { "key": "C", "text": "reminded" },
+            { "key": "D", "text": "reminds" }
+          ],
+          "correct_answer": "D",
+          "hint": "Mẹo thời gian: 'consistently' (liên tục/đều đặn) và 'every day' (mỗi ngày) yêu cầu thì Hiện tại đơn cho một thói quen/lịch trình.",
+          "explanation": "Chính xác. Chủ ngữ 'The app notification' là số ít nên động từ 'reminds' thêm 's'.",
+          "translation": "Thông báo của ứng dụng liên tục nhắc nhở người dùng thực hành phát âm tiếng Anh của họ mỗi ngày."
+        },
+        {
+          "id": "q_verb_tense_097",
+          "part": 5,
+          "grammar_topic": "Passive Voice (Present Simple)",
+          "difficulty_level": "Medium",
+          "question_text": "Each custom Happy Box _____ carefully by our quality assurance team before shipping.",
+          "options": [
+            { "key": "A", "text": "inspects" },
+            { "key": "B", "text": "is inspected" },
+            { "key": "C", "text": "inspecting" },
+            { "key": "D", "text": "inspected" }
+          ],
+          "correct_answer": "B",
+          "hint": "Mẹo nhận diện: 'Each custom Happy Box' là vật -> Bị động. Hành động này là một quy trình lặp đi lặp lại 'before shipping' -> Bị động Hiện tại đơn.",
+          "explanation": "Chính xác. 'Is inspected' (được kiểm tra) mang nghĩa bị động, phù hợp với quy trình kiểm soát chất lượng thường xuyên.",
+          "translation": "Mỗi chiếc hộp Happy Box tùy chỉnh đều được kiểm tra cẩn thận bởi đội ngũ đảm bảo chất lượng của chúng tôi trước khi giao hàng."
+        },
+        {
+          "id": "q_verb_tense_098",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Present Perfect)",
+          "difficulty_level": "Medium",
+          "question_text": "The educational application _____ already _____ over 5,000 new users this week alone.",
+          "options": [
+            { "key": "A", "text": "has / gained" },
+            { "key": "B", "text": "is / gaining" },
+            { "key": "C", "text": "was / gaining" },
+            { "key": "D", "text": "will / gain" }
+          ],
+          "correct_answer": "A",
+          "hint": "Mẹo thời gian: Trạng từ 'already' (đã... rồi) kẹp giữa động từ là đặc điểm nổi bật nhất của thì Hiện tại hoàn thành.",
+          "explanation": "Chính xác. Cấu trúc 'has already gained' chỉ một thành tựu đã đạt được sớm hơn dự kiến tính đến hiện tại.",
+          "translation": "Chỉ riêng trong tuần này, ứng dụng giáo dục đã thu hút được hơn 5.000 người dùng mới."
+        },
+        {
+          "id": "q_verb_tense_099",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Past Continuous)",
+          "difficulty_level": "Easy",
+          "question_text": "While I _____ to clock in using the mobile app yesterday morning, the screen suddenly froze.",
+          "options": [
+            { "key": "A", "text": "try" },
+            { "key": "B", "text": "am trying" },
+            { "key": "C", "text": "was trying" },
+            { "key": "D", "text": "have tried" }
+          ],
+          "correct_answer": "C",
+          "hint": "Mẹo thời gian: 'While' + Quá khứ tiếp diễn (was trying) phác họa phông nền cho một sự việc đột ngột khác xen vào (froze).",
+          "explanation": "Chính xác. 'Was trying' chỉ hành động đang nỗ lực chấm công dở dang trong quá khứ.",
+          "translation": "Trong khi tôi đang cố gắng chấm công vào bằng ứng dụng di động sáng hôm qua, màn hình đột nhiên bị treo."
+        },
+        {
+          "id": "q_verb_tense_100",
+          "part": 5,
+          "grammar_topic": "Verb Tenses (Future Perfect)",
+          "difficulty_level": "Hard",
+          "question_text": "By the time your intensive course ends, you _____ all the essential grammar strategies required for the TOEIC exam.",
+          "options": [
+            { "key": "A", "text": "mastered" },
+            { "key": "B", "text": "master" },
+            { "key": "C", "text": "will have mastered" },
+            { "key": "D", "text": "are mastering" }
+          ],
+          "correct_answer": "C",
+          "hint": "Mẹo thời gian: Cấu trúc 'By the time + hiện tại đơn (ends)' đóng đinh kết quả ở mệnh đề chính phải là Tương lai hoàn thành.",
+          "explanation": "Chính xác. 'Will have mastered' khép lại câu hỏi bằng việc khẳng định kết quả sẽ hoàn tất trọn vẹn trong tương lai.",
+          "translation": "Tính đến lúc khóa học cấp tốc của bạn kết thúc, bạn sẽ nắm vững tất cả các chiến lược ngữ pháp thiết yếu cần thiết cho kỳ thi TOEIC."
         }
       ],
       hard: []
