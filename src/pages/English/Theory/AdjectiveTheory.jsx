@@ -216,17 +216,134 @@ const AdjectiveTheory = () => {
                                     <p className="text-gray-500 text-sm font-medium">Luyện tập chọn đuôi Tính từ chuẩn xác.</p>
                                 </div>
                             </div>
-                            <div className="bg-white border border-gray-100 rounded-2xl p-10 shadow-sm text-center">
-                                <div className="w-20 h-20 bg-rose-100 rounded-full mx-auto flex items-center justify-center mb-6">
-                                    <CaretRightOutlined className="text-rose-600 text-4xl" />
-                                </div>
-                                <h3 className="text-xl font-bold text-slate-800 mb-3">Tìm vị trí Tính từ!</h3>
-                                <p className="text-gray-600 mb-8 font-medium max-w-sm mx-auto">
-                                    Thực hành kỹ năng quét quanh chỗ trống để chốt đáp án trong 5 giây.
-                                </p>
-                                <button className="bg-rose-600 hover:bg-rose-700 text-white font-bold py-3 px-10 rounded-xl transition-colors shadow-sm">
-                                    Bắt đầu Làm bài
-                                </button>
+
+                            {/* Render Mini Quiz */}
+                            <div className="space-y-6">
+                                {[
+                                    {
+                                        "id": "q_adj_adv_001",
+                                        "question_text": "The new user interface for the EduKit application seems _____ for primary school students to navigate.",
+                                        "options": [
+                                            { "key": "A", "text": "intuitive" },
+                                            { "key": "B", "text": "intuitively" },
+                                            { "key": "C", "text": "intuition" },
+                                            { "key": "D", "text": "intuitiveness" }
+                                        ],
+                                        "correct_answer": "A",
+                                        "hint": "Đứng sau các động từ liên kết (linking verbs) như 'seem, look, appear, feel, become', chúng ta luôn cần một tính từ để miêu tả chủ ngữ.",
+                                        "explanation": "Chính xác. Động từ 'seems' (dường như/có vẻ) yêu cầu một tính từ theo sau. 'Intuitive' (dễ hiểu, trực quan) miêu tả giao diện người dùng mới.",
+                                        "translation": "Giao diện người dùng mới của ứng dụng EduKit có vẻ trực quan để học sinh tiểu học có thể điều hướng."
+                                    },
+                                    {
+                                        "id": "q_adj_adv_002",
+                                        "question_text": "To increase sales, the marketing team must develop a more _____ strategy for the upcoming holiday season.",
+                                        "options": [
+                                            { "key": "A", "text": "compete" },
+                                            { "key": "B", "text": "competitively" },
+                                            { "key": "C", "text": "competitive" },
+                                            { "key": "D", "text": "competition" }
+                                        ],
+                                        "correct_answer": "C",
+                                        "hint": "Liếc sang bên phải chỗ trống là danh từ 'strategy'. Ta cần từ loại gì để bổ nghĩa cho danh từ?",
+                                        "explanation": "Cần một Tính từ (đuôi -ive) đứng trước danh từ 'strategy' (chiến lược) để bổ nghĩa cho nó. 'Competitive strategy' = chiến lược cạnh tranh.",
+                                        "translation": "Để tăng doanh số, đội ngũ tiếp thị phải phát triển một chiến lược cạnh tranh hơn cho mùa lễ hội sắp tới."
+                                    },
+                                    {
+                                        "id": "q_adj_adv_003",
+                                        "question_text": "All protective gear must be kept in _____ condition to ensure the safety of the construction workers.",
+                                        "options": [
+                                            { "key": "A", "text": "perfectly" },
+                                            { "key": "B", "text": "perfect" },
+                                            { "key": "C", "text": "perfection" },
+                                            { "key": "D", "text": "perfected" }
+                                        ],
+                                        "correct_answer": "B",
+                                        "hint": "Cấu trúc giới từ 'in' + [Tính từ] + Danh từ 'condition'.",
+                                        "explanation": "Vị trí trước danh từ 'condition' cần một tính từ. 'Perfect condition' nghĩa là tình trạng hoàn hảo.",
+                                        "translation": "Tất cả đồ bảo hộ phải được giữ trong tình trạng hoàn hảo để đảm bảo an toàn cho công nhân xây dựng."
+                                    }
+                                ].map((q, index) => {
+                                    // Local state cho từng câu hỏi
+                                    const [selected, setSelected] = React.useState(null);
+                                    const [showResult, setShowResult] = React.useState(false);
+
+                                    return (
+                                        <div key={q.id} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+                                            <div className="flex gap-4">
+                                                <div className="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500 shrink-0">
+                                                    {index + 1}
+                                                </div>
+                                                <div className="flex-1">
+                                                    <p className="text-lg text-slate-800 font-medium mb-4">{q.question_text}</p>
+                                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+                                                        {q.options.map(opt => {
+                                                            let btnStyle = "bg-white border-gray-200 text-slate-700 hover:border-indigo-300";
+
+                                                            if (showResult) {
+                                                                if (opt.key === q.correct_answer) btnStyle = "bg-green-50 border-green-500 text-green-700 font-bold";
+                                                                else if (selected === opt.key && opt.key !== q.correct_answer) btnStyle = "bg-red-50 border-red-300 text-red-600";
+                                                                else btnStyle = "bg-gray-50 border-gray-100 text-gray-400 opacity-60";
+                                                            } else if (selected === opt.key) {
+                                                                btnStyle = "bg-indigo-50 border-indigo-500 text-indigo-700 font-bold shadow-sm";
+                                                            }
+
+                                                            return (
+                                                                <button
+                                                                    key={opt.key}
+                                                                    onClick={() => !showResult && setSelected(opt.key)}
+                                                                    disabled={showResult}
+                                                                    className={`p-3 rounded-xl border text-left transition-all flex items-center gap-3 ${btnStyle}`}
+                                                                >
+                                                                    <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${showResult && opt.key === q.correct_answer ? 'bg-green-200 text-green-800' : 'bg-gray-100'}`}>
+                                                                        {opt.key}
+                                                                    </div>
+                                                                    {opt.text}
+                                                                </button>
+                                                            )
+                                                        })}
+                                                    </div>
+
+                                                    {!showResult && selected && (
+                                                        <div className="flex justify-end animate-fadeIn">
+                                                            <button
+                                                                onClick={() => setShowResult(true)}
+                                                                className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-xl shadow-sm transition-colors"
+                                                            >
+                                                                Kiểm tra đáp án
+                                                            </button>
+                                                        </div>
+                                                    )}
+
+                                                    {showResult && (
+                                                        <div className="mt-6 space-y-3 animate-fadeIn">
+                                                            {selected === q.correct_answer ? (
+                                                                <div className="bg-green-50 border border-green-200 p-4 rounded-xl flex items-start gap-3">
+                                                                    <CheckCircleFilled className="text-green-500 text-xl mt-0.5" />
+                                                                    <div>
+                                                                        <p className="font-bold text-green-800 mb-1">Chính xác!</p>
+                                                                        <p className="text-sm font-medium text-green-700 leading-relaxed mb-2">{q.explanation}</p>
+                                                                        <p className="text-sm text-green-600 italic">"{q.translation}"</p>
+                                                                    </div>
+                                                                </div>
+                                                            ) : (
+                                                                <div className="bg-red-50 border border-red-200 p-4 rounded-xl flex items-start gap-3">
+                                                                    <div className="text-red-500 text-xl mt-0.5 font-bold">❌</div>
+                                                                    <div>
+                                                                        <p className="font-bold text-red-800 mb-1">Sai rồi. Hãy xem gợi ý!</p>
+                                                                        <p className="text-sm font-medium text-red-700 leading-relaxed mb-2"><b>Mẹo:</b> {q.hint}</p>
+                                                                        <div className="bg-white/50 p-2 rounded border border-red-100">
+                                                                            <p className="text-sm font-medium text-slate-700"><b>Explain:</b> {q.explanation}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            )}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                })}
                             </div>
                         </div>
                     )}

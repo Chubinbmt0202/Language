@@ -218,17 +218,134 @@ const AdverbTheory = () => {
                                     <p className="text-gray-500 text-sm font-medium">Luyện tuyệt chiêu "Câu đủ điền Trạng"</p>
                                 </div>
                             </div>
-                            <div className="bg-white border border-gray-100 rounded-2xl p-10 shadow-sm text-center">
-                                <div className="w-20 h-20 bg-violet-100 rounded-full mx-auto flex items-center justify-center mb-6">
-                                    <ThunderboltOutlined className="text-violet-600 text-4xl" />
-                                </div>
-                                <h3 className="text-xl font-bold text-slate-800 mb-3">Vào thi thật thôi!</h3>
-                                <p className="text-gray-600 mb-8 font-medium max-w-sm mx-auto">
-                                    Hãy cùng thử áp dụng Mẹo phân tích câu để xem tốc độ làm bài có giảm xuống còn 5s/câu không nhé!
-                                </p>
-                                <button className="bg-violet-600 hover:bg-violet-700 text-white font-bold py-3 px-10 rounded-xl transition-colors shadow-sm">
-                                    Làm bài ngay
-                                </button>
+
+                            {/* Render Mini Quiz */}
+                            <div className="space-y-6">
+                                {[
+                                    {
+                                        "id": "q_adv_001",
+                                        "question_text": "The CEO reviewed the overall financial report ____ before presenting it to the board of directors.",
+                                        "options": [
+                                            { "key": "A", "text": "careful" },
+                                            { "key": "B", "text": "care" },
+                                            { "key": "C", "text": "carefully" },
+                                            { "key": "D", "text": "cares" }
+                                        ],
+                                        "correct_answer": "C",
+                                        "hint": "Cấu trúc câu đã có đủ Chủ ngữ (The CEO), Động từ (reviewed), và Tân ngữ (the report). Ta cần thêm từ loại gì để bổ nghĩa cho động từ 'reviewed'?",
+                                        "explanation": "Câu đã đủ thành phần (S + V + O). Vị trí cuối câu chỉ có thể dùng Trạng từ (đuôi -ly) để bổ nghĩa cho động từ 'reviewed'.",
+                                        "translation": "Giám đốc điều hành đã xem xét toàn bộ báo cáo tài chính một cách cẩn thận trước khi trình bày với hội đồng quản trị."
+                                    },
+                                    {
+                                        "id": "q_adv_002",
+                                        "question_text": "Sales figures for the new software have been ____ high since its launch last quarter.",
+                                        "options": [
+                                            { "key": "A", "text": "surprise" },
+                                            { "key": "B", "text": "surprised" },
+                                            { "key": "C", "text": "surprising" },
+                                            { "key": "D", "text": "surprisingly" }
+                                        ],
+                                        "correct_answer": "D",
+                                        "hint": "Phía sau chỗ trống là tính từ 'high'. Từ loại nào đứng trước Tính từ để bổ nghĩa mức độ cho nó?",
+                                        "explanation": "Cần một Trạng từ đứng trước tính từ 'high' để bổ nghĩa cho tính từ này. 'Surprisingly high' = cao một cách đáng ngạc nhiên.",
+                                        "translation": "Doanh số bán hàng của phần mềm mới đã cao một cách đáng ngạc nhiên kể từ khi ra mắt vào quý trước."
+                                    },
+                                    {
+                                        "id": "q_adv_003",
+                                        "question_text": "Ms. Jenkins could _____ hear the speaker at the conference because the microphone was not working properly.",
+                                        "options": [
+                                            { "key": "A", "text": "hard" },
+                                            { "key": "B", "text": "hardly" },
+                                            { "key": "C", "text": "hardship" },
+                                            { "key": "D", "text": "harden" }
+                                        ],
+                                        "correct_answer": "B",
+                                        "hint": "Dựa vào nghĩa của vế sau 'because the microphone was not working', ta cần một trạng từ mang nghĩa phủ định 'hầu như không'.",
+                                        "explanation": "Cần điền trạng từ mang nghĩa phủ định. 'Hard' (chăm chỉ/khó khăn) và 'Hardly' (hầu như không). Dựa vào ngữ cảnh micro hỏng, đáp án 'Hardly' là chính xác.",
+                                        "translation": "Cô Jenkins hầu như không thể nghe thấy diễn giả tại hội nghị vì micro không hoạt động bình thường."
+                                    }
+                                ].map((q, index) => {
+                                    // Local state cho từng câu hỏi
+                                    const [selected, setSelected] = React.useState(null);
+                                    const [showResult, setShowResult] = React.useState(false);
+
+                                    return (
+                                        <div key={q.id} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+                                            <div className="flex gap-4">
+                                                <div className="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500 shrink-0">
+                                                    {index + 1}
+                                                </div>
+                                                <div className="flex-1">
+                                                    <p className="text-lg text-slate-800 font-medium mb-4">{q.question_text}</p>
+                                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+                                                        {q.options.map(opt => {
+                                                            let btnStyle = "bg-white border-gray-200 text-slate-700 hover:border-violet-300";
+
+                                                            if (showResult) {
+                                                                if (opt.key === q.correct_answer) btnStyle = "bg-green-50 border-green-500 text-green-700 font-bold";
+                                                                else if (selected === opt.key && opt.key !== q.correct_answer) btnStyle = "bg-red-50 border-red-300 text-red-600";
+                                                                else btnStyle = "bg-gray-50 border-gray-100 text-gray-400 opacity-60";
+                                                            } else if (selected === opt.key) {
+                                                                btnStyle = "bg-violet-50 border-violet-500 text-violet-700 font-bold shadow-sm";
+                                                            }
+
+                                                            return (
+                                                                <button
+                                                                    key={opt.key}
+                                                                    onClick={() => !showResult && setSelected(opt.key)}
+                                                                    disabled={showResult}
+                                                                    className={`p-3 rounded-xl border text-left transition-all flex items-center gap-3 ${btnStyle}`}
+                                                                >
+                                                                    <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${showResult && opt.key === q.correct_answer ? 'bg-green-200 text-green-800' : 'bg-gray-100'}`}>
+                                                                        {opt.key}
+                                                                    </div>
+                                                                    {opt.text}
+                                                                </button>
+                                                            )
+                                                        })}
+                                                    </div>
+
+                                                    {!showResult && selected && (
+                                                        <div className="flex justify-end animate-fadeIn">
+                                                            <button
+                                                                onClick={() => setShowResult(true)}
+                                                                className="bg-violet-600 hover:bg-violet-700 text-white font-bold py-2 px-6 rounded-xl shadow-sm transition-colors"
+                                                            >
+                                                                Kiểm tra đáp án
+                                                            </button>
+                                                        </div>
+                                                    )}
+
+                                                    {showResult && (
+                                                        <div className="mt-6 space-y-3 animate-fadeIn">
+                                                            {selected === q.correct_answer ? (
+                                                                <div className="bg-green-50 border border-green-200 p-4 rounded-xl flex items-start gap-3">
+                                                                    <CheckCircleFilled className="text-green-500 text-xl mt-0.5" />
+                                                                    <div>
+                                                                        <p className="font-bold text-green-800 mb-1">Chính xác!</p>
+                                                                        <p className="text-sm font-medium text-green-700 leading-relaxed mb-2">{q.explanation}</p>
+                                                                        <p className="text-sm text-green-600 italic">"{q.translation}"</p>
+                                                                    </div>
+                                                                </div>
+                                                            ) : (
+                                                                <div className="bg-red-50 border border-red-200 p-4 rounded-xl flex items-start gap-3">
+                                                                    <div className="text-red-500 text-xl mt-0.5 font-bold">❌</div>
+                                                                    <div>
+                                                                        <p className="font-bold text-red-800 mb-1">Sai rồi. Hãy xem gợi ý!</p>
+                                                                        <p className="text-sm font-medium text-red-700 leading-relaxed mb-2"><b>Mẹo:</b> {q.hint}</p>
+                                                                        <div className="bg-white/50 p-2 rounded border border-red-100">
+                                                                            <p className="text-sm font-medium text-slate-700"><b>Explain:</b> {q.explanation}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            )}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                })}
                             </div>
                         </div>
                     )}

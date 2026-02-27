@@ -6372,6 +6372,1715 @@ export const EXERCISE_DATA = {
 
 // MAPPING THE NEW ROADMAP IDS DIRECTLY TO EXERCISES
 export const QUIZ_TASKS = {
+  "w1-d3-t3": {
+    description: "Giải Part 5 & 6 Tính từ & Trạng từ",
+    total: 10,
+    questions: {
+      easy: [
+        {
+          "id": "q_adj_adv_001",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Easy",
+          "question_text": "The new user interface for the EduKit application seems _____ for primary school students to navigate.",
+          "options": [
+            { "key": "A", "text": "intuitive" },
+            { "key": "B", "text": "intuitively" },
+            { "key": "C", "text": "intuition" },
+            { "key": "D", "text": "intuitiveness" }
+          ],
+          "correct_answer": "A",
+          "hint": "Đứng sau các động từ liên kết (linking verbs) như 'seem, look, appear, feel, become', chúng ta luôn cần một tính từ để miêu tả chủ ngữ.",
+          "explanation": "Chính xác. Động từ 'seems' (dường như/có vẻ) yêu cầu một tính từ theo sau. 'Intuitive' (dễ hiểu, trực quan) miêu tả giao diện người dùng mới.",
+          "translation": "Giao diện người dùng mới của ứng dụng EduKit có vẻ trực quan để học sinh tiểu học có thể điều hướng."
+        },
+        {
+          "id": "q_adj_adv_002",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Easy",
+          "question_text": "The mobile timekeeping application _____ syncs employee data to the cloud server every five minutes.",
+          "options": [
+            { "key": "A", "text": "automatic" },
+            { "key": "B", "text": "automate" },
+            { "key": "C", "text": "automatically" },
+            { "key": "D", "text": "automation" }
+          ],
+          "correct_answer": "C",
+          "hint": "Chỗ trống nằm giữa chủ ngữ (application) và động từ chính (syncs), cần một từ loại để bổ nghĩa cho động từ đó.",
+          "explanation": "Chính xác. Trạng từ 'automatically' (một cách tự động) bổ nghĩa cho động từ thường 'syncs' (đồng bộ).",
+          "translation": "Ứng dụng chấm công trên thiết bị di động tự động đồng bộ hóa dữ liệu nhân viên lên máy chủ đám mây mỗi năm phút một lần."
+        },
+        {
+          "id": "q_adj_adv_003",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "Happy Box’s premium corporate gifts have become _____ popular among international clients this year.",
+          "options": [
+            { "key": "A", "text": "extreme" },
+            { "key": "B", "text": "extremely" },
+            { "key": "C", "text": "extremity" },
+            { "key": "D", "text": "extremes" }
+          ],
+          "correct_answer": "B",
+          "hint": "Trước một tính từ ('popular') chúng ta cần một trạng từ chỉ mức độ để bổ nghĩa cho tính từ đó.",
+          "explanation": "Chính xác. Trạng từ 'extremely' (cực kỳ) đứng trước tính từ 'popular' để tăng cường mức độ cho tính từ này.",
+          "translation": "Các món quà tặng doanh nghiệp cao cấp của Happy Box đã trở nên cực kỳ phổ biến đối với các khách hàng quốc tế trong năm nay."
+        },
+        {
+          "id": "q_adj_adv_004",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Medium",
+          "question_text": "The PrepMaster platform offers a _____ review of all grammar points required for the TOEIC exam.",
+          "options": [
+            { "key": "A", "text": "comprehension" },
+            { "key": "B", "text": "comprehend" },
+            { "key": "C", "text": "comprehensively" },
+            { "key": "D", "text": "comprehensive" }
+          ],
+          "correct_answer": "D",
+          "hint": "Nằm giữa mạo từ 'a' và danh từ 'review', chỗ trống chắc chắn phải là một tính từ.",
+          "explanation": "Chính xác. Tính từ 'comprehensive' (toàn diện/đầy đủ) đứng trước danh từ 'review' để tạo thành cụm danh từ 'một bài ôn tập toàn diện'.",
+          "translation": "Nền tảng PrepMaster cung cấp một bài ôn tập toàn diện về tất cả các điểm ngữ pháp cần thiết cho kỳ thi TOEIC."
+        },
+        {
+          "id": "q_adj_adv_005",
+          "part": 5,
+          "grammar_topic": "Adjective (Comparative)",
+          "difficulty_level": "Easy",
+          "question_text": "Following the latest update, the HR management website loads much _____ than the previous version.",
+          "options": [
+            { "key": "A", "text": "fast" },
+            { "key": "B", "text": "faster" },
+            { "key": "C", "text": "fastest" },
+            { "key": "D", "text": "fastly" }
+          ],
+          "correct_answer": "B",
+          "hint": "Từ 'than' là dấu hiệu của cấu trúc so sánh hơn. Lưu ý: 'fast' vừa là tính từ vừa là trạng từ, không có từ 'fastly'.",
+          "explanation": "Chính xác. Trạng từ so sánh hơn 'faster' (nhanh hơn) đi với 'than'. Cụm 'much faster' dùng để nhấn mạnh mức độ nhanh hơn rất nhiều.",
+          "translation": "Sau bản cập nhật mới nhất, trang web quản lý nhân sự tải nhanh hơn nhiều so với phiên bản trước."
+        },
+        {
+          "id": "q_verb_tense_006",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "_____, the IT team managed to restore the server before the start of the workday, preventing any data loss.",
+          "options": [
+            { "key": "A", "text": "Fortunate" },
+            { "key": "B", "text": "Fortunately" },
+            { "key": "C", "text": "Fortune" },
+            { "key": "D", "text": "Fortunateness" }
+          ],
+          "correct_answer": "B",
+          "hint": "Đứng ở đầu câu, ngăn cách với mệnh đề chính bằng dấu phẩy, ta cần một trạng từ để bổ nghĩa cho toàn bộ câu.",
+          "explanation": "Chính xác. Trạng từ 'Fortunately' (Thật may mắn) bổ nghĩa cho cả sự việc nhóm IT đã khôi phục được máy chủ.",
+          "translation": "Thật may mắn, đội ngũ CNTT đã xoay sở để khôi phục máy chủ trước khi ngày làm việc bắt đầu, ngăn chặn mọi sự cố mất dữ liệu."
+        },
+        {
+          "id": "q_adj_adv_007",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Hard",
+          "question_text": "Users find the daily English speaking videos on Ms. Lin's TikTok channel highly _____.",
+          "options": [
+            { "key": "A", "text": "engage" },
+            { "key": "B", "text": "engagingly" },
+            { "key": "C", "text": "engaging" },
+            { "key": "D", "text": "engagement" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cấu trúc: Find + something (tân ngữ) + [Tính từ] (Cảm thấy cái gì đó như thế nào). 'Highly' là trạng từ bổ nghĩa cho tính từ cần điền.",
+          "explanation": "Chính xác. Tính từ 'engaging' (thu hút/hấp dẫn) đứng sau tân ngữ 'videos' để miêu tả tính chất của những video này.",
+          "translation": "Người dùng cảm thấy các video nói tiếng Anh hàng ngày trên kênh TikTok của cô Lin cực kỳ thu hút."
+        },
+        {
+          "id": "q_adj_adv_008",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "Each custom Happy Box is _____ inspected by the quality control team to ensure the highest standards.",
+          "options": [
+            { "key": "A", "text": "careful" },
+            { "key": "B", "text": "carefully" },
+            { "key": "C", "text": "care" },
+            { "key": "D", "text": "cares" }
+          ],
+          "correct_answer": "B",
+          "hint": "Chỗ trống nằm giữa to be 'is' và động từ phân từ 2 'inspected'. Cần một trạng từ để bổ nghĩa cho động từ bị động này.",
+          "explanation": "Chính xác. Trạng từ 'carefully' (một cách cẩn thận) bổ nghĩa cho hành động 'inspected' (được kiểm tra).",
+          "translation": "Mỗi chiếc Happy Box tùy chỉnh đều được kiểm tra cẩn thận bởi đội kiểm soát chất lượng để đảm bảo các tiêu chuẩn cao nhất."
+        },
+        {
+          "id": "q_adj_adv_009",
+          "part": 5,
+          "grammar_topic": "Adverb vs Adjective",
+          "difficulty_level": "Hard",
+          "question_text": "The development team worked _____ all night to fix the critical bugs before the EduKit app launch.",
+          "options": [
+            { "key": "A", "text": "hard" },
+            { "key": "B", "text": "hardly" },
+            { "key": "C", "text": "hardness" },
+            { "key": "D", "text": "harden" }
+          ],
+          "correct_answer": "A",
+          "hint": "Cần trạng từ bổ nghĩa cho 'worked'. Chú ý: 'hard' vừa là tính từ vừa là trạng từ (chăm chỉ/vất vả). 'Hardly' mang nghĩa hoàn toàn khác (hiếm khi/hầu như không).",
+          "explanation": "Chính xác. Trạng từ 'hard' bổ nghĩa cho 'worked' mang nghĩa làm việc chăm chỉ/vất vả. Nếu chọn 'hardly', câu sẽ mang nghĩa 'hầu như không làm việc', sai logic.",
+          "translation": "Nhóm phát triển đã làm việc chăm chỉ suốt đêm để sửa các lỗi nghiêm trọng trước khi ra mắt ứng dụng EduKit."
+        },
+        {
+          "id": "q_adj_adv_010",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Easy",
+          "question_text": "To maintain high user engagement, the timekeeping app _____ sends push notifications reminding staff to log their hours.",
+          "options": [
+            { "key": "A", "text": "regular" },
+            { "key": "B", "text": "regularly" },
+            { "key": "C", "text": "regularity" },
+            { "key": "D", "text": "regularize" }
+          ],
+          "correct_answer": "B",
+          "hint": "Cần một trạng từ đứng trước động từ chính 'sends' để bổ nghĩa cho hành động gửi thông báo.",
+          "explanation": "Chính xác. Trạng từ 'regularly' (một cách thường xuyên/đều đặn) bổ nghĩa cho động từ 'sends'.",
+          "translation": "Để duy trì sự tương tác cao của người dùng, ứng dụng chấm công thường xuyên gửi thông báo đẩy nhắc nhở nhân viên ghi lại giờ làm việc của họ."
+        },
+        {
+          "id": "q_adj_adv_011",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Medium",
+          "question_text": "A _____ analysis of the timekeeping data revealed several inefficiencies in the company's workflow.",
+          "options": [
+            { "key": "A", "text": "detail" },
+            { "key": "B", "text": "detailed" },
+            { "key": "C", "text": "detailing" },
+            { "key": "D", "text": "details" }
+          ],
+          "correct_answer": "B",
+          "hint": "Cần một tính từ đứng trước danh từ 'analysis' để bổ nghĩa cho nó. Tính từ dạng V-ed/V-ing thường được sử dụng.",
+          "explanation": "Chính xác. Tính từ 'detailed' (chi tiết/được trình bày cặn kẽ) đứng trước danh từ 'analysis' tạo thành cụm 'a detailed analysis' (một phân tích chi tiết).",
+          "translation": "Một phân tích chi tiết về dữ liệu chấm công đã tiết lộ một số điểm kém hiệu quả trong quy trình làm việc của công ty."
+        },
+        {
+          "id": "q_adj_adv_012",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "The grammar explanations in the new JLPT N3 mock test are _____ clear and easy to understand.",
+          "options": [
+            { "key": "A", "text": "perfect" },
+            { "key": "B", "text": "perfectly" },
+            { "key": "C", "text": "perfection" },
+            { "key": "D", "text": "perfects" }
+          ],
+          "correct_answer": "B",
+          "hint": "Chỗ trống đứng trước tính từ 'clear', do đó ta cần một trạng từ để bổ nghĩa về mặt mức độ cho tính từ này.",
+          "explanation": "Chính xác. Trạng từ 'perfectly' (một cách hoàn hảo/hoàn toàn) bổ nghĩa cho tính từ 'clear' (rõ ràng).",
+          "translation": "Các phần giải thích ngữ pháp trong bài thi thử JLPT N3 mới hoàn toàn rõ ràng và dễ hiểu."
+        },
+        {
+          "id": "q_adj_adv_013",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Easy",
+          "question_text": "Due to _____ weather conditions, the delivery of the corporate gift boxes was delayed by two days.",
+          "options": [
+            { "key": "A", "text": "severely" },
+            { "key": "B", "text": "severe" },
+            { "key": "C", "text": "severity" },
+            { "key": "D", "text": "severest" }
+          ],
+          "correct_answer": "B",
+          "hint": "Đứng trước danh từ ghép 'weather conditions' (điều kiện thời tiết), ta cần một tính từ để miêu tả tính chất.",
+          "explanation": "Chính xác. Tính từ 'severe' (khắc nghiệt/nghiêm trọng) bổ nghĩa cho danh từ phía sau.",
+          "translation": "Do điều kiện thời tiết khắc nghiệt, việc giao các hộp quà tặng doanh nghiệp đã bị hoãn lại hai ngày."
+        },
+        {
+          "id": "q_adj_adv_014",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Easy",
+          "question_text": "The creator speaks English _____ and naturally in all her educational TikTok videos.",
+          "options": [
+            { "key": "A", "text": "fluent" },
+            { "key": "B", "text": "fluency" },
+            { "key": "C", "text": "fluently" },
+            { "key": "D", "text": "fluents" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cần một trạng từ bổ nghĩa cho động từ 'speaks'. Lưu ý liên từ 'and' nối hai từ cùng từ loại (naturally là trạng từ).",
+          "explanation": "Chính xác. Trạng từ 'fluently' (trôi chảy) đứng sau tân ngữ 'English' để bổ nghĩa cho động từ 'speaks'. Cấu trúc song song: fluently and naturally.",
+          "translation": "Nhà sáng tạo nói tiếng Anh một cách trôi chảy và tự nhiên trong tất cả các video TikTok giáo dục của cô ấy."
+        },
+        {
+          "id": "q_adj_adv_015",
+          "part": 5,
+          "grammar_topic": "Adverb (Comparative)",
+          "difficulty_level": "Hard",
+          "question_text": "The new server infrastructure processes concurrent user requests _____ than the previous setup did.",
+          "options": [
+            { "key": "A", "text": "efficient" },
+            { "key": "B", "text": "efficiently" },
+            { "key": "C", "text": "more efficiently" },
+            { "key": "D", "text": "most efficiently" }
+          ],
+          "correct_answer": "C",
+          "hint": "Động từ 'processes' cần một trạng từ bổ nghĩa. Từ 'than' báo hiệu cấu trúc so sánh hơn của trạng từ dài.",
+          "explanation": "Chính xác. Dạng so sánh hơn của trạng từ 'efficiently' là 'more efficiently' (hiệu quả hơn).",
+          "translation": "Cơ sở hạ tầng máy chủ mới xử lý các yêu cầu đồng thời của người dùng hiệu quả hơn so với thiết lập trước đó."
+        },
+        {
+          "id": "q_adj_adv_016",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Medium",
+          "question_text": "The eco-friendly packaging for the new Happy Box line looks incredibly _____ to potential buyers.",
+          "options": [
+            { "key": "A", "text": "attract" },
+            { "key": "B", "text": "attraction" },
+            { "key": "C", "text": "attractively" },
+            { "key": "D", "text": "attractive" }
+          ],
+          "correct_answer": "D",
+          "hint": "Động từ giác quan 'looks' (trông có vẻ) yêu cầu một tính từ theo sau, bất chấp việc có trạng từ 'incredibly' xen giữa.",
+          "explanation": "Chính xác. Tính từ 'attractive' (thu hút/hấp dẫn) đứng sau động từ liên kết 'looks' để miêu tả vẻ ngoài của bao bì. Trạng từ 'incredibly' chỉ bổ nghĩa mức độ cho tính từ này.",
+          "translation": "Bao bì thân thiện với môi trường cho dòng sản phẩm Happy Box mới trông cực kỳ hấp dẫn đối với những người mua tiềm năng."
+        },
+        {
+          "id": "q_adj_adv_017",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Easy",
+          "question_text": "Any technical issues with the PrepMaster platform are _____ resolved by our 24/7 support team.",
+          "options": [
+            { "key": "A", "text": "prompt" },
+            { "key": "B", "text": "promptly" },
+            { "key": "C", "text": "promptness" },
+            { "key": "D", "text": "prompting" }
+          ],
+          "correct_answer": "B",
+          "hint": "Chỗ trống nằm giữa trợ động từ to be (are) và động từ phân từ 2 (resolved), ta cần trạng từ để bổ nghĩa cho động từ.",
+          "explanation": "Chính xác. Trạng từ 'promptly' (một cách nhanh chóng/kịp thời) bổ nghĩa cho hành động 'được giải quyết' (are resolved).",
+          "translation": "Mọi sự cố kỹ thuật với nền tảng PrepMaster đều được đội ngũ hỗ trợ 24/7 của chúng tôi giải quyết một cách nhanh chóng."
+        },
+        {
+          "id": "q_adj_adv_018",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Hard",
+          "question_text": "Several employees submitted their monthly attendance records _____ because they forgot their login passwords.",
+          "options": [
+            { "key": "A", "text": "late" },
+            { "key": "B", "text": "lately" },
+            { "key": "C", "text": "lateness" },
+            { "key": "D", "text": "latest" }
+          ],
+          "correct_answer": "A",
+          "hint": "'Late' vừa là tính từ vừa là trạng từ mang nghĩa 'trễ/muộn'. Trong khi đó, 'Lately' mang một nghĩa hoàn toàn khác là 'gần đây' (đồng nghĩa với recently).",
+          "explanation": "Chính xác. Trạng từ 'late' bổ nghĩa cho động từ 'submitted', diễn tả hành động nộp muộn. Nếu dùng 'lately' thì câu sẽ có nghĩa là 'nộp gần đây', không phù hợp với ngữ cảnh 'vì quên mật khẩu'.",
+          "translation": "Một vài nhân viên đã nộp hồ sơ điểm danh hàng tháng muộn bởi vì họ quên mật khẩu đăng nhập."
+        },
+        {
+          "id": "q_adj_adv_019",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Medium",
+          "question_text": "We need to develop a more _____ approach to market the English learning app to university students.",
+          "options": [
+            { "key": "A", "text": "create" },
+            { "key": "B", "text": "creation" },
+            { "key": "C", "text": "creatively" },
+            { "key": "D", "text": "creative" }
+          ],
+          "correct_answer": "D",
+          "hint": "Giữa mạo từ 'a' (kèm trạng từ so sánh 'more') và danh từ 'approach', chúng ta cần một tính từ.",
+          "explanation": "Chính xác. Tính từ 'creative' (sáng tạo) kết hợp với danh từ 'approach' tạo thành cụm từ 'một cách tiếp cận sáng tạo hơn'.",
+          "translation": "Chúng ta cần phát triển một cách tiếp cận sáng tạo hơn để tiếp thị ứng dụng học tiếng Anh tới sinh viên đại học."
+        },
+        {
+          "id": "q_adj_adv_020",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "The board of directors _____ approved the budget for the upcoming HR software upgrade.",
+          "options": [
+            { "key": "A", "text": "unanimous" },
+            { "key": "B", "text": "unanimously" },
+            { "key": "C", "text": "unanimity" },
+            { "key": "D", "text": "unanimousness" }
+          ],
+          "correct_answer": "B",
+          "hint": "Chỗ trống nằm ngay trước động từ chính 'approved', cần một trạng từ để bổ nghĩa cho cách thức của hành động đó.",
+          "explanation": "Chính xác. Trạng từ 'unanimously' (nhất trí/đồng lòng) miêu tả cách hội đồng quản trị phê duyệt ngân sách.",
+          "translation": "Hội đồng quản trị đã nhất trí phê duyệt ngân sách cho đợt nâng cấp phần mềm nhân sự sắp tới."
+        },
+        {
+          "id": "q_adj_adv_021",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "The EduKit app is _____ updated to ensure all TOEIC practice materials reflect the latest test format.",
+          "options": [
+            { "key": "A", "text": "frequent" },
+            { "key": "B", "text": "frequency" },
+            { "key": "C", "text": "frequently" },
+            { "key": "D", "text": "frequents" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cần một trạng từ đứng giữa to be (is) và động từ phân từ hai (updated) để bổ nghĩa cho tần suất của hành động cập nhật.",
+          "explanation": "Chính xác. Trạng từ 'frequently' (một cách thường xuyên) bổ nghĩa cho động từ bị động 'updated'.",
+          "translation": "Ứng dụng EduKit được cập nhật thường xuyên để đảm bảo tất cả các tài liệu luyện thi TOEIC phản ánh định dạng bài thi mới nhất."
+        },
+        {
+          "id": "q_adj_adv_022",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Medium",
+          "question_text": "To keep the gift items _____ during transit, we use specially designed shock-absorbing packaging.",
+          "options": [
+            { "key": "A", "text": "safe" },
+            { "key": "B", "text": "safely" },
+            { "key": "C", "text": "safety" },
+            { "key": "D", "text": "safeness" }
+          ],
+          "correct_answer": "A",
+          "hint": "Cấu trúc: keep + tân ngữ (the gift items) + Tính từ (giữ cho cái gì đó ở trạng thái như thế nào).",
+          "explanation": "Chính xác. Tính từ 'safe' (an toàn) đứng sau tân ngữ để miêu tả trạng thái của các món quà.",
+          "translation": "Để giữ cho các món quà được an toàn trong quá trình vận chuyển, chúng tôi sử dụng bao bì chống sốc được thiết kế đặc biệt."
+        },
+        {
+          "id": "q_adj_adv_023",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Easy",
+          "question_text": "The new biometric login feature is _____ convenient for employees who often forget their ID cards.",
+          "options": [
+            { "key": "A", "text": "incredible" },
+            { "key": "B", "text": "incredibly" },
+            { "key": "C", "text": "incredulity" },
+            { "key": "D", "text": "incredulous" }
+          ],
+          "correct_answer": "B",
+          "hint": "Đứng trước tính từ 'convenient' (tiện lợi), ta cần một trạng từ để nhấn mạnh mức độ của sự tiện lợi đó.",
+          "explanation": "Chính xác. Trạng từ 'incredibly' (cực kỳ/đáng kinh ngạc) bổ nghĩa cho tính từ 'convenient'.",
+          "translation": "Tính năng đăng nhập sinh trắc học mới cực kỳ tiện lợi cho những nhân viên thường xuyên quên thẻ ID."
+        },
+        {
+          "id": "q_adj_adv_024",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Easy",
+          "question_text": "Providing _____ examples is the best way to help students remember complex English vocabulary.",
+          "options": [
+            { "key": "A", "text": "specify" },
+            { "key": "B", "text": "specifically" },
+            { "key": "C", "text": "specification" },
+            { "key": "D", "text": "specific" }
+          ],
+          "correct_answer": "D",
+          "hint": "Từ cần điền đứng ngay trước danh từ 'examples' (các ví dụ), do đó nó phải là một tính từ.",
+          "explanation": "Chính xác. Tính từ 'specific' (cụ thể) đứng trước bổ nghĩa cho danh từ 'examples' tạo thành cụm 'những ví dụ cụ thể'.",
+          "translation": "Việc cung cấp các ví dụ cụ thể là cách tốt nhất để giúp học sinh ghi nhớ từ vựng tiếng Anh phức tạp."
+        },
+        {
+          "id": "q_adj_adv_025",
+          "part": 5,
+          "grammar_topic": "Adjective (Comparative)",
+          "difficulty_level": "Medium",
+          "question_text": "The recently launched version of the HR software is significantly _____ than the beta release.",
+          "options": [
+            { "key": "A", "text": "reliable" },
+            { "key": "B", "text": "reliably" },
+            { "key": "C", "text": "more reliable" },
+            { "key": "D", "text": "most reliable" }
+          ],
+          "correct_answer": "C",
+          "hint": "Từ 'than' là dấu hiệu của so sánh hơn. 'Reliable' là tính từ dài nên phải dùng 'more'. Từ 'significantly' chỉ dùng để nhấn mạnh mức độ so sánh.",
+          "explanation": "Chính xác. Cấu trúc so sánh hơn của tính từ dài: more + adj + than. 'More reliable' mang nghĩa đáng tin cậy hơn.",
+          "translation": "Phiên bản phần mềm nhân sự mới ra mắt gần đây đáng tin cậy hơn đáng kể so với bản phát hành thử nghiệm."
+        },
+        {
+          "id": "q_adj_adv_026",
+          "part": 5,
+          "grammar_topic": "Adverb vs Adjective",
+          "difficulty_level": "Medium",
+          "question_text": "The students performed exceptionally _____ on their JLPT N3 mock exams after using the PrepMaster app for a month.",
+          "options": [
+            { "key": "A", "text": "good" },
+            { "key": "B", "text": "well" },
+            { "key": "C", "text": "better" },
+            { "key": "D", "text": "best" }
+          ],
+          "correct_answer": "B",
+          "hint": "Cần một trạng từ để bổ nghĩa cho động từ thường 'performed' (thể hiện/làm bài). Trạng từ của 'good' là gì?",
+          "explanation": "Chính xác. Trạng từ 'well' (tốt) bổ nghĩa cho động từ 'performed'. 'Good' là tính từ, không thể bổ nghĩa cho động từ thường.",
+          "translation": "Các học sinh đã làm bài thi thử JLPT N3 đặc biệt tốt sau khi sử dụng ứng dụng PrepMaster trong một tháng."
+        },
+        {
+          "id": "q_adj_adv_027",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Medium",
+          "question_text": "The customized corporate gift boxes looked so _____ that the client immediately ordered 500 more units.",
+          "options": [
+            { "key": "A", "text": "impress" },
+            { "key": "B", "text": "impression" },
+            { "key": "C", "text": "impressive" },
+            { "key": "D", "text": "impressively" }
+          ],
+          "correct_answer": "C",
+          "hint": "Động từ 'looked' (trông có vẻ) là một linking verb. Sau linking verb luôn là một tính từ miêu tả chủ ngữ.",
+          "explanation": "Chính xác. Tính từ 'impressive' (ấn tượng) đứng sau 'looked so' để miêu tả vẻ ngoài của những hộp quà.",
+          "translation": "Các hộp quà tặng doanh nghiệp tùy chỉnh trông ấn tượng đến mức khách hàng ngay lập tức đặt thêm 500 hộp nữa."
+        },
+        {
+          "id": "q_adj_adv_028",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Easy",
+          "question_text": "Employees must _____ review their timesheets before the end of the month to ensure accurate payroll processing.",
+          "options": [
+            { "key": "A", "text": "care" },
+            { "key": "B", "text": "careful" },
+            { "key": "C", "text": "carefully" },
+            { "key": "D", "text": "carefulness" }
+          ],
+          "correct_answer": "C",
+          "hint": "Từ cần điền bổ nghĩa cho hành động 'review' (xem xét). Bạn cần một trạng từ chỉ thể cách (how).",
+          "explanation": "Chính xác. Trạng từ 'carefully' (một cách cẩn thận) miêu tả cách thức nhân viên phải xem xét bảng chấm công của họ.",
+          "translation": "Nhân viên phải xem xét cẩn thận bảng chấm công của họ trước cuối tháng để đảm bảo việc xử lý bảng lương chính xác."
+        },
+        {
+          "id": "q_adj_adv_029",
+          "part": 5,
+          "grammar_topic": "Adjective (-ing vs -ed)",
+          "difficulty_level": "Hard",
+          "question_text": "The daily short videos are very _____, keeping learners motivated to practice speaking English every day.",
+          "options": [
+            { "key": "A", "text": "entertain" },
+            { "key": "B", "text": "entertained" },
+            { "key": "C", "text": "entertaining" },
+            { "key": "D", "text": "entertainment" }
+          ],
+          "correct_answer": "C",
+          "hint": "Tính từ đuôi '-ing' dùng để miêu tả bản chất/đặc điểm của sự vật (video mang tính giải trí). Tính từ đuôi '-ed' dùng để miêu tả cảm xúc của con người (bị/được giải trí).",
+          "explanation": "Chính xác. Tính từ 'entertaining' (mang tính giải trí/thú vị) miêu tả bản chất của các video ngắn này.",
+          "translation": "Các video ngắn hàng ngày rất thú vị, giúp người học duy trì động lực để thực hành nói tiếng Anh mỗi ngày."
+        },
+        {
+          "id": "q_adj_adv_030",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "The user manual for the new human resources portal is _____ written, making it easy for beginners to follow.",
+          "options": [
+            { "key": "A", "text": "clear" },
+            { "key": "B", "text": "clearly" },
+            { "key": "C", "text": "clearness" },
+            { "key": "D", "text": "clearing" }
+          ],
+          "correct_answer": "B",
+          "hint": "Đứng trước động từ phân từ hai 'written' (được viết) cần một trạng từ để miêu tả cách thức bài viết đó được trình bày.",
+          "explanation": "Chính xác. Trạng từ 'clearly' (một cách rõ ràng) bổ nghĩa cho 'written' tạo thành cụm 'được viết một cách rõ ràng'.",
+          "translation": "Hướng dẫn sử dụng cho cổng thông tin nhân sự mới được viết rất rõ ràng, giúp người mới bắt đầu dễ dàng làm theo."
+        },
+        {
+          "id": "q_adj_adv_031",
+          "part": 5,
+          "grammar_topic": "Adjective (Superlative)",
+          "difficulty_level": "Medium",
+          "question_text": "PrepMaster is currently the _____ educational app in the market for comprehensive TOEIC preparation.",
+          "options": [
+            { "key": "A", "text": "popular" },
+            { "key": "B", "text": "more popular" },
+            { "key": "C", "text": "most popular" },
+            { "key": "D", "text": "popularly" }
+          ],
+          "correct_answer": "C",
+          "hint": "Mạo từ 'the' đứng trước chỗ trống là dấu hiệu đặc trưng của cấu trúc so sánh nhất đối với tính từ dài.",
+          "explanation": "Chính xác. 'Most popular' (phổ biến nhất) hoàn thiện cấu trúc so sánh nhất 'the most + adj' cho tính từ dài.",
+          "translation": "PrepMaster hiện là ứng dụng giáo dục phổ biến nhất trên thị trường về luyện thi TOEIC toàn diện."
+        },
+        {
+          "id": "q_adj_adv_032",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Easy",
+          "question_text": "A _____ connection to the internet is required for the timekeeping app to sync data in real-time.",
+          "options": [
+            { "key": "A", "text": "stable" },
+            { "key": "B", "text": "stably" },
+            { "key": "C", "text": "stabilize" },
+            { "key": "D", "text": "stability" }
+          ],
+          "correct_answer": "A",
+          "hint": "Chỗ trống nằm giữa mạo từ 'A' và danh từ 'connection', nên nó phải là một tính từ.",
+          "explanation": "Chính xác. Tính từ 'stable' (ổn định) bổ nghĩa cho danh từ 'connection' tạo thành cụm 'một kết nối ổn định'.",
+          "translation": "Cần có một kết nối internet ổn định để ứng dụng chấm công có thể đồng bộ hóa dữ liệu theo thời gian thực."
+        },
+        {
+          "id": "q_adj_adv_033",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "To pass the JLPT N3, candidates must be able to read kanji characters _____ and accurately.",
+          "options": [
+            { "key": "A", "text": "quick" },
+            { "key": "B", "text": "quickly" },
+            { "key": "C", "text": "quickness" },
+            { "key": "D", "text": "quicker" }
+          ],
+          "correct_answer": "B",
+          "hint": "Liên từ 'and' nối hai từ cùng loại. Từ 'accurately' là trạng từ, nên từ cần điền cũng phải là trạng từ bổ nghĩa cho động từ 'read'.",
+          "explanation": "Chính xác. Trạng từ 'quickly' (một cách nhanh chóng) kết hợp với 'accurately' để chỉ cách thức đọc chữ Hán.",
+          "translation": "Để vượt qua kỳ thi JLPT N3, các thí sinh phải có khả năng đọc các chữ Hán một cách nhanh chóng và chính xác."
+        },
+        {
+          "id": "q_adj_adv_034",
+          "part": 5,
+          "grammar_topic": "Adverb (Confusing Adverbs)",
+          "difficulty_level": "Hard",
+          "question_text": "Because of the heavy rain, the delivery truck could _____ see the road signs while transporting the Happy Box orders.",
+          "options": [
+            { "key": "A", "text": "hard" },
+            { "key": "B", "text": "hardly" },
+            { "key": "C", "text": "harder" },
+            { "key": "D", "text": "hardest" }
+          ],
+          "correct_answer": "B",
+          "hint": "Ngữ cảnh: Trời mưa rất to nên tài xế 'hầu như không thể' nhìn thấy biển báo. 'Hardly' mang nghĩa là 'hầu như không', còn 'hard' mang nghĩa 'chăm chỉ/khó khăn'.",
+          "explanation": "Chính xác. Trạng từ 'hardly' (hầu như không) được dùng để mang ý nghĩa phủ định một phần do thời tiết xấu.",
+          "translation": "Do trời mưa to, chiếc xe tải giao hàng hầu như không thể nhìn thấy các biển báo trên đường trong khi vận chuyển các đơn hàng Happy Box."
+        },
+        {
+          "id": "q_adj_adv_035",
+          "part": 5,
+          "grammar_topic": "Adjective (Participle)",
+          "difficulty_level": "Hard",
+          "question_text": "We are seeking a highly _____ software engineer to lead the development of our new interactive learning platform.",
+          "options": [
+            { "key": "A", "text": "motivate" },
+            { "key": "B", "text": "motivating" },
+            { "key": "C", "text": "motivated" },
+            { "key": "D", "text": "motivation" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cần một tính từ đứng trước danh từ chỉ người 'software engineer'. Cụm 'highly motivated' là một cụm từ cố định trong tuyển dụng, mang nghĩa 'có động lực cao/cầu tiến'.",
+          "explanation": "Chính xác. Tính từ dạng V-ed 'motivated' (có động lực/nhiệt huyết) được dùng để miêu tả phẩm chất, thái độ của người kỹ sư.",
+          "translation": "Chúng tôi đang tìm kiếm một kỹ sư phần mềm có động lực cao để dẫn dắt việc phát triển nền tảng học tập tương tác mới của chúng tôi."
+        },
+        {
+          "id": "q_adj_adv_036",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "The transition to the new personnel management system was _____ smooth, thanks to the IT department's preparation.",
+          "options": [
+            { "key": "A", "text": "surprise" },
+            { "key": "B", "text": "surprising" },
+            { "key": "C", "text": "surprisingly" },
+            { "key": "D", "text": "surprised" }
+          ],
+          "correct_answer": "C",
+          "hint": "Tính từ 'smooth' (suôn sẻ) đã có mặt để bổ nghĩa cho chủ ngữ. Chúng ta cần một trạng từ đứng trước để nhấn mạnh mức độ của tính từ đó.",
+          "explanation": "Chính xác. Trạng từ 'surprisingly' (đáng ngạc nhiên) bổ nghĩa cho tính từ 'smooth', tạo thành cụm 'suôn sẻ một cách đáng ngạc nhiên'.",
+          "translation": "Việc chuyển đổi sang hệ thống quản lý nhân sự mới diễn ra suôn sẻ một cách đáng ngạc nhiên, nhờ vào sự chuẩn bị của bộ phận CNTT."
+        },
+        {
+          "id": "q_adj_adv_037",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Easy",
+          "question_text": "It is _____ to practice speaking out loud if you want to improve your English pronunciation.",
+          "options": [
+            { "key": "A", "text": "essentials" },
+            { "key": "B", "text": "essentially" },
+            { "key": "C", "text": "essential" },
+            { "key": "D", "text": "essence" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cấu trúc chủ ngữ giả: 'It is + Tính từ + to do something' (Thật là... khi làm việc gì đó).",
+          "explanation": "Chính xác. Tính từ 'essential' (cần thiết/thiết yếu) khớp với cấu trúc trên.",
+          "translation": "Việc luyện nói thành tiếng là rất cần thiết nếu bạn muốn cải thiện cách phát âm tiếng Anh của mình."
+        },
+        {
+          "id": "q_adj_adv_038",
+          "part": 5,
+          "grammar_topic": "Adverb (Confusing Adverbs)",
+          "difficulty_level": "Hard",
+          "question_text": "The adaptive roadmap feature on the PrepMaster app is _____ recommended by top language instructors.",
+          "options": [
+            { "key": "A", "text": "high" },
+            { "key": "B", "text": "highly" },
+            { "key": "C", "text": "highest" },
+            { "key": "D", "text": "higher" }
+          ],
+          "correct_answer": "B",
+          "hint": "'Highly recommended' là một cụm collocation cố định mang nghĩa 'được đánh giá cao/được khuyên dùng rất nhiều'. 'High' thường chỉ chiều cao vật lý.",
+          "explanation": "Chính xác. Trạng từ 'highly' (rất/hết sức) bổ nghĩa cho động từ phân từ hai 'recommended'.",
+          "translation": "Tính năng lộ trình thích ứng trên ứng dụng PrepMaster được các giáo viên ngôn ngữ hàng đầu đánh giá rất cao."
+        },
+        {
+          "id": "q_adj_adv_039",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Medium",
+          "question_text": "We offer a _____ range of customization options for corporate clients ordering holiday gift boxes.",
+          "options": [
+            { "key": "A", "text": "broad" },
+            { "key": "B", "text": "broadly" },
+            { "key": "C", "text": "broaden" },
+            { "key": "D", "text": "broadness" }
+          ],
+          "correct_answer": "A",
+          "hint": "Đứng trước danh từ 'range', bạn cần một tính từ. Cụm 'a broad range of' là một cụm từ cố định mang nghĩa 'một loạt các/sự đa dạng lớn'.",
+          "explanation": "Chính xác. Tính từ 'broad' (rộng/đa dạng) tạo thành cụm 'a broad range of' phổ biến trong tiếng Anh kinh doanh.",
+          "translation": "Chúng tôi cung cấp một loạt các tùy chọn tùy chỉnh đa dạng cho khách hàng doanh nghiệp khi đặt mua các hộp quà tặng dịp lễ."
+        },
+        {
+          "id": "q_adj_adv_040",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Easy",
+          "question_text": "The HR manager _____ requested that all employees update their profile information by Friday.",
+          "options": [
+            { "key": "A", "text": "formal" },
+            { "key": "B", "text": "formalize" },
+            { "key": "C", "text": "formality" },
+            { "key": "D", "text": "formally" }
+          ],
+          "correct_answer": "D",
+          "hint": "Cần một trạng từ đứng trước động từ 'requested' để miêu tả cách thức đưa ra yêu cầu này.",
+          "explanation": "Chính xác. Trạng từ 'formally' (một cách chính thức/trang trọng) bổ nghĩa cho động từ 'requested'.",
+          "translation": "Người quản lý nhân sự đã chính thức yêu cầu tất cả nhân viên cập nhật thông tin hồ sơ của họ trước thứ Sáu."
+        },
+        {
+          "id": "q_adj_adv_041",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "Before the official release, the QA team tested the mobile timekeeping app _____ to ensure there were no bugs.",
+          "options": [
+            { "key": "A", "text": "thorough" },
+            { "key": "B", "text": "thoroughly" },
+            { "key": "C", "text": "thoroughness" },
+            { "key": "D", "text": "thoroughly as" }
+          ],
+          "correct_answer": "B",
+          "hint": "Chỗ trống nằm sau tân ngữ của động từ 'tested', cần một từ để bổ nghĩa cho cách thức kiểm tra (kiểm tra như thế nào?).",
+          "explanation": "Chính xác. Trạng từ 'thoroughly' (một cách kỹ lưỡng) bổ nghĩa cho động từ 'tested'.",
+          "translation": "Trước khi phát hành chính thức, đội ngũ QA đã kiểm tra ứng dụng chấm công trên thiết bị di động một cách kỹ lưỡng để đảm bảo không có lỗi."
+        },
+        {
+          "id": "q_adj_adv_042",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Medium",
+          "question_text": "The new _____ roadmap feature in PrepMaster helps learners adjust their study plans based on their daily progress.",
+          "options": [
+            { "key": "A", "text": "adapt" },
+            { "key": "B", "text": "adaptively" },
+            { "key": "C", "text": "adaptation" },
+            { "key": "D", "text": "adaptive" }
+          ],
+          "correct_answer": "D",
+          "hint": "Cần một tính từ bổ nghĩa cho cụm danh từ 'roadmap feature' (tính năng lộ trình).",
+          "explanation": "Chính xác. Tính từ 'adaptive' (có tính thích ứng) đứng trước danh từ để tạo thành cụm 'tính năng lộ trình thích ứng'.",
+          "translation": "Tính năng lộ trình thích ứng mới trong PrepMaster giúp người học điều chỉnh kế hoạch học tập dựa trên tiến độ hàng ngày của họ."
+        },
+        {
+          "id": "q_adj_adv_043",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Hard",
+          "question_text": "Sales of the corporate Happy Box packages have been _____ strong this quarter despite the economic downturn.",
+          "options": [
+            { "key": "A", "text": "surprise" },
+            { "key": "B", "text": "surprising" },
+            { "key": "C", "text": "surprisingly" },
+            { "key": "D", "text": "surprised" }
+          ],
+          "correct_answer": "C",
+          "hint": "Trước tính từ 'strong' (mạnh mẽ), chúng ta cần một trạng từ chỉ mức độ để bổ nghĩa cho tính từ đó.",
+          "explanation": "Chính xác. Trạng từ 'surprisingly' (đáng ngạc nhiên) bổ nghĩa cho tính từ 'strong', mang nghĩa 'tăng trưởng mạnh mẽ một cách đáng ngạc nhiên'.",
+          "translation": "Doanh số của các gói quà tặng doanh nghiệp Happy Box đã tăng trưởng mạnh mẽ một cách đáng ngạc nhiên trong quý này bất chấp suy thoái kinh tế."
+        },
+        {
+          "id": "q_adj_adv_044",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Easy",
+          "question_text": "To build an audience on TikTok, it is highly recommended to maintain a _____ posting schedule.",
+          "options": [
+            { "key": "A", "text": "consistently" },
+            { "key": "B", "text": "consistency" },
+            { "key": "C", "text": "consistent" },
+            { "key": "D", "text": "consist" }
+          ],
+          "correct_answer": "C",
+          "hint": "Chỗ trống đứng giữa mạo từ 'a' và cụm danh từ 'posting schedule' (lịch đăng bài).",
+          "explanation": "Chính xác. Tính từ 'consistent' (nhất quán/đều đặn) bổ nghĩa cho danh từ phía sau.",
+          "translation": "Để xây dựng lượng khán giả trên TikTok, việc duy trì một lịch đăng bài đều đặn được khuyến khích rất nhiều."
+        },
+        {
+          "id": "q_adj_adv_045",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "Students preparing for the JLPT N3 must _____ review kanji characters to prevent forgetting them.",
+          "options": [
+            { "key": "A", "text": "constant" },
+            { "key": "B", "text": "constantly" },
+            { "key": "C", "text": "constancy" },
+            { "key": "D", "text": "constants" }
+          ],
+          "correct_answer": "B",
+          "hint": "Cần một trạng từ đứng trước động từ 'review' (ôn tập) để chỉ tần suất/cách thức của hành động.",
+          "explanation": "Chính xác. Trạng từ 'constantly' (liên tục/không ngừng) bổ nghĩa cho động từ 'review'.",
+          "translation": "Học sinh chuẩn bị cho kỳ thi JLPT N3 phải liên tục ôn tập các chữ Hán để tránh quên chúng."
+        },
+        {
+          "id": "q_adj_adv_046",
+          "part": 5,
+          "grammar_topic": "Adjective (Comparative)",
+          "difficulty_level": "Medium",
+          "question_text": "The gamified learning features make the PrepMaster app much _____ than traditional textbooks.",
+          "options": [
+            { "key": "A", "text": "engaging" },
+            { "key": "B", "text": "more engaging" },
+            { "key": "C", "text": "most engaging" },
+            { "key": "D", "text": "engagingly" }
+          ],
+          "correct_answer": "B",
+          "hint": "Từ 'than' là tín hiệu của so sánh hơn. 'Engaging' là tính từ dài nên cần dùng cấu trúc phù hợp.",
+          "explanation": "Chính xác. Dạng so sánh hơn của tính từ dài là 'more engaging' (thu hút hơn). Từ 'much' đứng trước để nhấn mạnh.",
+          "translation": "Các tính năng học tập được game hóa làm cho ứng dụng PrepMaster thu hút hơn nhiều so với sách giáo khoa truyền thống."
+        },
+        {
+          "id": "q_adj_adv_047",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Hard",
+          "question_text": "_____, human resources managers had to process timesheets manually, but now the new mobile app automates this task.",
+          "options": [
+            { "key": "A", "text": "Tradition" },
+            { "key": "B", "text": "Traditional" },
+            { "key": "C", "text": "Traditionally" },
+            { "key": "D", "text": "Traditionalist" }
+          ],
+          "correct_answer": "C",
+          "hint": "Đứng ở đầu câu và được ngăn cách bởi dấu phẩy, từ cần điền phải là một trạng từ để bổ nghĩa cho toàn bộ mệnh đề phía sau.",
+          "explanation": "Chính xác. Trạng từ 'Traditionally' (Theo truyền thống/Trước đây) bổ nghĩa cho cả câu, tạo sự đối lập với 'now' ở vế sau.",
+          "translation": "Theo truyền thống, các nhà quản lý nhân sự phải xử lý bảng chấm công theo cách thủ công, nhưng giờ đây ứng dụng di động mới đã tự động hóa công việc này."
+        },
+        {
+          "id": "q_adj_adv_048",
+          "part": 5,
+          "grammar_topic": "Adjective (-ed vs -ing)",
+          "difficulty_level": "Medium",
+          "question_text": "The candidate felt extremely _____ when the code test platform crashed during his Mobile Developer Intern interview.",
+          "options": [
+            { "key": "A", "text": "frustrate" },
+            { "key": "B", "text": "frustrating" },
+            { "key": "C", "text": "frustration" },
+            { "key": "D", "text": "frustrated" }
+          ],
+          "correct_answer": "D",
+          "hint": "Động từ 'felt' (cảm thấy) yêu cầu tính từ theo sau. Khi diễn tả cảm xúc của một người bị tác động bởi ngoại cảnh, ta dùng tính từ đuôi -ed.",
+          "explanation": "Chính xác. Tính từ 'frustrated' (bực bội/tuyệt vọng) diễn tả cảm xúc của ứng viên khi nền tảng bị lỗi.",
+          "translation": "Ứng viên cảm thấy vô cùng bực bội khi nền tảng kiểm tra mã nguồn bị sập trong cuộc phỏng vấn vị trí Thực tập sinh Mobile Developer."
+        },
+        {
+          "id": "q_adj_adv_049",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Easy",
+          "question_text": "Any emails regarding custom Happy Box orders are answered _____ by our dedicated sales team.",
+          "options": [
+            { "key": "A", "text": "prompt" },
+            { "key": "B", "text": "promptness" },
+            { "key": "C", "text": "promptly" },
+            { "key": "D", "text": "prompting" }
+          ],
+          "correct_answer": "C",
+          "hint": "Từ cần điền bổ nghĩa cho động từ bị động 'are answered', trả lời cho câu hỏi 'được trả lời như thế nào?'.",
+          "explanation": "Chính xác. Trạng từ 'promptly' (một cách nhanh chóng/ngay lập tức) bổ nghĩa cho động từ 'answered'.",
+          "translation": "Mọi email liên quan đến các đơn hàng Happy Box tùy chỉnh đều được đội ngũ bán hàng tận tâm của chúng tôi trả lời một cách nhanh chóng."
+        },
+        {
+          "id": "q_adj_adv_050",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Hard",
+          "question_text": "Subscribers to the premium tier gain _____ access to advanced TOEIC practice tests and mock exams.",
+          "options": [
+            { "key": "A", "text": "exclude" },
+            { "key": "B", "text": "excluding" },
+            { "key": "C", "text": "exclusively" },
+            { "key": "D", "text": "exclusive" }
+          ],
+          "correct_answer": "D",
+          "hint": "Từ cần điền đứng trước danh từ 'access' (quyền truy cập) để bổ nghĩa cho nó.",
+          "explanation": "Chính xác. Tính từ 'exclusive' (độc quyền) kết hợp với 'access' tạo thành cụm 'exclusive access' (quyền truy cập độc quyền) rất phổ biến trong giới công nghệ.",
+          "translation": "Những người đăng ký gói cao cấp có quyền truy cập độc quyền vào các bài kiểm tra thực hành và thi thử TOEIC nâng cao."
+        },
+        {
+          "id": "q_adj_adv_051",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "The company policies _____ prohibit employees from using the timekeeping app on unregistered devices.",
+          "options": [
+            { "key": "A", "text": "strict" },
+            { "key": "B", "text": "strictness" },
+            { "key": "C", "text": "strictly" },
+            { "key": "D", "text": "stricter" }
+          ],
+          "correct_answer": "C",
+          "hint": "Chỗ trống nằm trước động từ chính 'prohibit' (cấm), cần một trạng từ để bổ nghĩa cho hành động cấm đoán này.",
+          "explanation": "Chính xác. Trạng từ 'strictly' (một cách nghiêm ngặt) bổ nghĩa cho 'prohibit', tạo thành cụm 'nghiêm cấm'.",
+          "translation": "Các chính sách của công ty nghiêm cấm nhân viên sử dụng ứng dụng chấm công trên các thiết bị chưa được đăng ký."
+        },
+        {
+          "id": "q_adj_adv_052",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Easy",
+          "question_text": "Practicing daily with short videos can help you become more _____ in English conversation.",
+          "options": [
+            { "key": "A", "text": "fluently" },
+            { "key": "B", "text": "fluency" },
+            { "key": "C", "text": "fluent" },
+            { "key": "D", "text": "fluents" }
+          ],
+          "correct_answer": "C",
+          "hint": "Động từ 'become' là một linking verb (động từ liên kết), sau nó phải là một tính từ.",
+          "explanation": "Chính xác. Tính từ 'fluent' (trôi chảy) đứng sau 'become' để miêu tả trạng thái của người nói.",
+          "translation": "Việc luyện tập hàng ngày với các video ngắn có thể giúp bạn trở nên trôi chảy hơn trong giao tiếp tiếng Anh."
+        },
+        {
+          "id": "q_adj_adv_053",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Hard",
+          "question_text": "The new partnership between Happy Box and the logistics firm is _____ beneficial, reducing shipping costs for both parties.",
+          "options": [
+            { "key": "A", "text": "mutual" },
+            { "key": "B", "text": "mutually" },
+            { "key": "C", "text": "mutuals" },
+            { "key": "D", "text": "mutuality" }
+          ],
+          "correct_answer": "B",
+          "hint": "Đứng trước tính từ 'beneficial' (có lợi), bạn cần một trạng từ để bổ nghĩa cho nó.",
+          "explanation": "Chính xác. Trạng từ 'mutually' (lẫn nhau) kết hợp với 'beneficial' tạo thành cụm 'mutually beneficial' (có lợi cho đôi bên).",
+          "translation": "Mối quan hệ đối tác mới giữa Happy Box và công ty hậu cần mang lại lợi ích cho đôi bên, giảm thiểu chi phí vận chuyển cho cả hai phía."
+        },
+        {
+          "id": "q_adj_adv_054",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Medium",
+          "question_text": "The IT department guaranteed that the new servers would be highly _____ even during peak web traffic.",
+          "options": [
+            { "key": "A", "text": "rely" },
+            { "key": "B", "text": "reliably" },
+            { "key": "C", "text": "reliance" },
+            { "key": "D", "text": "reliable" }
+          ],
+          "correct_answer": "D",
+          "hint": "Sau động từ to be 'would be' và trạng từ chỉ mức độ 'highly', ta cần một tính từ miêu tả máy chủ (servers).",
+          "explanation": "Chính xác. Tính từ 'reliable' (đáng tin cậy) bổ nghĩa cho danh từ 'servers'.",
+          "translation": "Bộ phận CNTT đảm bảo rằng các máy chủ mới sẽ cực kỳ đáng tin cậy ngay cả trong những thời điểm lưu lượng truy cập web đạt đỉnh."
+        },
+        {
+          "id": "q_adj_adv_055",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "The PrepMaster application will be _____ unavailable on Sunday night due to scheduled database maintenance.",
+          "options": [
+            { "key": "A", "text": "temporary" },
+            { "key": "B", "text": "temporarily" },
+            { "key": "C", "text": "temporariness" },
+            { "key": "D", "text": "temporaries" }
+          ],
+          "correct_answer": "B",
+          "hint": "Cần một trạng từ đứng trước tính từ 'unavailable' (không khả dụng) để bổ nghĩa về mặt thời gian cho tính từ này.",
+          "explanation": "Chính xác. Trạng từ 'temporarily' (một cách tạm thời) bổ nghĩa cho tính từ phía sau.",
+          "translation": "Ứng dụng PrepMaster sẽ tạm thời không khả dụng vào tối Chủ nhật do bảo trì cơ sở dữ liệu theo lịch trình."
+        },
+        {
+          "id": "q_adj_adv_056",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Medium",
+          "question_text": "Learning Japanese and English concurrently can be incredibly _____ if you use an organized tracking system.",
+          "options": [
+            { "key": "A", "text": "benefit" },
+            { "key": "B", "text": "beneficially" },
+            { "key": "C", "text": "beneficial" },
+            { "key": "D", "text": "benefited" }
+          ],
+          "correct_answer": "C",
+          "hint": "Đứng sau 'can be' và trạng từ 'incredibly', ta cần một tính từ để miêu tả việc học hai ngôn ngữ.",
+          "explanation": "Chính xác. Tính từ 'beneficial' (có lợi/hữu ích) miêu tả chủ ngữ của câu.",
+          "translation": "Việc học tiếng Nhật và tiếng Anh cùng lúc có thể cực kỳ hữu ích nếu bạn sử dụng một hệ thống theo dõi có tổ chức."
+        },
+        {
+          "id": "q_adj_adv_057",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Easy",
+          "question_text": "Please handle the glass items in the corporate gift boxes _____ to avoid any breakages during delivery.",
+          "options": [
+            { "key": "A", "text": "care" },
+            { "key": "B", "text": "careful" },
+            { "key": "C", "text": "carefully" },
+            { "key": "D", "text": "careless" }
+          ],
+          "correct_answer": "C",
+          "hint": "Động từ 'handle' (xử lý/cầm nắm) cần một trạng từ để miêu tả cách thức.",
+          "explanation": "Chính xác. Trạng từ 'carefully' (một cách cẩn thận) bổ nghĩa cho hành động 'handle'.",
+          "translation": "Vui lòng xử lý các món đồ thủy tinh trong hộp quà tặng doanh nghiệp một cách cẩn thận để tránh vỡ trong quá trình giao hàng."
+        },
+        {
+          "id": "q_adj_adv_058",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Medium",
+          "question_text": "The lead developer proposed making the TOEIC grammar exercises more _____ by adding sound effects and timers.",
+          "options": [
+            { "key": "A", "text": "interact" },
+            { "key": "B", "text": "interaction" },
+            { "key": "C", "text": "interactively" },
+            { "key": "D", "text": "interactive" }
+          ],
+          "correct_answer": "D",
+          "hint": "Cấu trúc 'make + tân ngữ + tính từ' (làm cho cái gì đó trở nên thế nào).",
+          "explanation": "Chính xác. Tính từ 'interactive' (có tính tương tác) đứng sau tân ngữ 'exercises' để miêu tả trạng thái mới của bài tập.",
+          "translation": "Lập trình viên chính đề xuất làm cho các bài tập ngữ pháp TOEIC trở nên tương tác hơn bằng cách thêm hiệu ứng âm thanh và đồng hồ đếm ngược."
+        },
+        {
+          "id": "q_adj_adv_059",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Easy",
+          "question_text": "The student is _____ working on optimizing his CV to apply for a Mobile Developer Intern position.",
+          "options": [
+            { "key": "A", "text": "current" },
+            { "key": "B", "text": "currently" },
+            { "key": "C", "text": "currency" },
+            { "key": "D", "text": "currents" }
+          ],
+          "correct_answer": "B",
+          "hint": "Từ cần điền đứng giữa to be 'is' và động từ V-ing 'working', mang nghĩa 'hiện tại/ngay lúc này'.",
+          "explanation": "Chính xác. Trạng từ 'currently' (hiện tại) là dấu hiệu nhận biết của thì hiện tại tiếp diễn.",
+          "translation": "Sinh viên hiện đang nỗ lực tối ưu hóa CV của mình để ứng tuyển vào vị trí Thực tập sinh Mobile Developer."
+        },
+        {
+          "id": "q_adj_adv_060",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Hard",
+          "question_text": "The HR software generates a _____ overview of all employee activities, including working hours and leave days.",
+          "options": [
+            { "key": "A", "text": "comprehend" },
+            { "key": "B", "text": "comprehensible" },
+            { "key": "C", "text": "comprehensive" },
+            { "key": "D", "text": "comprehensively" }
+          ],
+          "correct_answer": "C",
+          "hint": "Từ cần điền là tính từ bổ nghĩa cho 'overview' (bản đánh giá tổng quan). Cẩn thận nhầm lẫn giữa 'có thể hiểu được' và 'toàn diện/đầy đủ'.",
+          "explanation": "Chính xác. Tính từ 'comprehensive' mang nghĩa 'toàn diện, bao quát'. 'Comprehensible' lại mang nghĩa 'có thể hiểu được', không hợp logic câu.",
+          "translation": "Phần mềm nhân sự tạo ra một bản đánh giá tổng quan toàn diện về tất cả các hoạt động của nhân viên, bao gồm giờ làm việc và những ngày nghỉ phép."
+        },
+        {
+          "id": "q_adj_adv_061",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Easy",
+          "question_text": "The automated HR system _____ updates the employee database at midnight to reflect any changes in leave balances.",
+          "options": [
+            { "key": "A", "text": "automatic" },
+            { "key": "B", "text": "automate" },
+            { "key": "C", "text": "automatically" },
+            { "key": "D", "text": "automation" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cần một trạng từ đứng trước động từ chính 'updates' để miêu tả cách thức hệ thống thực hiện hành động này.",
+          "explanation": "Chính xác. Trạng từ 'automatically' (một cách tự động) bổ nghĩa cho động từ 'updates'.",
+          "translation": "Hệ thống nhân sự tự động hóa sẽ tự động cập nhật cơ sở dữ liệu nhân viên vào lúc nửa đêm để phản ánh bất kỳ thay đổi nào về số ngày nghỉ phép."
+        },
+        {
+          "id": "q_adj_adv_062",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Medium",
+          "question_text": "To successfully apply for the Mobile Developer Intern position, it is _____ to showcase a strong portfolio of past projects.",
+          "options": [
+            { "key": "A", "text": "essence" },
+            { "key": "B", "text": "essentially" },
+            { "key": "C", "text": "essentials" },
+            { "key": "D", "text": "essential" }
+          ],
+          "correct_answer": "D",
+          "hint": "Cấu trúc chủ ngữ giả: 'It is + Tính từ + to do something' (Thật là... khi làm việc gì đó).",
+          "explanation": "Chính xác. Tính từ 'essential' (cần thiết/thiết yếu) đứng sau 'is' để miêu tả tầm quan trọng của việc có một portfolio mạnh.",
+          "translation": "Để ứng tuyển thành công vào vị trí Thực tập sinh Mobile Developer, việc thể hiện một danh mục các dự án quá khứ ấn tượng là rất cần thiết."
+        },
+        {
+          "id": "q_adj_adv_063",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "The new gamified features on the PrepMaster platform are _____ popular among high school students studying for the TOEIC.",
+          "options": [
+            { "key": "A", "text": "extreme" },
+            { "key": "B", "text": "extremely" },
+            { "key": "C", "text": "extremity" },
+            { "key": "D", "text": "extremes" }
+          ],
+          "correct_answer": "B",
+          "hint": "Đứng trước tính từ 'popular' (phổ biến), ta cần một trạng từ chỉ mức độ để nhấn mạnh.",
+          "explanation": "Chính xác. Trạng từ 'extremely' (cực kỳ) bổ nghĩa cho tính từ 'popular'.",
+          "translation": "Các tính năng trò chơi hóa mới trên nền tảng PrepMaster cực kỳ phổ biến đối với các học sinh trung học đang ôn thi TOEIC."
+        },
+        {
+          "id": "q_adj_adv_064",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Hard",
+          "question_text": "Happy Box guarantees that all materials used for their corporate gifts are environmentally _____.",
+          "options": [
+            { "key": "A", "text": "sustainably" },
+            { "key": "B", "text": "sustain" },
+            { "key": "C", "text": "sustainable" },
+            { "key": "D", "text": "sustainability" }
+          ],
+          "correct_answer": "C",
+          "hint": "Đứng sau động từ to be 'are' và trạng từ 'environmentally', ta cần một tính từ miêu tả chủ ngữ 'all materials'.",
+          "explanation": "Chính xác. Tính từ 'sustainable' (bền vững) kết hợp với trạng từ phía trước tạo thành cụm 'environmentally sustainable' (bền vững về mặt môi trường).",
+          "translation": "Happy Box đảm bảo rằng tất cả các vật liệu được sử dụng cho quà tặng doanh nghiệp của họ đều bền vững về mặt môi trường."
+        },
+        {
+          "id": "q_adj_adv_065",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Easy",
+          "question_text": "During the live stream, the TikTok creator answered her followers' questions about learning English _____ and clearly.",
+          "options": [
+            { "key": "A", "text": "patient" },
+            { "key": "B", "text": "patience" },
+            { "key": "C", "text": "patiently" },
+            { "key": "D", "text": "patients" }
+          ],
+          "correct_answer": "C",
+          "hint": "Liên từ 'and' nối hai từ cùng loại. 'Clearly' là trạng từ, nên chỗ trống cũng phải là trạng từ bổ nghĩa cho động từ 'answered'.",
+          "explanation": "Chính xác. Trạng từ 'patiently' (một cách kiên nhẫn) song hành cùng 'clearly' để miêu tả cách thức trả lời câu hỏi.",
+          "translation": "Trong suốt buổi phát trực tiếp, nhà sáng tạo trên TikTok đã trả lời các câu hỏi của người theo dõi về việc học tiếng Anh một cách kiên nhẫn và rõ ràng."
+        },
+        {
+          "id": "q_adj_adv_066",
+          "part": 5,
+          "grammar_topic": "Adjective (Comparative)",
+          "difficulty_level": "Medium",
+          "question_text": "Using the new mobile timekeeping app is much _____ than signing paper attendance sheets every morning.",
+          "options": [
+            { "key": "A", "text": "easy" },
+            { "key": "B", "text": "easily" },
+            { "key": "C", "text": "easier" },
+            { "key": "D", "text": "easiest" }
+          ],
+          "correct_answer": "C",
+          "hint": "Từ 'than' là dấu hiệu của cấu trúc so sánh hơn. Tính từ kết thúc bằng 'y' đổi thành 'ier'.",
+          "explanation": "Chính xác. Tính từ so sánh hơn 'easier' (dễ dàng hơn) phù hợp với cấu trúc câu. 'Much' dùng để nhấn mạnh mức độ so sánh.",
+          "translation": "Sử dụng ứng dụng chấm công di động mới dễ dàng hơn nhiều so với việc ký tên vào các tờ điểm danh bằng giấy mỗi sáng."
+        },
+        {
+          "id": "q_adj_adv_067",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "The software engineers worked _____ to deploy the latest EduKit update before the deadline.",
+          "options": [
+            { "key": "A", "text": "diligent" },
+            { "key": "B", "text": "diligence" },
+            { "key": "C", "text": "diligently" },
+            { "key": "D", "text": "diligents" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cần một trạng từ đứng sau động từ thường 'worked' để miêu tả thái độ làm việc của các kỹ sư.",
+          "explanation": "Chính xác. Trạng từ 'diligently' (một cách chăm chỉ/cần mẫn) bổ nghĩa cho hành động 'worked'.",
+          "translation": "Các kỹ sư phần mềm đã làm việc cần mẫn để triển khai bản cập nhật EduKit mới nhất trước hạn chót."
+        },
+        {
+          "id": "q_adj_adv_068",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Easy",
+          "question_text": "The HR manager gave a _____ presentation on how to navigate the new personnel management portal.",
+          "options": [
+            { "key": "A", "text": "briefly" },
+            { "key": "B", "text": "briefness" },
+            { "key": "C", "text": "brief" },
+            { "key": "D", "text": "briefing" }
+          ],
+          "correct_answer": "C",
+          "hint": "Nằm giữa mạo từ 'a' và danh từ 'presentation', bạn cần một tính từ.",
+          "explanation": "Chính xác. Tính từ 'brief' (ngắn gọn) bổ nghĩa cho danh từ 'presentation' tạo thành cụm 'một bài thuyết trình ngắn gọn'.",
+          "translation": "Người quản lý nhân sự đã có một bài thuyết trình ngắn gọn về cách điều hướng cổng thông tin quản lý nhân sự mới."
+        },
+        {
+          "id": "q_adj_adv_069",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "Students preparing for the JLPT N3 should study vocabulary _____, rather than cramming the night before the exam.",
+          "options": [
+            { "key": "A", "text": "consistent" },
+            { "key": "B", "text": "consistently" },
+            { "key": "C", "text": "consistency" },
+            { "key": "D", "text": "consists" }
+          ],
+          "correct_answer": "B",
+          "hint": "Từ cần điền bổ nghĩa cho hành động 'study vocabulary' (học từ vựng), diễn tả cách thức học tập.",
+          "explanation": "Chính xác. Trạng từ 'consistently' (một cách đều đặn/kiên trì) bổ nghĩa cho động từ 'study'.",
+          "translation": "Học sinh chuẩn bị cho kỳ thi JLPT N3 nên học từ vựng một cách đều đặn, thay vì nhồi nhét vào đêm trước kỳ thi."
+        },
+        {
+          "id": "q_adj_adv_070",
+          "part": 5,
+          "grammar_topic": "Adjective (-ed vs -ing)",
+          "difficulty_level": "Medium",
+          "question_text": "The CEO was deeply _____ by the rapid growth of the PrepMaster user base in just two months.",
+          "options": [
+            { "key": "A", "text": "impress" },
+            { "key": "B", "text": "impressing" },
+            { "key": "C", "text": "impressed" },
+            { "key": "D", "text": "impression" }
+          ],
+          "correct_answer": "C",
+          "hint": "Khi diễn tả cảm xúc của một người (bị tác động bởi sự việc khác), ta dùng tính từ đuôi -ed.",
+          "explanation": "Chính xác. Tính từ 'impressed' (bị ấn tượng) kết hợp với giới từ 'by' để miêu tả cảm giác của vị Giám đốc điều hành.",
+          "translation": "Giám đốc điều hành đã bị ấn tượng sâu sắc bởi sự tăng trưởng nhanh chóng của lượng người dùng PrepMaster chỉ trong hai tháng."
+        },
+        {
+          "id": "q_adj_adv_071",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "If the mobile application crashes _____, users are advised to reinstall it to clear the corrupted cache.",
+          "options": [
+            { "key": "A", "text": "repeated" },
+            { "key": "B", "text": "repeat" },
+            { "key": "C", "text": "repetition" },
+            { "key": "D", "text": "repeatedly" }
+          ],
+          "correct_answer": "D",
+          "hint": "Cần một trạng từ đứng sau động từ 'crashes' (bị sập) để bổ nghĩa cho tần suất xảy ra lỗi.",
+          "explanation": "Chính xác. Trạng từ 'repeatedly' (nhiều lần/lặp đi lặp lại) bổ nghĩa cho động từ 'crashes'.",
+          "translation": "Nếu ứng dụng di động liên tục bị sập, người dùng được khuyên nên cài đặt lại nó để xóa bộ nhớ đệm bị lỗi."
+        },
+        {
+          "id": "q_adj_adv_072",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Easy",
+          "question_text": "Creating a _____ TikTok video for language learners requires not only good content but also clear audio.",
+          "options": [
+            { "key": "A", "text": "success" },
+            { "key": "B", "text": "successfully" },
+            { "key": "C", "text": "succeed" },
+            { "key": "D", "text": "successful" }
+          ],
+          "correct_answer": "D",
+          "hint": "Đứng giữa mạo từ 'a' và cụm danh từ 'TikTok video', ta cần một tính từ.",
+          "explanation": "Chính xác. Tính từ 'successful' (thành công) bổ nghĩa cho danh từ 'video' tạo thành 'một video thành công'.",
+          "translation": "Việc tạo ra một video TikTok thành công cho người học ngôn ngữ không chỉ đòi hỏi nội dung tốt mà còn cần âm thanh rõ ràng."
+        },
+        {
+          "id": "q_adj_adv_073",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "_____, the server maintenance was completed ahead of schedule without disrupting the students' online learning sessions.",
+          "options": [
+            { "key": "A", "text": "Lucky" },
+            { "key": "B", "text": "Luckily" },
+            { "key": "C", "text": "Luck" },
+            { "key": "D", "text": "Luckiness" }
+          ],
+          "correct_answer": "B",
+          "hint": "Đứng ở đầu câu và có dấu phẩy ngăn cách, cần một trạng từ để bổ nghĩa cho toàn bộ sự việc ở mệnh đề sau.",
+          "explanation": "Chính xác. Trạng từ 'Luckily' (Thật may mắn) bổ nghĩa cho toàn bộ câu.",
+          "translation": "Thật may mắn, việc bảo trì máy chủ đã được hoàn thành trước thời hạn mà không làm gián đoạn các buổi học trực tuyến của sinh viên."
+        },
+        {
+          "id": "q_adj_adv_074",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Medium",
+          "question_text": "The newly customized Happy Box is the most _____ product in our entire holiday catalog this season.",
+          "options": [
+            { "key": "A", "text": "profit" },
+            { "key": "B", "text": "profitably" },
+            { "key": "C", "text": "profitable" },
+            { "key": "D", "text": "profitability" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cấu trúc so sánh nhất 'the most' luôn đi kèm với một tính từ dài (hoặc trạng từ dài). Sau nó là danh từ 'product', nên ta cần tính từ.",
+          "explanation": "Chính xác. Tính từ 'profitable' (mang lại lợi nhuận) hoàn thiện cấu trúc so sánh nhất 'the most profitable product'.",
+          "translation": "Hộp quà Happy Box mới được tùy chỉnh là sản phẩm mang lại lợi nhuận cao nhất trong toàn bộ danh mục sản phẩm dịp lễ của chúng tôi mùa này."
+        },
+        {
+          "id": "q_adj_adv_075",
+          "part": 5,
+          "grammar_topic": "Adverb (Confusing Adverbs)",
+          "difficulty_level": "Hard",
+          "question_text": "The senior engineer spoke _____ of the new intern's contribution to the mobile development team.",
+          "options": [
+            { "key": "A", "text": "high" },
+            { "key": "B", "text": "highest" },
+            { "key": "C", "text": "higher" },
+            { "key": "D", "text": "highly" }
+          ],
+          "correct_answer": "D",
+          "hint": "Cụm 'speak highly of someone' là một thành ngữ mang nghĩa 'đánh giá cao ai đó / khen ngợi ai đó hết lời'.",
+          "explanation": "Chính xác. Trạng từ 'highly' kết hợp với động từ 'spoke' tạo thành một cụm collocation cố định phổ biến trong công sở.",
+          "translation": "Kỹ sư cấp cao đã đánh giá rất cao sự đóng góp của thực tập sinh mới cho nhóm phát triển thiết bị di động."
+        },
+        {
+          "id": "q_adj_adv_076",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Easy",
+          "question_text": "A _____ internet connection is vital for the real-time data syncing feature of the timekeeping app.",
+          "options": [
+            { "key": "A", "text": "secure" },
+            { "key": "B", "text": "securely" },
+            { "key": "C", "text": "security" },
+            { "key": "D", "text": "securing" }
+          ],
+          "correct_answer": "A",
+          "hint": "Cần một tính từ đứng giữa mạo từ 'A' và danh từ ghép 'internet connection'.",
+          "explanation": "Chính xác. Tính từ 'secure' (bảo mật / an toàn) bổ nghĩa cho danh từ kết nối internet.",
+          "translation": "Một kết nối internet bảo mật là rất quan trọng đối với tính năng đồng bộ hóa dữ liệu theo thời gian thực của ứng dụng chấm công."
+        },
+        {
+          "id": "q_adj_adv_077",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "The TOEIC practice tests on the EduKit platform are _____ designed to mimic the exact difficulty of the real exam.",
+          "options": [
+            { "key": "A", "text": "specific" },
+            { "key": "B", "text": "specifically" },
+            { "key": "C", "text": "specify" },
+            { "key": "D", "text": "specification" }
+          ],
+          "correct_answer": "B",
+          "hint": "Chỗ trống nằm giữa to be 'are' và động từ phân từ hai 'designed', ta cần trạng từ để bổ nghĩa cho cách thức thiết kế.",
+          "explanation": "Chính xác. Trạng từ 'specifically' (một cách đặc biệt / dành riêng) bổ nghĩa cho hành động 'được thiết kế'.",
+          "translation": "Các bài thi thử TOEIC trên nền tảng EduKit được thiết kế đặc biệt để mô phỏng chính xác độ khó của kỳ thi thực tế."
+        },
+        {
+          "id": "q_adj_adv_078",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Medium",
+          "question_text": "The _____ growth of Happy Box's online sales is attributed to its innovative social media marketing strategy.",
+          "options": [
+            { "key": "A", "text": "rapidly" },
+            { "key": "B", "text": "rapidness" },
+            { "key": "C", "text": "rapids" },
+            { "key": "D", "text": "rapid" }
+          ],
+          "correct_answer": "D",
+          "hint": "Nằm giữa mạo từ 'The' và danh từ 'growth' (sự tăng trưởng), ta cần một tính từ.",
+          "explanation": "Chính xác. Tính từ 'rapid' (nhanh chóng) đứng trước danh từ 'growth' để tạo thành cụm 'sự tăng trưởng nhanh chóng'.",
+          "translation": "Sự tăng trưởng nhanh chóng doanh số bán hàng trực tuyến của Happy Box được cho là nhờ vào chiến lược tiếp thị truyền thông xã hội sáng tạo của hãng."
+        },
+        {
+          "id": "q_adj_adv_079",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "Please review the mobile app's terms of service _____ before clicking the 'Accept' button.",
+          "options": [
+            { "key": "A", "text": "thoroughly" },
+            { "key": "B", "text": "thorough" },
+            { "key": "C", "text": "thoroughness" },
+            { "key": "D", "text": "thoroughly as" }
+          ],
+          "correct_answer": "A",
+          "hint": "Từ cần điền đứng sau tân ngữ 'terms of service', bổ nghĩa cho hành động 'review' (xem xét).",
+          "explanation": "Chính xác. Trạng từ 'thoroughly' (một cách kỹ lưỡng) bổ nghĩa cho động từ 'review', chỉ cách thức đọc văn bản.",
+          "translation": "Vui lòng xem xét kỹ lưỡng các điều khoản dịch vụ của ứng dụng di động trước khi nhấp vào nút 'Chấp nhận'."
+        },
+        {
+          "id": "q_adj_adv_080",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Hard",
+          "question_text": "It is highly _____ that you complete all the beginner grammar modules before attempting the full TOEIC mock test.",
+          "options": [
+            { "key": "A", "text": "advise" },
+            { "key": "B", "text": "adviser" },
+            { "key": "C", "text": "advisable" },
+            { "key": "D", "text": "advising" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cấu trúc 'It is highly + Tính từ + that...' (Rất được khuyên rằng / Rất cần thiết rằng...). 'Advise' là động từ.",
+          "explanation": "Chính xác. Tính từ 'advisable' (đáng được khuyên / nên làm) đứng sau to be và trạng từ 'highly' để miêu tả tầm quan trọng của sự việc ở mệnh đề 'that'.",
+          "translation": "Bạn rất nên hoàn thành tất cả các mô-đun ngữ pháp cơ bản trước khi thử sức với bài thi thử TOEIC đầy đủ."
+        },
+        {
+          "id": "q_adj_adv_081",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Easy",
+          "question_text": "The HR portal _____ generates a summary of all employee absences at the end of each month.",
+          "options": [
+            { "key": "A", "text": "automatic" },
+            { "key": "B", "text": "automatically" },
+            { "key": "C", "text": "automated" },
+            { "key": "D", "text": "automates" }
+          ],
+          "correct_answer": "B",
+          "hint": "Cần một trạng từ đứng trước động từ chính 'generates' để chỉ cách thức hệ thống tạo ra báo cáo.",
+          "explanation": "Chính xác. Trạng từ 'automatically' (một cách tự động) bổ nghĩa cho động từ 'generates'.",
+          "translation": "Cổng thông tin nhân sự tự động tạo ra một bản tóm tắt về tất cả các trường hợp vắng mặt của nhân viên vào cuối mỗi tháng."
+        },
+        {
+          "id": "q_adj_adv_082",
+          "part": 5,
+          "grammar_topic": "Adjective (-ed vs -ing)",
+          "difficulty_level": "Medium",
+          "question_text": "The students were _____ by the creative methods the TikTok creator used to explain complex English grammar.",
+          "options": [
+            { "key": "A", "text": "fascinate" },
+            { "key": "B", "text": "fascinating" },
+            { "key": "C", "text": "fascinated" },
+            { "key": "D", "text": "fascination" }
+          ],
+          "correct_answer": "C",
+          "hint": "Khi miêu tả cảm xúc, trạng thái của con người bị tác động bởi một yếu tố khác, chúng ta dùng tính từ đuôi -ed.",
+          "explanation": "Chính xác. Tính từ 'fascinated' (bị lôi cuốn/thích thú) miêu tả cảm xúc của các học sinh trước phương pháp dạy học sáng tạo.",
+          "translation": "Các học sinh đã bị lôi cuốn bởi những phương pháp sáng tạo mà nhà sáng tạo TikTok sử dụng để giải thích ngữ pháp tiếng Anh phức tạp."
+        },
+        {
+          "id": "q_adj_adv_083",
+          "part": 5,
+          "grammar_topic": "Adverb (Comparative)",
+          "difficulty_level": "Medium",
+          "question_text": "Users of the PrepMaster app tend to score significantly _____ on the JLPT N3 than those who only use traditional books.",
+          "options": [
+            { "key": "A", "text": "high" },
+            { "key": "B", "text": "highly" },
+            { "key": "C", "text": "highest" },
+            { "key": "D", "text": "higher" }
+          ],
+          "correct_answer": "D",
+          "hint": "Động từ 'score' (đạt điểm) cần một trạng từ bổ nghĩa. Cấu trúc có từ 'than' đòi hỏi dạng so sánh hơn.",
+          "explanation": "Chính xác. Trạng từ so sánh hơn 'higher' (cao hơn) kết hợp với 'than' để so sánh điểm số giữa hai nhóm người dùng.",
+          "translation": "Người dùng ứng dụng PrepMaster có xu hướng đạt điểm cao hơn đáng kể trong kỳ thi JLPT N3 so với những người chỉ sử dụng sách truyền thống."
+        },
+        {
+          "id": "q_adj_adv_084",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Medium",
+          "question_text": "We are looking for a _____ supplier to provide eco-friendly packaging materials for our new gift boxes.",
+          "options": [
+            { "key": "A", "text": "rely" },
+            { "key": "B", "text": "reliable" },
+            { "key": "C", "text": "reliably" },
+            { "key": "D", "text": "reliability" }
+          ],
+          "correct_answer": "B",
+          "hint": "Nằm giữa mạo từ 'a' và danh từ 'supplier', bạn cần một tính từ để miêu tả đặc điểm của nhà cung cấp này.",
+          "explanation": "Chính xác. Tính từ 'reliable' (đáng tin cậy) bổ nghĩa cho danh từ 'supplier' tạo thành cụm 'một nhà cung cấp đáng tin cậy'.",
+          "translation": "Chúng tôi đang tìm kiếm một nhà cung cấp đáng tin cậy để cung cấp các vật liệu đóng gói thân thiện với môi trường cho các hộp quà mới của chúng tôi."
+        },
+        {
+          "id": "q_adj_adv_085",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "The codebase for the timekeeping app is _____ complex, requiring an experienced developer to maintain it.",
+          "options": [
+            { "key": "A", "text": "extreme" },
+            { "key": "B", "text": "extremely" },
+            { "key": "C", "text": "extremes" },
+            { "key": "D", "text": "extremity" }
+          ],
+          "correct_answer": "B",
+          "hint": "Đứng trước tính từ 'complex' (phức tạp), chúng ta cần một trạng từ chỉ mức độ để nhấn mạnh.",
+          "explanation": "Chính xác. Trạng từ 'extremely' (cực kỳ) bổ nghĩa cho tính từ 'complex'.",
+          "translation": "Mã nguồn của ứng dụng chấm công cực kỳ phức tạp, đòi hỏi một lập trình viên có kinh nghiệm để duy trì nó."
+        },
+        {
+          "id": "q_adj_adv_086",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Medium",
+          "question_text": "The _____ feedback from beta testers helped the engineering team fix the remaining bugs in the EduKit app.",
+          "options": [
+            { "key": "A", "text": "construct" },
+            { "key": "B", "text": "constructively" },
+            { "key": "C", "text": "constructive" },
+            { "key": "D", "text": "construction" }
+          ],
+          "correct_answer": "C",
+          "hint": "Chỗ trống nằm giữa mạo từ 'The' và danh từ 'feedback', do đó bạn cần một tính từ.",
+          "explanation": "Chính xác. Tính từ 'constructive' (mang tính xây dựng) bổ nghĩa cho 'feedback' tạo thành một cụm từ rất phổ biến trong công sở (constructive feedback).",
+          "translation": "Những phản hồi mang tính xây dựng từ những người thử nghiệm beta đã giúp đội ngũ kỹ thuật sửa các lỗi còn lại trong ứng dụng EduKit."
+        },
+        {
+          "id": "q_adj_adv_087",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Easy",
+          "question_text": "All employees must log their hours _____ to avoid any discrepancies in their monthly paychecks.",
+          "options": [
+            { "key": "A", "text": "accurate" },
+            { "key": "B", "text": "accuracy" },
+            { "key": "C", "text": "accurately" },
+            { "key": "D", "text": "accurateness" }
+          ],
+          "correct_answer": "C",
+          "hint": "Từ cần điền bổ nghĩa cho hành động 'log' (ghi nhận/nhập liệu), chỉ ra cách thức thực hiện hành động đó.",
+          "explanation": "Chính xác. Trạng từ 'accurately' (một cách chính xác) bổ nghĩa cho động từ 'log'.",
+          "translation": "Tất cả nhân viên phải ghi lại số giờ làm việc của mình một cách chính xác để tránh bất kỳ sự sai lệch nào trong phiếu lương hàng tháng."
+        },
+        {
+          "id": "q_adj_adv_088",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Easy",
+          "question_text": "Ms. Lin's short videos provide _____ tips for passing the TOEIC exam with a score of 800 or above.",
+          "options": [
+            { "key": "A", "text": "value" },
+            { "key": "B", "text": "values" },
+            { "key": "C", "text": "valuable" },
+            { "key": "D", "text": "valuably" }
+          ],
+          "correct_answer": "C",
+          "hint": "Đứng trước danh từ 'tips' (những mẹo/lời khuyên), ta cần một tính từ để miêu tả tính chất của những lời khuyên này.",
+          "explanation": "Chính xác. Tính từ 'valuable' (có giá trị/hữu ích) bổ nghĩa cho danh từ 'tips'.",
+          "translation": "Các video ngắn của cô Lin cung cấp những lời khuyên hữu ích để vượt qua kỳ thi TOEIC với số điểm 800 trở lên."
+        },
+        {
+          "id": "q_adj_adv_089",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "The marketing department _____ reviews the sales data of the corporate gift boxes to adjust their strategies.",
+          "options": [
+            { "key": "A", "text": "period" },
+            { "key": "B", "text": "periodic" },
+            { "key": "C", "text": "periodically" },
+            { "key": "D", "text": "periodical" }
+          ],
+          "correct_answer": "C",
+          "hint": "Từ cần điền đứng trước động từ chính 'reviews', đóng vai trò là trạng từ chỉ tần suất của hành động.",
+          "explanation": "Chính xác. Trạng từ 'periodically' (một cách định kỳ) bổ nghĩa cho động từ 'reviews'.",
+          "translation": "Bộ phận tiếp thị xem xét dữ liệu bán hàng của các hộp quà tặng doanh nghiệp một cách định kỳ để điều chỉnh các chiến lược của họ."
+        },
+        {
+          "id": "q_adj_adv_090",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Medium",
+          "question_text": "A _____ understanding of basic grammar is essential before moving on to the advanced TOEIC modules.",
+          "options": [
+            { "key": "A", "text": "solid" },
+            { "key": "B", "text": "solidly" },
+            { "key": "C", "text": "solidify" },
+            { "key": "D", "text": "solidity" }
+          ],
+          "correct_answer": "A",
+          "hint": "Nằm giữa mạo từ 'A' và danh từ 'understanding', bạn cần một tính từ.",
+          "explanation": "Chính xác. Tính từ 'solid' (vững chắc) kết hợp với 'understanding' tạo thành cụm 'một sự hiểu biết vững chắc'.",
+          "translation": "Một sự hiểu biết vững chắc về ngữ pháp cơ bản là điều cần thiết trước khi chuyển sang các mô-đun TOEIC nâng cao."
+        },
+        {
+          "id": "q_adj_adv_091",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Hard",
+          "question_text": "The new biometric timekeeping system works _____ well, even in low-light environments.",
+          "options": [
+            { "key": "A", "text": "surprising" },
+            { "key": "B", "text": "surprisingly" },
+            { "key": "C", "text": "surprise" },
+            { "key": "D", "text": "surprised" }
+          ],
+          "correct_answer": "B",
+          "hint": "Đứng trước trạng từ 'well' (tốt), bạn cần một trạng từ chỉ mức độ để bổ nghĩa cho nó.",
+          "explanation": "Chính xác. Trạng từ 'surprisingly' (đáng ngạc nhiên) bổ nghĩa cho trạng từ 'well', tạo thành cụm 'tốt một cách đáng ngạc nhiên'.",
+          "translation": "Hệ thống chấm công sinh trắc học mới hoạt động tốt một cách đáng ngạc nhiên, ngay cả trong môi trường thiếu sáng."
+        },
+        {
+          "id": "q_adj_adv_092",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Medium",
+          "question_text": "The school administration found the EduKit dashboard _____ for tracking the collective study hours of their students.",
+          "options": [
+            { "key": "A", "text": "use" },
+            { "key": "B", "text": "useful" },
+            { "key": "C", "text": "usefully" },
+            { "key": "D", "text": "usefulness" }
+          ],
+          "correct_answer": "B",
+          "hint": "Cấu trúc 'find + something (EduKit dashboard) + Tính từ' (cảm thấy/thấy cái gì đó như thế nào).",
+          "explanation": "Chính xác. Tính từ 'useful' (hữu ích) miêu tả đánh giá của ban giám hiệu nhà trường đối với bảng điều khiển EduKit.",
+          "translation": "Ban giám hiệu nhà trường nhận thấy bảng điều khiển EduKit rất hữu ích trong việc theo dõi tổng số giờ học tập thể của học sinh."
+        },
+        {
+          "id": "q_adj_adv_093",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Easy",
+          "question_text": "Because the holiday season is approaching, the warehouse staff must pack the gift boxes _____.",
+          "options": [
+            { "key": "A", "text": "swift" },
+            { "key": "B", "text": "swiftness" },
+            { "key": "C", "text": "swiftly" },
+            { "key": "D", "text": "swifter" }
+          ],
+          "correct_answer": "C",
+          "hint": "Đứng ở cuối câu, từ cần điền phải bổ nghĩa cho động từ 'pack' (đóng gói) để chỉ cách thức của hành động.",
+          "explanation": "Chính xác. Trạng từ 'swiftly' (một cách nhanh chóng) bổ nghĩa cho động từ 'pack'.",
+          "translation": "Vì mùa lễ hội đang đến gần, nhân viên kho phải đóng gói các hộp quà một cách nhanh chóng."
+        },
+        {
+          "id": "q_adj_adv_094",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Hard",
+          "question_text": "It is _____ to take at least two full mock exams before the actual JLPT N3 test date.",
+          "options": [
+            { "key": "A", "text": "advise" },
+            { "key": "B", "text": "advising" },
+            { "key": "C", "text": "advisable" },
+            { "key": "D", "text": "advisably" }
+          ],
+          "correct_answer": "C",
+          "hint": "Cấu trúc 'It is + Tính từ + to do something'. Từ cần điền là một tính từ mang nghĩa 'nên làm/đáng được khuyên'.",
+          "explanation": "Chính xác. Tính từ 'advisable' (thích hợp/nên làm) kết hợp với cấu trúc chủ ngữ giả để đưa ra một lời khuyên mạnh mẽ.",
+          "translation": "Bạn rất nên làm ít nhất hai bài thi thử đầy đủ trước ngày thi JLPT N3 thực tế."
+        },
+        {
+          "id": "q_adj_adv_095",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "The mobile app developer _____ resolved the server issue, preventing the timekeeping system from crashing.",
+          "options": [
+            { "key": "A", "text": "quick" },
+            { "key": "B", "text": "quickly" },
+            { "key": "C", "text": "quickness" },
+            { "key": "D", "text": "quicker" }
+          ],
+          "correct_answer": "B",
+          "hint": "Từ cần điền nằm giữa chủ ngữ và động từ chính 'resolved', đóng vai trò là trạng từ bổ nghĩa cho hành động.",
+          "explanation": "Chính xác. Trạng từ 'quickly' (một cách nhanh chóng) miêu tả tốc độ giải quyết vấn đề của lập trình viên.",
+          "translation": "Nhà phát triển ứng dụng di động đã nhanh chóng giải quyết sự cố máy chủ, ngăn hệ thống chấm công bị sập."
+        },
+        {
+          "id": "q_adj_adv_096",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Easy",
+          "question_text": "Creating a _____ posting schedule on TikTok is crucial for gaining a larger audience of English learners.",
+          "options": [
+            { "key": "A", "text": "consistency" },
+            { "key": "B", "text": "consistently" },
+            { "key": "C", "text": "consist" },
+            { "key": "D", "text": "consistent" }
+          ],
+          "correct_answer": "D",
+          "hint": "Chỗ trống đứng giữa mạo từ 'a' và danh từ ghép 'posting schedule' (lịch đăng bài).",
+          "explanation": "Chính xác. Tính từ 'consistent' (nhất quán/đều đặn) bổ nghĩa cho danh từ phía sau.",
+          "translation": "Việc tạo ra một lịch đăng bài đều đặn trên TikTok là rất quan trọng để thu hút được lượng khán giả học tiếng Anh lớn hơn."
+        },
+        {
+          "id": "q_adj_adv_097",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "The custom gift boxes were _____ designed to reflect the corporate identity of our biggest client.",
+          "options": [
+            { "key": "A", "text": "specific" },
+            { "key": "B", "text": "specifically" },
+            { "key": "C", "text": "specify" },
+            { "key": "D", "text": "specification" }
+          ],
+          "correct_answer": "B",
+          "hint": "Nằm giữa trợ động từ 'were' và động từ phân từ hai 'designed', ta cần trạng từ để bổ nghĩa cho động từ bị động này.",
+          "explanation": "Chính xác. Trạng từ 'specifically' (một cách đặc biệt/dành riêng) bổ nghĩa cho hành động 'được thiết kế'.",
+          "translation": "Các hộp quà tặng tùy chỉnh được thiết kế đặc biệt để phản ánh bộ nhận diện thương hiệu của khách hàng lớn nhất của chúng tôi."
+        },
+        {
+          "id": "q_adj_adv_098",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Hard",
+          "question_text": "The new language learning features are only _____ to users who have upgraded to the premium EduKit account.",
+          "options": [
+            { "key": "A", "text": "access" },
+            { "key": "B", "text": "accessible" },
+            { "key": "C", "text": "accessibility" },
+            { "key": "D", "text": "accessibly" }
+          ],
+          "correct_answer": "B",
+          "hint": "Sau động từ to be 'are' và trạng từ 'only', ta cần một tính từ. Cụm 'accessible to someone' nghĩa là 'ai đó có thể truy cập được'.",
+          "explanation": "Chính xác. Tính từ 'accessible' (có thể tiếp cận/truy cập) bổ nghĩa cho chủ ngữ 'features'.",
+          "translation": "Các tính năng học ngôn ngữ mới chỉ có thể truy cập được đối với những người dùng đã nâng cấp lên tài khoản EduKit cao cấp."
+        },
+        {
+          "id": "q_adj_adv_099",
+          "part": 5,
+          "grammar_topic": "Adverb",
+          "difficulty_level": "Medium",
+          "question_text": "The company requires that all time-off requests be submitted _____ through the new HR portal.",
+          "options": [
+            { "key": "A", "text": "direct" },
+            { "key": "B", "text": "directly" },
+            { "key": "C", "text": "direction" },
+            { "key": "D", "text": "directs" }
+          ],
+          "correct_answer": "B",
+          "hint": "Từ cần điền bổ nghĩa cho động từ bị động 'be submitted', chỉ cách thức nộp đơn.",
+          "explanation": "Chính xác. Trạng từ 'directly' (một cách trực tiếp) bổ nghĩa cho động từ 'submitted'.",
+          "translation": "Công ty yêu cầu tất cả các yêu cầu nghỉ phép phải được nộp trực tiếp thông qua cổng thông tin nhân sự mới."
+        },
+        {
+          "id": "q_adj_adv_100",
+          "part": 5,
+          "grammar_topic": "Adjective",
+          "difficulty_level": "Easy",
+          "question_text": "The PrepMaster app provides a _____ analysis of your test results, highlighting areas where you need more practice.",
+          "options": [
+            { "key": "A", "text": "detail" },
+            { "key": "B", "text": "detailed" },
+            { "key": "C", "text": "detailing" },
+            { "key": "D", "text": "details" }
+          ],
+          "correct_answer": "B",
+          "hint": "Nằm giữa mạo từ 'a' và danh từ 'analysis', bạn cần một tính từ.",
+          "explanation": "Chính xác. Tính từ 'detailed' (chi tiết) bổ nghĩa cho danh từ 'analysis', tạo thành cụm 'một bản phân tích chi tiết'.",
+          "translation": "Ứng dụng PrepMaster cung cấp một bản phân tích chi tiết về kết quả bài kiểm tra của bạn, làm nổi bật những lĩnh vực bạn cần thực hành thêm."
+        }
+      ]
+    },
+    hard: []
+  },
   "w1-d1-t3": {
     description: "Giải Part 5 Mẫu",
     total: 10,
