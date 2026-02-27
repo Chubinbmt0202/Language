@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { auth } from "../firebase/firebase";
+import { auth } from "@/shared/api/firebase/firebase";
 
 export const TASK_PROGRESS_STORAGE_KEY = "taskProgress";
 

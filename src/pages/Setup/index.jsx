@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { Steps, Button, Typography, message } from "antd";
 import { ArrowLeftOutlined, ArrowRightOutlined, CheckOutlined } from "@ant-design/icons";
 import { motion, AnimatePresence } from "framer-motion";
-import { useAuth } from "../../util/AuthContext.jsx";
-import { saveOnboardingData } from "../../util/onboardingStorage.js";
+import { useAuth } from "@/app/providers/AuthContext";
+import { saveOnboardingData } from "@/shared/utils/storage/onboardingStorage";
 
 import LanguageStep from "./steps/LanguageStep.jsx";
 import LevelStep from "./steps/LevelStep.jsx";

@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { Button, Card, Typography } from "antd";
 import { GoogleOutlined } from "@ant-design/icons";
-import { useAuth } from "../util/AuthContext.jsx";
+import { useAuth } from "@/app/providers/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 const { Title, Text } = Typography;

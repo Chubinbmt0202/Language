@@ -7,7 +7,7 @@ import {
   PlayCircleOutlined,
   ReadOutlined,
 } from "@ant-design/icons";
-import { getLessonMissionsDoneMap } from "../../../util/lessonMissions";
+import { getLessonMissionsDoneMap } from "@/shared/utils/storage/lessonMissions";
 
 const { Text } = Typography;
 

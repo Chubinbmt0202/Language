@@ -7,7 +7,7 @@ import {
   UNLOCK_TEST_PASS_PERCENT,
   setRoadmapDayOverrideUnlocked,
   setRoadmapWeekOverrideUnlocked,
-} from "../../../util/points";
+} from "@/shared/utils/storage/points";
 
 const { Title, Text } = Typography;
 

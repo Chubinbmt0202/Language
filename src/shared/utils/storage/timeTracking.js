@@ -1,5 +1,5 @@
 // src/util/timeTracking.js
-import { auth } from "../firebase/firebase";
+import { auth } from "@/shared/api/firebase/firebase";
 
 const TIME_STORAGE_KEY = "learning_time";
 const TIME_TARGET_KEY = "learning_time_target"; // Mục tiêu hàng ngày (giây)

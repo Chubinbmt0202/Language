@@ -6,7 +6,7 @@ import {
   CheckCircleOutlined, CloseCircleOutlined, ReloadOutlined, ArrowRightOutlined,
   BulbOutlined, PlayCircleOutlined, SettingOutlined, EyeOutlined, BookOutlined,
 } from "@ant-design/icons";
-import { generateQuizTenseMulti } from "../../../../../services/TenseApi";
+import { generateQuizTenseMulti } from "@/shared/api/TenseApi";
 
 const { Title, Text, Paragraph } = Typography;
 

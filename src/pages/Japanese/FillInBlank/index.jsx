@@ -9,7 +9,7 @@ import {
 import { useHiraganaGame } from "../../../hooks/useHiraganaGame";
 import SetupCard from "./SetupCard";
 import CharacterBlock from "./CharacterBlock";
-import { useLang } from "../../../util/LanguageContext";
+import { useLang } from "@/app/providers/LanguageContext";
 
 const { Text } = Typography;
 

@@ -33,8 +33,8 @@ import LearningTasks from "./LearningTasks";
 import QuickNotes from "./QuickNotes"; // <--- MỚI: Import Component QuickNotes
 import { getTheoryLesson } from "./TheoryTaskData.jsx";
 import { detailedRoadmap } from "../../Dashboard/RoadmapData";
-import { findRoadmapLocationByTaskId, getDayGate } from "../../../util/roadmapAccess";
-import { getLessonMissionsDoneMap, markLessonMissionDone } from "../../../util/lessonMissions";
+import { findRoadmapLocationByTaskId, getDayGate } from "@/shared/utils/storage/roadmapAccess";
+import { getLessonMissionsDoneMap, markLessonMissionDone } from "@/shared/utils/storage/lessonMissions";
 import {
   COMMENTS,
   VideoPlayer,

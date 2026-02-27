@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "antd";
-import { useAuth } from "../../../util/AuthContext";
+import { useAuth } from "@/app/providers/AuthContext";
 
 const LeaderboardCard = () => {
     const { user } = useAuth();

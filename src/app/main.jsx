@@ -2,11 +2,11 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import { Analytics } from "@vercel/analytics/react";
-import { LanguageProvider } from "./util/LanguageContext.jsx";
+import { LanguageProvider } from "./providers/LanguageContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-      <App />
+    <App />
     <Analytics />
   </StrictMode>,
 );

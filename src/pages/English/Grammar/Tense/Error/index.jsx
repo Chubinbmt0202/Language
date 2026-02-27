@@ -25,7 +25,7 @@ import {
   CloseCircleOutlined,
   CheckCircleOutlined,
 } from "@ant-design/icons";
-import { generateQuizTenseError } from "../../../../../services/TenseApi";
+import { generateQuizTenseError } from "@/shared/api/TenseApi";
 import { THEORY_LIBRARY } from "./theoryLibrary";
 
 const { Text, Title, Paragraph } = Typography;

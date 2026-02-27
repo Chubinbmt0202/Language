@@ -2,7 +2,7 @@
 import React, { useMemo, useState } from "react";
 import { Card, Radio, Button, Typography, Space, Alert, Result, Divider, Tag } from "antd";
 import { CheckCircleOutlined, CloseCircleOutlined, ReloadOutlined, SmileOutlined } from "@ant-design/icons";
-import { markLessonMissionDone } from "../../../util/lessonMissions";
+import { markLessonMissionDone } from "@/shared/utils/storage/lessonMissions";
 const { Title, Text, Paragraph } = Typography;
 
 // --- DỮ LIỆU CÂU HỎI (5 DANH TỪ + 5 ĐẠI TỪ) ---

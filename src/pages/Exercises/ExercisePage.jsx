@@ -27,21 +27,21 @@ import {
   HistoryOutlined,
   BulbOutlined,
 } from "@ant-design/icons";
-import { auth } from "../../firebase/firebase";
+import { auth } from "@/shared/api/firebase/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { detailedRoadmap } from "../Dashboard/RoadmapData";
-import { addPoints, addRoadmapPoints } from "../../util/points";
+import { addPoints, addRoadmapPoints } from "@/shared/utils/storage/points";
 import {
   findRoadmapLocationByTaskId,
   getDayGate,
-} from "../../util/roadmapAccess";
+} from "@/shared/utils/storage/roadmapAccess";
 import {
   DEFAULT_HARD_QUESTIONS,
   DEFAULT_QUESTIONS,
   EXERCISE_DATA,
   QUIZ_TASKS,
 } from "./ExerciseQuestionData";
-import { incrementTaskProgress, getTaskState } from "../../util/taskProgress";
+import { incrementTaskProgress, getTaskState } from "@/shared/utils/storage/taskProgress";
 import { Collapse } from "antd";
 
 const { Title, Text } = Typography;

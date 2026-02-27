@@ -25,7 +25,7 @@ import {
   CloseCircleOutlined,
   CheckCircleOutlined,
 } from "@ant-design/icons";
-import { generateQuizPronounsFindError } from "../../../../../services/PronounApi";
+import { generateQuizPronounsFindError } from "@/shared/api/PronounApi";
 
 const { Text, Title, Paragraph } = Typography;
 

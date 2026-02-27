@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { Button, Space, Tag, Typography } from "antd";
 import TaskCard from "./TaskCard";
-import { getDayGate, getWeekGate, getDayPointsTarget, getWeekPointsTarget } from "../../util/roadmapAccess";
+import { getDayGate, getWeekGate, getDayPointsTarget, getWeekPointsTarget } from "@/shared/utils/storage/roadmapAccess";
 
 const { Title, Text } = Typography;
 const TASKS_PER_ROW = 2;

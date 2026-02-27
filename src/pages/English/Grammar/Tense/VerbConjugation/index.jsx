@@ -34,7 +34,7 @@ import { THEORY_LIBRARY } from "../../../../../data/theoryData";
 
 // IMPORTS: Import hàm API từ file bạn vừa tạo
 // Đảm bảo đường dẫn import đúng với cấu trúc thư mục của bạn
-import { generateQuizTense } from "../../../../../services/TenseApi";
+import { generateQuizTense } from "@/shared/api/TenseApi";
 
 const { Title, Text, Paragraph } = Typography;
 

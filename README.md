@@ -1,18 +1,74 @@
-# React + Vite
+# Polyglot Hub - Language Learning Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **Polyglot Hub** project! This is an Enterprise-level Language Learning platform designed to help users learn English and Japanese through interactive quizzes, theory lessons, vocabulary flashcards, and realtime progress tracking.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🏗 System Architecture (Modular Monolith)
 
-## React Compiler
+The project follows a **Feature-Sliced Design / Modular Monolith** approach on the frontend (React). The directory structure strictly separates global context, features, and reusable components:
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+```text
+src/
+ βö£βöÇβöÇ app/               # Global setup (Providers, Router, Global Error Boundary)
+ βö£βöÇβöÇ features/          # Core Business Modules (English, Japanese, Auth)
+ βö£βöÇβöÇ pages/             # Route components that compose layouts
+ βö£βöÇβöÇ shared/            # Shared code across features
+ βöé   βö£βöÇβöÇ api/           # API config (Axios Interceptors, services)
+ βöé   βö£βöÇβöÇ components/    # Reusable UI (Buttons, Modals, ProtectedRoute)
+ βöé   βööβöÇβöÇ utils/         # Generic utilities (TimeTracking, Storage)
+ βööβöÇβöÇ assets/            # Static files, images
+```
 
-Note: This will impact Vite dev & build performances.
+## 🚀 Prerequisites
 
-## Expanding the ESLint configuration
+Ensure you have the following installed on your local machine:
+- Node.js (v18.0.0 or higher)
+- npm (v9.0.0 or higher) or yarn
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Setup & Installation
+
+Follow these steps to get your development environment running:
+
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd Language
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment Variables**
+   Create a `.env` file at the root of the project:
+   ```env
+   VITE_API_URL=https://language-backend-onoo.onrender.com
+   # Add your Firebase credentials if required for local testing
+   ```
+
+4. **Start the Development Server**
+   ```bash
+   npm run dev
+   ```
+   The application will be accessible at `http://localhost:5173`.
+
+## 📦 Build & Deploy
+
+To build the application for production:
+```bash
+npm run build
+```
+The output will be generated inside the `dist/` directory, ready to be deployed to platforms like Vercel, Netlify, or any static hosting service.
+
+## 🔒 Enterprise Features Included
+- **Global Error Handling**: Unhandled exceptions are caught by an `ErrorBoundary` to prevent blank screens.
+- **API Interceptors**: All outgoing requests are processed through `axiosClient.js`, enabling centralized header injection and global error toasts.
+- **Protected Routes**: Secure views (like Dashboard and Settings) are guarded by `ProtectedRoute.jsx` verifying Firebase Auth state.
+
+## 📄 Documentation Links
+For deeper dives into the project's architecture and capabilities, please refer to:
+- [System Design](./docs/SYSTEM_DESIGN.md)
+- [API Documentation](./docs/API_DOCS.md)
+- [Testing Strategy](./docs/TESTING_STRATEGY.md)

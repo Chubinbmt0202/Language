@@ -1,7 +1,4 @@
-import axios from "axios";
-
-const BASE_URL_LOCAL = "http://localhost:9999";
-const BASE_URL = "https://language-backend-onoo.onrender.com";
+import axiosClient from "./axiosClient";
 const ENDPOINT_TENSE = "/api/generate-quiz-pronouns-choose";
 
 const generateQuizPronouns = async (config) => {
@@ -10,17 +7,12 @@ const generateQuizPronouns = async (config) => {
     console.error("Loại không hợp lệ cho generateQuizPronouns:", apiType);
     throw new Error(`Loại không hợp lệ cho generateQuizPronouns: ${apiType}`);
   }
-  const response = await axios.post(`${BASE_URL}${ENDPOINT_TENSE}`, {
+  const response = await axiosClient.post(ENDPOINT_TENSE, {
     type: apiType,
     numQuestions: config.numQuestions,
   });
   console.log("Phản hồi từ API generateQuizPronouns:", response);
-  if (response.status !== 200) {
-    throw new Error(`API request failed with status ${response.status}`);
-  }
-  const data = response.data.questions;
-  console.log("Dữ liệu câu hỏi từ API generateQuizPronouns:", data);
-  return data;
+  return response.questions;
 };
 
 const generateQuizPronounsMulti = async (config) => {
@@ -29,17 +21,12 @@ const generateQuizPronounsMulti = async (config) => {
     console.error("Loại không hợp lệ cho generateQuizPronounsMulti:", apiType);
     throw new Error(`Loại không hợp lệ cho generateQuizPronounsMulti: ${apiType}`);
   }
-  const response = await axios.post(`${BASE_URL}${ENDPOINT_TENSE}`, {
+  const response = await axiosClient.post(ENDPOINT_TENSE, {
     type: apiType,
     numQuestions: config.numQuestions,
   });
   console.log("Phản hồi từ API generateQuizPronounsMulti:", response);
-  if (response.status !== 200) {
-    throw new Error(`API request failed with status ${response.status}`);
-  }
-  const data = response.data.questions;
-  console.log("Dữ liệu câu hỏi từ API generateQuizPronounsMulti:", data);
-  return data;
+  return response.questions;
 };
 
 const generateQuizPronounsFindError = async (config) => {
@@ -48,17 +35,12 @@ const generateQuizPronounsFindError = async (config) => {
     console.error("Loại không hợp lệ cho generateQuizPronounsFindError:", apiType);
     throw new Error(`Loại không hợp lệ cho generateQuizPronounsFindError: ${apiType}`);
   }
-  const response = await axios.post(`${BASE_URL}${ENDPOINT_TENSE}`, {
+  const response = await axiosClient.post(ENDPOINT_TENSE, {
     type: apiType,
     numQuestions: config.numQuestions,
   });
   console.log("Phản hồi từ API generateQuizPronounsFindError:", response);
-  if (response.status !== 200) {
-    throw new Error(`API request failed with status ${response.status}`);
-  }
-  const data = response.data.questions;
-  console.log("Dữ liệu câu hỏi từ API generateQuizPronounsFindError:", data);
-  return data;
+  return response.questions;
 }
 
 export { generateQuizPronouns, generateQuizPronounsMulti, generateQuizPronounsFindError };

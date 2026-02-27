@@ -21,7 +21,7 @@ import {
   CloseCircleOutlined,
   CheckCircleOutlined,
 } from "@ant-design/icons";
-import { generateQuizErrorGame } from "../../../../../services/GenerateQuiz";
+import { generateQuizErrorGame } from "@/shared/api/GenerateQuiz";
 
 const { Text } = Typography;
 

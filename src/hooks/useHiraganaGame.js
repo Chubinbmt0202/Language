@@ -1,10 +1,10 @@
 // src/hooks/useHiraganaGame.js
 import { useState, useRef } from "react";
 import { message } from "antd";
-import { generateQuizFill } from "../services/geminiService.js";
+import { generateQuizFill } from "@/shared/api/geminiService.js";
 
 export const useHiraganaGame = () => {
-  const [value, setValue] = useState('hiragana'); 
+  const [value, setValue] = useState('hiragana');
 
   const [gameState, setGameState] = useState({
     isLoading: false,
@@ -34,7 +34,7 @@ export const useHiraganaGame = () => {
 
     try {
       const data = await generateQuizFill(value);
-      
+
       if (data.questions && data.questions.length > 0) {
         updateState({
           charData: data.questions[0].chars,
@@ -88,7 +88,7 @@ export const useHiraganaGame = () => {
     const { charData, userInputs } = gameState;
     const totalInputItems = charData.filter(i => i.type === 'input').length;
     let correctCount = 0;
-    
+
     charData.forEach((item, index) => {
       if (item.type === 'input' && userInputs[index] === item.romaji) correctCount++;
     });
@@ -106,7 +106,7 @@ export const useHiraganaGame = () => {
   // --- 3. XỬ LÝ PHÍM TẮT ---
   const handleKeyDown = (e, index) => {
     const { charData, userInputs } = gameState;
-    
+
     // TRƯỜNG HỢP 1: Nhấn Enter hoặc Space -> Nhảy ô tiếp theo
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
@@ -115,7 +115,7 @@ export const useHiraganaGame = () => {
         nextIndex++;
       }
       inputRefs.current[nextIndex]?.focus();
-    } 
+    }
     // TRƯỜNG HỢP 2: Backspace -> Xóa lùi
     else if (e.key === 'Backspace' && !userInputs[index]) {
       e.preventDefault();
@@ -134,8 +134,8 @@ export const useHiraganaGame = () => {
     }
     // (Gợi ý) TRƯỜNG HỢP 4: Tab -> ĐỔI CÂU KHÁC (Để đỡ phải dùng chuột)
     else if (e.key === 'Tab') {
-       e.preventDefault();
-       startExercise();
+      e.preventDefault();
+      startExercise();
     }
   };
 

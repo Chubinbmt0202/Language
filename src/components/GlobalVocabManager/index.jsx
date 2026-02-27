@@ -13,10 +13,10 @@ import AddVocabForm from "./AddVocabForm.jsx";
 import VocabTable from "./VocabTable";
 import FlashcardModal from "./FlashcardModal";
 import AutoQuizModal from "./AutoQuizModal.jsx";
-import { useLang } from "../../util/LanguageContext.jsx";
-import { auth } from "../../firebase/firebase";
+import { useLang } from "@/app/providers/LanguageContext";
+import { auth } from "@/shared/api/firebase/firebase";
 import { onAuthStateChanged } from "firebase/auth";
-import { loadGlobalVocab, saveGlobalVocab } from "../../util/globalVocabStore";
+import { loadGlobalVocab, saveGlobalVocab } from "@/shared/utils/storage/globalVocabStore";
 
 const GlobalVocabManager = () => {
   const quizLockRef = useRef(false);

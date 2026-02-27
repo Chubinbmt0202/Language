@@ -1,4 +1,4 @@
-import { auth } from "../firebase/firebase";
+import { auth } from "@/shared/api/firebase/firebase";
 
 const TOTAL_SCORE_STORAGE_KEY = "exerciseScore";
 const DAILY_SCORES_STORAGE_KEY = "exerciseDailyScores";

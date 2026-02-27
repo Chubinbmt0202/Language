@@ -35,7 +35,7 @@ import {
   Badge,
 } from "antd";
 import GlobalVocabManager from "../../components/GlobalVocabManager/index.jsx";
-import { useAuth } from "../../util/AuthContext.jsx";
+import { useAuth } from "@/app/providers/AuthContext";
 
 const { Content, Sider, Header } = Layout;
 const sidebarItems = [

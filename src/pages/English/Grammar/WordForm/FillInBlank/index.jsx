@@ -21,7 +21,7 @@ import {
   ArrowRightOutlined,
   InfoCircleOutlined,
 } from "@ant-design/icons";
-import { generateQuizWordForm } from "../../../../../services/GenerateQuiz";
+import { generateQuizWordForm } from "@/shared/api/GenerateQuiz";
 
 // Component con để hiển thị từng từ khi hover
 const TokenWord = ({ token, isTarget }) => {

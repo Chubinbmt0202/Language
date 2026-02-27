@@ -2,7 +2,7 @@
 // src/util/AuthContext.jsx
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { onAuthStateChanged, signOut, signInWithPopup } from "firebase/auth";
-import { auth, googleProvider } from "../firebase/firebase";
+import { auth, googleProvider } from "@/shared/api/firebase/firebase";
 import { Spin } from "antd";
 
 const AuthContext = createContext();

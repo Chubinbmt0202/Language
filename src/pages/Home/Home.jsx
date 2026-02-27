@@ -15,8 +15,8 @@ import {
 } from "@ant-design/icons";
 
 // Import utilities
-import { useAuth } from "../../util/AuthContext.jsx";
-import { getTodayLearningSeconds } from "../../util/timeTracking.js";
+import { useAuth } from "@/app/providers/AuthContext";
+import { getTodayLearningSeconds } from "@/shared/utils/storage/timeTracking";
 
 const { Title, Text } = Typography;
 

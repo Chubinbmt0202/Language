@@ -1,4 +1,4 @@
-import { auth } from "../firebase/firebase";
+import { auth } from "@/shared/api/firebase/firebase";
 
 const STORAGE_PREFIX = "theory_lesson_missions:";
 

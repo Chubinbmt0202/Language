@@ -5,13 +5,13 @@ import { Layout, Row, Col, Typography, Drawer } from "antd";
 import { useLocation, useNavigate } from "react-router-dom";
 import { detailedRoadmap, chartData } from "./RoadmapData";
 import DaySection from "./DaySection";
-import { loadTaskProgress } from "../../util/taskProgress";
+import { loadTaskProgress } from "@/shared/utils/storage/taskProgress";
 import ProgressChartCard from "./components/ProgressChartCard";
 import QuickStatsCard from "./components/QuickStatsCard";
 import LeaderboardCard from "./components/LeaderboardCard";
 import { calculateDailyChartData } from "./utils/calculateDailyChartData";
 import UnlockTestModal from "./components/UnlockTestModal";
-import { hasCompletedOnboarding } from "../../util/onboardingStorage";
+import { hasCompletedOnboarding } from "@/shared/utils/storage/onboardingStorage";
 import SetupWizard from "../Setup/index.jsx";
 
 const { Content } = Layout;

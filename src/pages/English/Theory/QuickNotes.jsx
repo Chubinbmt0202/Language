@@ -4,8 +4,8 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Button, Card, Empty, Input, List, Tooltip, Typography, message } from "antd";
 import { DeleteOutlined, FormOutlined, SaveOutlined } from "@ant-design/icons";
-import { markLessonMissionDone } from "../../../util/lessonMissions";
-import { auth } from "../../../firebase/firebase";
+import { markLessonMissionDone } from "@/shared/utils/storage/lessonMissions";
+import { auth } from "@/shared/api/firebase/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 
 const { Text } = Typography;

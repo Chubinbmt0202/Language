@@ -1,14 +1,14 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Card, Progress, Space } from "antd";
 import { FireFilled } from "@ant-design/icons";
-import { useAuth } from "../../../util/AuthContext";
+import { useAuth } from "@/app/providers/AuthContext";
 import {
   getDailyTargetPoints,
   getStreakDays,
   getTodayPoints,
   getTotalPoints,
   TOTAL_POINTS_TARGET,
-} from "../../../util/points";
+} from "@/shared/utils/storage/points";
 
 const QuickStatsCard = () => {
   const [totalPoints, setTotalPoints] = useState(0);

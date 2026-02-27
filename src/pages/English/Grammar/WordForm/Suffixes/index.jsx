@@ -22,7 +22,7 @@ import {
   CloseCircleOutlined,
   CheckCircleOutlined,
 } from "@ant-design/icons";
-import { generateQuizSuffixes } from "../../../../../services/GenerateQuiz";
+import { generateQuizSuffixes } from "@/shared/api/GenerateQuiz";
 
 const { Text } = Typography;
 

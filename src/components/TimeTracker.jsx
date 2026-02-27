@@ -1,7 +1,7 @@
 // src/components/TimeTracker.jsx
 import { useEffect } from "react";
-import { addLearningSeconds } from "../util/timeTracking";
-import { useAuth } from "../util/AuthContext";
+import { addLearningSeconds } from "@/shared/utils/storage/timeTracking";
+import { useAuth } from "@/app/providers/AuthContext";
 
 const TimeTracker = () => {
   const { user } = useAuth();

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./index.css"; // Import file CSS vừa tạo
 import { Card, Button, Slider, Divider } from "antd";
 import { RocketOutlined } from "@ant-design/icons";
-import { generrateQuizPrepositionsMatching } from "../../../../../services/Preposition";
+import { generrateQuizPrepositionsMatching } from "@/shared/api/Preposition";
 // --- DỮ LIỆU CÂU HỎI ---
 
 const InteractiveQuiz = () => {

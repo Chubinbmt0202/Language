@@ -1,4 +1,4 @@
-import { auth } from "../../firebase/firebase"; // Chú ý: ../../
+import { auth } from "@/shared/api/firebase/firebase"; // Chú ý: ../../
 
 const BASE_KEY = "task-progress";
 

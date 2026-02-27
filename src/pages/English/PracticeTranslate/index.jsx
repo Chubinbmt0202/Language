@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import '../../../../src/App.css';
+import "@/app/App.css";
 
 const PracticeTranslate = () => {
   const [userInput, setUserInput] = useState("");
@@ -28,21 +28,21 @@ const PracticeTranslate = () => {
   return (
     <div className="min-h-screen bg-slate-50 flex justify-center py-12 px-4 font-sans">
       <div className="max-w-2xl w-full bg-white rounded-3xl shadow-xl p-8 border border-slate-100 h-fit">
-        
+
         <h2 className="text-2xl font-black text-slate-800 mb-8 text-center tracking-tight">
           LUYỆN DỊCH CÂU
         </h2>
-        
+
         {/* Khu vực câu hỏi với tính năng HOVER */}
         <div className="mb-8">
           <p className="text-xs font-bold text-slate-400 uppercase mb-3 tracking-widest text-center">
             Di chuột vào từng cụm từ để xem gợi ý:
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-x-2 gap-y-3 text-xl md:text-2xl font-medium text-slate-700 leading-relaxed">
             {sentenceParts.map((part, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="relative group cursor-help border-b-2 border-dashed border-slate-300 hover:border-indigo-500 hover:bg-indigo-50 hover:text-indigo-700 transition-all rounded px-1"
               >
                 {/* Từ tiếng Việt */}
@@ -72,13 +72,13 @@ const PracticeTranslate = () => {
 
         {/* Nút điều hướng */}
         <div className="flex gap-4 mt-8">
-          <button 
+          <button
             onClick={handleReset}
             className="px-6 py-3 text-slate-500 font-bold hover:bg-slate-100 rounded-xl transition-colors"
           >
             Làm mới
           </button>
-          <button 
+          <button
             onClick={() => setShowResult(true)}
             className="flex-1 px-6 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-lg shadow-indigo-200 transition-all active:scale-95 flex justify-center items-center gap-2"
           >

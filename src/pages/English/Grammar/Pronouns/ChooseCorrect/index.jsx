@@ -13,7 +13,7 @@ import {
   Collapse,
   Drawer,
 } from "antd";
-import { generateQuizPronouns } from "../../../../../services/PronounApi";
+import { generateQuizPronouns } from "@/shared/api/PronounApi";
 
 const { Title, Text } = Typography;
 const { Panel } = Collapse;

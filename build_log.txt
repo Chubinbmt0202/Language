@@ -1,0 +1,14 @@
+﻿
+> language@0.0.0 build
+> vite build
+
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32mΓ£ô[39m 4224 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                 [39m[1m[2m    0.47 kB[22m[1m[22m[2m Γöé gzip:   0.30 kB[22m
+[2mdist/[22m[32massets/test-jRpiKNUn.mp3   [39m[1m[2m   10.53 kB[22m[1m[22m
+[2mdist/[22m[35massets/index-DNz3U0z1.css  [39m[1m[2m   34.87 kB[22m[1m[22m[2m Γöé gzip:   7.24 kB[22m
+[2mdist/[22m[36massets/index-WJPxDCU2.js   [39m[1m[33m2,182.57 kB[39m[22m[2m Γöé gzip: 659.61 kB[22m
+[32mΓ£ô built in 19.90s[39m

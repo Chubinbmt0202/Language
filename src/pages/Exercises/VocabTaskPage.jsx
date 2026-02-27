@@ -7,9 +7,9 @@ import { ArrowLeftOutlined, CheckCircleOutlined, ReloadOutlined, FireOutlined, R
 import { motion, AnimatePresence } from "framer-motion";
 import { detailedRoadmap } from "../Dashboard/RoadmapData";
 import { VOCAB_TASKS } from "./VocabTaskData";
-import { addWordsToGlobalVocab } from "../../util/globalVocabStore";
-import { getTaskState, incrementTaskProgress } from "../../util/taskProgress";
-import { findRoadmapLocationByTaskId, getDayGate } from "../../util/roadmapAccess";
+import { addWordsToGlobalVocab } from "@/shared/utils/storage/globalVocabStore";
+import { getTaskState, incrementTaskProgress } from "@/shared/utils/storage/taskProgress";
+import { findRoadmapLocationByTaskId, getDayGate } from "@/shared/utils/storage/roadmapAccess";
 import {
   WORDS_PER_LEVEL,
   MAX_LEVEL,

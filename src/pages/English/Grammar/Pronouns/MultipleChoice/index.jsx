@@ -9,7 +9,7 @@ import {
 } from "@ant-design/icons";
 
 const { Title, Text, Paragraph } = Typography;
-import { generateQuizPronounsMulti } from "../../../../../services/PronounApi";
+import { generateQuizPronounsMulti } from "@/shared/api/PronounApi";
 
 
 const PronounsMutil = () => {
