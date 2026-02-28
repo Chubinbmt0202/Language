@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FieldTimeOutlined, ClockCircleOutlined, EditOutlined, BookOutlined, RightCircleFilled, CheckCircleFilled, FireFilled } from '@ant-design/icons';
+import PersonalNotes from '../../../components/PersonalNotes/PersonalNotes';
 
 const TensesTheory = () => {
     const [activeTab, setActiveTab] = useState('1');
@@ -161,22 +162,7 @@ const TensesTheory = () => {
                 {/* Right Sidebar */}
                 <div className="lg:w-1/3 flex flex-col gap-6">
                     {/* Ghi chú cá nhân */}
-                    <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
-                        <div className="flex items-center justify-between mb-6">
-                            <h3 className="font-bold text-slate-800 text-base flex items-center gap-2">
-                                <EditOutlined className="text-gray-500" />
-                                Tóm tắt
-                            </h3>
-                        </div>
-                        <div className="space-y-4">
-                            <div className="border border-gray-100 border-l-[3px] border-l-teal-600 rounded-r-xl rounded-l-sm bg-white shadow-sm p-4">
-                                <p className="text-slate-700 text-sm mb-3 font-medium">
-                                    <b>HT Hoàn Thành</b> có keyword "over the last...". Đây là thứ bạn phải thuôc.
-                                </p>
-                                <p className="text-xs text-gray-400 font-medium italic">Gợi ý từ Thầy/Cô</p>
-                            </div>
-                        </div>
-                    </div>
+                    <PersonalNotes theoryId="tenses" />
                 </div>
             </div>
         </div>

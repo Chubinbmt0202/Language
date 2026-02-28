@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CheckCircleFilled, BulbFilled, ArrowRightOutlined, EditOutlined, BookOutlined } from '@ant-design/icons';
+import PersonalNotes from '../../../components/PersonalNotes/PersonalNotes';
 
 const NounPronounTheory = () => {
     const [activeTab, setActiveTab] = useState('1');
@@ -334,64 +335,7 @@ const NounPronounTheory = () => {
                 {/* Right Sidebar */}
                 <div className="lg:w-1/3 flex flex-col gap-6">
                     {/* Ghi chú cá nhân */}
-                    <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
-                        <div className="flex items-center justify-between mb-6">
-                            <h3 className="font-bold text-slate-800 text-base flex items-center gap-2">
-                                <EditOutlined className="text-gray-500" />
-                                Ghi chú cá nhân
-                            </h3>
-                            <a href="#" className="text-blue-600 hover:text-blue-700 text-sm font-bold">Thêm mới</a>
-                        </div>
-
-                        <div className="space-y-4">
-                            <div className="border border-gray-100 border-l-[3px] border-l-blue-600 rounded-r-xl rounded-l-sm bg-white shadow-sm p-4">
-                                <p className="text-slate-700 text-sm mb-3 font-medium">
-                                    Phân biệt 'advice' (n) và 'advise' (v) - hay nhầm trong Part 5.
-                                </p>
-                                <p className="text-xs text-gray-400 font-medium italic">Đã cập nhật: 2 giờ trước</p>
-                            </div>
-                            <div className="border border-gray-100 rounded-xl bg-white shadow-sm p-4">
-                                <p className="text-slate-700 text-sm font-medium">
-                                    Học thuộc 10 đuôi danh từ phổ biến nhất.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Bài tập liên quan */}
-                    <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
-                        <h3 className="font-bold text-slate-800 text-base flex items-center gap-2 mb-6">
-                            <BookOutlined className="text-gray-800" />
-                            Bài tập liên quan
-                        </h3>
-
-                        <div className="space-y-5 mb-8">
-                            <div className="flex flex-col">
-                                <div className="flex items-center justify-between mb-3 cursor-pointer group">
-                                    <span className="text-slate-700 font-bold text-sm group-hover:text-blue-600 transition-colors">Quiz: Nhận biết danh từ</span>
-                                    <ArrowRightOutlined className="text-gray-400 text-xs group-hover:text-blue-600 transition-colors" />
-                                </div>
-                                {/* Progress bar */}
-                                <div className="w-full bg-slate-100 rounded-full h-1.5">
-                                    <div className="bg-blue-600 h-1.5 rounded-full" style={{ width: '80%' }}></div>
-                                </div>
-                            </div>
-
-                            <div className="flex items-center justify-between border-t border-slate-100 pt-5 cursor-pointer group">
-                                <span className="text-slate-700 font-bold text-sm group-hover:text-blue-600 transition-colors">TOEIC Part 5: Từ loại</span>
-                                <ArrowRightOutlined className="text-gray-400 text-xs group-hover:text-blue-600 transition-colors" />
-                            </div>
-
-                            <div className="flex items-center justify-between border-t border-slate-100 pt-5 cursor-pointer group">
-                                <span className="text-slate-700 font-bold text-sm group-hover:text-blue-600 transition-colors">Danh từ số ít & số nhiều</span>
-                                <ArrowRightOutlined className="text-gray-400 text-xs group-hover:text-blue-600 transition-colors" />
-                            </div>
-                        </div>
-
-                        <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl transition-colors shadow-sm">
-                            Làm bài kiểm tra ngay
-                        </button>
-                    </div>
+                    <PersonalNotes theoryId="noun_pronoun" />
 
                     {/* Tiến độ bài học */}
 
