@@ -6370,8 +6370,5147 @@ export const EXERCISE_DATA = {
   },
 };
 
+export const SV_AGREEMENT_EASY = [
+  {
+    "id": "q_sv_agreement_001",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "The new interactive feature in the EduKit app _____ students to track their collective study hours.",
+    "options": [
+      { "key": "A", "text": "allow" },
+      { "key": "B", "text": "allows" },
+      { "key": "C", "text": "allowing" },
+      { "key": "D", "text": "are allowing" }
+    ],
+    "correct_answer": "B",
+    "hint": "Chủ ngữ chính của câu là 'The new interactive feature' (số ít). Cụm 'in the EduKit app' chỉ là thành phần bổ nghĩa.",
+    "explanation": "Chính xác. Động từ phải chia theo chủ ngữ số ít 'feature', do đó ta thêm 's' thành 'allows'.",
+    "translation": "Tính năng tương tác mới trong ứng dụng EduKit cho phép học sinh theo dõi tổng số giờ học tập thể của họ."
+  },
+  {
+    "id": "q_sv_agreement_002",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Each of the premium gift boxes _____ carefully packed with eco-friendly materials before shipping.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Cấu trúc 'Each of + Danh từ số nhiều' luôn đi kèm với động từ chia ở dạng số ít.",
+    "explanation": "Chính xác. Mặc dù 'gift boxes' là số nhiều, nhưng chủ ngữ chính của câu là 'Each' (Mỗi một), do đó động từ to be phải chia ở số ít 'is'.",
+    "translation": "Mỗi chiếc hộp quà tặng cao cấp đều được đóng gói cẩn thận bằng vật liệu thân thiện với môi trường trước khi vận chuyển."
+  },
+  {
+    "id": "q_sv_agreement_003",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "The number of users subscribing to the PrepMaster platform _____ steadily over the past three months.",
+    "options": [
+      { "key": "A", "text": "increase" },
+      { "key": "B", "text": "have increased" },
+      { "key": "C", "text": "has increased" },
+      { "key": "D", "text": "are increasing" }
+    ],
+    "correct_answer": "C",
+    "hint": "Phân biệt: 'The number of' (Số lượng những...) + Động từ số ít. 'A number of' (Một số những...) + Động từ số nhiều.",
+    "explanation": "Chính xác. 'The number of' yêu cầu động từ số ít. Kết hợp với dấu hiệu 'over the past three months', ta chọn thì hiện tại hoàn thành số ít 'has increased'.",
+    "translation": "Số lượng người dùng đăng ký nền tảng PrepMaster đã tăng đều đặn trong ba tháng qua."
+  },
+  {
+    "id": "q_sv_agreement_004",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Not only the developers but also the project manager _____ attending the workshop on mobile app security tomorrow.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "was" },
+      { "key": "D", "text": "were" }
+    ],
+    "correct_answer": "A",
+    "hint": "Trong cấu trúc 'Not only A but also B' (Không những A mà còn B), động từ luôn được chia theo chủ ngữ gần nó nhất (tức là B).",
+    "explanation": "Chính xác. Chủ ngữ gần động từ nhất là 'the project manager' (số ít), nên động từ to be chia là 'is'.",
+    "translation": "Không chỉ các lập trình viên mà cả quản lý dự án cũng sẽ tham dự hội thảo về bảo mật ứng dụng di động vào ngày mai."
+  },
+  {
+    "id": "q_sv_agreement_005",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "Creating daily TikTok videos to practice English _____ a significant amount of creativity and dedication.",
+    "options": [
+      { "key": "A", "text": "require" },
+      { "key": "B", "text": "requires" },
+      { "key": "C", "text": "are requiring" },
+      { "key": "D", "text": "have required" }
+    ],
+    "correct_answer": "B",
+    "hint": "Khi một Danh động từ (V-ing) đóng vai trò làm chủ ngữ trong câu, động từ theo sau nó luôn được chia ở dạng số ít.",
+    "explanation": "Chính xác. Chủ ngữ của câu là việc 'Creating...' (Tạo ra...), là một danh động từ, do đó động từ 'require' phải thêm 's'.",
+    "translation": "Việc tạo các video TikTok hàng ngày để luyện tiếng Anh đòi hỏi một lượng lớn sự sáng tạo và cống hiến."
+  },
+  {
+    "id": "q_sv_agreement_006",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "The marketing team _____ decided to launch a new promotional campaign for the Happy Box collection next week.",
+    "options": [
+      { "key": "A", "text": "has" },
+      { "key": "B", "text": "have" },
+      { "key": "C", "text": "are" },
+      { "key": "D", "text": "is" }
+    ],
+    "correct_answer": "A",
+    "hint": "Các danh từ tập hợp (collective nouns) như 'team', 'committee', 'staff' thường được coi là một thực thể thống nhất (số ít) trong ngữ pháp TOEIC.",
+    "explanation": "Chính xác. 'The marketing team' đóng vai trò là một chủ thể duy nhất cùng đưa ra quyết định, nên dùng trợ động từ số ít 'has'.",
+    "translation": "Nhóm tiếp thị đã quyết định ra mắt một chiến dịch khuyến mãi mới cho bộ sưu tập Happy Box vào tuần tới."
+  },
+  {
+    "id": "q_sv_agreement_007",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "Neither the timekeeping app nor the HR portals _____ properly during the server upgrade last night.",
+    "options": [
+      { "key": "A", "text": "function" },
+      { "key": "B", "text": "functions" },
+      { "key": "C", "text": "functioned" },
+      { "key": "D", "text": "was functioning" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cấu trúc 'Neither A nor B' chia động từ theo B. Ở đây, B là 'HR portals' (số nhiều). Hơn nữa, câu có dấu hiệu thời gian 'last night'.",
+    "explanation": "Chính xác. Động từ chia theo 'HR portals' (số nhiều) và ở thì quá khứ đơn (last night), nên 'functioned' là đáp án đúng.",
+    "translation": "Cả ứng dụng chấm công lẫn các cổng thông tin nhân sự đều không hoạt động bình thường trong quá trình nâng cấp máy chủ tối qua."
+  },
+  {
+    "id": "q_sv_agreement_008",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "The CEO, along with several investors, _____ visiting the new packaging facility for Happy Box this afternoon.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Trong cấu trúc 'Subject 1 + along with / together with / as well as + Subject 2', động từ luôn được chia theo Subject 1.",
+    "explanation": "Chính xác. Chủ ngữ chính là 'The CEO' (số ít). Cụm 'along with several investors' chỉ là thành phần phụ thêm vào, không ảnh hưởng đến động từ. Chọn 'is'.",
+    "translation": "Giám đốc điều hành, cùng với một vài nhà đầu tư, sẽ đến thăm cơ sở đóng gói mới cho Happy Box vào chiều nay."
+  },
+  {
+    "id": "q_sv_agreement_009",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "Everyone in the mobile development department _____ required to attend the weekly code review session.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Các đại từ bất định như 'Everyone, everybody, someone, nobody, anyone...' luôn đi kèm với động từ chia ở số ít.",
+    "explanation": "Chính xác. Chủ ngữ là đại từ bất định 'Everyone' nên động từ to be phải chia ở số ít 'is'.",
+    "translation": "Mọi người trong bộ phận phát triển thiết bị di động đều phải tham dự buổi đánh giá mã nguồn hàng tuần."
+  },
+  {
+    "id": "q_sv_agreement_010",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "A number of severe bugs _____ discovered in the EduKit beta version by the QA team yesterday.",
+    "options": [
+      { "key": "A", "text": "was" },
+      { "key": "B", "text": "were" },
+      { "key": "C", "text": "has been" },
+      { "key": "D", "text": "is" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cấu trúc 'A number of' mang nghĩa là 'Một vài/Một số', luôn đi với danh từ số nhiều và ĐỘNG TỪ SỐ NHIỀU.",
+    "explanation": "Chính xác. 'A number of bugs' yêu cầu động từ số nhiều. Kết hợp với trạng từ quá khứ 'yesterday', 'were' là đáp án đúng.",
+    "translation": "Một số lỗi nghiêm trọng đã được nhóm QA phát hiện trong phiên bản thử nghiệm EduKit vào ngày hôm qua."
+  },
+  {
+    "id": "q_sv_agreement_011",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Two months _____ considered enough time to thoroughly prepare for the JLPT N3 if you study consistently.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "has" },
+      { "key": "D", "text": "have" }
+    ],
+    "correct_answer": "A",
+    "hint": "Các danh từ chỉ khoảng thời gian, khoảng cách, số tiền hay trọng lượng luôn được coi là một thể thống nhất và đi với động từ số ít.",
+    "explanation": "Chính xác. Mặc dù 'Two months' (hai tháng) có vẻ là số nhiều, nhưng nó chỉ một khoảng thời gian duy nhất nên dùng động từ số ít 'is'.",
+    "translation": "Hai tháng được coi là đủ thời gian để chuẩn bị kỹ lưỡng cho kỳ thi JLPT N3 nếu bạn học tập đều đặn."
+  },
+  {
+    "id": "q_sv_agreement_012",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Every employee and manager _____ expected to read the new data privacy policy before using the HR app.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Cấu trúc 'Every + Danh từ 1 and Danh từ 2' vẫn luôn được coi là một khối tổng thể và đi cùng với động từ số ít.",
+    "explanation": "Chính xác. Sự xuất hiện của từ 'Every' ở đầu chủ ngữ quyết định việc động từ phải chia ở số ít 'is', bất chấp việc có từ nối 'and'.",
+    "translation": "Mọi nhân viên và quản lý đều được mong đợi sẽ đọc chính sách bảo mật dữ liệu mới trước khi sử dụng ứng dụng nhân sự."
+  },
+  {
+    "id": "q_sv_agreement_013",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "The list of candidates interviewed for the Mobile Developer Intern position _____ been finalized.",
+    "options": [
+      { "key": "A", "text": "has" },
+      { "key": "B", "text": "have" },
+      { "key": "C", "text": "is" },
+      { "key": "D", "text": "are" }
+    ],
+    "correct_answer": "A",
+    "hint": "Chủ ngữ chính của câu là 'The list' (số ít). Cụm 'of candidates interviewed...' chỉ là phần bổ nghĩa.",
+    "explanation": "Chính xác. Động từ chia theo chủ ngữ số ít 'The list' nên ta dùng trợ động từ 'has' cho thì hiện tại hoàn thành.",
+    "translation": "Danh sách các ứng viên được phỏng vấn cho vị trí Thực tập sinh Mobile Developer đã được chốt."
+  },
+  {
+    "id": "q_sv_agreement_014",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "Either the main server or the backup databases _____ experiencing connectivity issues at the moment.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "was" },
+      { "key": "D", "text": "were" }
+    ],
+    "correct_answer": "B",
+    "hint": "Tương tự 'Neither... nor', cấu trúc 'Either A or B' yêu cầu động từ chia theo chủ ngữ gần nó nhất (B).",
+    "explanation": "Chính xác. Chủ ngữ gần động từ nhất là 'the backup databases' (số nhiều), kết hợp với 'at the moment' (hiện tại tiếp diễn), ta chọn 'are'.",
+    "translation": "Hoặc máy chủ chính hoặc các cơ sở dữ liệu dự phòng đang gặp sự cố kết nối vào lúc này."
+  },
+  {
+    "id": "q_sv_agreement_015",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Both the TOEIC reading modules and the JLPT listening exercises _____ available on the new PrepMaster update.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "was" },
+      { "key": "D", "text": "has been" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cấu trúc 'Both A and B' (Cả A và B) luôn đóng vai trò là chủ ngữ số nhiều.",
+    "explanation": "Chính xác. Chủ ngữ luôn là số nhiều nên động từ to be phải chia là 'are'.",
+    "translation": "Cả các mô-đun đọc TOEIC và các bài tập nghe JLPT đều có sẵn trong bản cập nhật PrepMaster mới."
+  },
+  {
+    "id": "q_sv_agreement_016",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Five hundred dollars _____ the estimated budget for producing the next batch of promotional TikTok videos.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Đại lượng chỉ số tiền (money) luôn được ngữ pháp tiếng Anh coi là một đơn vị số ít.",
+    "explanation": "Chính xác. Dù là 'Five hundred dollars', nó biểu thị một khoản tiền tổng thể nên đi với động từ số ít 'is'.",
+    "translation": "Năm trăm đô la là ngân sách ước tính để sản xuất đợt video TikTok quảng cáo tiếp theo."
+  },
+  {
+    "id": "q_sv_agreement_017",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "The quality of the eco-friendly materials used in our Happy Box packaging _____ significantly improved this year.",
+    "options": [
+      { "key": "A", "text": "has" },
+      { "key": "B", "text": "have" },
+      { "key": "C", "text": "is" },
+      { "key": "D", "text": "are" }
+    ],
+    "correct_answer": "A",
+    "hint": "Xác định từ cốt lõi của chủ ngữ. Đó là 'The quality' (Chất lượng - số ít), không phải 'materials'.",
+    "explanation": "Chính xác. Động từ chia theo 'The quality' (số ít). Kết hợp với 'improved', ta dùng thì hiện tại hoàn thành số ít 'has'.",
+    "translation": "Chất lượng của các vật liệu thân thiện với môi trường được sử dụng trong bao bì Happy Box của chúng tôi đã được cải thiện đáng kể trong năm nay."
+  },
+  {
+    "id": "q_sv_agreement_018",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "Information regarding user engagement on the learning app _____ closely monitored by the data analysts.",
+    "options": [
+      { "key": "A", "text": "are" },
+      { "key": "B", "text": "is" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "B",
+    "hint": "Từ 'Information' (Thông tin) là một danh từ không đếm được trong tiếng Anh, do đó luôn đi với động từ số ít.",
+    "explanation": "Chính xác. Chủ ngữ 'Information' là danh từ không đếm được nên dùng động từ to be số ít 'is' trong cấu trúc bị động.",
+    "translation": "Thông tin liên quan đến sự tương tác của người dùng trên ứng dụng học tập được các nhà phân tích dữ liệu theo dõi chặt chẽ."
+  },
+  {
+    "id": "q_sv_agreement_019",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Anybody who _____ to customize their corporate gift box order must contact the sales department directly.",
+    "options": [
+      { "key": "A", "text": "wishes" },
+      { "key": "B", "text": "wish" },
+      { "key": "C", "text": "wishing" },
+      { "key": "D", "text": "to wish" }
+    ],
+    "correct_answer": "A",
+    "hint": "Đại từ quan hệ 'who' thay thế cho đại từ bất định 'Anybody' (Bất cứ ai - số ít). Động từ đi theo 'who' phải chia theo 'Anybody'.",
+    "explanation": "Chính xác. 'Anybody' là đại từ bất định số ít, do đó động từ 'wish' phải thêm 'es' thành 'wishes'.",
+    "translation": "Bất cứ ai muốn tùy chỉnh đơn hàng hộp quà tặng doanh nghiệp của họ đều phải liên hệ trực tiếp với bộ phận bán hàng."
+  },
+  {
+    "id": "q_sv_agreement_020",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "The integration between the mobile timekeeping app and the HR portal _____ seamlessly without any glitches.",
+    "options": [
+      { "key": "A", "text": "work" },
+      { "key": "B", "text": "works" },
+      { "key": "C", "text": "working" },
+      { "key": "D", "text": "are working" }
+    ],
+    "correct_answer": "B",
+    "hint": "Chủ ngữ chính là 'The integration' (Sự tích hợp - danh từ trừu tượng số ít). Các thành phần sau 'between' chỉ là bổ ngữ.",
+    "explanation": "Chính xác. Chủ ngữ số ít 'The integration' yêu cầu động từ thêm 's', thành 'works'.",
+    "translation": "Sự tích hợp giữa ứng dụng chấm công trên thiết bị di động và cổng thông tin nhân sự hoạt động trơn tru mà không có bất kỳ trục trặc nào."
+  },
+  {
+    "id": "q_sv_agreement_021",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "The marketing director, as well as the graphic designers, _____ currently working on the visual concepts for the Happy Box campaign.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Cụm từ được nối bởi 'as well as', 'along with', 'together with' không làm thay đổi số lượng của chủ ngữ chính đứng trước nó.",
+    "explanation": "Chính xác. Chủ ngữ chính là 'The marketing director' (số ít). Cụm 'as well as the graphic designers' chỉ là thành phần phụ. Do đó, động từ to be chia ở số ít 'is'.",
+    "translation": "Giám đốc tiếp thị, cũng như các nhà thiết kế đồ họa, hiện đang làm việc trên các ý tưởng hình ảnh cho chiến dịch Happy Box."
+  },
+  {
+    "id": "q_sv_agreement_022",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Neither the HR manager nor the employees _____ why the mobile timekeeping app crashed during rush hour.",
+    "options": [
+      { "key": "A", "text": "know" },
+      { "key": "B", "text": "knows" },
+      { "key": "C", "text": "knowing" },
+      { "key": "D", "text": "is knowing" }
+    ],
+    "correct_answer": "A",
+    "hint": "Với cấu trúc 'Neither A nor B' (Không A cũng không B), động từ luôn được chia theo chủ ngữ gần nó nhất (tức là B).",
+    "explanation": "Chính xác. Chủ ngữ gần động từ nhất là 'the employees' (số nhiều), nên động từ 'know' giữ nguyên mẫu.",
+    "translation": "Cả người quản lý nhân sự lẫn các nhân viên đều không biết tại sao ứng dụng chấm công di động lại bị sập trong giờ cao điểm."
+  },
+  {
+    "id": "q_sv_agreement_023",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "Three hours of daily practice _____ to be the minimum requirement for mastering both English and Japanese simultaneously.",
+    "options": [
+      { "key": "A", "text": "seem" },
+      { "key": "B", "text": "seems" },
+      { "key": "C", "text": "seeming" },
+      { "key": "D", "text": "are seeming" }
+    ],
+    "correct_answer": "B",
+    "hint": "Các cụm từ chỉ thời gian, khoảng cách, số lượng hoặc tiền bạc luôn được coi là một đại lượng thống nhất và đi với động từ số ít.",
+    "explanation": "Chính xác. Mặc dù 'Three hours' là số nhiều, nó đại diện cho một khoảng thời gian duy nhất. Do đó, động từ 'seems' phải thêm 's'.",
+    "translation": "Ba giờ luyện tập hàng ngày dường như là yêu cầu tối thiểu để làm chủ cả tiếng Anh và tiếng Nhật cùng một lúc."
+  },
+  {
+    "id": "q_sv_agreement_024",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "Integrating the new timekeeping app with the central database _____ a highly skilled Mobile Developer.",
+    "options": [
+      { "key": "A", "text": "require" },
+      { "key": "B", "text": "requires" },
+      { "key": "C", "text": "are requiring" },
+      { "key": "D", "text": "have required" }
+    ],
+    "correct_answer": "B",
+    "hint": "Khi một Danh động từ (V-ing) hoặc cụm Danh động từ làm chủ ngữ, nó luôn được coi là số ít.",
+    "explanation": "Chính xác. Chủ ngữ của câu là cụm danh động từ 'Integrating... database' (Việc tích hợp...), do đó động từ chính 'requires' phải chia ở số ít.",
+    "translation": "Việc tích hợp ứng dụng chấm công mới với cơ sở dữ liệu trung tâm đòi hỏi một Lập trình viên thiết bị di động có kỹ năng cao."
+  },
+  {
+    "id": "q_sv_agreement_025",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "Because the project is still in the planning phase, nothing in the latest PrepMaster update _____ been finalized yet.",
+    "options": [
+      { "key": "A", "text": "has" },
+      { "key": "B", "text": "have" },
+      { "key": "C", "text": "is" },
+      { "key": "D", "text": "are" }
+    ],
+    "correct_answer": "A",
+    "hint": "Đại từ bất định 'nothing', 'everything', 'something', 'anything' luôn luôn đi kèm với động từ chia ở số ít.",
+    "explanation": "Chính xác. Chủ ngữ là đại từ bất định 'nothing', do đó trợ động từ của thì hiện tại hoàn thành phải là số ít 'has'.",
+    "translation": "Vì dự án vẫn đang trong giai đoạn lập kế hoạch, không có gì trong bản cập nhật PrepMaster mới nhất được chốt lại cả."
+  },
+  {
+    "id": "q_sv_agreement_026",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "A number of corporate clients _____ already requested customized Happy Boxes for the upcoming holiday season.",
+    "options": [
+      { "key": "A", "text": "has" },
+      { "key": "B", "text": "have" },
+      { "key": "C", "text": "is" },
+      { "key": "D", "text": "are" }
+    ],
+    "correct_answer": "B",
+    "hint": "Phân biệt: 'The number of' (Số lượng những...) đi với số ít. Nhưng 'A number of' (Một số/Vài...) luôn đi với động từ số nhiều.",
+    "explanation": "Chính xác. Cấu trúc 'A number of' mang nghĩa là 'một số', làm chủ ngữ số nhiều, do đó đi với trợ động từ 'have'.",
+    "translation": "Một số khách hàng doanh nghiệp đã yêu cầu các hộp Happy Box tùy chỉnh cho mùa lễ sắp tới."
+  },
+  {
+    "id": "q_sv_agreement_027",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "The number of active users on the EduKit platform _____ increasing rapidly thanks to the new interactive features.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Ngược lại với 'A number of', cấu trúc 'The number of' chỉ một con số cụ thể, do đó nó luôn đi với động từ số ít.",
+    "explanation": "Chính xác. Chủ ngữ là 'The number of' (Con số/Số lượng) nên động từ to be phải chia ở số ít 'is'.",
+    "translation": "Số lượng người dùng hoạt động trên nền tảng EduKit đang tăng lên nhanh chóng nhờ vào các tính năng tương tác mới."
+  },
+  {
+    "id": "q_sv_agreement_028",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "Nearly fifty percent of the marketing budget _____ allocated to the daily English speaking TikTok series.",
+    "options": [
+      { "key": "A", "text": "were" },
+      { "key": "B", "text": "was" },
+      { "key": "C", "text": "have been" },
+      { "key": "D", "text": "are" }
+    ],
+    "correct_answer": "B",
+    "hint": "Với các từ chỉ phân số, phần trăm (percent, half, some, all...), động từ chia số ít hay số nhiều phụ thuộc vào danh từ đứng sau giới từ 'of'.",
+    "explanation": "Chính xác. Danh từ đứng sau 'of' là 'the marketing budget' (ngân sách - số ít không đếm được). Do đó động từ to be phải chia ở số ít 'was'.",
+    "translation": "Gần năm mươi phần trăm ngân sách tiếp thị đã được phân bổ cho loạt video TikTok luyện nói tiếng Anh hàng ngày."
+  },
+  {
+    "id": "q_sv_agreement_029",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Either the lead developer or the interns _____ responsible for updating the central database every Friday.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "was" },
+      { "key": "D", "text": "has been" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cấu trúc 'Either A or B' (Hoặc A hoặc B). Động từ luôn được chia theo chủ ngữ B (chủ ngữ đứng gần động từ nhất).",
+    "explanation": "Chính xác. Chủ ngữ gần động từ nhất là 'the interns' (số nhiều), và hành động lặp lại 'every Friday' (hiện tại đơn), nên chọn 'are'.",
+    "translation": "Hoặc lập trình viên chính hoặc các thực tập sinh chịu trách nhiệm cập nhật cơ sở dữ liệu trung tâm vào mỗi thứ Sáu."
+  },
+  {
+    "id": "q_sv_agreement_030",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "The lighting equipment used for shooting the daily TikTok videos _____ quite a lot of money.",
+    "options": [
+      { "key": "A", "text": "cost" },
+      { "key": "B", "text": "costing" },
+      { "key": "C", "text": "costs" },
+      { "key": "D", "text": "are costing" }
+    ],
+    "correct_answer": "C",
+    "hint": "Từ 'equipment' (thiết bị/trang thiết bị) là một danh từ không đếm được trong tiếng Anh, do đó nó luôn là chủ ngữ số ít.",
+    "explanation": "Chính xác. Vì 'equipment' là số ít, động từ thường 'cost' phải thêm 's' thành 'costs'. Phần 'used for...' chỉ là mệnh đề quan hệ rút gọn bổ nghĩa cho chủ ngữ.",
+    "translation": "Các thiết bị chiếu sáng được sử dụng để quay các video TikTok hàng ngày tốn khá nhiều tiền."
+  },
+  {
+    "id": "q_sv_agreement_031",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "The developers who _____ on the EduKit app are planning a major update to improve user experience.",
+    "options": [
+      { "key": "A", "text": "work" },
+      { "key": "B", "text": "works" },
+      { "key": "C", "text": "working" },
+      { "key": "D", "text": "has worked" }
+    ],
+    "correct_answer": "A",
+    "hint": "Trong mệnh đề quan hệ (who/which/that), động từ được chia phụ thuộc vào danh từ đứng ngay trước đại từ quan hệ đó (antecedent).",
+    "explanation": "Chính xác. Đại từ quan hệ 'who' thay thế cho 'The developers' (số nhiều). Do đó, động từ 'work' ở mệnh đề quan hệ giữ nguyên mẫu.",
+    "translation": "Các lập trình viên làm việc trên ứng dụng EduKit đang lên kế hoạch cho một bản cập nhật lớn để cải thiện trải nghiệm người dùng."
+  },
+  {
+    "id": "q_sv_agreement_032",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "There _____ several new features in the timekeeping application that need thorough testing before the launch.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "was" },
+      { "key": "D", "text": "has been" }
+    ],
+    "correct_answer": "B",
+    "hint": "Trong cấu trúc đảo ngữ với 'There' (There is/There are), chủ ngữ thực sự của câu nằm NGAY SAU động từ to be.",
+    "explanation": "Chính xác. Chủ ngữ thực sự là 'several new features' (vài tính năng mới - số nhiều), do đó động từ to be phải là 'are'.",
+    "translation": "Có một vài tính năng mới trong ứng dụng chấm công cần được kiểm tra kỹ lưỡng trước khi ra mắt."
+  },
+  {
+    "id": "q_sv_agreement_033",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "Mathematics _____ not explicitly taught on the PrepMaster platform, as it primarily focuses on language proficiency.",
+    "options": [
+      { "key": "A", "text": "are" },
+      { "key": "B", "text": "is" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "B",
+    "hint": "Các danh từ chỉ môn học (Mathematics, Physics, Economics...), các căn bệnh (Measles, Mumps) hoặc tin tức (News) dù có tận cùng là 's' nhưng luôn là số ít.",
+    "explanation": "Chính xác. 'Mathematics' là tên một môn học (môn Toán), là danh từ số ít nên đi với động từ to be 'is'.",
+    "translation": "Môn Toán không được giảng dạy rõ ràng trên nền tảng PrepMaster, vì nó chủ yếu tập trung vào trình độ ngôn ngữ."
+  },
+  {
+    "id": "q_sv_agreement_034",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Every employee and manager _____ to log their working hours through the new HR portal by the end of the day.",
+    "options": [
+      { "key": "A", "text": "have" },
+      { "key": "B", "text": "having" },
+      { "key": "C", "text": "has" },
+      { "key": "D", "text": "are having" }
+    ],
+    "correct_answer": "C",
+    "hint": "Ngay cả khi có nhiều danh từ được nối với nhau bằng 'and', nếu phía trước có từ 'Every' hoặc 'Each', toàn bộ cụm đó được xem là một khối số ít.",
+    "explanation": "Chính xác. Từ 'Every' bao trùm cả 'employee and manager' tạo thành một chủ ngữ số ít, do đó phải dùng động từ 'has'.",
+    "translation": "Mọi nhân viên và quản lý đều phải ghi lại số giờ làm việc của mình thông qua cổng thông tin nhân sự mới trước cuối ngày."
+  },
+  {
+    "id": "q_sv_agreement_035",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "Both the TOEIC preparation course and the JLPT N3 training module _____ highly rated by the users.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "was" },
+      { "key": "D", "text": "has been" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cấu trúc 'Both A and B' (Cả A và B) luôn đóng vai trò là chủ ngữ số nhiều.",
+    "explanation": "Chính xác. Do chủ ngữ là số nhiều ('Both... and...'), động từ to be phải chia ở số nhiều 'are'.",
+    "translation": "Cả khóa học luyện thi TOEIC và học phần đào tạo JLPT N3 đều được người dùng đánh giá cao."
+  },
+  {
+    "id": "q_sv_agreement_036",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Ten thousand dollars _____ invested last month in the redesign of the Happy Box packaging.",
+    "options": [
+      { "key": "A", "text": "was" },
+      { "key": "B", "text": "were" },
+      { "key": "C", "text": "are" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Tương tự như chỉ khoảng thời gian, một tổng số tiền cụ thể (dù số nhiều) được coi là một khoản tiền duy nhất (số ít).",
+    "explanation": "Chính xác. 'Ten thousand dollars' là một khoản tiền, đóng vai trò chủ ngữ số ít. Dấu hiệu 'last month' yêu cầu thì quá khứ đơn, nên chọn 'was'.",
+    "translation": "Mười nghìn đô la đã được đầu tư vào tháng trước để thiết kế lại bao bì Happy Box."
+  },
+  {
+    "id": "q_sv_agreement_037",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "The committee _____ finally approved the budget to hire a new Mobile Developer Intern for the timekeeping project.",
+    "options": [
+      { "key": "A", "text": "have" },
+      { "key": "B", "text": "has" },
+      { "key": "C", "text": "are" },
+      { "key": "D", "text": "were" }
+    ],
+    "correct_answer": "B",
+    "hint": "Các danh từ tập hợp như 'committee', 'team', 'jury', 'family' thường đi với động từ số ít khi chúng hoạt động như một thực thể thống nhất đưa ra một quyết định chung.",
+    "explanation": "Chính xác. 'The committee' (Ủy ban) ở đây đang cùng nhau đưa ra một quyết định thống nhất (approved), do đó nó được xem là chủ ngữ số ít, đi với 'has'.",
+    "translation": "Ủy ban cuối cùng đã phê duyệt ngân sách để thuê một Thực tập sinh Mobile Developer mới cho dự án chấm công."
+  },
+  {
+    "id": "q_sv_agreement_038",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "The quality of the daily English speaking videos _____ depending on the lighting and the camera used.",
+    "options": [
+      { "key": "A", "text": "vary" },
+      { "key": "B", "text": "varies" },
+      { "key": "C", "text": "varying" },
+      { "key": "D", "text": "are varying" }
+    ],
+    "correct_answer": "B",
+    "hint": "Xác định danh từ chính của cụm chủ ngữ. Cụm 'of the... videos' chỉ là cụm giới từ bổ nghĩa, không quyết định việc chia động từ.",
+    "explanation": "Chính xác. Danh từ chính là 'The quality' (Chất lượng - số ít), do đó động từ 'vary' phải đổi 'y' thành 'i' và thêm 'es' thành 'varies'.",
+    "translation": "Chất lượng của các video nói tiếng Anh hàng ngày thay đổi tùy thuộc vào ánh sáng và máy ảnh được sử dụng."
+  },
+  {
+    "id": "q_sv_agreement_039",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "None of the information in the HR database _____ compromised during the cyber attack yesterday.",
+    "options": [
+      { "key": "A", "text": "was" },
+      { "key": "B", "text": "were" },
+      { "key": "C", "text": "have been" },
+      { "key": "D", "text": "are" }
+    ],
+    "correct_answer": "A",
+    "hint": "Với 'None of', động từ chia số ít hay nhiều phụ thuộc vào danh từ đứng sau 'of'. Chú ý: 'Information' luôn là danh từ không đếm được.",
+    "explanation": "Chính xác. Do 'information' là danh từ không đếm được (số ít), động từ phải chia ở số ít. Sự việc diễn ra 'yesterday' nên dùng 'was'.",
+    "translation": "Không có thông tin nào trong cơ sở dữ liệu nhân sự bị xâm phạm trong cuộc tấn công mạng ngày hôm qua."
+  },
+  {
+    "id": "q_sv_agreement_040",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "One of the biggest challenges in building the PrepMaster app _____ creating accurate and engaging mock exams.",
+    "options": [
+      { "key": "A", "text": "are" },
+      { "key": "B", "text": "were" },
+      { "key": "C", "text": "is" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cấu trúc 'One of the + Danh từ số nhiều' (Một trong những...) luôn dùng để chỉ MỘT đối tượng, do đó chủ ngữ chính là 'One' (số ít).",
+    "explanation": "Chính xác. Chủ ngữ chính là đại từ 'One' (số ít), bất chấp việc có các cụm danh từ số nhiều theo sau. Do đó động từ to be phải là 'is'.",
+    "translation": "Một trong những thách thức lớn nhất trong việc xây dựng ứng dụng PrepMaster là tạo ra các bài thi thử chính xác và hấp dẫn."
+  },
+  {
+    "id": "q_sv_agreement_041",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "The news regarding the delayed launch of the new HR portal _____ disappointing to the employees.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Một số danh từ tận cùng bằng 's' nhưng luôn mang nghĩa số ít, ví dụ như: news (tin tức), physics (vật lý), mathematics (toán học).",
+    "explanation": "Chính xác. Mặc dù có chữ 's' ở cuối, 'The news' (tin tức) là một danh từ không đếm được và luôn đi với động từ số ít 'is'.",
+    "translation": "Tin tức về việc trì hoãn ra mắt cổng thông tin nhân sự mới thật đáng thất vọng đối với các nhân viên."
+  },
+  {
+    "id": "q_sv_agreement_042",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "A large box of custom corporate gift samples _____ just arrived at the reception desk for the Happy Box team.",
+    "options": [
+      { "key": "A", "text": "have" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "has" },
+      { "key": "D", "text": "were" }
+    ],
+    "correct_answer": "C",
+    "hint": "Xác định từ cốt lõi của chủ ngữ. Chủ ngữ là 'A large box' (số ít), phần 'of custom corporate gift samples' chỉ là cụm giới từ bổ nghĩa.",
+    "explanation": "Chính xác. Động từ chia theo chủ ngữ số ít 'A large box', kết hợp với từ 'just', ta dùng trợ động từ 'has' cho thì hiện tại hoàn thành.",
+    "translation": "Một hộp lớn chứa các mẫu quà tặng doanh nghiệp tùy chỉnh vừa mới đến bàn tiếp tân cho nhóm Happy Box."
+  },
+  {
+    "id": "q_sv_agreement_043",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Nearly three-quarters of the TikTok followers _____ active daily to watch the English speaking lessons.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "was" },
+      { "key": "D", "text": "has been" }
+    ],
+    "correct_answer": "B",
+    "hint": "Với các từ chỉ phân số (three-quarters), động từ chia số ít hay số nhiều phụ thuộc vào danh từ đứng sau giới từ 'of'.",
+    "explanation": "Chính xác. Danh từ đứng sau 'of' là 'the TikTok followers' (số nhiều). Do đó động từ to be phải chia ở số nhiều 'are'.",
+    "translation": "Gần ba phần tư số người theo dõi TikTok hoạt động hàng ngày để xem các bài học nói tiếng Anh."
+  },
+  {
+    "id": "q_sv_agreement_044",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "The founder and lead developer of EduKit _____ scheduled to speak at the ed-tech conference next Monday.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Cấu trúc 'The + Noun 1 + and + Noun 2' (chỉ có MỘT mạo từ 'The') dùng để chỉ một người kiêm nhiệm cả hai chức vụ. Do đó, đây là chủ ngữ số ít.",
+    "explanation": "Chính xác. 'The founder and lead developer' chỉ cùng MỘT người đảm nhận hai vai trò. Vì vậy, động từ chia ở số ít 'is'. Nếu là hai người khác nhau, câu sẽ viết là 'The founder and THE lead developer'.",
+    "translation": "Người sáng lập kiêm lập trình viên chính của EduKit dự kiến sẽ phát biểu tại hội nghị công nghệ giáo dục vào thứ Hai tới."
+  },
+  {
+    "id": "q_sv_agreement_045",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "The CEO and the marketing director _____ both agreed to increase the budget for the upcoming holiday campaign.",
+    "options": [
+      { "key": "A", "text": "has" },
+      { "key": "B", "text": "have" },
+      { "key": "C", "text": "is" },
+      { "key": "D", "text": "was" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cấu trúc 'The + Noun 1 + and + The + Noun 2' chỉ hai người/vật hoàn toàn khác nhau, do đó nó là chủ ngữ số nhiều.",
+    "explanation": "Chính xác. Vì có hai mạo từ 'The' đứng trước hai chức danh, đây là hai người khác nhau (CEO và Giám đốc tiếp thị). Chủ ngữ là số nhiều nên dùng trợ động từ 'have'.",
+    "translation": "Cả Giám đốc điều hành và Giám đốc tiếp thị đều đã đồng ý tăng ngân sách cho chiến dịch dịp lễ sắp tới."
+  },
+  {
+    "id": "q_sv_agreement_046",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Despite the thorough testing, there _____ still a few minor bugs in the timekeeping application.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "was" },
+      { "key": "D", "text": "has been" }
+    ],
+    "correct_answer": "B",
+    "hint": "Trong cấu trúc 'There is / There are', động từ to be được chia dựa vào danh từ đứng NGAY SAU nó.",
+    "explanation": "Chính xác. Danh từ đứng ngay sau khoảng trống là 'a few minor bugs' (một vài lỗi nhỏ - số nhiều), nên động từ to be phải là 'are'.",
+    "translation": "Bất chấp việc kiểm thử kỹ lưỡng, vẫn còn một vài lỗi nhỏ trong ứng dụng chấm công."
+  },
+  {
+    "id": "q_sv_agreement_047",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "None of the employee data synced to the HR portal _____ lost during the unexpected server crash yesterday.",
+    "options": [
+      { "key": "A", "text": "was" },
+      { "key": "B", "text": "were" },
+      { "key": "C", "text": "are" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Với đại từ 'None of', động từ chia theo danh từ đứng ngay sau giới từ 'of'. Ở đây là 'the employee data' (dữ liệu - danh từ không đếm được).",
+    "explanation": "Chính xác. 'Data' (dữ liệu) trong ngữ cảnh tiếng Anh hiện đại thường được coi là danh từ không đếm được (số ít). Kết hợp với 'yesterday', động từ to be chia là 'was'.",
+    "translation": "Không có dữ liệu nhân viên nào được đồng bộ hóa với cổng thông tin nhân sự bị mất trong sự cố sập máy chủ bất ngờ ngày hôm qua."
+  },
+  {
+    "id": "q_sv_agreement_048",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "The number of active PrepMaster subscribers _____ expected to double by the end of this year.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Cấu trúc 'The number of + Noun số nhiều' luôn đi kèm với động từ chia ở số ít, vì chủ ngữ chính là 'The number' (Con số).",
+    "explanation": "Chính xác. Chủ ngữ là 'The number' (số ít) nên động từ to be chia là 'is'.",
+    "translation": "Số lượng người đăng ký PrepMaster đang hoạt động dự kiến sẽ tăng gấp đôi vào cuối năm nay."
+  },
+  {
+    "id": "q_sv_agreement_049",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "The students who _____ consistently using the PrepMaster app report significantly higher TOEIC scores.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "has been" },
+      { "key": "D", "text": "was" }
+    ],
+    "correct_answer": "B",
+    "hint": "Đại từ quan hệ 'who' thay thế cho danh từ đứng ngay trước nó là 'The students' (số nhiều).",
+    "explanation": "Chính xác. Vì 'The students' là danh từ số nhiều, động từ to be đi theo mệnh đề quan hệ 'who' cũng phải chia ở số nhiều là 'are'.",
+    "translation": "Những học sinh liên tục sử dụng ứng dụng PrepMaster báo cáo điểm TOEIC cao hơn đáng kể."
+  },
+  {
+    "id": "q_sv_agreement_050",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Every short video and interactive exercise on the platform _____ designed to keep language learners engaged.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Dù có bao nhiêu danh từ được nối bởi 'and', nếu có từ 'Every' hoặc 'Each' đứng ở đầu, toàn bộ cụm chủ ngữ đó được xem là số ít.",
+    "explanation": "Chính xác. Từ 'Every' bao trùm cả 'video and interactive exercise', biến toàn bộ cụm này thành chủ ngữ số ít. Do đó dùng 'is'.",
+    "translation": "Mỗi video ngắn và bài tập tương tác trên nền tảng đều được thiết kế để giữ cho người học ngôn ngữ luôn hứng thú."
+  },
+  {
+    "id": "q_sv_agreement_051",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "A number of candidates applying for the Mobile Developer Intern role _____ already submitted their portfolios.",
+    "options": [
+      { "key": "A", "text": "has" },
+      { "key": "B", "text": "have" },
+      { "key": "C", "text": "is" },
+      { "key": "D", "text": "was" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cấu trúc 'A number of' mang nghĩa là 'Một số / Vài' và luôn đi kèm với động từ chia ở số nhiều.",
+    "explanation": "Chính xác. Vì 'A number of candidates' là chủ ngữ số nhiều, ta sử dụng trợ động từ 'have' cho thì hiện tại hoàn thành.",
+    "translation": "Một số ứng viên ứng tuyển vào vị trí Thực tập sinh Mobile Developer đã nộp danh mục đầu tư (portfolio) của họ."
+  },
+  {
+    "id": "q_sv_agreement_052",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "The feedback from the students who watched the daily TikTok videos _____ very positive.",
+    "options": [
+      { "key": "A", "text": "are" },
+      { "key": "B", "text": "is" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "B",
+    "hint": "Hãy tìm từ cốt lõi của chủ ngữ chính. Đó là 'The feedback' (không đếm được, số ít), toàn bộ đoạn 'from the students... videos' chỉ là bổ ngữ.",
+    "explanation": "Chính xác. Động từ phải chia theo chủ ngữ chính 'The feedback' (số ít). Vì vậy động từ to be chia là 'is'.",
+    "translation": "Phản hồi từ những học sinh đã xem các video TikTok hàng ngày rất tích cực."
+  },
+  {
+    "id": "q_sv_agreement_053",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "Two thousand dollars _____ required to upgrade the camera and lighting equipment for the English speaking series.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Một số lượng tiền cụ thể, dù có 's' (dollars), vẫn được coi là một khoản tiền thống nhất (số ít).",
+    "explanation": "Chính xác. Chủ ngữ chỉ tiền bạc được coi là số ít, do đó động từ to be chia là 'is'.",
+    "translation": "Cần hai nghìn đô la để nâng cấp máy ảnh và thiết bị chiếu sáng cho loạt video nói tiếng Anh."
+  },
+  {
+    "id": "q_sv_agreement_054",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Either the mobile app or the backend servers _____ causing the synchronization delay right now.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "was" },
+      { "key": "D", "text": "has been" }
+    ],
+    "correct_answer": "B",
+    "hint": "Trong cấu trúc 'Either A or B', động từ chia theo B (danh từ đứng gần nó nhất).",
+    "explanation": "Chính xác. Danh từ gần động từ nhất là 'the backend servers' (số nhiều), và thì là hiện tại tiếp diễn (right now), nên dùng 'are'.",
+    "translation": "Hoặc là ứng dụng di động, hoặc là các máy chủ phụ trợ đang gây ra sự chậm trễ trong việc đồng bộ hóa ngay lúc này."
+  },
+  {
+    "id": "q_sv_agreement_055",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "Developing educational applications like EduKit _____ a deep understanding of both technology and pedagogy.",
+    "options": [
+      { "key": "A", "text": "require" },
+      { "key": "B", "text": "requires" },
+      { "key": "C", "text": "are requiring" },
+      { "key": "D", "text": "have required" }
+    ],
+    "correct_answer": "B",
+    "hint": "Chủ ngữ của câu là một cụm danh động từ 'Developing...' (Việc phát triển...). Cụm này luôn đóng vai trò là số ít.",
+    "explanation": "Chính xác. Vì chủ ngữ là cụm V-ing (số ít), động từ 'require' phải thêm 's' thành 'requires'.",
+    "translation": "Việc phát triển các ứng dụng giáo dục như EduKit đòi hỏi sự hiểu biết sâu sắc về cả công nghệ và sư phạm."
+  },
+  {
+    "id": "q_sv_agreement_056",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "The mobile timekeeping app, as well as the web portal, _____ currently undergoing scheduled maintenance.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Cụm 'as well as' (cũng như) không kết nối hai danh từ thành số nhiều như từ 'and'. Chủ ngữ chính vẫn là từ đứng trước 'as well as'.",
+    "explanation": "Chính xác. Chủ ngữ chính là 'The mobile timekeeping app' (số ít). Cụm giữa hai dấu phẩy chỉ là phần phụ. Do đó dùng 'is'.",
+    "translation": "Ứng dụng chấm công di động, cũng như cổng thông tin điện tử, hiện đang được bảo trì theo lịch trình."
+  },
+  {
+    "id": "q_sv_agreement_057",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "Logistics _____ a major challenge when shipping thousands of Happy Boxes to different corporate clients during the holiday season.",
+    "options": [
+      { "key": "A", "text": "are" },
+      { "key": "B", "text": "is" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "B",
+    "hint": "Một số danh từ chỉ ngành học, lĩnh vực chuyên môn tận cùng bằng '-ics' (Logistics, Economics, Statistics...) thường là danh từ số ít.",
+    "explanation": "Chính xác. 'Logistics' (hậu cần) là một lĩnh vực chuyên môn, là danh từ số ít nên đi với 'is'.",
+    "translation": "Hậu cần là một thách thức lớn khi vận chuyển hàng nghìn hộp Happy Box đến các khách hàng doanh nghiệp khác nhau trong mùa lễ hội."
+  },
+  {
+    "id": "q_sv_agreement_058",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "Attached to this email _____ the weekly attendance reports generated by the new HR system.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "was" },
+      { "key": "C", "text": "has been" },
+      { "key": "D", "text": "are" }
+    ],
+    "correct_answer": "D",
+    "hint": "Đây là cấu trúc đảo ngữ: Attached/Included + to be + Chủ ngữ thực sự. Chủ ngữ nằm ở phía sau động từ.",
+    "explanation": "Chính xác. Chủ ngữ thực sự là 'the weekly attendance reports' (các báo cáo điểm danh hàng tuần - số nhiều), nên động từ to be phải là 'are'.",
+    "translation": "Đính kèm với email này là các báo cáo điểm danh hàng tuần được tạo bởi hệ thống nhân sự mới."
+  },
+  {
+    "id": "q_sv_agreement_059",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "The majority of the users _____ satisfied with the new gamified features introduced on PrepMaster.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "was" },
+      { "key": "D", "text": "has been" }
+    ],
+    "correct_answer": "B",
+    "hint": "Từ 'majority' (phần lớn/đa số) khi đi với giới từ 'of' sẽ chia động từ phụ thuộc vào danh từ đứng sau 'of'.",
+    "explanation": "Chính xác. Danh từ đứng sau 'of' là 'the users' (số nhiều), nên động từ to be chia ở số nhiều 'are'.",
+    "translation": "Phần lớn người dùng hài lòng với các tính năng trò chơi hóa mới được giới thiệu trên PrepMaster."
+  },
+  {
+    "id": "q_sv_agreement_060",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "Ms. Lin is one of the content creators who _____ educational TikTok videos every day to help students.",
+    "options": [
+      { "key": "A", "text": "post" },
+      { "key": "B", "text": "posts" },
+      { "key": "C", "text": "is posting" },
+      { "key": "D", "text": "has posted" }
+    ],
+    "correct_answer": "A",
+    "hint": "Cấu trúc 'One of the + Noun(s) + who/that/which + Verb(s)'. Động từ ở mệnh đề quan hệ phải chia theo danh từ số nhiều đứng NGAY TRƯỚC đại từ quan hệ.",
+    "explanation": "Chính xác. Đại từ 'who' thay thế cho 'content creators' (số nhiều). Vì vậy, động từ 'post' giữ nguyên mẫu. Lưu ý: Chỉ khi có từ 'THE ONLY one of...' thì động từ mới chia số ít.",
+    "translation": "Cô Lin là một trong những nhà sáng tạo nội dung đăng các video TikTok giáo dục mỗi ngày để giúp đỡ học sinh."
+  },
+  {
+    "id": "q_sv_agreement_061",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "The number of active subscribers to the PrepMaster app _____ significantly since the new reading module was released.",
+    "options": [
+      { "key": "A", "text": "has grown" },
+      { "key": "B", "text": "have grown" },
+      { "key": "C", "text": "grow" },
+      { "key": "D", "text": "are growing" }
+    ],
+    "correct_answer": "A",
+    "hint": "Cấu trúc 'The number of + Danh từ số nhiều' luôn đóng vai trò là chủ ngữ số ít, vì nó nhấn mạnh vào 'con số' (The number).",
+    "explanation": "Chính xác. Vì chủ ngữ chính là 'The number' (số ít), và câu có trạng từ 'since', động từ phải được chia ở thì hiện tại hoàn thành số ít là 'has grown'.",
+    "translation": "Số lượng người đăng ký hoạt động trên ứng dụng PrepMaster đã tăng lên đáng kể kể từ khi mô-đun đọc hiểu mới được phát hành."
+  },
+  {
+    "id": "q_sv_agreement_062",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "Optimizing the timekeeping application for Android devices _____ currently the top priority for the engineering team.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Chủ ngữ của câu là một cụm danh động từ bắt đầu bằng V-ing (Optimizing...). Cụm này luôn được coi là một hành động duy nhất, tức là số ít.",
+    "explanation": "Chính xác. Mặc dù có từ 'devices' (số nhiều) đứng ngay trước khoảng trống, nhưng chủ ngữ chính của câu là 'Optimizing' (Việc tối ưu hóa), nên động từ to be phải là số ít 'is'.",
+    "translation": "Việc tối ưu hóa ứng dụng chấm công cho các thiết bị Android hiện là ưu tiên hàng đầu của đội ngũ kỹ thuật."
+  },
+  {
+    "id": "q_sv_agreement_063",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Either the marketing team or the CEO _____ presenting the Happy Box holiday campaign to the investors tomorrow.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have" }
+    ],
+    "correct_answer": "A",
+    "hint": "Trong cấu trúc 'Either A or B' (Hoặc A hoặc B), động từ luôn được chia theo chủ ngữ B (chủ ngữ đứng gần nó nhất).",
+    "explanation": "Chính xác. Chủ ngữ đứng gần khoảng trống nhất là 'the CEO' (số ít). Do đó, động từ to be phải chia là 'is' cho thì hiện tại tiếp diễn mang nghĩa tương lai.",
+    "translation": "Hoặc nhóm tiếp thị hoặc Giám đốc điều hành sẽ trình bày chiến dịch dịp lễ Happy Box cho các nhà đầu tư vào ngày mai."
+  },
+  {
+    "id": "q_sv_agreement_064",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Neither the mobile app nor the web portals _____ functioning properly during the server outage last night.",
+    "options": [
+      { "key": "A", "text": "was" },
+      { "key": "B", "text": "were" },
+      { "key": "C", "text": "has been" },
+      { "key": "D", "text": "is" }
+    ],
+    "correct_answer": "B",
+    "hint": "Tương tự như cấu trúc Either/Or, cấu trúc 'Neither A nor B' yêu cầu động từ chia theo B (chủ ngữ đứng gần động từ nhất).",
+    "explanation": "Chính xác. Chủ ngữ đứng gần khoảng trống là 'the web portals' (số nhiều). Cùng với trạng từ chỉ thời gian 'last night', động từ to be phải là 'were'.",
+    "translation": "Cả ứng dụng di động và các cổng thông tin điện tử đều đã không hoạt động bình thường trong thời gian máy chủ bị ngắt kết nối vào tối qua."
+  },
+  {
+    "id": "q_sv_agreement_065",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "Everyone involved in the EduKit project _____ expected to submit their weekly progress reports by Friday.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Các đại từ bất định như 'Everyone, everybody, everything, someone, no one...' luôn luôn đi với động từ chia ở dạng số ít.",
+    "explanation": "Chính xác. Chủ ngữ chính là 'Everyone', do đó động từ to be phải chia ở số ít 'is'.",
+    "translation": "Tất cả mọi người tham gia vào dự án EduKit đều được mong đợi sẽ nộp báo cáo tiến độ hàng tuần của họ trước thứ Sáu."
+  },
+  {
+    "id": "q_sv_agreement_066",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Five years of experience in mobile development _____ required for this senior programming position.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "have been" },
+      { "key": "D", "text": "were" }
+    ],
+    "correct_answer": "A",
+    "hint": "Các cụm từ chỉ khoảng thời gian, số tiền, hay trọng lượng được ngữ pháp tiếng Anh coi là một đơn vị tổng thể duy nhất (số ít).",
+    "explanation": "Chính xác. 'Five years' ở đây đại diện cho một khoảng thời gian/mức độ kinh nghiệm tổng thể, nên nó là chủ ngữ số ít. Chọn 'is'.",
+    "translation": "Năm năm kinh nghiệm trong lĩnh vực phát triển thiết bị di động là yêu cầu bắt buộc đối với vị trí lập trình viên cấp cao này."
+  },
+  {
+    "id": "q_sv_agreement_067",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "The lead developer, along with two junior programmers, _____ responsible for fixing the login bug.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Trong cấu trúc 'S1 + along with / as well as / together with + S2', động từ luôn luôn được chia theo chủ ngữ thứ nhất (S1).",
+    "explanation": "Chính xác. S1 ở đây là 'The lead developer' (số ít). Phần 'along with two junior programmers' chỉ là thành phần phụ trợ. Do đó, dùng 'is'.",
+    "translation": "Lập trình viên chính, cùng với hai lập trình viên cấp dưới, chịu trách nhiệm sửa lỗi đăng nhập."
+  },
+  {
+    "id": "q_sv_agreement_068",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "“Happy Boxes” _____ currently offering a 20 percent discount on all corporate gift orders to attract new B2B clients.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have" }
+    ],
+    "correct_answer": "A",
+    "hint": "Tên của một công ty, cuốn sách, bộ phim hoặc tổ chức, cho dù có đuôi 's' (số nhiều), vẫn luôn được coi là một thực thể duy nhất (số ít).",
+    "explanation": "Chính xác. 'Happy Boxes' là tên riêng của một công ty/thương hiệu, do đó động từ to be phải chia ở số ít 'is'.",
+    "translation": "Công ty “Happy Boxes” hiện đang cung cấp mức giảm giá 20% cho tất cả các đơn hàng quà tặng doanh nghiệp để thu hút khách hàng B2B mới."
+  },
+  {
+    "id": "q_sv_agreement_069",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "Approximately 60 percent of the marketing budget _____ already been spent on TikTok advertising.",
+    "options": [
+      { "key": "A", "text": "has" },
+      { "key": "B", "text": "have" },
+      { "key": "C", "text": "is" },
+      { "key": "D", "text": "are" }
+    ],
+    "correct_answer": "A",
+    "hint": "Với các từ chỉ tỷ lệ phần trăm (percent, fraction, some, all...), việc chia động từ sẽ phụ thuộc hoàn toàn vào danh từ đứng NGAY SAU giới từ 'of'.",
+    "explanation": "Chính xác. Danh từ đứng sau 'of' là 'the marketing budget' (ngân sách tiếp thị - không đếm được, số ít). Do đó, ta dùng trợ động từ số ít 'has'.",
+    "translation": "Khoảng 60% ngân sách tiếp thị đã được chi cho quảng cáo trên TikTok."
+  },
+  {
+    "id": "q_sv_agreement_070",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "None of the servers _____ damaged during the sudden power outage in the data center.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "was" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "has been" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cấu trúc 'None of + Danh từ đếm được số nhiều' thường đi với động từ số nhiều trong tiếng Anh hiện đại (đặc biệt trong bài thi TOEIC).",
+    "explanation": "Chính xác. Danh từ đứng sau 'of' là 'the servers' (số nhiều). Cùng với ngữ cảnh quá khứ (power outage), động từ to be phải chia là 'were'.",
+    "translation": "Không có máy chủ nào bị hư hỏng trong đợt mất điện đột ngột tại trung tâm dữ liệu."
+  },
+  {
+    "id": "q_sv_agreement_071",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "There _____ a significant delay in the shipping of the Happy Box orders this morning due to heavy rain.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "was" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "are" }
+    ],
+    "correct_answer": "B",
+    "hint": "Trong cấu trúc 'There is/There are', chủ ngữ thực sự đứng ngay sau động từ to be. 'this morning' là mốc thời gian đã qua.",
+    "explanation": "Chính xác. Chủ ngữ là 'a significant delay' (một sự chậm trễ - số ít). Vì sự việc đã xảy ra 'this morning', động từ to be chia ở quá khứ số ít là 'was'.",
+    "translation": "Đã có một sự chậm trễ đáng kể trong việc vận chuyển các đơn đặt hàng Happy Box vào sáng nay do mưa lớn."
+  },
+  {
+    "id": "q_sv_agreement_072",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "The employees who _____ the mobile timekeeping app find it very intuitive and easy to use.",
+    "options": [
+      { "key": "A", "text": "uses" },
+      { "key": "B", "text": "use" },
+      { "key": "C", "text": "using" },
+      { "key": "D", "text": "is using" }
+    ],
+    "correct_answer": "B",
+    "hint": "Đại từ quan hệ 'who' thay thế cho danh từ đứng ngay trước nó ('The employees' - số nhiều). Động từ theo sau 'who' phải chia theo danh từ này.",
+    "explanation": "Chính xác. Vì 'The employees' là số nhiều, động từ 'use' giữ nguyên mẫu.",
+    "translation": "Những nhân viên sử dụng ứng dụng chấm công trên thiết bị di động thấy nó rất trực quan và dễ sử dụng."
+  },
+  {
+    "id": "q_sv_agreement_073",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "Each developer and tester _____ given a new laptop for the EduKit project last week.",
+    "options": [
+      { "key": "A", "text": "was" },
+      { "key": "B", "text": "were" },
+      { "key": "C", "text": "have been" },
+      { "key": "D", "text": "are" }
+    ],
+    "correct_answer": "A",
+    "hint": "Dù có dùng từ nối 'and', nhưng nếu cụm chủ ngữ bắt đầu bằng 'Each' hoặc 'Every', nó luôn luôn được tính là chủ ngữ số ít.",
+    "explanation": "Chính xác. 'Each developer and tester' là chủ ngữ số ít. Vì sự việc xảy ra 'last week' nên dùng động từ 'was'.",
+    "translation": "Mỗi lập trình viên và người kiểm thử đều được cấp một máy tính xách tay mới cho dự án EduKit vào tuần trước."
+  },
+  {
+    "id": "q_sv_agreement_074",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "Many a student _____ found the TOEIC reading section challenging due to the strict time limit.",
+    "options": [
+      { "key": "A", "text": "has" },
+      { "key": "B", "text": "have" },
+      { "key": "C", "text": "are" },
+      { "key": "D", "text": "were" }
+    ],
+    "correct_answer": "A",
+    "hint": "Cấu trúc đặc biệt: 'Many a + Danh từ đếm được số ít' luôn đi kèm với ĐỘNG TỪ SỐ ÍT, mặc dù nghĩa của nó là 'Rất nhiều'.",
+    "explanation": "Chính xác. 'Many a student' yêu cầu động từ số ít. Do đó trợ động từ phải là 'has'.",
+    "translation": "Rất nhiều học sinh đã thấy phần đọc hiểu TOEIC đầy thách thức do giới hạn thời gian nghiêm ngặt."
+  },
+  {
+    "id": "q_sv_agreement_075",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "What the users want from the new PrepMaster update _____ a more interactive interface for the JLPT mock exams.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Khi một mệnh đề danh ngữ (bắt đầu bằng What, That, Whether...) đóng vai trò làm chủ ngữ, động từ chính của câu luôn được chia ở dạng số ít.",
+    "explanation": "Chính xác. Cả mệnh đề 'What the users want...' đóng vai trò là một chủ thể duy nhất (số ít). Vì vậy, động từ to be phải là 'is'.",
+    "translation": "Những gì người dùng muốn từ bản cập nhật PrepMaster mới là một giao diện tương tác hơn cho các bài thi thử JLPT."
+  },
+  {
+    "id": "q_sv_agreement_076",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "A total of 500 corporate gift boxes _____ ordered by the tech company for their upcoming anniversary event.",
+    "options": [
+      { "key": "A", "text": "was" },
+      { "key": "B", "text": "were" },
+      { "key": "C", "text": "has" },
+      { "key": "D", "text": "have" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cấu trúc 'A total of + Danh từ số nhiều' (Tổng số...) được xử lý giống như 'A number of', tức là động từ phải chia ở SỐ NHIỀU.",
+    "explanation": "Chính xác. Vì 'A total of' kết hợp với danh từ số nhiều (boxes), động từ phải chia ở số nhiều. Đây là câu bị động nên chọn 'were'.",
+    "translation": "Tổng cộng 500 hộp quà tặng doanh nghiệp đã được công ty công nghệ đặt hàng cho sự kiện kỷ niệm sắp tới của họ."
+  },
+  {
+    "id": "q_sv_agreement_077",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "The majority of the feedback from the beta testers of the app _____ very positive and encouraging.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Từ 'majority' (phần lớn) chia động từ phụ thuộc vào danh từ sau giới từ 'of'. 'Feedback' là một danh từ không đếm được.",
+    "explanation": "Chính xác. Vì 'feedback' (phản hồi) không đếm được (luôn số ít), động từ to be chia theo nó cũng phải là 'is'.",
+    "translation": "Phần lớn phản hồi từ những người thử nghiệm phiên bản beta của ứng dụng đều rất tích cực và đáng khích lệ."
+  },
+  {
+    "id": "q_sv_agreement_078",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "The new software update, together with improved server hardware, _____ significantly reduced the app's loading time.",
+    "options": [
+      { "key": "A", "text": "has" },
+      { "key": "B", "text": "have" },
+      { "key": "C", "text": "are" },
+      { "key": "D", "text": "were" }
+    ],
+    "correct_answer": "A",
+    "hint": "Cụm 'together with' không tạo thành chủ ngữ số nhiều. Bạn phải chia động từ theo danh từ chính đứng trước nó.",
+    "explanation": "Chính xác. Danh từ chính là 'The new software update' (số ít). Vì vậy trợ động từ chia là 'has'.",
+    "translation": "Bản cập nhật phần mềm mới, cùng với phần cứng máy chủ được cải tiến, đã làm giảm đáng kể thời gian tải của ứng dụng."
+  },
+  {
+    "id": "q_sv_agreement_079",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "Statistics _____ a crucial part of analyzing user engagement and behavior on the PrepMaster application.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Khi 'Statistics' mang nghĩa là một 'môn học' hoặc 'lĩnh vực nghiên cứu' (Thống kê học), nó được coi là danh từ số ít.",
+    "explanation": "Chính xác. 'Statistics' ở đây chỉ môn Thống kê học / lĩnh vực thống kê (số ít), nên động từ to be phải là 'is'.",
+    "translation": "Thống kê học là một phần quan trọng trong việc phân tích sự tương tác và hành vi của người dùng trên ứng dụng PrepMaster."
+  },
+  {
+    "id": "q_sv_agreement_080",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "One of the main reasons for the app's rapid success _____ its user-friendly and intuitive design.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Cấu trúc 'One of the + Danh từ số nhiều' có chủ ngữ cốt lõi là từ 'One'.",
+    "explanation": "Chính xác. Động từ chia theo 'One' (số ít) nên đáp án đúng là 'is'.",
+    "translation": "Một trong những lý do chính cho sự thành công nhanh chóng của ứng dụng là thiết kế trực quan và thân thiện với người dùng của nó."
+  },
+  {
+    "id": "q_sv_agreement_081",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "A variety of customized Happy Box designs _____ available for corporate clients to choose from this holiday season.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "was" },
+      { "key": "D", "text": "has been" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cấu trúc 'A variety of + Danh từ số nhiều' mang nghĩa là 'Sự đa dạng / Nhiều loại', luôn đi với động từ chia ở SỐ NHIỀU.",
+    "explanation": "Chính xác. Vì 'A variety of' đóng vai trò như một lượng từ chỉ số nhiều, động từ to be phải chia là 'are'.",
+    "translation": "Nhiều thiết kế Happy Box tùy chỉnh đa dạng hiện có sẵn để các khách hàng doanh nghiệp lựa chọn trong mùa lễ này."
+  },
+  {
+    "id": "q_sv_agreement_082",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "The variety of interactive features on the EduKit platform _____ what sets it apart from traditional learning methods.",
+    "options": [
+      { "key": "A", "text": "are" },
+      { "key": "B", "text": "were" },
+      { "key": "C", "text": "is" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "C",
+    "hint": "Trái ngược với 'A variety of', cấu trúc 'The variety of' nhấn mạnh vào 'Sự đa dạng' (một danh từ trừu tượng duy nhất), do đó đi với động từ SỐ ÍT.",
+    "explanation": "Chính xác. Chủ ngữ cốt lõi là 'The variety' (số ít), nên động từ to be phải là 'is'.",
+    "translation": "Sự đa dạng của các tính năng tương tác trên nền tảng EduKit chính là điều làm cho nó khác biệt so với các phương pháp học tập truyền thống."
+  },
+  {
+    "id": "q_sv_agreement_083",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "To master both English and Japanese simultaneously _____ rigorous daily practice and a well-structured study plan.",
+    "options": [
+      { "key": "A", "text": "require" },
+      { "key": "B", "text": "requires" },
+      { "key": "C", "text": "are requiring" },
+      { "key": "D", "text": "have required" }
+    ],
+    "correct_answer": "B",
+    "hint": "Khi một cụm động từ nguyên mẫu có 'To' (To-infinitive phrase) đóng vai trò làm chủ ngữ, động từ chính luôn chia ở dạng số ít.",
+    "explanation": "Chính xác. Chủ ngữ là cụm 'To master...' (Việc thành thạo...), do đó động từ 'require' phải thêm 's' thành 'requires'.",
+    "translation": "Việc thành thạo cả tiếng Anh và tiếng Nhật cùng một lúc đòi hỏi sự rèn luyện nghiêm ngặt hàng ngày và một kế hoạch học tập có cấu trúc tốt."
+  },
+  {
+    "id": "q_sv_agreement_084",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Not only the software bugs but also the server issue _____ resolved before the mobile timekeeping app was launched.",
+    "options": [
+      { "key": "A", "text": "were" },
+      { "key": "B", "text": "was" },
+      { "key": "C", "text": "have been" },
+      { "key": "D", "text": "are" }
+    ],
+    "correct_answer": "B",
+    "hint": "Trong cấu trúc 'Not only A but also B', động từ phải được chia theo chủ ngữ B (chủ ngữ gần động từ nhất).",
+    "explanation": "Chính xác. Chủ ngữ gần nhất là 'the server issue' (số ít). Vì sự việc xảy ra trong quá khứ (trước khi ra mắt), ta dùng động từ to be 'was'.",
+    "translation": "Không chỉ các lỗi phần mềm mà cả sự cố máy chủ cũng đã được giải quyết trước khi ứng dụng chấm công di động được ra mắt."
+  },
+  {
+    "id": "q_sv_agreement_085",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "Over half of the budget for the TikTok English speaking series _____ already been spent on high-quality editing software.",
+    "options": [
+      { "key": "A", "text": "have" },
+      { "key": "B", "text": "has" },
+      { "key": "C", "text": "are" },
+      { "key": "D", "text": "is" }
+    ],
+    "correct_answer": "B",
+    "hint": "Với các từ chỉ phân số/tỷ lệ (half, some, all, most...), động từ chia theo danh từ đứng ngay sau giới từ 'of'.",
+    "explanation": "Chính xác. Danh từ đứng sau 'of' là 'the budget' (ngân sách - số ít không đếm được), nên trợ động từ cho thì hiện tại hoàn thành phải là 'has'.",
+    "translation": "Hơn một nửa ngân sách cho loạt video nói tiếng Anh trên TikTok đã được chi cho phần mềm chỉnh sửa video chất lượng cao."
+  },
+  {
+    "id": "q_sv_agreement_086",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "None of the applicants for the Mobile Developer Intern position _____ previous experience with offline data synchronization.",
+    "options": [
+      { "key": "A", "text": "has" },
+      { "key": "B", "text": "have" },
+      { "key": "C", "text": "is" },
+      { "key": "D", "text": "are" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cấu trúc 'None of + Danh từ số nhiều' trong tiếng Anh hiện đại thường ưu tiên đi với động từ chia ở số nhiều.",
+    "explanation": "Chính xác. Vì 'the applicants' là số nhiều, động từ 'have' (có) được giữ nguyên mẫu.",
+    "translation": "Không có ứng viên nào cho vị trí Thực tập sinh Mobile Developer có kinh nghiệm trước đó về đồng bộ hóa dữ liệu ngoại tuyến."
+  },
+  {
+    "id": "q_sv_agreement_087",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Each of the mock tests on PrepMaster _____ designed to accurately simulate the real JLPT N3 exam environment.",
+    "options": [
+      { "key": "A", "text": "are" },
+      { "key": "B", "text": "were" },
+      { "key": "C", "text": "is" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cấu trúc 'Each of + Danh từ số nhiều' mang ý nghĩa 'Mỗi một (trong số...)', luôn luôn đi kèm với động từ số ít.",
+    "explanation": "Chính xác. Chủ ngữ cốt lõi là 'Each' (Mỗi bài), do đó động từ to be phải chia ở số ít 'is'.",
+    "translation": "Mỗi bài thi thử trên PrepMaster đều được thiết kế để mô phỏng chính xác môi trường thi JLPT N3 thực tế."
+  },
+  {
+    "id": "q_sv_agreement_088",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "Included in the latest software update _____ several new reading modules specifically created for TOEIC learners.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "was" },
+      { "key": "C", "text": "are" },
+      { "key": "D", "text": "has been" }
+    ],
+    "correct_answer": "C",
+    "hint": "Đây là câu đảo ngữ với phân từ hai (Included / Attached). Chủ ngữ thực sự đứng ở TẬN CÙNG câu, ngay sau khoảng trống.",
+    "explanation": "Chính xác. Chủ ngữ thực sự là 'several new reading modules' (vài mô-đun đọc mới - số nhiều), nên động từ to be phải là 'are'.",
+    "translation": "Được bao gồm trong bản cập nhật phần mềm mới nhất là một số mô-đun đọc mới được tạo riêng cho người học TOEIC."
+  },
+  {
+    "id": "q_sv_agreement_089",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "The board of directors _____ unanimously approved the budget for the new HR portal development.",
+    "options": [
+      { "key": "A", "text": "have" },
+      { "key": "B", "text": "has" },
+      { "key": "C", "text": "are" },
+      { "key": "D", "text": "were" }
+    ],
+    "correct_answer": "B",
+    "hint": "Các danh từ tập hợp như 'board', 'committee', 'team' được coi là số ít khi chúng hoạt động như một khối thống nhất (ở đây là nhất trí phê duyệt).",
+    "explanation": "Chính xác. Hội đồng quản trị (The board of directors) đưa ra một quyết định chung, đóng vai trò là chủ ngữ số ít, nên trợ động từ là 'has'.",
+    "translation": "Hội đồng quản trị đã nhất trí phê duyệt ngân sách cho việc phát triển cổng thông tin nhân sự mới."
+  },
+  {
+    "id": "q_sv_agreement_090",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "Every programmer and QA tester _____ required to attend the daily stand-up meeting to discuss project progress.",
+    "options": [
+      { "key": "A", "text": "is" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Khi có từ 'Every' hoặc 'Each' đứng trước nhiều danh từ được nối bằng 'and', toàn bộ cụm đó vẫn bị ép thành chủ ngữ số ít.",
+    "explanation": "Chính xác. Từ 'Every' bao trùm cả cụm, do đó động từ to be chia ở số ít 'is'.",
+    "translation": "Mọi lập trình viên và người kiểm thử chất lượng đều phải tham dự cuộc họp đứng hàng ngày để thảo luận về tiến độ dự án."
+  },
+  {
+    "id": "q_sv_agreement_091",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "A new series of short English speaking videos _____ uploaded to the TikTok channel every Monday morning.",
+    "options": [
+      { "key": "A", "text": "are" },
+      { "key": "B", "text": "is" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "B",
+    "hint": "Chủ ngữ là 'A new series' (Một chuỗi/loạt mới). Từ 'series' có hình thức giống nhau ở cả số ít và số nhiều, nhưng mạo từ 'A' xác định nó là số ít.",
+    "explanation": "Chính xác. Vì chủ ngữ là 'A new series' (số ít), động từ to be phải chia là 'is'.",
+    "translation": "Một loạt các video ngắn nói tiếng Anh mới được tải lên kênh TikTok vào mỗi sáng thứ Hai."
+  },
+  {
+    "id": "q_sv_agreement_092",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Those who _____ a score of 800 or higher on the TOEIC will receive a certificate of excellence from PrepMaster.",
+    "options": [
+      { "key": "A", "text": "achieves" },
+      { "key": "B", "text": "achieve" },
+      { "key": "C", "text": "achieving" },
+      { "key": "D", "text": "is achieving" }
+    ],
+    "correct_answer": "B",
+    "hint": "Đại từ chỉ định 'Those' mang nghĩa là 'Những người (đó)', là một đại từ số nhiều. Động từ trong mệnh đề quan hệ 'who' chia theo 'Those'.",
+    "explanation": "Chính xác. Vì 'Those' là chủ ngữ số nhiều, động từ 'achieve' giữ nguyên mẫu.",
+    "translation": "Những người đạt được số điểm từ 800 trở lên trong kỳ thi TOEIC sẽ nhận được giấy chứng nhận xuất sắc từ PrepMaster."
+  },
+  {
+    "id": "q_sv_agreement_093",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "Anyone who _____ to customize their corporate Happy Box orders should contact our sales team directly.",
+    "options": [
+      { "key": "A", "text": "wish" },
+      { "key": "B", "text": "wishing" },
+      { "key": "C", "text": "wishes" },
+      { "key": "D", "text": "are wishing" }
+    ],
+    "correct_answer": "C",
+    "hint": "Trái ngược với 'Those', đại từ bất định 'Anyone' (Bất cứ ai) luôn là chủ ngữ số ít.",
+    "explanation": "Chính xác. Vì 'Anyone' là số ít, động từ trong mệnh đề quan hệ phải thêm 'es' thành 'wishes'.",
+    "translation": "Bất cứ ai muốn tùy chỉnh các đơn đặt hàng Happy Box doanh nghiệp của mình nên liên hệ trực tiếp với đội ngũ bán hàng của chúng tôi."
+  },
+  {
+    "id": "q_sv_agreement_094",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Six months _____ considered a realistic timeframe to build and launch a fully functional HR management website.",
+    "options": [
+      { "key": "A", "text": "are" },
+      { "key": "B", "text": "is" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "B",
+    "hint": "Một khoảng thời gian cụ thể ('Six months') được coi là một lượng thời gian duy nhất và đóng vai trò là chủ ngữ số ít.",
+    "explanation": "Chính xác. Vì 'Six months' là một khối thời gian thống nhất, động từ to be chia ở số ít 'is'.",
+    "translation": "Sáu tháng được coi là một khung thời gian thực tế để xây dựng và ra mắt một trang web quản lý nhân sự đầy đủ chức năng."
+  },
+  {
+    "id": "q_sv_agreement_095",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "What the developers need right now _____ more time to optimize the timekeeping application for older Android devices.",
+    "options": [
+      { "key": "A", "text": "are" },
+      { "key": "B", "text": "were" },
+      { "key": "C", "text": "is" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "C",
+    "hint": "Khi một mệnh đề danh ngữ (bắt đầu bằng What/That/How...) đóng vai trò làm chủ ngữ, động từ chính của câu luôn được chia ở dạng số ít.",
+    "explanation": "Chính xác. Cả mệnh đề 'What the developers need right now' đóng vai trò là một sự việc duy nhất (số ít). Do đó, động từ to be phải là 'is'.",
+    "translation": "Những gì các lập trình viên cần ngay lúc này là có thêm thời gian để tối ưu hóa ứng dụng chấm công cho các thiết bị Android đời cũ."
+  },
+  {
+    "id": "q_sv_agreement_096",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "The lead developer, accompanied by two junior software engineers, _____ presenting the new features to the board today.",
+    "options": [
+      { "key": "A", "text": "are" },
+      { "key": "B", "text": "is" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cụm 'accompanied by' hoạt động giống như 'along with' hoặc 'as well as', không làm thay đổi chủ ngữ chính đứng trước nó.",
+    "explanation": "Chính xác. Chủ ngữ chính là 'The lead developer' (số ít). Các kỹ sư cấp dưới chỉ đi kèm theo, không ảnh hưởng đến động từ. Chọn 'is'.",
+    "translation": "Lập trình viên chính, cùng với hai kỹ sư phần mềm cấp dưới, sẽ trình bày các tính năng mới cho hội đồng quản trị vào hôm nay."
+  },
+  {
+    "id": "q_sv_agreement_097",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "Neither of the proposed marketing strategies for the Happy Box brand _____ selected by the CEO during yesterday's meeting.",
+    "options": [
+      { "key": "A", "text": "was" },
+      { "key": "B", "text": "were" },
+      { "key": "C", "text": "are" },
+      { "key": "D", "text": "have been" }
+    ],
+    "correct_answer": "A",
+    "hint": "Cấu trúc 'Neither of + Danh từ số nhiều' mang nghĩa 'Không ai/Không cái nào (trong số 2 cái)', theo ngữ pháp chuẩn truyền thống luôn đi với động từ số ít.",
+    "explanation": "Chính xác. Mặc dù 'strategies' là số nhiều, đại từ 'Neither' làm chủ ngữ chính (nghĩa là không một chiến lược nào). Kết hợp với 'yesterday', ta chọn 'was'.",
+    "translation": "Không có chiến lược tiếp thị nào trong số hai chiến lược được đề xuất cho thương hiệu Happy Box được CEO lựa chọn trong cuộc họp ngày hôm qua."
+  },
+  {
+    "id": "q_sv_agreement_098",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Hard",
+    "question_text": "Many a mobile developer _____ struggled with the complexities of syncing offline data to the main server.",
+    "options": [
+      { "key": "A", "text": "have" },
+      { "key": "B", "text": "has" },
+      { "key": "C", "text": "are" },
+      { "key": "D", "text": "were" }
+    ],
+    "correct_answer": "B",
+    "hint": "Hãy ghi nhớ cấu trúc đặc biệt: 'Many a + Noun (số ít) + Verb (số ít)'.",
+    "explanation": "Chính xác. 'Many a mobile developer' bắt buộc đi với động từ số ít, do đó trợ động từ hiện tại hoàn thành phải là 'has'.",
+    "translation": "Rất nhiều lập trình viên thiết bị di động đã phải vật lộn với sự phức tạp của việc đồng bộ hóa dữ liệu ngoại tuyến với máy chủ chính."
+  },
+  {
+    "id": "q_sv_agreement_099",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Easy",
+    "question_text": "Both the frontend user interface and the backend database of the EduKit application _____ completely overhauled last month.",
+    "options": [
+      { "key": "A", "text": "was" },
+      { "key": "B", "text": "is" },
+      { "key": "C", "text": "were" },
+      { "key": "D", "text": "has been" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cấu trúc 'Both A and B' (Cả A và B) luôn luôn tạo thành một chủ ngữ số nhiều.",
+    "explanation": "Chính xác. Vì chủ ngữ là số nhiều và sự việc xảy ra 'last month', động từ to be phải chia ở quá khứ số nhiều 'were'.",
+    "translation": "Cả giao diện người dùng frontend và cơ sở dữ liệu backend của ứng dụng EduKit đều đã được đại tu hoàn toàn vào tháng trước."
+  },
+  {
+    "id": "q_sv_agreement_100",
+    "part": 5,
+    "grammar_topic": "Subject-Verb Agreement",
+    "difficulty_level": "Medium",
+    "question_text": "The number of positive reviews for the daily English speaking TikTok series _____ exceeded all of our initial expectations.",
+    "options": [
+      { "key": "A", "text": "have" },
+      { "key": "B", "text": "are" },
+      { "key": "C", "text": "has" },
+      { "key": "D", "text": "were" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cấu trúc 'The number of + Danh từ số nhiều' luôn đóng vai trò là chủ ngữ SỐ ÍT.",
+    "explanation": "Chính xác. Chủ ngữ chính 'The number' là số ít. Để tạo thành thì hiện tại hoàn thành với động từ 'exceeded', ta dùng trợ động từ 'has'.",
+    "translation": "Số lượng đánh giá tích cực cho loạt video nói tiếng Anh hàng ngày trên TikTok đã vượt qua mọi kỳ vọng ban đầu của chúng tôi."
+  }
+];
+
+export const SV_AGREEMENT = {
+  easy: SV_AGREEMENT_EASY,
+  medium: [],
+  hard: []
+};
+
+export const PARTS_OF_SPEECH_EASY = [
+  {
+    "id": "q_word_form_001",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Easy",
+    "question_text": "The new timekeeping app requires all employees to submit their timesheets for _____ by 5 PM on Fridays.",
+    "options": [
+      { "key": "A", "text": "approve" },
+      { "key": "B", "text": "approval" },
+      { "key": "C", "text": "approved" },
+      { "key": "D", "text": "approving" }
+    ],
+    "correct_answer": "B",
+    "hint": "Đứng sau giới từ 'for' bắt buộc phải là một danh từ hoặc V-ing. Ở đây ta cần một danh từ mang nghĩa 'sự phê duyệt'.",
+    "explanation": "Chính xác. Giới từ 'for' cần một danh từ theo sau để làm tân ngữ. 'Approval' (sự phê duyệt) là danh từ gốc của động từ 'approve'.",
+    "translation": "Ứng dụng chấm công mới yêu cầu tất cả nhân viên nộp bảng chấm công của họ để phê duyệt trước 5 giờ chiều các ngày thứ Sáu."
+  },
+  {
+    "id": "q_word_form_002",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Medium",
+    "question_text": "The grammar explanations on the PrepMaster platform are _____ beneficial for students aiming for the JLPT N3.",
+    "options": [
+      { "key": "A", "text": "extreme" },
+      { "key": "B", "text": "extremely" },
+      { "key": "C", "text": "extremes" },
+      { "key": "D", "text": "extremity" }
+    ],
+    "correct_answer": "B",
+    "hint": "Chỗ trống nằm giữa to be 'are' và tính từ 'beneficial' (có lợi). Từ duy nhất có thể bổ nghĩa cho tính từ là trạng từ.",
+    "explanation": "Chính xác. Trạng từ 'extremely' (cực kỳ) đứng trước để bổ nghĩa và nhấn mạnh mức độ cho tính từ 'beneficial'.",
+    "translation": "Các phần giải thích ngữ pháp trên nền tảng PrepMaster cực kỳ hữu ích cho những học sinh hướng tới kỳ thi JLPT N3."
+  },
+  {
+    "id": "q_word_form_003",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Easy",
+    "question_text": "The Happy Box team is currently looking for a _____ supplier of eco-friendly packaging materials.",
+    "options": [
+      { "key": "A", "text": "rely" },
+      { "key": "B", "text": "reliable" },
+      { "key": "C", "text": "reliably" },
+      { "key": "D", "text": "reliability" }
+    ],
+    "correct_answer": "B",
+    "hint": "Nằm giữa mạo từ 'a' và danh từ 'supplier', bạn cần một tính từ để bổ nghĩa cho danh từ đó.",
+    "explanation": "Chính xác. Tính từ 'reliable' (đáng tin cậy) kết hợp với 'supplier' tạo thành cụm danh từ 'một nhà cung cấp đáng tin cậy'.",
+    "translation": "Nhóm Happy Box hiện đang tìm kiếm một nhà cung cấp vật liệu đóng gói thân thiện với môi trường đáng tin cậy."
+  },
+  {
+    "id": "q_word_form_004",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Medium",
+    "question_text": "To ensure maximum _____, the development team decided to refactor the React codebase for the web portal.",
+    "options": [
+      { "key": "A", "text": "perform" },
+      { "key": "B", "text": "performance" },
+      { "key": "C", "text": "performing" },
+      { "key": "D", "text": "performed" }
+    ],
+    "correct_answer": "B",
+    "hint": "Tính từ 'maximum' (tối đa) đứng trước yêu cầu một danh từ theo sau nó.",
+    "explanation": "Chính xác. Danh từ 'performance' (hiệu suất) đi cùng tính từ 'maximum' tạo thành cụm 'hiệu suất tối đa'.",
+    "translation": "Để đảm bảo hiệu suất tối đa, nhóm phát triển đã quyết định cấu trúc lại mã nguồn React cho cổng thông tin điện tử."
+  },
+  {
+    "id": "q_word_form_005",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Easy",
+    "question_text": "To build a loyal audience, the creator _____ uploads short English speaking videos to her TikTok channel.",
+    "options": [
+      { "key": "A", "text": "consistent" },
+      { "key": "B", "text": "consistency" },
+      { "key": "C", "text": "consistently" },
+      { "key": "D", "text": "consists" }
+    ],
+    "correct_answer": "C",
+    "hint": "Đứng trước động từ thường 'uploads' và bổ nghĩa cho nó, ta cần một trạng từ chỉ tần suất/cách thức.",
+    "explanation": "Chính xác. Trạng từ 'consistently' (một cách đều đặn/nhất quán) bổ nghĩa cho hành động 'uploads'.",
+    "translation": "Để xây dựng một lượng khán giả trung thành, nhà sáng tạo liên tục tải lên các video ngắn luyện nói tiếng Anh lên kênh TikTok của cô ấy."
+  },
+  {
+    "id": "q_word_form_006",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Medium",
+    "question_text": "A smooth _____ to the new mobile timekeeping system is mandatory for all warehouse and office staff.",
+    "options": [
+      { "key": "A", "text": "transition" },
+      { "key": "B", "text": "transit" },
+      { "key": "C", "text": "transitional" },
+      { "key": "D", "text": "transitioned" }
+    ],
+    "correct_answer": "A",
+    "hint": "Mạo từ 'A' và tính từ 'smooth' (suôn sẻ) báo hiệu từ cần điền phải là một danh từ làm chủ ngữ chính của câu.",
+    "explanation": "Chính xác. Danh từ 'transition' (sự chuyển đổi) là đáp án đúng. Đuôi '-tion' là dấu hiệu nhận biết danh từ cực kỳ phổ biến.",
+    "translation": "Một sự chuyển đổi suôn sẻ sang hệ thống chấm công di động mới là bắt buộc đối với tất cả nhân viên kho và văn phòng."
+  },
+  {
+    "id": "q_word_form_007",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Medium",
+    "question_text": "The user interface of the EduKit application remains _____ even after the implementation of several complex features.",
+    "options": [
+      { "key": "A", "text": "access" },
+      { "key": "B", "text": "accessible" },
+      { "key": "C", "text": "accessibly" },
+      { "key": "D", "text": "accessibility" }
+    ],
+    "correct_answer": "B",
+    "hint": "Động từ 'remains' (vẫn duy trì/giữ nguyên) là một linking verb. Sau linking verb luôn là một tính từ.",
+    "explanation": "Chính xác. Tính từ 'accessible' (dễ tiếp cận/dễ sử dụng) đứng sau 'remains' để miêu tả giao diện người dùng.",
+    "translation": "Giao diện người dùng của ứng dụng EduKit vẫn dễ sử dụng ngay cả sau khi triển khai một vài tính năng phức tạp."
+  },
+  {
+    "id": "q_word_form_008",
+    "part": 5,
+    "grammar_topic": "Word Form (Verb)",
+    "difficulty_level": "Medium",
+    "question_text": "We plan to _____ the PrepMaster database to accommodate the growing number of users preparing for the TOEIC exam.",
+    "options": [
+      { "key": "A", "text": "broad" },
+      { "key": "B", "text": "breadth" },
+      { "key": "C", "text": "broaden" },
+      { "key": "D", "text": "broadly" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cấu trúc 'plan to do something'. Sau 'to' cần một động từ nguyên mẫu.",
+    "explanation": "Chính xác. Động từ 'broaden' (mở rộng) được tạo ra bằng cách thêm hậu tố '-en' vào tính từ 'broad'.",
+    "translation": "Chúng tôi dự định mở rộng cơ sở dữ liệu PrepMaster để đáp ứng số lượng ngày càng tăng người dùng chuẩn bị cho kỳ thi TOEIC."
+  },
+  {
+    "id": "q_word_form_009",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Easy",
+    "question_text": "_____, the shipment of custom corporate gifts arrived just in time for the client's anniversary event.",
+    "options": [
+      { "key": "A", "text": "Fortunate" },
+      { "key": "B", "text": "Fortune" },
+      { "key": "C", "text": "Fortunately" },
+      { "key": "D", "text": "Fortunateness" }
+    ],
+    "correct_answer": "C",
+    "hint": "Đứng ở đầu câu và được ngăn cách bằng dấu phẩy, từ cần điền phải là một trạng từ bổ nghĩa cho toàn bộ mệnh đề phía sau.",
+    "explanation": "Chính xác. Trạng từ 'Fortunately' (Thật may mắn) đứng đầu câu làm trạng từ liên kết.",
+    "translation": "Thật may mắn, lô hàng quà tặng doanh nghiệp tùy chỉnh đã đến vừa kịp lúc cho sự kiện kỷ niệm của khách hàng."
+  },
+  {
+    "id": "q_word_form_010",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Medium",
+    "question_text": "The content creator received a highly positive _____ from viewers who improved their English pronunciation by watching her videos.",
+    "options": [
+      { "key": "A", "text": "respond" },
+      { "key": "B", "text": "response" },
+      { "key": "C", "text": "responsive" },
+      { "key": "D", "text": "responsively" }
+    ],
+    "correct_answer": "B",
+    "hint": "Mạo từ 'a' + trạng từ 'highly' + tính từ 'positive' -> Bắt buộc phải kết thúc bằng một danh từ số ít.",
+    "explanation": "Chính xác. Danh từ 'response' (sự phản hồi) là đáp án đúng. 'Respond' là động từ.",
+    "translation": "Nhà sáng tạo nội dung đã nhận được sự phản hồi rất tích cực từ những người xem đã cải thiện được cách phát âm tiếng Anh nhờ xem video của cô."
+  },
+  {
+    "id": "q_word_form_011",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Easy",
+    "question_text": "The HR manager provided a _____ summary of the new data privacy policy during the team meeting.",
+    "options": [
+      { "key": "A", "text": "detail" },
+      { "key": "B", "text": "detailed" },
+      { "key": "C", "text": "detailing" },
+      { "key": "D", "text": "details" }
+    ],
+    "correct_answer": "B",
+    "hint": "Đứng giữa mạo từ 'a' và danh từ 'summary' (bản tóm tắt), ta cần một tính từ.",
+    "explanation": "Chính xác. Tính từ 'detailed' (chi tiết/được trình bày cặn kẽ) bổ nghĩa cho danh từ 'summary'.",
+    "translation": "Người quản lý nhân sự đã cung cấp một bản tóm tắt chi tiết về chính sách bảo mật dữ liệu mới trong cuộc họp nhóm."
+  },
+  {
+    "id": "q_word_form_012",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Easy",
+    "question_text": "The new React component renders the user dashboard _____, significantly enhancing the overall experience.",
+    "options": [
+      { "key": "A", "text": "quick" },
+      { "key": "B", "text": "quickest" },
+      { "key": "C", "text": "quickly" },
+      { "key": "D", "text": "quickness" }
+    ],
+    "correct_answer": "C",
+    "hint": "Từ cần điền bổ nghĩa cho động từ 'renders' (hiển thị/xuất), diễn tả tốc độ của hành động đó.",
+    "explanation": "Chính xác. Trạng từ 'quickly' (một cách nhanh chóng) bổ nghĩa cho động từ thường 'renders'.",
+    "translation": "Thành phần React mới hiển thị bảng điều khiển người dùng một cách nhanh chóng, nâng cao đáng kể trải nghiệm tổng thể."
+  },
+  {
+    "id": "q_word_form_013",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Medium",
+    "question_text": "Continuous _____ is required to master both vocabulary and grammar when preparing for the JLPT N3 exam.",
+    "options": [
+      { "key": "A", "text": "dedicate" },
+      { "key": "B", "text": "dedicated" },
+      { "key": "C", "text": "dedication" },
+      { "key": "D", "text": "dedicating" }
+    ],
+    "correct_answer": "C",
+    "hint": "Tính từ 'Continuous' (liên tục) đứng đầu câu cần một danh từ theo sau để tạo thành cụm chủ ngữ.",
+    "explanation": "Chính xác. Danh từ 'dedication' (sự cống hiến/sự nỗ lực) là chủ ngữ chính của câu. Đuôi '-tion' là đuôi danh từ quen thuộc.",
+    "translation": "Sự nỗ lực liên tục là điều cần thiết để nắm vững cả từ vựng và ngữ pháp khi chuẩn bị cho kỳ thi JLPT N3."
+  },
+  {
+    "id": "q_word_form_014",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Hard",
+    "question_text": "Offering customized branding options makes our corporate gift boxes highly _____ to potential B2B clients.",
+    "options": [
+      { "key": "A", "text": "attract" },
+      { "key": "B", "text": "attractive" },
+      { "key": "C", "text": "attractively" },
+      { "key": "D", "text": "attraction" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cấu trúc: make + tân ngữ (our corporate gift boxes) + [Trạng từ] + [Tính từ]. Tính từ này miêu tả tân ngữ.",
+    "explanation": "Chính xác. Tính từ 'attractive' (hấp dẫn) đứng sau tân ngữ và trạng từ 'highly' để miêu tả sức hút của những hộp quà.",
+    "translation": "Việc cung cấp các tùy chọn xây dựng thương hiệu tùy chỉnh làm cho các hộp quà tặng doanh nghiệp của chúng tôi trở nên cực kỳ hấp dẫn đối với các khách hàng B2B tiềm năng."
+  },
+  {
+    "id": "q_word_form_015",
+    "part": 5,
+    "grammar_topic": "Word Form (Verb)",
+    "difficulty_level": "Medium",
+    "question_text": "The main goal of the updated EduKit platform is to _____ the process of online learning for high school students.",
+    "options": [
+      { "key": "A", "text": "simple" },
+      { "key": "B", "text": "simplify" },
+      { "key": "C", "text": "simply" },
+      { "key": "D", "text": "simplicity" }
+    ],
+    "correct_answer": "B",
+    "hint": "Sau 'to' để chỉ mục đích, chúng ta cần một động từ nguyên mẫu (To-infinitive).",
+    "explanation": "Chính xác. Động từ 'simplify' (đơn giản hóa) có hậu tố '-ify', một hậu tố tạo động từ rất phổ biến trong tiếng Anh.",
+    "translation": "Mục tiêu chính của nền tảng EduKit được cập nhật là đơn giản hóa quá trình học trực tuyến cho học sinh trung học."
+  },
+  {
+    "id": "q_word_form_016",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Medium",
+    "question_text": "The daily conversational English practice videos on TikTok have become _____ popular among language learners.",
+    "options": [
+      { "key": "A", "text": "immense" },
+      { "key": "B", "text": "immensely" },
+      { "key": "C", "text": "immensity" },
+      { "key": "D", "text": "immenseness" }
+    ],
+    "correct_answer": "B",
+    "hint": "Giữa động từ liên kết 'become' và tính từ 'popular', ta cần một trạng từ chỉ mức độ để nhấn mạnh.",
+    "explanation": "Chính xác. Trạng từ 'immensely' (cực kỳ / vô cùng) bổ nghĩa cho tính từ 'popular'.",
+    "translation": "Các video thực hành hội thoại tiếng Anh hàng ngày trên TikTok đã trở nên cực kỳ phổ biến đối với những người học ngôn ngữ."
+  },
+  {
+    "id": "q_word_form_017",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Easy",
+    "question_text": "Please remind all staff that the _____ of their digital timesheets must be completed by the last working day of the month.",
+    "options": [
+      { "key": "A", "text": "submit" },
+      { "key": "B", "text": "submission" },
+      { "key": "C", "text": "submissive" },
+      { "key": "D", "text": "submitting" }
+    ],
+    "correct_answer": "B",
+    "hint": "Sau mạo từ 'the' và trước giới từ 'of' luôn luôn là một danh từ.",
+    "explanation": "Chính xác. Danh từ 'submission' (sự nộp/đệ trình) là danh từ gốc của động từ 'submit'.",
+    "translation": "Vui lòng nhắc nhở tất cả nhân viên rằng việc nộp bảng chấm công kỹ thuật số của họ phải được hoàn thành trước ngày làm việc cuối cùng của tháng."
+  },
+  {
+    "id": "q_word_form_018",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Hard",
+    "question_text": "All full-length mock exams on the PrepMaster application are strictly _____ and automatically close after 120 minutes.",
+    "options": [
+      { "key": "A", "text": "time" },
+      { "key": "B", "text": "timely" },
+      { "key": "C", "text": "timed" },
+      { "key": "D", "text": "timer" }
+    ],
+    "correct_answer": "C",
+    "hint": "Đứng sau to be 'are' và trạng từ 'strictly', ta cần một tính từ dạng phân từ (V-ed) mang nghĩa bị động: 'được canh thời gian'.",
+    "explanation": "Chính xác. Tính từ 'timed' mang nghĩa 'được tính giờ/canh giờ'. 'Timely' (kịp thời) không hợp nghĩa trong ngữ cảnh bài thi.",
+    "translation": "Tất cả các bài thi thử đầy đủ trên ứng dụng PrepMaster đều được tính giờ nghiêm ngặt và tự động đóng sau 120 phút."
+  },
+  {
+    "id": "q_word_form_019",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Medium",
+    "question_text": "The corporate client expressed great _____ with the premium quality of our eco-friendly packaging.",
+    "options": [
+      { "key": "A", "text": "satisfy" },
+      { "key": "B", "text": "satisfactory" },
+      { "key": "C", "text": "satisfying" },
+      { "key": "D", "text": "satisfaction" }
+    ],
+    "correct_answer": "D",
+    "hint": "Sau tính từ 'great' (to lớn/tuyệt vời) bắt buộc phải là một danh từ làm tân ngữ cho động từ 'expressed'.",
+    "explanation": "Chính xác. Danh từ 'satisfaction' (sự hài lòng) có hậu tố '-tion' chuẩn xác.",
+    "translation": "Khách hàng doanh nghiệp bày tỏ sự hài lòng tuyệt đối với chất lượng cao cấp của bao bì thân thiện với môi trường của chúng ta."
+  },
+  {
+    "id": "q_word_form_020",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Easy",
+    "question_text": "The backend developers _____ resolved the data synchronization issue between the mobile app and the HR server.",
+    "options": [
+      { "key": "A", "text": "prompt" },
+      { "key": "B", "text": "promptness" },
+      { "key": "C", "text": "promptly" },
+      { "key": "D", "text": "prompting" }
+    ],
+    "correct_answer": "C",
+    "hint": "Từ nằm giữa chủ ngữ và động từ chính 'resolved' là trạng từ, dùng để bổ nghĩa cho hành động đó.",
+    "explanation": "Chính xác. Trạng từ 'promptly' (một cách nhanh chóng) diễn tả cách thức các lập trình viên giải quyết vấn đề.",
+    "translation": "Các lập trình viên backend đã nhanh chóng giải quyết sự cố đồng bộ hóa dữ liệu giữa ứng dụng di động và máy chủ nhân sự."
+  },
+  {
+    "id": "q_word_form_021",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Medium",
+    "question_text": "The successful _____ of the React-based HR portal has significantly reduced administrative tasks.",
+    "options": [
+      { "key": "A", "text": "implement" },
+      { "key": "B", "text": "implemented" },
+      { "key": "C", "text": "implementation" },
+      { "key": "D", "text": "implementing" }
+    ],
+    "correct_answer": "C",
+    "hint": "Đứng sau tính từ 'successful' và trước giới từ 'of', chúng ta cần một danh từ để làm chủ ngữ chính cho câu.",
+    "explanation": "Chính xác. Danh từ 'implementation' (sự triển khai) kết hợp với 'successful' tạo thành cụm 'sự triển khai thành công'. Đuôi '-tion' là dấu hiệu nhận biết danh từ.",
+    "translation": "Sự triển khai thành công cổng thông tin nhân sự dựa trên React đã làm giảm đáng kể các nhiệm vụ hành chính."
+  },
+  {
+    "id": "q_word_form_022",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Easy",
+    "question_text": "The new mobile timekeeping app features a highly _____ interface that even older employees can use easily.",
+    "options": [
+      { "key": "A", "text": "intuition" },
+      { "key": "B", "text": "intuitive" },
+      { "key": "C", "text": "intuitively" },
+      { "key": "D", "text": "intuitiveness" }
+    ],
+    "correct_answer": "B",
+    "hint": "Nằm giữa trạng từ chỉ mức độ 'highly' và danh từ 'interface' (giao diện), ta cần một tính từ bổ nghĩa cho danh từ.",
+    "explanation": "Chính xác. Tính từ 'intuitive' (trực quan/dễ hiểu) có đuôi '-ive' đặc trưng, dùng để miêu tả tính chất của giao diện người dùng.",
+    "translation": "Ứng dụng chấm công di động mới có giao diện cực kỳ trực quan mà ngay cả những nhân viên lớn tuổi cũng có thể sử dụng dễ dàng."
+  },
+  {
+    "id": "q_word_form_023",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Easy",
+    "question_text": "The TikTok creator _____ uploads new English practice videos to keep her audience engaged.",
+    "options": [
+      { "key": "A", "text": "regular" },
+      { "key": "B", "text": "regularity" },
+      { "key": "C", "text": "regularly" },
+      { "key": "D", "text": "regularize" }
+    ],
+    "correct_answer": "C",
+    "hint": "Chỗ trống nằm giữa chủ ngữ 'The TikTok creator' và động từ chính 'uploads'. Bạn cần một trạng từ chỉ tần suất.",
+    "explanation": "Chính xác. Trạng từ 'regularly' (một cách thường xuyên) bổ nghĩa cho động từ 'uploads'. Đuôi '-ly' là dấu hiệu của trạng từ.",
+    "translation": "Nhà sáng tạo TikTok thường xuyên tải lên các video luyện tiếng Anh mới để giữ chân khán giả của cô ấy."
+  },
+  {
+    "id": "q_word_form_024",
+    "part": 5,
+    "grammar_topic": "Word Form (Verb)",
+    "difficulty_level": "Medium",
+    "question_text": "The latest software update will _____ users to track their TOEIC and JLPT study hours more accurately.",
+    "options": [
+      { "key": "A", "text": "able" },
+      { "key": "B", "text": "ability" },
+      { "key": "C", "text": "enable" },
+      { "key": "D", "text": "enabling" }
+    ],
+    "correct_answer": "C",
+    "hint": "Sau trợ động từ 'will', ta luôn cần một động từ ở dạng nguyên mẫu không 'to'.",
+    "explanation": "Chính xác. Động từ 'enable' (cho phép/làm cho có khả năng) được tạo ra bằng cách thêm tiền tố 'en-' vào tính từ 'able'.",
+    "translation": "Bản cập nhật phần mềm mới nhất sẽ cho phép người dùng theo dõi số giờ học TOEIC và JLPT của họ một cách chính xác hơn."
+  },
+  {
+    "id": "q_word_form_025",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Easy",
+    "question_text": "Mass _____ of the eco-friendly Happy Boxes is scheduled to begin early next month.",
+    "options": [
+      { "key": "A", "text": "produce" },
+      { "key": "B", "text": "product" },
+      { "key": "C", "text": "productive" },
+      { "key": "D", "text": "production" }
+    ],
+    "correct_answer": "D",
+    "hint": "Tính từ 'Mass' (hàng loạt) đứng trước yêu cầu một danh từ theo sau để tạo thành cụm chủ ngữ hoàn chỉnh.",
+    "explanation": "Chính xác. Danh từ 'production' (sự sản xuất) đi cùng 'Mass' tạo thành cụm 'sản xuất hàng loạt'. Đuôi '-tion' chỉ danh từ sự việc.",
+    "translation": "Việc sản xuất hàng loạt các hộp Happy Box thân thiện với môi trường dự kiến sẽ bắt đầu vào đầu tháng tới."
+  },
+  {
+    "id": "q_word_form_026",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Medium",
+    "question_text": "The custom API ensures that data syncs _____ between the mobile timekeeping app and the central database.",
+    "options": [
+      { "key": "A", "text": "seamless" },
+      { "key": "B", "text": "seamlessly" },
+      { "key": "C", "text": "seamlessness" },
+      { "key": "D", "text": "seam" }
+    ],
+    "correct_answer": "B",
+    "hint": "Đứng sau động từ thường 'syncs' (đồng bộ) và trước giới từ 'between', ta cần trạng từ để chỉ cách thức đồng bộ.",
+    "explanation": "Chính xác. Trạng từ 'seamlessly' (một cách liền mạch/trơn tru) bổ nghĩa cho động từ 'syncs'.",
+    "translation": "API tùy chỉnh đảm bảo rằng dữ liệu đồng bộ liền mạch giữa ứng dụng chấm công di động và cơ sở dữ liệu trung tâm."
+  },
+  {
+    "id": "q_word_form_027",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Medium",
+    "question_text": "PrepMaster provides a _____ review of grammar topics that frequently appear on the TOEIC exam.",
+    "options": [
+      { "key": "A", "text": "comprehend" },
+      { "key": "B", "text": "comprehension" },
+      { "key": "C", "text": "comprehensive" },
+      { "key": "D", "text": "comprehensively" }
+    ],
+    "correct_answer": "C",
+    "hint": "Chỗ trống nằm giữa mạo từ 'a' và danh từ 'review'. Bạn cần một tính từ.",
+    "explanation": "Chính xác. Tính từ 'comprehensive' (toàn diện/đầy đủ) có đuôi '-ive' bổ nghĩa cho danh từ 'review'.",
+    "translation": "PrepMaster cung cấp một bài ôn tập toàn diện về các chủ điểm ngữ pháp thường xuất hiện trong kỳ thi TOEIC."
+  },
+  {
+    "id": "q_word_form_028",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Medium",
+    "question_text": "The mobile developer was praised by the CEO for his outstanding _____ to the HR portal project.",
+    "options": [
+      { "key": "A", "text": "contribute" },
+      { "key": "B", "text": "contribution" },
+      { "key": "C", "text": "contributory" },
+      { "key": "D", "text": "contributing" }
+    ],
+    "correct_answer": "B",
+    "hint": "Tính từ sở hữu 'his' và tính từ 'outstanding' (xuất sắc) bắt buộc từ theo sau phải là một danh từ.",
+    "explanation": "Chính xác. Danh từ 'contribution' (sự đóng góp) là đáp án đúng. Cấu trúc: make a contribution to something.",
+    "translation": "Lập trình viên thiết bị di động đã được Giám đốc điều hành khen ngợi vì sự đóng góp xuất sắc của anh ấy cho dự án cổng thông tin nhân sự."
+  },
+  {
+    "id": "q_word_form_029",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Hard",
+    "question_text": "All TOEIC and JLPT mock tests on the EduKit platform are _____ evaluated by our advanced AI system.",
+    "options": [
+      { "key": "A", "text": "objective" },
+      { "key": "B", "text": "objectively" },
+      { "key": "C", "text": "object" },
+      { "key": "D", "text": "objectivity" }
+    ],
+    "correct_answer": "B",
+    "hint": "Chỗ trống nằm giữa trợ động từ to be 'are' và động từ phân từ hai 'evaluated' (được đánh giá). Chỉ có trạng từ mới đứng được ở vị trí này.",
+    "explanation": "Chính xác. Trạng từ 'objectively' (một cách khách quan) bổ nghĩa cho hành động 'được đánh giá'.",
+    "translation": "Tất cả các bài thi thử TOEIC và JLPT trên nền tảng EduKit đều được hệ thống AI tiên tiến của chúng tôi đánh giá một cách khách quan."
+  },
+  {
+    "id": "q_word_form_030",
+    "part": 5,
+    "grammar_topic": "Word Form (Verb)",
+    "difficulty_level": "Medium",
+    "question_text": "To prevent unauthorized access, the IT department decided to _____ the security protocols for the HR database.",
+    "options": [
+      { "key": "A", "text": "strong" },
+      { "key": "B", "text": "strength" },
+      { "key": "C", "text": "strengthen" },
+      { "key": "D", "text": "strongly" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cấu trúc 'decided to do something'. Sau 'to' cần một động từ nguyên mẫu.",
+    "explanation": "Chính xác. Động từ 'strengthen' (củng cố/làm cho mạnh lên) có hậu tố '-en' rất phổ biến để tạo động từ từ tính/danh từ (strength -> strengthen).",
+    "translation": "Để ngăn chặn truy cập trái phép, bộ phận CNTT đã quyết định củng cố các giao thức bảo mật cho cơ sở dữ liệu nhân sự."
+  },
+  {
+    "id": "q_word_form_031",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Easy",
+    "question_text": "All holiday gift box designs must receive final _____ from the client before we begin manufacturing.",
+    "options": [
+      { "key": "A", "text": "approve" },
+      { "key": "B", "text": "approved" },
+      { "key": "C", "text": "approval" },
+      { "key": "D", "text": "approving" }
+    ],
+    "correct_answer": "C",
+    "hint": "Tính từ 'final' (cuối cùng) đứng trước yêu cầu một danh từ theo sau làm tân ngữ cho động từ 'receive'.",
+    "explanation": "Chính xác. Danh từ 'approval' (sự phê duyệt) có đuôi '-al', một đuôi danh từ chỉ sự việc được chuyển từ động từ (approve -> approval).",
+    "translation": "Tất cả các thiết kế hộp quà tặng dịp lễ phải nhận được sự phê duyệt cuối cùng từ khách hàng trước khi chúng tôi bắt đầu sản xuất."
+  },
+  {
+    "id": "q_word_form_032",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Medium",
+    "question_text": "The startup offers a highly _____ salary and benefits package to attract experienced React developers.",
+    "options": [
+      { "key": "A", "text": "compete" },
+      { "key": "B", "text": "competition" },
+      { "key": "C", "text": "competitive" },
+      { "key": "D", "text": "competitively" }
+    ],
+    "correct_answer": "C",
+    "hint": "Mạo từ 'a' + trạng từ 'highly' + [Tính từ] + danh từ 'salary'.",
+    "explanation": "Chính xác. Tính từ 'competitive' (mang tính cạnh tranh) có đuôi '-ive' quen thuộc. 'A competitive salary' là cụm từ rất hay gặp trong các bài đọc tuyển dụng TOEIC.",
+    "translation": "Công ty khởi nghiệp cung cấp một mức lương và gói phúc lợi mang tính cạnh tranh cao để thu hút các lập trình viên React giàu kinh nghiệm."
+  },
+  {
+    "id": "q_word_form_033",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Medium",
+    "question_text": "The new English practice module was _____ designed to help users overcome their fear of speaking.",
+    "options": [
+      { "key": "A", "text": "specific" },
+      { "key": "B", "text": "specifically" },
+      { "key": "C", "text": "specify" },
+      { "key": "D", "text": "specification" }
+    ],
+    "correct_answer": "B",
+    "hint": "Từ cần điền nằm giữa trợ động từ to be 'was' và động từ chính 'designed', vì vậy nó phải là trạng từ.",
+    "explanation": "Chính xác. Trạng từ 'specifically' (một cách đặc biệt/dành riêng) bổ nghĩa cho hành động 'được thiết kế'.",
+    "translation": "Mô-đun luyện tiếng Anh mới được thiết kế đặc biệt để giúp người dùng vượt qua nỗi sợ nói."
+  },
+  {
+    "id": "q_word_form_034",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Easy",
+    "question_text": "Ensuring high customer _____ is the primary goal of the Happy Box customer service team.",
+    "options": [
+      { "key": "A", "text": "satisfy" },
+      { "key": "B", "text": "satisfying" },
+      { "key": "C", "text": "satisfied" },
+      { "key": "D", "text": "satisfaction" }
+    ],
+    "correct_answer": "D",
+    "hint": "Sau tính từ 'high' và danh từ bổ trợ 'customer', ta cần một danh từ để tạo thành cụm danh từ làm chủ ngữ.",
+    "explanation": "Chính xác. Danh từ 'satisfaction' (sự hài lòng) có đuôi '-tion' tạo thành cụm từ cố định 'customer satisfaction' (sự hài lòng của khách hàng).",
+    "translation": "Đảm bảo sự hài lòng cao của khách hàng là mục tiêu chính của nhóm dịch vụ khách hàng Happy Box."
+  },
+  {
+    "id": "q_word_form_035",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Medium",
+    "question_text": "The methodology used in the PrepMaster app has proven to be highly _____ for busy language learners.",
+    "options": [
+      { "key": "A", "text": "effect" },
+      { "key": "B", "text": "effective" },
+      { "key": "C", "text": "effectively" },
+      { "key": "D", "text": "effectiveness" }
+    ],
+    "correct_answer": "B",
+    "hint": "Sau động từ to be 'to be' và trạng từ 'highly', ta cần một tính từ miêu tả 'phương pháp luận' (methodology).",
+    "explanation": "Chính xác. Tính từ 'effective' (hiệu quả) có đuôi '-ive' là lựa chọn đúng để miêu tả phương pháp học tập.",
+    "translation": "Phương pháp luận được sử dụng trong ứng dụng PrepMaster đã được chứng minh là cực kỳ hiệu quả đối với những người học ngôn ngữ bận rộn."
+  },
+  {
+    "id": "q_word_form_036",
+    "part": 5,
+    "grammar_topic": "Word Form (Verb)",
+    "difficulty_level": "Easy",
+    "question_text": "Employees must enter their unique ID and password to _____ the HR portal and view their payslips.",
+    "options": [
+      { "key": "A", "text": "accessible" },
+      { "key": "B", "text": "accessibility" },
+      { "key": "C", "text": "access" },
+      { "key": "D", "text": "accessibly" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cấu trúc 'to do something' (để làm gì). Sau 'to' cần một động từ nguyên mẫu.",
+    "explanation": "Chính xác. Động từ 'access' (truy cập) đóng vai trò diễn tả mục đích của việc nhập ID và mật khẩu. Chú ý: 'access' vừa là danh từ vừa là động từ.",
+    "translation": "Nhân viên phải nhập ID và mật khẩu duy nhất của mình để truy cập cổng thông tin nhân sự và xem phiếu lương của họ."
+  },
+  {
+    "id": "q_word_form_037",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Medium",
+    "question_text": "The marketing and design teams worked _____ to launch the new holiday campaign on time.",
+    "options": [
+      { "key": "A", "text": "collaborate" },
+      { "key": "B", "text": "collaborative" },
+      { "key": "C", "text": "collaboratively" },
+      { "key": "D", "text": "collaboration" }
+    ],
+    "correct_answer": "C",
+    "hint": "Sau động từ 'worked', ta cần một trạng từ để miêu tả cách thức làm việc của hai đội nhóm.",
+    "explanation": "Chính xác. Trạng từ 'collaboratively' (một cách hợp tác / cùng nhau) có đuôi '-ly' bổ nghĩa cho động từ 'worked'.",
+    "translation": "Nhóm tiếp thị và nhóm thiết kế đã làm việc hợp tác cùng nhau để ra mắt chiến dịch dịp lễ đúng hạn."
+  },
+  {
+    "id": "q_word_form_038",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Hard",
+    "question_text": "Recent market research shows a strong _____ for customized corporate gifts over generic items.",
+    "options": [
+      { "key": "A", "text": "prefer" },
+      { "key": "B", "text": "preferable" },
+      { "key": "C", "text": "preferably" },
+      { "key": "D", "text": "preference" }
+    ],
+    "correct_answer": "D",
+    "hint": "Mạo từ 'a' + tính từ 'strong' đòi hỏi từ theo sau phải là một danh từ làm tân ngữ cho động từ 'shows'.",
+    "explanation": "Chính xác. Danh từ 'preference' (sự ưa thích/ưu tiên) có đuôi '-ence' kết hợp với cấu trúc 'preference for A over B' (thích A hơn B).",
+    "translation": "Nghiên cứu thị trường gần đây cho thấy sự ưa chuộng mạnh mẽ đối với các món quà tặng doanh nghiệp tùy chỉnh so với các mặt hàng thông thường."
+  },
+  {
+    "id": "q_word_form_039",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Medium",
+    "question_text": "The company maintains _____ guidelines regarding the security of all user data stored in the EduKit app.",
+    "options": [
+      { "key": "A", "text": "strictness" },
+      { "key": "B", "text": "strictly" },
+      { "key": "C", "text": "strict" },
+      { "key": "D", "text": "stricter" }
+    ],
+    "correct_answer": "C",
+    "hint": "Từ cần điền đứng trước danh từ 'guidelines' (những nguyên tắc/hướng dẫn), do đó nó phải là một tính từ.",
+    "explanation": "Chính xác. Tính từ 'strict' (nghiêm ngặt) bổ nghĩa cho danh từ phía sau tạo thành cụm 'những nguyên tắc nghiêm ngặt'.",
+    "translation": "Công ty duy trì các nguyên tắc nghiêm ngặt liên quan đến việc bảo mật tất cả dữ liệu người dùng được lưu trữ trong ứng dụng EduKit."
+  },
+  {
+    "id": "q_word_form_040",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Medium",
+    "question_text": "The rigorous _____ of the React components resulted in significantly faster loading times for the HR website.",
+    "options": [
+      { "key": "A", "text": "optimize" },
+      { "key": "B", "text": "optimization" },
+      { "key": "C", "text": "optimized" },
+      { "key": "D", "text": "optimizing" }
+    ],
+    "correct_answer": "B",
+    "hint": "Mạo từ 'The' và tính từ 'rigorous' (nghiêm ngặt/kỹ lưỡng) bắt buộc từ điền vào là một danh từ.",
+    "explanation": "Chính xác. Danh từ 'optimization' (sự tối ưu hóa) có đuôi '-tion' là chủ ngữ chính của câu.",
+    "translation": "Sự tối ưu hóa kỹ lưỡng các thành phần React đã dẫn đến thời gian tải trang web nhân sự nhanh hơn đáng kể."
+  },
+  {
+    "id": "q_word_form_041",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Medium",
+    "question_text": "To ensure the _____ of the timekeeping data, employees must verify their hours before the end of the week.",
+    "options": [
+      { "key": "A", "text": "accurate" },
+      { "key": "B", "text": "accurately" },
+      { "key": "C", "text": "accuracy" },
+      { "key": "D", "text": "accurateness" }
+    ],
+    "correct_answer": "C",
+    "hint": "Mạo từ 'the' đứng trước và giới từ 'of' đứng sau bắt buộc từ cần điền phải là một danh từ.",
+    "explanation": "Chính xác. Danh từ 'accuracy' (sự chính xác) với hậu tố '-cy' là đáp án đúng để tạo thành cụm 'sự chính xác của dữ liệu chấm công'.",
+    "translation": "Để đảm bảo sự chính xác của dữ liệu chấm công, nhân viên phải xác minh giờ làm việc của mình trước cuối tuần."
+  },
+  {
+    "id": "q_word_form_042",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Hard",
+    "question_text": "The React components for the HR portal were _____ designed to load quickly and reduce server requests.",
+    "options": [
+      { "key": "A", "text": "efficient" },
+      { "key": "B", "text": "efficiency" },
+      { "key": "C", "text": "efficiencies" },
+      { "key": "D", "text": "efficiently" }
+    ],
+    "correct_answer": "D",
+    "hint": "Chỗ trống nằm giữa trợ động từ to be 'were' và động từ phân từ hai 'designed'. Vị trí này chỉ dành cho trạng từ.",
+    "explanation": "Chính xác. Trạng từ 'efficiently' (một cách hiệu quả) bổ nghĩa cho hành động 'được thiết kế'.",
+    "translation": "Các thành phần React cho cổng thông tin nhân sự được thiết kế một cách hiệu quả để tải nhanh và giảm thiểu các yêu cầu đến máy chủ."
+  },
+  {
+    "id": "q_word_form_043",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Medium",
+    "question_text": "Happy Box offers a _____ selection of customized corporate gifts to suit different company budgets.",
+    "options": [
+      { "key": "A", "text": "variety" },
+      { "key": "B", "text": "various" },
+      { "key": "C", "text": "vary" },
+      { "key": "D", "text": "variably" }
+    ],
+    "correct_answer": "B",
+    "hint": "Nằm giữa mạo từ 'a' và danh từ 'selection' (sự lựa chọn/bộ sưu tập), ta cần một tính từ.",
+    "explanation": "Chính xác. Tính từ 'various' (đa dạng/nhiều loại) bổ nghĩa cho 'selection' tạo thành cụm 'một sự lựa chọn đa dạng'.",
+    "translation": "Happy Box cung cấp một sự lựa chọn đa dạng các món quà tặng doanh nghiệp tùy chỉnh để phù hợp với các ngân sách công ty khác nhau."
+  },
+  {
+    "id": "q_word_form_044",
+    "part": 5,
+    "grammar_topic": "Word Form (Verb)",
+    "difficulty_level": "Medium",
+    "question_text": "The new mobile application will _____ the entire attendance tracking process, saving managers hours of manual work.",
+    "options": [
+      { "key": "A", "text": "automatic" },
+      { "key": "B", "text": "automatically" },
+      { "key": "C", "text": "automate" },
+      { "key": "D", "text": "automation" }
+    ],
+    "correct_answer": "C",
+    "hint": "Sau trợ động từ 'will' (sẽ), chúng ta luôn cần một động từ ở dạng nguyên mẫu không 'to'.",
+    "explanation": "Chính xác. Động từ 'automate' (tự động hóa) với hậu tố '-ate' là đáp án chuẩn xác để diễn tả hành động của ứng dụng.",
+    "translation": "Ứng dụng di động mới sẽ tự động hóa toàn bộ quá trình theo dõi điểm danh, giúp các nhà quản lý tiết kiệm được nhiều giờ làm việc thủ công."
+  },
+  {
+    "id": "q_word_form_045",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Easy",
+    "question_text": "The _____ of the daily English speaking series on TikTok has attracted millions of language learners worldwide.",
+    "options": [
+      { "key": "A", "text": "create" },
+      { "key": "B", "text": "creative" },
+      { "key": "C", "text": "creatively" },
+      { "key": "D", "text": "creation" }
+    ],
+    "correct_answer": "D",
+    "hint": "Cấu trúc 'The + [Danh từ] + of + [Danh từ]'. Chỗ trống phải là một danh từ đóng vai trò chủ ngữ.",
+    "explanation": "Chính xác. Danh từ 'creation' (sự tạo ra/sự sáng tạo) với hậu tố '-tion' là chủ ngữ chính của câu.",
+    "translation": "Việc tạo ra loạt video nói tiếng Anh hàng ngày trên TikTok đã thu hút hàng triệu người học ngôn ngữ trên toàn thế giới."
+  },
+  {
+    "id": "q_word_form_046",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Medium",
+    "question_text": "The TOEIC and JLPT mock tests on the PrepMaster app are _____ updated to reflect the latest exam trends.",
+    "options": [
+      { "key": "A", "text": "continual" },
+      { "key": "B", "text": "continually" },
+      { "key": "C", "text": "continue" },
+      { "key": "D", "text": "continuation" }
+    ],
+    "correct_answer": "B",
+    "hint": "Đứng trước động từ phân từ hai 'updated', ta cần một trạng từ để bổ nghĩa về mặt tần suất cho hành động đó.",
+    "explanation": "Chính xác. Trạng từ 'continually' (một cách liên tục/không ngừng) bổ nghĩa cho động từ 'được cập nhật'.",
+    "translation": "Các bài thi thử TOEIC và JLPT trên ứng dụng PrepMaster liên tục được cập nhật để phản ánh các xu hướng ra đề mới nhất."
+  },
+  {
+    "id": "q_word_form_047",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Hard",
+    "question_text": "Learning Japanese and English concurrently requires a _____ commitment of time and energy.",
+    "options": [
+      { "key": "A", "text": "substance" },
+      { "key": "B", "text": "substantial" },
+      { "key": "C", "text": "substantially" },
+      { "key": "D", "text": "substantiate" }
+    ],
+    "correct_answer": "B",
+    "hint": "Giữa mạo từ 'a' và danh từ 'commitment' (sự cam kết), ta cần một tính từ.",
+    "explanation": "Chính xác. Tính từ 'substantial' (đáng kể/lớn lao) với hậu tố '-al' kết hợp với danh từ phía sau tạo thành cụm 'một sự cam kết lớn'.",
+    "translation": "Việc học tiếng Nhật và tiếng Anh cùng lúc đòi hỏi một sự cam kết đáng kể về thời gian và sức lực."
+  },
+  {
+    "id": "q_word_form_048",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Medium",
+    "question_text": "The board of directors finally reached a mutual _____ regarding the marketing budget for the EduKit project.",
+    "options": [
+      { "key": "A", "text": "agree" },
+      { "key": "B", "text": "agreed" },
+      { "key": "C", "text": "agreement" },
+      { "key": "D", "text": "agreeable" }
+    ],
+    "correct_answer": "C",
+    "hint": "Mạo từ 'a' + tính từ 'mutual' (lẫn nhau/chung) yêu cầu một danh từ đứng cuối để hoàn thành cụm tân ngữ.",
+    "explanation": "Chính xác. Danh từ 'agreement' (sự thỏa thuận/sự đồng tình) có hậu tố '-ment' ghép thành cụm 'a mutual agreement' (một thỏa thuận chung).",
+    "translation": "Hội đồng quản trị cuối cùng đã đạt được một thỏa thuận chung về ngân sách tiếp thị cho dự án EduKit."
+  },
+  {
+    "id": "q_word_form_049",
+    "part": 5,
+    "grammar_topic": "Word Form (Verb)",
+    "difficulty_level": "Easy",
+    "question_text": "For security reasons, employees must _____ their login passwords for the HR portal every 90 days.",
+    "options": [
+      { "key": "A", "text": "renewal" },
+      { "key": "B", "text": "renewable" },
+      { "key": "C", "text": "renew" },
+      { "key": "D", "text": "renews" }
+    ],
+    "correct_answer": "C",
+    "hint": "Động từ khuyết thiếu 'must' (phải) luôn luôn đi kèm với một động từ nguyên mẫu không 'to'.",
+    "explanation": "Chính xác. Động từ nguyên mẫu 'renew' (làm mới/gia hạn) đứng sau 'must' diễn tả một hành động bắt buộc.",
+    "translation": "Vì lý do bảo mật, nhân viên phải làm mới mật khẩu đăng nhập cổng thông tin nhân sự của họ cứ sau 90 ngày."
+  },
+  {
+    "id": "q_word_form_050",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Medium",
+    "question_text": "The promotional video for the new Happy Box collection performed _____ well across all social media platforms.",
+    "options": [
+      { "key": "A", "text": "exceptional" },
+      { "key": "B", "text": "exceptionally" },
+      { "key": "C", "text": "exception" },
+      { "key": "D", "text": "exceptions" }
+    ],
+    "correct_answer": "B",
+    "hint": "Trước trạng từ 'well' (tốt), bạn cần một trạng từ chỉ mức độ để bổ nghĩa và nhấn mạnh cho nó.",
+    "explanation": "Chính xác. Trạng từ 'exceptionally' (đặc biệt/xuất chúng) bổ nghĩa cho trạng từ 'well', tạo thành cụm 'đặc biệt tốt'.",
+    "translation": "Video quảng cáo cho bộ sưu tập Happy Box mới hoạt động đặc biệt tốt trên tất cả các nền tảng truyền thông xã hội."
+  },
+  {
+    "id": "q_word_form_051",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Easy",
+    "question_text": "The main priority for the React developer is to ensure the _____ of the web application against cyber attacks.",
+    "options": [
+      { "key": "A", "text": "secure" },
+      { "key": "B", "text": "securely" },
+      { "key": "C", "text": "securing" },
+      { "key": "D", "text": "security" }
+    ],
+    "correct_answer": "D",
+    "hint": "Mạo từ 'the' đòi hỏi một danh từ theo sau nó để làm tân ngữ cho động từ 'ensure' (đảm bảo).",
+    "explanation": "Chính xác. Danh từ 'security' (sự bảo mật) với hậu tố '-ity' là từ phù hợp nhất về mặt cấu trúc và ý nghĩa.",
+    "translation": "Ưu tiên chính của lập trình viên React là đảm bảo sự bảo mật của ứng dụng web trước các cuộc tấn công mạng."
+  },
+  {
+    "id": "q_word_form_052",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Medium",
+    "question_text": "The _____ growth of the EduKit user base demonstrates the high demand for interactive online learning tools.",
+    "options": [
+      { "key": "A", "text": "rapid" },
+      { "key": "B", "text": "rapidly" },
+      { "key": "C", "text": "rapidity" },
+      { "key": "D", "text": "rapids" }
+    ],
+    "correct_answer": "A",
+    "hint": "Từ cần điền đứng trước danh từ 'growth' (sự tăng trưởng) để miêu tả tốc độ của sự tăng trưởng đó.",
+    "explanation": "Chính xác. Tính từ 'rapid' (nhanh chóng) đứng trước và bổ nghĩa cho danh từ 'growth'.",
+    "translation": "Sự tăng trưởng nhanh chóng của cơ sở người dùng EduKit chứng tỏ nhu cầu cao đối với các công cụ học trực tuyến tương tác."
+  },
+  {
+    "id": "q_word_form_053",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Medium",
+    "question_text": "The new payroll software _____ calculates overtime pay based on the data imported from the timekeeping app.",
+    "options": [
+      { "key": "A", "text": "precise" },
+      { "key": "B", "text": "precision" },
+      { "key": "C", "text": "precisely" },
+      { "key": "D", "text": "preciseness" }
+    ],
+    "correct_answer": "C",
+    "hint": "Chỗ trống nằm giữa chủ ngữ 'software' và động từ chính 'calculates'. Vị trí này yêu cầu một trạng từ.",
+    "explanation": "Chính xác. Trạng từ 'precisely' (một cách chính xác) bổ nghĩa cho hành động tính toán của phần mềm.",
+    "translation": "Phần mềm tính lương mới tính toán chính xác tiền lương làm thêm giờ dựa trên dữ liệu được nhập từ ứng dụng chấm công."
+  },
+  {
+    "id": "q_word_form_054",
+    "part": 5,
+    "grammar_topic": "Word Form (Verb)",
+    "difficulty_level": "Easy",
+    "question_text": "The company plans to _____ its PrepMaster app services to the Japanese market early next year.",
+    "options": [
+      { "key": "A", "text": "expand" },
+      { "key": "B", "text": "expansion" },
+      { "key": "C", "text": "expansive" },
+      { "key": "D", "text": "expands" }
+    ],
+    "correct_answer": "A",
+    "hint": "Cấu trúc 'plan to do something'. Sau 'to' cần một động từ nguyên mẫu.",
+    "explanation": "Chính xác. Động từ nguyên mẫu 'expand' (mở rộng) đi sau 'to' để chỉ mục đích/kế hoạch của công ty.",
+    "translation": "Công ty có kế hoạch mở rộng các dịch vụ ứng dụng PrepMaster sang thị trường Nhật Bản vào đầu năm tới."
+  },
+  {
+    "id": "q_word_form_055",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Hard",
+    "question_text": "The recent _____ of advanced analytics features to the PrepMaster platform has greatly increased user retention.",
+    "options": [
+      { "key": "A", "text": "add" },
+      { "key": "B", "text": "added" },
+      { "key": "C", "text": "additional" },
+      { "key": "D", "text": "addition" }
+    ],
+    "correct_answer": "D",
+    "hint": "Mạo từ 'The' và tính từ 'recent' (gần đây) đòi hỏi một danh từ theo sau làm chủ ngữ chính của câu.",
+    "explanation": "Chính xác. Danh từ 'addition' (sự thêm vào/bổ sung) là đáp án đúng, tạo thành cụm chủ ngữ 'Việc bổ sung gần đây...'.",
+    "translation": "Việc bổ sung gần đây các tính năng phân tích nâng cao vào nền tảng PrepMaster đã làm tăng đáng kể tỷ lệ giữ chân người dùng."
+  },
+  {
+    "id": "q_word_form_056",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Medium",
+    "question_text": "The mobile application is fully _____ with all the latest iOS and Android operating systems.",
+    "options": [
+      { "key": "A", "text": "compete" },
+      { "key": "B", "text": "compatible" },
+      { "key": "C", "text": "compatibility" },
+      { "key": "D", "text": "compatibly" }
+    ],
+    "correct_answer": "B",
+    "hint": "Đứng sau động từ to be 'is' và trạng từ 'fully', ta cần một tính từ miêu tả tính chất của ứng dụng. Cấu trúc '... with' mang nghĩa 'tương thích với'.",
+    "explanation": "Chính xác. Tính từ 'compatible' (tương thích) đi kèm với giới từ 'with' là một cụm từ rất phổ biến trong lĩnh vực công nghệ.",
+    "translation": "Ứng dụng di động hoàn toàn tương thích với tất cả các hệ điều hành iOS và Android mới nhất."
+  },
+  {
+    "id": "q_word_form_057",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Easy",
+    "question_text": "The newly upgraded database server handles heavy web traffic _____, ensuring no downtime during peak hours.",
+    "options": [
+      { "key": "A", "text": "effortless" },
+      { "key": "B", "text": "effort" },
+      { "key": "C", "text": "effortlessly" },
+      { "key": "D", "text": "efforts" }
+    ],
+    "correct_answer": "C",
+    "hint": "Từ cần điền bổ nghĩa cho động từ 'handles' (xử lý), trả lời cho câu hỏi 'xử lý như thế nào?'.",
+    "explanation": "Chính xác. Trạng từ 'effortlessly' (một cách dễ dàng/không tốn sức) bổ nghĩa cho hành động xử lý của máy chủ.",
+    "translation": "Máy chủ cơ sở dữ liệu mới được nâng cấp xử lý lưu lượng truy cập web lớn một cách dễ dàng, đảm bảo không có thời gian chết trong giờ cao điểm."
+  },
+  {
+    "id": "q_word_form_058",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Medium",
+    "question_text": "Ms. Lin expressed her deep _____ to the loyal followers of her TikTok English channel during the live stream.",
+    "options": [
+      { "key": "A", "text": "appreciate" },
+      { "key": "B", "text": "appreciative" },
+      { "key": "C", "text": "appreciatively" },
+      { "key": "D", "text": "appreciation" }
+    ],
+    "correct_answer": "D",
+    "hint": "Tính từ sở hữu 'her' và tính từ 'deep' (sâu sắc) bắt buộc từ điền vào phải là một danh từ.",
+    "explanation": "Chính xác. Danh từ 'appreciation' (sự trân trọng / lòng biết ơn) có hậu tố '-tion' tạo thành cụm 'lòng biết ơn sâu sắc'.",
+    "translation": "Cô Lin bày tỏ lòng biết ơn sâu sắc của mình tới những người theo dõi trung thành của kênh tiếng Anh TikTok của cô trong buổi phát trực tiếp."
+  },
+  {
+    "id": "q_word_form_059",
+    "part": 5,
+    "grammar_topic": "Word Form (Verb)",
+    "difficulty_level": "Easy",
+    "question_text": "The CEO wants to _____ the gift box packaging to include the company logos of our B2B clients.",
+    "options": [
+      { "key": "A", "text": "custom" },
+      { "key": "B", "text": "customary" },
+      { "key": "C", "text": "customize" },
+      { "key": "D", "text": "customer" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cấu trúc 'want to do something'. Chỗ trống cần một động từ nguyên thể.",
+    "explanation": "Chính xác. Động từ 'customize' (tùy chỉnh/cá nhân hóa) có hậu tố '-ize', một hậu tố chuyên dùng để tạo động từ.",
+    "translation": "Giám đốc điều hành muốn tùy chỉnh bao bì hộp quà để bao gồm biểu trưng (logo) của các khách hàng B2B của chúng tôi."
+  },
+  {
+    "id": "q_word_form_060",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Medium",
+    "question_text": "Implementing the new automated timekeeping system proved to be a highly _____ decision for the company.",
+    "options": [
+      { "key": "A", "text": "profit" },
+      { "key": "B", "text": "profitably" },
+      { "key": "C", "text": "profitable" },
+      { "key": "D", "text": "profitability" }
+    ],
+    "correct_answer": "C",
+    "hint": "Mạo từ 'a' + trạng từ 'highly' + [Tính từ] + danh từ 'decision' (quyết định).",
+    "explanation": "Chính xác. Tính từ 'profitable' (sinh lời / có lợi) với hậu tố '-able' bổ nghĩa cho danh từ 'decision'.",
+    "translation": "Việc triển khai hệ thống chấm công tự động mới tỏ ra là một quyết định mang lại nhiều lợi ích cho công ty."
+  },
+  {
+    "id": "q_word_form_061",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Medium",
+    "question_text": "The continuous _____ of the React-based HR portal is necessary to meet the growing demands of the company.",
+    "options": [
+      { "key": "A", "text": "innovate" },
+      { "key": "B", "text": "innovative" },
+      { "key": "C", "text": "innovation" },
+      { "key": "D", "text": "innovatively" }
+    ],
+    "correct_answer": "C",
+    "hint": "Mạo từ 'The' và tính từ 'continuous' (liên tục) đứng trước đòi hỏi một danh từ theo sau làm chủ ngữ chính.",
+    "explanation": "Chính xác. Danh từ 'innovation' (sự đổi mới/cải tiến) có đuôi '-tion' tạo thành cụm chủ ngữ 'Sự cải tiến liên tục...'.",
+    "translation": "Sự cải tiến liên tục của cổng thông tin nhân sự dựa trên React là cần thiết để đáp ứng nhu cầu ngày càng tăng của công ty."
+  },
+  {
+    "id": "q_word_form_062",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Medium",
+    "question_text": "The new advanced learning module in PrepMaster is designed _____ for students aiming for a TOEIC score of 900+.",
+    "options": [
+      { "key": "A", "text": "exclusive" },
+      { "key": "B", "text": "exclusively" },
+      { "key": "C", "text": "exclusivity" },
+      { "key": "D", "text": "excluding" }
+    ],
+    "correct_answer": "B",
+    "hint": "Từ cần điền bổ nghĩa cho hành động 'designed' (được thiết kế), chỉ ra mục đích thiết kế hướng tới ai.",
+    "explanation": "Chính xác. Trạng từ 'exclusively' (dành riêng/độc quyền) có đuôi '-ly' bổ nghĩa cho động từ phân từ hai 'designed'.",
+    "translation": "Mô-đun học tập nâng cao mới trong PrepMaster được thiết kế dành riêng cho những học sinh hướng tới điểm TOEIC 900+."
+  },
+  {
+    "id": "q_word_form_063",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Hard",
+    "question_text": "Happy Box's management team made a _____ decision to shift their marketing focus entirely to B2B clients.",
+    "options": [
+      { "key": "A", "text": "strategy" },
+      { "key": "B", "text": "strategize" },
+      { "key": "C", "text": "strategic" },
+      { "key": "D", "text": "strategically" }
+    ],
+    "correct_answer": "C",
+    "hint": "Chỗ trống nằm giữa mạo từ 'a' và danh từ 'decision' (quyết định), do đó bạn cần một tính từ.",
+    "explanation": "Chính xác. Tính từ 'strategic' (mang tính chiến lược) có đuôi '-ic' kết hợp với 'decision' tạo thành cụm 'một quyết định mang tính chiến lược'.",
+    "translation": "Ban quản lý của Happy Box đã đưa ra một quyết định mang tính chiến lược là chuyển toàn bộ trọng tâm tiếp thị sang các khách hàng B2B."
+  },
+  {
+    "id": "q_word_form_064",
+    "part": 5,
+    "grammar_topic": "Word Form (Verb)",
+    "difficulty_level": "Medium",
+    "question_text": "To _____ server downtime during peak hours, the IT department has upgraded the database hardware.",
+    "options": [
+      { "key": "A", "text": "minimum" },
+      { "key": "B", "text": "minimize" },
+      { "key": "C", "text": "minimal" },
+      { "key": "D", "text": "minimally" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cấu trúc 'To do something' chỉ mục đích. Sau 'to' cần một động từ nguyên mẫu.",
+    "explanation": "Chính xác. Động từ 'minimize' (giảm thiểu) có đuôi '-ize' rất đặc trưng để tạo động từ trong tiếng Anh.",
+    "translation": "Để giảm thiểu thời gian chết của máy chủ trong giờ cao điểm, bộ phận CNTT đã nâng cấp phần cứng cơ sở dữ liệu."
+  },
+  {
+    "id": "q_word_form_065",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Medium",
+    "question_text": "Routine _____ of the mobile timekeeping app is scheduled for this weekend, so the system will be temporarily offline.",
+    "options": [
+      { "key": "A", "text": "maintain" },
+      { "key": "B", "text": "maintained" },
+      { "key": "C", "text": "maintaining" },
+      { "key": "D", "text": "maintenance" }
+    ],
+    "correct_answer": "D",
+    "hint": "Tính từ 'Routine' (thường lệ/định kỳ) đứng trước yêu cầu một danh từ theo sau làm chủ ngữ.",
+    "explanation": "Chính xác. Danh từ 'maintenance' (sự bảo trì) có đuôi '-ance' là danh từ gốc của động từ 'maintain'.",
+    "translation": "Việc bảo trì định kỳ ứng dụng chấm công di động được lên lịch vào cuối tuần này, vì vậy hệ thống sẽ tạm thời ngoại tuyến."
+  },
+  {
+    "id": "q_word_form_066",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Easy",
+    "question_text": "The new Mobile Developer Intern _____ answered all the technical questions during his final interview.",
+    "options": [
+      { "key": "A", "text": "confident" },
+      { "key": "B", "text": "confidence" },
+      { "key": "C", "text": "confidently" },
+      { "key": "D", "text": "confide" }
+    ],
+    "correct_answer": "C",
+    "hint": "Từ cần điền nằm giữa chủ ngữ và động từ chính 'answered', đóng vai trò bổ nghĩa cho cách thức trả lời.",
+    "explanation": "Chính xác. Trạng từ 'confidently' (một cách tự tin) bổ nghĩa cho động từ 'answered'.",
+    "translation": "Thực tập sinh Mobile Developer mới đã tự tin trả lời tất cả các câu hỏi kỹ thuật trong buổi phỏng vấn cuối cùng của anh ấy."
+  },
+  {
+    "id": "q_word_form_067",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Hard",
+    "question_text": "For a smooth user experience, the navigation flow of the EduKit application must be highly _____.",
+    "options": [
+      { "key": "A", "text": "predict" },
+      { "key": "B", "text": "predictable" },
+      { "key": "C", "text": "predictably" },
+      { "key": "D", "text": "predictability" }
+    ],
+    "correct_answer": "B",
+    "hint": "Sau động từ to be 'be' và trạng từ 'highly', ta cần một tính từ miêu tả luồng điều hướng (navigation flow).",
+    "explanation": "Chính xác. Tính từ 'predictable' (có thể đoán trước/dễ đoán) có đuôi '-able' miêu tả một giao diện thân thiện, logic với người dùng.",
+    "translation": "Để có trải nghiệm người dùng suôn sẻ, luồng điều hướng của ứng dụng EduKit phải rất dễ đoán (có tính logic cao)."
+  },
+  {
+    "id": "q_word_form_068",
+    "part": 5,
+    "grammar_topic": "Word Form (Verb)",
+    "difficulty_level": "Medium",
+    "question_text": "To increase its market share, PrepMaster plans to _____ its language course offerings by adding Korean and Mandarin.",
+    "options": [
+      { "key": "A", "text": "diverse" },
+      { "key": "B", "text": "diversity" },
+      { "key": "C", "text": "diversify" },
+      { "key": "D", "text": "diversification" }
+    ],
+    "correct_answer": "C",
+    "hint": "Sau 'to' để chỉ mục đích hoặc kế hoạch, chúng ta cần một động từ nguyên mẫu.",
+    "explanation": "Chính xác. Động từ 'diversify' (đa dạng hóa) có đuôi '-ify' được tạo ra từ tính từ 'diverse'.",
+    "translation": "Để tăng thị phần, PrepMaster có kế hoạch đa dạng hóa các khóa học ngôn ngữ được cung cấp bằng cách thêm tiếng Hàn và tiếng Quan Thoại."
+  },
+  {
+    "id": "q_word_form_069",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Easy",
+    "question_text": "A comprehensive _____ of the new timekeeping system showed a 20 percent increase in overall HR efficiency.",
+    "options": [
+      { "key": "A", "text": "evaluate" },
+      { "key": "B", "text": "evaluation" },
+      { "key": "C", "text": "evaluative" },
+      { "key": "D", "text": "evaluating" }
+    ],
+    "correct_answer": "B",
+    "hint": "Mạo từ 'A' và tính từ 'comprehensive' (toàn diện) đòi hỏi một danh từ theo sau.",
+    "explanation": "Chính xác. Danh từ 'evaluation' (sự đánh giá) có đuôi '-tion' tạo thành cụm chủ ngữ 'Một sự đánh giá toàn diện...'.",
+    "translation": "Một sự đánh giá toàn diện về hệ thống chấm công mới cho thấy hiệu quả chung của bộ phận nhân sự đã tăng 20%."
+  },
+  {
+    "id": "q_word_form_070",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Medium",
+    "question_text": "The Happy Box holiday campaign was _____ expected to launch in November, but it was postponed to December.",
+    "options": [
+      { "key": "A", "text": "initial" },
+      { "key": "B", "text": "initially" },
+      { "key": "C", "text": "initiate" },
+      { "key": "D", "text": "initiative" }
+    ],
+    "correct_answer": "B",
+    "hint": "Chỗ trống nằm giữa to be 'was' và động từ phân từ hai 'expected' (được dự kiến). Vị trí này chỉ dành cho trạng từ.",
+    "explanation": "Chính xác. Trạng từ 'initially' (ban đầu/lúc đầu) bổ nghĩa cho hành động 'được dự kiến'.",
+    "translation": "Chiến dịch dịp lễ Happy Box ban đầu được dự kiến ra mắt vào tháng 11, nhưng nó đã bị hoãn lại đến tháng 12."
+  },
+  {
+    "id": "q_word_form_071",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Easy",
+    "question_text": "The CEO requested a detailed _____ analysis before approving the budget for the new app development project.",
+    "options": [
+      { "key": "A", "text": "finance" },
+      { "key": "B", "text": "financial" },
+      { "key": "C", "text": "financially" },
+      { "key": "D", "text": "financed" }
+    ],
+    "correct_answer": "B",
+    "hint": "Từ cần điền đứng trước danh từ 'analysis' (phân tích) để chỉ loại hình phân tích (thuộc về tài chính).",
+    "explanation": "Chính xác. Tính từ 'financial' (thuộc về tài chính) có đuôi '-al' bổ nghĩa cho 'analysis' tạo thành cụm 'financial analysis'.",
+    "translation": "Giám đốc điều hành đã yêu cầu một bản phân tích tài chính chi tiết trước khi phê duyệt ngân sách cho dự án phát triển ứng dụng mới."
+  },
+  {
+    "id": "q_word_form_072",
+    "part": 5,
+    "grammar_topic": "Word Form (Verb)",
+    "difficulty_level": "Hard",
+    "question_text": "Could you please _____ the instructions for syncing the offline data to the main server?",
+    "options": [
+      { "key": "A", "text": "clear" },
+      { "key": "B", "text": "clarity" },
+      { "key": "C", "text": "clarify" },
+      { "key": "D", "text": "clearly" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cấu trúc 'Could you please + Động từ nguyên mẫu' dùng để đưa ra lời yêu cầu lịch sự.",
+    "explanation": "Chính xác. Động từ 'clarify' (làm rõ) có đuôi '-ify' là động từ nguyên mẫu đứng sau 'please'.",
+    "translation": "Bạn có thể vui lòng làm rõ các hướng dẫn về việc đồng bộ hóa dữ liệu ngoại tuyến với máy chủ chính được không?"
+  },
+  {
+    "id": "q_word_form_073",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Medium",
+    "question_text": "The strategic _____ between EduKit and local universities has provided students with free access to learning materials.",
+    "options": [
+      { "key": "A", "text": "partner" },
+      { "key": "B", "text": "partnered" },
+      { "key": "C", "text": "partnership" },
+      { "key": "D", "text": "partnering" }
+    ],
+    "correct_answer": "C",
+    "hint": "Mạo từ 'The' và tính từ 'strategic' (chiến lược) yêu cầu một danh từ chỉ mối quan hệ theo sau.",
+    "explanation": "Chính xác. Danh từ 'partnership' (mối quan hệ đối tác) có đuôi '-ship' tạo thành cụm 'mối quan hệ đối tác chiến lược'.",
+    "translation": "Mối quan hệ đối tác chiến lược giữa EduKit và các trường đại học địa phương đã cung cấp cho sinh viên quyền truy cập miễn phí vào các tài liệu học tập."
+  },
+  {
+    "id": "q_word_form_074",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Easy",
+    "question_text": "The TikTok creator _____ interacts with her followers in the comment section to build a strong community.",
+    "options": [
+      { "key": "A", "text": "active" },
+      { "key": "B", "text": "actively" },
+      { "key": "C", "text": "activity" },
+      { "key": "D", "text": "activate" }
+    ],
+    "correct_answer": "B",
+    "hint": "Nằm giữa chủ ngữ và động từ chính 'interacts' (tương tác), ta cần một trạng từ chỉ cách thức.",
+    "explanation": "Chính xác. Trạng từ 'actively' (một cách tích cực) bổ nghĩa cho hành động tương tác của nhà sáng tạo.",
+    "translation": "Nhà sáng tạo trên TikTok tích cực tương tác với những người theo dõi cô ấy trong phần bình luận để xây dựng một cộng đồng vững mạnh."
+  },
+  {
+    "id": "q_word_form_075",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Medium",
+    "question_text": "Some older staff members were initially _____ to adopt the new digital HR portal for their daily check-ins.",
+    "options": [
+      { "key": "A", "text": "hesitate" },
+      { "key": "B", "text": "hesitation" },
+      { "key": "C", "text": "hesitant" },
+      { "key": "D", "text": "hesitantly" }
+    ],
+    "correct_answer": "C",
+    "hint": "Sau động từ to be 'were' và trạng từ 'initially' (ban đầu), ta cần một tính từ miêu tả thái độ của nhân viên.",
+    "explanation": "Chính xác. Tính từ 'hesitant' (do dự/ngần ngại) có đuôi '-ant' đi với cấu trúc 'to be hesitant to do something'.",
+    "translation": "Một số nhân viên lớn tuổi ban đầu đã tỏ ra ngần ngại trong việc áp dụng cổng thông tin nhân sự kỹ thuật số mới cho việc điểm danh hàng ngày của họ."
+  },
+  {
+    "id": "q_word_form_076",
+    "part": 5,
+    "grammar_topic": "Word Form (Verb)",
+    "difficulty_level": "Medium",
+    "question_text": "The short 60-second video format helps language learners _____ new English vocabulary much more effectively.",
+    "options": [
+      { "key": "A", "text": "memory" },
+      { "key": "B", "text": "memorize" },
+      { "key": "C", "text": "memorable" },
+      { "key": "D", "text": "memorably" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cấu trúc 'help someone (to) do something'. Chỗ trống cần một động từ nguyên mẫu.",
+    "explanation": "Chính xác. Động từ 'memorize' (ghi nhớ) có đuôi '-ize' đóng vai trò là động từ chỉ hành động của người học.",
+    "translation": "Định dạng video ngắn 60 giây giúp người học ngôn ngữ ghi nhớ từ vựng tiếng Anh mới một cách hiệu quả hơn nhiều."
+  },
+  {
+    "id": "q_word_form_077",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Easy",
+    "question_text": "Under the expert _____ of the lead developer, the intern team completed the React project ahead of schedule.",
+    "options": [
+      { "key": "A", "text": "guide" },
+      { "key": "B", "text": "guided" },
+      { "key": "C", "text": "guidance" },
+      { "key": "D", "text": "guiding" }
+    ],
+    "correct_answer": "C",
+    "hint": "Mạo từ 'the' và tính từ 'expert' (chuyên nghiệp) đòi hỏi một danh từ theo sau làm tân ngữ cho giới từ 'Under'.",
+    "explanation": "Chính xác. Danh từ 'guidance' (sự hướng dẫn) có đuôi '-ance' tạo thành cụm 'Dưới sự hướng dẫn chuyên nghiệp...'.",
+    "translation": "Dưới sự hướng dẫn chuyên nghiệp của lập trình viên chính, đội ngũ thực tập sinh đã hoàn thành dự án React trước thời hạn."
+  },
+  {
+    "id": "q_word_form_078",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Medium",
+    "question_text": "If an employee _____ deletes a timesheet on the app, they must immediately contact the IT helpdesk for recovery.",
+    "options": [
+      { "key": "A", "text": "accidental" },
+      { "key": "B", "text": "accident" },
+      { "key": "C", "text": "accidentally" },
+      { "key": "D", "text": "accidents" }
+    ],
+    "correct_answer": "C",
+    "hint": "Từ cần điền nằm giữa chủ ngữ 'an employee' và động từ 'deletes', đóng vai trò làm trạng từ chỉ cách thức.",
+    "explanation": "Chính xác. Trạng từ 'accidentally' (một cách tình cờ/vô ý) bổ nghĩa cho hành động xóa.",
+    "translation": "Nếu một nhân viên vô tình xóa bảng chấm công trên ứng dụng, họ phải ngay lập tức liên hệ với bộ phận hỗ trợ CNTT để khôi phục."
+  },
+  {
+    "id": "q_word_form_079",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Medium",
+    "question_text": "The React development team came up with an _____ solution to fix the data fetching problem in the HR portal.",
+    "options": [
+      { "key": "A", "text": "innovate" },
+      { "key": "B", "text": "innovator" },
+      { "key": "C", "text": "innovative" },
+      { "key": "D", "text": "innovatively" }
+    ],
+    "correct_answer": "C",
+    "hint": "Chỗ trống nằm giữa mạo từ 'an' và danh từ 'solution' (giải pháp). Bạn cần một tính từ mang nghĩa 'mang tính đột phá'.",
+    "explanation": "Chính xác. Tính từ 'innovative' (sáng tạo/đột phá) có đuôi '-ive' bổ nghĩa cho danh từ 'solution'.",
+    "translation": "Nhóm phát triển React đã đưa ra một giải pháp mang tính đột phá để khắc phục sự cố tải dữ liệu trong cổng thông tin nhân sự."
+  },
+  {
+    "id": "q_word_form_080",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Easy",
+    "question_text": "A stable internet connection is a strict _____ for taking the online TOEIC mock test on the PrepMaster platform.",
+    "options": [
+      { "key": "A", "text": "require" },
+      { "key": "B", "text": "requirement" },
+      { "key": "C", "text": "requiring" },
+      { "key": "D", "text": "required" }
+    ],
+    "correct_answer": "B",
+    "hint": "Mạo từ 'a' và tính từ 'strict' (nghiêm ngặt) yêu cầu một danh từ theo sau để hoàn thành cụm danh từ.",
+    "explanation": "Chính xác. Danh từ 'requirement' (yêu cầu/điều kiện bắt buộc) có đuôi '-ment' kết hợp tạo thành cụm 'một yêu cầu nghiêm ngặt'.",
+    "translation": "Một kết nối internet ổn định là một yêu cầu nghiêm ngặt đối với việc làm bài thi thử TOEIC trực tuyến trên nền tảng PrepMaster."
+  },
+  {
+    "id": "q_word_form_081",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Medium",
+    "question_text": "The successful _____ of the new interactive video feature caused a massive surge in daily active users on EduKit.",
+    "options": [
+      { "key": "A", "text": "introduce" },
+      { "key": "B", "text": "introductory" },
+      { "key": "C", "text": "introduction" },
+      { "key": "D", "text": "introduces" }
+    ],
+    "correct_answer": "C",
+    "hint": "Nằm giữa tính từ 'successful' và giới từ 'of', ta bắt buộc phải điền một danh từ làm chủ ngữ.",
+    "explanation": "Chính xác. Danh từ 'introduction' (sự ra mắt/giới thiệu) có đuôi '-tion' là đáp án chuẩn xác để hoàn thành cụm danh từ.",
+    "translation": "Sự ra mắt thành công của tính năng video tương tác mới đã gây ra một sự gia tăng lớn về số lượng người dùng hoạt động hàng ngày trên EduKit."
+  },
+  {
+    "id": "q_word_form_082",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Easy",
+    "question_text": "To prevent any loss of timesheet records, the mobile app backs up all data _____ to the cloud server.",
+    "options": [
+      { "key": "A", "text": "automatic" },
+      { "key": "B", "text": "automatically" },
+      { "key": "C", "text": "automate" },
+      { "key": "D", "text": "automation" }
+    ],
+    "correct_answer": "B",
+    "hint": "Đứng ở cuối mệnh đề và bổ nghĩa cho động từ 'backs up' (sao lưu), từ cần điền phải là một trạng từ chỉ cách thức.",
+    "explanation": "Chính xác. Trạng từ 'automatically' (một cách tự động) miêu tả cách hệ thống thực hiện việc sao lưu.",
+    "translation": "Để ngăn chặn bất kỳ sự mất mát hồ sơ chấm công nào, ứng dụng di động sao lưu tất cả dữ liệu một cách tự động lên máy chủ đám mây."
+  },
+  {
+    "id": "q_word_form_083",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Hard",
+    "question_text": "It is highly _____ for users to read the terms and conditions before purchasing the premium PrepMaster subscription.",
+    "options": [
+      { "key": "A", "text": "advise" },
+      { "key": "B", "text": "adviser" },
+      { "key": "C", "text": "advisable" },
+      { "key": "D", "text": "advising" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cấu trúc chủ ngữ giả 'It is + [Trạng từ] + [Tính từ] + for someone to do something'.",
+    "explanation": "Chính xác. Tính từ 'advisable' (đáng được khuyên/nên làm) có đuôi '-able' kết hợp với 'highly' tạo thành cụm 'rất nên làm gì đó'.",
+    "translation": "Người dùng rất nên đọc các điều khoản và điều kiện trước khi mua gói đăng ký PrepMaster cao cấp."
+  },
+  {
+    "id": "q_word_form_084",
+    "part": 5,
+    "grammar_topic": "Word Form (Verb)",
+    "difficulty_level": "Medium",
+    "question_text": "The marketing team aims to _____ the company's brand presence in the corporate gifting sector this year.",
+    "options": [
+      { "key": "A", "text": "broad" },
+      { "key": "B", "text": "broaden" },
+      { "key": "C", "text": "broadly" },
+      { "key": "D", "text": "breadth" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cấu trúc 'aim to do something' (nhắm tới việc làm gì). Sau 'to' cần một động từ nguyên mẫu.",
+    "explanation": "Chính xác. Động từ 'broaden' (mở rộng) có hậu tố '-en', được biến đổi từ tính từ 'broad'.",
+    "translation": "Nhóm tiếp thị đặt mục tiêu mở rộng sự hiện diện thương hiệu của công ty trong lĩnh vực quà tặng doanh nghiệp trong năm nay."
+  },
+  {
+    "id": "q_word_form_085",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Medium",
+    "question_text": "The intern was offered a full-time position as a React Developer due to his exceptional _____ to the project.",
+    "options": [
+      { "key": "A", "text": "dedicate" },
+      { "key": "B", "text": "dedicated" },
+      { "key": "C", "text": "dedication" },
+      { "key": "D", "text": "dedicating" }
+    ],
+    "correct_answer": "C",
+    "hint": "Tính từ sở hữu 'his' và tính từ 'exceptional' (xuất chúng) yêu cầu một danh từ theo sau.",
+    "explanation": "Chính xác. Danh từ 'dedication' (sự cống hiến/tận tâm) đi với giới từ 'to' tạo thành cụm 'sự cống hiến cho dự án'.",
+    "translation": "Thực tập sinh đã được đề nghị một vị trí toàn thời gian với tư cách là Lập trình viên React nhờ sự cống hiến xuất sắc của anh ấy cho dự án."
+  },
+  {
+    "id": "q_word_form_086",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Easy",
+    "question_text": "The timekeeping application was _____ updated to resolve the geolocation tracking error.",
+    "options": [
+      { "key": "A", "text": "recent" },
+      { "key": "B", "text": "recently" },
+      { "key": "C", "text": "recentness" },
+      { "key": "D", "text": "recents" }
+    ],
+    "correct_answer": "B",
+    "hint": "Vị trí nằm giữa trợ động từ to be 'was' và động từ chính 'updated' chỉ có thể dành cho trạng từ.",
+    "explanation": "Chính xác. Trạng từ 'recently' (gần đây) bổ nghĩa cho hành động cập nhật.",
+    "translation": "Ứng dụng chấm công gần đây đã được cập nhật để giải quyết lỗi theo dõi vị trí địa lý."
+  },
+  {
+    "id": "q_word_form_087",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Medium",
+    "question_text": "The CEO delivered a very _____ speech about the future goals of the EduKit learning platform.",
+    "options": [
+      { "key": "A", "text": "inspire" },
+      { "key": "B", "text": "inspiration" },
+      { "key": "C", "text": "inspiring" },
+      { "key": "D", "text": "inspired" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cần một tính từ đứng trước danh từ 'speech' (bài phát biểu) để miêu tả tính chất của nó.",
+    "explanation": "Chính xác. Tính từ đuôi '-ing' 'inspiring' (truyền cảm hứng) được dùng để miêu tả bản chất của bài phát biểu mang lại cảm hứng cho người nghe.",
+    "translation": "Giám đốc điều hành đã có một bài phát biểu rất truyền cảm hứng về các mục tiêu trong tương lai của nền tảng học tập EduKit."
+  },
+  {
+    "id": "q_word_form_088",
+    "part": 5,
+    "grammar_topic": "Word Form (Verb)",
+    "difficulty_level": "Easy",
+    "question_text": "If you forget your password for the HR portal, please _____ the IT helpdesk immediately.",
+    "options": [
+      { "key": "A", "text": "notification" },
+      { "key": "B", "text": "notifiable" },
+      { "key": "C", "text": "notify" },
+      { "key": "D", "text": "notifying" }
+    ],
+    "correct_answer": "C",
+    "hint": "Từ 'please' thường đi kèm với một động từ nguyên mẫu để tạo thành câu mệnh lệnh lịch sự.",
+    "explanation": "Chính xác. Động từ 'notify' (thông báo) có đuôi '-ify' đóng vai trò là động từ chính của mệnh đề mệnh lệnh.",
+    "translation": "Nếu bạn quên mật khẩu cổng thông tin nhân sự, vui lòng thông báo cho bộ phận hỗ trợ CNTT ngay lập tức."
+  },
+  {
+    "id": "q_word_form_089",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Medium",
+    "question_text": "The pre-orders provide a strong _____ that the new Happy Box design will be a bestseller this year.",
+    "options": [
+      { "key": "A", "text": "indicate" },
+      { "key": "B", "text": "indicative" },
+      { "key": "C", "text": "indicator" },
+      { "key": "D", "text": "indication" }
+    ],
+    "correct_answer": "D",
+    "hint": "Mạo từ 'a' và tính từ 'strong' đòi hỏi một danh từ theo sau làm tân ngữ.",
+    "explanation": "Chính xác. Danh từ 'indication' (dấu hiệu/sự biểu thị) kết hợp tạo thành cụm 'a strong indication' (một dấu hiệu mạnh mẽ).",
+    "translation": "Các đơn đặt hàng trước cung cấp một dấu hiệu mạnh mẽ rằng thiết kế Happy Box mới sẽ là sản phẩm bán chạy nhất trong năm nay."
+  },
+  {
+    "id": "q_word_form_090",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Medium",
+    "question_text": "The mobile development team worked _____ for two weeks to launch the timekeeping app on schedule.",
+    "options": [
+      { "key": "A", "text": "tireless" },
+      { "key": "B", "text": "tirelessly" },
+      { "key": "C", "text": "tiresome" },
+      { "key": "D", "text": "tiredness" }
+    ],
+    "correct_answer": "B",
+    "hint": "Từ cần điền bổ nghĩa cho động từ 'worked', miêu tả cách thức làm việc của nhóm.",
+    "explanation": "Chính xác. Trạng từ 'tirelessly' (một cách không mệt mỏi) có đuôi '-ly' bổ nghĩa hoàn hảo cho hành động làm việc.",
+    "translation": "Nhóm phát triển thiết bị di động đã làm việc không mệt mỏi trong hai tuần để ra mắt ứng dụng chấm công đúng lịch trình."
+  },
+  {
+    "id": "q_word_form_091",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Hard",
+    "question_text": "We are seeking a highly _____ candidate with a strong background in React to join our front-end team.",
+    "options": [
+      { "key": "A", "text": "qualify" },
+      { "key": "B", "text": "qualification" },
+      { "key": "C", "text": "qualifying" },
+      { "key": "D", "text": "qualified" }
+    ],
+    "correct_answer": "D",
+    "hint": "Đứng trước danh từ 'candidate' (ứng viên) cần một tính từ miêu tả trình độ/năng lực.",
+    "explanation": "Chính xác. Tính từ dạng V-ed 'qualified' (đủ tiêu chuẩn/trình độ) đi với 'highly' tạo thành cụm từ tuyển dụng kinh điển 'a highly qualified candidate'.",
+    "translation": "Chúng tôi đang tìm kiếm một ứng viên có trình độ cao với nền tảng vững chắc về React để tham gia nhóm front-end của chúng tôi."
+  },
+  {
+    "id": "q_word_form_092",
+    "part": 5,
+    "grammar_topic": "Word Form (Verb)",
+    "difficulty_level": "Medium",
+    "question_text": "The updated company policy will _____ all employees to work remotely two days a week.",
+    "options": [
+      { "key": "A", "text": "permission" },
+      { "key": "B", "text": "permissible" },
+      { "key": "C", "text": "permit" },
+      { "key": "D", "text": "permitting" }
+    ],
+    "correct_answer": "C",
+    "hint": "Sau trợ động từ 'will', ta luôn cần một động từ nguyên mẫu không 'to'.",
+    "explanation": "Chính xác. Động từ 'permit' (cho phép) có cấu trúc 'permit someone to do something'.",
+    "translation": "Chính sách cập nhật của công ty sẽ cho phép tất cả nhân viên làm việc từ xa hai ngày một tuần."
+  },
+  {
+    "id": "q_word_form_093",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Easy",
+    "question_text": "The _____ of the React application depends largely on writing clean and well-structured code.",
+    "options": [
+      { "key": "A", "text": "stable" },
+      { "key": "B", "text": "stably" },
+      { "key": "C", "text": "stabilize" },
+      { "key": "D", "text": "stability" }
+    ],
+    "correct_answer": "D",
+    "hint": "Mạo từ 'The' và giới từ 'of' là dấu hiệu rõ ràng nhất yêu cầu một danh từ điền vào chỗ trống.",
+    "explanation": "Chính xác. Danh từ 'stability' (sự ổn định) với hậu tố '-ity' đóng vai trò là chủ ngữ chính.",
+    "translation": "Sự ổn định của ứng dụng React phụ thuộc phần lớn vào việc viết mã nguồn sạch và có cấu trúc tốt."
+  },
+  {
+    "id": "q_word_form_094",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Easy",
+    "question_text": "Users can _____ track their TOEIC and JLPT study progress using the dashboard on the PrepMaster app.",
+    "options": [
+      { "key": "A", "text": "easy" },
+      { "key": "B", "text": "easily" },
+      { "key": "C", "text": "easiness" },
+      { "key": "D", "text": "easier" }
+    ],
+    "correct_answer": "B",
+    "hint": "Từ cần điền nằm giữa động từ khuyết thiếu 'can' và động từ chính 'track', dùng để chỉ cách thức của hành động.",
+    "explanation": "Chính xác. Trạng từ 'easily' (một cách dễ dàng) bổ nghĩa cho động từ 'track'.",
+    "translation": "Người dùng có thể dễ dàng theo dõi tiến độ học TOEIC và JLPT của mình bằng cách sử dụng bảng điều khiển trên ứng dụng PrepMaster."
+  },
+  {
+    "id": "q_word_form_095",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Medium",
+    "question_text": "The packaging for the corporate Happy Box gifts must be both durable and visually _____.",
+    "options": [
+      { "key": "A", "text": "attract" },
+      { "key": "B", "text": "attraction" },
+      { "key": "C", "text": "attractive" },
+      { "key": "D", "text": "attractively" }
+    ],
+    "correct_answer": "C",
+    "hint": "Liên từ 'and' nối hai từ cùng loại. Từ 'durable' là tính từ, do đó từ còn thiếu cũng phải là tính từ (bổ nghĩa cho The packaging).",
+    "explanation": "Chính xác. Tính từ 'attractive' (thu hút/hấp dẫn) với đuôi '-ive' đứng sau trạng từ 'visually' (về mặt thị giác).",
+    "translation": "Bao bì cho các món quà doanh nghiệp Happy Box phải vừa bền vừa hấp dẫn về mặt thị giác."
+  },
+  {
+    "id": "q_word_form_096",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Hard",
+    "question_text": "The TikTok creator's immense _____ to producing educational videos every day has finally paid off.",
+    "options": [
+      { "key": "A", "text": "commit" },
+      { "key": "B", "text": "committed" },
+      { "key": "C", "text": "commitment" },
+      { "key": "D", "text": "committing" }
+    ],
+    "correct_answer": "C",
+    "hint": "Sở hữu cách ('s) và tính từ 'immense' (to lớn) yêu cầu một danh từ theo sau làm chủ ngữ chính của câu.",
+    "explanation": "Chính xác. Danh từ 'commitment' (sự cam kết/sự tận tâm) có hậu tố '-ment' là lựa chọn đúng. Cấu trúc: commitment to doing something.",
+    "translation": "Sự tận tâm to lớn của nhà sáng tạo TikTok đối với việc sản xuất video giáo dục mỗi ngày cuối cùng đã được đền đáp."
+  },
+  {
+    "id": "q_word_form_097",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Medium",
+    "question_text": "The data migration from the old server to the new HR database was completed _____ without any corrupted files.",
+    "options": [
+      { "key": "A", "text": "success" },
+      { "key": "B", "text": "successful" },
+      { "key": "C", "text": "successfully" },
+      { "key": "D", "text": "succeed" }
+    ],
+    "correct_answer": "C",
+    "hint": "Đứng sau cụm động từ bị động 'was completed' (được hoàn thành) cần một trạng từ chỉ cách thức.",
+    "explanation": "Chính xác. Trạng từ 'successfully' (một cách thành công) bổ nghĩa cho động từ hoàn thành.",
+    "translation": "Việc di chuyển dữ liệu từ máy chủ cũ sang cơ sở dữ liệu nhân sự mới đã được hoàn thành thành công mà không có bất kỳ tệp nào bị hỏng."
+  },
+  {
+    "id": "q_word_form_098",
+    "part": 5,
+    "grammar_topic": "Word Form (Adjective)",
+    "difficulty_level": "Medium",
+    "question_text": "Offering a highly _____ working environment is crucial for retaining top tech talent in mobile development.",
+    "options": [
+      { "key": "A", "text": "support" },
+      { "key": "B", "text": "supporter" },
+      { "key": "C", "text": "supportive" },
+      { "key": "D", "text": "supportively" }
+    ],
+    "correct_answer": "C",
+    "hint": "Giữa trạng từ chỉ mức độ 'highly' và cụm danh từ 'working environment' cần một tính từ.",
+    "explanation": "Chính xác. Tính từ 'supportive' (mang tính hỗ trợ/khuyến khích) có đuôi '-ive' miêu tả tính chất của môi trường làm việc.",
+    "translation": "Cung cấp một môi trường làm việc mang tính hỗ trợ cao là điều rất quan trọng để giữ chân các nhân tài công nghệ hàng đầu trong lĩnh vực phát triển thiết bị di động."
+  },
+  {
+    "id": "q_word_form_099",
+    "part": 5,
+    "grammar_topic": "Word Form (Noun)",
+    "difficulty_level": "Easy",
+    "question_text": "We need your physical _____ on this confidentiality agreement before you can access the company's source code.",
+    "options": [
+      { "key": "A", "text": "sign" },
+      { "key": "B", "text": "signature" },
+      { "key": "C", "text": "signatory" },
+      { "key": "D", "text": "signing" }
+    ],
+    "correct_answer": "B",
+    "hint": "Tính từ sở hữu 'your' và tính từ 'physical' (vật lý) yêu cầu một danh từ làm tân ngữ cho động từ 'need'.",
+    "explanation": "Chính xác. Danh từ 'signature' (chữ ký) kết hợp với 'physical' mang nghĩa là chữ ký tay (chữ ký sống) trên văn bản.",
+    "translation": "Chúng tôi cần chữ ký tay của bạn trên thỏa thuận bảo mật này trước khi bạn có thể truy cập mã nguồn của công ty."
+  },
+  {
+    "id": "q_word_form_100",
+    "part": 5,
+    "grammar_topic": "Word Form (Adverb)",
+    "difficulty_level": "Hard",
+    "question_text": "The reporting feature on the new timekeeping application is _____ more accurate than the old manual system.",
+    "options": [
+      { "key": "A", "text": "considerable" },
+      { "key": "B", "text": "consideration" },
+      { "key": "C", "text": "considerably" },
+      { "key": "D", "text": "consider" }
+    ],
+    "correct_answer": "C",
+    "hint": "Trước cấu trúc so sánh hơn 'more accurate' (chính xác hơn), ta cần một trạng từ chỉ mức độ để nhấn mạnh (mang nghĩa: hơn ĐÁNG KỂ).",
+    "explanation": "Chính xác. Trạng từ 'considerably' (một cách đáng kể) thường đứng trước cấu trúc so sánh hơn để nhấn mạnh sự chênh lệch lớn.",
+    "translation": "Tính năng báo cáo trên ứng dụng chấm công mới chính xác hơn đáng kể so với hệ thống thủ công cũ."
+  }
+];
+
+export const PARTS_OF_SPEECH = {
+  easy: PARTS_OF_SPEECH_EASY,
+  medium: [],
+  hard: []
+};
+
+export const TENSES_EASY = [
+  {
+    "id": "q_tense_conjugation_001",
+    "part": 5,
+    "grammar_topic": "Present Perfect",
+    "difficulty_level": "Medium",
+    "question_text": "Since Ms. Jenkins joined the marketing department, overall sales for the region _____ by nearly 15 percent.",
+    "options": [
+      { "key": "A", "text": "increase" },
+      { "key": "B", "text": "increased" },
+      { "key": "C", "text": "have increased" },
+      { "key": "D", "text": "are increasing" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cấu trúc kinh điển của TOEIC: Since + Mệnh đề Quá khứ đơn, Mệnh đề chính chia ở Hiện tại hoàn thành.",
+    "explanation": "Chính xác. Mệnh đề đi với 'Since' (joined) dùng thì Quá khứ đơn, do đó mệnh đề chính phải dùng thì Hiện tại hoàn thành (have increased) để diễn tả kết quả kéo dài đến hiện tại.",
+    "translation": "Kể từ khi cô Jenkins gia nhập bộ phận tiếp thị, tổng doanh số bán hàng của khu vực này đã tăng gần 15%."
+  },
+  {
+    "id": "q_tense_conjugation_002",
+    "part": 5,
+    "grammar_topic": "Future Simple",
+    "difficulty_level": "Easy",
+    "question_text": "The board of directors _____ the new company policies regarding remote work next quarter.",
+    "options": [
+      { "key": "A", "text": "announces" },
+      { "key": "B", "text": "will announce" },
+      { "key": "C", "text": "announced" },
+      { "key": "D", "text": "has announced" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cụm thời gian 'next quarter' (quý tới) báo hiệu một hành động sẽ xảy ra trong tương lai.",
+    "explanation": "Chính xác. Thì Tương lai đơn 'will announce' phù hợp với dấu hiệu thời gian ở tương lai.",
+    "translation": "Hội đồng quản trị sẽ công bố các chính sách mới của công ty liên quan đến làm việc từ xa vào quý tới."
+  },
+  {
+    "id": "q_tense_conjugation_003",
+    "part": 5,
+    "grammar_topic": "Present Simple",
+    "difficulty_level": "Easy",
+    "question_text": "The complimentary shuttle bus to the airport _____ every hour from the main entrance of the hotel.",
+    "options": [
+      { "key": "A", "text": "depart" },
+      { "key": "B", "text": "departed" },
+      { "key": "C", "text": "departs" },
+      { "key": "D", "text": "is departing" }
+    ],
+    "correct_answer": "C",
+    "hint": "Dấu hiệu 'every hour' (mỗi giờ) chỉ một lịch trình cố định hoặc thói quen, yêu cầu thì Hiện tại đơn.",
+    "explanation": "Chính xác. Chủ ngữ 'The complimentary shuttle bus' là số ít, do đó động từ Hiện tại đơn cần thêm 's' thành 'departs'.",
+    "translation": "Xe buýt đưa đón miễn phí đến sân bay khởi hành mỗi giờ từ lối vào chính của khách sạn."
+  },
+  {
+    "id": "q_tense_conjugation_004",
+    "part": 5,
+    "grammar_topic": "Past Simple",
+    "difficulty_level": "Easy",
+    "question_text": "Mr. Lee _____ the finalized budget proposal to the accounting department yesterday afternoon.",
+    "options": [
+      { "key": "A", "text": "submits" },
+      { "key": "B", "text": "submitted" },
+      { "key": "C", "text": "has submitted" },
+      { "key": "D", "text": "will submit" }
+    ],
+    "correct_answer": "B",
+    "hint": "Từ 'yesterday afternoon' là dấu hiệu rõ ràng của một hành động đã hoàn tất trong quá khứ.",
+    "explanation": "Chính xác. Thì Quá khứ đơn 'submitted' được dùng để diễn đạt một sự việc đã xảy ra và kết thúc trong quá khứ.",
+    "translation": "Ông Lee đã nộp bản đề xuất ngân sách cuối cùng cho bộ phận kế toán vào chiều hôm qua."
+  },
+  {
+    "id": "q_tense_conjugation_005",
+    "part": 5,
+    "grammar_topic": "Past Continuous",
+    "difficulty_level": "Medium",
+    "question_text": "While the technician _____ the copy machine, the office staff had to use the one on the second floor.",
+    "options": [
+      { "key": "A", "text": "repairs" },
+      { "key": "B", "text": "repaired" },
+      { "key": "C", "text": "is repairing" },
+      { "key": "D", "text": "was repairing" }
+    ],
+    "correct_answer": "D",
+    "hint": "Liên từ 'While' diễn tả một hành động đang diễn ra kéo dài trong quá khứ, đi kèm với một hành động khác ở Quá khứ đơn (had to use).",
+    "explanation": "Chính xác. Thì Quá khứ tiếp diễn 'was repairing' mô tả hành động đang dang dở trong một khoảng thời gian ở quá khứ.",
+    "translation": "Trong khi kỹ thuật viên đang sửa máy photocopy, nhân viên văn phòng phải sử dụng chiếc máy ở tầng hai."
+  },
+  {
+    "id": "q_tense_conjugation_006",
+    "part": 5,
+    "grammar_topic": "Future Perfect",
+    "difficulty_level": "Hard",
+    "question_text": "By the time the regional manager arrives at the branch, the audit team _____ all the financial records.",
+    "options": [
+      { "key": "A", "text": "review" },
+      { "key": "B", "text": "will review" },
+      { "key": "C", "text": "will have reviewed" },
+      { "key": "D", "text": "have reviewed" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cấu trúc TOEIC rất hay gặp: 'By the time + Hiện tại đơn (arrives)', mệnh đề chính phải chia ở thì Tương lai hoàn thành.",
+    "explanation": "Chính xác. Tương lai hoàn thành 'will have reviewed' diễn tả một hành động sẽ hoàn tất TRƯỚC một thời điểm hoặc hành động khác trong tương lai.",
+    "translation": "Tính đến lúc giám đốc khu vực đến chi nhánh, nhóm kiểm toán sẽ đã xem xét xong tất cả các hồ sơ tài chính."
+  },
+  {
+    "id": "q_tense_conjugation_007",
+    "part": 5,
+    "grammar_topic": "Passive Voice (Present Simple)",
+    "difficulty_level": "Medium",
+    "question_text": "All employee expense reports _____ carefully by the finance department before any reimbursements are issued.",
+    "options": [
+      { "key": "A", "text": "review" },
+      { "key": "B", "text": "reviews" },
+      { "key": "C", "text": "are reviewing" },
+      { "key": "D", "text": "are reviewed" }
+    ],
+    "correct_answer": "D",
+    "hint": "Chủ ngữ là 'All employee expense reports' (Bản báo cáo - vật), không thể tự thực hiện hành động 'review'. Hành động này là quy trình cố định.",
+    "explanation": "Chính xác. Câu cần chia ở thể bị động của Hiện tại đơn 'are reviewed' để chỉ một quy trình thường xuyên trong công ty.",
+    "translation": "Tất cả các báo cáo chi phí của nhân viên đều được bộ phận tài chính xem xét cẩn thận trước khi bất kỳ khoản hoàn trả nào được xuất ra."
+  },
+  {
+    "id": "q_tense_conjugation_008",
+    "part": 5,
+    "grammar_topic": "Past Perfect",
+    "difficulty_level": "Medium",
+    "question_text": "The training seminar _____ already _____ before we managed to find a parking spot.",
+    "options": [
+      { "key": "A", "text": "has / begun" },
+      { "key": "B", "text": "had / begun" },
+      { "key": "C", "text": "is / beginning" },
+      { "key": "D", "text": "will / begin" }
+    ],
+    "correct_answer": "B",
+    "hint": "Hành động bắt đầu (begin) xảy ra TRƯỚC một hành động khác trong quá khứ 'managed to find' (đã tìm được).",
+    "explanation": "Chính xác. Thì Quá khứ hoàn thành 'had begun' được dùng để diễn tả sự việc đã hoàn tất trước một sự kiện khác trong quá khứ.",
+    "translation": "Buổi hội thảo đào tạo đã bắt đầu trước khi chúng tôi xoay sở tìm được chỗ đỗ xe."
+  },
+  {
+    "id": "q_tense_conjugation_009",
+    "part": 5,
+    "grammar_topic": "Present Continuous",
+    "difficulty_level": "Easy",
+    "question_text": "The electronics manufacturer is _____ developing a new line of smart home appliances to meet consumer demand.",
+    "options": [
+      { "key": "A", "text": "current" },
+      { "key": "B", "text": "currently" },
+      { "key": "C", "text": "recent" },
+      { "key": "D", "text": "recently" }
+    ],
+    "correct_answer": "B",
+    "hint": "Dấu hiệu của thì Hiện tại tiếp diễn (is developing) thường đi kèm với trạng từ chỉ thời gian 'hiện tại'.",
+    "explanation": "Chính xác. Trạng từ 'currently' (hiện tại/ngay lúc này) chen giữa to be và V-ing bổ nghĩa cho thì Hiện tại tiếp diễn.",
+    "translation": "Nhà sản xuất đồ điện tử hiện đang phát triển một dòng thiết bị nhà thông minh mới để đáp ứng nhu cầu của người tiêu dùng."
+  },
+  {
+    "id": "q_tense_conjugation_010",
+    "part": 5,
+    "grammar_topic": "Passive Voice (Future Simple)",
+    "difficulty_level": "Medium",
+    "question_text": "The annual corporate banquet _____ at the Grand Plaza Hotel on the 15th of December.",
+    "options": [
+      { "key": "A", "text": "holds" },
+      { "key": "B", "text": "will hold" },
+      { "key": "C", "text": "held" },
+      { "key": "D", "text": "will be held" }
+    ],
+    "correct_answer": "D",
+    "hint": "Chủ ngữ 'The annual corporate banquet' (Bữa tiệc - sự kiện) phải 'được tổ chức'. Thời gian trong tương lai (15th of December).",
+    "explanation": "Chính xác. Thể bị động của Tương lai đơn 'will be held' là phù hợp nhất để nói về sự kiện được lên lịch trong tương lai.",
+    "translation": "Bữa tiệc thường niên của công ty sẽ được tổ chức tại Khách sạn Grand Plaza vào ngày 15 tháng 12."
+  },
+  {
+    "id": "q_tense_conjugation_011",
+    "part": 5,
+    "grammar_topic": "Present Perfect Continuous",
+    "difficulty_level": "Hard",
+    "question_text": "The negotiation team _____ the terms of the new contract for the last three hours without reaching an agreement.",
+    "options": [
+      { "key": "A", "text": "discusses" },
+      { "key": "B", "text": "discussed" },
+      { "key": "C", "text": "has been discussing" },
+      { "key": "D", "text": "is discussing" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cụm 'for the last three hours' nhấn mạnh một quá trình diễn ra liên tục từ quá khứ và vẫn chưa kết thúc ở hiện tại.",
+    "explanation": "Chính xác. Thì Hiện tại hoàn thành tiếp diễn 'has been discussing' nhấn mạnh tính liên tục của hành động.",
+    "translation": "Đội đàm phán đã và đang thảo luận về các điều khoản của hợp đồng mới trong suốt ba giờ qua mà chưa đạt được thỏa thuận."
+  },
+  {
+    "id": "q_tense_conjugation_012",
+    "part": 5,
+    "grammar_topic": "Future Simple (Conditionals)",
+    "difficulty_level": "Medium",
+    "question_text": "If the weather _____ significantly by tomorrow morning, the outdoor team-building event will proceed as planned.",
+    "options": [
+      { "key": "A", "text": "improve" },
+      { "key": "B", "text": "improves" },
+      { "key": "C", "text": "will improve" },
+      { "key": "D", "text": "improved" }
+    ],
+    "correct_answer": "B",
+    "hint": "Câu điều kiện loại 1 (sự việc có thể xảy ra ở tương lai): If + Hiện tại đơn, Tương lai đơn.",
+    "explanation": "Chính xác. Trong mệnh đề If của câu điều kiện loại 1, động từ chia ở Hiện tại đơn. 'the weather' là số ít nên chọn 'improves'.",
+    "translation": "Nếu thời tiết cải thiện đáng kể vào sáng mai, sự kiện xây dựng đội nhóm ngoài trời sẽ tiến hành như dự kiến."
+  },
+  {
+    "id": "q_tense_conjugation_013",
+    "part": 5,
+    "grammar_topic": "Passive Voice (Past Simple)",
+    "difficulty_level": "Medium",
+    "question_text": "The revised conference schedule _____ to all registered attendees via email late last night.",
+    "options": [
+      { "key": "A", "text": "distributes" },
+      { "key": "B", "text": "distributed" },
+      { "key": "C", "text": "is distributed" },
+      { "key": "D", "text": "was distributed" }
+    ],
+    "correct_answer": "D",
+    "hint": "Dấu hiệu 'late last night' yêu cầu thì Quá khứ. Lịch trình (schedule) phải 'được phân phát' (bị động).",
+    "explanation": "Chính xác. Thể bị động của thì Quá khứ đơn 'was distributed' đáp ứng đúng ngữ pháp và ngữ nghĩa của câu.",
+    "translation": "Lịch trình hội nghị đã được chỉnh sửa đã được phân phát cho tất cả những người tham dự đã đăng ký qua email vào đêm muộn hôm qua."
+  },
+  {
+    "id": "q_tense_conjugation_014",
+    "part": 5,
+    "grammar_topic": "Future Continuous",
+    "difficulty_level": "Medium",
+    "question_text": "Please do not call Mr. Tanaka at 10 AM tomorrow; he _____ a presentation to the overseas clients at that time.",
+    "options": [
+      { "key": "A", "text": "gives" },
+      { "key": "B", "text": "will give" },
+      { "key": "C", "text": "has given" },
+      { "key": "D", "text": "will be giving" }
+    ],
+    "correct_answer": "D",
+    "hint": "Sự việc sẽ đang diễn ra tại một THỜI ĐIỂM CHÍNH XÁC trong tương lai (10 AM tomorrow).",
+    "explanation": "Chính xác. Thì Tương lai tiếp diễn 'will be giving' dùng để mô tả một hành động sẽ đang dở dang tại một thời điểm xác định ở tương lai.",
+    "translation": "Vui lòng không gọi cho ông Tanaka vào lúc 10 giờ sáng mai; ông ấy sẽ đang thuyết trình cho các khách hàng nước ngoài vào thời điểm đó."
+  },
+  {
+    "id": "q_tense_conjugation_015",
+    "part": 5,
+    "grammar_topic": "Present Simple",
+    "difficulty_level": "Easy",
+    "question_text": "The instruction manual clearly _____ that users should update their passwords every three months for security reasons.",
+    "options": [
+      { "key": "A", "text": "state" },
+      { "key": "B", "text": "states" },
+      { "key": "C", "text": "stating" },
+      { "key": "D", "text": "is stated" }
+    ],
+    "correct_answer": "B",
+    "hint": "Khi nói về nội dung của một tài liệu, sách, báo hoặc bảng hướng dẫn, ta luôn sử dụng thì Hiện tại đơn.",
+    "explanation": "Chính xác. Chủ ngữ 'The instruction manual' là số ít nên động từ thêm 's' thành 'states'.",
+    "translation": "Sổ tay hướng dẫn nêu rõ rằng người dùng nên cập nhật mật khẩu của họ ba tháng một lần vì lý do bảo mật."
+  },
+  {
+    "id": "q_tense_conjugation_016",
+    "part": 5,
+    "grammar_topic": "Past Simple",
+    "difficulty_level": "Easy",
+    "question_text": "The logistics company _____ its first international branch in Tokyo exactly five years ago.",
+    "options": [
+      { "key": "A", "text": "establishes" },
+      { "key": "B", "text": "has established" },
+      { "key": "C", "text": "established" },
+      { "key": "D", "text": "establishing" }
+    ],
+    "correct_answer": "C",
+    "hint": "Trạng từ 'ago' (cách đây) là từ khóa báo hiệu thì Quá khứ đơn.",
+    "explanation": "Chính xác. Thì Quá khứ đơn 'established' diễn tả hành động đã kết thúc trong quá khứ.",
+    "translation": "Công ty hậu cần đã thành lập chi nhánh quốc tế đầu tiên tại Tokyo cách đây chính xác 5 năm."
+  },
+  {
+    "id": "q_tense_conjugation_017",
+    "part": 5,
+    "grammar_topic": "Passive Voice (Present Perfect)",
+    "difficulty_level": "Hard",
+    "question_text": "The main lobby of the corporate headquarters _____ to feature a more modern and welcoming design.",
+    "options": [
+      { "key": "A", "text": "has renovated" },
+      { "key": "B", "text": "has been renovated" },
+      { "key": "C", "text": "is renovating" },
+      { "key": "D", "text": "was renovating" }
+    ],
+    "correct_answer": "B",
+    "hint": "Chủ ngữ là 'The main lobby' (Sảnh chính) phải chịu tác động của hành động cải tạo. Việc cải tạo vừa hoàn tất và có kết quả ở hiện tại.",
+    "explanation": "Chính xác. Cấu trúc bị động của Hiện tại hoàn thành 'has been renovated' (đã được cải tạo) là phù hợp nhất về mặt logic và ngữ pháp.",
+    "translation": "Sảnh chính của trụ sở công ty đã được cải tạo để mang thiết kế hiện đại và chào đón hơn."
+  },
+  {
+    "id": "q_tense_conjugation_018",
+    "part": 5,
+    "grammar_topic": "Present Perfect",
+    "difficulty_level": "Medium",
+    "question_text": "Over the past year, customer demand for eco-friendly packaging materials _____ substantially.",
+    "options": [
+      { "key": "A", "text": "rises" },
+      { "key": "B", "text": "rose" },
+      { "key": "C", "text": "has risen" },
+      { "key": "D", "text": "will rise" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cụm 'Over the past/last + thời gian' (Trong suốt... qua) luôn đi kèm với thì Hiện tại hoàn thành trong đề thi TOEIC.",
+    "explanation": "Chính xác. Thì Hiện tại hoàn thành 'has risen' diễn tả sự việc bắt đầu từ quá khứ (cách đây 1 năm) kéo dài và đạt kết quả ở hiện tại.",
+    "translation": "Trong năm qua, nhu cầu của khách hàng đối với vật liệu đóng gói thân thiện với môi trường đã tăng lên đáng kể."
+  },
+  {
+    "id": "q_tense_conjugation_019",
+    "part": 5,
+    "grammar_topic": "Time Clauses (Present Simple)",
+    "difficulty_level": "Medium",
+    "question_text": "As soon as the CEO _____ the final contract, the legal team will send a copy to our business partners.",
+    "options": [
+      { "key": "A", "text": "signs" },
+      { "key": "B", "text": "signed" },
+      { "key": "C", "text": "will sign" },
+      { "key": "D", "text": "has signed" }
+    ],
+    "correct_answer": "A",
+    "hint": "Trong mệnh đề thời gian bắt đầu bằng As soon as/When/Before/After chỉ tương lai, ta KHÔNG DÙNG thì Tương lai mà dùng Hiện tại đơn.",
+    "explanation": "Chính xác. Mệnh đề phụ dùng Hiện tại đơn 'signs' mang ý nghĩa Tương lai kết hợp với mệnh đề chính Tương lai đơn (will send). (Có thể dùng HTHT 'has signed' nhưng 'signs' phổ biến hơn).",
+    "translation": "Ngay khi Giám đốc điều hành ký hợp đồng cuối cùng, nhóm pháp lý sẽ gửi một bản sao cho các đối tác kinh doanh của chúng ta."
+  },
+  {
+    "id": "q_tense_conjugation_020",
+    "part": 5,
+    "grammar_topic": "Passive Voice (Past Perfect)",
+    "difficulty_level": "Hard",
+    "question_text": "The architect discovered that his initial blueprints _____ by the city council before he could even revise them.",
+    "options": [
+      { "key": "A", "text": "rejected" },
+      { "key": "B", "text": "were rejecting" },
+      { "key": "C", "text": "have been rejected" },
+      { "key": "D", "text": "had been rejected" }
+    ],
+    "correct_answer": "D",
+    "hint": "Hành động từ chối xảy ra TRƯỚC một hành động khác trong quá khứ (could revise). Bản thiết kế (blueprints) phải mang nghĩa bị động.",
+    "explanation": "Chính xác. Thể bị động của thì Quá khứ hoàn thành 'had been rejected' chỉ sự việc bị từ chối hoàn tất trước một thời điểm quá khứ.",
+    "translation": "Kiến trúc sư phát hiện ra rằng các bản thiết kế ban đầu của ông đã bị hội đồng thành phố từ chối trước khi ông kịp chỉnh sửa chúng."
+  },
+  {
+    "id": "q_tense_conjugation_021",
+    "part": 5,
+    "grammar_topic": "Past Continuous",
+    "difficulty_level": "Medium",
+    "question_text": "While the IT technician _____ the timekeeping software, the main server unexpectedly crashed.",
+    "options": [
+      { "key": "A", "text": "updates" },
+      { "key": "B", "text": "was updating" },
+      { "key": "C", "text": "has updated" },
+      { "key": "D", "text": "will update" }
+    ],
+    "correct_answer": "B",
+    "hint": "Liên từ 'While' diễn tả một hành động đang kéo dài trong quá khứ thì một hành động khác (crashed) xen vào.",
+    "explanation": "Chính xác. Thì quá khứ tiếp diễn 'was updating' miêu tả hành động đang diễn ra trong một khoảng thời gian ở quá khứ thì bị gián đoạn.",
+    "translation": "Trong khi kỹ thuật viên CNTT đang cập nhật phần mềm chấm công, máy chủ chính bất ngờ bị sập."
+  },
+  {
+    "id": "q_tense_conjugation_022",
+    "part": 5,
+    "grammar_topic": "Present Perfect",
+    "difficulty_level": "Easy",
+    "question_text": "Over the past five years, the PrepMaster app _____ into one of the leading language learning platforms in the country.",
+    "options": [
+      { "key": "A", "text": "grows" },
+      { "key": "B", "text": "grew" },
+      { "key": "C", "text": "has grown" },
+      { "key": "D", "text": "is growing" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cụm 'Over the past + khoảng thời gian' (Trong suốt... qua) là dấu hiệu kinh điển của thì Hiện tại hoàn thành trong bài thi TOEIC.",
+    "explanation": "Chính xác. Thì Hiện tại hoàn thành 'has grown' diễn tả sự phát triển bắt đầu từ 5 năm trước và kéo dài đến hiện tại.",
+    "translation": "Trong năm năm qua, ứng dụng PrepMaster đã phát triển thành một trong những nền tảng học ngôn ngữ hàng đầu trong nước."
+  },
+  {
+    "id": "q_tense_conjugation_023",
+    "part": 5,
+    "grammar_topic": "Future Perfect",
+    "difficulty_level": "Hard",
+    "question_text": "By next December, the Happy Box company _____ over 100,000 corporate gifts to international clients.",
+    "options": [
+      { "key": "A", "text": "shipped" },
+      { "key": "B", "text": "ships" },
+      { "key": "C", "text": "will have shipped" },
+      { "key": "D", "text": "has shipped" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cấu trúc 'By + mốc thời gian trong tương lai' (By next December) yêu cầu mệnh đề chính chia ở thì Tương lai hoàn thành.",
+    "explanation": "Chính xác. Tương lai hoàn thành 'will have shipped' chỉ một hành động sẽ hoàn tất tính đến một thời điểm xác định trong tương lai.",
+    "translation": "Tính đến tháng 12 tới, công ty Happy Box sẽ vận chuyển được hơn 100.000 món quà doanh nghiệp cho các khách hàng quốc tế."
+  },
+  {
+    "id": "q_tense_conjugation_024",
+    "part": 5,
+    "grammar_topic": "Present Simple",
+    "difficulty_level": "Easy",
+    "question_text": "The mobile timekeeping application automatically _____ employee attendance data to the cloud every night at 11 PM.",
+    "options": [
+      { "key": "A", "text": "syncs" },
+      { "key": "B", "text": "synced" },
+      { "key": "C", "text": "is syncing" },
+      { "key": "D", "text": "will sync" }
+    ],
+    "correct_answer": "A",
+    "hint": "Cụm 'every night at 11 PM' (mỗi tối lúc 11 giờ) và trạng từ 'automatically' chỉ một lịch trình lặp đi lặp lại cố định.",
+    "explanation": "Chính xác. Thì Hiện tại đơn được sử dụng cho các hành động lặp lại theo thói quen hoặc lịch trình. Chủ ngữ số ít nên dùng 'syncs'.",
+    "translation": "Ứng dụng chấm công trên thiết bị di động tự động đồng bộ hóa dữ liệu điểm danh của nhân viên lên đám mây vào mỗi tối lúc 11 giờ."
+  },
+  {
+    "id": "q_tense_conjugation_025",
+    "part": 5,
+    "grammar_topic": "Past Perfect",
+    "difficulty_level": "Medium",
+    "question_text": "By the time the marketing director arrived at the meeting, the creative team _____ the presentation.",
+    "options": [
+      { "key": "A", "text": "finishes" },
+      { "key": "B", "text": "finished" },
+      { "key": "C", "text": "had finished" },
+      { "key": "D", "text": "has finished" }
+    ],
+    "correct_answer": "C",
+    "hint": "Mệnh đề 'By the time + Quá khứ đơn (arrived)' chỉ một thời điểm trong quá khứ. Hành động xảy ra trước thời điểm đó phải dùng Quá khứ hoàn thành.",
+    "explanation": "Chính xác. Thì Quá khứ hoàn thành 'had finished' miêu tả hành động hoàn thành bài thuyết trình đã xong trước khi giám đốc đến.",
+    "translation": "Vào lúc giám đốc tiếp thị đến cuộc họp, nhóm sáng tạo đã hoàn thành xong bài thuyết trình."
+  },
+  {
+    "id": "q_tense_conjugation_026",
+    "part": 5,
+    "grammar_topic": "Present Continuous",
+    "difficulty_level": "Medium",
+    "question_text": "The software engineers are _____ a new feature that will allow users to study offline on the EduKit platform.",
+    "options": [
+      { "key": "A", "text": "develop" },
+      { "key": "B", "text": "developed" },
+      { "key": "C", "text": "developing" },
+      { "key": "D", "text": "develops" }
+    ],
+    "correct_answer": "C",
+    "hint": "Sau động từ to be 'are', nếu muốn diễn tả một hành động đang chủ động diễn ra, ta dùng V-ing để tạo thành thì Hiện tại tiếp diễn.",
+    "explanation": "Chính xác. 'Are developing' (đang phát triển) miêu tả một dự án đang được tiến hành ở thời điểm hiện tại.",
+    "translation": "Các kỹ sư phần mềm đang phát triển một tính năng mới cho phép người dùng học ngoại tuyến trên nền tảng EduKit."
+  },
+  {
+    "id": "q_tense_conjugation_027",
+    "part": 5,
+    "grammar_topic": "Passive Voice (Past Simple)",
+    "difficulty_level": "Medium",
+    "question_text": "The custom corporate gift boxes _____ to the client's headquarters in Tokyo two days ago.",
+    "options": [
+      { "key": "A", "text": "delivered" },
+      { "key": "B", "text": "were delivered" },
+      { "key": "C", "text": "deliver" },
+      { "key": "D", "text": "are delivering" }
+    ],
+    "correct_answer": "B",
+    "hint": "Thời gian 'two days ago' yêu cầu thì Quá khứ đơn. Chủ ngữ 'gift boxes' là vật, không thể tự giao hàng nên phải dùng thể bị động.",
+    "explanation": "Chính xác. Thể bị động của thì quá khứ đơn 'were delivered' (đã được giao) là đáp án đúng ngữ pháp và ngữ nghĩa.",
+    "translation": "Các hộp quà tặng doanh nghiệp tùy chỉnh đã được giao đến trụ sở của khách hàng tại Tokyo hai ngày trước."
+  },
+  {
+    "id": "q_tense_conjugation_028",
+    "part": 5,
+    "grammar_topic": "Future Simple (Time Clause)",
+    "difficulty_level": "Hard",
+    "question_text": "As soon as the new update _____ available, all users will receive a notification to download it.",
+    "options": [
+      { "key": "A", "text": "will become" },
+      { "key": "B", "text": "becomes" },
+      { "key": "C", "text": "became" },
+      { "key": "D", "text": "is becoming" }
+    ],
+    "correct_answer": "B",
+    "hint": "Trong mệnh đề thời gian bắt đầu bằng 'As soon as', 'When', 'Before' chỉ sự việc tương lai, ta không dùng 'will' mà phải dùng thì Hiện tại đơn.",
+    "explanation": "Chính xác. Động từ chia ở hiện tại đơn 'becomes' đi với chủ ngữ số ít 'update' mang ý nghĩa tương lai trong mệnh đề trạng ngữ chỉ thời gian.",
+    "translation": "Ngay khi bản cập nhật mới có sẵn, tất cả người dùng sẽ nhận được thông báo để tải xuống."
+  },
+  {
+    "id": "q_tense_conjugation_029",
+    "part": 5,
+    "grammar_topic": "Present Perfect Continuous",
+    "difficulty_level": "Hard",
+    "question_text": "Ms. Lin _____ educational TikTok videos on daily English conversation since early 2024.",
+    "options": [
+      { "key": "A", "text": "is producing" },
+      { "key": "B", "text": "produces" },
+      { "key": "C", "text": "has been producing" },
+      { "key": "D", "text": "produced" }
+    ],
+    "correct_answer": "C",
+    "hint": "Dấu hiệu 'since early 2024' chỉ một hành động bắt đầu trong quá khứ. Cấu trúc Hoàn thành tiếp diễn được ưu tiên để nhấn mạnh tính liên tục của hành động.",
+    "explanation": "Chính xác. Thì Hiện tại hoàn thành tiếp diễn 'has been producing' nhấn mạnh việc cô Lin đã và đang liên tục sản xuất video.",
+    "translation": "Cô Lin đã và đang sản xuất các video TikTok giáo dục về hội thoại tiếng Anh hàng ngày kể từ đầu năm 2024."
+  },
+  {
+    "id": "q_tense_conjugation_030",
+    "part": 5,
+    "grammar_topic": "Passive Voice (Present Continuous)",
+    "difficulty_level": "Medium",
+    "question_text": "The entire network infrastructure of the office _____ right now to accommodate the new HR software.",
+    "options": [
+      { "key": "A", "text": "upgrades" },
+      { "key": "B", "text": "is upgrading" },
+      { "key": "C", "text": "is being upgraded" },
+      { "key": "D", "text": "has upgraded" }
+    ],
+    "correct_answer": "C",
+    "hint": "Trạng từ 'right now' (ngay lúc này) báo hiệu thì Hiện tại tiếp diễn. 'Network infrastructure' (hạ tầng mạng) phải chịu tác động (bị động).",
+    "explanation": "Chính xác. Thể bị động của Hiện tại tiếp diễn 'is being upgraded' mang nghĩa là 'đang được nâng cấp'.",
+    "translation": "Toàn bộ cơ sở hạ tầng mạng của văn phòng đang được nâng cấp ngay lúc này để đáp ứng phần mềm nhân sự mới."
+  },
+  {
+    "id": "q_tense_conjugation_031",
+    "part": 5,
+    "grammar_topic": "Future Continuous",
+    "difficulty_level": "Medium",
+    "question_text": "At this time tomorrow, the executive team _____ the quarterly financial reports in the main boardroom.",
+    "options": [
+      { "key": "A", "text": "discusses" },
+      { "key": "B", "text": "will discuss" },
+      { "key": "C", "text": "will be discussing" },
+      { "key": "D", "text": "discussed" }
+    ],
+    "correct_answer": "C",
+    "hint": "Dấu hiệu 'At this time tomorrow' khoanh vùng một thời điểm vô cùng chính xác trong tương lai, yêu cầu thì Tương lai tiếp diễn.",
+    "explanation": "Chính xác. Thì Tương lai tiếp diễn 'will be discussing' mô tả một hành động sẽ đang diễn ra tại một thời điểm cụ thể trong tương lai.",
+    "translation": "Vào giờ này ngày mai, đội ngũ điều hành sẽ đang thảo luận về các báo cáo tài chính hàng quý trong phòng họp chính."
+  },
+  {
+    "id": "q_tense_conjugation_032",
+    "part": 5,
+    "grammar_topic": "Past Simple",
+    "difficulty_level": "Easy",
+    "question_text": "The company _____ three new senior developers last month to speed up the launch of the PrepMaster app.",
+    "options": [
+      { "key": "A", "text": "hires" },
+      { "key": "B", "text": "hired" },
+      { "key": "C", "text": "has hired" },
+      { "key": "D", "text": "is hiring" }
+    ],
+    "correct_answer": "B",
+    "hint": "Trạng từ thời gian 'last month' (tháng trước) chốt mốc thời gian hoàn toàn thuộc về Quá khứ đơn.",
+    "explanation": "Chính xác. Động từ 'hired' (đã thuê) được chia ở quá khứ đơn, phù hợp với sự việc đã kết thúc trong quá khứ.",
+    "translation": "Công ty đã thuê ba lập trình viên cấp cao mới vào tháng trước để đẩy nhanh việc ra mắt ứng dụng PrepMaster."
+  },
+  {
+    "id": "q_tense_conjugation_033",
+    "part": 5,
+    "grammar_topic": "Passive Voice (Future Simple)",
+    "difficulty_level": "Easy",
+    "question_text": "All orders placed before 3 PM _____ the same business day using express shipping.",
+    "options": [
+      { "key": "A", "text": "will process" },
+      { "key": "B", "text": "process" },
+      { "key": "C", "text": "will be processed" },
+      { "key": "D", "text": "processed" }
+    ],
+    "correct_answer": "C",
+    "hint": "Chủ ngữ là 'All orders' (Tất cả đơn hàng) không thể tự 'process' (xử lý). Đây là một chính sách, lời hứa sẽ thực hiện trong tương lai.",
+    "explanation": "Chính xác. Thể bị động của tương lai đơn 'will be processed' (sẽ được xử lý) phù hợp nhất với cấu trúc câu thông báo/chính sách của công ty.",
+    "translation": "Tất cả các đơn đặt hàng được đặt trước 3 giờ chiều sẽ được xử lý trong cùng một ngày làm việc bằng dịch vụ vận chuyển hỏa tốc."
+  },
+  {
+    "id": "q_tense_conjugation_034",
+    "part": 5,
+    "grammar_topic": "Passive Voice (Present Perfect)",
+    "difficulty_level": "Medium",
+    "question_text": "The launch of the interactive video feature _____ due to unexpected technical difficulties.",
+    "options": [
+      { "key": "A", "text": "has postponed" },
+      { "key": "B", "text": "has been postponed" },
+      { "key": "C", "text": "postpones" },
+      { "key": "D", "text": "is postponing" }
+    ],
+    "correct_answer": "B",
+    "hint": "Sự việc ra mắt (The launch) phải chịu tác động (bị động). Hậu quả của việc hoãn vẫn kéo dài đến hiện tại.",
+    "explanation": "Chính xác. Thể bị động của Hiện tại hoàn thành 'has been postponed' diễn tả một sự thay đổi lịch trình vừa diễn ra và ảnh hưởng đến hiện tại.",
+    "translation": "Việc ra mắt tính năng video tương tác đã bị hoãn lại do những khó khăn kỹ thuật không lường trước được."
+  },
+  {
+    "id": "q_tense_conjugation_035",
+    "part": 5,
+    "grammar_topic": "Past Continuous vs Past Simple",
+    "difficulty_level": "Medium",
+    "question_text": "Mr. Smith _____ the timesheets when the fire alarm suddenly went off in the building.",
+    "options": [
+      { "key": "A", "text": "reviewed" },
+      { "key": "B", "text": "was reviewing" },
+      { "key": "C", "text": "reviews" },
+      { "key": "D", "text": "has reviewed" }
+    ],
+    "correct_answer": "B",
+    "hint": "Mệnh đề sau 'when' sử dụng quá khứ đơn (went off) để chỉ một hành động bất ngờ cắt ngang hành động đang diễn ra (was reviewing).",
+    "explanation": "Chính xác. Thì Quá khứ tiếp diễn 'was reviewing' miêu tả hành động đang được thực hiện dang dở trong quá khứ.",
+    "translation": "Ông Smith đang xem xét các bảng chấm công thì chuông báo cháy đột nhiên reo lên trong tòa nhà."
+  },
+  {
+    "id": "q_tense_conjugation_036",
+    "part": 5,
+    "grammar_topic": "Future Simple (Conditionals Type 1)",
+    "difficulty_level": "Easy",
+    "question_text": "If you upgrade to a premium account on EduKit, you _____ access to advanced mock exams.",
+    "options": [
+      { "key": "A", "text": "receive" },
+      { "key": "B", "text": "received" },
+      { "key": "C", "text": "will receive" },
+      { "key": "D", "text": "have received" }
+    ],
+    "correct_answer": "C",
+    "hint": "Câu điều kiện loại 1 (If + S + V-hiện tại đơn). Mệnh đề kết quả sẽ sử dụng thì Tương lai đơn (will + V).",
+    "explanation": "Chính xác. 'Will receive' chỉ một kết quả chắc chắn sẽ xảy ra trong tương lai nếu điều kiện được đáp ứng.",
+    "translation": "Nếu bạn nâng cấp lên tài khoản cao cấp trên EduKit, bạn sẽ nhận được quyền truy cập vào các bài thi thử nâng cao."
+  },
+  {
+    "id": "q_tense_conjugation_037",
+    "part": 5,
+    "grammar_topic": "Past Perfect (After)",
+    "difficulty_level": "Hard",
+    "question_text": "After the QA team _____ the new application thoroughly, it was released to the public.",
+    "options": [
+      { "key": "A", "text": "had tested" },
+      { "key": "B", "text": "tests" },
+      { "key": "C", "text": "has tested" },
+      { "key": "D", "text": "was testing" }
+    ],
+    "correct_answer": "A",
+    "hint": "Cấu trúc 'After + Quá khứ hoàn thành, Quá khứ đơn' dùng để nhấn mạnh hành động test đã kết thúc hoàn toàn trước khi hành động release xảy ra.",
+    "explanation": "Chính xác. Thì Quá khứ hoàn thành 'had tested' diễn tả một hành động xảy ra và kết thúc trước một hành động khác trong quá khứ.",
+    "translation": "Sau khi nhóm QA đã kiểm tra ứng dụng mới một cách kỹ lưỡng, nó đã được phát hành ra công chúng."
+  },
+  {
+    "id": "q_tense_conjugation_038",
+    "part": 5,
+    "grammar_topic": "Present Perfect",
+    "difficulty_level": "Medium",
+    "question_text": "Since its inception, the Happy Box brand _____ its operations from a small local shop to a nationwide distributor.",
+    "options": [
+      { "key": "A", "text": "expands" },
+      { "key": "B", "text": "expanded" },
+      { "key": "C", "text": "will expand" },
+      { "key": "D", "text": "has expanded" }
+    ],
+    "correct_answer": "D",
+    "hint": "Cụm từ 'Since its inception' (kể từ khi thành lập) là dấu hiệu mạnh mẽ của thì Hiện tại hoàn thành.",
+    "explanation": "Chính xác. Thì Hiện tại hoàn thành 'has expanded' được sử dụng để mô tả một quá trình phát triển kéo dài từ quá khứ đến hiện tại.",
+    "translation": "Kể từ khi thành lập, thương hiệu Happy Box đã mở rộng hoạt động từ một cửa hàng nhỏ ở địa phương thành một nhà phân phối toàn quốc."
+  },
+  {
+    "id": "q_tense_conjugation_039",
+    "part": 5,
+    "grammar_topic": "Passive Voice (Present Simple)",
+    "difficulty_level": "Easy",
+    "question_text": "All confidential employee files _____ securely in an encrypted cloud database.",
+    "options": [
+      { "key": "A", "text": "store" },
+      { "key": "B", "text": "are storing" },
+      { "key": "C", "text": "are stored" },
+      { "key": "D", "text": "stored" }
+    ],
+    "correct_answer": "C",
+    "hint": "Chủ ngữ là 'files' (các tệp - số nhiều, chỉ vật). Chúng không tự lưu trữ mà phải 'được lưu trữ'.",
+    "explanation": "Chính xác. Thể bị động của thì hiện tại đơn 'are stored' diễn tả một trạng thái, quy trình bảo mật cố định của công ty.",
+    "translation": "Tất cả các tệp thông tin bí mật của nhân viên được lưu trữ an toàn trong một cơ sở dữ liệu đám mây được mã hóa."
+  },
+  {
+    "id": "q_tense_conjugation_040",
+    "part": 5,
+    "grammar_topic": "Future Perfect",
+    "difficulty_level": "Hard",
+    "question_text": "By the time the new academic year begins, the development team _____ all the requested features to the EduKit app.",
+    "options": [
+      { "key": "A", "text": "add" },
+      { "key": "B", "text": "added" },
+      { "key": "C", "text": "will have added" },
+      { "key": "D", "text": "are adding" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cấu trúc 'By the time + S + V(hiện tại đơn)' luôn đi kèm với thì Tương lai hoàn thành ở mệnh đề chính.",
+    "explanation": "Chính xác. Tương lai hoàn thành 'will have added' dự báo một công việc sẽ được hoàn tất tính đến trước một thời điểm ở tương lai.",
+    "translation": "Tính đến lúc năm học mới bắt đầu, nhóm phát triển sẽ đã thêm toàn bộ các tính năng được yêu cầu vào ứng dụng EduKit."
+  },
+  {
+    "id": "q_tense_conjugation_041",
+    "part": 5,
+    "grammar_topic": "Past Continuous",
+    "difficulty_level": "Medium",
+    "question_text": "The warehouse staff _____ the holiday gift boxes when the CEO unexpectedly visited the facility.",
+    "options": [
+      { "key": "A", "text": "pack" },
+      { "key": "B", "text": "packed" },
+      { "key": "C", "text": "were packing" },
+      { "key": "D", "text": "have packed" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cấu trúc 'when + Quá khứ đơn (visited)' thường đi kèm với một hành động đang diễn ra dang dở trong quá khứ.",
+    "explanation": "Chính xác. Thì Quá khứ tiếp diễn 'were packing' miêu tả hành động đang đóng gói hàng hóa thì bị một hành động khác (CEO đến thăm) cắt ngang.",
+    "translation": "Nhân viên kho đang đóng gói các hộp quà tặng dịp lễ thì Giám đốc điều hành bất ngờ đến thăm cơ sở."
+  },
+  {
+    "id": "q_tense_conjugation_042",
+    "part": 5,
+    "grammar_topic": "Present Perfect",
+    "difficulty_level": "Easy",
+    "question_text": "The developers of PrepMaster _____ several new listening exercises to the application recently.",
+    "options": [
+      { "key": "A", "text": "add" },
+      { "key": "B", "text": "added" },
+      { "key": "C", "text": "are adding" },
+      { "key": "D", "text": "have added" }
+    ],
+    "correct_answer": "D",
+    "hint": "Trạng từ 'recently' (gần đây) là một trong những dấu hiệu nhận biết phổ biến nhất của thì Hiện tại hoàn thành.",
+    "explanation": "Chính xác. Thì Hiện tại hoàn thành 'have added' diễn tả một hành động vừa mới xảy ra gần đây và kết quả của nó vẫn còn ở hiện tại.",
+    "translation": "Các lập trình viên của PrepMaster gần đây đã thêm một vài bài tập nghe mới vào ứng dụng."
+  },
+  {
+    "id": "q_tense_conjugation_043",
+    "part": 5,
+    "grammar_topic": "Future Continuous",
+    "difficulty_level": "Medium",
+    "question_text": "Tomorrow at exactly 8 PM, the popular English teacher _____ a live Q&A session on her TikTok channel.",
+    "options": [
+      { "key": "A", "text": "hosts" },
+      { "key": "B", "text": "will be hosting" },
+      { "key": "C", "text": "hosted" },
+      { "key": "D", "text": "has hosted" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cụm 'Tomorrow at exactly 8 PM' chỉ một thời điểm cực kỳ chính xác sẽ diễn ra trong tương lai.",
+    "explanation": "Chính xác. Thì Tương lai tiếp diễn 'will be hosting' được sử dụng để diễn tả một hành động sẽ đang diễn ra tại một thời điểm xác định ở tương lai.",
+    "translation": "Vào đúng 8 giờ tối ngày mai, giáo viên tiếng Anh nổi tiếng sẽ đang tổ chức một buổi Hỏi đáp trực tiếp trên kênh TikTok của cô ấy."
+  },
+  {
+    "id": "q_tense_conjugation_044",
+    "part": 5,
+    "grammar_topic": "Present Simple",
+    "difficulty_level": "Easy",
+    "question_text": "Every Friday afternoon, the HR manager _____ the weekly timesheets submitted through the mobile app.",
+    "options": [
+      { "key": "A", "text": "review" },
+      { "key": "B", "text": "reviewed" },
+      { "key": "C", "text": "reviews" },
+      { "key": "D", "text": "is reviewing" }
+    ],
+    "correct_answer": "C",
+    "hint": "Trạng từ chỉ tần suất 'Every Friday afternoon' (Mỗi chiều thứ Sáu) báo hiệu một thói quen hoặc lịch trình lặp đi lặp lại.",
+    "explanation": "Chính xác. Thì Hiện tại đơn được sử dụng. Chủ ngữ 'the HR manager' là số ít nên động từ 'review' thêm 's'.",
+    "translation": "Mỗi chiều thứ Sáu, người quản lý nhân sự xem xét các bảng chấm công hàng tuần được nộp qua ứng dụng di động."
+  },
+  {
+    "id": "q_tense_conjugation_045",
+    "part": 5,
+    "grammar_topic": "Passive Voice (Present Perfect)",
+    "difficulty_level": "Hard",
+    "question_text": "Several new interactive modules _____ to the EduKit platform since its initial launch in January.",
+    "options": [
+      { "key": "A", "text": "have added" },
+      { "key": "B", "text": "added" },
+      { "key": "C", "text": "have been added" },
+      { "key": "D", "text": "were adding" }
+    ],
+    "correct_answer": "C",
+    "hint": "Dấu hiệu 'since' + mốc quá khứ yêu cầu thì Hiện tại hoàn thành. 'Modules' (các mô-đun) là vật, phải 'được thêm vào'.",
+    "explanation": "Chính xác. Câu này yêu cầu thể bị động của thì Hiện tại hoàn thành (have been + V3/ed) để diễn tả các mô-đun đã được thêm vào nền tảng.",
+    "translation": "Một vài mô-đun tương tác mới đã được thêm vào nền tảng EduKit kể từ lần ra mắt đầu tiên vào tháng Một."
+  },
+  {
+    "id": "q_tense_conjugation_046",
+    "part": 5,
+    "grammar_topic": "Past Perfect",
+    "difficulty_level": "Medium",
+    "question_text": "The courier realized that he _____ the package to the wrong corporate address before the client called.",
+    "options": [
+      { "key": "A", "text": "delivers" },
+      { "key": "B", "text": "delivered" },
+      { "key": "C", "text": "has delivered" },
+      { "key": "D", "text": "had delivered" }
+    ],
+    "correct_answer": "D",
+    "hint": "Hành động giao nhầm hàng xảy ra TRƯỚC hai hành động khác trong quá khứ là 'realized' (nhận ra) và 'called' (gọi).",
+    "explanation": "Chính xác. Thì Quá khứ hoàn thành 'had delivered' miêu tả một sự việc đã hoàn tất trước một thời điểm hoặc một hành động khác trong quá khứ.",
+    "translation": "Người chuyển phát nhận ra rằng anh ta đã giao kiện hàng đến sai địa chỉ công ty trước khi khách hàng gọi điện."
+  },
+  {
+    "id": "q_tense_conjugation_047",
+    "part": 5,
+    "grammar_topic": "Future Perfect",
+    "difficulty_level": "Medium",
+    "question_text": "By the end of this month, the PrepMaster application _____ over 10,000 active users.",
+    "options": [
+      { "key": "A", "text": "reach" },
+      { "key": "B", "text": "reached" },
+      { "key": "C", "text": "will have reached" },
+      { "key": "D", "text": "is reaching" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cụm từ 'By the end of...' (Tính đến cuối...) là dấu hiệu nhận biết đặc trưng của thì Tương lai hoàn thành.",
+    "explanation": "Chính xác. Tương lai hoàn thành 'will have reached' dùng để dự báo một thành tựu sẽ đạt được tính đến một thời điểm trong tương lai.",
+    "translation": "Tính đến cuối tháng này, ứng dụng PrepMaster sẽ đạt được hơn 10.000 người dùng hoạt động."
+  },
+  {
+    "id": "q_tense_conjugation_048",
+    "part": 5,
+    "grammar_topic": "Present Continuous",
+    "difficulty_level": "Easy",
+    "question_text": "Due to the sudden increase in web traffic, the IT department _____ the server capacity right now.",
+    "options": [
+      { "key": "A", "text": "upgrades" },
+      { "key": "B", "text": "is upgrading" },
+      { "key": "C", "text": "upgraded" },
+      { "key": "D", "text": "has upgraded" }
+    ],
+    "correct_answer": "B",
+    "hint": "Trạng từ 'right now' (ngay lúc này) bắt buộc phải sử dụng thì Hiện tại tiếp diễn.",
+    "explanation": "Chính xác. Thì Hiện tại tiếp diễn 'is upgrading' diễn tả một hành động khẩn cấp đang xảy ra ngay tại thời điểm nói.",
+    "translation": "Do sự gia tăng đột biến của lưu lượng truy cập web, bộ phận CNTT đang nâng cấp dung lượng máy chủ ngay lúc này."
+  },
+  {
+    "id": "q_tense_conjugation_049",
+    "part": 5,
+    "grammar_topic": "Passive Voice (Past Simple)",
+    "difficulty_level": "Medium",
+    "question_text": "The minutes from yesterday's board meeting _____ to all department heads this morning.",
+    "options": [
+      { "key": "A", "text": "emailed" },
+      { "key": "B", "text": "were emailing" },
+      { "key": "C", "text": "are emailed" },
+      { "key": "D", "text": "were emailed" }
+    ],
+    "correct_answer": "D",
+    "hint": "Dấu hiệu 'this morning' (sáng nay - khi người nói đã qua buổi sáng) yêu cầu thì Quá khứ. 'The minutes' (biên bản họp - số nhiều) phải 'được gửi'.",
+    "explanation": "Chính xác. Thể bị động của thì Quá khứ đơn 'were emailed' là phù hợp nhất, miêu tả hành động đã hoàn tất trong quá khứ.",
+    "translation": "Biên bản cuộc họp hội đồng quản trị ngày hôm qua đã được gửi email đến tất cả các trưởng bộ phận vào sáng nay."
+  },
+  {
+    "id": "q_tense_conjugation_050",
+    "part": 5,
+    "grammar_topic": "Present Simple (Future Meaning)",
+    "difficulty_level": "Medium",
+    "question_text": "The online seminar on advanced React development _____ at exactly 9:00 AM tomorrow.",
+    "options": [
+      { "key": "A", "text": "begin" },
+      { "key": "B", "text": "begins" },
+      { "key": "C", "text": "began" },
+      { "key": "D", "text": "has begun" }
+    ],
+    "correct_answer": "B",
+    "hint": "Lịch trình tàu xe, máy bay, cuộc họp, hoặc sự kiện đã được lên lịch cố định thường sử dụng thì Hiện tại đơn để mang ý nghĩa tương lai.",
+    "explanation": "Chính xác. Mặc dù có 'tomorrow', nhưng đây là một lịch trình cố định của hội thảo, nên dùng Hiện tại đơn 'begins' là cách dùng rất tự nhiên trong tiếng Anh.",
+    "translation": "Hội thảo trực tuyến về phát triển React nâng cao bắt đầu vào đúng 9:00 sáng mai."
+  },
+  {
+    "id": "q_tense_conjugation_051",
+    "part": 5,
+    "grammar_topic": "Present Perfect Continuous",
+    "difficulty_level": "Hard",
+    "question_text": "The mobile app development team _____ on the new timekeeping interface for over a month.",
+    "options": [
+      { "key": "A", "text": "is working" },
+      { "key": "B", "text": "works" },
+      { "key": "C", "text": "worked" },
+      { "key": "D", "text": "has been working" }
+    ],
+    "correct_answer": "D",
+    "hint": "Cụm 'for over a month' (hơn 1 tháng) kết hợp với hành động 'work' (làm việc) cần một thì nhấn mạnh sự liên tục từ quá khứ tới hiện tại.",
+    "explanation": "Chính xác. Thì Hiện tại hoàn thành tiếp diễn 'has been working' nhấn mạnh quá trình làm việc liên tục, không ngắt quãng của nhóm phát triển.",
+    "translation": "Nhóm phát triển ứng dụng di động đã và đang làm việc trên giao diện chấm công mới trong hơn một tháng qua."
+  },
+  {
+    "id": "q_tense_conjugation_052",
+    "part": 5,
+    "grammar_topic": "Past Simple",
+    "difficulty_level": "Easy",
+    "question_text": "During last year's holiday season, Happy Box _____ a record number of corporate clients.",
+    "options": [
+      { "key": "A", "text": "attracts" },
+      { "key": "B", "text": "attracted" },
+      { "key": "C", "text": "has attracted" },
+      { "key": "D", "text": "is attracting" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cụm từ 'During last year's holiday season' xác định rõ một khoảng thời gian đã kết thúc trong quá khứ.",
+    "explanation": "Chính xác. Thì Quá khứ đơn 'attracted' (đã thu hút) được sử dụng cho sự việc đã xảy ra và hoàn toàn chấm dứt trong năm ngoái.",
+    "translation": "Trong mùa lễ hội năm ngoái, Happy Box đã thu hút một số lượng kỷ lục các khách hàng doanh nghiệp."
+  },
+  {
+    "id": "q_tense_conjugation_053",
+    "part": 5,
+    "grammar_topic": "Passive Voice (Future Simple)",
+    "difficulty_level": "Medium",
+    "question_text": "Any employee who fails to log their hours _____ by the automated timekeeping system next Monday.",
+    "options": [
+      { "key": "A", "text": "will notify" },
+      { "key": "B", "text": "notifies" },
+      { "key": "C", "text": "will be notified" },
+      { "key": "D", "text": "is notified" }
+    ],
+    "correct_answer": "C",
+    "hint": "Dấu hiệu 'next Monday' yêu cầu thì tương lai. Người nhân viên không tự thông báo mà sẽ 'được thông báo' bởi hệ thống (by the system).",
+    "explanation": "Chính xác. Thể bị động của thì Tương lai đơn 'will be notified' (sẽ được thông báo) hoàn toàn phù hợp với ngữ cảnh câu.",
+    "translation": "Bất kỳ nhân viên nào không ghi lại giờ làm việc của mình sẽ được hệ thống chấm công tự động thông báo vào thứ Hai tới."
+  },
+  {
+    "id": "q_tense_conjugation_054",
+    "part": 5,
+    "grammar_topic": "Conditionals (Type 2)",
+    "difficulty_level": "Hard",
+    "question_text": "If the company _____ more funds, we would hire an additional React developer for the project.",
+    "options": [
+      { "key": "A", "text": "has" },
+      { "key": "B", "text": "had" },
+      { "key": "C", "text": "have" },
+      { "key": "D", "text": "will have" }
+    ],
+    "correct_answer": "B",
+    "hint": "Đây là câu điều kiện loại 2, diễn tả một giả định không có thật ở hiện tại. Mệnh đề chính dùng 'would + V', mệnh đề If dùng Quá khứ đơn.",
+    "explanation": "Chính xác. Trong câu điều kiện loại 2, động từ ở mệnh đề If được chia ở thì Quá khứ đơn. Do đó, 'had' là đáp án đúng.",
+    "translation": "Nếu công ty có thêm kinh phí, chúng tôi sẽ thuê thêm một lập trình viên React cho dự án."
+  },
+  {
+    "id": "q_tense_conjugation_055",
+    "part": 5,
+    "grammar_topic": "Future Simple (Promise/Decision)",
+    "difficulty_level": "Medium",
+    "question_text": "\"I _____ the technical issue with the EduKit login page immediately,\" the support agent assured the user.",
+    "options": [
+      { "key": "A", "text": "fixed" },
+      { "key": "B", "text": "fix" },
+      { "key": "C", "text": "will fix" },
+      { "key": "D", "text": "have fixed" }
+    ],
+    "correct_answer": "C",
+    "hint": "Khi đưa ra một lời hứa (assure), một quyết định tức thời ngay lúc nói, hoặc một lời đề nghị giúp đỡ, ta sử dụng thì Tương lai đơn (will).",
+    "explanation": "Chính xác. 'Will fix' thể hiện một lời cam kết/quyết định giải quyết vấn đề ngay lập tức từ nhân viên hỗ trợ.",
+    "translation": "\"Tôi sẽ khắc phục sự cố kỹ thuật với trang đăng nhập EduKit ngay lập tức,\" nhân viên hỗ trợ đảm bảo với người dùng."
+  },
+  {
+    "id": "q_tense_conjugation_056",
+    "part": 5,
+    "grammar_topic": "Past Continuous",
+    "difficulty_level": "Medium",
+    "question_text": "While the marketing team was brainstorming new campaign ideas, the design team _____ the packaging for Happy Box.",
+    "options": [
+      { "key": "A", "text": "finalizes" },
+      { "key": "B", "text": "finalized" },
+      { "key": "C", "text": "was finalizing" },
+      { "key": "D", "text": "has finalized" }
+    ],
+    "correct_answer": "C",
+    "hint": "Liên từ 'While' có thể nối hai hành động song song, cùng diễn ra trong một khoảng thời gian ở quá khứ.",
+    "explanation": "Chính xác. Để thể hiện tính song song của hai sự việc, khi vế trước dùng Quá khứ tiếp diễn (was brainstorming), vế sau cũng dùng Quá khứ tiếp diễn (was finalizing).",
+    "translation": "Trong khi nhóm tiếp thị đang suy nghĩ các ý tưởng chiến dịch mới, thì nhóm thiết kế đang hoàn thiện bao bì cho Happy Box."
+  },
+  {
+    "id": "q_tense_conjugation_057",
+    "part": 5,
+    "grammar_topic": "Present Perfect",
+    "difficulty_level": "Hard",
+    "question_text": "The CEO stated that he _____ such a rapid increase in user engagement on the learning platform before.",
+    "options": [
+      { "key": "A", "text": "never sees" },
+      { "key": "B", "text": "has never seen" },
+      { "key": "C", "text": "was never seeing" },
+      { "key": "D", "text": "will never see" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cụm từ 'never... before' (chưa từng... trước đây) là dấu hiệu kinh điển của thì Hiện tại hoàn thành dùng để diễn tả trải nghiệm.",
+    "explanation": "Chính xác. Thì Hiện tại hoàn thành 'has never seen' diễn đạt một sự việc/trải nghiệm chưa từng có tính đến thời điểm hiện tại.",
+    "translation": "Giám đốc điều hành tuyên bố rằng ông chưa từng thấy sự gia tăng nhanh chóng về mức độ tương tác của người dùng trên nền tảng học tập như vậy trước đây."
+  },
+  {
+    "id": "q_tense_conjugation_058",
+    "part": 5,
+    "grammar_topic": "Passive Voice (Present Continuous)",
+    "difficulty_level": "Medium",
+    "question_text": "Users are experiencing login errors because the main database _____ by the engineering team.",
+    "options": [
+      { "key": "A", "text": "updates" },
+      { "key": "B", "text": "is updating" },
+      { "key": "C", "text": "is being updated" },
+      { "key": "D", "text": "was updated" }
+    ],
+    "correct_answer": "C",
+    "hint": "Ngữ cảnh đang ở hiện tại (are experiencing). 'The main database' (Cơ sở dữ liệu) đang phải chịu tác động của việc cập nhật (bị động).",
+    "explanation": "Chính xác. Thể bị động của thì Hiện tại tiếp diễn 'is being updated' (đang được cập nhật) giải thích lý do cho sự cố đang diễn ra lúc này.",
+    "translation": "Người dùng đang gặp lỗi đăng nhập vì cơ sở dữ liệu chính đang được nhóm kỹ thuật cập nhật."
+  },
+  {
+    "id": "q_tense_conjugation_059",
+    "part": 5,
+    "grammar_topic": "Past Perfect",
+    "difficulty_level": "Hard",
+    "question_text": "By the time the video editor finished adding the subtitles, the creator _____ the thumbnail image.",
+    "options": [
+      { "key": "A", "text": "prepared" },
+      { "key": "B", "text": "prepares" },
+      { "key": "C", "text": "has prepared" },
+      { "key": "D", "text": "had prepared" }
+    ],
+    "correct_answer": "D",
+    "hint": "Cấu trúc 'By the time + Quá khứ đơn (finished)'. Hành động xảy ra và hoàn thành trước thời điểm đó phải chia ở thì Quá khứ hoàn thành.",
+    "explanation": "Chính xác. Thì Quá khứ hoàn thành 'had prepared' nhấn mạnh việc chuẩn bị ảnh thu nhỏ đã xong xuôi trước khi người chỉnh sửa thêm xong phụ đề.",
+    "translation": "Vào lúc người chỉnh sửa video thêm xong phụ đề, nhà sáng tạo đã chuẩn bị xong hình ảnh thu nhỏ."
+  },
+  {
+    "id": "q_tense_conjugation_060",
+    "part": 5,
+    "grammar_topic": "Present Simple",
+    "difficulty_level": "Easy",
+    "question_text": "The PrepMaster application _____ a comprehensive analytics dashboard to help students track their progress.",
+    "options": [
+      { "key": "A", "text": "feature" },
+      { "key": "B", "text": "features" },
+      { "key": "C", "text": "featuring" },
+      { "key": "D", "text": "is featured" }
+    ],
+    "correct_answer": "B",
+    "hint": "Diễn tả tính năng, công dụng, hoặc sự thật hiển nhiên về một sản phẩm, chúng ta luôn sử dụng thì Hiện tại đơn.",
+    "explanation": "Chính xác. Chủ ngữ 'The PrepMaster application' là số ít nên động từ 'feature' (có tính năng/bao gồm) phải thêm 's' thành 'features'.",
+    "translation": "Ứng dụng PrepMaster có một bảng điều khiển phân tích toàn diện để giúp học sinh theo dõi tiến độ của mình."
+  },
+  {
+    "id": "q_tense_conjugation_061",
+    "part": 5,
+    "grammar_topic": "Future Perfect",
+    "difficulty_level": "Hard",
+    "question_text": "By the end of this year, the engineering team _____ the integration of the timekeeping app with the new HR portal.",
+    "options": [
+      { "key": "A", "text": "completes" },
+      { "key": "B", "text": "completed" },
+      { "key": "C", "text": "will have completed" },
+      { "key": "D", "text": "is completing" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cụm từ 'By the end of this year' (Tính đến cuối năm nay) là dấu hiệu bắt buộc phải sử dụng thì Tương lai hoàn thành.",
+    "explanation": "Chính xác. Tương lai hoàn thành 'will have completed' diễn tả một hành động sẽ được hoàn tất trước một thời điểm được xác định trong tương lai.",
+    "translation": "Tính đến cuối năm nay, đội ngũ kỹ thuật sẽ hoàn tất việc tích hợp ứng dụng chấm công với cổng thông tin nhân sự mới."
+  },
+  {
+    "id": "q_tense_conjugation_062",
+    "part": 5,
+    "grammar_topic": "Present Perfect",
+    "difficulty_level": "Medium",
+    "question_text": "The content creator _____ highly positive feedback from her audience since she started the daily English series.",
+    "options": [
+      { "key": "A", "text": "receives" },
+      { "key": "B", "text": "received" },
+      { "key": "C", "text": "has received" },
+      { "key": "D", "text": "will receive" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cấu trúc 'since + Mệnh đề quá khứ đơn (started)' yêu cầu mệnh đề chính phải chia ở thì Hiện tại hoàn thành.",
+    "explanation": "Chính xác. Thì Hiện tại hoàn thành 'has received' miêu tả một kết quả (nhận phản hồi) kéo dài từ quá khứ đến hiện tại.",
+    "translation": "Nhà sáng tạo nội dung đã nhận được những phản hồi rất tích cực từ khán giả kể từ khi cô bắt đầu loạt video tiếng Anh hàng ngày."
+  },
+  {
+    "id": "q_tense_conjugation_063",
+    "part": 5,
+    "grammar_topic": "Past Continuous vs Past Simple",
+    "difficulty_level": "Medium",
+    "question_text": "The intern _____ the new promotional video when the editing software suddenly crashed.",
+    "options": [
+      { "key": "A", "text": "rendered" },
+      { "key": "B", "text": "was rendering" },
+      { "key": "C", "text": "has rendered" },
+      { "key": "D", "text": "renders" }
+    ],
+    "correct_answer": "B",
+    "hint": "Hành động phần mềm bị sập (crashed - quá khứ đơn) cắt ngang một hành động đang dang dở. Hành động dang dở đó phải dùng Quá khứ tiếp diễn.",
+    "explanation": "Chính xác. Thì Quá khứ tiếp diễn 'was rendering' (đang xuất video) miêu tả một quá trình đang diễn ra trong quá khứ thì bị gián đoạn.",
+    "translation": "Thực tập sinh đang xuất video quảng cáo mới thì phần mềm chỉnh sửa đột nhiên bị sập."
+  },
+  {
+    "id": "q_tense_conjugation_064",
+    "part": 5,
+    "grammar_topic": "Conditionals (Type 1)",
+    "difficulty_level": "Easy",
+    "question_text": "If the client _____ the customized Happy Box designs, we will begin mass production immediately.",
+    "options": [
+      { "key": "A", "text": "approves" },
+      { "key": "B", "text": "approved" },
+      { "key": "C", "text": "will approve" },
+      { "key": "D", "text": "has approved" }
+    ],
+    "correct_answer": "A",
+    "hint": "Câu điều kiện loại 1 diễn tả sự việc có thể xảy ra. Mệnh đề chính dùng Tương lai đơn (will begin), mệnh đề If dùng Hiện tại đơn.",
+    "explanation": "Chính xác. Động từ 'approves' chia ở Hiện tại đơn (với chủ ngữ số ít 'the client') là đáp án chuẩn xác cho mệnh đề điều kiện loại 1.",
+    "translation": "Nếu khách hàng phê duyệt các thiết kế Happy Box tùy chỉnh, chúng tôi sẽ bắt đầu sản xuất hàng loạt ngay lập tức."
+  },
+  {
+    "id": "q_tense_conjugation_065",
+    "part": 5,
+    "grammar_topic": "Past Simple",
+    "difficulty_level": "Easy",
+    "question_text": "The CEO officially _____ the launch of the PrepMaster educational platform during yesterday's press conference.",
+    "options": [
+      { "key": "A", "text": "announces" },
+      { "key": "B", "text": "has announced" },
+      { "key": "C", "text": "announced" },
+      { "key": "D", "text": "is announcing" }
+    ],
+    "correct_answer": "C",
+    "hint": "Dấu hiệu 'yesterday's press conference' (cuộc họp báo ngày hôm qua) chốt mốc thời gian hoàn toàn thuộc về Quá khứ đơn.",
+    "explanation": "Chính xác. Động từ 'announced' (đã công bố) diễn tả một hành động đã kết thúc trong quá khứ.",
+    "translation": "Giám đốc điều hành đã chính thức công bố việc ra mắt nền tảng giáo dục PrepMaster trong cuộc họp báo ngày hôm qua."
+  },
+  {
+    "id": "q_tense_conjugation_066",
+    "part": 5,
+    "grammar_topic": "Passive Voice (Future Simple)",
+    "difficulty_level": "Medium",
+    "question_text": "An updated version of the employee handbook _____ to all staff members by the end of next week.",
+    "options": [
+      { "key": "A", "text": "will distribute" },
+      { "key": "B", "text": "distributes" },
+      { "key": "C", "text": "will be distributed" },
+      { "key": "D", "text": "has distributed" }
+    ],
+    "correct_answer": "C",
+    "hint": "Chủ ngữ là 'An updated version' (Một phiên bản cập nhật) không tự phân phát được mà phải 'được phân phát' (bị động). Thời gian ở tương lai (next week).",
+    "explanation": "Chính xác. Thể bị động của thì Tương lai đơn 'will be distributed' phù hợp với ngữ cảnh chỉ một kế hoạch sẽ được thực hiện.",
+    "translation": "Một phiên bản cập nhật của sổ tay nhân viên sẽ được phân phát cho tất cả các nhân viên vào cuối tuần tới."
+  },
+  {
+    "id": "q_tense_conjugation_067",
+    "part": 5,
+    "grammar_topic": "Present Continuous",
+    "difficulty_level": "Medium",
+    "question_text": "The company _____ its market reach by offering the EduKit platform to international schools this year.",
+    "options": [
+      { "key": "A", "text": "expands" },
+      { "key": "B", "text": "is expanding" },
+      { "key": "C", "text": "expanded" },
+      { "key": "D", "text": "has expanded" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cụm 'this year' (năm nay) đi với một quá trình mang tính xu hướng, sự thay đổi đang diễn ra ở thời điểm hiện tại, ta ưu tiên dùng Hiện tại tiếp diễn.",
+    "explanation": "Chính xác. 'Is expanding' diễn tả một dự án/chiến lược đang được tiến hành trong năm nay.",
+    "translation": "Công ty đang mở rộng phạm vi thị trường của mình bằng cách cung cấp nền tảng EduKit cho các trường quốc tế trong năm nay."
+  },
+  {
+    "id": "q_tense_conjugation_068",
+    "part": 5,
+    "grammar_topic": "Past Perfect",
+    "difficulty_level": "Hard",
+    "question_text": "The HR manager noticed that several employees _____ to submit their timesheets before the deadline passed.",
+    "options": [
+      { "key": "A", "text": "forget" },
+      { "key": "B", "text": "forgot" },
+      { "key": "C", "text": "have forgotten" },
+      { "key": "D", "text": "had forgotten" }
+    ],
+    "correct_answer": "D",
+    "hint": "Sự việc quên nộp (forget) đã xảy ra TRƯỚC khi người quản lý nhận ra (noticed) và trước khi hạn chót trôi qua (passed).",
+    "explanation": "Chính xác. Thì Quá khứ hoàn thành 'had forgotten' diễn tả sự việc xảy ra trước một thời điểm trong quá khứ.",
+    "translation": "Người quản lý nhân sự nhận thấy rằng một số nhân viên đã quên nộp bảng chấm công của họ trước khi hạn chót trôi qua."
+  },
+  {
+    "id": "q_tense_conjugation_069",
+    "part": 5,
+    "grammar_topic": "Present Simple (Schedule)",
+    "difficulty_level": "Easy",
+    "question_text": "The daily stand-up meeting for the development team _____ at exactly 9:30 AM in the main conference room.",
+    "options": [
+      { "key": "A", "text": "start" },
+      { "key": "B", "text": "starts" },
+      { "key": "C", "text": "started" },
+      { "key": "D", "text": "is starting" }
+    ],
+    "correct_answer": "B",
+    "hint": "Một lịch trình cố định hàng ngày (daily) luôn được diễn đạt bằng thì Hiện tại đơn.",
+    "explanation": "Chính xác. Chủ ngữ 'The daily stand-up meeting' là số ít, do đó động từ 'start' phải thêm 's' thành 'starts'.",
+    "translation": "Cuộc họp đứng hàng ngày của nhóm phát triển bắt đầu vào đúng 9:30 sáng tại phòng hội nghị chính."
+  },
+  {
+    "id": "q_tense_conjugation_070",
+    "part": 5,
+    "grammar_topic": "Passive Voice (Present Perfect)",
+    "difficulty_level": "Medium",
+    "question_text": "A variety of new eco-friendly materials _____ recently _____ by the packaging department for the Happy Box project.",
+    "options": [
+      { "key": "A", "text": "has / tested" },
+      { "key": "B", "text": "have / been tested" },
+      { "key": "C", "text": "are / testing" },
+      { "key": "D", "text": "were / testing" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cấu trúc 'A variety of + N(số nhiều)' là chủ ngữ số nhiều. Dấu hiệu 'recently' (gần đây) yêu cầu Hiện tại hoàn thành. Vật liệu phải 'được kiểm tra' (bị động).",
+    "explanation": "Chính xác. Thể bị động của Hiện tại hoàn thành với chủ ngữ số nhiều là 'have been tested'.",
+    "translation": "Nhiều loại vật liệu thân thiện với môi trường mới gần đây đã được bộ phận đóng gói kiểm tra cho dự án Happy Box."
+  },
+  {
+    "id": "q_tense_conjugation_071",
+    "part": 5,
+    "grammar_topic": "Future Continuous",
+    "difficulty_level": "Medium",
+    "question_text": "Next Tuesday at 2 PM, our lead developer _____ a training session on React basics for the new interns.",
+    "options": [
+      { "key": "A", "text": "conducts" },
+      { "key": "B", "text": "will conduct" },
+      { "key": "C", "text": "will be conducting" },
+      { "key": "D", "text": "conducted" }
+    ],
+    "correct_answer": "C",
+    "hint": "Dấu hiệu thời gian 'Next Tuesday at 2 PM' chỉ định một khoảnh khắc rất cụ thể trong tương lai, thích hợp nhất với thì Tương lai tiếp diễn.",
+    "explanation": "Chính xác. 'Will be conducting' (sẽ đang tiến hành) phác họa một sự việc đang dở dang tại một thời điểm được xác định ở tương lai.",
+    "translation": "Vào lúc 2 giờ chiều thứ Ba tới, lập trình viên chính của chúng tôi sẽ đang tiến hành một buổi đào tạo về kiến thức React cơ bản cho các thực tập sinh mới."
+  },
+  {
+    "id": "q_tense_conjugation_072",
+    "part": 5,
+    "grammar_topic": "Present Perfect Continuous",
+    "difficulty_level": "Hard",
+    "question_text": "The student _____ for the JLPT N3 exam for six months and finally feels confident enough to take the test.",
+    "options": [
+      { "key": "A", "text": "studies" },
+      { "key": "B", "text": "studied" },
+      { "key": "C", "text": "is studying" },
+      { "key": "D", "text": "has been studying" }
+    ],
+    "correct_answer": "D",
+    "hint": "Giới từ 'for six months' (khoảng 6 tháng) nhấn mạnh sự liên tục của hành động học tập tính đến hiện tại.",
+    "explanation": "Chính xác. Thì Hiện tại hoàn thành tiếp diễn 'has been studying' được ưu tiên để mô tả quá trình ôn luyện miệt mài không ngắt quãng.",
+    "translation": "Học sinh này đã và đang ôn thi JLPT N3 trong sáu tháng và cuối cùng cảm thấy đủ tự tin để làm bài thi."
+  },
+  {
+    "id": "q_tense_conjugation_073",
+    "part": 5,
+    "grammar_topic": "Future Simple (Time Clause)",
+    "difficulty_level": "Medium",
+    "question_text": "As soon as the mobile application _____ live on the App Store, the marketing team will launch the ad campaign.",
+    "options": [
+      { "key": "A", "text": "will go" },
+      { "key": "B", "text": "goes" },
+      { "key": "C", "text": "went" },
+      { "key": "D", "text": "is going" }
+    ],
+    "correct_answer": "B",
+    "hint": "Mệnh đề phụ chỉ thời gian bắt đầu bằng 'As soon as' diễn tả tương lai phải dùng thì Hiện tại đơn.",
+    "explanation": "Chính xác. Động từ 'goes' (hiện tại đơn) đi với chủ ngữ số ít 'the mobile application' tạo thành mệnh đề thời gian hợp lệ.",
+    "translation": "Ngay khi ứng dụng di động chính thức ra mắt trên App Store, nhóm tiếp thị sẽ khởi chạy chiến dịch quảng cáo."
+  },
+  {
+    "id": "q_tense_conjugation_074",
+    "part": 5,
+    "grammar_topic": "Conditionals (Type 2)",
+    "difficulty_level": "Hard",
+    "question_text": "If the company _____ a larger budget, they would invest in AI features for the PrepMaster platform.",
+    "options": [
+      { "key": "A", "text": "have" },
+      { "key": "B", "text": "has" },
+      { "key": "C", "text": "had" },
+      { "key": "D", "text": "had had" }
+    ],
+    "correct_answer": "C",
+    "hint": "Sự xuất hiện của 'would invest' ở mệnh đề chính báo hiệu đây là câu điều kiện loại 2 (trái với thực tế ở hiện tại). Mệnh đề If dùng Quá khứ đơn.",
+    "explanation": "Chính xác. Động từ trong mệnh đề If của câu điều kiện loại 2 phải chia ở thì Quá khứ đơn 'had'.",
+    "translation": "Nếu công ty có ngân sách lớn hơn, họ sẽ đầu tư vào các tính năng AI cho nền tảng PrepMaster."
+  },
+  {
+    "id": "q_tense_conjugation_075",
+    "part": 5,
+    "grammar_topic": "Past Simple",
+    "difficulty_level": "Easy",
+    "question_text": "Two weeks ago, the project manager _____ a new timeline for the completion of the HR website.",
+    "options": [
+      { "key": "A", "text": "proposes" },
+      { "key": "B", "text": "proposed" },
+      { "key": "C", "text": "has proposed" },
+      { "key": "D", "text": "will propose" }
+    ],
+    "correct_answer": "B",
+    "hint": "Cụm 'Two weeks ago' (Cách đây 2 tuần) là dấu hiệu kinh điển yêu cầu thì Quá khứ đơn.",
+    "explanation": "Chính xác. Động từ 'proposed' (đã đề xuất) chia ở quá khứ đơn phù hợp với thời điểm đã kết thúc hoàn toàn.",
+    "translation": "Hai tuần trước, quản lý dự án đã đề xuất một mốc thời gian mới cho việc hoàn thành trang web nhân sự."
+  },
+  {
+    "id": "q_tense_conjugation_076",
+    "part": 5,
+    "grammar_topic": "Passive Voice (Present Simple)",
+    "difficulty_level": "Medium",
+    "question_text": "The leaderboards on the EduKit application _____ daily to encourage healthy competition among students.",
+    "options": [
+      { "key": "A", "text": "update" },
+      { "key": "B", "text": "are updating" },
+      { "key": "C", "text": "are updated" },
+      { "key": "D", "text": "updated" }
+    ],
+    "correct_answer": "C",
+    "hint": "Chủ ngữ 'The leaderboards' (Bảng xếp hạng) là vật, phải 'được cập nhật'. Trạng từ 'daily' (hàng ngày) yêu cầu thì Hiện tại đơn.",
+    "explanation": "Chính xác. Thể bị động của thì Hiện tại đơn 'are updated' diễn tả một quy trình tự động, lặp đi lặp lại.",
+    "translation": "Bảng xếp hạng trên ứng dụng EduKit được cập nhật hàng ngày để khuyến khích sự cạnh tranh lành mạnh giữa các học sinh."
+  },
+  {
+    "id": "q_tense_conjugation_077",
+    "part": 5,
+    "grammar_topic": "Present Simple",
+    "difficulty_level": "Easy",
+    "question_text": "The new timekeeping system _____ employees to clock in using facial recognition technology.",
+    "options": [
+      { "key": "A", "text": "allow" },
+      { "key": "B", "text": "allows" },
+      { "key": "C", "text": "allowing" },
+      { "key": "D", "text": "is allowed" }
+    ],
+    "correct_answer": "B",
+    "hint": "Diễn tả tính năng cố định của một hệ thống, ta dùng thì Hiện tại đơn. Hệ thống là chủ ngữ số ít nên chủ động cho phép nhân viên làm gì.",
+    "explanation": "Chính xác. Động từ 'allows' (cho phép) thêm 's' để hòa hợp với chủ ngữ số ít 'The new timekeeping system'.",
+    "translation": "Hệ thống chấm công mới cho phép nhân viên điểm danh bằng công nghệ nhận dạng khuôn mặt."
+  },
+  {
+    "id": "q_tense_conjugation_078",
+    "part": 5,
+    "grammar_topic": "Future Perfect (Passive)",
+    "difficulty_level": "Hard",
+    "question_text": "By the time the investors arrive next week, the beta version of the app _____ by the QA team.",
+    "options": [
+      { "key": "A", "text": "will complete" },
+      { "key": "B", "text": "will have completed" },
+      { "key": "C", "text": "will be completed" },
+      { "key": "D", "text": "will have been completed" }
+    ],
+    "correct_answer": "D",
+    "hint": "Cấu trúc 'By the time + HTĐ' yêu cầu Tương lai hoàn thành. Chủ ngữ 'the beta version' phải mang nghĩa BỊ ĐỘNG (được hoàn thành).",
+    "explanation": "Chính xác. Câu này yêu cầu thể bị động của thì Tương lai hoàn thành (will have been + V3/ed) để chỉ một công việc sẽ được người khác hoàn tất trước một mốc tương lai.",
+    "translation": "Tính đến lúc các nhà đầu tư đến vào tuần tới, phiên bản thử nghiệm của ứng dụng sẽ được hoàn thành bởi nhóm QA."
+  },
+  {
+    "id": "q_tense_conjugation_079",
+    "part": 5,
+    "grammar_topic": "Past Perfect",
+    "difficulty_level": "Medium",
+    "question_text": "The client noted that they _____ a similar issue with their previous gift box supplier last year.",
+    "options": [
+      { "key": "A", "text": "experience" },
+      { "key": "B", "text": "experienced" },
+      { "key": "C", "text": "have experienced" },
+      { "key": "D", "text": "had experienced" }
+    ],
+    "correct_answer": "D",
+    "hint": "Động từ tường thuật 'noted' ở quá khứ. Sự việc khách hàng gặp sự cố xảy ra TRƯỚC thời điểm tường thuật đó.",
+    "explanation": "Chính xác. Trong câu tường thuật gián tiếp, sự việc lùi một thì so với quá khứ đơn (noted) sẽ thành Quá khứ hoàn thành 'had experienced'.",
+    "translation": "Khách hàng lưu ý rằng họ đã từng gặp một vấn đề tương tự với nhà cung cấp hộp quà trước đây của họ vào năm ngoái."
+  },
+  {
+    "id": "q_tense_conjugation_080",
+    "part": 5,
+    "grammar_topic": "Present Continuous",
+    "difficulty_level": "Easy",
+    "question_text": "Because her follower base is growing rapidly, the creator _____ more time interacting with comments on TikTok.",
+    "options": [
+      { "key": "A", "text": "spend" },
+      { "key": "B", "text": "spends" },
+      { "key": "C", "text": "is spending" },
+      { "key": "D", "text": "spent" }
+    ],
+    "correct_answer": "C",
+    "hint": "Mệnh đề nguyên nhân dùng Hiện tại tiếp diễn (is growing) chỉ một xu hướng hiện tại, do đó mệnh đề chính cũng nên miêu tả hành động tạm thời tương ứng.",
+    "explanation": "Chính xác. Thì Hiện tại tiếp diễn 'is spending' miêu tả một sự thay đổi hành vi đang diễn ra ở thời điểm hiện tại do nguyên nhân bên ngoài.",
+    "translation": "Vì lượng người theo dõi của cô đang tăng lên nhanh chóng, nhà sáng tạo hiện đang dành nhiều thời gian hơn để tương tác với các bình luận trên TikTok."
+  },
+  {
+    "id": "q_tense_conjugation_081",
+    "part": 5,
+    "grammar_topic": "Future Continuous",
+    "difficulty_level": "Medium",
+    "question_text": "Next Friday at 10 AM, the lead developer _____ the new React framework to the rest of the engineering team.",
+    "options": [
+      { "key": "A", "text": "will present" },
+      { "key": "B", "text": "presents" },
+      { "key": "C", "text": "will be presenting" },
+      { "key": "D", "text": "presented" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cụm thời gian 'Next Friday at 10 AM' chỉ định một khoảnh khắc rất cụ thể sẽ xảy ra trong tương lai, yêu cầu thì Tương lai tiếp diễn.",
+    "explanation": "Chính xác. Thì Tương lai tiếp diễn 'will be presenting' (sẽ đang trình bày) phác họa một sự việc đang diễn ra dang dở tại một thời điểm xác định ở tương lai.",
+    "translation": "Vào 10 giờ sáng thứ Sáu tới, lập trình viên chính sẽ đang trình bày về framework React mới cho phần còn lại của nhóm kỹ thuật."
+  },
+  {
+    "id": "q_tense_conjugation_082",
+    "part": 5,
+    "grammar_topic": "Present Perfect Continuous",
+    "difficulty_level": "Hard",
+    "question_text": "The content team _____ on compiling the TOEIC mock exams for the PrepMaster app for three straight weeks.",
+    "options": [
+      { "key": "A", "text": "is working" },
+      { "key": "B", "text": "worked" },
+      { "key": "C", "text": "has been working" },
+      { "key": "D", "text": "works" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cụm 'for three straight weeks' (trong 3 tuần liên tiếp) nhấn mạnh một quá trình làm việc liên tục kéo dài từ quá khứ đến hiện tại.",
+    "explanation": "Chính xác. Thì Hiện tại hoàn thành tiếp diễn 'has been working' được sử dụng để nhấn mạnh tính liên tục không ngắt quãng của hành động.",
+    "translation": "Nhóm nội dung đã và đang làm việc liên tục trong ba tuần để biên soạn các bài thi thử TOEIC cho ứng dụng PrepMaster."
+  },
+  {
+    "id": "q_tense_conjugation_083",
+    "part": 5,
+    "grammar_topic": "Passive Voice (Past Simple)",
+    "difficulty_level": "Easy",
+    "question_text": "The promotional video for the daily English TikTok series _____ to the platform yesterday evening.",
+    "options": [
+      { "key": "A", "text": "uploaded" },
+      { "key": "B", "text": "was uploaded" },
+      { "key": "C", "text": "uploads" },
+      { "key": "D", "text": "has uploaded" }
+    ],
+    "correct_answer": "B",
+    "hint": "Thời gian 'yesterday evening' yêu cầu thì quá khứ đơn. Chủ ngữ 'The promotional video' là vật, do đó phải sử dụng thể bị động.",
+    "explanation": "Chính xác. Thể bị động của thì Quá khứ đơn 'was uploaded' (đã được tải lên) hoàn toàn phù hợp với ngữ pháp và nghĩa của câu.",
+    "translation": "Video quảng cáo cho loạt bài tiếng Anh hàng ngày trên TikTok đã được tải lên nền tảng vào tối hôm qua."
+  },
+  {
+    "id": "q_tense_conjugation_084",
+    "part": 5,
+    "grammar_topic": "Present Simple",
+    "difficulty_level": "Easy",
+    "question_text": "The mobile timekeeping app _____ a stable internet connection to sync attendance data in real-time.",
+    "options": [
+      { "key": "A", "text": "require" },
+      { "key": "B", "text": "requiring" },
+      { "key": "C", "text": "is required" },
+      { "key": "D", "text": "requires" }
+    ],
+    "correct_answer": "D",
+    "hint": "Để diễn tả một yêu cầu kỹ thuật, một tính năng cố định hay sự thật hiển nhiên của ứng dụng, ta dùng thì Hiện tại đơn.",
+    "explanation": "Chính xác. Chủ ngữ 'The mobile timekeeping app' là số ít, do đó động từ chủ động 'require' phải thêm 's' thành 'requires'.",
+    "translation": "Ứng dụng chấm công trên thiết bị di động yêu cầu một kết nối internet ổn định để đồng bộ hóa dữ liệu điểm danh theo thời gian thực."
+  },
+  {
+    "id": "q_tense_conjugation_085",
+    "part": 5,
+    "grammar_topic": "Past Perfect",
+    "difficulty_level": "Medium",
+    "question_text": "Before she started her popular TikTok channel, Ms. Lin _____ as an English teacher at a local high school for five years.",
+    "options": [
+      { "key": "A", "text": "works" },
+      { "key": "B", "text": "has worked" },
+      { "key": "C", "text": "had worked" },
+      { "key": "D", "text": "is working" }
+    ],
+    "correct_answer": "C",
+    "hint": "Hành động làm giáo viên đã xảy ra và kéo dài (for five years) TRƯỚC một hành động khác trong quá khứ 'started' (bắt đầu).",
+    "explanation": "Chính xác. Thì Quá khứ hoàn thành 'had worked' diễn tả một hành động đã diễn ra và hoàn tất trước một mốc thời gian trong quá khứ.",
+    "translation": "Trước khi bắt đầu kênh TikTok nổi tiếng của mình, cô Lin đã từng làm giáo viên tiếng Anh tại một trường trung học địa phương trong năm năm."
+  },
+  {
+    "id": "q_tense_conjugation_086",
+    "part": 5,
+    "grammar_topic": "Conditionals (Type 1)",
+    "difficulty_level": "Easy",
+    "question_text": "If a user _____ their password, the HR system will automatically send a password reset link to their registered email.",
+    "options": [
+      { "key": "A", "text": "forgot" },
+      { "key": "B", "text": "forgets" },
+      { "key": "C", "text": "will forget" },
+      { "key": "D", "text": "forgetting" }
+    ],
+    "correct_answer": "B",
+    "hint": "Câu điều kiện loại 1 (sự việc có thể xảy ra ở hiện tại/tương lai). Mệnh đề If dùng thì Hiện tại đơn, mệnh đề chính dùng Tương lai đơn (will send).",
+    "explanation": "Chính xác. Động từ ở mệnh đề If chia ở hiện tại đơn 'forgets' đi với chủ ngữ số ít 'a user'.",
+    "translation": "Nếu người dùng quên mật khẩu, hệ thống nhân sự sẽ tự động gửi một liên kết đặt lại mật khẩu đến email đã đăng ký của họ."
+  },
+  {
+    "id": "q_tense_conjugation_087",
+    "part": 5,
+    "grammar_topic": "Future Perfect",
+    "difficulty_level": "Hard",
+    "question_text": "By the time the new school term begins, we _____ all the advanced grammar lessons to the EduKit platform.",
+    "options": [
+      { "key": "A", "text": "will have added" },
+      { "key": "B", "text": "will add" },
+      { "key": "C", "text": "add" },
+      { "key": "D", "text": "have added" }
+    ],
+    "correct_answer": "A",
+    "hint": "Cấu trúc 'By the time + Hiện tại đơn (begins)' báo hiệu mệnh đề chính phải được chia ở thì Tương lai hoàn thành.",
+    "explanation": "Chính xác. Tương lai hoàn thành 'will have added' dự báo một hành động sẽ hoàn tất tính đến trước một thời điểm ở tương lai.",
+    "translation": "Tính đến lúc học kỳ mới bắt đầu, chúng tôi sẽ đã thêm tất cả các bài học ngữ pháp nâng cao vào nền tảng EduKit."
+  },
+  {
+    "id": "q_tense_conjugation_088",
+    "part": 5,
+    "grammar_topic": "Passive Voice (Present Perfect)",
+    "difficulty_level": "Medium",
+    "question_text": "The terms of service for the mobile application _____ to include new data privacy regulations recently.",
+    "options": [
+      { "key": "A", "text": "has revised" },
+      { "key": "B", "text": "have been revised" },
+      { "key": "C", "text": "were revising" },
+      { "key": "D", "text": "have revised" }
+    ],
+    "correct_answer": "B",
+    "hint": "Chủ ngữ là 'The terms' (Điều khoản - số nhiều) không tự sửa đổi mà phải 'được sửa đổi' (bị động). 'Recently' yêu cầu Hiện tại hoàn thành.",
+    "explanation": "Chính xác. Thể bị động của Hiện tại hoàn thành với chủ ngữ số nhiều là 'have been revised'.",
+    "translation": "Các điều khoản dịch vụ cho ứng dụng di động gần đây đã được sửa đổi để bao gồm các quy định mới về bảo mật dữ liệu."
+  },
+  {
+    "id": "q_tense_conjugation_089",
+    "part": 5,
+    "grammar_topic": "Past Continuous",
+    "difficulty_level": "Medium",
+    "question_text": "The creative team _____ the new eco-friendly Happy Box designs when the client called to request a meeting.",
+    "options": [
+      { "key": "A", "text": "was discussing" },
+      { "key": "B", "text": "discusses" },
+      { "key": "C", "text": "has discussed" },
+      { "key": "D", "text": "discussed" }
+    ],
+    "correct_answer": "A",
+    "hint": "Cấu trúc hành động đang diễn ra (Quá khứ tiếp diễn) thì có hành động khác cắt ngang (called - Quá khứ đơn).",
+    "explanation": "Chính xác. 'Was discussing' miêu tả hành động đang diễn ra dang dở của nhóm sáng tạo thì bị cuộc gọi của khách hàng cắt ngang.",
+    "translation": "Nhóm sáng tạo đang thảo luận về các thiết kế Happy Box thân thiện với môi trường mới thì khách hàng gọi điện yêu cầu một cuộc họp."
+  },
+  {
+    "id": "q_tense_conjugation_090",
+    "part": 5,
+    "grammar_topic": "Future Simple (Time Clause)",
+    "difficulty_level": "Hard",
+    "question_text": "As soon as the HR manager _____ the weekly timesheets, the payroll software will process the payments.",
+    "options": [
+      { "key": "A", "text": "will approve" },
+      { "key": "B", "text": "approving" },
+      { "key": "C", "text": "approves" },
+      { "key": "D", "text": "approved" }
+    ],
+    "correct_answer": "C",
+    "hint": "Mệnh đề trạng ngữ chỉ thời gian bắt đầu bằng 'As soon as' mang ý nghĩa tương lai bắt buộc phải dùng thì Hiện tại đơn.",
+    "explanation": "Chính xác. Động từ 'approves' chia ở Hiện tại đơn là đáp án đúng, mặc dù toàn bộ câu diễn tả một quy trình sẽ xảy ra trong tương lai.",
+    "translation": "Ngay khi người quản lý nhân sự phê duyệt các bảng chấm công hàng tuần, phần mềm tính lương sẽ xử lý các khoản thanh toán."
+  },
+  {
+    "id": "q_tense_conjugation_091",
+    "part": 5,
+    "grammar_topic": "Future Simple",
+    "difficulty_level": "Easy",
+    "question_text": "We assure you that we _____ the 500 custom corporate gift boxes to your Tokyo office by tomorrow afternoon.",
+    "options": [
+      { "key": "A", "text": "deliver" },
+      { "key": "B", "text": "will deliver" },
+      { "key": "C", "text": "delivered" },
+      { "key": "D", "text": "are delivered" }
+    ],
+    "correct_answer": "B",
+    "hint": "Động từ 'assure' (đảm bảo) thường đi kèm với một lời hứa hẹn sẽ thực hiện trong tương lai ('will + V').",
+    "explanation": "Chính xác. Thì Tương lai đơn 'will deliver' thể hiện một lời hứa hoặc cam kết chắc chắn từ phía công ty đối với khách hàng.",
+    "translation": "Chúng tôi đảm bảo với bạn rằng chúng tôi sẽ giao 500 hộp quà tặng doanh nghiệp tùy chỉnh đến văn phòng Tokyo của bạn trước chiều ngày mai."
+  },
+  {
+    "id": "q_tense_conjugation_092",
+    "part": 5,
+    "grammar_topic": "Present Continuous",
+    "difficulty_level": "Medium",
+    "question_text": "The number of active users on the PrepMaster application _____ rapidly this month due to the new interactive features.",
+    "options": [
+      { "key": "A", "text": "is growing" },
+      { "key": "B", "text": "grows" },
+      { "key": "C", "text": "has grown" },
+      { "key": "D", "text": "are growing" }
+    ],
+    "correct_answer": "A",
+    "hint": "Cụm 'this month' (tháng này) kết hợp với trạng từ 'rapidly' chỉ một xu hướng, một sự thay đổi đang diễn ra ngay trong hiện tại.",
+    "explanation": "Chính xác. Thì Hiện tại tiếp diễn 'is growing' là lựa chọn tốt nhất để mô tả một quá trình tăng trưởng đang tiếp diễn. Chú ý: 'The number' là chủ ngữ số ít.",
+    "translation": "Số lượng người dùng hoạt động trên ứng dụng PrepMaster đang tăng lên nhanh chóng trong tháng này nhờ các tính năng tương tác mới."
+  },
+  {
+    "id": "q_tense_conjugation_093",
+    "part": 5,
+    "grammar_topic": "Past Simple",
+    "difficulty_level": "Easy",
+    "question_text": "The front-end developer _____ the display bug on the HR portal yesterday before logging off for the day.",
+    "options": [
+      { "key": "A", "text": "fixes" },
+      { "key": "B", "text": "is fixing" },
+      { "key": "C", "text": "has fixed" },
+      { "key": "D", "text": "fixed" }
+    ],
+    "correct_answer": "D",
+    "hint": "Trạng từ thời gian 'yesterday' xác định một hành động đã hoàn tất trong quá khứ.",
+    "explanation": "Chính xác. Thì Quá khứ đơn 'fixed' (đã sửa) là đáp án đúng cho một sự việc đã xảy ra và kết thúc.",
+    "translation": "Lập trình viên front-end đã sửa lỗi hiển thị trên cổng thông tin nhân sự vào ngày hôm qua trước khi đăng xuất nghỉ làm."
+  },
+  {
+    "id": "q_tense_conjugation_094",
+    "part": 5,
+    "grammar_topic": "Future Perfect (Passive)",
+    "difficulty_level": "Hard",
+    "question_text": "By the end of next month, the integration of the mobile app with the cloud server _____.",
+    "options": [
+      { "key": "A", "text": "will complete" },
+      { "key": "B", "text": "will be completing" },
+      { "key": "C", "text": "will have been completed" },
+      { "key": "D", "text": "has completed" }
+    ],
+    "correct_answer": "C",
+    "hint": "Cụm 'By the end of next month' yêu cầu Tương lai hoàn thành. Chủ ngữ 'the integration' (sự tích hợp) phải mang nghĩa bị động.",
+    "explanation": "Chính xác. Câu cần chia ở thể bị động của thì Tương lai hoàn thành (will have been + V3/ed) để chỉ một quá trình sẽ được hoàn tất.",
+    "translation": "Tính đến cuối tháng tới, việc tích hợp ứng dụng di động với máy chủ đám mây sẽ được hoàn thành."
+  },
+  {
+    "id": "q_tense_conjugation_095",
+    "part": 5,
+    "grammar_topic": "Conditionals (Type 2)",
+    "difficulty_level": "Hard",
+    "question_text": "If our team _____ more time, we would add several more JLPT mock tests to the upcoming update.",
+    "options": [
+      { "key": "A", "text": "has" },
+      { "key": "B", "text": "have" },
+      { "key": "C", "text": "had" },
+      { "key": "D", "text": "will have" }
+    ],
+    "correct_answer": "C",
+    "hint": "Mệnh đề chính dùng 'would add' cho thấy đây là câu điều kiện loại 2 (trái với thực tế hiện tại). Mệnh đề If phải dùng thì Quá khứ đơn.",
+    "explanation": "Chính xác. Động từ trong mệnh đề If của câu điều kiện loại 2 được chia ở thì Quá khứ đơn 'had'.",
+    "translation": "Nếu nhóm của chúng tôi có nhiều thời gian hơn, chúng tôi sẽ thêm một vài bài thi thử JLPT nữa vào bản cập nhật sắp tới."
+  },
+  {
+    "id": "q_tense_conjugation_096",
+    "part": 5,
+    "grammar_topic": "Present Perfect",
+    "difficulty_level": "Easy",
+    "question_text": "The new English learning app _____ already _____ over 10,000 active users since its official launch last week.",
+    "options": [
+      { "key": "A", "text": "has / gained" },
+      { "key": "B", "text": "have / gained" },
+      { "key": "C", "text": "is / gaining" },
+      { "key": "D", "text": "was / gaining" }
+    ],
+    "correct_answer": "A",
+    "hint": "Cấu trúc 'since + mốc thời gian quá khứ' và trạng từ 'already' (đã... rồi) bắt buộc phải dùng thì Hiện tại hoàn thành.",
+    "explanation": "Chính xác. Thì Hiện tại hoàn thành 'has gained' (với chủ ngữ số ít 'app') diễn tả một thành tựu đã đạt được kéo dài tới hiện tại.",
+    "translation": "Ứng dụng học tiếng Anh mới đã thu hút được hơn 10.000 người dùng hoạt động kể từ khi ra mắt chính thức vào tuần trước."
+  },
+  {
+    "id": "q_tense_conjugation_097",
+    "part": 5,
+    "grammar_topic": "Past Perfect",
+    "difficulty_level": "Medium",
+    "question_text": "The developers noticed that the main server _____ before they could safely back up the employee attendance data.",
+    "options": [
+      { "key": "A", "text": "crashes" },
+      { "key": "B", "text": "has crashed" },
+      { "key": "C", "text": "had crashed" },
+      { "key": "D", "text": "is crashing" }
+    ],
+    "correct_answer": "C",
+    "hint": "Việc máy chủ bị sập (crash) đã xảy ra TRƯỚC một thời điểm khác trong quá khứ là 'noticed' (nhận ra) và 'could safely back up'.",
+    "explanation": "Chính xác. Thì Quá khứ hoàn thành 'had crashed' miêu tả một sự việc đã xảy ra và hoàn tất trước một sự kiện khác trong quá khứ.",
+    "translation": "Các lập trình viên nhận thấy rằng máy chủ chính đã bị sập trước khi họ có thể sao lưu dữ liệu điểm danh của nhân viên một cách an toàn."
+  },
+  {
+    "id": "q_tense_conjugation_098",
+    "part": 5,
+    "grammar_topic": "Passive Voice (Present Continuous)",
+    "difficulty_level": "Medium",
+    "question_text": "The new React-based HR portal is currently _____ by a group of beta users to identify any potential bugs.",
+    "options": [
+      { "key": "A", "text": "testing" },
+      { "key": "B", "text": "tests" },
+      { "key": "C", "text": "being tested" },
+      { "key": "D", "text": "tested" }
+    ],
+    "correct_answer": "C",
+    "hint": "Có to be 'is', có trạng từ 'currently' -> Hiện tại tiếp diễn. Cổng thông tin 'portal' phải 'được kiểm tra' (bị động).",
+    "explanation": "Chính xác. Câu này yêu cầu thể bị động của thì Hiện tại tiếp diễn 'is currently being tested' (hiện đang được kiểm tra).",
+    "translation": "Cổng thông tin nhân sự dựa trên React mới hiện đang được một nhóm người dùng thử nghiệm kiểm tra để xác định bất kỳ lỗi tiềm ẩn nào."
+  },
+  {
+    "id": "q_tense_conjugation_099",
+    "part": 5,
+    "grammar_topic": "Future Continuous",
+    "difficulty_level": "Medium",
+    "question_text": "At this exact time next week, the entire team _____ the successful launch of the EduKit application at the company headquarters.",
+    "options": [
+      { "key": "A", "text": "celebrates" },
+      { "key": "B", "text": "will be celebrating" },
+      { "key": "C", "text": "celebrated" },
+      { "key": "D", "text": "has celebrated" }
+    ],
+    "correct_answer": "B",
+    "hint": "Dấu hiệu 'At this exact time next week' chỉ một hành động sẽ ĐANG DIỄN RA tại một thời điểm rất cụ thể ở tương lai.",
+    "explanation": "Chính xác. Thì Tương lai tiếp diễn 'will be celebrating' được dùng để phác họa khung cảnh ăn mừng đang diễn ra vào tuần tới.",
+    "translation": "Vào đúng thời điểm này tuần tới, toàn bộ nhóm sẽ đang ăn mừng sự ra mắt thành công của ứng dụng EduKit tại trụ sở công ty."
+  },
+  {
+    "id": "q_tense_conjugation_100",
+    "part": 5,
+    "grammar_topic": "Present Simple",
+    "difficulty_level": "Easy",
+    "question_text": "Each custom Happy Box _____ completely eco-friendly packaging materials to align with the company's sustainability goals.",
+    "options": [
+      { "key": "A", "text": "contain" },
+      { "key": "B", "text": "is contained" },
+      { "key": "C", "text": "contains" },
+      { "key": "D", "text": "containing" }
+    ],
+    "correct_answer": "C",
+    "hint": "Để diễn tả một sự thật hiển nhiên, đặc điểm cấu tạo của sản phẩm, ta dùng Hiện tại đơn chủ động.",
+    "explanation": "Chính xác. Chủ ngữ 'Each custom Happy Box' (Mỗi hộp...) là số ít, do đó động từ chủ động 'contain' (chứa đựng) phải thêm 's'.",
+    "translation": "Mỗi hộp Happy Box tùy chỉnh đều chứa các vật liệu đóng gói hoàn toàn thân thiện với môi trường để phù hợp với các mục tiêu phát triển bền vững của công ty."
+  }
+];
+
+export const TENSES = {
+  easy: TENSES_EASY,
+  medium: [],
+  hard: []
+};
+
 // MAPPING THE NEW ROADMAP IDS DIRECTLY TO EXERCISES
 export const QUIZ_TASKS = {
+  "w1-d6-t1": {
+    total: 10,
+    questions: TENSES
+  },
+  "w1-d5-t1": {
+    total: 10,
+    questions: PARTS_OF_SPEECH
+  },
+  "w1-d4-t3": {
+    total: 10,
+    questions: SV_AGREEMENT
+  },
   "w1-d3-t3": {
     description: "Giải Part 5 & 6 Tính từ & Trạng từ",
     total: 10,

@@ -29,6 +29,8 @@ export const getDayPointsTarget = (week, day) => {
 };
 
 export const getWeekGate = (roadmapWeeks, weekIndex) => {
+  return { unlocked: true };
+
   if (!Array.isArray(roadmapWeeks) || weekIndex < 0) {
     return { unlocked: true };
   }
@@ -56,6 +58,8 @@ export const getWeekGate = (roadmapWeeks, weekIndex) => {
 };
 
 export const getDayGate = (roadmapWeeks, weekIndex, dayIndex) => {
+  return { unlocked: true };
+
   const weekGate = getWeekGate(roadmapWeeks, weekIndex);
   if (!weekGate.unlocked) {
     return {
