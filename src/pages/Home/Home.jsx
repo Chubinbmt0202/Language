@@ -14,15 +14,16 @@ import {
   ReadFilled,
 } from "@ant-design/icons";
 
-// Import utilities
 import { useAuth } from "@/app/providers/AuthContext";
 import { getTodayLearningSeconds } from "@/shared/utils/storage/timeTracking";
+import { getStreakDays } from "@/shared/utils/storage/points";
 
 const { Title, Text } = Typography;
 
 const Home = () => {
   const { user } = useAuth();
   const [todayMinutes, setTodayMinutes] = useState(0);
+  const [streak, setStreak] = useState(0);
 
   useEffect(() => {
     const handleTimeUpdate = () => {
@@ -30,11 +31,19 @@ const Home = () => {
       setTodayMinutes(Math.round(seconds / 60));
     };
 
+    const handlePointsUpdate = () => {
+      setStreak(getStreakDays());
+    };
+
     handleTimeUpdate(); // initial load
+    handlePointsUpdate(); // initial load
+
     window.addEventListener("time:updated", handleTimeUpdate);
+    window.addEventListener("points:updated", handlePointsUpdate);
 
     return () => {
       window.removeEventListener("time:updated", handleTimeUpdate);
+      window.removeEventListener("points:updated", handlePointsUpdate);
     };
   }, [user]);
 
@@ -267,7 +276,7 @@ const Home = () => {
                 Current Streak
               </div>
               <div style={{ fontSize: 36, fontWeight: 800, lineHeight: 1.2, marginBottom: 12 }}>
-                12 Days
+                {streak} Day{streak !== 1 ? 's' : ''}
               </div>
               <div style={{ fontSize: 13, opacity: 0.9, lineHeight: 1.5, maxWidth: "80%" }}>
                 You're on fire! Keep learning to maintain your streak.
