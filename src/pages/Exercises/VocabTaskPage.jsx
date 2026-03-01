@@ -16,6 +16,7 @@ import {
   findTaskById,
   isMeaningCorrect,
 } from "./vocabTaskPageUtils";
+import VocabReviewTest from "./VocabReviewTest";
 
 const { Title, Text, Paragraph } = Typography;
 
@@ -38,6 +39,10 @@ const VocabTaskPage = () => {
       roadmapLocation.dayIndex,
     );
   }, [roadmapLocation]);
+
+  if (taskId && taskId.endsWith("-d7-t1")) {
+    return <VocabReviewTest />;
+  }
 
   // Use specific task data if available, otherwise fallback to the first available data
   const vocabData = VOCAB_TASKS[taskId] || Object.values(VOCAB_TASKS)[0] || [];

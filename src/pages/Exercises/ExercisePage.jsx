@@ -43,6 +43,7 @@ import {
 } from "./ExerciseQuestionData";
 import { incrementTaskProgress, getTaskState } from "@/shared/utils/storage/taskProgress";
 import { Collapse } from "antd";
+import MiniTest from "./MiniTest";
 
 const { Title, Text } = Typography;
 const { confirm } = Modal;
@@ -81,6 +82,10 @@ const Exercise = () => {
 
   // Lấy thông tin bài tập
   const taskInfo = useMemo(() => findTaskById(taskId), [taskId]);
+
+  if (taskId && taskId.endsWith("-d7-t2")) {
+    return <MiniTest />;
+  }
 
   // Logic kiểm tra khóa bài học (Gate)
   const roadmapLocation = useMemo(
