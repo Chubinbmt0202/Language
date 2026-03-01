@@ -105,3 +105,26 @@ export const findRoadmapLocationByTaskId = (roadmapWeeks, taskId) => {
   }
   return null;
 };
+
+export const calculateUnlockedProgress = (roadmapWeeks) => {
+  if (!Array.isArray(roadmapWeeks)) return 0;
+
+  let totalDays = 0;
+  let unlockedDays = 0;
+
+  for (let weekIndex = 0; weekIndex < roadmapWeeks.length; weekIndex += 1) {
+    const week = roadmapWeeks[weekIndex];
+    if (!week || !Array.isArray(week.days)) continue;
+
+    for (let dayIndex = 0; dayIndex < week.days.length; dayIndex += 1) {
+      totalDays += 1;
+      const status = getDayGate(roadmapWeeks, weekIndex, dayIndex);
+      if (status && status.unlocked) {
+        unlockedDays += 1;
+      }
+    }
+  }
+
+  if (totalDays === 0) return 0;
+  return Math.round((unlockedDays / totalDays) * 100);
+};

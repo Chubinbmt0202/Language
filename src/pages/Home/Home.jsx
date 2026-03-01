@@ -17,6 +17,8 @@ import {
 import { useAuth } from "@/app/providers/AuthContext";
 import { getTodayLearningSeconds } from "@/shared/utils/storage/timeTracking";
 import { getStreakDays } from "@/shared/utils/storage/points";
+import { detailedRoadmap } from "../Dashboard/RoadmapData";
+import { calculateUnlockedProgress } from "@/shared/utils/storage/roadmapAccess";
 
 const { Title, Text } = Typography;
 
@@ -24,6 +26,7 @@ const Home = () => {
   const { user } = useAuth();
   const [todayMinutes, setTodayMinutes] = useState(0);
   const [streak, setStreak] = useState(0);
+  const [roadmapProgress, setRoadmapProgress] = useState(0);
 
   useEffect(() => {
     const handleTimeUpdate = () => {
@@ -33,6 +36,8 @@ const Home = () => {
 
     const handlePointsUpdate = () => {
       setStreak(getStreakDays());
+      const newProgress = calculateUnlockedProgress(detailedRoadmap);
+      setRoadmapProgress(newProgress);
     };
 
     handleTimeUpdate(); // initial load
@@ -40,10 +45,12 @@ const Home = () => {
 
     window.addEventListener("time:updated", handleTimeUpdate);
     window.addEventListener("points:updated", handlePointsUpdate);
+    window.addEventListener("roadmap:updated", handlePointsUpdate);
 
     return () => {
       window.removeEventListener("time:updated", handleTimeUpdate);
       window.removeEventListener("points:updated", handlePointsUpdate);
+      window.removeEventListener("roadmap:updated", handlePointsUpdate);
     };
   }, [user]);
 
@@ -82,10 +89,10 @@ const Home = () => {
           }}
         >
           <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8, fontSize: 14, fontWeight: 600 }}>
-            <span>Target: IELTS 7.5</span>
-            <span>45% Complete</span>
+            <span>Target: TOEIC 750</span>
+            <span>{roadmapProgress}% Complete</span>
           </div>
-          <Progress percent={45} showInfo={false} strokeColor="#ffffff" trailColor="rgba(255,255,255,0.3)" size={["100%", 8]} style={{ margin: 0 }} />
+          <Progress percent={roadmapProgress} showInfo={false} strokeColor="#ffffff" trailColor="rgba(255,255,255,0.3)" size={["100%", 8]} style={{ margin: 0 }} />
         </div>
       </div>
 
@@ -209,51 +216,6 @@ const Home = () => {
               </Col>
             </Row>
           </div>
-
-          {/* RECOMMENDED FOR YOU */}
-          <Card
-            title={
-              <div style={{ display: "flex", alignItems: "center", gap: 12, paddingTop: 8, paddingBottom: 8 }}>
-                <StarFilled style={{ color: "#2563eb", fontSize: 20 }} />
-                <span style={{ fontSize: 20, fontWeight: 800, color: "#0f172a" }}>Recommended for You</span>
-              </div>
-            }
-            style={{ borderRadius: 20, border: "none", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.05)" }}
-            headStyle={{ borderBottom: "none", padding: "16px 24px 0" }}
-            bodyStyle={{ padding: "16px 24px 24px" }}
-          >
-            <Row gutter={[16, 16]}>
-              <Col xs={24} md={8}>
-                <Card bodyStyle={{ padding: 0 }} style={{ borderRadius: 16, overflow: "hidden", border: "1px solid #f1f5f9" }}>
-                  <div style={{ height: 140, background: "#064e3b" }}></div>
-                  <div style={{ padding: "16px 20px" }}>
-                    <div style={{ fontWeight: 800, fontSize: 16, marginBottom: 4, color: "#0f172a" }}>Advanced Grammar</div>
-                    <div style={{ color: "#64748b", fontSize: 14, fontWeight: 500 }}>Conditional Sentences</div>
-                  </div>
-                </Card>
-              </Col>
-              <Col xs={24} md={8}>
-                <Card bodyStyle={{ padding: 0 }} style={{ borderRadius: 16, overflow: "hidden", border: "1px solid #f1f5f9" }}>
-                  <div style={{ height: 140, background: "#fee2e2", display: "flex", justifyContent: "center", alignItems: "center", color: "#ef4444", fontSize: 48 }}><PlayCircleFilled /></div>
-                  <div style={{ padding: "16px 20px" }}>
-                    <div style={{ fontWeight: 800, fontSize: 16, marginBottom: 4, color: "#0f172a" }}>Speaking Mock Test</div>
-                    <div style={{ color: "#64748b", fontSize: 14, fontWeight: 500 }}>Part 1: Hometown</div>
-                  </div>
-                </Card>
-              </Col>
-              <Col xs={24} md={8}>
-                <Card bodyStyle={{ padding: 0 }} style={{ borderRadius: 16, overflow: "hidden", border: "1px solid #f1f5f9" }}>
-                  <div style={{ height: 140, background: "#1e293b", display: "flex", padding: 20, color: "white" }}>
-                    <div style={{ fontFamily: "monospace", opacity: 0.5 }}>{"< code >"}</div>
-                  </div>
-                  <div style={{ padding: "16px 20px" }}>
-                    <div style={{ fontWeight: 800, fontSize: 16, marginBottom: 4, color: "#0f172a" }}>Writing Task 1</div>
-                    <div style={{ color: "#64748b", fontSize: 14, fontWeight: 500 }}>Describing Trends</div>
-                  </div>
-                </Card>
-              </Col>
-            </Row>
-          </Card>
         </Col>
 
         {/* RIGHT COLUMN */}
